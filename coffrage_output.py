@@ -35,6 +35,7 @@ LAYER_COLORS = {
     "BA_POUTRES": 3,
     "BA_TREMIES": 6,
     "BA_RESERVATIONS": 5,
+    "BA_A_VERIFIER": 30,
     ARCHIVE_LAYER: 8,
 }
 
@@ -200,7 +201,7 @@ def _resolve_export_route(entity: RawEntity, cfg: PipelineConfig) -> tuple[str, 
         return LAYER_MAP_STRUCTURAL[structural_type], "trusted_structural", True
 
     if structural_type in STRUCTURAL_TYPES:
-        return ARCHIVE_LAYER, "untrusted_structural", False
+        return "BA_A_VERIFIER", "untrusted_structural", True
 
     if structural_type in {"ANNOTATION", "FURNITURE", "UNKNOWN"}:
         return ARCHIVE_LAYER, "non_structural", False

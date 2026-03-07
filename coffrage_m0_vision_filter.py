@@ -955,7 +955,7 @@ def _segment_morph(
         fill_ratio = area_px / max(ww * hh, 1)
 
         is_wall = (
-            5.0 <= min_dim_cm <= 150.0
+            3.0 <= min_dim_cm <= 150.0
             and max_dim_cm >= 30.0
             and aspect >= 1.5
             and fill_ratio >= 0.04
@@ -1168,7 +1168,7 @@ def _choose_class_fused(
     col_ratio = weighted_votes.get(2, 0.0) / total_weight
     structure_ratio = wall_ratio + col_ratio
 
-    if structure_ratio < 0.25 and supported_group_ratio < 0.35 and avg_dark_ratio < 0.12:
+    if structure_ratio < 0.10 and supported_group_ratio < 0.15 and avg_dark_ratio < 0.05:
         return 0
 
     if is_closed or entity_type in {"CIRCLE", "INSERT"}:
