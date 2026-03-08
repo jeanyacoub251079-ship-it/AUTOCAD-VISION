@@ -5,7 +5,7 @@ import json
 import math
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, Sequence, Tuple
+from typing import Any, Dict, Optional, Sequence, Tuple
 
 import ezdxf
 import numpy as np
@@ -28,6 +28,20 @@ except Exception:
     nn = None
     F = None
     HAS_TORCH = False
+
+try:
+    import segmentation_models_pytorch as smp
+    HAS_SMP = True
+except Exception:
+    smp = None
+    HAS_SMP = False
+
+try:
+    import onnxruntime as ort
+    HAS_ONNX = True
+except Exception:
+    ort = None
+    HAS_ONNX = False
 
 try:
     import fitz  # PyMuPDF
@@ -130,6 +144,16 @@ class SamplePoint:
     weight: float
     role: str
     group_id: int
+
+
+@dataclass(frozen=True)
+class PatchStats:
+    exact_class: int
+    dominant_class: Optional[int]
+    dark_ratio: float
+    structure_ratio: float
+    wall_ratio: float
+    column_ratio: float
 
 
 def _odd(value: int) -> int:
@@ -730,45 +754,98 @@ def _compatible_with_fallback_state_dict(state_dict: dict) -> bool:
     return required.issubset(set(state_dict.keys()))
 
 
-def _load_model(model_path: Optional[Path]):
+def _load_model_config(model_path: Path) -> dict:
+    config_path = model_path.with_name("model_config.json")
+    default_config = {
+        "encoder_name": "resnet34",
+        "input_size": [MODEL_TILE_SIZE, MODEL_TILE_SIZE],
+        "in_channels": 3,
+        "classes": 3,
+        "class_names": ["background", "wall", "column"],
+        "normalization": {"mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]}
+    }
+    if config_path.exists():
+        try:
+            user_config = json.loads(config_path.read_text(encoding="utf-8"))
+            default_config.update(user_config)
+            logger.info(f"M0: loaded model config from {config_path.name}")
+        except Exception as exc:
+            logger.warning(f"M0: failed to load model config {config_path}: {exc}")
+    return default_config
+
+
+def _load_model(model_path: Optional[Path]) -> tuple[Any, dict]:
     if model_path is None:
-        return None
+        return None, {}
     if not model_path.exists():
         raise FileNotFoundError(f"M0: model file not found: {model_path}")
-    if not HAS_TORCH:
-        raise RuntimeError("M0: torch is required to load a segmentation model")
 
+    config = _load_model_config(model_path)
+    suffix = model_path.suffix.lower()
+
+    if suffix == ".onnx":
+        if not HAS_ONNX:
+            raise RuntimeError("M0: onnxruntime is required to load .onnx models. Install it with: pip install onnxruntime")
+        try:
+            session = ort.InferenceSession(str(model_path))
+            logger.info(f"M0: ONNX model loaded ({model_path.name})")
+            return session, config
+        except Exception as exc:
+            raise RuntimeError(f"M0: failed to load ONNX model: {exc}")
+
+    if not HAS_TORCH:
+        raise RuntimeError("M0: torch is required to load a .pth/.pt model. Install it with: pip install torch")
+
+    # Try loading as TorchScript first
     try:
         model = torch.jit.load(str(model_path), map_location="cpu")
         model.eval()
         logger.info(f"M0: torchscript model loaded ({model_path.name})")
-        return model
+        return model, config
     except Exception:
         pass
 
-    payload = torch.load(str(model_path), map_location="cpu")
+    # Try loading as state dict with SMP
+    if HAS_SMP:
+        try:
+            model = smp.Unet(
+                encoder_name=config["encoder_name"],
+                encoder_weights=None,
+                in_channels=config["in_channels"],
+                classes=config["classes"],
+            )
+            state_dict = torch.load(model_path, map_location="cpu", weights_only=True)
+            model.load_state_dict(state_dict)
+            model.eval()
+            logger.info(f"M0: SMP model loaded with state_dict ({model_path.name})")
+            return model, config
+        except Exception as exc:
+            logger.debug(f"M0: SMP load failed, trying generic torch load: {exc}")
 
-    if isinstance(payload, nn.Module):
-        payload.eval()
-        logger.info(f"M0: torch module loaded ({model_path.name})")
-        return payload
+    # Fallback to generic torch load
+    try:
+        payload = torch.load(str(model_path), map_location="cpu")
+        if isinstance(payload, nn.Module):
+            payload.eval()
+            logger.info(f"M0: torch module loaded ({model_path.name})")
+            return payload, config
+        if isinstance(payload, dict) and isinstance(payload.get("model"), nn.Module):
+            model = payload["model"]
+            model.eval()
+            logger.info(f"M0: embedded torch module loaded ({model_path.name})")
+            return model, config
 
-    if isinstance(payload, dict) and isinstance(payload.get("model"), nn.Module):
-        model = payload["model"]
-        model.eval()
-        logger.info(f"M0: embedded torch module loaded ({model_path.name})")
-        return model
+        state_dict = payload.get("state_dict") if isinstance(payload, dict) and "state_dict" in payload else payload
+        if isinstance(state_dict, dict) and _compatible_with_fallback_state_dict(state_dict):
+            model = _TinyFallbackNet()
+            model.load_state_dict(state_dict, strict=True)
+            model.eval()
+            logger.warning(f"M0: loaded legacy fallback checkpoint ({model_path.name})")
+            return model, config
+    except Exception as exc:
+        raise RuntimeError(f"M0: failed to load torch model {model_path}: {exc}")
 
-    state_dict = payload.get("state_dict") if isinstance(payload, dict) and "state_dict" in payload else payload
-    if isinstance(state_dict, dict) and _compatible_with_fallback_state_dict(state_dict):
-        model = _TinyFallbackNet()
-        model.load_state_dict(state_dict, strict=True)
-        model.eval()
-        logger.warning(f"M0: loaded legacy fallback checkpoint ({model_path.name})")
-        return model
-
-    logger.warning(f"M0: unsupported model format for {model_path.name}, using CV fallback")
-    return None
+    raise RuntimeError(f"M0: unsupported model format for {model_path.name}")
 
 
 def _extract_logits(output):
@@ -795,31 +872,42 @@ def _extract_logits(output):
     raise RuntimeError("M0: unsupported model output format")
 
 
-def _run_model_once(model, tile: np.ndarray):
-    if not HAS_TORCH:
-        raise RuntimeError("Torch unavailable")
+def _run_model_once(model, tile: np.ndarray, config: dict):
+    # tile is (H, W) or (H, W, C)
+    norm = config.get("normalization", {})
+    mean = np.array(norm.get("mean", [0.485, 0.456, 0.406]), dtype=np.float32)
+    std = np.array(norm.get("std", [0.229, 0.224, 0.225]), dtype=np.float32)
 
-    base = torch.from_numpy(tile.astype(np.float32)).unsqueeze(0).unsqueeze(0)
-    last_error: Optional[Exception] = None
+    in_channels = config.get("in_channels", 3)
 
-    for channels in (1, 3):
-        try:
-            x = base if channels == 1 else base.repeat(1, 3, 1, 1)
-            output = model(x)
+    if in_channels == 3:
+        if tile.ndim == 2:
+            tile_norm = np.stack([tile]*3, axis=-1)
+        else:
+            tile_norm = tile
+        tile_norm = (tile_norm - mean) / std
+    else:
+        tile_norm = (tile - mean[0]) / std[0]
+        if tile_norm.ndim == 2:
+            tile_norm = tile_norm[:, :, np.newaxis]
+
+    if HAS_ONNX and isinstance(model, ort.InferenceSession):
+        inp = tile_norm.transpose(2, 0, 1)[np.newaxis, ...]
+        input_name = model.get_inputs()[0].name
+        output = model.run(None, {input_name: inp})
+        logits = output[0] if isinstance(output, (list, tuple)) else output
+        return logits
+
+    if HAS_TORCH and isinstance(model, nn.Module):
+        inp = torch.from_numpy(tile_norm.transpose(2, 0, 1)).unsqueeze(0).float()
+        with torch.no_grad():
+            output = model(inp)
             logits = _extract_logits(output)
-            if logits.ndim == 3:
-                logits = logits.unsqueeze(0)
-            if logits.ndim != 4:
-                raise RuntimeError(f"M0: invalid logits shape {tuple(logits.shape)}")
-            if logits.shape[1] < 3:
-                raise RuntimeError(f"M0: model must output at least 3 classes, got {logits.shape[1]}")
-            if logits.shape[-2:] != tile.shape:
-                logits = F.interpolate(logits, size=tile.shape, mode="bilinear", align_corners=False)
-            return logits[:, :3, :, :]
-        except Exception as exc:
-            last_error = exc
+            if logits.shape[-2:] != tile.shape[:2]:
+                logits = F.interpolate(logits, size=tile.shape[:2], mode="bilinear", align_corners=False)
+            return logits.cpu().numpy()
 
-    raise RuntimeError(f"M0: model inference failed: {last_error}")
+    raise RuntimeError("M0: unsupported model type for inference")
 
 
 def _tile_positions(size: int, tile_size: int, overlap: int) -> list[Tuple[int, int]]:
@@ -839,37 +927,39 @@ def _tile_positions(size: int, tile_size: int, overlap: int) -> list[Tuple[int, 
     return positions
 
 
-def _segment_with_model(gray: np.ndarray, model) -> np.ndarray:
-    if not HAS_TORCH:
-        raise RuntimeError("Torch unavailable")
-
+def _segment_with_model(gray: np.ndarray, model, config: dict) -> np.ndarray:
     arr = gray.astype(np.float32) / 255.0
     h, w = arr.shape
-    ys = _tile_positions(h, MODEL_TILE_SIZE, MODEL_TILE_OVERLAP)
-    xs = _tile_positions(w, MODEL_TILE_SIZE, MODEL_TILE_OVERLAP)
+
+    tile_size = config.get("input_size", [MODEL_TILE_SIZE, MODEL_TILE_SIZE])[0]
+    ys = _tile_positions(h, tile_size, MODEL_TILE_OVERLAP)
+    xs = _tile_positions(w, tile_size, MODEL_TILE_OVERLAP)
 
     sum_logits: Optional[np.ndarray] = None
     visits = np.zeros((h, w), dtype=np.float32)
 
-    with torch.no_grad():
-        for y0, y1 in ys:
-            for x0, x1 in xs:
-                tile = arr[y0:y1, x0:x1]
-                tile_h, tile_w = tile.shape
+    for y0, y1 in ys:
+        for x0, x1 in xs:
+            tile = arr[y0:y1, x0:x1]
+            tile_h, tile_w = tile.shape
 
-                if tile_h < MODEL_TILE_SIZE or tile_w < MODEL_TILE_SIZE:
-                    padded = np.ones((MODEL_TILE_SIZE, MODEL_TILE_SIZE), dtype=np.float32)
-                    padded[:tile_h, :tile_w] = tile
-                    tile = padded
+            if tile_h < tile_size or tile_w < tile_size:
+                padded = np.ones((tile_size, tile_size), dtype=np.float32)
+                padded[:tile_h, :tile_w] = tile
+                tile = padded
 
-                logits = _run_model_once(model, tile)
-                tile_logits = logits[0, :, :tile_h, :tile_w].cpu().numpy().astype(np.float32)
+            logits = _run_model_once(model, tile, config)
+            # logits is (1, C, H, W) or (C, H, W)
+            if logits.ndim == 4:
+                logits = logits[0]
 
-                if sum_logits is None:
-                    sum_logits = np.zeros((3, h, w), dtype=np.float32)
+            tile_logits = logits[:, :tile_h, :tile_w].astype(np.float32)
 
-                sum_logits[:, y0:y1, x0:x1] += tile_logits
-                visits[y0:y1, x0:x1] += 1.0
+            if sum_logits is None:
+                sum_logits = np.zeros((logits.shape[0], h, w), dtype=np.float32)
+
+            sum_logits[:, y0:y1, x0:x1] += tile_logits
+            visits[y0:y1, x0:x1] += 1.0
 
     if sum_logits is None:
         raise RuntimeError("M0: empty model inference")
@@ -968,10 +1058,6 @@ def _segment_morph(
     return mask
 
 
-def _segment(gray: np.ndarray, bounds: Tuple[float, float, float, float], units_info: UnitsInfo, model=None) -> np.ndarray:
-    if model is not None:
-        return _segment_with_model(gray, model)
-    return _segment_morph(gray, bounds, units_info)
 
 
 def _build_visual_support_map(
@@ -1013,11 +1099,11 @@ def _add_target_layers(doc: ezdxf.document.Drawing) -> None:
 def _apply_entity_style(ent, layer_name: str) -> None:
     ent.dxf.layer = layer_name
     if hasattr(ent.dxf, "color"):
-        ent.dxf.color = 256
+        ent.dxf.color = 256  # BYLAYER
     if hasattr(ent.dxf, "linetype"):
         ent.dxf.linetype = "BYLAYER"
     if hasattr(ent.dxf, "lineweight"):
-        ent.dxf.lineweight = -1
+        ent.dxf.lineweight = -1  # BYLAYER
 
 
 def _sample_entity_points(ent, units_info: UnitsInfo) -> list[SamplePoint]:
@@ -1354,39 +1440,38 @@ def _save_audit(
     plt.imsave(audit_dir / "m0_mask.png", color)
     plt.imsave(audit_dir / "m0_support.png", support_map, cmap="gray", vmin=0, vmax=255)
 
+    # m0_overlay.png
+    if gray.ndim == 2:
+        gray_rgb = np.stack([gray]*3, axis=-1)
+    else:
+        gray_rgb = gray
+    overlay = cv2.addWeighted(gray_rgb, 0.7, color, 0.3, 0) if HAS_CV2 else (gray_rgb * 0.7 + color * 0.3).astype(np.uint8)
+    plt.imsave(audit_dir / "m0_overlay.png", overlay)
+
     report = {
-        "units": {
-            "source_units": units_info.source_units,
-            "scale_to_cm": units_info.scale_to_cm,
-            "insunits_code": units_info.insunits_code,
+        "units_detected": units_info.source_units,
+        "units_source": "insunits" if units_info.insunits_code != 0 else "inferred_from_extents",
+        "extents": {
+            "xmin": bounds_info.bounds[0],
+            "ymin": bounds_info.bounds[1],
+            "xmax": bounds_info.bounds[2],
+            "ymax": bounds_info.bounds[3]
         },
-        "bounds": {
-            "min_x": bounds_info.bounds[0],
-            "min_y": bounds_info.bounds[1],
-            "max_x": bounds_info.bounds[2],
-            "max_y": bounds_info.bounds[3],
-            "robust": bounds_info.robust,
-            "total_boxes": bounds_info.total_boxes,
-            "kept_boxes": bounds_info.kept_boxes,
-        },
-        "raster": {
-            "width_px": int(gray.shape[1]),
-            "height_px": int(gray.shape[0]),
-            "render_noise_removed": render_noise_removed,
-            "origin": raster_source.origin,
-            "vision_path": raster_source.vision_path,
-            "cropped": raster_source.cropped,
-            "padded": raster_source.padded,
-        },
-        "mask_pixels": {
-            "background": int(np.sum(mask == 0)),
-            "walls": int(np.sum(mask == 1)),
-            "columns": int(np.sum(mask == 2)),
-        },
-        "support_pixels": int(np.count_nonzero(support_map > 0)),
-        "vector_counts": counts,
+        "raster_size": [int(gray.shape[1]), int(gray.shape[0])],
+        "vision_source": raster_source.origin,
+        "vision_file": str(raster_source.vision_path),
+        "segmentation_mode": "model" if model_path else "fallback",
         "model_path": str(model_path) if model_path else "",
-        "status": "empty_segmentation" if int(np.sum(mask > 0)) == 0 else "ok",
+        "model_format": model_path.suffix.lstrip(".") if model_path else "none",
+        "image_cropped": raster_source.cropped,
+        "image_padded": raster_source.padded,
+        "pixels_wall": int(np.sum(mask == 1)),
+        "pixels_column": int(np.sum(mask == 2)),
+        "total_dxf_entities": counts.get("total", 0),
+        "entities_BA_MURS": counts.get("walls", 0),
+        "entities_BA_POTEAUX": counts.get("columns", 0),
+        "entities_ARCHI_FOND": counts.get("background", 0),
+        "status": "empty_segmentation" if int(np.sum(mask > 0)) == 0 else ("fallback_used" if not model_path else "ok")
     }
     (audit_dir / "m0_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -1430,8 +1515,11 @@ def run(
         gray, bounds_info = _rasterize_from_dxf(render_doc, units_info, dpi=dpi)
         raster_source = RasterSourceInfo(origin="dxf", vision_path="", cropped=False, padded=False)
 
-    model = _load_model(model_path)
-    mask = _segment(gray, bounds_info.bounds, units_info, model=model)
+    model, model_config = _load_model(model_path)
+    if model is not None:
+        mask = _segment_with_model(gray, model, model_config)
+    else:
+        mask = _segment_morph(gray, bounds_info.bounds, units_info)
     support_map = _build_visual_support_map(gray, bounds_info.bounds, units_info)
 
     mask_wall_px = int(np.sum(mask == 1))
