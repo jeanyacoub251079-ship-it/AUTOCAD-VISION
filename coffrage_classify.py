@@ -44,7 +44,7 @@ _KEYWORDS_BY_TYPE: dict[str, tuple[str, ...]] = {
     "COLUMN": ("POTEAU", "POT", "COLUMN", "COL", "PILIER", "PIL"),
     "SLAB": ("DALLE", "DALL", "SLAB", "PLANCHER", "PLANCH"),
     "BEAM": ("POUTRE", "POUT", "BEAM"),
-    "TREMIE": ("TREMIE", "TRÉMIE", "OPENING", "OUVERTURE"),
+    "TREMIE": ("TREMIE", "TRÉMIE", "OPENING", "OUVERTURE", "VIDE", "TROU", "PERCEMENT"),
     "RESERVATION": ("RESERV", "RESA", "RESE"),
     "FURNITURE": ("FURN", "MEUBL", "MOBIL", "ARCHI", "MENUIS", "DOOR", "WINDOW", "SANIT", "EQUIP"),
 }
@@ -205,7 +205,7 @@ def _polygon_candidates(
     candidates: list[ClassificationResult] = []
 
     # Mur / voile / noyau allongé
-    if 10.0 <= thickness <= 60.0 and length >= 60.0 and area >= 0.12 and aspect >= 2.0:
+    if 15.0 <= thickness <= 60.0 and length >= 60.0 and area >= 0.12 and aspect >= 2.0:
         conf = 0.80 + support_bonus
         subtype = "VOILE_BA"
         if thickness >= 25.0 and area >= 1.0:
