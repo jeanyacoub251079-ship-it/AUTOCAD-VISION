@@ -1,0 +1,24 @@
+# Runtime / données locales (jamais versionnées)
+data/
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / frontend
+node_modules/
+# web/dist/ est versionné pour un usage hors-ligne sans Node :
+web/.vite/
+
+# Divers
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local

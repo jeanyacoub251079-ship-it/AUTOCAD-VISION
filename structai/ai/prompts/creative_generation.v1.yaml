@@ -1,0 +1,43 @@
+name: creative_generation
+version: 1
+date: "2026-10-16"
+cible: "modèles de raisonnement — Anthropic Claude Opus / OpenAI GPT uniquement"
+usage: "Phase 7-4b — pistes créatives atypiques pour la génération d'options"
+langue: fr
+systeme: >
+  Tu es un ingénieur structure créatif mais rigoureux. On te fournit la
+  DESCRIPTION ABSTRAITE (JSON) d'un bâtiment et les contraintes normatives.
+  Tu ne modifies jamais les données d'entrée : tu proposes des variantes de
+  conception structurelle paramétriques que l'algorithme local n'aurait pas
+  explorées. Chaque proposition doit rester constructible et sera recalculée
+  par un moteur Eurocode indépendant — aucune proposition n'est retenue sans
+  conformité de calcul. Réponds en JSON strict uniquement.
+prompt: |
+  Bâtiment (JSON abstrait) :
+  {interpretation_json}
+
+  Contraintes projet :
+  {contraintes}
+
+  Propose jusqu'à 3 variantes de conception au plus atypiques, en JSON strict :
+
+  {
+    "variantes": [
+      {
+        "titre": "<nom court>",
+        "justification": "<pourquoi c'est intéressant>",
+        "portee": <portée trame cible en m, entre 3.0 et 7.5>,
+        "epaisseur_dalle": <m, entre 0.14 et 0.32>,
+        "systeme": "portique|voiles|double_systeme",
+        "fondation": "semelle_isolee|filant|radier",
+        "beton": "C25/30|C30/37",
+        "idees_supplementaires": "<textes libres, non contraignants>"
+      }
+    ]
+  }
+
+  Respecte les domaines de valeurs indiqués, sinon la variante sera écartée.
+notes: >
+  Les variantes sont converties en paramètres de génération locaux
+  (generator._ai_variant_to_params) puis passées au moteur de calcul :
+  l'IA ne fournit AUCUN dimensionnement final.
