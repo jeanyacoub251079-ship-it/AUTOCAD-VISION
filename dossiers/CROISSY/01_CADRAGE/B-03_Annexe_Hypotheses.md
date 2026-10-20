@@ -10,7 +10,7 @@
 | Hypothèses | **H-01 à H-24** (validées) + **H-25 à H-27** (`B-25`) + **H-28 à H-30** (`B-21`) — **30 hypothèses actives**. **`H-31` est sortie du registre** : promue décision **`D-31`** le 20/10/2026 |
 | Statut | **VALIDÉES par le client le 19/10/2026** — 23 en accord global, **H-21 rectifiée**. **`H-28` à `H-30` NOTIFIÉES le 20/10/2026** (`B-21`) : le délai contradictoire de **2 jours** de `D-19` court à compter de cette date |
 | Date | 19/10/2026 |
-| Indice du livrable | **F** (remplace l'indice E du 20/10/2026 — `H-31` promue `D-31`) |
+| Indice du livrable | **G** (remplace l'indice F du 20/10/2026 — doctrine `D-33`) |
 
 > **Indice F — ce qui change sans toucher une seule valeur.** `H-31` (salle de sport en catégorie C4) **sort du registre des hypothèses** : le client l'a confirmée le 20/10/2026, elle devient la **décision `D-31`** au RDR. Une hypothèse confirmée n'est pas « validée » : elle change de nature. La laisser au registre des hypothèses aurait maintenu un doute que la décision a supprimé, et aurait laissé croire qu'un simple silence de deux jours pouvait ramener la salle de sport à `2,50 kN/m²`. **Seules `H-28`, `H-29` et `H-30` restent notifiées** — ce sont des grandeurs que le marché ne fournit pas, pas des usages que le client arbitre.
 >
@@ -214,3 +214,24 @@ Les 24 hypothèses sont **validées**, pas **notifiées**. Entre les deux, il y 
 **Ce que ces hypothèses changent dans le dossier.** `H-28` fait passer `F3` de `40,8` à **`85,3 kN·m`** d'effet de charge et `R1` de `47,5` à **`107,2 kN·m`** : deux éléments qui avaient été prédimensionnés sur un plancher sans recharge. Le prédimensionnement de `B-20` n'était pas faux — il reposait sur les **hypothèses du cartouche**, qui ignorent une prescription écrite de l'architecte (`D4 p. 5`). C'est exactement le type d'écart qu'une descente de charges existe pour révéler.
 
 **Délai contradictoire.** `H-28`, `H-29` et `H-30` sont notifiées sous nuage et soumises au délai de **deux jours ouvrés** de `D-19` à compter du **20/10/2026** : silence vaut acceptation et exonération. `H-31` ne court plus — elle est décidée.
+
+---
+
+## 7. RÉGIME DE CONFIRMATION — DOCTRINE `D-33` (20/10/2026)
+
+**L'instruction.** Un dossier de consultation des entreprises est **adressé à l'entreprise**. Ses pièces — CCTP en tête — énumèrent les prestations que **l'entreprise doit réaliser**. Elles ne nous sont pas adressées. **Certaines hypothèses de ce registre ne recevront donc jamais de réponse formelle** : non par défaut de la MOE, mais parce que la question n'est adressée à personne qui puisse y répondre. Désamiantage, déplombage, plans de cantonnements, méthodes de fouille et de reprise en sous-œuvre sont des obligations d'entreprise. **Nous lisons le CCTP et nous retenons ce qui concerne nos études.**
+
+**Ce que cela produit.** Une colonne de **régime** est ajoutée au registre. Elle ne remplace pas le statut : elle dit **par quel canal la confirmation peut arriver**.
+
+| Régime | Sens | Ce qu'on en fait | Hypothèses |
+|---|---|---|---|
+| **DOCUMENTAIRE** | Un destinataire identifié peut répondre | Relance possible, délai `D-19` applicable | `H-01`, `H-02`, `H-04`, `H-07`, `H-08`, `H-10`, `H-14`, `H-17`, `H-18`, `H-20`, `H-22`, `H-23` |
+| **LECTURE** | **Aucun destinataire** — pièce adressée à l'entreprise | **Aucune relance.** La lecture tient lieu de position ; le risque d'exécution est reporté par la prescription | `H-03`, `H-05`, `H-06`, `H-09`, `H-11`, `H-13`, `H-16`, `H-19`, `H-21` |
+| **RELEVÉ** | Confirmation par constat sur site | Point d'arrêt de chantier, pas une question écrite | `H-12`, `H-15` |
+| **CALCUL** | Valeur d'étude assumée, sans destinataire | Justifiée en borne défavorable, jamais présentée comme certaine | `H-25`, `H-26`, `H-27`, `H-28`, `H-29`, `H-30` |
+
+**Ce que la doctrine change au décompte.** Sur **25 hypothèses non confirmées** : **9 sortent du circuit de relance**, **5 sont des valeurs d'étude**, **2 attendent un relevé**, et il n'en reste que **10 réellement relançables**. Le délai contradictoire de `D-19` ne court plus que sur ces dix.
+
+**Ce qu'elle ne change pas.** Les **nuages `D-19` restent posés** : un nuage de lecture n'est pas un nuage d'attente. Il dit « ceci est notre lecture d'une pièce, vérifiez-la », jamais « nous attendons une réponse ».
+
+> **Détail, justifications et historique : note `B-22` — Note d'hypothèses de conception (Indice A), `02_CONCEPTION/B-22_Note_Hypotheses.md`.** Cette annexe reste le registre de saisie ; `B-22` en est la **note unique opposable**, annexée à la FDC.

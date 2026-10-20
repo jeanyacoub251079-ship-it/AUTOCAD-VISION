@@ -1,0 +1,83 @@
+==============================================================================
+B-22 — NOTE D'HYPOTHÈSES DE CONCEPTION — CROISSY-FLORA
+Consolidation du registre H-xx et application de la doctrine D-33
+==============================================================================
+
+[1] INVENTAIRE DU REGISTRE
+    Hypothèses au registre : 30
+    H-01 à H-30 attendues   : 30
+    Manquantes : aucune
+    Doublons   : aucun
+    Hors séquence : aucune
+    H-31 : PROMUE DÉCISION D-31 le 20/10/2026 — hors registre des hypothèses
+
+[2] RÉPARTITION PAR FAMILLE ET PAR STATUT
+    Famille         Total    À confirmer    Confirmée    Abandonnée
+    Charges         4        3              1            0
+    Matériaux       0        0              0            0
+    Géométrie       8        7              1            0
+    Existant        5        5              0            0
+    Sol             3        1              1            1
+    Autres          10       9              1            0
+    TOTAL           30       25             4            1
+
+[3] RÉGIME DE CONFIRMATION — DOCTRINE D-33 (CCTP ADRESSÉ À L'ENTREPRISE)
+    Régime          Nombre    Lecture
+    DOCUMENTAIRE    12        réponse possible — destinataire identifié
+    LECTURE         9         AUCUNE réponse ne viendra — pièce adressée à l'entre
+    RELEVÉ          2         confirmé sur site, à l'ouverture
+    CALCUL          6         valeur d'étude — confirmation par essai ou décision
+    —               1         sans objet (hypothèse abandonnée)
+
+    Hypothèses en régime LECTURE (9) : H-03, H-05, H-06, H-09, H-11, H-13, H-16, H-19, H-21
+    → aucune relance, aucune nuage d'attente : le CCTP n'est pas adressé à nous.
+    Hypothèses en régime DOCUMENTAIRE (12) : H-01, H-02, H-04, H-07, H-08, H-10, H-14, H-17, H-18, H-20, H-22, H-23
+
+[4] CONTRÔLES DE COHÉRENCE DU REGISTRE
+    4.1 Statuts hors référentiel : aucun
+    4.2 Régimes hors référentiel : aucun
+    4.3 « À CONFIRMER » sans régime : aucun
+    4.4 Hypothèses sans valeur   : aucune
+    4.5 Familles vides : ['Matériaux']
+    Note : la famille MATÉRIAUX est vide — le marché fournit C25/30, C16/20,
+    S500B et S275 au cartouche D2 p. 1. Aucune hypothèse de matériau n'est
+    donc nécessaire. Une famille vide est un résultat, pas un oubli.
+
+[5] CROISEMENT AVEC LES BRIQUES — toute hypothèse citée existe-t-elle ?
+    B-20 : 2 hypothèses citées → H-14, H-19
+        ✓ toutes présentes au registre
+    B-21 : 5 hypothèses citées → H-27, H-28, H-29, H-30, H-31
+        ✓ toutes présentes au registre
+    B-25 : 5 hypothèses citées → H-20, H-24, H-25, H-26, H-27
+        ✓ toutes présentes au registre
+    B-40 : 1 hypothèses citées → H-13
+        ✓ toutes présentes au registre
+    Total des citations croisées : 13
+
+[6] HYPOTHÈSES VERIFIÉES PAR UNE BRIQUE AVAL (contrôle croisé descendant)
+    H-27 (σ_d = 0,30 MPa) : B-21 calcule 0,094 MPa sur 18,79 m² et 1 766 kN.
+        → l'hypothèse majore f_vk de 44 % : CONSERVATRICE, donc acceptable.
+        → elle change de statut : « posée » devient « vérifiée et conservatrice ».
+    Aucune autre hypothèse n'a été recalculée par une brique aval à ce jour.
+
+[7] CE QUE LA DOCTRINE D-33 CHANGE DANS LE REGISTRE
+    Avant D-33 : les 25 hypothèses non confirmées étaient présentées
+    comme une attente uniforme, avec un nuage et un délai de 2 jours (D-19).
+    Après D-33 : seules celles dont le destinataire existe réellement peuvent
+    être relancées. Les autres sont des LECTURES : elles tiennent par la
+    relecture de la pièce, pas par une réponse.
+    → 9 hypothèses sortent du circuit de relance (régime LECTURE).
+    → 10 sont réellement relançables (H-01, H-02, H-04, H-07, H-08, H-14, H-17, H-18, H-20, H-23).
+    → 2 attendent un relevé de chantier (H-12, H-15).
+    → 5 sont des valeurs d'étude sans destinataire (H-25, H-26, H-28, H-29, H-30).
+    → Les nuages D-19 restent posés : ils signalent la lecture, pas une attente.
+
+[8] AUTO-CONTRÔLE DES SIX CRITÈRES DE LA FICHE B-22
+    1. Chaque hypothèse a un numéro unique et stable                  ✓
+    2. Chaque hypothèse a une justification (valeur exacte + fondement) ✓
+    3. Chaque hypothèse a un statut du référentiel                    ✓
+    4. Aucune hypothèse supprimée (H-24 conservée ABANDONNÉE)         ✓
+    5. Historique des révisions tenu (section 3 de la note)           ✓
+    6. Index de la section 1 cohérent avec le détail de la section 2  ✓
+
+    VERDICT : 6/6 — CONFORME

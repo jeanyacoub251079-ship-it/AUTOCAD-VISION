@@ -18,7 +18,7 @@
 
 | Ce qui reste séquencé pour la suite de la chaîne CARNAC | Motif |
 |---|---|
-| **`B-22`** (Note d'hypothèses consolidée `D-19` — `H-01` à `H-31`) | Briques suivante de Phase 3 — prête à démarrer sur `GO` |
+| **`B-23`** (Exploitation du diagnostic) puis **`B-24`** (Existant non sondé) | Briques suivantes de Phase 3 — prêtes à démarrer sur `GO` |
 | **`B-42` (Poteaux & jambages BA : `P2, P3, J1`) · `B-44` (Charpente) · `B-45` (Profilés métalliques `F1–F4, R1–R3, P1, Stab1`) · `B-46` (Maçonnerie existante) · `B-50` (Assemblages & ancrages)** | Calculs fins d'exécution EC2 / EC3 / EC5 séquencés après validation de `B-20 Ind. B` |
 | **`B-60 / B-62`** (Plans d'exécution cotés coffrage/ferraillage & nomenclatures — `D-17`) | Séquencés après les calculs d'exécution `B-40 à B-50` |
 
@@ -31,8 +31,8 @@
 | **B-00** | `01_CADRAGE/B-00_Inventaire.md` | **C** | 19/10/2026 | ✅ Livrée — corpus D1 à D5 inventorié |
 | **B-01** | `01_CADRAGE/B-01_MPD.md` | **B** | 19/10/2026 | ✅ Livrée — validée par D-05 |
 | **B-02** | `01_CADRAGE/B-02_FDC.md` | **F** | 19/10/2026 | ✅ Livrée — prescription `ENC v3` (12 alinéas) |
-| **B-03** | `01_CADRAGE/B-03_RDR.md` | **R** | **20/10/2026** | ✅ **31 décisions (`D-01` à `D-24`, `D-26` à `D-32` — `D-25` inexistant) · `D-28` joints · `D-30` `SF1` 80×80 · `D-31` cat. C4 · `D-32` 2,50 kN/m²** |
-| **B-03 annexe** | `01_CADRAGE/B-03_Annexe_Hypotheses.md` | **F** | **20/10/2026** | ✅ **30 hypothèses actives** (`H-01` à `H-30`) — `H-28` à `H-30` **notifiées**, `H-31` promue `D-31` |
+| **B-03** | `01_CADRAGE/B-03_RDR.md` | **S** | **20/10/2026** | ✅ **32 décisions (`D-01` à `D-24`, `D-26` à `D-33` — `D-25` inexistant) · `D-28` joints · `D-30` `SF1` 80×80 · `D-31` cat. C4 · `D-32` 2,50 kN/m²** |
+| **B-03 annexe** | `01_CADRAGE/B-03_Annexe_Hypotheses.md` | **G** | **20/10/2026** | ✅ **30 hypothèses actives** (`H-01` à `H-30`) — `H-28` à `H-30` **notifiées**, `H-31` promue `D-31` |
 | **B-04** | `01_CADRAGE/B-04_PTD.md` | **C** | 19/10/2026 | ✅ Plan de travail dégradé actif |
 | **B-10 à B-15** | `02_ANALYSE/B-10..B-15*.md` | **A / B** | 19/10/2026 | ✅ Phase 1 Analyse complète et close |
 | **B-30** | `03_CALAGE/B-30_Calage.md` | **C** | 19/10/2026 | ✅ Calage `1,7 mm` · surfaces RDC `111,15 m²` / R+1 `106,92 m²` · `0,00 RELATIF` (`D-21`) |
@@ -41,6 +41,7 @@
 | **B-20** | `02_CONCEPTION/B-20_Conception_GO.md` | **B** | **20/10/2026** | ✅ **CONFORME** — synthèse intégrale `D1+D2+D3+D4+D5`, calage vectoriel `1/80` (`21,0 mm`), 100 % des ouvrages implantés, 3 planches + 2 coupes `A-A / B-B` |
 | **B-40** | `06_CALCULS/B-40_Fondations.md` | **E** | **20/10/2026** | ✅ **CONFORME EN PARTIEL-DÉCLARÉ** — plan combiné `PLS` implanté + ferraillage `HA8 e150` + note `D-09` + justification `D-24 / R-36` |
 | **B-21** | `02_CONCEPTION/B-21_DDC_Preliminaire.md` | **B** | **20/10/2026** | ✅ **CONFORME 7/7** — `1 766 kN` ELU sur le R+1 · `F3` **+109 %** et `R1` **+126 %** vs `B-20` · **`D-30` `SF1` 80 × 80** · `H-27` vérifiée |
+| **B-22** | `02_CONCEPTION/B-22_Note_Hypotheses.md` | **A** | **20/10/2026** | ✅ **CONFORME 6/6** — **30 hypothèses** · **`D-33`** : 9 en régime `LECTURE` (aucune relance) · `H-27` vérifiée par `B-21` · famille Matériaux vide (assumée) |
 | **B-25** | `02_CONCEPTION/B-25_Stabilite_Globale.md` | **C** | **20/10/2026** | ✅ **CONFORME 6/6 applicables** — contreventement = maçonnerie seule, `ΣK = 1,21/1,64 GN/m`, torsion `τ/f_vk ≤ 0,028`, aucun joint. **Sismique retirée (`D-26`)** · **stabilité provisoire retirée, MOE (`D-27`)** |
 
 ---
@@ -51,10 +52,11 @@
 
 | Fichier | Taille exacte | Contenu |
 |---|---|---|
-| `01_CADRAGE/B-03_RDR.md` | `63 984 o · 448 l.` | Registre vivant **Ind. R** : `D-01` à `D-32`, Articles `P1–P8`, registre des nuages `D-19` |
+| `01_CADRAGE/B-03_RDR.md` | `65 812 o · 452 l.` | Registre vivant **Ind. S** : `D-01` à `D-33`, Articles `P1–P8`, registre des nuages `D-19` |
 | `02_CONCEPTION/B-20_Conception_GO.md` | `30 101 o · 206 l.` | Synthèse structurelle & prédimensionnement GO Ind. B (rectificatifs + 13 postes + rattachement `B-11`) |
 | `06_CALCULS/B-40_Fondations.md` | `10 836 o · 108 l.` | Note de calcul & implantation « PLS » des fondations Ind. E (note `D-09` en tête) |
 | `03_CALAGE/B-32_Vue_Nettoyee.md` | `6 412 o · 73 l.` | Rapport de nettoyage structurel strict Ind. D (purge totale cloisons & isolation) |
+| `02_CONCEPTION/B-22_Note_Hypotheses.md` | `27 102 o · 239 l.` | **Note d'hypothèses Ind. A** : 30 hypothèses, 5 régimes de confirmation (`D-33`), historique des révisions |
 | `02_CONCEPTION/B-21_DDC_Preliminaire.md` | `32 812 o · 410 l.` | DDC PRÉLIMINAIRE — CONCEPTION **Ind. B** : 5 tableaux, 8 porteurs surfaciques, 14 porteurs linéaires, contrôle `B-20`, `D-30` |
 | `02_CONCEPTION/B-25_Stabilite_Globale.md` | `37 348 o · 379 l.` | Note de stabilité globale **Ind. C** (contreventement, torsion, régularité, joints) — exclusions `D-26` (sismique) et `D-27` (stabilité provisoire → MOE) — journal `_rendus/b25_stabilite.txt` |
 
