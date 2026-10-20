@@ -340,10 +340,14 @@ def dessiner(res):
     rect(8, 8, 412, 289, "PLANCHER-CARTOUCHE")
     txt(14, 279, "CROISSY-FLORA — B-43 — DALLAGE : FERRAILLAGE, JOINTS DE RETRAIT, DÉSOLIDARISATION", 4.0, "PLANCHER-AXES")
     txt(14, 272, "Indice A — 20/10/2026 — NE PAS EXÉCUTER SANS EXE COTÉ ET VISA", 2.8, "PLANCHER-AXES")
+    txt(14, 266.5, "AUCUN JOINT DE DILATATION (D-28) — LES JOINTS DE RETRAIT NE SONT PAS DES JOINTS DE DILATATION",
+        2.6, "PLANCHER-JOINTS")
+    txt(14, 261.5, "D-09 : DALLAGE COULÉ À MÊME LES SEMELLES, DÉSOLIDARISÉ — JAMAIS SUR LEUR DÉBORD",
+        2.6, "PLANCHER-DESOLID")
 
     # ---------------------------------------------------- DÉTAIL 1 : coupe
-    txt(14, 262, "1. COUPE DU COMPLEXE — 1:5", 3.0, "PLANCHER-AXES")
-    x1, y1 = 24.0, 152.0
+    txt(14, 254, "1. COUPE DU COMPLEXE — 1:5", 3.0, "PLANCHER-AXES")
+    x1, y1 = 24.0, 138.0
     w = 300 * S                      # 60
     gnt, dal, rev = 400 * S, D_H * S, 20 * S
     rect(x1, y1, x1 + w, y1 + gnt, "PLANCHER-COFFRAGE")
@@ -367,44 +371,42 @@ def dessiner(res):
     rap(x1 + w - 2, y_tr, 100, y_tr - 3, "Treillis ST25C (Ø7 e150) — 257 mm²/m", 2.2, "PLANCHER-ACIER-INF")
     rap(x1 + w - 2, y_dal + 1.5, 100, y_dal - 5, "Film polyane 200 µm remonté sur 10 cm", 2.2, "PLANCHER-DESOLID")
     rap(x1 + w - 2, y1 + gnt / 2, 100, y1 + gnt / 2, "Fond de forme GNT 40 cm (D2 f. 03)")
-    ligne(x1, y1 - 3, x1 + w, y1 - 3, "PLANCHER-COTATION")
-    txt(x1 + w / 2 - 12, y1 - 6.5, "300 mm (extrait)", 2.1, "PLANCHER-COTATION")
 
     # ---------------------------------------------------- DÉTAIL 2 : joint
-    txt(14, 140, "2. JOINT DE RETRAIT SCIÉ — 1:5", 3.0, "PLANCHER-AXES")
-    x2, y2 = 24.0, 108.0
+    txt(14, 128, "2. JOINT DE RETRAIT SCIÉ — 1:5", 3.0, "PLANCHER-AXES")
+    x2, y2 = 24.0, 97.0
     rect(x2, y2, x2 + w, y2 + dal, "PLANCHER-COFFRAGE")
     ligne(x2 + w / 2, y2 + dal, x2 + w / 2 + 4, y2 + dal - D_H / 3 * S, "PLANCHER-JOINTS")
     ligne(x2 + w / 2 + 4, y2 + dal - D_H / 3 * S, x2 + w / 2 + 8, y2 + dal, "PLANCHER-JOINTS")
     ligne(x2, y2 + 7, x2 + w, y2 + 7, "PLANCHER-ACIER-INF")
-    rap(x2 + w / 2 + 4, y2 + dal - D_H / 3 * S, 100, 133,
+    rap(x2 + w / 2 + 4, y2 + dal - D_H / 3 * S, 100, 118,
         "Saignée 43 mm (1/3 de l'épaisseur), ouverte à la règle", 2.2, "PLANCHER-JOINTS")
-    rap(x2 + w - 2, y2 + 7, 100, 118,
+    rap(x2 + w - 2, y2 + 7, 100, 106,
         "Treillis continu : aucune armature coupée", 2.2, "PLANCHER-ACIER-INF")
-    rap(x2 + w - 2, y2 + dal - 2, 100, 126,
+    rap(x2 + w - 2, y2 + dal - 2, 100, 112,
         "Espacement 4,50 m max — panneau ≤ 20,25 m²")
-    txt(100, 113, "Joint de retrait ≠ joint de dilatation (D-28 : aucun)", 2.2, "PLANCHER-AXES")
+    txt(100, 99, "Joint de retrait ≠ joint de dilatation (D-28 : aucun)", 2.2, "PLANCHER-AXES")
 
     # ----------------------------------------- DÉTAIL 3 : désolidarisation
-    txt(14, 98, "3. DÉSOLIDARISATION AU DROIT D'UNE SEMELLE OU D'UN MUR — 1:5", 3.0, "PLANCHER-AXES")
-    x3, y3 = 24.0, 52.0
+    txt(14, 88, "3. DÉSOLIDARISATION AU DROIT D'UNE SEMELLE OU D'UN MUR — SCHÉMA DE PRINCIPE, SANS ÉCHELLE", 2.7, "PLANCHER-AXES")
+    x3, y3 = 24.0, 50.0
     rect(x3, y3, x3 + 60 * S, y3 + 25 * S, "PLANCHER-COFFRAGE")          # semelle
     rect(x3 + 10 * S, y3 + 25 * S, x3 + 50 * S, y3 + 60 * S, "PLANCHER-COFFRAGE")  # fût
     rect(x3 + 60 * S, y3, x3 + 80 * S, y3 + 60 * S, "PLANCHER-DESOLID")  # polystyrène
     rect(x3 + 80 * S, y3 + 12 * S, x3 + 200 * S, y3 + 38 * S, "PLANCHER-COFFRAGE")  # dallage
     ligne(x3 + 80 * S, y3 + 20 * S, x3 + 200 * S, y3 + 20 * S, "PLANCHER-ACIER-INF")
-    rap(x3 + 70 * S, y3 + 55 * S, 105, 92, "Polystyrène 20 mm sur toute la hauteur du dallage", 2.2, "PLANCHER-DESOLID")
-    rap(x3 + 82 * S, y3 + 38 * S, 105, 85, "Mastic souple en surface")
-    rap(x3 + 170 * S, y3 + 20 * S, 105, 78, "Treillis arrêté à 20 mm du joint", 2.2, "PLANCHER-ACIER-INF")
-    rap(x3 + 30 * S, y3 + 30 * S, 105, 64, "Semelle et poteau (B-40) — neuf ou existant")
-    txt(108, 70, "Dallage coulé à même la semelle — compactage interdit sur le débord (D-09).", 2.1)
+    rap(x3 + 14, y3 + 22 * S, 105, 82, "Polystyrène 20 mm sur toute la hauteur du dallage", 2.2, "PLANCHER-DESOLID")
+    rap(x3 + 16, y3 + 38 * S, 105, 76, "Mastic souple en surface")
+    rap(x3 + 34, y3 + 20 * S, 105, 70, "Treillis arrêté à 20 mm du joint", 2.2, "PLANCHER-ACIER-INF")
+    rap(x3 + 6, y3 + 30 * S, 105, 64, "Semelle et poteau (B-40) — neuf ou existant")
+    txt(108, 52, "Compactage interdit sur le débord de semelle (D-09).", 1.9)
 
     # --------------------------------------------- DÉTAIL 4 : recouvrement
-    txt(14, 42, "4. RECOUVREMENT DU TREILLIS — 1:5", 3.0, "PLANCHER-AXES")
-    x4, y4 = 24.0, 28.0
+    txt(14, 42, "4. RECOUVREMENT DU TREILLIS — SCHÉMA DE PRINCIPE, SANS ÉCHELLE", 2.7, "PLANCHER-AXES")
+    x4, y4 = 24.0, 25.0
     ligne(x4, y4 + 4, x4 + 150 * S + 20, y4 + 4, "PLANCHER-ACIER-INF")
     ligne(x4 + 120 * S, y4 + 8, x4 + 250 * S, y4 + 8, "PLANCHER-ACIER-INF")
-    txt(x4 + 118 * S, y4 + 11, "Recouvrement : 2 mailles + 50 mm (300 mm mini)", 2.2, "PLANCHER-ACIER-INF")
+    txt(x4 + 118 * S, y4 + 9, "Recouvrement : 2 mailles + 50 mm (300 mm mini)", 2.1, "PLANCHER-ACIER-INF")
 
     # ----------------------------------------------------------- NOTES
     nx0, ny0, nx1, ny1 = 205, 100, 405, 190
@@ -431,7 +433,7 @@ def dessiner(res):
     txt(cx0 + 4, cy1 - 10, "EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 3.4, "PLANCHER-AXES")
     txt(cx0 + 4, cy1 - 18, "B-43 — PLANCHERS, PLANCHER HAUT & DALLAGE — DALLAGE : PRINCIPES", 2.7)
     txt(cx0 + 4, cy1 - 25, "Brique B-43 · Indice A · 20/10/2026 · Mode PARTIEL-DÉCLARÉ · Unités DXF : mm", 2.2)
-    txt(cx0 + 4, cy1 - 32, "Échelles : détails 1:5 · CARNAC v3.0 · EC2 / NF DTU 13.3", 2.2)
+    txt(cx0 + 4, cy1 - 32, "Détails 1 et 2 au 1:5 · schémas 3 et 4 sans échelle · CARNAC v3.0 · EC2 / NF DTU 13.3", 2.2)
     txt(cx0 + 4, cy1 - 42, "NE PAS EXÉCUTER SANS EXE COTÉ ET VISA", 4.2, "PLANCHER-AXES")
 
     chemin = BASE + ".dxf"

@@ -1,5 +1,10 @@
 # B-43 — PLANCHERS, PLANCHER HAUT ET DALLAGE
 
+> **NOTE OBLIGATOIRE `D-09` — REPRODUITE EN TÊTE DE LA NOTE ET SUR LA PLANCHE :**
+> **« AU MÊME NIVEAU QUE LES FONDATIONS EXISTANTES… RAJOUTER DU GROS BÉTON… CETTE NOTE EST À INDIQUER SUR LES PLANS ET NOTE DE CALCULS »** — appliquée ici au **dallage** : il est coulé **à même** les semelles, avec **désolidarisation** (`20 mm`) au droit de chaque appui, et **jamais** sur leur débord.
+>
+> **`D-28` — AUCUN JOINT DE DILATATION DANS LE BÂTIMENT.** Les **joints de retrait** du dallage (§ 8.4) ne sont **pas** des joints de dilatation : ils ne séparent aucun bloc structurel, ils organisent une fissuration qui se produirait autrement, au hasard.
+
 | Champ | Valeur |
 |---|---|
 | Carnet | **CARNAC v3.0** |
@@ -12,7 +17,7 @@
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b43_planchers.py` |
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b43_planchers.txt` (7 218 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b43_planchers.json` (1 375 o) |
-| Sortie graphique | `_plans/FLORA_B43_DALLAGE_IndA.dxf` (71 549 o · AC1032 · audit **0 erreur**) · `.pdf` (423 471 o) · `.png` (536 870 o) |
+| Sortie graphique | `_plans/FLORA_B43_DALLAGE_IndA.dxf` (71 782 o · AC1032 · audit **0 erreur**) · `.pdf` (454 792 o) · `.png` (573 659 o) |
 | **Indice** | **A** — création de la brique |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-45`** (profilés de plancher et moisage `R1`) · **`B-50`** (assemblages et ancrages) |
@@ -281,7 +286,7 @@ Cette consigne est **une prescription de chantier, pas un calcul** — mais c'es
 | 4 | Chaque appui a ses efforts transmis à `B-50` | ✅ **CONFORME** | § 9 — 6 appuis, efforts et destinataires nommés |
 | 5 | Chaque réservation est compatible avec le ferraillage | ⚠️ **PARTIEL DÉCLARÉ** | Aucune trémie n'est fournie (`STR-03` absent) ; la **règle d'encadrement** est prescrite, le calepinage reste à faire |
 | 6 | Joints de retrait et de désolidarisation prévus | ✅ **CONFORME** | § 8.4 et 8.5 — espacement, profondeur, délai, polystyrène, mastic, consigne de coulage |
-| 7 | Échelle cohérente | ✅ **CONFORME** | Planche `IndA` : détails `1:5`, A3 paysage, unités DXF mm |
+| 7 | Échelle cohérente | ✅ **CONFORME** | Planche `IndA` A3 paysage, unités DXF mm : **détails 1 et 2 au `1:5`** (géométrie à l'échelle) ; **détails 3 et 4 déclarés « schéma de principe, sans échelle »** — une coupe de désolidarisation à `1:5` ne tiendrait pas dans la colonne |
 | 8 | Cartouche complet | ✅ **CONFORME** | Indice, date, mode `PARTIEL-DÉCLARÉ`, filigrane, mention incendie |
 
 **Verdict : 6 conformes, 2 partiels déclarés — la brique n'est pas « 8/8 » et ne le prétend pas.** Les deux points partiels ne sont pas des négligences : l'un porte sur des éléments qui **ne relèvent pas de `B-43`** (profilés), l'autre sur une donnée **qui n'existe pas** (plancher haut non sondé). Les déclarer conformes serait exactement le genre de fausse complétude que le dossier cherche à éviter.

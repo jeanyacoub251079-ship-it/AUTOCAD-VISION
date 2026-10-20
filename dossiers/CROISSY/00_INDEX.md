@@ -58,7 +58,7 @@
 
 | Fichier | Taille exacte | Contenu |
 |---|---|---|
-| `06_CALCULS/B-43_Planchers_Dallage.md` | `24 193 o · 326 l.` | **Planchers, plancher haut & dallage Ind. A** : EC5 solives `8 × 18` (5 vérifications, `0,619`), dallage `C25/30` `13 cm` + `ST25C`, joints de retrait `4,50 m`, désolidarisation, `R-43-1` à `R-43-4`, `PA-03` |
+| `06_CALCULS/B-43_Planchers_Dallage.md` | `25 055 o · 331 l.` | **Planchers, plancher haut & dallage Ind. A** : EC5 solives `8 × 18` (5 vérifications, `0,619`), dallage `C25/30` `13 cm` + `ST25C`, joints de retrait `4,50 m`, désolidarisation, `R-43-1` à `R-43-4`, `PA-03` |
 | `06_CALCULS/B-42_Verticaux_BA.md` | `19 829 o · 267 l.` | **Verticaux BA Ind. B** : diagramme d'interaction `N-M`, flambement EC2 § 5.8, ferraillage 6 HA12, débits, 5 réserves — `N_ELU` de `B-21 Ind. C` |
 | `01_CADRAGE/B-03_RDR.md` | `72 292 o · 464 l.` | Registre vivant **Ind. W** : `D-01` à `D-35`, Articles `P1–P8`, registre des nuages `D-19` — **`D-35`** : recharge `15 cm` sur 100 % du dallage |
 | `01_CADRAGE/B-03_Annexe_Hypotheses.md` | `37 653 o · 252 l.` | **Annexe hypothèses notifiées Ind. H** : 30 hypothèses, clause `D-34` (maçonnerie) mot pour mot, `D-33` régime `LECTURE` |
@@ -79,7 +79,7 @@
 | **B-20 Planche 2 — Implantation Fondations PB RDC (`PLS`)** | `FLORA_B20_PB-RDC_IMPLANTATION-FONDATIONS_IndB.dxf` (`2 767 496 o`) | `946 375 o` | `907 137 o` |
 | **B-20 Planche 3 — R+1 Charpente, Coupes `A-A / B-B` & Cheminement** | `FLORA_B20_CHARPENTE_COUPES_SCHEMA_IndB.dxf` (`2 729 761 o`) | `612 780 o` | `624 524 o` |
 | **B-40 Ind. F — Plan combiné `PLS` + Ferraillage Type Semelles** | `FLORA_FONDATIONS_TYPE_IndF.dxf` (`2 770 141 o`) | `538 646 o` | `655 100 o` |
-| **B-43 Ind. A — Dallage : ferraillage, joints de retrait, désolidarisation** | `FLORA_B43_DALLAGE_IndA.dxf` (`71 549 o`, AC1032) | `423 471 o` | `536 870 o` |
+| **B-43 Ind. A — Dallage : ferraillage, joints de retrait, désolidarisation** | `FLORA_B43_DALLAGE_IndA.dxf` (`71 782 o`, AC1032) | `454 792 o` | `573 659 o` |
 | **B-32 Ind. D — Vue nettoyée structurelle RDC** | `FLORA_RDC_VUE-NETTOYEE_IndD.dxf` (`2 719 320 o`) | `80 712 o` | `280 106 o` |
 | **B-32 Ind. D — Vue nettoyée structurelle R+1** | `FLORA_R1_VUE-NETTOYEE_IndD.dxf` (`2 672 677 o`) | `78 372 o` | `278 171 o` |
 | **B-25 Ind. E — Contreventement, torsion, régularité (`D-29`, `D-28`)** | `FLORA_B25_CONTREVENTEMENT_IndE.dxf` (`2 760 613 o`) | `901 519 o` | `1 075 802 o` |
