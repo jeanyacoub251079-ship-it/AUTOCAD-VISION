@@ -1,0 +1,484 @@
+{
+ "project": "CROISSY-FLORA",
+ "brick": "B-21",
+ "indice": "A",
+ "date": "2026-10-20T14:46:10",
+ "zones": {
+  "Plancher A — aile Est (bois 8×18)": {
+   "total": 0.7999999999999999,
+   "layers": [
+    {
+     "couche": "Parquet + volige",
+     "ep": 0.03,
+     "gamma": 6.0,
+     "g": 0.18,
+     "source": "D3 p. 10 — constitution plancher bois"
+    },
+    {
+     "couche": "Solives bois 8×18 e = 0,50 m",
+     "ep": 0.18,
+     "gamma": 5.5,
+     "g": 0.16,
+     "source": "D3 p. 10 (section × entraxe)"
+    },
+    {
+     "couche": "Plafond lattis-plâtre",
+     "ep": 0.025,
+     "gamma": 12.0,
+     "g": 0.3,
+     "source": "D3 p. 9 (désordre 9)"
+    },
+    {
+     "couche": "Divers (clouage, lambourdes)",
+     "ep": null,
+     "gamma": null,
+     "g": 0.06,
+     "source": "H-28 (forfait de liaison)"
+    },
+    {
+     "couche": "Câblages, gaines dans vide",
+     "ep": null,
+     "gamma": null,
+     "g": 0.1,
+     "source": "D4 p. 6 (programme technique)"
+    }
+   ]
+  },
+  "Plancher B — aile Ouest (voutains + IPE 160)": {
+   "total": 3.91,
+   "layers": [
+    {
+     "couche": "Revêtement de sol",
+     "ep": 0.02,
+     "gamma": 20.0,
+     "g": 0.4,
+     "source": "D4 p. 5 (sol projeté)"
+    },
+    {
+     "couche": "Chape 10 cm",
+     "ep": 0.1,
+     "gamma": 22.0,
+     "g": 2.2,
+     "source": "D3 p. 11 — « chape 10 cm »"
+    },
+    {
+     "couche": "Voutains briques 7 cm + hourdis",
+     "ep": 0.07,
+     "gamma": 15.0,
+     "g": 1.05,
+     "source": "D3 p. 11"
+    },
+    {
+     "couche": "Solives IPE 160 e = 0,72 m",
+     "ep": 0.16,
+     "gamma": 5.0,
+     "g": 0.11,
+     "source": "D3 p. 11 (15,8 kg/m / 0,72 m)"
+    },
+    {
+     "couche": "Plafond + suspension",
+     "ep": null,
+     "gamma": null,
+     "g": 0.15,
+     "source": "D3 p. 12"
+    }
+   ]
+  },
+  "Toiture — combles et versants": {
+   "total": 0.9500000000000001,
+   "layers": [
+    {
+     "couche": "Tuiles + liteaux",
+     "ep": 0.05,
+     "gamma": 8.0,
+     "g": 0.4,
+     "source": "D2 f. 02 (couverture) — H-29"
+    },
+    {
+     "couche": "Chevrons + volige",
+     "ep": 0.08,
+     "gamma": 5.5,
+     "g": 0.15,
+     "source": "D2 f. 02 — H-29"
+    },
+    {
+     "couche": "Pannes + fermes (ramené au m²)",
+     "ep": null,
+     "gamma": null,
+     "g": 0.25,
+     "source": "D2 f. 02 — H-29"
+    },
+    {
+     "couche": "Plafond combles",
+     "ep": 0.02,
+     "gamma": 12.0,
+     "g": 0.15,
+     "source": "D2 f. 02 — H-29"
+    }
+   ]
+  }
+ },
+ "porteurs": {
+  "P1-N": {
+   "type": "Poteau métal",
+   "A": 0.63,
+   "cont": 1.0,
+   "justif": "Demi-portée du linteau bois de façade Ouest Sud (L = 2,52 m entre P1-N et P1-S) × épaisseur de mur porté (0,50 m) — appui de rive, extrémité de file"
+  },
+  "P1-S": {
+   "type": "Poteau métal",
+   "A": 0.63,
+   "cont": 1.0,
+   "justif": "Idem P1-N — second appui de la même baie, appui de rive"
+  },
+  "P2": {
+   "type": "Poteau BA 15×25",
+   "A": 11.46,
+   "cont": 1.15,
+   "justif": "Demi-portée D→E (5,57/2 = 2,785 m) × demi-portées 4→5 et 5→6 ((4,16+4,07)/2 = 4,115 m) — appui intermédiaire en file 5"
+  },
+  "P3": {
+   "type": "Poteau BA 50×40",
+   "A": 0.23,
+   "cont": 1.0,
+   "justif": "Demi-portée de F1b (L = 0,90 m) × épaisseur de mur porté (0,50 m) — appui de rive Est du frangement dans le mur Nord du hall"
+  },
+  "J1": {
+   "type": "Jambage BA 24×50",
+   "A": 0.25,
+   "cont": 1.0,
+   "justif": "Demi-portée de F1a (L = 1,00 m) × épaisseur du refend central (0,50 m) — piédroit Nord, appui de rive"
+  },
+  "M11 (RDC)": {
+   "type": "Voile maçonnerie",
+   "A": null,
+   "cont": 1.15,
+   "justif": "Largeur tributaire = demi-portées 4→5 et 5→6 = (4,16+4,07)/2 = 4,115 m par mètre linéaire de voile — pignon Nord, appui intermédiaire"
+  },
+  "M03 (RDC)": {
+   "type": "Voile maçonnerie",
+   "A": null,
+   "cont": 1.15,
+   "justif": "Largeur tributaire = demi-portées 3→4 et 4→(refend) = (2,75+4,16)/2 = 3,455 m par mètre linéaire — refend central, appui intermédiaire"
+  },
+  "SF1 (sous P2)": {
+   "type": "Semelle isolée",
+   "A": 11.46,
+   "cont": 1.15,
+   "justif": "Reçoit l'intégralité de la réaction de P2 — appui intermédiaire (continuité du plancher en tête)"
+  }
+ },
+ "beams": {
+  "F1a": {
+   "L": 1.0,
+   "strip": 1.0,
+   "mur": 38.5,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 49.01,
+   "p_elu": 76.519275,
+   "cont": 1.15,
+   "justif": "Mur de moellons au-dessus (0,50 m × 3,50 m) + bande de plancher 1,00 m"
+  },
+  "F1b": {
+   "L": 0.9,
+   "strip": 1.0,
+   "mur": 38.5,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 49.01,
+   "p_elu": 76.519275,
+   "cont": 1.15,
+   "justif": "Mur de moellons au-dessus + bande de plancher 1,00 m"
+  },
+  "F1c": {
+   "L": 0.85,
+   "strip": 1.0,
+   "mur": 38.5,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 49.01,
+   "p_elu": 76.519275,
+   "cont": 1.15,
+   "justif": "Mur de moellons au-dessus + bande de plancher 1,00 m"
+  },
+  "F2": {
+   "L": 2.85,
+   "strip": 3.77,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 39.6227,
+   "p_elu": 63.140054250000006,
+   "cont": 1.15,
+   "justif": "Bande 3,77 m = demi-portées 1→2 et 2→3 — plancher seul, mur supprimé"
+  },
+  "F3": {
+   "L": 3.85,
+   "strip": 2.75,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 28.9025,
+   "p_elu": 46.057068750000006,
+   "cont": 1.15,
+   "justif": "Bande 2,75 m = 0,98 m (vers file 3) + 1,77 m (vers file 4) — plancher seul"
+  },
+  "F4": {
+   "L": 4.88,
+   "strip": 1.615,
+   "mur": 0.0,
+   "g": 0.9500000000000001,
+   "q": 0.8500000000000001,
+   "p_els": 2.9070000000000005,
+   "p_elu": 4.749916875,
+   "cont": 1.15,
+   "justif": "Bande 1,615 m = demi-portées B→C et C→D — toiture basse seule (aucun étage au-dessus)"
+  },
+  "R1": {
+   "L": 3.85,
+   "strip": 3.455,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 36.31205,
+   "p_elu": 57.86442637500001,
+   "cont": 1.15,
+   "justif": "Bande 3,455 m = demi-portées 3→4 et 4→5 — moisage sous poutre bois 20×15"
+  },
+  "R2-N": {
+   "L": 3.82,
+   "strip": 2.08,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 21.8608,
+   "p_elu": 34.835892,
+   "cont": 1.15,
+   "justif": "Bande 2,08 m = demi-travée de part et d'autre du sous-solivage (4,16/2)"
+  },
+  "R2-S": {
+   "L": 3.82,
+   "strip": 1.62,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 17.0262,
+   "p_elu": 27.1318005,
+   "cont": 1.15,
+   "justif": "Bande 1,62 m = 2 × 0,81 m (demi-travée 2→3 et 3→refend)"
+  },
+  "R3-N": {
+   "L": 1.55,
+   "strip": 0.0,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 0.0,
+   "p_elu": 0.0,
+   "cont": 1.0,
+   "justif": "Linteau de baie : reprend la réaction de R2-N à mi-portée — appui de rive"
+  },
+  "R3-S": {
+   "L": 1.55,
+   "strip": 0.0,
+   "mur": 0.0,
+   "g": 8.01,
+   "q": 2.5,
+   "p_els": 0.0,
+   "p_elu": 0.0,
+   "cont": 1.0,
+   "justif": "Linteau de baie : reprend la réaction de R2-S à mi-portée — appui de rive"
+  }
+ },
+ "els": {
+  "P1-N": {
+   "G": 75.62519999999999,
+   "Q": 6.3,
+   "N": 81.92519999999999,
+   "unit": "kN",
+   "A": 0.63,
+   "cont": 1.0
+  },
+  "P1-S": {
+   "G": 75.62519999999999,
+   "Q": 6.3,
+   "N": 81.92519999999999,
+   "unit": "kN",
+   "A": 0.63,
+   "cont": 1.0
+  },
+  "P2": {
+   "G": 118.08384,
+   "Q": 38.87805,
+   "N": 156.96188999999998,
+   "unit": "kN",
+   "A": 11.46,
+   "cont": 1.15
+  },
+  "P3": {
+   "G": 27.009,
+   "Q": 2.25,
+   "N": 29.259,
+   "unit": "kN",
+   "A": 0.23,
+   "cont": 1.0
+  },
+  "J1": {
+   "G": 30.009999999999998,
+   "Q": 2.5,
+   "N": 32.51,
+   "unit": "kN",
+   "A": 0.25,
+   "cont": 1.0
+  },
+  "M11 (RDC)": {
+   "G": 36.8704,
+   "Q": 13.785250000000001,
+   "N": 50.655649999999994,
+   "unit": "kN/m",
+   "A": null,
+   "cont": 1.15
+  },
+  "M03 (RDC)": {
+   "G": 30.956799999999998,
+   "Q": 11.574250000000001,
+   "N": 42.53105,
+   "unit": "kN/m",
+   "A": null,
+   "cont": 1.15
+  },
+  "SF1 (sous P2)": {
+   "G": 135.796416,
+   "Q": 44.7097575,
+   "N": 180.5061735,
+   "unit": "kN",
+   "A": 11.46,
+   "cont": 1.15
+  }
+ },
+ "elu": {
+  "P1-N": {
+   "G135": 102.09402,
+   "Q15": 9.45,
+   "N": 111.54402,
+   "A": 0.63,
+   "unit": "kN"
+  },
+  "P1-S": {
+   "G135": 102.09402,
+   "Q15": 9.45,
+   "N": 111.54402,
+   "A": 0.63,
+   "unit": "kN"
+  },
+  "P2": {
+   "G135": 159.413184,
+   "Q15": 58.317075,
+   "N": 217.73025900000002,
+   "A": 11.46,
+   "unit": "kN"
+  },
+  "P3": {
+   "G135": 36.46215,
+   "Q15": 3.375,
+   "N": 39.83715,
+   "A": 0.23,
+   "unit": "kN"
+  },
+  "J1": {
+   "G135": 40.5135,
+   "Q15": 3.75,
+   "N": 44.2635,
+   "A": 0.25,
+   "unit": "kN"
+  },
+  "M11 (RDC)": {
+   "G135": 49.77504,
+   "Q15": 20.677875,
+   "N": 81.02085224999998,
+   "A": 4.115,
+   "unit": "kN/m"
+  },
+  "M03 (RDC)": {
+   "G135": 41.79168,
+   "Q15": 17.361375000000002,
+   "N": 68.02601324999999,
+   "A": 3.455,
+   "unit": "kN/m"
+  },
+  "SF1 (sous P2)": {
+   "G135": 183.3251616,
+   "Q15": 67.06463625,
+   "N": 250.38979785,
+   "A": 11.46,
+   "unit": "kN"
+  }
+ },
+ "h27": {
+  "N_elu": 1766.42532,
+  "A_murs": 18.79,
+  "sigma": 0.09400879829696647,
+  "fvk_calc": 0.07504140772751464,
+  "fvk_h27": 0.10800000000000001,
+  "ratio_b25_recalc": 0.04029775148915846
+ },
+ "ecarts_b20": {
+  "F1a": {
+   "M20": 10.7,
+   "M21": 9.564909375,
+   "ecart": -0.10608323598130842
+  },
+  "F1b": {
+   "M20": 10.7,
+   "M21": 7.74757659375,
+   "ecart": -0.2759274211448598
+  },
+  "F1c": {
+   "M20": 10.7,
+   "M21": 6.910647023437499,
+   "ecart": -0.3541451379964954
+  },
+  "F2": {
+   "M20": 50.0,
+   "M21": 64.10688633070313,
+   "ecart": 0.2821377266140628
+  },
+  "F3": {
+   "M20": 40.8,
+   "M21": 85.33511269335939,
+   "ecart": 1.0915468797392007
+  },
+  "F4": {
+   "M20": 20.1,
+   "M21": 14.1395525535,
+   "ecart": -0.29653967395522396
+  },
+  "R1": {
+   "M20": 47.5,
+   "M21": 107.21193249292972,
+   "ecart": 1.2570933156406259
+  },
+  "R2-N": {
+   "M20": 43.5,
+   "M21": 63.5424088026,
+   "ecart": 0.4607450299448277
+  },
+  "R2-S": {
+   "M20": 43.5,
+   "M21": 49.489760702025,
+   "ecart": 0.13769564832241388
+  }
+ },
+ "sf1": {
+  "N_els": 180.5061735,
+  "N_elu": 250.38979785,
+  "B_act": 0.6,
+  "sigma_els": 501.40603749999997,
+  "B_req": 0.7756850166143471,
+  "b20": {
+   "N_els": 63.2,
+   "sigma_els": 175.55555555555557
+  }
+ }
+}
