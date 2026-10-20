@@ -1,0 +1,356 @@
+==============================================================================
+INVENTAIRE DXF — CROISSY-FLORA
+==============================================================================
+Fichier        : google_drive/208_FLORA_Plans_DCE_IndC.dxf
+Taille         : 4,399,016 octets
+SHA-256        : 45f41e3113a909cef201ec4bb466d95cd82307ed6cd3fa9e016b69e53b39dcf1
+ezdxf          : 1.4.5
+
+Version DXF    : AC1032  (R2018)
+Encodage       : cp1252
+
+--- VARIABLES D'EN-TÊTE (unités et emprises) ---
+  $INSUNITS      : 5
+  $MEASUREMENT   : 1
+  $EXTMIN        : (240.8247004688019, -1930.599527174232, -14.75721813634803)
+  $EXTMAX        : (18395.29887039349, 8321.264143380376, 1.000480894149099)
+  $LIMMIN        : (0.0, 0.0)
+  $LIMMAX        : (420.0, 297.0)
+  $LTSCALE       : 1.0
+  $DIMSCALE      : 1.0
+  $INSBASE       : (0.0, 0.0, 0.0)
+  $ACADVER       : AC1032
+  -> $INSUNITS = cm  [GEO-06]
+
+--- CALQUES ---
+Nombre de calques : 31
+  · *ADSK_ASSOC_ENTITY_BACKUPS
+  · 0
+  · 010_mur
+  · 020_cloi
+  · 020_cloisons
+  · 030_menuiserie
+  · 040_meubles
+  · 050_sols
+  · 051_plafonds
+  · 060_repères murs
+  · 070_trait-fin
+  · 075_cotation
+  · 075_cotation détails
+  · 077_textes-1
+  · 078_textes-2
+  · 078_textes-3
+  · 079_textes-4
+  · 080_plomb-cvc
+  · 090_repères-axes
+  · 091_surfaces
+  · 092_surfaces projet
+  · 097_traits-fins-005
+  · 100 TEXTE PMR
+  · 102_demol
+  · 2_2-MENUISERIE-CO
+  · 2_2-MENUISERIE-VU
+  · 31_sanitaires
+  · BLC-ATT-T
+  · BLC-CUI-S
+  · Defpoints
+  · HAB-HAB-D
+
+--- BLOCS ---
+Nombre de blocs nommés : 46
+  · 62
+  · A$C02925C6F
+  · A$C0D0D2AB0
+  · A$C162D5C68
+  · A$C1AA20D8C
+  · A$C3E395AF3
+  · BD17
+  · CERCLE pmr 1501
+  · CERCLE pmr 1502
+  · FL
+  · Fléche-Nord-1
+  · KITCH
+  · MENX-brut1
+  · Murs porteurs selon geometre projet
+  · NORD
+  · NP-C02
+  · Plan existant mi geometre rdc
+  · R+1 Existant
+  · R+1 Projet
+  · Range-Oven - 30 in top
+  · SIMPLE PORTE
+  · WS
+  · _ArchTick
+  · _None
+  · barre
+  · cerceau
+  · chai
+  · chaise de bureau
+  · chaise ok
+  · cloisons reperage
+  · eg8
+  · evier petit
+  · evier pmr
+  · hand
+  · mitigeur capteur senso vu plan
+  · mitigeur mural
+  · nom des menuiseries ext
+  · ordinateur plat
+  · plot
+  · porte placard double
+  ... et 6 autres
+
+--- ESPACES ---
+Modelspace : 1582 entités
+Paper space « Layout1 » : 2 entités
+
+--- TYPES D'ENTITÉS — MODELSPACE ---
+  LWPOLYLINE           464
+  TEXT                 416
+  INSERT               224
+  DIMENSION            163
+  LINE                 158
+  MTEXT                 97
+  HATCH                 28
+  CIRCLE                15
+  ARC                    7
+  ELLIPSE                7
+  POINT                  3
+
+--- ENTITÉS PAR CALQUE (modelspace) ---
+  078_textes-2                        339
+  020_cloi                            259
+  070_trait-fin                       173
+  040_meubles                         160
+  077_textes-1                        133
+  075_cotation                        104
+  030_menuiserie                       83
+  080_plomb-cvc                        70
+  100 TEXTE PMR                        62
+  075_cotation détails                 49
+  078_textes-3                         43
+  102_demol                            22
+  010_mur                              20
+  079_textes-4                         16
+  092_surfaces projet                  13
+  0                                    12
+  090_repères-axes                      9
+  051_plafonds                          6
+  31_sanitaires                         4
+  050_sols                              2
+  020_cloisons                          2
+  060_repères murs                      1
+
+--- EMPRISE GÉOMÉTRIQUE CALCULÉE ---
+  X : 266.00  ->  18,394.74   (Δ = 18,128.74)
+  Y : -1,924.22  ->  8,265.05   (Δ = 10,189.26)
+  Z : -14.76  ->  0.27
+  Diagonale : 20,795.97
+
+--- TEXTES (MTEXT + TEXT) — 200 premiers ---
+Total textes : 513
+  [077_textes-1          ] (     1,239,     5,447)  Espace extérieur 460 m²
+  [077_textes-1          ] (     3,639,     4,206)  RDC FLORA
+  [077_textes-1          ] (     3,639,     4,159)  Existant
+  [077_textes-1          ] (     2,866,       355)  R+1 FLORA
+  [077_textes-1          ] (     2,866,       308)  Existant
+  [077_textes-1          ] (     9,140,     2,461)  Bureau de consultation 3
+  [077_textes-1          ] (     9,141,     2,445)  13.26m²
+  [077_textes-1          ] (     9,272,     2,097)  Bureau de consultation 4
+  [077_textes-1          ] (     9,273,     2,081)  16.50m²
+  [077_textes-1          ] (     9,025,     1,625)  Dégagement
+  [077_textes-1          ] (     9,026,     1,603)  5.96m²
+  [077_textes-1          ] (     9,029,     1,954)  Attente
+  [077_textes-1          ] (     9,030,     1,936)  8.38m²
+  [077_textes-1          ] (     8,737,     1,378)  Vestiaire
+  [077_textes-1          ] (     8,738,     1,356)  9.32m²
+  [077_textes-1          ] (     8,663,     2,014)  Salle commune
+  [077_textes-1          ] (     8,665,     1,998)  11.75m²
+  [078_textes-3          ] (     9,084,     2,408)  Bureau 3
+  [078_textes-2          ] (     9,085,     2,391)  13.26m²
+  [078_textes-3          ] (     9,140,     2,407)  hsp : 2.40m
+  [078_textes-2          ] (     9,140,     2,392)  moquette
+  [078_textes-2          ] (     9,140,     2,381)  grand trafic
+  [078_textes-3          ] (     9,283,     2,090)  Bureau 4
+  [078_textes-2          ] (     9,284,     2,072)  16.50m²
+  [078_textes-3          ] (     9,340,     2,089)  hsp : 2.39m
+  [078_textes-2          ] (     9,340,     2,073)  moquette
+  [078_textes-2          ] (     9,340,     2,063)  grand trafic
+  [078_textes-3          ] (     9,176,     1,167)  Salle de sport
+  [078_textes-2          ] (     9,177,     1,150)  34.25m²
+  [078_textes-2          ] (     9,251,     1,150)  parquet
+  [078_textes-3          ] (     9,249,     1,166)  hsp : 2.44m
+  [078_textes-3          ] (     9,133,     1,654)  Dégmt
+  [078_textes-2          ] (     9,134,     1,637)  5.96m²
+  [078_textes-3          ] (     9,175,     1,653)  hsp : 2.41m
+  [078_textes-2          ] (     9,175,     1,638)  moquette
+  [078_textes-2          ] (     9,175,     1,627)  grand trafic
+  [080_plomb-cvc         ] (     2,618,     1,558)  radiateur
+  [080_plomb-cvc         ] (     2,029,     1,602)  sèche serviettes
+  [080_plomb-cvc         ] (     2,460,     2,310)  sèche serviettes
+  [080_plomb-cvc         ] (     3,004,     1,833)  radiateur
+  [080_plomb-cvc         ] (     2,025,     1,355)  radiateur
+  [080_plomb-cvc         ] (     2,451,       989)  radiateur
+  [080_plomb-cvc         ] (     2,453,     2,112)  radiateur
+  [080_plomb-cvc         ] (     2,699,     1,290)  radiateur
+  [080_plomb-cvc         ] (     2,022,     5,113)  radiateur
+  [080_plomb-cvc         ] (     2,032,     5,698)  radiateur
+  [077_textes-1          ] (     8,706,     1,619)  Douche
+  [077_textes-1          ] (     8,707,     1,602)  2.37m²
+  [078_textes-3          ] (     8,675,     1,344)  Vestiaire
+  [078_textes-2          ] (     8,676,     1,327)  9.32m²
+  [078_textes-3          ] (     8,721,     1,343)  hsp : 2.62m
+  [078_textes-2          ] (     8,721,     1,328)  sol souple
+  [078_textes-2          ] (     8,721,     1,317)  acoustique 19dB
+  [078_textes-3          ] (     8,643,     1,981)  Salle commune
+  [078_textes-2          ] (     8,644,     1,964)  11.75m²
+  [078_textes-3          ] (     8,725,     1,980)  hsp : 2.62m
+  [078_textes-2          ] (     8,725,     1,965)  sol souple
+  [078_textes-2          ] (     8,725,     1,954)  acoustique 19dB
+  [078_textes-3          ] (     8,593,     1,646)  San
+  [077_textes-1          ] (     9,213,     1,096)  Salle de sport
+  [077_textes-1          ] (     9,214,     1,077)  34.25m²
+  [078_textes-2          ] (     9,190,       759)  tablette bois, étagères, patères pour rangement matériel
+  [078_textes-2          ] (     9,255,     1,452)  miroirs
+  [078_textes-2          ] (     9,027,     1,188)  miroirs
+  [078_textes-2          ] (     8,597,     1,434)  remontée faïence 20cm
+  [078_textes-2          ] (     8,514,     1,312)  remplacement fenêtre en option
+  [078_textes-2          ] (     8,513,     1,596)  remplacement fenêtre en option
+  [078_textes-2          ] (     8,507,     1,890)  remplacement fenêtre en option
+  [078_textes-2          ] (     8,920,       936)  remplacement fenêtre en option
+  [078_textes-2          ] (     9,211,     2,599)  remplacement fenêtre en option
+  [078_textes-2          ] (     9,211,       694)  remplacement fenêtre en option
+  [078_textes-2          ] (     9,614,     1,413)  remplacement fenêtre en option
+  [078_textes-2          ] (     9,615,     1,575)  remplacement fenêtre en option
+  [078_textes-2          ] (     9,253,     1,579)  prévoir remplacement des luminaires par suspensions
+  [078_textes-2          ] (     9,485,     2,371)  placards rangement sous rampant
+  [078_textes-2          ] (     9,299,     1,765)  placards rangement bas + étagères murales
+  [078_textes-3          ] (     9,050,     2,057)  Attente
+  [078_textes-2          ] (     9,051,     2,040)  8.38m²
+  [078_textes-3          ] (     9,092,     2,056)  hsp : 2.39m
+  [078_textes-2          ] (     9,092,     2,041)  moquette
+  [078_textes-2          ] (     9,092,     2,030)  grand trafic
+  [078_textes-2          ] (     9,424,     2,169)  remplacement
+  [078_textes-2          ] (     9,424,     2,152)  velux
+  [078_textes-2          ] (     9,420,     1,160)  remplacement
+  [078_textes-2          ] (     9,420,     1,150)  velux
+  [100 TEXTE PMR         ] (     9,182,     2,187)  PL83
+  [100 TEXTE PMR         ] (     9,036,     2,195)  PL83
+  [070_trait-fin         ] (     3,787,     5,523)  pavés
+  [070_trait-fin         ] (     4,316,     5,542)  enrobé
+  [070_trait-fin         ] (     1,762,     5,745)  dalles extérieures
+  [070_trait-fin         ] (     1,449,     6,003)  graviers
+  [078_textes-2          ] (     8,637,     1,625)  sol souple
+  [078_textes-2          ] (     8,686,     1,733)  sol souple plinthe bois
+  [078_textes-2          ] (     8,793,     1,231)  protection murale Orac Hill Bead h=90cm
+  [078_textes-2          ] (     8,641,     2,088)  sol souple plinthe bois
+  [078_textes-2          ] (     9,165,     1,857)  protection murale Orac Hill Bead h=90cm
+  [078_textes-2          ] (     9,032,     2,354)  papier peint
+  [078_textes-2          ] (     9,057,     2,513)  moquette plinthe bois
+  [078_textes-2          ] (     9,129,     1,704)  moquette plinthe bois
+  [078_textes-2          ] (     9,317,     2,226)  moquette plinthe bois
+  [078_textes-2          ] (     8,898,     2,025)  plan de travail
+  [078_textes-2          ] (     8,908,     2,025)  stratifié chêne
+  [078_textes-2          ] (     8,940,     1,992)  remontée faïence 60cm
+  [078_textes-2          ] (     9,234,       784)  protection murale Orac Hill Bead h=80cm
+  [078_textes-2          ] (     9,489,       909)  protection murale Orac Hill Bead h=160cm
+  [078_textes-2          ] (     9,341,     2,247)  étagères murales
+  [078_textes-2          ] (     8,834,     1,440)  PL73
+  [078_textes-2          ] (     8,607,     1,688)  PL73
+  [078_textes-2          ] (     9,021,     1,407)  PL93
+  [078_textes-2          ] (     9,039,     2,210)  PL83
+  [078_textes-2          ] (     8,972,     1,891)  PL83
+  [078_textes-2          ] (     9,177,     2,180)  PL83
+  [078_textes-2          ] (     9,249,     1,198)  FP fixe
+  [078_textes-2          ] (     9,249,     1,188)  acoustique
+  [078_textes-3          ] (     8,637,     1,645)  hsp : 2.62m
+  [078_textes-2          ] (     9,175,     1,664)  FP fixe
+  [078_textes-3          ] (     9,465,     1,654)  Palier
+  [078_textes-2          ] (     9,466,     1,637)  2.97m²
+  [078_textes-3          ] (     9,507,     1,653)  hsp : 3.25m
+  [077_textes-1          ] (     2,841,       822)  Hmax: 2.24
+  [077_textes-1          ] (     2,943,       831)  Hmax: 1.68
+  [077_textes-1          ] (     9,496,     2,310)  H<1.80
+  [077_textes-1          ] (     8,664,     1,980)  Z: 203.79m
+  [077_textes-1          ] (     8,738,     1,338)  Z: 203.79m
+  [077_textes-1          ] (     8,707,     1,585)  Z: 203.81m
+  [077_textes-1          ] (     9,030,     1,918)  Z: 204.42m
+  [077_textes-1          ] (     9,273,     2,063)  Z: 204.42m
+  [077_textes-1          ] (     9,141,     2,428)  Z: 204.41m
+  [077_textes-1          ] (     9,026,     1,585)  Z: 204.43m
+  [077_textes-1          ] (     9,215,     1,059)  Z: 204.40m
+  [077_textes-1          ] (     9,474,     1,576)  Palier
+  [077_textes-1          ] (     9,474,     1,559)  Z: 203.59m
+  [040_meubles           ] (     8,784,     1,615)  sèche serviettes
+  [100 TEXTE PMR         ] (     8,615,     1,712)  PL73
+  [077_textes-1          ] (     8,707,     1,567)  hsp : 2.62m
+  [077_textes-1          ] (     8,738,     1,321)  hsp : 2.62m
+  [077_textes-1          ] (     9,026,     1,568)  hsp : 2.41m
+  [077_textes-1          ] (     9,474,     1,541)  hsp : 3.25m
+  [077_textes-1          ] (     9,273,     2,046)  hsp : 2.39m
+  [077_textes-1          ] (     9,141,     2,410)  hsp : 2.40m
+  [077_textes-1          ] (     9,030,     1,901)  hsp : 2.39m
+  [077_textes-1          ] (     8,664,     1,963)  hsp : 2.62m
+  [077_textes-1          ] (     9,214,     1,041)  hsp : 2.44m
+  [100 TEXTE PMR         ] (     8,805,     1,668)  PL73
+  [078_textes-2          ] (     8,821,     1,251)  banquette
+  [080_plomb-cvc         ] (     2,701,     2,522)  radiateur
+  [100 TEXTE PMR         ] (     8,933,     1,898)  PL83
+  [100 TEXTE PMR         ] (     8,937,     1,460)  PL73
+  [077_textes-1          ] (     8,596,     1,587)  Sanitaire
+  [077_textes-1          ] (     8,598,     1,571)  1.84m²
+  [077_textes-1          ] (     8,597,     1,553)  Z: 203.81m
+  [077_textes-1          ] (     8,597,     1,536)  hsp : 2.62m
+  [077_textes-1          ] (     8,872,     1,587)  Dégagement
+  [077_textes-1          ] (     8,873,     1,569)  2.16m²
+  [077_textes-1          ] (     8,873,     1,551)  Z: 203.79m
+  [077_textes-1          ] (     8,873,     1,534)  hsp : 2.62m
+  [070_trait-fin         ] (     9,334,     1,487)  11
+  [070_trait-fin         ] (     9,366,     1,487)  12
+  [070_trait-fin         ] (     9,392,     1,487)  13
+  [070_trait-fin         ] (     9,422,     1,487)  14
+  [070_trait-fin         ] (     9,523,     1,487)  15
+  [070_trait-fin         ] (     9,418,     1,697)  16
+  [070_trait-fin         ] (     9,391,     1,697)  17
+  [070_trait-fin         ] (     9,361,     1,697)  18
+  [070_trait-fin         ] (     9,332,     1,696)  19
+  [070_trait-fin         ] (     9,303,     1,696)  20
+  [078_textes-2          ] (     8,594,     1,627)  1.84m²
+  [078_textes-3          ] (     8,689,     1,581)  Douche
+  [078_textes-2          ] (     8,737,     1,560)  sol souple
+  [078_textes-3          ] (     8,737,     1,581)  hsp : 2.62m
+  [078_textes-2          ] (     8,690,     1,562)  2.37m²
+  [078_textes-2          ] (     8,788,     1,275)  protection murale Orac Hill Bead h=40cm
+  [078_textes-2          ] (     8,737,     1,552)  remontée faïence 1m10
+  [078_textes-2          ] (     8,685,     1,714)  remontée faïence 2m10
+  [078_textes-2          ] (     9,092,     2,069)  fp existant
+  [078_textes-2          ] (     9,340,     2,112)  FP existant
+  [078_textes-2          ] (     9,340,     2,125)  peinture
+  [078_textes-2          ] (     9,340,     2,101)  sous poutre
+  [078_textes-2          ] (     9,140,     2,431)  FP existant
+  [078_textes-2          ] (     9,140,     2,444)  peinture
+  [078_textes-2          ] (     9,140,     2,420)  sous poutre
+  [078_textes-2          ] (     9,175,     1,677)  Peinture
+  [078_textes-2          ] (     9,507,     1,638)  moquette
+  [078_textes-2          ] (     9,507,     1,627)  grand trafic
+  [078_textes-2          ] (     9,249,     1,177)  sous poutres
+  [078_textes-2          ] (     8,721,     1,354)  fp fixe
+  [078_textes-2          ] (     8,638,     1,658)  fp fixe
+  [078_textes-2          ] (     8,737,     1,593)  fp fixe
+  [078_textes-2          ] (     8,725,     2,004)  FP fixe
+  [078_textes-2          ] (     8,725,     2,017)  peinture
+  [078_textes-2          ] (     8,726,     1,993)  sous poutres
+  [078_textes-2          ] (     9,343,     1,740)  papier peint
+  [077_textes-1          ] (     9,430,       355)  R+1
+  [077_textes-1          ] (     9,430,       308)  Projet
+  [077_textes-1          ] (    16,768,     4,222)  RDC FLORA
+  [077_textes-1          ] (    16,768,     4,175)  Projet
+  [077_textes-1          ] (    15,994,       355)  R+1 FLORA
+  [077_textes-1          ] (    15,994,       308)  Existant
+  [100 TEXTE PMR         ] (     9,037,     1,461)  PL93
+  [078_textes-2          ] (     9,616,     1,751)  remplacement fenêtre en option
+
+--- COTES (DIMENSION) — valeurs distinctes ---
+Nombre de cotes : 163
+  min = 10.0   max = 681.48
+  valeurs les plus fréquentes : [(90.0, 3), (20.0, 2), (60.0, 2), (274.23, 1), (154.12, 1), (321.8, 1), (504.59, 1), (507.06, 1), (233.67, 1), (659.74, 1), (481.66, 1), (360.38, 1), (378.9, 1), (519.13, 1), (378.42, 1)]

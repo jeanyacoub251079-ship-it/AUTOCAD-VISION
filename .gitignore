@@ -16,6 +16,9 @@ node_modules/
 # web/dist/ est versionné pour un usage hors-ligne sans Node :
 web/.vite/
 
+# Données Drive (lourdes, persistées mais non versionnées)
+google_drive/
+
 # Divers
 *.log
 .DS_Store

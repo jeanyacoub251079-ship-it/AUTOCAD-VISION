@@ -1,0 +1,81 @@
+==============================================================================
+B-32 — VUE NETTOYÉE — CROISSY-FLORA
+Exécution : 2026-10-19 21:51:35
+==============================================================================
+
+[0] SOURCE
+  fichier     : google_drive/208_FLORA_Plans_DCE_IndC.dxf (4399016 o)
+  version     : AC1032
+  unités      : $INSUNITS = 5 (5 = cm)
+  calques     : 31
+  entités     : 1582
+
+[1] LISTE BLANCHE — calques conservés (7)
+    010_mur                murs existants — relevé du géomètre (porteurs certains, §R C1)
+    020_cloi               cloisons du projet
+    020_cloisons           cloisons — calque secondaire du même lot
+    030_menuiserie         portes, fenêtres, baies — position des ouvertures
+    070_trait-fin          escalier, seuils, mains courantes, symboles de coupe
+    075_cotation           cotations de position (conservées telles quelles)
+    077_textes-1           noms des pièces du projet
+
+[2] LISTE NOIRE — calques supprimés (15)
+    0                      calque 0 — textes divers sans affectation
+    040_meubles            mobilier — second œuvre
+    050_sols               revêtements de sol
+    051_plafonds           faux plafonds — aucune valeur structurale
+    075_cotation détails   cotations de détail d'aménagement
+    078_textes-2           annotations de mobilier et de finitions
+    078_textes-3           doublons des noms de pièces (la série 077 suffit)
+    079_textes-4           textes de détail
+    080_plomb-cvc          plomberie, CVC, fluides
+    090_repères-axes       cadre de la planche (50 x 35 m) — support de mise en page, pas de géométrie
+    091_surfaces           étiquettes de surfaces de l'état existant (faux libellés)
+    092_surfaces projet    hachures de surfaces — non structurantes
+    100 TEXTE PMR          annotations accessibilité PMR
+    102_demol              dépose et démolition — ne concerne pas la structure conservée
+    31_sanitaires          appareils sanitaires
+
+[RDC] CADRE 5 — (6830,3902)-(11830,7402)
+  bloc « Murs porteurs selon geometre projet » : 98 entités sur 258 conservées (filtrage interne)
+  purge des blocs : 'BlocksSection' object has no attribute 'purge'
+  audit : 0 erreur(s), 18 réparation(s)
+  entités supprimées      : 1255 (niveau supérieur)
+  entités conservées      : 326 (niveau supérieur)
+  blocs de fond nettoyés  : Murs porteurs selon geometre projet
+    010_mur                   2   murs existants — relevé du géomètre (porteurs certains, §R C1)
+    020_cloi                133   cloisons du projet
+    030_menuiserie           52   portes, fenêtres, baies — position des ouvertures
+    070_trait-fin            25   escalier, seuils, mains courantes, symboles de coupe
+    075_cotation             48   cotations de position (conservées telles quelles)
+    077_textes-1             66   noms des pièces du projet
+  écrit : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndC.dxf (2830997 o)
+
+[R+1] CADRE 2 — (6830,147)-(11830,3647)
+  bloc « R+1 Projet » : 116 entités sur 472 conservées (filtrage interne)
+  purge des blocs : 'BlocksSection' object has no attribute 'purge'
+  audit : 0 erreur(s), 38 réparation(s)
+  entités supprimées      : 1339 (niveau supérieur)
+  entités conservées      : 242 (niveau supérieur)
+  blocs de fond nettoyés  : R+1 Projet
+    010_mur                   6   murs existants — relevé du géomètre (porteurs certains, §R C1)
+    020_cloi                102   cloisons du projet
+    020_cloisons              2   cloisons — calque secondaire du même lot
+    030_menuiserie           16   portes, fenêtres, baies — position des ouvertures
+    070_trait-fin            39   escalier, seuils, mains courantes, symboles de coupe
+    075_cotation             29   cotations de position (conservées telles quelles)
+    077_textes-1             48   noms des pièces du projet
+  écrit : dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndC.dxf (2748255 o)
+
+[RDC] RENDU — emprise 36.43 x 22.73 m
+  rendus : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndC.png / .pdf
+
+[R+1] RENDU — emprise 14.14 x 20.44 m
+  rendus : dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndC.png / .pdf
+
+[3] CONTRÔLE DE NON-REDESSIN
+  aucune entité créée par le script : le nettoyage ne fait que
+  supprimer. Vérification : le script ne contient aucun appel
+  add_line, add_lwpolyline, add_text ou équivalent.
+
+Journal écrit : dossiers/CROISSY/_rendus/b32_vue_nettoyee.txt

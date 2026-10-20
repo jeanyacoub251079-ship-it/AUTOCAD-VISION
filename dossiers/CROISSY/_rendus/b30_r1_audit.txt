@@ -1,0 +1,164 @@
+== LAYERS (nom | n entités msp) ==
+  0                              12
+  010_mur                        20
+  020_cloi                      259
+  020_cloisons                    2
+  030_menuiserie                 83
+  040_meubles                   160
+  050_sols                        2
+  051_plafonds                    6
+  060_repères murs                1
+  070_trait-fin                 173
+  075_cotation                  104
+  075_cotation détails           49
+  077_textes-1                  133
+  078_textes-2                  339
+  078_textes-3                   43
+  079_textes-4                   16
+  080_plomb-cvc                  70
+  090_repères-axes                9
+  092_surfaces projet            13
+  100 TEXTE PMR                  62
+  102_demol                      22
+  31_sanitaires                   4
+
+== CADRES DE FEUILLE (090_repères-axes) ==
+  F1 (266,3902)-(5266,7402)
+  F2 (266,147)-(5266,3647)
+  F3 (6830,147)-(11830,3647)
+  F4 (13395,3902)-(18395,7402)
+  F5 (13395,147)-(18395,3647)
+  F6 (6830,3902)-(11830,7402)
+
+== TEXTES par feuille (hors cotations) ==
+ --- feuille 0 : 4 textes
+    ( 12952, -1899) M1-07
+    (   266,  8265) EXISTANT
+    (  6830,  8265) PROJET
+    ( 13395,  8265) DEMOL
+ --- feuille 1 : 11 textes
+    (  1239,  5447) Espace extérieur\P460 m²
+    (  3639,  4206) RDC FLORA
+    (  3639,  4159) Existant
+    (  2022,  5113) radiateur
+    (  2032,  5698) radiateur
+    (  3787,  5523) pavés
+    (  4316,  5542) enrobé
+    (  1762,  5745) dalles\Pextérieures
+    (  1449,  6003) graviers
+    (  2982,  5276) radiateur
+    (  2130,  4763) sèche serviettes
+ --- feuille 2 : 13 textes
+    (  2866,   355) R+1 FLORA
+    (  2866,   308) Existant
+    (  2618,  1558) radiateur
+    (  2029,  1602) sèche serviettes
+    (  2460,  2310) sèche serviettes
+    (  3004,  1833) radiateur
+    (  2025,  1355) radiateur
+    (  2451,   989) radiateur
+    (  2453,  2112) radiateur
+    (  2699,  1290) radiateur
+    (  2841,   822) Hmax: 2.24
+    (  2943,   831) Hmax: 1.68
+    (  2701,  2522) radiateur
+ --- feuille 3 : 215 textes
+    (  9140,  2461) Bureau de consultation 3
+    (  9141,  2445) 13.26m²
+    (  9272,  2097) Bureau de consultation 4
+    (  9273,  2081) 16.50m²
+    (  9025,  1625) Dégagement
+    (  9026,  1603) 5.96m²
+    (  9029,  1954) Attente
+    (  9030,  1936) 8.38m²
+    (  8737,  1378) Vestiaire
+    (  8738,  1356) 9.32m²
+    (  8663,  2014) Salle commune
+    (  8665,  1998) 11.75m²
+    (  9084,  2408) Bureau 3
+    (  9085,  2391) 13.26m²
+    (  9140,  2407) hsp : 2.40m
+    (  9140,  2392) moquette
+    (  9140,  2381) grand trafic
+    (  9283,  2090) Bureau 4
+    (  9284,  2072) 16.50m²
+    (  9340,  2089) hsp : 2.39m
+    (  9340,  2073) moquette
+    (  9340,  2063) grand trafic
+    (  9176,  1167) Salle de sport
+    (  9177,  1150) 34.25m²
+    (  9251,  1150) parquet
+    (  9249,  1166) hsp : 2.44m
+    (  9133,  1654) Dégmt
+    (  9134,  1637) 5.96m²
+    (  9175,  1653) hsp : 2.41m
+    (  9175,  1638) moquette
+    (  9175,  1627) grand trafic
+    (  8706,  1619) Douche
+    (  8707,  1602) 2.37m²
+    (  8675,  1344) Vestiaire
+    (  8676,  1327) 9.32m²
+    (  8721,  1343) hsp : 2.62m
+    (  8721,  1328) sol souple
+    (  8721,  1317) acoustique 19dB
+    (  8643,  1981) Salle commune
+    (  8644,  1964) 11.75m²
+ --- feuille 4 : 5 textes
+    ( 16768,  4222) RDC FLORA
+    ( 16768,  4175) Projet
+    ( 15151,  5113) radiateur
+    ( 15160,  5698) radiateur
+    ( 16111,  5276) radiateur
+ --- feuille 5 : 11 textes
+    ( 15994,   355) R+1 FLORA
+    ( 15994,   308) Existant
+    ( 15747,  1558) radiateur
+    ( 15157,  1602) sèche serviettes
+    ( 15589,  2310) sèche serviettes
+    ( 16133,  1833) radiateur
+    ( 15154,  1355) radiateur
+    ( 15579,   989) radiateur
+    ( 15582,  2112) radiateur
+    ( 15828,  1290) radiateur
+    ( 15830,  2522) radiateur
+ --- feuille 6 : 254 textes
+    (  7803,  5511) Espace extérieur\P460 m²
+    (  9055,  5292) changement\Pmoquette sur escalier
+    (  9592,  5345) remplacement porte \Pet changement sens \Pouverture en option
+    (  8518,  5383) remplacement \Pporte en fenêtre
+    (  9510,  4788) nouvelles menuiseries
+    (  9556,  5873) nouvelles menuiseries vitrage en partie dépoli
+    (  8522,  5071) \pxqc;remplacement fenêtre \Pen option
+    (  8522,  5643) \pxqc;remplacement fenêtre \Pen option
+    (  8611,  4781) \pxqc;remplacement fenêtre \Pen option
+    (  8694,  5930) \pxqc;remplacement fenêtre \Pen option
+    (  9411,  6316) porte vitrée\Pverre dépoli
+    (  9785,  4818) bordure
+    (  8720,  5864) \pxqc;tablette stratifiée chêne à prévoir
+    (  8770,  5553) PG90
+    (  9031,  5995) PL93
+    (  8913,  5105) PL93
+    (  8995,  4594) PL93
+    (  9600,  5451) PL123
+    (  9732,  5426) 201.23
+    (  8013,  6003) graviers
+    ( 10143,  5893) pavés à joints engazonnés
+    ( 10138,  5658) pavés à joints engazonnés
+    (  8798,  5292) PG90
+    (  8377,  5402) 201.03
+    (  9181,  5945) PL93
+    (  8611,  4531) \pxqc;remplacement porte en fenêtre
+    (  9049,  5250) 1
+    (  9095,  5250) 2
+    (  9134,  5249) 3
+    (  9167,  5249) 4
+    (  9195,  5249) 5
+    (  9224,  5249) 6
+    (  9254,  5249) 7
+    (  9283,  5249) 8
+    (  9312,  5249) 9
+    (  9334,  5249) 10
+    ( 10116,  5216) en pierre véritable
+    ( 10138,  5637) en pierre véritable
+    ( 10143,  5871) en pierre véritable
+    (  9819,  5453) reemploi des pavés en grès anciens

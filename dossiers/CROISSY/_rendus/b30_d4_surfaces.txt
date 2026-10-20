@@ -1,0 +1,528 @@
+pages 29
+
+===== PAGE 4 (22 cotes) =====
+    Z: 204.40m
+    hsp : 2.40m
+    Z: 204.41m
+    hsp : 2.40m
+    Z: 204.42m
+    hsp : 2.39m
+    Z: 204.42m
+    hsp : 2.39m
+    Z: 204.42m
+    Z: 203.79m
+    hsp : 2.62m
+    Z: 203.81m
+    hsp : 2.60m
+    Z: 203.79m
+    hsp : 2.62m
+    Z: 204.40m
+    hsp : 2.44m
+    Z: 204.41m
+    Z: 203.59m
+    hsp : 3.25m
+    Z: 204.43m
+    hsp : 2.41m
+
+===== PAGE 5 (1 cotes) =====
+    Z: 204.42m
+
+===== PAGE 6 (79 cotes) =====
+    Z: 204.42m
+    13.26m²
+    16.50m²
+    5.96m²
+    8.38m²
+    9.32m²
+    11.75m²
+    2.37m²
+    34.25m²
+    Z: 203.79m
+    Z: 203.79m
+    Z: 203.81m
+    Z: 204.42m
+    Z: 204.42m
+    Z: 204.41m
+    Z: 204.43m
+    Z: 204.40m
+    Z: 203.59m
+    hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.41m
+    hsp : 3.25m
+    hsp : 2.39m
+    hsp : 2.40m
+    hsp : 2.39m
+    hsp : 2.62m
+    hsp : 2.44m
+    1.84m²
+    Z: 203.81m
+    hsp : 2.62m
+    2.16m²
+    Z: 203.79m
+    hsp : 2.62m
+    1.49m²
+    Z: 203.81m
+    hsp : 2.62m
+    11.20m²
+    9.15m²
+    16.08m²
+    4.75m²
+    9.60m²
+    33.14m²
+    hsp : 2.89m
+    hsp : 2.31m
+    5.19m²
+    hsp : 2.16m
+    hsp : 2.23m
+    Z: 201.03m
+    hsp : 2.95m
+    hsp : 2.95m
+    5.49m²
+    hsp : 3.08m
+    hsp : 2.29m
+    Z: 201.23m
+    Z: 201.03m
+    hsp : 2.95m
+    Z: 201.23m
+    Z : 201.23m
+    Z : 201.23m
+    Z: 201.23m
+    Z: 201.03m
+    Z : 201.22m
+    5.10m²
+    hsp : 2.23m
+    Z: 201.03m
+    5.42m²
+    hsp : 2.95m
+    Z : 201.23m
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.20m
+    hsfp : 2.75m
+    Z: 201.06m
+    1.35m²
+    hsp : 3.24m
+    12.80m²
+
+===== PAGE 9 (79 cotes) =====
+    Z: 204.42m
+    13.26m²
+    16.50m²
+    5.96m²
+    8.38m²
+    9.32m²
+    11.75m²
+    2.37m²
+    34.25m²
+    Z: 203.79m
+    Z: 203.79m
+    Z: 203.81m
+    Z: 204.42m
+    Z: 204.42m
+    Z: 204.41m
+    Z: 204.43m
+    Z: 204.40m
+    Z: 203.59m
+    hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.41m
+    hsp : 3.25m
+    hsp : 2.39m
+    hsp : 2.40m
+    hsp : 2.39m
+    hsp : 2.62m
+    hsp : 2.44m
+    1.84m²
+    Z: 203.81m
+    hsp : 2.62m
+    2.16m²
+    Z: 203.79m
+    hsp : 2.62m
+    1.49m²
+    Z: 203.81m
+    hsp : 2.62m
+    11.20m²
+    9.15m²
+    16.08m²
+    4.75m²
+    9.60m²
+    33.14m²
+    hsp : 2.89m
+    hsp : 2.31m
+    5.19m²
+    hsp : 2.16m
+    hsp : 2.23m
+    Z: 201.03m
+    hsp : 2.95m
+    hsp : 2.95m
+    5.49m²
+    hsp : 3.08m
+    hsp : 2.29m
+    Z: 201.23m
+    Z: 201.03m
+    hsp : 2.95m
+    Z: 201.23m
+    Z : 201.23m
+    Z : 201.23m
+    Z: 201.23m
+    Z: 201.03m
+    Z : 201.22m
+    5.10m²
+    hsp : 2.23m
+    Z: 201.03m
+    5.42m²
+    hsp : 2.95m
+    Z : 201.23m
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.20m
+    hsfp : 2.75m
+    Z: 201.06m
+    1.35m²
+    hsp : 3.24m
+    12.80m²
+
+===== PAGE 10 (82 cotes) =====
+    Z: 204.42m
+    13.26m²
+    16.50m²
+    5.96m²
+    8.38m²
+    9.32m²
+    11.75m²
+    2.37m²
+    34.25m²
+    Z: 203.79m
+    Z: 203.79m
+    Z: 203.81m
+    Z: 204.42m
+    Z: 204.42m
+    Z: 204.41m
+    Z: 204.43m
+    Z: 204.40m
+    Z: 203.59m
+    hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.41m
+    hsp : 3.25m
+    hsp : 2.39m
+    hsp : 2.40m
+    hsp : 2.39m
+    hsp : 2.62m
+    hsp : 2.44m
+    1.84m²
+    Z: 203.81m
+    hsp : 2.62m
+    2.16m²
+    Z: 203.79m
+    hsp : 2.62m
+    1.49m²
+    Z: 203.81m
+    hsp : 2.62m
+    11.20m²
+    9.15m²
+    16.08m²
+    4.75m²
+    9.60m²
+    33.14m²
+    hsp : 2.89m
+    hsp : 2.31m
+    5.19m²
+    hsp : 2.16m
+    hsp : 2.23m
+    Z: 201.03m
+    hsp : 2.95m
+    hsp : 2.95m
+    5.49m²
+    hsp : 3.08m
+    hsp : 2.29m
+    Z: 201.23m
+    Z: 201.03m
+    hsp : 2.95m
+    Z: 201.23m
+    Z : 201.23m
+    Z : 201.23m
+    Z: 201.23m
+    Z: 201.03m
+    Z : 201.22m
+    5.10m²
+    hsp : 2.23m
+    Z: 201.03m
+    5.42m²
+    hsp : 2.95m
+    Z : 201.23m
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.20m
+    hsfp : 2.75m
+    Z: 201.06m
+    1.35m²
+    hsp : 3.24m
+    12.80m²
+    fp situé à 2.75m du sol de l'entrée
+    de 2.75m à
+    3.08m
+
+===== PAGE 11 (6 cotes) =====
+    11.20m²
+    12.80m²
+    9.60m²
+    hsfp : 2.19m
+    Box kine 2 hsfp : 2.20m
+    hsfp : 2.20m
+
+===== PAGE 12 (7 cotes) =====
+    16.08m²
+    9.15m²
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    4.75m²
+    hsfp  : 2.75m
+
+===== PAGE 13 (2 cotes) =====
+    33.14m²
+    Plateau technique hsfp : 2.75m
+
+===== PAGE 14 (2 cotes) =====
+    5.19m²
+    Sanitaire hsp : 2.16m
+
+===== PAGE 15 (3 cotes) =====
+    9.24m²
+    Entréehsfp : 2.75m
+    hsp : 2.24m
+
+===== PAGE 16 (10 cotes) =====
+    13.26m²
+    16.50m²
+    5.96m² moquette
+    8.38m² moquette
+    2.97m²
+    hsp : 2.40m
+    hsp : 2.39m
+    Dégmt hsp : 2.41m
+    Attente hsp : 2.39m
+    hsp : 3.25m
+
+===== PAGE 17 (2 cotes) =====
+    34.25m²
+    Salle de sport hsp : 2.44m
+
+===== PAGE 18 (10 cotes) =====
+    9.32m² sol souple
+    11.75m²
+    1.84m²
+    2.37m²
+    Vestiaire hsp : 2.62m
+    Salle commune hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.62m
+    2.37m²
+    hsp : 2.62m
+
+===== PAGE 23 (79 cotes) =====
+    11.20m²
+    9.15m²
+    16.08m²
+    4.75m²
+    9.60m²
+    33.14m²
+    hsp : 2.89m
+    hsp : 2.31m
+    5.19m²
+    hsp : 2.16m
+    hsp : 2.23m
+    Z: 201.03m
+    hsp : 2.95m
+    hsp : 2.95m
+    5.49m²
+    hsp : 3.08m
+    hsp : 2.29m
+    Z: 201.23m
+    Z: 201.03m
+    hsp : 2.95m
+    Z: 201.23m
+    Z : 201.23m
+    Z : 201.23m
+    Z: 201.23m
+    Z: 201.03m
+    Z : 201.22m
+    5.10m²
+    hsp : 2.23m
+    Z: 201.03m
+    5.42m²
+    hsp : 2.95m
+    Z : 201.23m
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.20m
+    hsfp : 2.75m
+    Z: 201.06m
+    1.35m²
+    hsp : 3.24m
+    12.80m²
+    Z: 204.42m
+    13.26m²
+    16.50m²
+    5.96m²
+    8.38m²
+    9.32m²
+    11.75m²
+    2.37m²
+    34.25m²
+    Z: 203.79m
+    Z: 203.79m
+    Z: 203.81m
+    Z: 204.42m
+    Z: 204.42m
+    Z: 204.41m
+    Z: 204.43m
+    Z: 204.40m
+    Z: 203.59m
+    hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.41m
+    hsp : 3.25m
+    hsp : 2.39m
+    hsp : 2.40m
+    hsp : 2.39m
+    hsp : 2.62m
+    hsp : 2.44m
+    1.84m²
+    Z: 203.81m
+    hsp : 2.62m
+    2.16m²
+    Z: 203.79m
+    hsp : 2.62m
+    1.49m²
+    Z: 203.81m
+    hsp : 2.62m
+
+===== PAGE 24 (43 cotes) =====
+    11.20m²
+    9.15m²
+    16.08m²
+    4.75m²
+    9.60m²
+    33.14m²
+    hsp : 2.89m
+    hsp : 2.31m
+    5.19m²
+    hsp : 2.16m
+    hsp : 2.23m
+    Z: 201.03m
+    hsp : 2.95m
+    hsp : 2.95m
+    5.49m²
+    hsp : 3.08m
+    hsp : 2.29m
+    Z: 201.23m
+    Z: 201.03m
+    hsp : 2.95m
+    Z: 201.23m
+    Z : 201.23m
+    Z : 201.23m
+    Z: 201.23m
+    Z: 201.03m
+    Z : 201.22m
+    5.10m²
+    hsp : 2.23m
+    Z: 201.03m
+    5.42m²
+    hsp : 2.95m
+    Z : 201.23m
+    hsfp : 2.80m
+    hsfp : 2.80m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.75m
+    hsfp : 2.20m
+    hsfp : 2.75m
+    Z: 201.06m
+    1.35m²
+    hsp : 3.24m
+    12.80m²
+
+===== PAGE 25 (36 cotes) =====
+    Z: 204.42m
+    13.26m²
+    16.50m²
+    5.96m²
+    8.38m²
+    9.32m²
+    11.75m²
+    2.37m²
+    34.25m²
+    Z: 203.79m
+    Z: 203.79m
+    Z: 203.81m
+    Z: 204.42m
+    Z: 204.42m
+    Z: 204.41m
+    Z: 204.43m
+    Z: 204.40m
+    Z: 203.59m
+    hsp : 2.62m
+    hsp : 2.62m
+    hsp : 2.41m
+    hsp : 3.25m
+    hsp : 2.39m
+    hsp : 2.40m
+    hsp : 2.39m
+    hsp : 2.62m
+    hsp : 2.44m
+    1.84m²
+    Z: 203.81m
+    hsp : 2.62m
+    2.16m²
+    Z: 203.79m
+    hsp : 2.62m
+    1.49m²
+    Z: 203.81m
+    hsp : 2.62m
+
+===== PAGE 26 (14 cotes) =====
+    Faîtage toiture: Z=209.29m
+    Faîtage toiture: Z=210.32m
+    Faîtage toiture: Z=209.19m
+    Haut de toiture: Z=209.35m
+    Gouttière: Z=205.43m
+    Gouttière: Z=205.41m
+    Gouttière: Z=206.57m
+    Bas de toiture: Z=203.55m
+    Haut de toiture: Z=207.62m
+    Bas de toiture: Z=205.92m
+    Bas de toiture: Z=207.84m
+    Bas de toiture: Z=207.79m
+    Haut de mur: Z=203.76m
+    Haut de mur; Z=203.69m
+
+===== PAGE 27 (14 cotes) =====
+    Faîtage toiture: Z=209.29m
+    Faîtage toiture: Z=210.32m
+    Faîtage toiture: Z=209.19m
+    Haut de toiture: Z=209.35m
+    Gouttière: Z=205.43m
+    Gouttière: Z=205.41m
+    Gouttière: Z=206.57m
+    Bas de toiture: Z=203.55m
+    Haut de toiture: Z=207.62m
+    Bas de toiture: Z=205.92m
+    Bas de toiture: Z=207.84m
+    Bas de toiture: Z=207.79m
+    Haut de mur: Z=203.76m
+    Haut de mur; Z=203.69m

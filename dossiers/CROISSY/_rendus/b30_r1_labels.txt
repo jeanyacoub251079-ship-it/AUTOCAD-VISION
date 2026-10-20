@@ -1,0 +1,66 @@
+== 13 POLYGONES 092_surfaces projet : aire + 3 textes les plus proches ==
+
+ aire   9.15 m2 | centroide ( 9334.8, 5892.4) | bbox 361x272 | closed=False
+    d=   23 cm  (  9332,  5916)  + meuble bas
+    d=   33 cm  (  9332,  5925)  vasque intégrée
+    d=   44 cm  (  9332,  5936)  plan de travail corian
+
+ aire  16.08 m2 | centroide ( 9395.9, 6142.3) | bbox 509x365 | closed=True
+    d=  121 cm  (  9281,  6104)  fp demontable
+    d=  125 cm  (  9281,  6093)  avec corniches
+    d=  130 cm  (  9280,  6083)  hsfp : 2.80m
+
+ aire   5.49 m2 | centroide ( 9473.7, 5369.4) | bbox 311x235 | closed=True
+    d=   25 cm  (  9453,  5382)  hsp : 2.24m
+    d=  121 cm  (  9592,  5345)  remplacement porte \Pet changement sens \Pouverture en optio
+    d=  150 cm  (  9600,  5451)  PL123
+
+ aire   5.10 m2 | centroide ( 8909.6, 5313.3) | bbox 125x415 | closed=True
+    d=   48 cm  (  8862,  5306)  Z: 201.03m
+    d=   49 cm  (  8862,  5324)  5.10m²
+    d=   54 cm  (  8861,  5289)  hsp : 2.23m
+
+ aire  12.80 m2 | centroide ( 8759.9, 4883.9) | bbox 390x434 | closed=True
+    d=   92 cm  (  8851,  4887)  hsfp : 2.20m
+    d=   94 cm  (  8676,  4843)  \pxqc;tablette stratifiée chêne à prévoir
+    d=   94 cm  (  8851,  4905)  hsp : 2.31m
+
+ aire   9.60 m2 | centroide ( 8659.1, 5244.7) | bbox 231x466 | closed=True
+    d=   44 cm  (  8698,  5224)  Box kiné 2
+    d=   58 cm  (  8698,  5203)  9.60m²
+    d=   71 cm  (  8698,  5185)  Z: 201.03m
+
+ aire  11.20 m2 | centroide ( 8848.2, 5712.3) | bbox 355x323 | closed=True
+    d=   50 cm  (  8862,  5760)  remontée faïence 20cm
+    d=   60 cm  (  8792,  5734)  hsp : 2.29m
+    d=   69 cm  (  8792,  5752)  Z: 201.03m
+
+ aire   5.19 m2 | centroide ( 8870.1, 4555.9) | bbox 296x215 | closed=True
+    d=   33 cm  (  8876,  4588)  sol à recharger de 15cm
+    d=   67 cm  (  8930,  4526)  Ballon ECS
+    d=   70 cm  (  8801,  4550)  5.19m²
+
+ aire   4.75 m2 | centroide ( 9291.0, 5611.5) | bbox 298x160 | closed=True
+    d=   65 cm  (  9227,  5615)  Attente
+    d=   66 cm  (  9227,  5593)  4.75m²
+    d=   73 cm  (  9227,  5576)  Z: 201.23m
+
+ aire   5.42 m2 | centroide ( 9080.0, 5751.0) | bbox 124x438 | closed=True
+    d=   36 cm  (  9046,  5762)  hsfp : 2.75m
+    d=   43 cm  (  9046,  5778)  hsp : 2.95m
+    d=   55 cm  (  9046,  5795)  Z : 201.23m
+
+ aire   1.49 m2 | centroide ( 8772.1, 1497.6) | bbox 180x83 | closed=True
+    d=    6 cm  (  8777,  1495)  hsp : 2.62m
+    d=   11 cm  (  8777,  1507)  fp fixe
+    d=   11 cm  (  8762,  1501)  1.49m²
+
+ aire   2.37 m2 | centroide ( 8758.9, 1646.8) | bbox 180x178 | closed=False
+    d=   40 cm  (  8784,  1615)  sèche serviettes
+    d=   51 cm  (  8805,  1668)  PL73
+    d=   58 cm  (  8737,  1593)  fp fixe
+
+ aire   2.16 m2 | centroide ( 8909.7, 1591.4) | bbox 82x265 | closed=True
+    d=   29 cm  (  8895,  1567)  \pxt16;trappe accès combles
+    d=   38 cm  (  8872,  1587)  Dégagement
+    d=   43 cm  (  8873,  1569)  2.16m²

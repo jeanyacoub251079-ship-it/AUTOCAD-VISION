@@ -1,0 +1,25 @@
+ACADVER R2018 | INSUNITS 5 | MEASUREMENT 1
+EXTMIN (240.8247004688019, -1930.599527174232, -14.75721813634803) EXTMAX (18395.29887039349, 8321.264143380376, 1.000480894149099)
+modelspace Counter({'LWPOLYLINE': 464, 'TEXT': 416, 'INSERT': 224, 'DIMENSION': 163, 'LINE': 158, 'MTEXT': 97, 'HATCH': 28, 'CIRCLE': 15, 'ARC': 7, 'ELLIPSE': 7, 'POINT': 3})
+MUR 20 (np.float64(1631.58), np.float64(537.99), np.float64(10795.34), 5222.19, np.float64(9163.76), np.float64(4684.19))
+ALL (-70005.32, -78245.92, 88592.11, 81220.16, 158597.43, 159466.08)
+L 2955.1 5187.2 -> 2945.1 5187.2
+L 2525.1 5222.2 -> 2525.1 5187.2
+L 2980.1 5036.7 -> 2980.1 4646.7
+L 2075.1 4813.2 -> 2075.1 4659.7
+L 1975.1 1875.6 -> 2000.1 1875.6
+L 1975.1 2030.6 -> 2000.1 2030.6
+L 2385.1 2570.6 -> 2385.1 2150.6
+L 2980.1 764.9 -> 2752.2 726.7
+P [(np.float64(1631.6), np.float64(593.5)), (np.float64(1905.0), np.float64(638.8)), (np.float64(1915.2), np.float64(615.1)), (np.float64(1921.4), np.float64(615.7)), (np.float64(1925.5), np.float64(589.1))]
+P [(np.float64(2385.4), np.float64(668.9)), (np.float64(2023.5), np.float64(605.9))]
+P [(np.float64(8195.9), np.float64(593.5)), (np.float64(8469.4), np.float64(638.8)), (np.float64(8479.6), np.float64(615.1)), (np.float64(8485.7), np.float64(615.7)), (np.float64(8489.9), np.float64(589.1))]
+P [(np.float64(8639.5), np.float64(638.3)), (np.float64(8949.5), np.float64(690.4))]
+P [(np.float64(8949.8), np.float64(668.9)), (np.float64(8587.9), np.float64(605.9))]
+P [(np.float64(8639.5), np.float64(667.2)), (np.float64(8639.5), np.float64(638.3))]
+P [(np.float64(9963.3), np.float64(4627.9)), (np.float64(10792.2), np.float64(4766.4))]
+P [(np.float64(9968.0), np.float64(4589.3)), (np.float64(10795.3), np.float64(4727.6))]
+P [(np.float64(8195.9), np.float64(538.0)), (np.float64(8489.9), np.float64(589.1))]
+P [(np.float64(8587.9), np.float64(605.9)), (np.float64(8583.3), np.float64(637.9)), (np.float64(8591.1), np.float64(639.6)), (np.float64(8592.3), np.float64(659.2)), (np.float64(8639.5), np.float64(667.2))]
+P [(np.float64(1631.6), np.float64(538.0)), (np.float64(1925.5), np.float64(589.1))]
+P [(np.float64(2023.5), np.float64(605.9)), (np.float64(2018.9), np.float64(637.9)), (np.float64(2026.7), np.float64(639.6)), (np.float64(2027.9), np.float64(659.2)), (np.float64(2075.1), np.float64(667.1)), (np.float64(2075.1), np.float64(638.3)), (np.float64(2385.1), np.float64(690.4))]

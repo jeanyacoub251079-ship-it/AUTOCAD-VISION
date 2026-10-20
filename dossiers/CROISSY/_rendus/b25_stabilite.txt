@@ -1,0 +1,111 @@
+========================================================================================================
+B-25 — STABILITÉ GLOBALE, CONTREVENTEMENT, JOINTS ET SISMIQUE — INDICE A
+Projet CROISSY-FLORA (ID-01) — CARNAC v3.0 — régime OUTILLÉ (V13)
+Exécution : 2026-10-20 14:27:35
+Sources   : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf
+            dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndD.dxf  (translation d'empilement dy = +3755 cm — B-31)
+========================================================================================================
+
+[1] GÉOMÉTRIE — murs porteurs surfaciques extraits des fonds B-32 Ind. D
+    RDC : 12 murs surfaciques · R+1 : 9 murs surfaciques
+    (les liserés de moins de 0,05 m² — arêtes du relevé — sont écartés et consignés)
+
+    Niveau R+1 (h = 3.00 m, E = 1500 MPa) :
+      ID     A(m²)  L(m)  t(m)  dir(°)   centre B-30 (m)        Kx(kN/m)   Ky(kN/m)
+      M01    2.30  3.62  2.45   142.2  ( +4.41, +0.82)      147636     146780
+      M02    3.35  7.41  2.30    76.8  ( +9.21, +3.33)      142065     480133
+      M03    5.50  7.88  5.04    52.1  ( +3.02, +6.70)      631744     773316
+      M04    0.89  4.92  0.30     0.2  ( +7.78, +7.85)      103419        441
+      M05    0.58  1.54  0.42    89.5  ( -0.30, +8.35)        1169      15847
+      M06    0.89  5.04  0.56     0.4  ( +7.95,+10.37)      107825        908
+      M07    0.60  1.54  0.45    92.2  ( -0.29,+11.15)        1311      16272
+      M08    6.37  8.75  4.93    45.9  ( +3.32,+15.62)      789200     871781
+      M09    3.47  7.35  2.30   101.1  ( +9.27,+15.78)      135980     512697
+
+    Niveau RDC (h = 3.00 m, E = 1500 MPa) :
+      ID     A(m²)  L(m)  t(m)  dir(°)   centre B-30 (m)        Kx(kN/m)   Ky(kN/m)
+      M01    0.49  1.57  0.39    92.6  ( +0.69, +2.80)         662      13521
+      M02    0.80  2.04  1.19   143.1  ( +0.12, +5.20)       21180      20005
+      M03    4.58  5.19  4.96    66.9  ( +5.01, +7.21)      525216     439310
+      M04    1.76  3.06  1.15    82.1  ( +9.78, +7.57)       17609     100161
+      M05    0.16  1.08  0.31    80.9  ( -0.22, +7.99)         144       1518
+      M06    0.42  1.76  0.44    83.3  ( -0.28, +8.74)         771       9426
+      M07    0.17  0.81  0.44   125.6  ( +3.80,+10.48)         438        604
+      M08    0.62  1.71  0.44    87.0  ( -0.23,+11.08)        1139      19627
+      M09    2.79  3.28  2.36    82.4  ( +9.50,+11.34)      113878     192477
+      M10    0.79  1.65  1.26    20.0  ( +0.07,+14.21)       16859      12758
+      M11    5.49  9.07  4.11    64.0  ( +4.27,+15.49)      503490     815171
+      M12    0.60  1.65  0.87   103.6  ( +9.44,+18.26)        3620      16653
+
+[2] CENTRES DE RIGIDITÉ, CENTRES DE MASSE ET RAIDEURS D'ENSEMBLE
+    R+1 : ΣKx =   2060350 kN/m · ΣKy =   2818175 kN/m
+          CR(vent X) : Y = +10.32 m   ·   CR(vent Y) : X =  +5.34 m
+          KT,x =    55406367 kN·m²/rad · KT,y =    23959356 kN·m²/rad
+          G estimé (barycentre de l'enveloppe, aire 114.0 m² pour 106.92 m² utiles) = ( +5.46,+10.17)
+          excentricité structurale vent X : e_y = -0.14 m · vent Y : e_x = +0.11 m
+    RDC : ΣKx =   1205006 kN/m · ΣKy =   1641231 kN/m
+          CR(vent X) : Y = +11.17 m   ·   CR(vent Y) : X =  +5.27 m
+          KT,x =    18980307 kN·m²/rad · KT,y =     8715280 kN·m²/rad
+          G estimé (barycentre de l'enveloppe, aire 108.4 m² pour 111.15 m² utiles) = ( +5.24,+11.13)
+          excentricité structurale vent X : e_y = -0.04 m · vent Y : e_x = -0.03 m
+
+[3] ACTION DU VENT — EC1-1-4 (vb = 24 m/s · terrain III · cpe,net = 1.30 · cscd = 1.0)
+    qb = 0,5 × 1.25 × 24² = 360 Pa
+    z =  3.0 m : ce(z) = 1.28 · qp(z) = 461 Pa
+    z =  6.0 m : ce(z) = 1.39 · qp(z) = 500 Pa
+    Largeur chargée : vent X = 17.5 m (façades N/S) · vent Y = 11.1 m (façades E/O)
+    Vent X : R+1  31.9 kN · RDC  31.4 kN → total  63.2 kN
+    Vent Y : R+1  20.2 kN · RDC  19.9 kN → total  40.0 kN
+
+[4] TORSION ET CISAILLEMENT DES MURS (EC6 § 3.6.2 et § 4.5.2)
+    fvk = (fvk0 + 0,4 σd)/γM = (150 + 0,4×300) / 2.5 = 108 kPa
+    R+1 — vent X : V =  31.9 kN · e_struct = 0.14 m · e_acc = ±0.87 m · Mt =  32.4 kN·m
+          mur le plus chargé M08 : V =  14.6 kN · τ =   2.3 kPa · τ/fvk =  0.021
+    R+1 — vent Y : V =  20.2 kN · e_struct = 0.11 m · e_acc = ±0.55 m · Mt =  13.4 kN·m
+          mur le plus chargé M08 : V =   5.3 kN · τ =   0.8 kPa · τ/fvk =  0.008
+    RDC — vent X : V =  31.4 kN · e_struct = 0.04 m · e_acc = ±0.87 m · Mt =  28.6 kN·m
+          mur le plus chargé M11 : V =  16.4 kN · τ =   3.0 kPa · τ/fvk =  0.028
+    RDC — vent Y : V =  19.9 kN · e_struct = 0.03 m · e_acc = ±0.55 m · Mt =  11.6 kN·m
+          mur le plus chargé M11 : V =   8.8 kN · τ =   1.6 kPa · τ/fvk =  0.015
+
+[5] STABILITÉ HORS PLAN DES VOILES (EC6 § 5.5.1.2 — élancement)
+    R+1 : h/t_eq maximal =  17.0 (mur M06, t_eq = A/L = 0.18 m) → OK (≤ 20)
+    RDC : h/t_eq maximal =  20.0 (mur M05, t_eq = A/L = 0.15 m) → À VÉRIFIER (> 20)
+
+[6] POSITION SISMIQUE — EC8-1 / arrêté du 22 octobre 2010
+    W = (111,15 + 106,92) × (4,50 + 0,30 × 2,50) + 106,92 × 0,80 = 1230 kN (125.4 t)
+    T1 = Ct·H^0,75 = 0,05 × 6,30^0,75 = 0.199 s → plateau du spectre de calcul
+    Sd(T1) = ag·S·2,5/q·γI = 0.40×1.50×2,5/1.5×1.2 = 1.20 m/s²
+    Vb = Sd·W/g = 150.5 kN (hypothèse enveloppe catégorie III, à arbitrer — D2 annonce II)
+    Vent : Vx = 63.2 kN · Vy = 40.0 kN
+    → le séisme d'enveloppe cat. III (151 kN) vaut 2.4 fois le vent X
+    → zone 1 (très faible) : l'arrêté du 22/10/2010 (art. 3) ne rend les règles EC8 applicables
+      qu'en zones 2 à 5 — aucune catégorie d'importance n'y est soumise en zone 1.
+      La vérification ci-dessus est donc une SENSIBILITÉ (enveloppe cat. III), pas une obligation.
+    Répartition en hauteur : m_R+1 = 647 kN · m_RDC = 584 kN → F_R+1 = 103.7 kN · F_RDC = 46.8 kN
+      R+1 — séisme X : F = 103.7 kN · Mt = 105.4 kN·m · mur M08 V =  47.7 kN · τ/fvk = 0.069
+      R+1 — séisme Y : F = 103.7 kN · Mt =  69.1 kN·m · mur M08 V =  27.0 kN · τ/fvk = 0.039
+      RDC — séisme X : F =  46.8 kN · Mt =  42.7 kN·m · mur M11 V =  24.4 kN · τ/fvk = 0.041
+      RDC — séisme Y : F =  46.8 kN · Mt =  27.2 kN·m · mur M11 V =  20.7 kN · τ/fvk = 0.035
+
+[7] PHASES PROVISOIRES — retrait d'un mur entaillé, recalcul complet
+    Situations les plus défavorables (mur retiré · déplacement du CR · raideur restante · taux) :
+      R+1 — retrait M09 : ΔCR = -0.87 m · ΣKy =  2305478/ 2818175 kN/m ( 81.8 %) · mur M02 V =   8.8 kN · τ/fvk = 0.024
+      R+1 — retrait M02 : ΔCR = -0.79 m · ΣKy =  2338042/ 2818175 kN/m ( 83.0 %) · mur M09 V =   8.7 kN · τ/fvk = 0.023
+      R+1 — retrait M08 : ΔCR = +0.90 m · ΣKy =  1946394/ 2818175 kN/m ( 69.1 %) · mur M09 V =   7.7 kN · τ/fvk = 0.021
+      RDC — retrait M03 : ΔCR = +0.10 m · ΣKy =  1201921/ 1641231 kN/m ( 73.2 %) · mur M11 V =  12.1 kN · τ/fvk = 0.021
+      R+1 — retrait M03 : ΔCR = +0.88 m · ΣKy =  2044858/ 2818175 kN/m ( 72.6 %) · mur M09 V =   7.5 kN · τ/fvk = 0.020
+      RDC — retrait M11 : ΔCR = +0.99 m · ΣKy =   826061/ 1641231 kN/m ( 50.3 %) · mur M03 V =   8.2 kN · τ/fvk = 0.017
+      RDC — retrait M09 : ΔCR = -0.56 m · ΣKy =  1448754/ 1641231 kN/m ( 88.3 %) · mur M11 V =   9.5 kN · τ/fvk = 0.016
+      RDC — retrait M04 : ΔCR = -0.29 m · ΣKy =  1541070/ 1641231 kN/m ( 93.9 %) · mur M11 V =   9.0 kN · τ/fvk = 0.015
+
+[7bis] ENVELOPPE DE DÉMOLITION — retrait simultané des deux murs les plus défavorables
+    R+1 — retrait M08 + M03 : ΔCR = +3.03 m · ΣKy =  1173078/ 2818175 kN/m ( 41.6 %) · mur M09 V =  14.9 kN · τ/fvk = 0.040
+    RDC — retrait M11 + M09 : ΔCR = +0.00 m · ΣKy =   633583/ 1641231 kN/m ( 38.6 %) · mur M03 V =  13.5 kN · τ/fvk = 0.027
+
+[8] JOINTS DE DILATATION
+    Emprise du bloc : 11.1 m × 17.5 m
+    Dilatation thermique libre : α·ΔT·L = 10⁻⁵ × 30 × 17.5 = 5.2 mm
+    Maçonnerie existante sans joint depuis sa construction, mortier ancien stabilisé,
+    aucun tassement différencié identifié dans D3, frangements neufs appuyés (portée ≤ 4,88 m).
+    → AUCUN joint de dilatation à créer (D-xx à consigner au RDR).

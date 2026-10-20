@@ -1,0 +1,58 @@
+==================================================================================
+B-32 — VUE NETTOYÉE STRUCTURELLE PAR LIVRABLE — INDICE D
+Exécution : 2026-10-20 10:41:37
+Source    : google_drive/208_FLORA_Plans_DCE_IndC.dxf (4399016 octets)
+Doctrine  : ZÉRO cloison, ZÉRO isolation, ZÉRO équipement de second oeuvre
+==================================================================================
+
+[RDC] dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf (2719320 octets)
+  Entités initiales dans le cadre : 775
+  Bloc 'Murs porteurs selon geometre projet' nettoyé   : 85 conservées / 258 initiales (173 supprimées)
+  Audit DXF                       : 0 erreur(s), 25 réparation(s)
+  Conservées en espace objet :
+    - 010_mur                          : 29
+    - 030_menuiserie                   : 26
+    - 070_trait-fin                    : 35
+    - 075_cotation                     : 17
+    - INSERT_BLOC_PORTEURS             : 1
+  Principales suppressions (cloisons, isolation, second oeuvre) :
+    - 078_textes-2                     : 173
+    - 020_cloi                         : 133
+    - 040_meubles                      : 84
+    - 077_textes-1                     : 72
+    - 100 TEXTE PMR                    : 52
+    - 070_trait-fin (hors emprise)     : 33
+    - 075_cotation (cote de cloison)   : 31
+    - 075_cotation détails             : 30
+    - 030_menuiserie (porte cloison)   : 26
+    - 078_textes-3                     : 21
+    - 079_textes-4                     : 16
+    - 092_surfaces projet              : 10
+  Contrôle ZÉRO cloison / ZÉRO isolation (020_cloi, 020_cloisons) : OK (0 entité)
+  Rendus écrits : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.png (280106 o) / .pdf (80712 o)
+
+[R1] dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndD.dxf (2672677 octets)
+  Entités initiales dans le cadre : 550
+  Bloc 'R+1 Projet' nettoyé   : 97 conservées / 472 initiales (375 supprimées)
+  Audit DXF                       : 0 erreur(s), 37 réparation(s)
+  Conservées en espace objet :
+    - 010_mur                          : 4
+    - 030_menuiserie                   : 3
+    - 070_trait-fin                    : 38
+    - 075_cotation                     : 8
+    - INSERT_BLOC_PORTEURS             : 1
+  Principales suppressions (cloisons, isolation, second oeuvre) :
+    - 078_textes-2                     : 166
+    - 020_cloi                         : 102
+    - 040_meubles                      : 57
+    - 077_textes-1                     : 50
+    - 078_textes-3                     : 22
+    - 075_cotation (cote de cloison)   : 21
+    - 075_cotation détails             : 19
+    - 080_plomb-cvc                    : 14
+    - 030_menuiserie (porte cloison)   : 12
+    - 100 TEXTE PMR                    : 10
+    - 31_sanitaires                    : 4
+    - 051_plafonds                     : 4
+  Contrôle ZÉRO cloison / ZÉRO isolation (020_cloi, 020_cloisons) : OK (0 entité)
+  Rendus écrits : dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndD.png (278171 o) / .pdf (78372 o)

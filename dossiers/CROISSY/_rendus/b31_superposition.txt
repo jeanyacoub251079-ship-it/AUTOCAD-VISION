@@ -1,0 +1,88 @@
+==============================================================================
+B-31 — PREUVE DE SUPERPOSITION — CROISSY-FLORA
+Exécution : 2026-10-19 22:05:57
+==============================================================================
+
+[0] ENTRÉES
+  source   : google_drive/208_FLORA_Plans_DCE_IndC.dxf (4399016 o)
+  livrable : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndC.dxf (2830997 o)
+  livrable : dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndC.dxf (2748255 o)
+  seuil    : 0.020 m (GEO-12)
+  calque source : 31 calques — jeu de référence limité aux 10 calques conservés
+
+[1] PREUVE A — FIDÉLITÉ DE L'EXTRACTION
+  Chaque point de la vue nettoyée doit exister dans la source à la
+  même coordonnée. Une extraction fidèle donne 0 mm ; un redessin
+  donne des écarts diffus, répartis partout.
+
+  RDC
+    sommets de référence (source)     : 13413
+    sommets de la vue nettoyée        : 10800
+    sans correspondance dans la source: 0
+    écart maximal                     : 0.0006 m
+    écart moyen                       : 0.0000 m
+    verdict (GEO-12)                  : CONFORME
+
+  R+1
+    sommets de référence (source)     : 9488
+    sommets de la vue nettoyée        : 8753
+    sans correspondance dans la source: 0
+    écart maximal                     : 0.0000 m
+    écart moyen                       : 0.0000 m
+    verdict (GEO-12)                  : CONFORME
+
+[2] PREUVE B — EMPILEMENT DES MURS EXISTANTS (GEO-11)
+  On ne compare que le calque 010_mur : les cloisons du projet sont
+  neuves au R+1 et n'ont pas à tomber sur celles du RDC.
+  Translation appliquée : celle des cadres, 3755 cm en Y.
+  murs existants RDC : 199 sommets — emprise 11.47 x 19.84 m
+  murs existants R+1 : 201 sommets — emprise 11.41 x 19.93 m
+  décalage des cadres adopté : dx = 0 cm, dy = 3755 cm
+  décalage des emprises      : dx = 0 cm, dy = 3754 cm
+
+  B1 — EMPILEMENT DES ENVELOPPES (preuve de calage)
+    RDC  : X 84.69 → 96.16 m · Y 43.43 → 63.27 m
+    R+1  : X 84.69 → 96.10 m · Y 43.44 → 63.37 m
+    écart sur les 4 extrémités : 0.1014 m
+    verdict : NON CONFORME
+
+  B2 — EMPILEMENT MUR À MUR (constat, pas un critère)
+    écart maximal  : 1.8529 m
+    écart médian   : 0.2201 m
+    écart moyen    : 0.3671 m
+    sans correspondance à moins de 2 m : 0 sommets
+    ≤ 2 cm      18 sommets  (9.0 %)
+    ≤ 5 cm      51 sommets  (25.4 %)
+    ≤ 10 cm     72 sommets  (35.8 %)
+    ≤ 50 cm    147 sommets  (73.1 %)
+    > 50 cm     54 sommets  (26.9 %)
+    -> lecture : les enveloppes se superposent, mais 27 % des murs
+       ne se superposent pas. Les cloisons du R+1 ne sont donc pas
+       portées par les murs du RDC. Conséquence pour B-40 : les
+       charges du niveau haut ne descendent pas à la verticale.
+
+[3] PREUVE C — CONFINEMENT AU CADRE
+  Chaque entité livrée doit tenir dans le cadre de son niveau. Une
+  extraction ratée laisse passer la planche voisine.
+  Mesure par extents() : c'est la boîte réelle de l'entité, blocs
+  compris, qui fait foi — pas ses points d'insertion.
+
+  RDC — 327 entités livrées
+    entités hors du cadre : 0
+
+  R+1 — 243 entités livrées
+    entités hors du cadre : 0
+  verdict : CONFORME
+
+[4] RENDUS DE CONTRÔLE (OUT-04)
+  écrit : dossiers/CROISSY/_calage/B-31_preuve_A_fidelite.png / .pdf
+  écrit : dossiers/CROISSY/_calage/B-31_preuve_B_empilement.png / .pdf
+
+[5] SYNTHÈSE
+  A — fidélité de l'extraction : CONFORME
+  B — empilement des enveloppes: NON CONFORME
+      (mur à mur : constat, voir [2] B2 — 27 % des murs non superposés)
+  C — confinement au cadre     : CONFORME
+  VERDICT GLOBAL : À CORRIGER
+  B-31 ne corrige aucun écart : la correction appartient à la brique
+  source (B-32 pour la vue, B-30 pour le calage).

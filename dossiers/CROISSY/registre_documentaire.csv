@@ -1,0 +1,6 @@
+Ref;Fichier;Type;Indice;Date;Taille_octets;Emetteur;Lisible_connecteur;Contenu_cle;Action
+D1;CCTP LOT 01 GROS OEUVRE - STRUCTURES - DEPLOMBAGE - INSTALLATION DE CHANTIER.pdf;CCTP lot 01;V1 - PRO;13/03/2026;1148344;EICP / MOE;Oui (partiel);Gros oeuvre, desamiantage, deplombage, demolitions, fondations, dallages, elevations;Lire integralement les articles 01.2.1.5.5 et 01.2.1.9
+D2;24.09.356E DCE indice C FLORA 16.03.2026.pdf;Plans structure - 4 folios;A/B/C;16/03/2026;545655;EVEN STRUCTURES;Oui (integral);Donnees d'etudes, legendes renforts F/R/P/S/J/Stab, note dallage, fondations passerelle;BET - demander plan de fondations Flora et note de calcul
+D3;208_FLORA_DIAG structure.pdf;Diagnostic structurel - 18 p;-,;24/03/2025;1361521;EVEN STRUCTURES;Oui (integral);Description existant, 9 desordres, capacites portantes planchers A et B, preconisations;A revalider a 250 daN/m2 (programme DCE)
+D4;208_FLORA_DCE_Pieces graphiques_IndC.pdf;Pieces graphiques architecte;C;16/03/2026;5796487;TRUELLE Architectes;Non - extraction en echec;Plans architecte (non lus);Ouvrir manuellement - deposer en local
+D5;208_FLORA_Plans_DCE_IndC.dxf;Plans CAO;C;16/03/2026;4399016;TRUELLE Architectes;Non - format non supporte;Geometrie CAO (non lue);Deposer en local pour extraction calques et quantitatifs

@@ -1,0 +1,27 @@
+====================================================================================
+B-20 — SYNTHÈSE STRUCTURELLE & CONCEPTION GO — INDICE B
+Exécution : 2026-10-20 11:00:41
+Corpus synthétisé : D1 (CCTP) + D2 (EVEN Ind. C) + D3 (Diag) + D4/D5 (Archi Ind. C)
+====================================================================================
+Segments 102_demol extraits du bloc géomètre RDC : 86
+
+COORDONNÉES IMPLANTÉES DANS LE REPÈRE B-30 (origine P1 = 8586,97 ; 4442,70 cm) :
+  F1a    | 2x HEA 200 S275    | ( +3.90, +8.78) -> ( +3.90,+10.21) m | L_libre=1.00 m | Ouverture créée refend central moellons (appuis J1 + S2)
+  F1b    | 2x HEA 200 S275    | ( +6.93,+10.46) -> ( +8.41,+10.46) m | L_libre=0.90 m | Renfort linteau bois + baie mur Nord hall (appuis S2 + P3)
+  F1c    | 2x HEA 200 S275    | ( +8.21, +7.71) -> ( +9.46, +7.71) m | L_libre=0.85 m | Renfort linteau bois + baie mur Sud hall (appuis 2xS2)
+  F2     | HEB 200 S275       | ( +0.60, +5.11) -> ( +3.86, +5.11) m | L_libre=2.85 m | Suppression mur porteur Sud Aile Est + appui F4 (appuis 2xS1)
+  F3     | HEB 160 S275       | ( -0.39, +8.69) -> ( +3.86, +8.69) m | L_libre=3.85 m | Suppression refend central Aile Est (appuis 2xS1)
+  F4     | IPE 200 S275       | ( +2.88, +0.16) -> ( +2.88, +5.04) m | L_libre=4.88 m | Suppression paroi longit. extension Sud-Est (appuis F2 + S1)
+  R1     | 2x UPE 200 S275    | ( -0.39,+10.46) -> ( +3.83,+10.46) m | L_libre=3.85 m | Moisage poutre bois 15x20 fléchie — Désordre 3 (appuis 2xS2)
+  R2-N   | HEB 160 S275       | ( -0.16,+12.66) -> ( +3.66,+12.66) m | L_libre=3.82 m | Renfort mi-travée solives bois 8x18 Plancher A (q=250 daN/m²)
+  R2-S   | HEB 160 S275       | ( -0.16, +6.90) -> ( +3.66, +6.90) m | L_libre=3.82 m | Renfort mi-travée solives bois 8x18 Plancher A (appuis R3-S + S1)
+  R3-N   | UPE 200 S275       | ( -0.16,+11.41) -> ( -0.16,+13.91) m | L_libre=1.55 m | Linteau porteur baie Nord façade Est — Désordre 1 (appuis 2xS1)
+  R3-S   | UPE 200 S275       | ( -0.16, +5.65) -> ( -0.16, +8.15) m | L_libre=1.55 m | Linteau porteur baie Sud façade Est — Désordre 1 (appuis 2xS1)
+  P1-N   | Tube 140x140 S275  | centre B-30 = ( +9.54,  +4.62) m | DXF = (95.41, 49.04) m | Renfort sous linteau bois existant baie Ouest Sud (D2 f.01 / D3 p.16)
+  P1-S   | Tube 140x140 S275  | centre B-30 = ( +9.54,  +3.36) m | DXF = (95.41, 47.78) m | Renfort sous linteau bois existant baie Ouest Sud (D2 f.01 / D3 p.16)
+  P2     | Poteau BA 15x25 C25/30 | centre B-30 = ( +9.48, +14.87) m | DXF = (95.35, 59.29) m | Remplacement poteau bois + allège portique Ouest Nord (D3 p.17) sur SF1
+  P3     | Poteau BA 50x40 C25/30 | centre B-30 = ( +8.22, +10.46) m | DXF = (94.09, 54.89) m | Reprise d'appui du linteau existant + appui Est de F1b (D2 f.01)
+  J1     | Jambage BA 24x50 C25/30 | centre B-30 = ( +3.91, +10.09) m | DXF = (89.78, 54.52) m | Jambage BA piédroit Nord du frangement F1a dans refend moellons 50 cm
+[PLANCHE 1 — PH RDC] dossiers/CROISSY/_plans/FLORA_B20_PH-RDC_PRINCIPE-STRUCTUREL_IndB.dxf (2790594 o) — audit=0 err — demol=70
+[PLANCHE 2 — PB RDC / PLS] dossiers/CROISSY/_plans/FLORA_B20_PB-RDC_IMPLANTATION-FONDATIONS_IndB.dxf (2767496 o) — audit=0 err
+[PLANCHE 3 — R+1 CHARPENTE & COUPES] dossiers/CROISSY/_plans/FLORA_B20_CHARPENTE_COUPES_SCHEMA_IndB.dxf (2729761 o) — audit=0 err
