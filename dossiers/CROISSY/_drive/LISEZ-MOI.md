@@ -2,7 +2,7 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent le **filigrane `PRINCIPE — NE PAS EXÉCUTER`** : ce sont des documents de conception, pas des plans d'exécution.
 
-**Ce qui a changé le 20/10/2026** : `B-24` est **livrée en Ind. A** (les huit éléments existants non sondés ont leur vérification littérale) — **la phase de conception est close**. `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
+**Ce qui a changé le 20/10/2026** : `B-42` est **livrée en Ind. A** — c'est la **première note de calcul d'exécution** du dossier (poteaux et jambage en béton armé : ferraillage, cadres, débits). `B-24` est **livrée en Ind. A** (les huit éléments existants non sondés ont leur vérification littérale) — **la phase de conception est close**. `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
 
 ---
 
@@ -37,7 +37,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 
 ## 3. ARBORESCENCE
 
-### `01_Notes` — 11 Google Docs natifs
+### `01_Notes` — 12 Google Docs natifs
 
 | Note | Indice | Objet |
 |---|---|---|
@@ -49,6 +49,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-22 — Note d'hypothèses de conception` | B | 30 hypothèses, 5 régimes de confirmation |
 | `B-23 — Exploitation du diagnostic` | **A** | **9 désordres classés**, 5 zones hors relevé, 9 appuis, séquences `P-1` à `P-7` |
 | `B-24 — Existant non sondé` | **A (`_P`)** | **8 éléments en attente de données** · 101 cas de sensibilité non contractuels · 6 campagnes d'essais. **Note suspendue : ne pas exécuter** |
+| `B-42 — Poteaux et jambages BA` | **A** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,400`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · 5 réserves |
 | `B-25 — Stabilité globale, contreventement & joints` | **E** | `D-29` consignée, torsion, régularité, `D-28`. **Aucun point ouvert** |
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | E | `SF1 80×80×25` (`D-30`), note `D-09` intégrale |
@@ -87,6 +88,6 @@ Les mêmes sept familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-
 
 ## 5. SUITE DE LA CHAÎNE
 
-**La phase de conception est close** : `B-20` → `B-25` → `B-21` → `B-22` → `B-23` → `B-24`. La suite est la **phase de calcul d'exécution**, qui commence par **`B-42` — poteaux et jambages BA** : `B-42` puis `B-43` (planchers et plancher haut), `B-44` (charpente), `B-45` (profilés — priorité `F3` et `R1`), `B-46` (maçonnerie), `B-47`/`B-49` (escaliers, linteaux), `B-50` (assemblages). Ensuite seulement viennent les **plans d'exécution** : `B-60` (plans cotés coffrage et ferraillage) et `B-62` (nomenclatures).
+**La phase de conception est close** : `B-20` → `B-25` → `B-21` → `B-22` → `B-23` → `B-24`. La **phase de calcul d'exécution** est ouverte : **`B-42` — poteaux et jambages BA est livrée**. Viennent ensuite `B-43` (planchers et plancher haut), `B-44` (charpente), `B-45` (profilés — priorité `F3` et `R1`), `B-46` (maçonnerie), `B-47`/`B-49` (escaliers, linteaux), `B-50` (assemblages). Ensuite seulement viennent les **plans d'exécution** : `B-60` (plans cotés coffrage et ferraillage) et `B-62` (nomenclatures).
 
 Chaque brique ne démarre que sur un **`GO` explicite** portant son nom.

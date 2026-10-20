@@ -1,15 +1,16 @@
 # CROISSY-FLORA — INDEX DE L'ESPACE DE TRAVAIL
 
-> **Mis à jour le 20/10/2026** — **`B-24` livrée en indice A** (mode PARAMÉTRIQUE, suffixe `_P`) : les **8 éléments existants non sondés** ont leur vérification littérale, `101` cas de sensibilité balayés, `6` campagnes d'essais listées. **La phase 3 est close.** **`B-25` en indice E** (`D-29` consignée, aucun point ouvert) · **`B-23` en indice A** (9 désordres classés) · **`B-03` en indice U** (34 décisions).
+> **Mis à jour le 20/10/2026** — **`B-42` livrée en indice A** : **première note de calcul d'exécution** (`P2`, `P3`, `J1` en béton armé), diagramme d'interaction `N-M` + flambement EC2, **8/8 CONFORME**. **La phase 4 est ouverte.** **`B-24` livrée en indice A** (mode PARAMÉTRIQUE, suffixe `_P`) : 8 éléments non sondés, `101` cas de sensibilité, 6 campagnes d'essais. **La phase 3 est close.** **`B-25` en indice E** (`D-29` consignée, aucun point ouvert) · **`B-23` en indice A** (9 désordres classés) · **`B-03` en indice U** (34 décisions).
 
 ---
 
 ## 1. RÉPONSE DIRECTE — CE QUI EXISTE ET CE QUI RESTE À PRODUIRE
 
-**À la date du 20/10/2026 : 22 notes documentaires CARNAC (dont `B-24` en mode PARAMÉTRIQUE, suffixe `_P`), 6 preuves de calage/superposition, et 21 fichiers de plans (`7 DXF + 7 PDF + 7 PNG = 27 Mo`) — tous purgés à 100 % des cloisons et complexes d'isolation (`0 entité` sur `020_cloi` / `020_cloisons`).**
+**À la date du 20/10/2026 : 23 notes documentaires CARNAC (dont `B-24` en mode PARAMÉTRIQUE, suffixe `_P`), 6 preuves de calage/superposition, et 21 fichiers de plans (`7 DXF + 7 PDF + 7 PNG = 27 Mo`) — tous purgés à 100 % des cloisons et complexes d'isolation (`0 entité` sur `020_cloi` / `020_cloisons`).**
 
 | Ce qui est produit et synchronisé sur Google Drive (`LIVRABLES_ARENA`) | Emplacement workspace |
 |---|---|
+| **Verticaux BA `B-42 Ind. A`** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,400`), `P3` `50 × 40` et `J1` `24 × 50` (minimum réglementaire) — **6 HA12** partout, cadres `HA8 e150/e200`, débits `83,8 kg`. Réserves `R-42-1` à `R-42-5` | `06_CALCULS/` + `_rendus/` |
 | Cadrage `B-00 → B-04` (dont `B-03` **Ind. U**, 34 décisions + Articles `P1 à P8`), analyse `B-10 → B-15` | `01_CADRAGE/` · `02_ANALYSE/` |
 | Calage `B-30 Ind. C`, superposition `B-31 Ind. C`, **Vues nettoyées structurelles `B-32 Ind. D`** (zéro cloison, zéro isolation) | `03_CALAGE/` + `_plans/` + `_calage/` |
 | **Synthèse structurelle & prédimensionnement `B-20 Ind. B`** : 3 planches A3 Paysage (`PH RDC`, `PB RDC / PLS`, `R+1 Charpente + Coupes A-A / B-B + Cheminement`) | `02_CONCEPTION/` + `_plans/` |
@@ -19,7 +20,7 @@
 
 | Ce qui reste séquencé pour la suite de la chaîne CARNAC | Motif |
 |---|---|
-| **`B-42`** (poteaux et jambages BA) · **`B-43`** (planchers et plancher haut) · **`B-44`** (charpente) · **`B-45`** (profilés métalliques) · **`B-46`** (maçonnerie existante) · **`B-47`/`B-49`** (escaliers, linteaux) · **`B-50`** (assemblages et ancrages) | **Phase 4 — notes de calcul d'exécution.** Premières notes opposables, sur `GO` ; `B-41` (fondations profondes) et `B-48` (prédalles) à déclarer `SANS OBJET` s'il n'y a ni pieu ni prédalle |
+| **`B-43`** (planchers et plancher haut) · **`B-44`** (charpente) · **`B-45`** (profilés métalliques) · **`B-46`** (maçonnerie existante) · **`B-47`/`B-49`** (escaliers, linteaux) · **`B-50`** (assemblages et ancrages) | **Phase 4 en cours** — `B-42` livrée. `B-41` (fondations profondes) et `B-48` (prédalles) à déclarer `SANS OBJET` s'il n'y a ni pieu ni prédalle |
 | **`B-60 / B-62`** (Plans d'exécution cotés coffrage/ferraillage & nomenclatures — `D-17`) | Séquencés après les calculs d'exécution `B-40 à B-50` |
 
 ---
@@ -44,6 +45,7 @@
 | **B-22** | `02_CONCEPTION/B-22_Note_Hypotheses.md` | **B** | **20/10/2026** | ✅ **CONFORME 6/6** — **30 hypothèses** · **`D-33`** : 9 en régime `LECTURE` (aucune relance) · `H-27` vérifiée par `B-21` · famille Matériaux vide (assumée) |
 | **B-23** | `02_CONCEPTION/B-23_Exploitation_Diagnostic.md` | **A** | **20/10/2026** | ✅ **CONFORME 6/6** — 9 désordres classés (3 renforcement, 1 sous condition, 3 phasage, 3 coordination lot, 1 sans impact) · 5 zones hors relevé · 9 appuis · séquences `P-2` purge avant renfort et `P-3` flambement avant charge **nouvelles** |
 | **B-24** | `02_CONCEPTION/B-24_Existant_Non_Sonde_P.md` | **A (`_P`)** | **20/10/2026** | ✅ **CONFORME 7/7** — **8 éléments non sondés** · `101` cas de sensibilité **NON CONTRACTUEL** · **1 favorable** (`E-01` maçonnerie), **4 limites**, **2 défavorables** (`E-02`, `E-05`), **1 sans plage** (`E-07`) · **0 élément conclu** · 6 campagnes d'essais |
+| **B-42** | `06_CALCULS/B-42_Verticaux_BA.md` | **A** | **20/10/2026** | ✅ **CONFORME 8/8** — `P2` `15×25` seul porteur élancé (`lambda = 64,7`), `M_Ed/M_Rd = 0,400` · `P3` `0,014` · `J1` `0,016` · **6 HA12** partout · point dur : appui de `J1` sur maçonnerie (`0,62` à `f_k = 1,5 MPa`, `1,85` à `0,5`) |
 | **B-25** | `02_CONCEPTION/B-25_Stabilite_Globale.md` | **E** | **20/10/2026** | ✅ **CONFORME 6/6 applicables** — contreventement = maçonnerie seule, `ΣK = 1,21/1,64 GN/m`, torsion `τ/f_vk ≤ 0,028`, aucun joint. **Sismique retirée (`D-26`)** · **stabilité provisoire retirée, MOE (`D-27`)** |
 
 ---
@@ -54,6 +56,7 @@
 
 | Fichier | Taille exacte | Contenu |
 |---|---|---|
+| `06_CALCULS/B-42_Verticaux_BA.md` | `18 080 o · 263 l.` | **Verticaux BA Ind. A** : diagramme d'interaction `N-M`, flambement EC2 § 5.8, ferraillage 6 HA12, débits, 5 réserves |
 | `01_CADRAGE/B-03_RDR.md` | `68 858 o · 459 l.` | Registre vivant **Ind. U** : `D-01` à `D-34` + `D-29`, Articles `P1–P8`, registre des nuages `D-19` |
 | `01_CADRAGE/B-03_Annexe_Hypotheses.md` | `37 653 o · 252 l.` | **Annexe hypothèses notifiées Ind. H** : 30 hypothèses, clause `D-34` (maçonnerie) mot pour mot, `D-33` régime `LECTURE` |
 | `02_CONCEPTION/B-20_Conception_GO.md` | `30 101 o · 206 l.` | Synthèse structurelle & prédimensionnement GO Ind. B (rectificatifs + 13 postes + rattachement `B-11`) |
