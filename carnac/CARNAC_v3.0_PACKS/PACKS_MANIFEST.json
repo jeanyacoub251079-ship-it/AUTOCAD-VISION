@@ -1,0 +1,296 @@
+[
+  {
+    "pack": "00_SOCLE.md",
+    "titre": "PACK 00 — SOCLE (à coller en premier, toujours)",
+    "bytes": 103411,
+    "chars": 99679,
+    "estimated_tokens": 29734,
+    "files": [
+      {
+        "rel_path": "00_MASTER.md",
+        "bytes": 35700,
+        "sha256": "5138b21def0e53c834aafa95c85cadbfef46e8247e511874cf43165b3b518bbf"
+      },
+      {
+        "rel_path": "10_ANNEXES/A_Conventions_Livrables.md",
+        "bytes": 18966,
+        "sha256": "6d922f610aa642e3be7253762e261fd0e51fd1b45c8d80b9ec5a72148bc856c6"
+      },
+      {
+        "rel_path": "10_ANNEXES/D_Mode_Emploi.md",
+        "bytes": 26599,
+        "sha256": "3713c6e47f10ee2dcb42f969190ca7d09c3daa2284fa5d5e5386eb270e98d38e"
+      },
+      {
+        "rel_path": "10_ANNEXES/O_Outillage.md",
+        "bytes": 11183,
+        "sha256": "fc65f8d51b33226ef926e28ad6b0e59543f8d827cc0880671b35bd1cb3a25908"
+      },
+      {
+        "rel_path": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+        "bytes": 9378,
+        "sha256": "4ff47319419b00d9c253cbbcb3a3081072ad5c8bd0b426c257b4749115621ec0"
+      }
+    ]
+  },
+  {
+    "pack": "01_PHASE_0.md",
+    "titre": "PACK 01 — PHASE 0 : CADRAGE (B-00 à B-04)",
+    "bytes": 81076,
+    "chars": 78065,
+    "estimated_tokens": 23214,
+    "files": [
+      {
+        "rel_path": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+        "bytes": 13173,
+        "sha256": "1f9b02f2d0188bea523a9614af49aadcab55d3b7d41d76a6d4fd397e0e9f6241"
+      },
+      {
+        "rel_path": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+        "bytes": 16673,
+        "sha256": "3e17e9916d4e9f7e771c5fe3c4c22c0296deb1e51ffbfcae5c02c6f9bb1a0a06"
+      },
+      {
+        "rel_path": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+        "bytes": 15471,
+        "sha256": "83ed61f9f487d3021930ffd709a6f7d3c6cf6d06a8037d29872132af2c9f6d93"
+      },
+      {
+        "rel_path": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+        "bytes": 20404,
+        "sha256": "bdbad23f8cfc1099e1b6cda0baace50cafda4a1f515ea9e1c7867c6a0d5ec210"
+      },
+      {
+        "rel_path": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+        "bytes": 13870,
+        "sha256": "80a14dfc2996140d89d58a89372d00a73e1f440ca4fbfe42fe322549fea72d42"
+      }
+    ]
+  },
+  {
+    "pack": "02_PHASES_1-2.md",
+    "titre": "PACK 02 — PHASES 1 ET 2 : SOCLE GÉOMÉTRIQUE PUIS AUDIT CROISÉ (B-30, B-32, B-31 puis B-10 à B-15)",
+    "bytes": 187834,
+    "chars": 181117,
+    "estimated_tokens": 54220,
+    "files": [
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+        "bytes": 15516,
+        "sha256": "71f385dc18b772b65bfbc32a8299e296b6b5280646bbf5788e1824f191fd9f41"
+      },
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+        "bytes": 18858,
+        "sha256": "a8160342e1d78aadec9bd67dba27bd372b58b702b2e011f9b5ca2f081feac15d"
+      },
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+        "bytes": 16514,
+        "sha256": "11451957570dd8df58dd183239984385e1715a3aa3476bee98d6fbf421486ff5"
+      },
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+        "bytes": 22272,
+        "sha256": "1d3dce92e7339c6033fb66d0ef7687bffd02040310391b5dfc2c05b538b73808"
+      },
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+        "bytes": 16986,
+        "sha256": "dab790964a8132a99d0160fe0212c48eb434dc173a45119c06ac1cc0ccdc00f1"
+      },
+      {
+        "rel_path": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+        "bytes": 19149,
+        "sha256": "eff17e1f3442269671886f229e816405f1b9b59d6a967926d8ebebdcfb409933"
+      },
+      {
+        "rel_path": "05_PHASE_3_CALAGE/B-30_Calage.md",
+        "bytes": 20641,
+        "sha256": "7297a381cba09f61e7f9ec9733a2bbd598789365f4cae29575321e8174ae1264"
+      },
+      {
+        "rel_path": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+        "bytes": 34250,
+        "sha256": "d507ecbe3c361806313bd6efea1f94fac7409e57e6ca58aff1d4397e0e9499c2"
+      },
+      {
+        "rel_path": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+        "bytes": 21422,
+        "sha256": "e9f51a6396606fc59fbdec529b7fd696230b34d360dbcae77d94866db4f94525"
+      }
+    ]
+  },
+  {
+    "pack": "03_PHASE_3.md",
+    "titre": "PACK 03 — PHASE 3 : CONCEPTION ET SYNTHÈSE STRUCTURELLE (B-20 à B-25)",
+    "bytes": 123088,
+    "chars": 118655,
+    "estimated_tokens": 35390,
+    "files": [
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+        "bytes": 24991,
+        "sha256": "945ce98b1191b450c0e699a1b8019c8c6b244857577805062655d7f124064da4"
+      },
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+        "bytes": 16663,
+        "sha256": "4ec05093a321675b7dd41a1e0f2ec189f7e5a724945b0a67fa9282bec2f64754"
+      },
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+        "bytes": 19391,
+        "sha256": "0fbd67f2e8a03837b1d3d60f0f84c2c80e59ee6d9b04e60ec3283a86325ab205"
+      },
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+        "bytes": 19385,
+        "sha256": "b38500c2edc90102e965933e3f67b4f10bc26f78c4281997d61f4d2984ef2ae7"
+      },
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+        "bytes": 20076,
+        "sha256": "cb57611cb3f365e7770c5e953a8b1951fa67452ff0aab34b119de9b6b66c1b0e"
+      },
+      {
+        "rel_path": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+        "bytes": 20682,
+        "sha256": "1871f6b62a129c40a75ce6f73632de95337e15236c2281f8b6f2f02ad89b58a1"
+      }
+    ]
+  },
+  {
+    "pack": "04_PHASE_4.md",
+    "titre": "PACK 04 — PHASE 4 : CALCULS D'EXÉCUTION (B-40 à B-50)",
+    "bytes": 334978,
+    "chars": 323201,
+    "estimated_tokens": 97085,
+    "files": [
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+        "bytes": 30554,
+        "sha256": "6cb352964e0385a53bd6a6beef43913d5f8eba77041142bddd0eae4b1b22b252"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+        "bytes": 26434,
+        "sha256": "0df293d600795045d3cde25f41676b97a97d17102f81debd2c01d74aafa0cba4"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+        "bytes": 32792,
+        "sha256": "3067581ab491fdc18c53a25af45bec583b774c3afb201b7663b7a9d465f8c3c6"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+        "bytes": 31305,
+        "sha256": "aad15e738407b5f3394e850ed4ce6e0819adb29017b84b8dada28fa0a174367f"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+        "bytes": 27758,
+        "sha256": "5f54ab9fa07fc22ee2b5cc6e8ee6a6651c86c3caafe9f8ac010e80e048155229"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+        "bytes": 27675,
+        "sha256": "098b109f97c0b179ebd34624d54cede2259d3304b906824b2a4c0e0819189170"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+        "bytes": 32005,
+        "sha256": "0dc068ce001cd78c38a61e0bf940c98a98bd3cf58b360283061f716e71f412fe"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+        "bytes": 28304,
+        "sha256": "8acf983a0ce4b0330171030f7a0f6faee0ec6f18483c5fa7a565fd3c4e4a91fb"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+        "bytes": 29311,
+        "sha256": "fb25b093695849867b000471298f9b0085215d12482dd0b7050db77db66bab04"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+        "bytes": 30396,
+        "sha256": "b76e8b4714e50759b310f9acbfcad20038013ef67a22851fe3a0fc2431a4897c"
+      },
+      {
+        "rel_path": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+        "bytes": 35592,
+        "sha256": "5e07dd3474be819c654948865fbddd1bf6b94daac40afef600614cf46e5580d5"
+      }
+    ]
+  },
+  {
+    "pack": "05_PHASES_5-6.md",
+    "titre": "PACK 05 — PHASES 5 ET 6 : RÉSERVATIONS, LIVRABLES, VÉRIFICATION ET CLÔTURE (B-34, B-60 à B-64, B-33, B-70 à B-72)",
+    "bytes": 261431,
+    "chars": 251299,
+    "estimated_tokens": 75290,
+    "files": [
+      {
+        "rel_path": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+        "bytes": 14286,
+        "sha256": "084fc8807fc224e832552bec11a3c122de011c7e233dc77c7c791b0b0038cb19"
+      },
+      {
+        "rel_path": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+        "bytes": 27795,
+        "sha256": "25b671ecb56ee4ac167451f52d62972e553db28d3baf66bdbd93c2a3761a445a"
+      },
+      {
+        "rel_path": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+        "bytes": 22354,
+        "sha256": "f8eb6b06250d3c55f06f462212318f3b99cd7123a6c9f89a8c0036a8fe17fe49"
+      },
+      {
+        "rel_path": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+        "bytes": 23325,
+        "sha256": "c82042c7f68d1689e7a2cd9d7971a6c1c4c910db24b8dee3cef862600efc786d"
+      },
+      {
+        "rel_path": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+        "bytes": 21682,
+        "sha256": "c518f29dae6026618e01cefe25a103abc563be05c7decffd5954e4c5ae806021"
+      },
+      {
+        "rel_path": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+        "bytes": 25178,
+        "sha256": "cb3136ff087fbe9f7ae27bf5917b098eed08ec445edfddb1cdf16b0861576c6e"
+      },
+      {
+        "rel_path": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+        "bytes": 20594,
+        "sha256": "1ab44e1ec4fec00ab35d2e0258f01945b033681c41eb90c42a5c01d6bdb6a590"
+      },
+      {
+        "rel_path": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+        "bytes": 19651,
+        "sha256": "e230b8c19ed0dea45baff5c0267f4f1083e9bbb31e797d7571f5b8fa664e0322"
+      },
+      {
+        "rel_path": "09_TRANSVERSE/T-01_Sincerite.md",
+        "bytes": 21952,
+        "sha256": "5118f51871fc5282002f843b6c96c95dea01c1f9f3a7ae7c519ded11c96ef531"
+      },
+      {
+        "rel_path": "09_TRANSVERSE/T-02_Recadrage.md",
+        "bytes": 20936,
+        "sha256": "2225066d471b5c800bb74d3a7ef956c41f2eef21bb2b5062ce98bd5cf7ccc293"
+      },
+      {
+        "rel_path": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+        "bytes": 19663,
+        "sha256": "11b7c06d3ea28b24375c2002ba21cda73c02afe9ec9d74daa97592a55fe628df"
+      },
+      {
+        "rel_path": "09_TRANSVERSE/T-04_Demande_Complement.md",
+        "bytes": 21133,
+        "sha256": "198136089edbb023e315fb774645c4fbf674a1308382259b054d86b4ac66db6c"
+      }
+    ]
+  }
+]
