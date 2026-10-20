@@ -37,7 +37,7 @@ from ezdxf.addons.drawing.config import Configuration, BackgroundPolicy
 SRC_RDC = "dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf"
 OUT = "dossiers/CROISSY/_plans"
 JOURNAL = "dossiers/CROISSY/_rendus/b40_fondations.txt"
-BASE = os.path.join(OUT, "FLORA_FONDATIONS_TYPE_IndE")
+BASE = os.path.join(OUT, "FLORA_FONDATIONS_TYPE_IndF")
 
 FDC = [
     ("SOL-01", "q_ELS", 0.30, "MPa", "D-02 / D2 p. 1"),
@@ -48,7 +48,8 @@ FDC = [
     ("MAT-03a","c_nom", 50.0, "mm",  "D-06 (enrobage fondations XC2)"),
     ("MAT-04", "f_yk",  500.0,"MPa", "D2 p. 1 — S500B"),
     ("D-08",   "arase", -1.00,"m",   "D-08 / D-09 / D-12 — arase inf. / TN MINIMUM"),
-    ("CHG-03", "g_plancher", 6.80, "kN/m²", "D2 350 + D4 recharge 15 cm 330 — enveloppe haute"),
+    ("CHG-03", "g_plancher", 4.71, "kN/m²", "B-21 Ind. C § 3.5 — plancher B + cloisons, SANS recharge (D-35)"),
+    ("CHG-03b", "g_dallage", 7.75, "kN/m²", "B-21 Ind. C § 3.6 — dallage BA 13 + revêtement + recharge 15 cm + cloisons (D-35)"),
     ("CHG-02", "q_exploit",  2.50, "kN/m²", "D2 p. 1 cabinet paramédical 250 — enveloppe haute"),
 ]
 
@@ -102,7 +103,7 @@ def add_cloud(msp, x0, y0, x1, y1, layer="FOND-HYP-D19", step=22.0):
 def main():
     os.makedirs(OUT, exist_ok=True)
     log("=" * 80)
-    log("B-40 — FONDATIONS SUPERFICIELLES & IMPLANTATION « PLS » — INDICE E")
+    log("B-40 — FONDATIONS SUPERFICIELLES & IMPLANTATION « PLS » — INDICE F")
     log("Exécution : %s" % datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     log("=" * 80)
 
@@ -130,15 +131,25 @@ def main():
     log("  ELS caractéristique = %.2f kN/m²  |  ELU fondamental = %.2f kN/m²" % (g_els, g_elu))
     log("  Niveau R+1 complet (106,92 m²) : %.0f kN ELS / %.0f kN ELU" % (g_els * 106.92, g_elu * 106.92))
     # Descente de charges spécifique au poteau P2 (portique Ouest Nord, bande ~6,5 m²) :
-    A_P2 = 6.50
-    W_sf1 = 0.60 * 0.60 * 0.30 * GAMMA_B
-    N_P2_els = g_els * A_P2 + W_sf1
-    N_P2_elu = g_elu * A_P2 + 1.35 * W_sf1
-    log("  Semelle SF1 sous P2 (aire d'influence estimée A ≈ %.2f m²) :" % A_P2)
-    log("    N_ELS(SF1) = %.1f kN <= 108,0 kN (σ_ELS = %.3f MPa <= 0,300 MPa) -> OK"
-        % (N_P2_els, N_P2_els / 0.36 / 1000.0))
-    log("    N_ELU(SF1) = %.1f kN <= 176,4 kN (σ_ELU = %.3f MPa <= 0,490 MPa) -> OK"
-        % (N_P2_elu, N_P2_elu / 0.36 / 1000.0))
+    # SF1 : N repris TEL QUEL de B-21 Ind. C (continuité 1,15 incluse), semelle 80x80x25 (D-30)
+    SF1_B, SF1_H = 0.80, 0.25
+    A_SF1 = SF1_B ** 2
+    A_P2 = 11.46
+    N_P2_els, N_P2_elu = 130.5, 182.9
+    log("  Semelle SF1 sous P2 : %.0f x %.0f x %.0f cm (D-30) — A_inf = %.2f m²" %
+        (SF1_B * 100, SF1_B * 100, SF1_H * 100, A_P2))
+    log("    N_ELS(SF1) = %.1f kN (B-21 Ind. C) -> σ_ELS = %.3f MPa <= 0,300 MPa -> %s"
+        % (N_P2_els, N_P2_els / A_SF1 / 1000.0,
+           "OK" if N_P2_els / A_SF1 / 1000.0 <= 0.30 else "NON CONFORME"))
+    log("    N_ELU(SF1) = %.1f kN (B-21 Ind. C) -> σ_ELU = %.3f MPa <= 0,490 MPa -> %s"
+        % (N_P2_elu, N_P2_elu / A_SF1 / 1000.0,
+           "OK" if N_P2_elu / A_SF1 / 1000.0 <= 0.49 else "NON CONFORME"))
+    log("    Dallage (D-35, 100 %% de l'emprise) : g = %.2f · p_ELS = %.2f · p_ELU = %.2f kN/m²"
+        % (d["g_dallage"], d["g_dallage"] + q, 1.35 * d["g_dallage"] + 1.5 * q))
+    log("    → sur le sol : %.1f kPa à l'ELU, soit %.1f %% de q_ELU — portance sans objet,"
+        % (1.35 * d["g_dallage"] + 1.5 * q,
+           100.0 * (1.35 * d["g_dallage"] + 1.5 * q) / q_elu))
+    log("      le dallage est un problème de fissuration et de désolidarisation, pas de portance.")
 
     titre("[4] TABLEAU DE SENSIBILITÉ — ABAQUE DE CHANTIER B(A)")
     h = 0.30
@@ -178,16 +189,22 @@ def main():
         % (d_util, M, As / Bref, asmin))
     log("  Ferraillage retenu : HA8 e150 dans les 2 sens = 335 mm²/m >= %.0f mm²/m -> OK" % retenu)
 
-    titre("[6] RIGIDITÉ & [7] POINÇONNEMENT — EC2 §6.4")
-    u1 = 4 * b_ref * 1000 + 2 * math.pi * 2 * d_util
-    v_ed = N_elu * 1e3 / (u1 * d_util)
-    k_p = min(1 + math.sqrt(200 / d_util), 2.0)
-    rho = 335.0 / (1000 * d_util)
+    titre("[6] RIGIDITÉ & [7] POINÇONNEMENT — SF1 80x80x25 (D-30) — EC2 §6.4")
+    d_sf1 = SF1_H * 1000.0 - d["c_nom"] - 8.0
+    b_pot = 0.25
+    u1 = 4 * b_pot * 1000 + 2 * math.pi * 2 * d_sf1
+    v_ed = N_P2_elu * 1e3 / (u1 * d_sf1)
+    k_p = min(1 + math.sqrt(200 / d_sf1), 2.0)
+    rho = 335.0 / (1000 * d_sf1)
     v_rdc = 0.12 * k_p * (100 * rho * fck) ** (1.0 / 3.0)
-    log("  v_Ed = %.3f MPa <= v_Rd,c = %.3f MPa (ratio = %.2f) -> OK" % (v_ed, v_rdc, v_ed / v_rdc))
+    log("  d(SF1) = %.0f mm | rigidité EC2 §9.8.3 : (B-b)/4 = %.0f mm <= d -> OK"
+        % (d_sf1, (SF1_B * 1000.0 - b_pot * 1000.0) / 4.0))
+    log("  v_Ed = %.3f MPa <= v_Rd,c = %.3f MPa (ratio = %.2f) -> %s"
+        % (v_ed, v_rdc, v_ed / v_rdc, "OK" if v_ed <= v_rdc else "NON CONFORME"))
+    log("  (toujours 335 mm²/m : HA8 e150 — A_s,min gouverne, pas la flexion)")
 
-    titre("[8] IMPLANTATION DES FONDATIONS SUR VUE EN PLAN NETTOYÉE (INDICE E)")
-    log("  SF1     : X=95,35 m / Y=59,29 m (B-30 : +9,48 / +14,87 m) — Semelle BA 60x60x30 mini sous P2 (CERTAIN)")
+    titre("[8] IMPLANTATION DES FONDATIONS SUR VUE EN PLAN NETTOYÉE (INDICE F)")
+    log("  SF1     : X=95,35 m / Y=59,29 m (B-30 : +9,48 / +14,87 m) — Semelle BA 80x80x25 (D-30) sous P2 (CERTAIN)")
     log("  Z-P1N   : X=95,41 m / Y=49,04 m (B-30 : +9,54 /  +4,62 m) — Vérif. moellons ou SF 60x60 (NUAGE D-19)")
     log("  Z-P1S   : X=95,41 m / Y=47,78 m (B-30 : +9,54 /  +3,36 m) — Vérif. moellons ou SF 60x60 (NUAGE D-19)")
     log("  Z-P3    : X=94,09 m / Y=54,89 m (B-30 : +8,22 / +10,46 m) — Appui P3 50x40 BA + GB D-09 (NUAGE D-19)")
@@ -246,13 +263,13 @@ def main():
         msp.add_circle((8388.0, yv), 24.0, dxfattribs={"layer": "FOND-AXES"})
         txt(8380.0, yv - 8.0, code, 18.0, "FOND-AXES")
 
-    # Semelle SF1 (60x60x30 BA mini D-14) sous P2
+    # Semelle SF1 (80x80x25 BA — D-30) sous P2
     p2x, p2y = 9535.0, 5929.2
-    rect(p2x - 35.0, p2y - 35.0, p2x + 35.0, p2y + 35.0, "FOND-GROS-BETON")
-    rect(p2x - 30.0, p2y - 30.0, p2x + 30.0, p2y + 30.0, "FOND-COFFRAGE", hatch_col=5)
+    rect(p2x - 45.0, p2y - 45.0, p2x + 45.0, p2y + 45.0, "FOND-GROS-BETON")
+    rect(p2x - 40.0, p2y - 40.0, p2x + 40.0, p2y + 40.0, "FOND-COFFRAGE", hatch_col=5)
     rect(9522.5, 5921.7, 9547.6, 5936.7, "FOND-ACIER-INF", hatch_col=3)
-    leader(9645.0, 5955.0, p2x + 30.0, p2y + 8.0, "SF1 : 60x60x30 BA mini (sous P2)", 13.0, "FOND-COFFRAGE")
-    txt(9645.0, 5932.0, "X=95,35 / Y=59,29 m | HA8 e150 | GB D-09", 11.2, "FOND-HABILLAGE-TEXTE")
+    leader(9645.0, 5955.0, p2x + 40.0, p2y + 8.0, "SF1 : 80x80x25 BA (D-30, sous P2)", 13.0, "FOND-COFFRAGE")
+    txt(9645.0, 5932.0, "X=95,35 / Y=59,29 m | HA8 e150 | GB D-09 | N_ELS 130,5 kN", 11.2, "FOND-HABILLAGE-TEXTE")
 
     # Nuages D-19 sur P1-N, P1-S, P3, J1
     for xc, yc, lx, ly_t, lab in [
@@ -275,15 +292,15 @@ def main():
     rx0, rx1 = 10260.0, 12020.0
     rect(rx0, 4340.0, rx1, 6520.0, "FOND-CARTOUCHE")
     rect(rx0, 6425.0, rx1, 6520.0, "FOND-AXES")
-    txt(rx0 + 25.0, 6462.0, "PLS (D-11) — B-40 Ind. E  |  NE PAS EXECUTER SANS EXE COTE ET VISA  (MODE PARTIEL-DECLARE)", 16.5, "FOND-AXES")
+    txt(rx0 + 25.0, 6462.0, "PLS (D-11) — B-40 Ind. F  |  NE PAS EXECUTER SANS EXE COTE ET VISA  (MODE PARTIEL-DECLARE)", 16.5, "FOND-AXES")
 
     # 1. Vues en plan des 3 semelles types agrandies (échelle x2,5 -> 60 cm = 150 unités !)
     K = 2.5
     txt(rx0 + 30.0, 6365.0, "1. SEMELLES ISOLEES TYPES — VUES EN PLAN FERRAILLEES (HA8 e150 inf. 2 lits croisés, c_nom = 50 mm)", 14.0)
     for idx_s, (Bm, cx_s, titre_s, amax_s) in enumerate([
-        (0.60, rx0 + 240.0, "SF1 TYPE 60x60", "A <= 11,3 m² (108 kN ELS)"),
-        (0.70, rx0 + 780.0, "TYPE 70x70",     "A <= 15,4 m² (147 kN ELS)"),
-        (0.80, rx0 + 1360.0, "TYPE 80x80",    "A <= 20,1 m² (192 kN ELS)"),
+        (0.60, rx0 + 240.0, "TYPE 60x60", "D-14 minimum — A <= 14 m²"),
+        (0.70, rx0 + 780.0, "TYPE 70x70", "A <= 19 m²"),
+        (0.80, rx0 + 1360.0, "SF1 80x80 (D-30)", "sous P2 — N_ELS = 130,5 kN"),
     ]):
         cy_s = 6135.0
         c = Bm * 100.0 * K / 2.0
@@ -305,10 +322,10 @@ def main():
         txt(cx_s - c, cy_s + c + 38, amax_s, 10.8, "FOND-HABILLAGE-TEXTE")
 
     # 2. Coupe verticale A-A agrandie x2,5 avec Gros Béton D-09 + Béton de propreté + Attentes B-50
-    txt(rx0 + 30.0, 5855.0, "2. COUPE VERTICALE A-A — SEMELLE SF1 (60x60x30 BA) + GROS BETON DE RATTRAPAGE D-09", 14.0)
+    txt(rx0 + 30.0, 5855.0, "2. COUPE VERTICALE A-A — SEMELLE SF1 (80x80x25 BA, D-30) + GROS BETON DE RATTRAPAGE D-09", 14.0)
     ccx, ccy = rx0 + 420.0, 5545.0  # ccy = arase inférieure semelle BA (-1,00 m/TN mini)
-    cw = 60.0 * K
-    ch = 30.0 * K
+    cw = 80.0 * K
+    ch = 25.0 * K
     # Gros béton C16/20 sous semelle (si fondation existante plus profonde — D-09)
     rect(ccx - cw / 2 - 20, ccy - 75.0, ccx + cw / 2 + 20, ccy - 12.5, "FOND-GROS-BETON")
     # Béton de propreté 5 cm
@@ -327,8 +344,8 @@ def main():
     msp.add_line((ccx - pw + 12, ccy + 18), (ccx - pw + 12, ccy + ch + 95), dxfattribs={"layer": "FOND-ACIER-SUP"})
     msp.add_line((ccx + pw - 12, ccy + 18), (ccx + pw - 12, ccy + ch + 95), dxfattribs={"layer": "FOND-ACIER-SUP"})
 
-    cote_h(ccx - cw / 2, ccx + cw / 2, ccy - 98.0, "60 cm mini (D-14)")
-    cote_v(ccx_y0 := ccy, ccy + ch, ccx + cw / 2 + 30.0, "h = 30 cm")
+    cote_h(ccx - cw / 2, ccx + cw / 2, ccy - 98.0, "80 cm (D-30 / D-14)")
+    cote_v(ccx_y0 := ccy, ccy + ch, ccx + cw / 2 + 30.0, "h = 25 cm")
     txt(ccx + cw / 2 + 160.0, ccy + ch + 95.0, "0,00 RELATIF (PB RDC existant — D-21) / TN", 12.0, "FOND-AXES")
     txt(ccx + cw / 2 + 160.0, ccy + ch + 50.0, "Attentes poteau P2 : logement seul, ancrage en B-50", 11.5, "FOND-ACIER-SUP")
     txt(ccx + cw / 2 + 160.0, ccy + 25.0, "Semelle BA C25/30 — 2 lits HA8 e150 (335 mm²/m) — c_nom = 50 mm", 11.8, "FOND-ACIER-INF")
@@ -342,10 +359,10 @@ def main():
         "NOTE OBLIGATOIRE D-09 (TEXTE INTEGRAL) — REPORTEE MOT POUR MOT SUR PLAN ET NOTE DE CALCUL :",
         "« AU MEME NIVEAU QUE LES FONDATIONS EXISTANTES... RAJOUTER DU GROS BETON...",
         "  CETTE NOTE EST A INDIQUER SUR LES PLANS ET NOTE DE CALCULS »",
-        "- Mode PARTIEL-DECLARE : CHG-03 (g = 6,80 kN/m² avec recharge 15 cm) et CHG-02 (q = 2,50 kN/m²).",
+        "- Mode PARTIEL-DECLARE : planchers g = 4,71 kN/m² (B-21 Ind. C) · dallage g = 7,75 kN/m² (D-35, recharge 15 cm sur 100 % de l'emprise).",
         "- Sol (G2 AVP GEOEXPERTS + D-02/D-03/D-08) : alluvions anciennes dès -0,50 m, q_ELS <= 0,30 MPa, q_ELU <= 0,49 MPa.",
-        "- Portance SF1 sous P2 (A ≈ 6,5 m²) : N_ELS = 63,2 kN <= 108 kN (σ = 0,176 MPa) | N_ELU = 87,7 kN <= 176,4 kN.",
-        "- Poinçonnement EC2 §6.4 : v_Ed = 0,155 MPa <= v_Rd,c = 0,347 MPa (OK à 45 %).",
+        "- SF1 80x80x25 (D-30) sous P2 : N_ELS = 130,5 kN (σ = 0,204 MPa <= 0,300) | N_ELU = 182,9 kN (σ = 0,286 <= 0,490).",
+        "- Poinçonnement EC2 §6.4 (SF1) : v_Ed = 0,279 MPa <= v_Rd,c = 0,392 MPa (OK à 71 %).",
         "- Fouilles hors nappe déclarée (D-16 : toute venue d'eau = POINT D'ARRET). Tassements hors mission GO (D-15).",
         "- Interdiction absolue de déchausser les fondations existantes ; blindage si distance < 1,50 m.",
     ]
@@ -358,7 +375,7 @@ def main():
     for t_c, hh_c, yy_c in [
         ("EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 19.5, 4680.0),
         ("PLS (D-11) — FONDATIONS SUPERFICIELLES : IMPLANTATION EN PLAN & FERRAILLAGE TYPE", 13.8, 4632.0),
-        ("Brique B-40  ·  Indice E  ·  20/10/2026  ·  Mode PARTIEL-DECLARE  ·  Fond B-32 Ind. D (sans cloisons)", 12.5, 4588.0),
+        ("Brique B-40  ·  Indice F  ·  20/10/2026  ·  Mode PARTIEL-DECLARE  ·  Fond B-32 Ind. D (sans cloisons)", 12.5, 4588.0),
         ("NE PAS EXECUTER SANS EXE COTE ET VISA", 21.0, 4525.0),
         ("CARNAC v2.6  ·  Unités DXF : cm  ·  Audit DXF : 0 erreur", 12.0, 4470.0),
     ]:
@@ -378,7 +395,7 @@ def main():
     ax.set_aspect("equal", adjustable="box")
     ax.axis("off")
     ax.set_title(
-        "CROISSY-FLORA — PLS (D-11) / B-40 Ind. E — FONDATIONS SUPERFICIELLES : IMPLANTATION EN PLAN & FERRAILLAGE TYPE\n"
+        "CROISSY-FLORA — PLS (D-11) / B-40 Ind. F — FONDATIONS SUPERFICIELLES : IMPLANTATION EN PLAN & FERRAILLAGE TYPE\n"
         "NE PAS EXÉCUTER SANS EXE COTÉ ET VISA   (Fond structurel pur B-32 Ind. D : cloisons et isolation supprimées)",
         fontsize=11.5, fontweight="bold", pad=8,
     )

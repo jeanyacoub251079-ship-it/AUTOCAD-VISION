@@ -1,6 +1,6 @@
 ================================================================================
-B-40 — FONDATIONS SUPERFICIELLES & IMPLANTATION « PLS » — INDICE E
-Exécution : 2026-10-20 11:01:31
+B-40 — FONDATIONS SUPERFICIELLES & IMPLANTATION « PLS » — INDICE F
+Exécution : 2026-10-20 21:40:25
 ================================================================================
 
 ------------------------------------------------------------------------------
@@ -14,7 +14,8 @@ Exécution : 2026-10-20 11:01:31
   MAT-03a   c_nom           50.00 mm       D-06 (enrobage fondations XC2)
   MAT-04    f_yk           500.00 MPa      D2 p. 1 — S500B
   D-08      arase           -1.00 m        D-08 / D-09 / D-12 — arase inf. / TN MINIMUM
-  CHG-03    g_plancher       6.80 kN/m²    D2 350 + D4 recharge 15 cm 330 — enveloppe haute
+  CHG-03    g_plancher       4.71 kN/m²    B-21 Ind. C § 3.5 — plancher B + cloisons, SANS recharge (D-35)
+  CHG-03b   g_dallage        7.75 kN/m²    B-21 Ind. C § 3.6 — dallage BA 13 + revêtement + recharge 15 cm + cloisons (D-35)
   CHG-02    q_exploit        2.50 kN/m²    D2 p. 1 cabinet paramédical 250 — enveloppe haute
 
 ------------------------------------------------------------------------------
@@ -25,44 +26,49 @@ Exécution : 2026-10-20 11:01:31
 ------------------------------------------------------------------------------
 [3] DESCENTE DE CHARGES D'EXÉCUTION
 ------------------------------------------------------------------------------
-  ELS caractéristique = 9.30 kN/m²  |  ELU fondamental = 12.93 kN/m²
-  Niveau R+1 complet (106,92 m²) : 994 kN ELS / 1382 kN ELU
-  Semelle SF1 sous P2 (aire d'influence estimée A ≈ 6.50 m²) :
-    N_ELS(SF1) = 63.2 kN <= 108,0 kN (σ_ELS = 0.175 MPa <= 0,300 MPa) -> OK
-    N_ELU(SF1) = 87.7 kN <= 176,4 kN (σ_ELU = 0.244 MPa <= 0,490 MPa) -> OK
+  ELS caractéristique = 7.21 kN/m²  |  ELU fondamental = 10.11 kN/m²
+  Niveau R+1 complet (106,92 m²) : 771 kN ELS / 1081 kN ELU
+  Semelle SF1 sous P2 : 80 x 80 x 25 cm (D-30) — A_inf = 11.46 m²
+    N_ELS(SF1) = 130.5 kN (B-21 Ind. C) -> σ_ELS = 0.204 MPa <= 0,300 MPa -> OK
+    N_ELU(SF1) = 182.9 kN (B-21 Ind. C) -> σ_ELU = 0.286 MPa <= 0,490 MPa -> OK
+    Dallage (D-35, 100 % de l'emprise) : g = 7.75 · p_ELS = 10.25 · p_ELU = 14.21 kN/m²
+    → sur le sol : 14.2 kPa à l'ELU, soit 2.9 % de q_ELU — portance sans objet,
+      le dallage est un problème de fissuration et de désolidarisation, pas de portance.
 
 ------------------------------------------------------------------------------
 [4] TABLEAU DE SENSIBILITÉ — ABAQUE DE CHANTIER B(A)
 ------------------------------------------------------------------------------
-  A=  6.5 m² -> B=0.60 m | N_ELS=  63.2 kN (σ=0.175 MPa) | N_ELU=  87.7 kN (σ=0.244 MPa)
-  A=  9.0 m² -> B=0.60 m | N_ELS=  86.4 kN (σ=0.240 MPa) | N_ELU= 120.0 kN (σ=0.333 MPa)
-  A= 11.0 m² -> B=0.60 m | N_ELS= 105.0 kN (σ=0.292 MPa) | N_ELU= 145.9 kN (σ=0.405 MPa)
-  A= 12.0 m² -> B=0.65 m | N_ELS= 114.8 kN (σ=0.272 MPa) | N_ELU= 159.4 kN (σ=0.377 MPa)
-  A= 15.0 m² -> B=0.70 m | N_ELS= 143.2 kN (σ=0.292 MPa) | N_ELU= 198.9 kN (σ=0.406 MPa)
-  A= 18.0 m² -> B=0.80 m | N_ELS= 172.2 kN (σ=0.269 MPa) | N_ELU= 239.2 kN (σ=0.374 MPa)
-  A= 21.0 m² -> B=0.85 m | N_ELS= 200.7 kN (σ=0.278 MPa) | N_ELU= 278.8 kN (σ=0.386 MPa)
-  A= 24.0 m² -> B=0.90 m | N_ELS= 229.3 kN (σ=0.283 MPa) | N_ELU= 318.5 kN (σ=0.393 MPa)
+  A=  6.5 m² -> B=0.60 m | N_ELS=  49.6 kN (σ=0.138 MPa) | N_ELU=  69.4 kN (σ=0.193 MPa)
+  A=  9.0 m² -> B=0.60 m | N_ELS=  67.6 kN (σ=0.188 MPa) | N_ELU=  94.6 kN (σ=0.263 MPa)
+  A= 11.0 m² -> B=0.60 m | N_ELS=  82.0 kN (σ=0.228 MPa) | N_ELU= 114.8 kN (σ=0.319 MPa)
+  A= 12.0 m² -> B=0.60 m | N_ELS=  89.2 kN (σ=0.248 MPa) | N_ELU= 124.9 kN (σ=0.347 MPa)
+  A= 15.0 m² -> B=0.65 m | N_ELS= 111.3 kN (σ=0.263 MPa) | N_ELU= 155.9 kN (σ=0.369 MPa)
+  A= 18.0 m² -> B=0.70 m | N_ELS= 133.5 kN (σ=0.272 MPa) | N_ELU= 186.9 kN (σ=0.381 MPa)
+  A= 21.0 m² -> B=0.75 m | N_ELS= 155.6 kN (σ=0.277 MPa) | N_ELU= 218.0 kN (σ=0.388 MPa)
+  A= 24.0 m² -> B=0.80 m | N_ELS= 177.8 kN (σ=0.278 MPa) | N_ELU= 249.1 kN (σ=0.389 MPa)
 
 ------------------------------------------------------------------------------
 [5] FERRAILLAGE — EC2 §9.8.3 & §9.2.1.1
 ------------------------------------------------------------------------------
-  d = 242 mm | M_Ed = 3.76 kN·m | A_s,calc = 61 mm²/m | A_s,min = 323 mm²/m
+  d = 242 mm | M_Ed = 2.34 kN·m | A_s,calc = 41 mm²/m | A_s,min = 323 mm²/m
   Ferraillage retenu : HA8 e150 dans les 2 sens = 335 mm²/m >= 323 mm²/m -> OK
 
 ------------------------------------------------------------------------------
-[6] RIGIDITÉ & [7] POINÇONNEMENT — EC2 §6.4
+[6] RIGIDITÉ & [7] POINÇONNEMENT — SF1 80x80x25 (D-30) — EC2 §6.4
 ------------------------------------------------------------------------------
-  v_Ed = 0.155 MPa <= v_Rd,c = 0.347 MPa (ratio = 0.45) -> OK
+  d(SF1) = 192 mm | rigidité EC2 §9.8.3 : (B-b)/4 = 138 mm <= d -> OK
+  v_Ed = 0.279 MPa <= v_Rd,c = 0.392 MPa (ratio = 0.71) -> OK
+  (toujours 335 mm²/m : HA8 e150 — A_s,min gouverne, pas la flexion)
 
 ------------------------------------------------------------------------------
 [8] IMPLANTATION DES FONDATIONS SUR VUE EN PLAN NETTOYÉE (INDICE E)
 ------------------------------------------------------------------------------
-  SF1     : X=95,35 m / Y=59,29 m (B-30 : +9,48 / +14,87 m) — Semelle BA 60x60x30 mini sous P2 (CERTAIN)
+  SF1     : X=95,35 m / Y=59,29 m (B-30 : +9,48 / +14,87 m) — Semelle BA 80x80x25 (D-30) sous P2 (CERTAIN)
   Z-P1N   : X=95,41 m / Y=49,04 m (B-30 : +9,54 /  +4,62 m) — Vérif. moellons ou SF 60x60 (NUAGE D-19)
   Z-P1S   : X=95,41 m / Y=47,78 m (B-30 : +9,54 /  +3,36 m) — Vérif. moellons ou SF 60x60 (NUAGE D-19)
   Z-P3    : X=94,09 m / Y=54,89 m (B-30 : +8,22 / +10,46 m) — Appui P3 50x40 BA + GB D-09 (NUAGE D-19)
   Z-J1    : X=89,78 m / Y=54,52 m (B-30 : +3,91 / +10,09 m) — Appui J1 24x50 BA + GB D-09 (NUAGE D-19)
   BECHE   : X=86,67->89,53 m / Y=46,77 m — Bêche BA ép. 20 cm réhausse dallage Sud-Est (EXI-07c)
   RSO-PASS: X=87,7->93,5 m / Y=63,3..64,3 m — Passes alternées gros béton C16/20 passerelle (EXI-07e)
-  écrit : dossiers/CROISSY/_plans/FLORA_FONDATIONS_TYPE_IndE.dxf (2770072 o) — audit 0 erreur(s)
-  rendus : dossiers/CROISSY/_plans/FLORA_FONDATIONS_TYPE_IndE.png / .pdf
+  écrit : dossiers/CROISSY/_plans/FLORA_FONDATIONS_TYPE_IndF.dxf (2770141 o) — audit 0 erreur(s)
+  rendus : dossiers/CROISSY/_plans/FLORA_FONDATIONS_TYPE_IndF.png / .pdf

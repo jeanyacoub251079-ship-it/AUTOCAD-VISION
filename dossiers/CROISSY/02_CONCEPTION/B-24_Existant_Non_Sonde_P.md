@@ -1,6 +1,6 @@
 # B-24 — EXISTANT NON SONDÉ (mode PARAMÉTRIQUE)
 
-> **EN ATTENTE DE DONNÉES — NE PAS EXÉCUTER — Indice A — suffixe `_P`**
+> **EN ATTENTE DE DONNÉES — NE PAS EXÉCUTER — Indice C — suffixe `_P`**
 > Cette note ne conclut pas. Elle écrit les vérifications **en littéral**, sur des éléments dont les caractéristiques ne sont pas mesurées, et elle liste ce qu'il faut aller chercher pour pouvoir conclure.
 
 | Champ | Valeur |
@@ -13,13 +13,15 @@
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b24_existant.py` |
-| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b24_existant.txt` |
-| Résultats machine | `dossiers/CROISSY/_rendus/b24_existant.json` |
+| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b24_existant.txt` (5 608 o) |
+| Résultats machine | `dossiers/CROISSY/_rendus/b24_existant.json` (16 145 o) |
 | Sortie graphique | **Aucune** — la fiche `B-24` n'exige aucun livrable graphique |
-| **Indice** | **B** — `E-03` (solives `8 x 18`) **sorti du champ** : ses données existent (`D3` p. 10, `EXI-01a`) ; il relève désormais de `B-43` |
+| **Indice** | **C** — `R-24-B1` **close par `D-35`** : la recharge de `15 cm` ne charge pas les planchers. `E-03` est **retenu à `sigma/f_m,d = 0,619`**, la vérification de section restant en `B-43` |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-42`** (poteaux et jambages BA — livrée) puis **`B-43`** (planchers et plancher haut) |
 
+> **Révision C — 20/10/2026 (décision `D-35`).** La seule question qui restait ouverte sur `E-03` — *la recharge de `15 cm` s'applique-t-elle au plancher haut ?* — est **tranchée** : les deux occurrences de la chaîne « recharg » dans les 29 planches du `D4` sont au **RDC** (`p. 5`, plan de démolition ; `p. 14`, sanitaires PMR), **aucune sur les planches de R+1**. La recharge est un **ouvrage de dallage**, traitée par `B-21 Ind. C` et `B-43`. **`R-24-B1` est close**, `E-03` est retenu à **`0,619`** (`4,7 mm` de flèche court terme pour `9,2` admis un), et **`R-24-B2`** (état des abouts) reste la seule inconnue sur cet élément. **Les 7 éléments en attente et leurs 83 cas de sensibilité sont inchangés.**
+>
 > **Révision B — 20/10/2026.** L'indice A classait `E-03` (solives `8 x 18`) parmi les éléments non sondés, avec pour données manquantes « entraxe réel, portée, classe ». **C'était faux.** `D3` p. 10 donne l'entraxe (`0,50 m`), la portée (`2,77 m`), la section (`8 x 18`) et la poutre porteuse (`20 x 15`, portée `4,34 m`) ; la classe `C18` est l'hypothèse déclarée `EXI-03`. `E-03` **sort du champ de `B-24`** et devient une vérification de `B-43`. Les **7 autres éléments** et tous les résultats de l'indice A sont **inchangés**. Ce que l'indice B ajoute : le contrôle de cohérence de `E-03` avec ses données réelles, et la question qu'il soulève — le **périmètre de la recharge de sol de `15 cm`**.
 
 > **Ce que cette brique fait — et ce qu'elle ne fait pas.** Les éléments existants que nos travaux chargent (ou que nos renforts chargent davantage) n'ont **aucune caractéristique mesurée** — sauf les solives de plancher, dont le diagnostic donne la section, l'entraxe et la portée (voir § 2.1). `B-24` écrit pour chacun la **vérification littérale** — la donnée manquante reste en symbole — puis balaie la **plage de valeurs plausibles** et rend un **verdict de sensibilité**, jamais une conclusion. Rien de ce qui est écrit ici n'est exécutable.
@@ -36,6 +38,7 @@ Sur les **sept éléments non sondés**, **deux sont défavorables pour toute la
 |---|---|---|
 | Éléments en attente de données | **7** (`E-01`, `E-02`, `E-04` à `E-08`) | Aucun n'est conclu |
 | **Élément sorti du champ** (ind. B) | **1** — `E-03` (solives `8 x 18`) | Données disponibles : la vérification relève de `B-43`, pas de `B-24` |
+| **Cas retenu depuis `D-35`** (ind. C) | `E-03` **sans recharge** : `sigma/f_m,d = 0,619` · flèche `4,7 mm` | `R-24-B1` **close** ; la recharge ne charge que le dallage |
 | **Favorables pour toute la plage** | **1** (`E-01` maçonnerie en compression) | `sigma_d / f_d <= 0,885` même à `f_k = 0,5 MPa` — la seule bonne nouvelle, et elle ne vaut **que** pour la compression |
 | **Limites** (satisfaisants pour une partie de la plage) | **3** (`E-04`, `E-06`, `E-08`) | Le sondage est **indispensable** pour trancher |
 | **Défavorables pour toute la plage** | **2** (`E-02` poutre maîtresse, `E-05` ferme) | Renforcement **acquis** ; le relevé dimensionne, il ne décide plus |
@@ -94,18 +97,20 @@ Sur les **sept éléments non sondés**, **deux sont défavorables pour toute la
 | Poutre porteuse | `20 x 15 cm`, portée `4,34 m` | `D3` p. 10 et 16 · `EXI-01b` |
 | Complexe | lambourde + parquet `20 daN/m²` + lattis-plâtre `20 daN/m²` | `D3` p. 10 · `EXI-01e` |
 | Classe de bois | `C18` — **hypothèse de calcul du diagnostic**, pas une mesure | `D3` p. 10 · `EXI-03` |
-| **Inconnue restante** | **État sanitaire des abouts** et **périmètre de la recharge `15 cm`** | `D4` p. 5 et 14 |
+| **Inconnue restante** | **État sanitaire des abouts** (`R-24-B2`) — le périmètre de la recharge est **tranché** par `D-35` | `D4` p. 5 et 14 · `D-35` |
 
 **Contrôle de cohérence** (et non conclusion — la vérification appartient à `B-43`) : `W = b h² / 6 = 432 000 mm³`, `f_m,d (C18) = 0,80 x 18 / 1,30 = 11,08 MPa`.
 
-| Scénario | `p_ELU` | `M_Ed` | `sigma_m,d` | `sigma / f_m,d` | Flèche ELS (court terme) |
-|---|---|---|---|---|---|
-| **Sans recharge** (RDC seulement) | `3,09 kN/m` | `2,96 kN·m` | `6,86 MPa` | **`0,619`** | `4,7 mm` (`L/300 = 9,2`) |
-| **Avec recharge `15 cm`** (`B-21`) | `5,32 kN/m` | `5,10 kN·m` | `11,81 MPa` | **`1,066`** | `8,3 mm` |
+| Scénario | `p_ELU` | `M_Ed` | `sigma_m,d` | `sigma / f_m,d` | Flèche ELS (court terme) | Sort |
+|---|---|---|---|---|---|---|
+| **Sans recharge** (recharge au dallage, `D-35`) | `3,09 kN/m` | `2,96 kN·m` | `6,86 MPa` | **`0,619`** | `4,7 mm` (`L/300 = 9,2`) | ✅ **RETENU** |
+| Avec recharge `15 cm` **sur le plancher** | `5,32 kN/m` | `5,10 kN·m` | `11,81 MPa` | **`1,066`** | `8,3 mm` | ❌ **écarté** — hypothèse de l'indice B, démentie par les planches |
 
-> **Ce que ce tableau met en évidence — et qui n'est pas un détail de `B-24`.** Le sort de la solive `8 x 18` ne dépend **pas** d'une donnée manquante sur l'existant : il dépend d'une **lecture du `D4`**. Si la recharge de `15 cm` s'applique au plancher haut, la solive est **7 % au-delà** de sa résistance de calcul à `C18` — et la flèche à long terme (`k_def = 0,6`) sort de la limite. Si elle ne s'applique qu'au sol du RDC, la solive passe avec `38 %` de marge.
+> **Ce que `D-35` a tranché, et pourquoi c'était une question de pièces, pas de calcul.** Le sort de la solive `8 x 18` ne dépendait **pas** d'une donnée manquante sur l'existant : il dépendait d'une **lecture du `D4`**. La chaîne « recharg » n'y apparaît que **deux fois** — `p. 5` (plan de démolition, plan `RDC`) et `p. 14` (`SANITAIRES PMR RDC`, 1/50) — **jamais sur les planches de R+1**, dont les finitions sont pourtant nommées une à une. La vérification EVEN de la solive (`w = 7,7 mm` pour `7,0` admis à `150 daN/m²`) ne peut, elle non plus, se lire qu'avec un plancher **non rechargé**.
 >
-> **Aucun de ces deux cas n'est « retenu » ici.** `B-43` les tranche, et la réponse est une **décision `RDR`** — pas une hypothèse de calcul. La question est posée au § 9 (`R-24-B1`).
+> **Conséquence :** `sigma/f_m,d = 0,619`, marge de `38 %`, flèche court terme `4,7 mm` pour `9,2` admis. La flèche à long terme (`k_def = 0,6`) reste à vérifier en `B-43`, qui porte aussi l'état des abouts (`R-24-B2`).
+>
+> **Ce que cette valeur n'est pas.** Ce n'est **pas une conclusion de `B-24`** : c'est une **hypothèse de calcul** (`EXI-03`, `C18`) appliquée à des données de diagnostic, dans un cas de charge désormais fixé. `B-24` ne déclare toujours aucun élément conclu — la vérification de section appartient à `B-43`.
 
 ---
 
@@ -165,7 +170,7 @@ Paramètres de sensibilité (eux aussi non contractuels) : `k_mod = 0,80` · `ga
 |---|---|---|---|
 | **`E-01`** Maçonnerie | `B-25` reste bâti sur `f_k = 1,5 MPa` (`H-25`) et `B-46` ne peut pas conclure sur les appuis | Décision `RDR` sur la valeur de `f_k` à opposer, ou exécution des essais `D-34` | `B-46` · `B-25` |
 | **`E-02`** Poutre maîtresse | Le renfort `R1` (`2×UPE 200`) reste dimensionné sur une section supposée : son ampleur peut être insuffisante | Aucune valeur : la décision porte sur **le niveau de renfort à retenir par défaut** | `B-45` · `B-44` |
-| **`E-03`** Solives `8 x 18` *(sorti du champ)* | **Ne dépend plus d'un sondage** mais du **périmètre de la recharge de `15 cm`** : `0,619` si elle ne s'applique pas au plancher haut, `1,066` si elle s'y applique | Décision `RDR` sur le **périmètre de la recharge** (`R-24-B1`), puis vérification en `B-43` | `B-43` |
+| **`E-03`** Solives `8 x 18` *(sorti du champ)* | **Tranché** : recharge au dallage seul (`D-35`) ⇒ `sigma/f_m,d = 0,619`, flèche `4,7 mm`. La section passe sous réserve de l'état des abouts | Vérification de section et flèche long terme en `B-43` ; `R-24-B1` **close** | `B-43` |
 | **`E-04`** Potelets | Le flambement reste non tranché ; `B-44` ne peut pas conclure sur les potelets que nos renforts chargent davantage | Décision `RDR` sur le **remplacement ou le chemisage** des potelets, ou relevé | `B-44` |
 | **`E-05`** Ferme | La ferme reste non concluante, y compris après purge : renfort de ferme à dimensionner sans référence | Décision `RDR` sur le **principe de reprise** de la ferme (renfort vs dépose-repose) | `B-44` · `B-23` séquence `P-2` |
 | **`E-06`** Pannes | Le dimensionnement des pannes reste non tranché ; la couverture ne peut pas être réceptionnée | Décision `RDR` sur le **remplacement systématique** des pannes, ou relevé | `B-44` |
@@ -191,7 +196,7 @@ La fiche prévoit ce cas : quand on ne connaît **ni la nature ni la fonction** 
 ## 7. SYNTHÈSE — SIX LIGNES
 
 1. **Sept éléments en attente de données** (et non huit), aucun conclu : la note reste en mode PARAMÉTRIQUE et porte le suffixe `_P`.
-2. **Un élément sorti du champ** : `E-03` (solives `8 x 18`) — ses données existent, la vérification passe à `B-43`.
+2. **Un élément sorti du champ et désormais tranché** : `E-03` (solives `8 x 18`) — `D-35` fixe le cas de charge, `sigma/f_m,d = 0,619` ; la vérification de section passe à `B-43`, l'état des abouts reste `R-24-B2`.
 3. **Un seul élément favorable pour toute la plage** : la maçonnerie en compression (`sigma_d / f_d <= 0,885` même à `f_k = 0,5 MPa`) — bonne nouvelle fragile, qui ne vaut **pas** pour le cisaillement, traité en `B-25`.
 4. **Trois éléments limites** (`E-04` potelets, `E-06` pannes, `E-08` linteaux) : le sondage est indispensable pour trancher.
 5. **Deux éléments défavorables pour toute la plage** (`E-02` poutre maîtresse `3,0 → 12,1` · `E-05` ferme `3,5 → 17,5`) : le renforcement est **acquis**, seule son ampleur dépend du relevé.
@@ -229,12 +234,12 @@ La fiche prévoit ce cas : quand on ne connaît **ni la nature ni la fonction** 
 | **`B-46`** | `E-01` | Maçonnerie : appuis et compression |
 | **`B-49`** | `E-08` | Linteaux existants |
 
-### 9.1 Réserves nées de l'indice B
+### 9.1 Réserves nées des indices B et C
 
-| Réf. | Objet | Conséquence si non levée | Destinataire |
+| Réf. | Statut | Objet | Conséquence |
 |---|---|---|---|
-| **`R-24-B1`** | **Périmètre de la recharge de sol `15 cm`** (`D4` p. 5 et 14) : s'applique-t-elle aux planchers hauts ou au seul sol du RDC ? | Solive `8 x 18` : `0,619` ou `1,066` selon la réponse — l'un passe, l'autre non | Décision `RDR` |
-| **`R-24-B2`** | **État sanitaire des abouts** des solives `8 x 18` (la seule donnée réellement manquante) | À relever à l'ouverture du plancher haut ; ne bloque pas le calcul, bloque la réception | `B-43` |
+| **`R-24-B1`** | 🔒 **CLOSE le 20/10/2026** | Périmètre de la recharge de sol `15 cm` (`D4` p. 5 et 14) | **Close par `D-35`** : la recharge est un ouvrage de **dallage** (2 occurrences, toutes deux au RDC ; aucune sur les planches de R+1). Le cas « sans recharge » est **retenu** pour `E-03` : `0,619`. La clôture est **une décision**, pas une mesure : elle suit la lecture des pièces, et l'emprise exacte de la recharge au RDC reste à préciser pour le calepinage du dallage (`B-43`) |
+| **`R-24-B2`** | ⏳ **MAINTENUE** | **État sanitaire des abouts** des solives `8 x 18` | Seule donnée réellement manquante sur `E-03`. À relever à l'ouverture du plancher haut ; ne bloque pas le calcul, bloque la réception. Destinataire : `B-43` |
 
 ### 9.2 Conformité aux règles universelles `V14` et `V15`
 

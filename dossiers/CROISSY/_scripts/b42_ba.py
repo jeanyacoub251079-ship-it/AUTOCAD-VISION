@@ -74,14 +74,14 @@ H_SENS = 3500.0     # mm — sensibilité : hauteur de maçonnerie au-dessus du
 
 ELEMENTS = [
     dict(id="P2", nom="Poteau BA sous F2 (façade Ouest Nord)",
-         b=150.0, h=250.0, N=217.7, M0=0.0,
-         note="N_ELU = 217,7 kN (B-21 § 6.2) — le plus chargé des trois"),
+         b=150.0, h=250.0, N=159.0, M0=0.0,
+         note="N_ELU = 159,0 kN (B-21 Ind. C § 6.2) — le plus chargé des trois"),
     dict(id="P3", nom="Poteau BA dans refend intérieur",
-         b=400.0, h=500.0, N=39.8, M0=0.0,
-         note="N_ELU = 39,8 kN (B-21 § 6.2) — porteur de refend"),
+         b=400.0, h=500.0, N=35.8, M0=0.0,
+         note="N_ELU = 35,8 kN (B-21 Ind. C § 6.2) — porteur de refend"),
     dict(id="J1", nom="Jambage BA 24x50 dans refend central",
-         b=240.0, h=500.0, N=44.3, M0=0.0,
-         note="N_ELU = 44,3 kN (B-21 § 6.2) — jambage sous F1"),
+         b=240.0, h=500.0, N=39.8, M0=0.0,
+         note="N_ELU = 39,8 kN (B-21 Ind. C § 6.2) — jambage sous F1"),
 ]
 
 # Excentricité de premier ordre : minimum EC2 § 6.1(4) = max(h/30 ; 20 mm)
@@ -341,8 +341,8 @@ def main():
            for el in ELEMENTS if el["id"] != "P2"], (6, 12, 12, 12, 12, 12))
     log("    (rapport sigma_d / f_d, gamma_M = 2,5 — H-26 ; > 1,00 = non satisfait)")
     log("    P2 exclu : il repose sur SF1 80x80 (D-30, B-40), pas sur la maçonnerie.")
-    log("    P2 sur SF1 : %.0f kN / 0,64 m2 = 0,34 MPa sur béton C25/30 — sans objet ici."
-        % (217.7))
+    log("    P2 sur SF1 : %.0f kN / 0,64 m2 = %.2f MPa sur béton C25/30 — sans objet ici."
+        % (ELEMENTS[0]["N"], ELEMENTS[0]["N"] * 1000.0 / 640000.0))
     log("")
 
     # contrôle de la note
@@ -366,7 +366,7 @@ def main():
         f.write("\n".join(LOG) + "\n")
 
     data = dict(
-        brique="B-42", indice="A", date="20/10/2026", note=os.path.basename(NOTE),
+        brique="B-42", indice="B", date="20/10/2026", note=os.path.basename(NOTE),
         materiaux=dict(fck=FCK, fyk=FYK, fcd=round(FCD, 2), fyd=round(FYD, 1),
                        alpha_cc=ALPHA_CC, enrobage=C_NOM),
         elements=[dict(id=r["id"], nom=r["nom"], b=r["b"], h=r["h"],

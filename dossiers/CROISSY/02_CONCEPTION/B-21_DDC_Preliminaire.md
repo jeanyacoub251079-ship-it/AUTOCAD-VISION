@@ -5,45 +5,45 @@
 | Carnet | **CARNAC v3.0** |
 | Brique | **B-21** — Descente de charges préliminaire |
 | Phase | **3 — Conception et synthèse structurelle** (`B-20` → **`B-21`** → `B-22`) |
-| **Mode d'appel** | **HYPOTHÈSE-NOTIFIÉE** — `CHG-03` (poids propres) et `CHG-04` (toiture) ne sont pas fournis par le marché ; `CHG-02` est en conflit entre deux pièces. Traités par `H-28` à `H-30` (charges) et tranchés par `D-31` (usage sportif) et `D-32` (exploitation) le 20/10/2026 |
+| **Mode d'appel** | **HYPOTHÈSE-NOTIFIÉE** — `CHG-03` (poids propres) et `CHG-04` (toiture) ne sont pas fournis par le marché ; `CHG-02` est en conflit entre deux pièces. Traités par `H-28` à `H-30` (charges) et tranchés par `D-31` (usage sportif), `D-32` (exploitation) et `D-35` (périmètre de la recharge) |
 | Régime | **OUTILLÉ (V13)** — calcul intégral par script, journal d'exécution conservé |
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b21_ddc.py` |
-| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b21_ddc.txt` (12 239 o) |
-| Résultats machine | `dossiers/CROISSY/_rendus/b21_ddc.json` (10 120 o) |
+| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b21_ddc.txt` (12 852 o) |
+| Résultats machine | `dossiers/CROISSY/_rendus/b21_ddc.json` (10 363 o) |
 | Sortie graphique | **Aucune** — la fiche `B-21` n'exige aucun livrable graphique |
-| **Indice** | **B** — remplace et annule l'indice A du 20/10/2026 (décisions `D-28`, `D-30`, `D-31`, `D-32`) |
+| **Indice** | **C** — remplace et annule l'indice B du 20/10/2026 (décision `D-35` : la recharge de sol est un ouvrage de **dallage**, pas une charge de plancher) |
 | Date | **20/10/2026** |
-| Brique suivante | **`B-22`** (note d'hypothèses consolidée), puis `B-40` à `B-50` |
+| Brique suivante | **`B-22`** (note d'hypothèses consolidée), puis **`B-43`** (planchers et dallage) |
 
-> **Ce qui change à l'indice B — décisions du 20/10/2026, aucune valeur numérique modifiée.**
-> Les quatre grandeurs que la DDC avait posées en attente d'arbitrage sont **tranchées**. Aucun calcul n'est repris : les valeurs retenues à l'indice A étaient déjà celles qui découlent de ces décisions, elles étaient seulement **conditionnelles**.
-> - **`D-28`** — **aucun joint de dilatation** sur le pavillon Flora. Confirmée par le client ; consigne `B-25` en indice C.
-> - **`D-30`** — **`SF1` portée à 80 × 80 cm** (§ 9). Le dépassement de portance de `67 %` constaté en 60 × 60 est supprimé par décision, non par discussion sur l'aire d'influence.
-> - **`D-31`** — la **salle de sport du R+1 est en catégorie C4** (`5,00 kN/m²`). `H-31` est **promue décision** ; elle cesse d'être notifiée sous nuage.
-> - **`D-32`** — **`2,50 kN/m²` confirmés** pour tout le reste du bâtiment. Le conflit `D2` / `D3` (`250` vs `150 daN/m²`) est **clos par décision**, et non plus par enveloppe.
+> **Ce qui change à l'indice C — une localisation, pas un calcul.**
+> L'indice B appliquait `+3,30 kN/m²` de recharge de sol aux **planchers** `A` et `B`, « sur toute la surface ». **C'était faux, et la vérification des pièces le démontre** : la recharge n'apparaît que **deux fois** dans les 29 planches du DCE graphique (`D4`) — `p. 5`, planche `PLANS DE DEMOLITION`, plan `RDC FLORA Projet` ; et `p. 14`, planche `SANITAIRES PMR RDC` à 1/50. **Aucune occurrence sur les planches de R+1**, dont les finitions sont pourtant nommées une à une. Contrôle croisé décisif : la vérification EVEN de la solive `8 × 18` (`w = 7,7 mm` pour `7,0` admis à `150 daN/m²`) n'est compatible **qu'avec un plancher non rechargé**.
 >
-> Les trois hypothèses de **charges** restent ouvertes et notifiées : `H-28` (densité de la recharge), `H-29` (poids de toiture), `H-30` (cloisons).
+> **`D-35` — décision du 20/10/2026 : « qui peut le plus peut le moins ».** La recharge est réputée s'appliquer à **100 % de l'emprise du dallage**, par hypothèse défavorable. Le dallage est donc calculé et dimensionné pour le cas le plus lourd ; toute surface non rechargée lui est favorable.
+>
+> **Conséquence chiffrée :** les planchers `A` et `B` perdent `3,30 kN/m²` (`g` de `B` : `8,01 → 4,71 kN/m²`), **toutes les poutres de plancher sont soulagées de 30,6 %**, et le **dallage devient l'ouvrage le plus chargé du bâtiment** (`14,21 kN/m²` à l'ELU). Les écarts avec `B-20` restent défavorables, mais deux fois moindres.
 
 > **Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION.**
 > Cette note sert à **choisir et contrôler les sections en conception**. Elle **ne remplace pas** les DDC d'exécution des briques `B-40` à `B-50`, qui refont le calcul sur les schémas statiques réels, avec les surfaces d'influence exactes et les coefficients de continuité issus du schéma.
-> **Aucune vérification de section et aucun ferraillage ne sont produits ici.** Les effets de charge sont calculés ; leur comparaison à une résistance appartient aux briques de calcul.
+> **Aucune vérification de section et aucun ferraillage ne sont produits ici.** Les effets de charge sont calculés ; leur comparaison à une résistance appartient aux briques de calcul. Le **dimensionnement du dallage appartient à `B-43`** : `B-21` en produit la **charge**, pas l'épaisseur ni le treillis.
 
 ---
 
 ## 0. RÉPONSE DIRECTE — CE QUE LA DDC CHANGE DANS LE DOSSIER
 
-Quatre résultats sortent de cette brique, et trois d'entre eux **contredisent le prédimensionnement de `B-20`**.
+**L'indice C corrige une localisation, pas une erreur d'arithmétique.** La recharge de sol de `15 cm` pesait sur les planchers hauts ; elle pèse désormais sur le dallage, là où les planches la dessinent. Six constats en découlent.
 
 | # | Constat | Chiffre | Conséquence |
 |---|---|---|---|
-| **1** | **La recharge de sol de 15 cm change tout le plancher B.** `D4 p. 5 et 14` prescrit « sol à recharger de 15 cm » ; `D2` ne la compte pas | `+3,30 kN/m²` sur **toute** la surface du plancher B, soit `g = 8,01 kN/m²` au lieu de `3,50` | `F3`, `F2`, `R1`, `R2` reçoivent **+28 % à +126 %** d'effet de charge par rapport à `B-20` |
-| **2** | **`F3 (HEB 160)` dépasse de 109 % l'effet de charge utilisé pour son prédimensionnement** | `M_Ed` passe de `40,8` à **`85,3 kN·m`** | `B-45` doit reprendre `F3` **en priorité** — le point de vigilance annoncé par `B-20` n'était pas une flèche, c'est un moment |
-| **3** | **`R1 (2×UPE 200)` dépasse de 126 %** — mais il partage la charge avec la poutre bois `20×15` qu'il moisit | `M_Ed` passe de `47,5` à **`107,2 kN·m`** | `B-45` doit établir la **répartition moisage/bois**, jamais faite jusqu'ici |
-| **4** | **`SF1` (60 × 60) est insuffisante** si l'aire d'influence de `P2` est celle de la trame | `N_ELS = 180,5 kN` → `σ = 0,50 MPa` **> 0,30 MPa** | **`D-30` : `SF1` passe à 80 × 80 cm** — `σ` revient à `0,28 MPa` |
+| **1** | **La recharge ne charge pas les planchers.** `D4 p. 5` (planche de démolition, plan `RDC`) et `p. 14` (`SANITAIRES PMR RDC`) la portent au RDC ; aucune planche de R+1 ne la mentionne | `g` du plancher B : **`8,01 → 4,71 kN/m²`** (`−41 %`) · plancher A : `5,10 → 1,80` | Tout `B-43` / `B-44` / `B-45` repart de charges plus basses |
+| **2** | **Toutes les poutres de plancher sont soulagées de `30,6 %`** | `F2` `63,1 → 43,8` · `F3` `46,1 → 32,0` · `R1` `57,9 → 40,2` · `R2-N` `34,8 → 24,2` | Les sections de `B-20` redeviennent crédibles — sans être justifiées pour autant |
+| **3** | **`F3` et `R1` restent hors prédimensionnement, mais deux fois moins** | `F3` **`+45 %`** (au lieu de `+109 %`) · `R1` **`+57 %`** (au lieu de `+126 %`) | `B-45` garde la priorité ; le dépassement n'est plus un facteur 2,3 mais 1,6 |
+| **4** | **Le dallage devient l'ouvrage le plus chargé du bâtiment** | `14,21 kN/m²` à l'ELU sur `111,15 m²` = **`1 579 kN`** — davantage que les `1 290 kN` transmis aux voiles par le R+1 | `B-43` doit traiter le dallage **avant** les planchers : c'est lui qui porte le plus |
+| **5** | **`SF1` en `80 × 80` est conforme** | `N_ELS = 130,5 kN` → `σ = 204 kPa ≤ 300 kPa` · `N_ELU = 182,9 kN` → `286 kPa ≤ 490 kPa` | `D-30` **reste nécessaire** : en 60 × 60, `σ` vaudrait `362 kPa` (`+21 %` sur l'admissible) — l'excès tombe de `67 %` à `21 %`, il ne disparaît pas |
+| **6** | **`H-27` est encore plus conservatrice** | `σ_d` réel `0,069 MPa` (au lieu de `0,094`) → `f_vk` majoré de **`52 %`** | `B-25` peut garder son `σ_d = 0,300 MPa` ; `τ/f_vk` passerait de `0,028` à `0,043` |
 
-**Le reste est confortable :** les voiles travaillent à `σ_d = 0,094 MPa` (l'hypothèse `H-27` de `B-25` en retenait `0,300` — elle est donc **conservatrice** : `σ_d` retenu `3,2×` le réel, `f_vk` majoré de `44 %`), les poteaux BA `P3` et `J1` sont sous `45 kN`, et les poutres `F1a/b/c` et `F4` sont **cohérentes** avec `B-20`.
+**Ce qui ne change pas :** la **nature** des écarts avec `B-20` — `F3`, `R1`, `F2`, `R2-N` restent au-dessus du prédimensionnement, `P2` reste à `+87 %` de son `N_ELU` d'origine. La conclusion de `B-21` est **plus basse, pas renversée**.
 
 ---
 
@@ -54,7 +54,8 @@ Quatre résultats sortent de cette brique, et trois d'entre eux **contredisent l
 | `CHG-01a` Programme RDC | Plateau technique 33,14 · Box kiné 11,20 / 9,60 / 9,15 · Bureaux 16,08 / 12,80 · Sanitaire PMR 5,19 | D4 p. 6 et 9 | **Contractuelle** |
 | `CHG-01b` Programme R+1 | **Salle de sport 34,25** · Salle commune 11,75 · Vestiaire 9,32 · Douche 2,37 · Bureaux consult. 13,26 / 16,50 · Dégagement 5,96 · Attente 8,38 | D4 p. 6 et 9 | **Contractuelle** |
 | `CHG-02` Exploitation | **2,50 kN/m²** (cat. B) — enveloppe retenue | D2 p. 1 (250 daN/m²) vs D3 p. 10-11 (150 daN/m² logement) | **`D-32`** — `2,50 kN/m²` confirmés le 20/10/2026 pour tout le bâtiment |
-| `CHG-03` Poids propres plancher | **Recalculé par couches** : plancher A `0,80` · plancher B `3,91 ` · + recharge `3,30` | D3 p. 10-12 + D4 p. 5 et 14 | **`H-28`** — valeurs déclarées au cartouche : 1,00 et 3,50 |
+| `CHG-03` Poids propres plancher | **Recalculé par couches** : plancher A `0,80` · plancher B `3,91` — **sans recharge** | D3 p. 10-12 | **`H-28`** — valeurs déclarées au cartouche : 1,00 et 3,50 |
+| `CHG-03b` Recharge de sol `15 cm` | **`3,30 kN/m²` sur le DALLAGE uniquement** (`D4` p. 5 et 14), **100 % de l'emprise** | D4 p. 5 et 14 (épaisseur) + EC1 (densité) | **`D-35`** + `H-28` — la densité reste une hypothèse |
 | `CHG-04` Poids propres toiture | **0,95 kN/m²** par couches | D2 f. 02 (constitution) — aucune charge au cartouche | **`H-29`** |
 | `CHG-05` Neige | **0,45 kN/m²** — zone A1, altitude < 200 m, `s_k = 45 daN/m²` | D2 p. 1 | **Contractuelle** |
 | `CHG-06` Vent | `v_b = 24 m/s`, terrain III | D2 p. 1 | **Non intégré** — relève de `B-25` (déjà traité) et `B-44`/`B-45` |
@@ -121,13 +122,28 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 | **Valeur déclarée `D2 p. 1`** | | | **3,50** | 350 daN/m² |
 | **VALEUR RETENUE** | | | **3,91** | **La plus élevée — `D2` sous-déclare de 12 %** |
 
-### 3.3 Recharge de sol (`D4 p. 5 et 14`)
+### 3.3 La recharge de sol n'est pas une charge de plancher (`D-35`)
 
-| Couche | Épaisseur (m) | γ (kN/m³) | `g` (kN/m²) | Source |
-|---|---|---|---|---|
-| **Recharge de sol 15 cm** | **0,150** | **22,0** | **3,30** | **`H-28`** — `D4` prescrit l'épaisseur, jamais la densité |
+**Ce que les pièces disent, et rien de plus.** La chaîne « recharg » apparaît **deux fois** dans les 29 planches du DCE graphique (`D4`) :
 
-> **Pourquoi 22 kN/m³.** `D4` dit « sol à recharger de 15 cm » sans préciser la nature du matériau de recharge. `22 kN/m³` est la densité d'un **béton de forme ou d'une chape lourde** — la valeur haute d'une recharge courante. Une recharge en sable (`18 kN/m³`) donnerait `2,70 kN/m²`, soit `−0,60 kN/m²` et `−7 %` sur l'effet de charge de `F3` : la conclusion du § 0 ne basculerait pas.
+| Planche | Cartouche | Occurrence | Plan |
+|---|---|---|---|
+| `D4` **p. 5** | `PLANS DE DEMOLITION` — 1/100 | « Sol à recharger de 15cm » à `x = 158 · y = 232` | **`RDC FLORA` — Projet** |
+| `D4` **p. 14** | `SANITAIRES PMR RDC` — 1/50 | « sol à recharger de 15cm », sous le carrelage | **RDC** — sanitaire |
+
+**Aucune occurrence sur les planches de R+1** (`p. 16` à `p. 18`), dont les finitions sont nommées une à une : moquette grand trafic, parquet, sol souple acoustique, carrelage — **sans recharge**.
+
+**Trois recoupements qui confirment la lecture :**
+
+1. **Position sur la planche `p. 5`** : l'annotation tombe dans la bande des annotations de RDC (avec « dépose des dalles », « sol décaissé en pente 10 % `h : 16,8 cm` », « ouverture mur », « `Hspo : 2.75` »), et non dans celle du R+1 (« cloisons démolies », repères `Z : 204,42`).
+2. **Le diagnostic** : EVEN vérifie la solive `8 × 18` à `150 daN/m²` et trouve `w = 7,7 mm` pour `7,0` admis. Avec `3,30 kN/m²` de recharge, la flèche triplerait (≈ `25 mm`). **Le chiffre d'EVEN n'est compatible qu'avec un plancher non rechargé.**
+3. **La nature du plancher bas** : `D2` folio 03 = « Vue en plan **PB RDC** — **Dallage** » ; `B-20` retient un dallage BA désolidarisé `ép. 13 cm` sur forme `40 cm`. La recharge est un **ouvrage de sol en contact avec le terrain**.
+
+> **`D-35` — décision du 20/10/2026, mot pour mot : « qui peut le plus peut le moins. Pour avancer, nous allons calculer et dimensionner le dallage comme si la surcharge de 15 cm est sur la totalité de l'emprise du dallage. Hypothèse défavorable. »**
+> La recharge est donc portée à **100 % de l'emprise du dallage** (`111,15 m²`). C'est **volontairement défavorable** : si le dallage tient sur toute sa surface, il tient sur les seules zones réellement rechargées (entrée et sanitaires PMR identifiés). **L'emprise exacte n'est pas tracée au DCE** — les deux planches portent une annotation avec ligne de rappel, jamais une trame hachurée. Cette imprécision **cesse d'avoir un effet sur le calcul** : elle est absorbée par l'hypothèse défavorable.
+>
+> **Ce que `D-35` ferme :** la réserve `R-24-B1` de `B-24 Ind. B` (périmètre de la recharge) est **close**.
+> **Ce que `D-35` n'autorise pas :** appliquer la recharge aux planchers hauts. La décision porte sur le **dallage** ; elle ne dit pas que les planchers sont rechargés.
 
 ### 3.4 Toiture — combles et versants
 
@@ -139,13 +155,30 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 | Plafond de combles | 0,020 | 12,0 | 0,15 | D2 f. 02 — `H-29` |
 | **TOTAL toiture** | | | **0,95** | |
 
-### 3.5 Synthèse des charges permanentes retenues
+### 3.5 Synthèse des charges permanentes des PLANCHERS
 
 | Zone | `g` par couches | Déclaré `D2` | Recharge | Cloisons `H-30` | **`g` total retenu** |
 |---|---|---|---|---|---|
-| Plancher A (aile Est) | 0,80 | 1,00 | +3,30 | +0,80 | **5,10 kN/m²** |
-| Plancher B (aile Ouest) | 3,91 | 3,50 | +3,30 | +0,80 | **8,01 kN/m²** |
+| Plancher A (aile Est) | 0,80 | 1,00 | **aucune** (`D-35`) | +0,80 | **1,80 kN/m²** |
+| Plancher B (aile Ouest) | 3,91 | 3,50 | **aucune** (`D-35`) | +0,80 | **4,71 kN/m²** |
 | Toiture | 0,95 | — | — | — | **0,95 kN/m²** |
+
+### 3.6 Le dallage — la recharge est ici
+
+| Couche | Épaisseur (m) | γ (kN/m³) | `g` (kN/m²) | Source |
+|---|---|---|---|---|
+| Dallage BA `C25/30` | 0,130 | 25,0 | 3,25 | `B-20` § infrastructure — dallage BA désolidarisé `ép. 13 cm` sur forme `40 cm` |
+| Revêtement de sol (carrelage / sol souple) | 0,020 | 20,0 | 0,40 | `D4` p. 8 (plans sols) |
+| **Recharge de sol 15 cm** | **0,150** | **22,0** | **3,30** | **`D-35`** — `H-28` pour la densité ; **100 % de l'emprise** |
+| Cloisons forfaitaires | — | — | 0,80 | `H-30` — EC1-1-1 § 6.3.1.2 |
+| **TOTAL `g`** | | | **7,75** | |
+| Exploitation `q` (cat. B) | — | — | 2,50 | `D-32` |
+| **`p_ELS`** | | | **10,25 kN/m²** | |
+| **`p_ELU`** | | | **14,21 kN/m²** | |
+
+> **Pourquoi la charge de cloisons sur un dallage.** `H-30` est un **forfait de charge**, pas un élément dessiné : `V9` et `D-25` interdisent de représenter cloisons et isolants sur une vue structurelle, ils n'interdisent pas de compter leur poids. Un dallage qui porte des cloisons doit les compter.
+>
+> **La valeur de `p_ELU` du dallage n'est pas un dimensionnement.** Elle fixe la **charge** ; l'épaisseur, le treillis, les joints et le poinçonnement relèvent de `B-43`. Ce que `B-21` peut dire, c'est que cette charge — `14,21 kN/m²`, soit `0,014 MPa` — reste **très inférieure** à la contrainte admissible du sol (`0,30 MPa` à l'ELS, `D-02`). **Le dallage n'est pas un problème de portance ; il sera un problème de fissuration et de désolidarisation.**
 
 ---
 
@@ -185,22 +218,37 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 
 ## 5. CHARGES LINÉIQUES SUR LES POUTRES ET LINTEAUX
 
-`p = bande tributaire × (g + q)` , majorée du **mur porté** pour les linteaux en sous-œuvre.
+`p = cont × [bande tributaire × (g + q) + mur porté]`. **Sans recharge** depuis `D-35`. Le **coefficient de continuité** `cont` est le même à l'ELS et à l'ELU : une poutre continue l'est dans les deux combinaisons, et la flèche (`B-43`) se calcule sur la même ligne d'influence que le moment.
 
 | Poutre | `L` (m) | Bande (m) | Mur (kN/m) | `p_ELS` (kN/m) | `p_ELU` (kN/m) |
 |---|---|---|---|---|---|
-| **F1a** | 1,00 | 1,00 | 38,5 | 49,0 | **76,5** |
-| **F1b** | 0,90 | 1,00 | 38,5 | 49,0 | **76,5** |
-| **F1c** | 0,85 | 1,00 | 38,5 | 49,0 | **76,5** |
-| **F2** | 2,85 | 3,77 | — | 39,6 | **63,1** |
-| **F3** | 3,85 | 2,75 | — | 28,9 | **46,1** |
-| **F4** | 4,88 | 1,615 | — | 2,9 | **4,7** |
-| **R1** | 3,85 | 3,455 | — | 36,3 | **57,9** |
-| **R2-N** | 3,82 | 2,08 | — | 21,9 | **34,8** |
-| **R2-S** | 3,82 | 1,62 | — | 17,0 | **27,1** |
-| **R3-N / R3-S** (réaction) | 1,55 | — | — | 41,8 kN | **66,5 kN** |
+| **F1a** | 1,00 | 1,00 | 38,5 | 52,6 | **71,4** |
+| **F1b** | 0,90 | 1,00 | 38,5 | 52,6 | **71,4** |
+| **F1c** | 0,85 | 1,00 | 38,5 | 52,6 | **71,4** |
+| **F2** | 2,85 | 3,77 | — | 31,3 | **43,8** |
+| **F3** | 3,85 | 2,75 | — | 22,8 | **32,0** |
+| **F4** | 4,88 | 1,615 | — | 3,3 | **4,7** |
+| **R1** | 3,85 | 3,455 | — | 28,6 | **40,2** |
+| **R2-N** | 3,82 | 2,08 | — | 17,2 | **24,2** |
+| **R2-S** | 3,82 | 1,62 | — | 13,4 | **18,8** |
 
-**Détail du mur porté en sous-œuvre.** `F1a`, `F1b` et `F1c` percent un mur de moellons de **50 cm** d'épaisseur. Elles reprennent la maçonnerie située au-dessus de l'ouverture : `0,50 × 3,50 × 22 = 38,5 kN/m`. À cela s'ajoute la bande de plancher de 1,00 m de part et d'autre. **C'est cette charge de mur qui domine** — et c'est elle qui explique l'écart avec `B-20`, qui avait retenu `55 kN/m` au total.
+**`R3-N` et `R3-S` ne portent aucune charge répartie.** Ce sont les linteaux de baie qui reprennent la réaction de `R2-N` / `R2-S` à mi-portée : `24,2 × 3,82 / 2 =` **`46,2 kN`** à l'ELU, `32,9 kN` à l'ELS. Leur calcul appartient à `B-45`.
+
+**Détail du mur porté en sous-œuvre.** `F1a`, `F1b` et `F1c` percent un mur de moellons de **50 cm** d'épaisseur. Elles reprennent la maçonnerie située au-dessus de l'ouverture : `0,50 × 3,50 × 22 = 38,5 kN/m`. À cela s'ajoute la bande de plancher de `1,00 m` : `1,00 × (4,71 + 2,50) = 7,21 kN/m`, soit `45,7 kN/m` avant continuité et **`52,6 kN/m`** après application du coefficient `1,15`. **C'est la charge de mur qui domine** (`38,5` sur `45,7`, soit 84 %) — c'est pourquoi `F1a/b/c` varient peu d'un indice à l'autre.
+
+**Ce que le retrait de la recharge fait aux poutres.** Les poutres qui ne portent **que du plancher** perdent exactement `1,35 × 3,30 × bande` :
+
+| Poutre | Bande | Perte `p_ELU` | `p_ELU` indice B | `p_ELU` indice C |
+|---|---|---|---|---|
+| `F2` | 3,770 m | `−19,3 kN/m` | 63,1 | **43,8** |
+| `F3` | 2,750 m | `−13,6 kN/m` | 46,1 | **32,0** |
+| `R1` | 3,455 m | `−17,7 kN/m` | 57,9 | **40,2** |
+| `R2-N` | 2,080 m | `−10,7 kN/m` | 34,8 | **24,2** |
+| `R2-S` | 1,620 m | `−8,3 kN/m` | 27,1 | **18,8** |
+| `F1a/b/c` | 1,000 m | `−5,1 kN/m` | 76,5 | **71,4** |
+| `R3-N / R3-S` | — | `−20,3 kN` (réaction) | 66,5 | **46,2 kN** |
+
+**`−30,6 %` sur les cinq poutres de plancher**, `−6,7 %` sur les trois frangements de façade (dont la charge est dominée par le mur).
 
 ---
 
@@ -210,27 +258,29 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 
 | Porteur | `A_inf` | `G` | `Q` | Coeff. continuité | **`N_ELS`** |
 |---|---|---|---|---|---|
-| **P1-N** | 0,63 m² | 75,6 kN | 6,3 kN | **1,00** | **81,9 kN** |
-| **P1-S** | 0,63 m² | 75,6 kN | 6,3 kN | **1,00** | **81,9 kN** |
-| **P2** | 11,46 m² | 118,1 kN | 38,9 kN | **1,15** | **157,0 kN** |
-| **P3** | 0,23 m² | 27,0 kN | 2,2 kN | **1,00** | **29,3 kN** |
-| **J1** | 0,25 m² | 30,0 kN | 2,5 kN | **1,00** | **32,5 kN** |
-| **M11** | 4,115 ml | 36,9 kN/m | 13,8 kN/m | **1,15** | **50,7 kN/m** |
-| **M03** | 3,455 ml | 31,0 kN/m | 11,6 kN/m | **1,15** | **42,5 kN/m** |
-| **SF1** | 11,46 m² | 135,8 kN | 44,7 kN | **1,15** | **180,5 kN** |
+| **P1-N** | 0,63 m² | 67,3 kN | 6,3 kN | **1,00** | **73,6 kN** |
+| **P1-S** | 0,63 m² | 67,3 kN | 6,3 kN | **1,00** | **73,6 kN** |
+| **P2** | 11,46 m² | 74,6 kN | 38,9 kN | **1,15** | **113,5 kN** |
+| **P3** | 0,23 m² | 24,0 kN | 2,2 kN | **1,00** | **26,3 kN** |
+| **J1** | 0,25 m² | 26,7 kN | 2,5 kN | **1,00** | **29,2 kN** |
+| **M11** | 4,115 ml | 23,3 kN/m | 13,8 kN/m | **1,15** | **37,1 kN/m** |
+| **M03** | 3,455 ml | 19,6 kN/m | 11,6 kN/m | **1,15** | **31,1 kN/m** |
+| **SF1** | 11,46 m² | 85,8 kN | 44,7 kN | **1,15** | **130,5 kN** |
 
 ### 6.2 TABLEAU 5 — ELU : `N_ELU = 1,35·ΣG_k + 1,5·Q_k,1`
 
 | Porteur | `1,35·G` | `1,5·Q` | Coeff. continuité | **`N_ELU`** | `N/A_inf` (kN/m²) |
 |---|---|---|---|---|---|
-| **P1-N** | 102,1 kN | 9,4 kN | 1,00 | **111,5 kN** | 177,1 |
-| **P1-S** | 102,1 kN | 9,4 kN | 1,00 | **111,5 kN** | 177,1 |
-| **P2** | 159,4 kN | 58,3 kN | 1,15 | **217,7 kN** | 19,0 |
-| **P3** | 36,5 kN | 3,4 kN | 1,00 | **39,8 kN** | 173,2 |
-| **J1** | 40,5 kN | 3,8 kN | 1,00 | **44,3 kN** | 177,1 |
-| **M11** | 49,8 kN/m | 20,7 kN/m | 1,15 | **81,0 kN/m** | 19,7 |
-| **M03** | 41,8 kN/m | 17,4 kN/m | 1,15 | **68,0 kN/m** | 19,7 |
-| **SF1** | 183,3 kN | 67,1 kN | 1,15 | **250,4 kN** | 21,8 |
+| **P1-N** | 90,9 kN | 9,4 kN | 1,00 | **100,3 kN** | 159,2 |
+| **P1-S** | 90,9 kN | 9,4 kN | 1,00 | **100,3 kN** | 159,2 |
+| **P2** | 100,7 kN | 58,3 kN | 1,15 | **159,0 kN** | 13,9 |
+| **P3** | 32,5 kN | 3,4 kN | 1,00 | **35,8 kN** | 155,8 |
+| **J1** | 36,1 kN | 3,8 kN | 1,00 | **39,8 kN** | 159,2 |
+| **M11** | 31,4 kN/m | 20,7 kN/m | 1,15 | **59,9 kN/m** | 14,6 |
+| **M03** | 26,4 kN/m | 17,4 kN/m | 1,15 | **50,3 kN/m** | 14,6 |
+| **SF1** | 115,8 kN | 67,1 kN | 1,15 | **182,9 kN** | 16,0 |
+
+**Ce que le tableau montre.** Le porteur le plus chargé reste `SF1` (`182,9 kN` — c'est la réaction de `P2` transmise au sol, pas un porteur indépendant). Le poteau le plus chargé reste **`P2` à `159,0 kN`** — soit `−27 %` par rapport à l'indice B. Les ratios `N/A_inf` de `P1`, `P3` et `J1` sont **quasiment inchangés** (`159` au lieu de `177 kN/m²`) : leur charge vient du **mur porté**, pas du plancher.
 
 ### 6.3 Justification du classement rive / intermédiaire
 
@@ -238,22 +288,9 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 |---|---|---|---|
 | **P1-N, P1-S** | **Rive** | 1,00 | Extrémités d'une baie de façade : le plancher ne continue pas au-delà |
 | **P2** | **Intermédiaire** | 1,15 | En file 5, entre deux travées de plancher continues de part et d'autre |
-| **P3** | **Rive** | 1,00 | Appui d'extrémité de `F1b` contre le refend |
-| **J1** | **Rive** | 1,00 | Piédroit d'ouverture : le linteau `F1a` s'y arrête |
-| **M11, M03** | **Intermédiaire** | 1,15 | Voiles courants : le plancher est continu de part et d'autre |
-| **SF1** | **Intermédiaire** | 1,15 | Reçoit `P2`, lui-même intermédiaire — la continuité se transmet |
-
-> **Le piège du 1,15, évité.** Le coefficient n'est **pas** appliqué partout : trois porteurs sur cinq sont en rive et reçoivent **1,00**. Appliquer `1,15` aux cinq aurait majoré la DDC de 15 % sur les poteaux de façade — une erreur qui, en exécution, se paie en acier inutile ou en section fausse.
-
-### 6.4 Réactions aux sommiers `S1` et `S2`
-
-| Sommier | Charge reçue | `R_ELS` | `R_ELU` | Admissible `B-20` (`σ_adm ≈ 0,8 MPa`) |
-|---|---|---|---|---|
-| **`S2` sous `F1a`** | Réaction du linteau | 24,5 kN | 38,3 kN | 80 kN — **OK** |
-| **`S1` sous `F3`** | Réaction de `F3` | 55,6 kN | 88,7 kN | 64 kN — **OK en ELS, à confirmer en ELU par `B-40`** |
-| **`S1` sous `R3-N`** | Réaction de `R3-N` | 41,8 kN | 66,5 kN | 64 kN — **OK** |
-
-> **Point de vigilance transmis à `B-40`.** `S1` sous `F3` reçoit `55,6 kN` à l'ELS pour un admissible de `64 kN` : la marge n'est que de **13 %**. Les sommiers `S1` sont des appareils de **20 × 40 cm** seulement — `B-40` doit vérifier la diffusion dans la maçonnerie sous `F3`, et non seulement la compression du béton.
+| **P3, J1** | **Rive** | 1,00 | Appuis de rive des frangements `F1b` et `F1a` — le linteau ne continue pas au-delà |
+| **M11, M03** | **Intermédiaire** | 1,15 | Voiles continus sur toute la longueur de la travée, chargés de part et d'autre |
+| **SF1** | **Intermédiaire** | 1,15 | Reçoit `P2` avec le même coefficient de continuité que lui |
 
 ---
 
@@ -263,16 +300,16 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 
 | Grandeur | Valeur |
 |---|---|
-| Charge totale ELU transmise aux voiles | **1 766 kN** |
+| Charge totale ELU transmise aux voiles | **1 290 kN** |
 | Aire portante des 12 voiles RDC (`B-25`) | **18,79 m²** |
-| **`σ_d` calculé** | `1 766 / 18,79 = 94 kPa = ` **`0,094 MPa`** |
+| **`σ_d` calculé** | `1 290 / 18,79 = 69 kPa =` **`0,069 MPa`** |
 | `σ_d` retenu par `H-27` | **`0,300 MPa`** |
 | `f_vk` avec `H-27` | 108 kPa |
-| `f_vk` avec la valeur calculée | **75 kPa** |
+| `f_vk` avec la valeur calculée | **71 kPa** |
 
-**Conséquence sur `B-25` :** `H-27` **majore `f_vk` de 44 %**. En retenant la valeur réellement calculée, `τ/f_vk` passerait de `0,028` à **`0,040`** — soit exactement le niveau de l'enveloppe de démolition de l'indice A. **La conclusion de `B-25` est inchangée** (la capacité reste utilisée à moins de 5 %), mais l'hypothèse doit être requalifiée : elle est **conservatrice dans le sens favorable**, ce qui est la seule direction acceptable pour une hypothèse de résistance.
+**Conséquence sur `B-25` :** `H-27` **majore `f_vk` de 52 %** — davantage encore qu'à l'indice B (44 %), puisque la charge descend. En retenant la valeur réellement calculée, `τ/f_vk` passerait de `0,028` à **`0,043`**. **La conclusion de `B-25` est inchangée** (la capacité reste utilisée à moins de 5 %), et l'hypothèse reste **conservatrice dans le sens favorable** — la seule direction acceptable pour une hypothèse de résistance.
 
-> **Ce que `B-21` apporte à `B-25`.** Deux briques se contrôlent l'une l'autre : `B-25` avait besoin d'un `σ_d` qu'elle ne pouvait pas calculer, `B-21` le produit et constate que l'hypothèse tenait. C'est le fonctionnement attendu de la chaîne — et c'est la première fois dans ce dossier qu'une hypothèse de `B-25` est **vérifiée par une brique aval**, et non seulement déclarée.
+> **Ce que ce chiffre confirme, en passant.** `H-27` retient une contrainte `4,3 ×` la contrainte réelle. Ce n'est pas une erreur : c'est une hypothèse déclarée, tracée, et qui va dans le sens de la sécurité. Mais elle **ne doit jamais servir à justifier `B-25`** : c'est `B-25` qui est juste, parce qu'elle est très peu sollicitée — pas l'inverse.
 
 ---
 
@@ -282,74 +319,78 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 
 | Élément | `M_Ed` retenu par `B-20` | `M_Ed` calculé par `B-21` | Écart | Conséquence |
 |---|---|---|---|---|
-| **F1a** | 10,7 kN·m | 9,6 kN·m | **−11 %** | Cohérent |
-| **F1b** | 10,7 kN·m | 7,7 kN·m | **−28 %** | Cohérent |
-| **F1c** | 10,7 kN·m | 6,9 kN·m | **−35 %** | Cohérent |
-| **F2** | 50,0 kN·m | **64,1 kN·m** | **+28 %** | **`B-45` à reprendre** |
-| **F3** | 40,8 kN·m | **85,3 kN·m** | **+109 %** | **`B-45` PRIORITAIRE** |
+| **F1a** | 10,7 kN·m | 8,9 kN·m | **−17 %** | Cohérent |
+| **F1b** | 10,7 kN·m | 7,2 kN·m | **−32 %** | Cohérent |
+| **F1c** | 10,7 kN·m | 6,4 kN·m | **−40 %** | Cohérent |
+| **F2** | 50,0 kN·m | 44,5 kN·m | **−11 %** | Cohérent |
+| **F3** | 40,8 kN·m | **59,2 kN·m** | **+45 %** | **`B-45` PRIORITAIRE** |
 | **F4** | 20,1 kN·m | 14,1 kN·m | **−30 %** | Cohérent |
-| **R1** | 47,5 kN·m | **107,2 kN·m** | **+126 %** | **`B-45` PRIORITAIRE** |
-| **R2-N** | 43,5 kN·m | **63,5 kN·m** | **+46 %** | **`B-45` à reprendre** |
-| **R2-S** | 43,5 kN·m | 49,5 kN·m | +14 % | Cohérent |
+| **R1** | 47,5 kN·m | **74,4 kN·m** | **+57 %** | **`B-45` PRIORITAIRE** |
+| **R2-N** | 43,5 kN·m | 44,1 kN·m | **+1 %** | Cohérent |
+| **R2-S** | 43,5 kN·m | 34,4 kN·m | **−21 %** | Cohérent |
 
 | Poteau | `N_ELU` retenu par `B-20` | `N_ELU` calculé | Écart | Conséquence |
 |---|---|---|---|---|
-| **P1-N / P1-S** | 45 à 75 kN | **111,5 kN** | **+86 %** | `B-45` — tube `140×140` : capacité ≈ 546 kN, marge conservée |
-| **P2** | 85 kN | **217,7 kN** | **+156 %** | **`B-42`** — flambement et section à reprendre |
-| **SF1** (`N_ELS`) | 63,2 kN | **180,5 kN** | **+186 %** | **`B-40`** — voir § 9 |
+| **P1-N / P1-S** | 45 à 75 kN | **100,3 kN** | **+67 %** | `B-45` — tube `140×140` : capacité ≈ 546 kN, marge conservée |
+| **P2** | 85 kN | **159,0 kN** | **+87 %** | **`B-42`** — **re-livrée en Ind. B** : utilisation `0,305` |
+| **SF1** (`N_ELS`) | 63,2 kN | **130,5 kN** | **+106 %** | **`B-40`** — voir § 9 |
 
-### 8.1 Pourquoi `F1a/b/c` baissent et `F2/F3/R1` explosent
+### 8.1 Ce que le retrait de la recharge change — et ce qu'il ne change pas
 
-Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **nature des charges** :
+Trois écarts **changent de signe** : `F2` passe de `+28 %` à `−11 %`, `R2-N` de `+46 %` à `+1 %`, `R2-S` de `+14 %` à `−21 %`. **Le prédimensionnement de `B-20` n'était donc pas mauvais : il était simplement établi sans la recharge… et la recharge n'était pas là.**
 
-- `F1a/b/c` reprennent surtout **un mur** (38,5 kN/m), et la bande de plancher qui s'y ajoute est étroite (`1,00 m`). `B-20` avait surestimé le mur mais surestimé aussi la bande : les deux erreurs se compensent partiellement.
-- `F2`, `F3` et `R1` reprennent **du plancher pur** sur des bandes larges (`2,75 à 3,77 m`). Tout l'écart vient de la **recharge de 15 cm** que `B-20` n'avait pas intégrée dans ses `22 kN/m`.
+Deux écarts **restent défavorables, divisés par plus de deux** :
+
+| Élément | Écart indice B | Écart indice C | Facteur |
+|---|---|---|---|
+| `F3` | `+109 %` | **`+45 %`** | ÷ 2,4 |
+| `R1` | `+126 %` | **`+57 %`** | ÷ 2,2 |
+| `P1-N` | `+86 %` | **`+67 %`** | ÷ 1,3 |
+| `P2` | `+156 %` | **`+87 %`** | ÷ 1,8 |
+| `SF1` | `+186 %` | **`+106 %`** | ÷ 1,8 |
+
+> **Ce que cela dit de la méthode.** Une erreur de **localisation** de charge se propage à toutes les briques aval sans jamais se voir : chaque calcul est juste, chaque tableau est cohérent, et le résultat est faux. Elle n'a été détectée qu'en **rouvrant les planches** pour vérifier où la recharge était dessinée. C'est exactement ce que `V14` (épuisement des pièces) exige — et ce que `B-21` indice B n'avait pas fait.
 
 ---
 
-## 9. `SF1` — LA SEMELLE ÉTAIT INSUFFISANTE : `D-30` LA PORTE À 80 × 80 CM
+## 9. `SF1` — LA SEMELLE EN 80 × 80 EST CONFORME
 
 | Grandeur | Valeur |
 |---|---|
-| Semelle actuelle (`D-14`) | **60 × 60 cm = 0,36 m²** |
-| `N_ELS` selon `B-21` | **180,5 kN** |
-| **`σ_ELS`** | **501 kPa = 0,50 MPa** |
+| Semelle retenue (`D-30`) | **80 × 80 cm = 0,64 m²** |
+| Minimum opposable (`D-10` / `D-14`) | 60 × 60 cm — le plancher reste contractuel |
+| `N_ELS` selon `B-21` | **130,5 kN** |
+| **`σ_ELS`** | `130,5 / 0,64 =` **`204 kPa = 0,20 MPa`** |
 | Admissible (`D-02`) | **0,30 MPa** |
-| **Verdict** | **NON CONFORME** — dépassement de 67 % |
-| Largeur requise | `B ≥ √(180,5 / 300) = ` **`0,78 m`** → **80 × 80 cm** (0,64 m²) |
-| `σ_ELS` en 80 × 80 | **282 kPa ≤ 300 kPa** — conforme |
-| `σ_ELU` en 80 × 80 | `250,4 / 0,64 = 391 kPa ≤ 490 kPa` — conforme |
+| **Verdict** | ✅ **CONFORME** — 68 % de l'admissible |
+| Largeur strictement requise | `B ≥ √(130,5 / 300) =` **`0,66 m`** |
+| `N_ELU` | `182,9 kN` sur `0,64 m²` = **`286 kPa ≤ 490 kPa`** — conforme |
 
-### 9.1 L'écart n'est pas dans le calcul, il est dans l'aire d'influence
+### 9.1 L'aire d'influence de `P2` reste la question, mais elle ne bloque plus
 
 `B-40 Ind. E` a vérifié `SF1` avec `N_ELS = 63,2 kN`, ce qui correspond à une aire d'influence de **6,5 m²** environ. La trame de `B-20` donne **11,46 m²**. Les deux valeurs ne peuvent pas être vraies en même temps.
 
-| Hypothèse sur `P2` | `A_inf` | `N_ELS` | `σ_ELS` sur 60 × 60 | Verdict |
+| Hypothèse sur `P2` | `A_inf` | `N_ELS` | `σ_ELS` sur 80 × 80 | Verdict |
 |---|---|---|---|---|
-| Aire d'influence de la **trame** (demi-portées complètes) | 11,46 m² | 180,5 kN | **0,50 MPa** | **NON CONFORME** |
-| Aire **réduite** : `P2` ne reprend que ce que le portique lui transmettait | ≈ 6,5 m² | ≈ 102 kN | **0,28 MPa** | Conforme de justesse |
+| Aire d'influence de la **trame** (demi-portées complètes) | 11,46 m² | 130,5 kN | **0,20 MPa** | ✅ **CONFORME** |
+| Aire **réduite** : `P2` ne reprend que ce que le portique lui transmettait | ≈ 6,5 m² | ≈ 74 kN | **0,12 MPa** | ✅ Conforme, large |
 
-**Laquelle est vraie ?** Aucune pièce ne le dit. `P2` remplace un portique bois de façade Ouest Nord ; si le mur de moellons de part et d'autre reste continu et porteur, il reprend l'essentiel du plancher et `P2` ne reçoit que la réaction du portique. **Mais si `P2` est le seul appui vertical de la baie — ce que suggère la suppression du portique — c'est la valeur de la trame qui s'applique.**
-
-> **`D-30` — DÉCISION PRISE le 20/10/2026 : `SF1` passe à 80 × 80 cm.**
-> L'option « justifier une aire d'influence réduite » supposait un relevé de la maçonnerie de part et d'autre de la baie, que nous n'avons pas et qui aurait de toute façon conduit à une semelle plus large qu'un ordre de grandeur de `0,28 MPa` sur `0,30` admissible — c'est-à-dire à une marge de 7 %, insuffisante pour une fondation sur alluvions dont les caractéristiques ne sont pas mesurées (`D-15` : tassements hors mission).
-> **Conséquences, toutes reportées en `B-40` indice suivant :**
-> - `SF1` : **80 × 80 × h 25 cm**, `C25/30`, `c_nom = 50 mm` (`D-06`), armatures en attente recalculées ;
-> - l'**implantation `PLS`** est à reprendre : la semelle gagne `10 cm` de chaque côté, ce qui doit être vérifié contre la **mitoyenneté** et contre les réseaux — `B-40` porte cette vérification, pas `B-21` ;
-> - le **nuage `Z-P2`** reste posé : la décision élargit la semelle, elle ne prouve pas la portance. `PA-01` et le sondage de soubassement restent ouverts.
+> **`D-30` reste nécessaire, mais pour une autre raison.** L'indice B justifiait le passage à 80 × 80 par un dépassement de `67 %` en 60 × 60. Avec la recharge au bon endroit, le `60 × 60` donnerait `130,5 / 0,36 = 362 kPa`, soit `121 %` de l'admissible — **encore non conforme, de `21 %`**. Le `80 × 80` ramène la contrainte à `68 %` de l'admissible. **La décision est confirmée, son motif est divisé par trois.**
+>
+> **Ce qui reste ouvert** : l'aire d'influence réelle de `P2` (`PA-01`, sondage du soubassement), et la portance des alluvions, qui n'est **toujours pas mesurée** (`D-15` : tassements hors mission). `SF1` est conforme **sur l'hypothèse de `D-02`**, pas sur une mesure.
 
 ---
 
 ## 10. SYNTHÈSE EN HUIT LIGNES
 
-1. **Porteur le plus chargé en `N_ELU` :** `P2`, avec **217,7 kN** — suivi de `SF1` (250,4 kN, qui n'est que sa réaction transmise au sol).
-2. **Plus fort ratio `N/A_inf` :** `P1-N` et `P1-S`, à **177,1 kN/m²** — conséquence d'un linteau étroit qui porte un mur de 50 cm : la charge est concentrée sur 0,63 m².
-3. **Zone la plus pénalisante en exploitation :** la **salle de sport du R+1** (34,25 m²), à `5,00 kN/m²` par décision `D-31` — **+85,6 kN** sur le niveau, **+8,3 %** de la charge totale.
-4. **Charge totale du R+1 :** `1 036 kN` à l'ELS, **`1 766 kN` à l'ELU**, transmis aux voiles sur `18,79 m²` → `σ_d = 0,094 MPa`.
-5. **Trois éléments sortent du prédimensionnement de `B-20` :** `F3` (**+109 %**), `R1` (**+126 %**), `F2` (**+28 %**), `R2-N` (**+46 %**). `F3` et `R1` sont prioritaires en `B-45`.
-6. **`SF1` passe à 80 × 80 cm** par décision `D-30` — la semelle en 60 × 60 était non conforme de `67 %` sur la portance.
-7. **`H-27` est vérifiée et conservatrice** : `σ_d` réel `0,094 MPa` contre `0,300` retenu — `f_vk` est majoré de 44 %, dans le sens favorable.
-8. **Hypothèses de charges encore à confirmer en EXE :** `H-28` (densité de la recharge, 22 kN/m³), `H-29` (poids de toiture, 0,95 kN/m²), `H-30` (cloisons, 0,80 kN/m²) — `H-31` est sortie du registre, promue en `D-31`.
+1. **La recharge de `15 cm` est un ouvrage de dallage** (`D-35`) : elle quitte les planchers `A` et `B`, qui passent à `1,80` et `4,71 kN/m²`.
+2. **Toutes les poutres de plancher sont soulagées de `30,6 %`** ; les frangements de façade de `6,7 %` seulement, car leur charge est dominée par le mur porté (`38,5 kN/m`).
+3. **Le dallage porte plus que tout le reste** : `14,21 kN/m²` à l'ELU sur `111,15 m²`, soit **`1 579 kN`** — au-delà des `1 290 kN` transmis aux voiles. C'est l'ouvrage à traiter **en premier** en `B-43`.
+4. **Porteur le plus chargé : `P2`, à `159,0 kN`** (`N_ELU`) ; `SF1` transmet `182,9 kN` au sol et reste conforme en `80 × 80` (`0,20 MPa` à l'ELS contre `0,30` admissible).
+5. **Deux éléments restent hors prédimensionnement de `B-20`** : `F3` (**`+45 %`**) et `R1` (**`+57 %`**) — prioritaires en `B-45`, mais deux fois moins qu'annoncé à l'indice B.
+6. **Trois écarts changent de signe** (`F2` `−11 %`, `R2-N` `+1 %`, `R2-S` `−21 %`) : le prédimensionnement de `B-20` était juste, il lui manquait… une recharge qui n'était pas là.
+7. **`H-27` est vérifiée et très conservatrice** : `σ_d` réel `0,069 MPa` contre `0,300` retenu — `f_vk` majoré de `52 %`.
+8. **Hypothèses de charges encore à confirmer en EXE :** `H-28` (densité de la recharge, `22 kN/m³`), `H-29` (toiture, `0,95 kN/m²`), `H-30` (cloisons, `0,80 kN/m²`).
 
 ---
 
@@ -358,16 +399,18 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 | # | Critère de la fiche `B-21` | État | Preuve |
 |---|---|---|---|
 | 1 | Chaque porteur a une surface d'influence justifiée | ✅ **CONFORME** | § 2 — 8 porteurs surfaciques avec `L_t`, `l_t`, `A_inf` et demi-portées ; 14 porteurs linéaires avec bande tributaire |
-| 2 | Chaque charge permanente est rattachée à une couche et à un poids volumique | ✅ **CONFORME** | § 3 — 14 couches, chacune avec épaisseur, `γ` et pièce source |
+| 2 | Chaque charge permanente est rattachée à une couche et à un poids volumique | ✅ **CONFORME** | § 3.1, 3.2, 3.4 et **3.6** — 16 couches, chacune avec épaisseur, `γ` et pièce source |
 | 3 | Chaque charge d'exploitation est rattachée à une catégorie EC1 | ✅ **CONFORME** | § 4 — cat. B, C4, H et neige, chacune avec sa valeur et sa source |
-| 4 | Chaque coefficient de continuité est justifié | ✅ **CONFORME** | § 6.3 — classement rive/intermédiaire justifié porteur par porteur ; `1,00` appliqué à 3 porteurs sur 5 |
+| 4 | Chaque coefficient de continuité est justifié | ✅ **CONFORME** | § 6.3 — classement rive/intermédiaire justifié porteur par porteur ; `1,00` appliqué à 5 porteurs sur 8 |
 | 5 | Les tableaux ELS et ELU sont distincts | ✅ **CONFORME** | § 6.1 et § 6.2 — deux tableaux, deux combinaisons |
 | 6 | La sortie porte le titre « DDC PRÉLIMINAIRE — CONCEPTION » | ✅ **CONFORME** | En-tête et bandeau de tête |
-| 7 | Aucune vérification de section ni aucun ferraillage n'a été produit | ✅ **CONFORME** | § 8 compare des **effets de charge** à des effets de charge, jamais à une résistance ; § 9 est un **ordre de grandeur de surface d'assise** explicitement renvoyé à `B-40` ; aucun ferraillage |
+| 7 | Aucune vérification de section ni aucun ferraillage n'a été produit | ✅ **CONFORME** | § 8 compare des **effets de charge** à des effets de charge ; § 9 est un **ordre de grandeur de surface d'assise** renvoyé à `B-40` ; **§ 3.6 donne la charge du dallage, jamais son épaisseur ni son treillis** — le dimensionnement est en `B-43` |
 
-**Verdict de la brique `B-21` (Indice B) : ✅ CONFORME — 7/7.**
+**Verdict de la brique `B-21` (Indice C) : ✅ CONFORME — 7/7.**
 
-> **Sur la révision d'indice.** Le passage de A à B **ne corrige aucune erreur de calcul** : il enregistre quatre arbitrages (`D-28`, `D-30`, `D-31`, `D-32`) qui portaient sur des valeurs déjà retenues à l'indice A. Le critère 7 (aucune vérification de section) tient dans les deux cas : `D-30` fixe une **dimension d'assise** sur un critère de portance explicitement transmis à `B-40`, elle ne dimensionne ni ne ferraille la semelle. **Le ferraillage de `SF1` reste intégralement à produire en `B-40`.**
+> **Sur la révision d'indice.** Le passage de B à C **corrige une erreur de localisation**, contrairement au passage de A à B qui n'enregistrait que des arbitrages. Elle a été trouvée en rouvrant les planches du DCE — pas par un contrôle interne, qui ne pouvait pas la voir : tous les tableaux de l'indice B étaient arithmétiquement justes.
+>
+> **Critère 7 tenu malgré l'ajout du dallage** : `B-21` produit `14,21 kN/m²` comme **charge**, et ne dit rien de l'épaisseur, du treillis, des joints ni du poinçonnement. La phrase « le dallage sera un problème de fissuration et de désolidarisation » est une **orientation**, pas un dimensionnement.
 
 ---
 
@@ -377,25 +420,31 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 
 | Code | Hypothèse | Norme d'appui | Si rectifiée |
 |---|---|---|---|
-| **H-28** | Recharge de sol 15 cm à **`22 kN/m³`** ; plancher B recalculé à **`3,91 kN/m²`** (au lieu des `3,50` déclarés) | D4 p. 5 et 14 (épaisseur) + EC1 (densité) | Si sable (`18 kN/m³`) : `−0,60 kN/m²`, `F3` à `−7 %` — conclusion inchangée |
-| **H-29** | Toiture à **`0,95 kN/m²`** (tuiles, chevrons, pannes, plafond) | D2 f. 02 — constitution sans charge | Si ardoises ou béton : `+0,20 kN/m²` — effet < 5 % sur `F4` |
-| **H-30** | Cloisons forfaitaires **`0,80 kN/m²`** | EC1-1-1 § 6.3.1.2 | Si cloisons lourdes (`1,20`) : `+0,40 kN/m²` sur tout le plancher |
-| **H-31** | ~~Salle de sport R+1 en catégorie C4~~ — **PROMUE DÉCISION `D-31`** le 20/10/2026 | EC1-1-1 tableau 6.1 | N'est plus une hypothèse. Sortie du registre des hypothèses notifiées, inscrite au RDR |
+| **H-28** | Densité de la recharge **`22 kN/m³`** ; plancher B recalculé à **`3,91 kN/m²`** (au lieu des `3,50` déclarés) | `D4` p. 5 et 14 (épaisseur) + EC1 (densité) | Si sable (`18 kN/m³`) : `−0,60 kN/m²` **sur le dallage**, `p_ELU` de `14,21` à `13,40 kN/m²` (`−6 %`) — conclusion inchangée |
+| **H-29** | Toiture à **`0,95 kN/m²`** (tuiles, chevrons, pannes, plafond) | `D2` f. 02 — constitution sans charge | Si ardoises ou béton : `+0,20 kN/m²` — effet < 5 % sur `F4` |
+| **H-30** | Cloisons forfaitaires **`0,80 kN/m²`** | EC1-1-1 § 6.3.1.2 | Si cloisons lourdes (`1,20`) : `+0,40 kN/m²` sur planchers **et** dallage |
+| **H-31** | ~~Salle de sport R+1 en catégorie C4~~ — **PROMUE DÉCISION `D-31`** le 20/10/2026 | EC1-1-1 tableau 6.1 | N'est plus une hypothèse. Sortie du registre, inscrite au RDR |
 
 ### 12.2 Transmissions aux briques aval
 
-| Brique | Ce qu'elle reçoit de `B-21` |
+| Brique | Ce qu'elle reçoit de `B-21 Ind. C` |
 |---|---|
-| **`B-22`** | Les **3** hypothèses de charges restantes à consigner (`H-28`, `H-29`, `H-30`) ; `D-31` et `D-32` y entrent comme **décisions**, pas comme hypothèses |
-| **`B-40`** | `SF1` : **80 × 80 cm** par `D-30` — recalcul des armatures, reprise de l'implantation `PLS`, vérification de mitoyenneté et de réseaux ; `S1` sous `F3` : marge de 13 % seulement |
-| **`B-42`** | `P2` : `N_ELU = 217,7 kN` (contre 85 kN au prédimensionnement) — **flambement à reprendre**, `H/b = 20` |
-| **`B-45`** | **`F3` (+109 %)** et **`R1` (+126 %)** en priorité ; puis `F2` (+28 %) et `R2-N` (+46 %) ; `P1` à 111,5 kN (capacité conservée) |
-| **`B-46`** | Réactions aux sommiers `S1`/`S2` et `σ_d = 0,094 MPa` pour la vérification de la maçonnerie |
-| **`B-25`** | `H-27` **vérifiée** et requalifiée comme conservatrice (`f_vk` majoré de 44 %) |
+| **`B-43`** | **Le dallage en priorité** : `g = 7,75 kN/m²`, `q = 2,50`, **`p_ELU = 14,21 kN/m²` sur 100 % de l'emprise** (`D-35`). Puis les planchers : `A` `1,80` / `B` `4,71 kN/m²`, solives `8 × 18` @ `0,50 m` et `IPE 160` @ `0,72 m` |
+| **`B-40`** | `SF1` : **`N_ELS = 130,5 kN`**, `σ = 0,20 MPa` en `80 × 80` — **conforme** ; l'aire d'influence de `P2` reste à confirmer (`PA-01`). Le **dallage** y entre aussi : `D-35` ajoute `15 cm` de recharge au-dessus du dallage BA `13 cm` |
+| **`B-42`** | `P2` : `N_ELU = 159,0 kN` (au lieu de `217,7`) · `P3` : `35,8` · `J1` : `39,8` — **repris dans la note `Ind. B`** : sections et ferraillage inchangés, utilisation `0,305` |
+| **`B-45`** | **`F3` (`+45 %`)** et **`R1` (`+57 %`)** en priorité ; `F2`, `R2-N`, `R2-S` revenus dans l'enveloppe ; `P1` à `100,3 kN` (capacité `546 kN`, marge conservée) |
+| **`B-46`** | Réactions aux sommiers `S1`/`S2` ; `σ_d = 0,069 MPa` pour la maçonnerie (au lieu de `0,094`) |
+| **`B-25`** | `H-27` vérifiée et **encore plus conservatrice** (`f_vk` majoré de `52 %`) ; `τ/f_vk` recalculé `0,043` — conclusion inchangée |
+| **`B-24`** | **`R-24-B1` close par `D-35`** ; l'élément `E-03` (solives) est vérifié par `B-43`, pas par `B-24` |
 
 ### 12.3 Point d'arrêt
 
-Aucun point d'arrêt chantier n'est créé par `B-21`. Les deux points d'arrêt de `B-25` (`PA-01` reconnaissance des voiles, `PA-02` liaison charpente-maçonnerie) **restent ouverts** et intègrent le nuage `Z-P2` pour la reconnaissance du soubassement sous `P2`, qui conditionne le choix entre `SF1` 60 × 60 et 80 × 80.
+Aucun point d'arrêt chantier n'est créé par `B-21`. Deux points d'arrêt restent ouverts et **la révision d'indice ne les ferme pas** :
+
+- **`PA-01`** — reconnaissance du soubassement sous `P2`, qui décide de l'aire d'influence réelle ;
+- **`PA-02`** — liaison charpente-maçonnerie.
+
+**L'emprise exacte de la recharge n'est plus un point d'arrêt** : `D-35` l'absorbe par hypothèse défavorable. Elle reste une question à poser à la MOE pour le **calepinage** du dallage (zones rechargées / non rechargées), pas pour son calcul.
 
 ---
 
@@ -403,8 +452,8 @@ Aucun point d'arrêt chantier n'est créé par `B-21`. Les deux points d'arrêt 
 
 **Tranché le 20/10/2026.** `D-28` (aucun joint), `D-30` (`SF1` 80 × 80), `D-31` (catégorie C4) et `D-32` (`2,50 kN/m²` partout) sont consignées. **Aucune de ces quatre décisions ne modifie un chiffre de cette note** : elles convertissent des valeurs conditionnelles en valeurs opposables.
 
-**Reste ouvert, et ne relève pas de cette brique : `D-29`** — *le contreventement en service est la maçonnerie existante seule*. Cette décision est portée par `B-25` (§ 10), pas par `B-21` ; elle conditionne la lecture de `σ_d = 0,094 MPa` au § 7 et donc la requalification de `H-27`. **Tant que `D-29` est ouverte, `H-27` reste une hypothèse vérifiée mais non arbitrée.**
+**Reste ouvert, et ne relève pas de cette brique : `D-29`** — *le contreventement en service est la maçonnerie existante seule*. Cette décision est portée par `B-25` (§ 10), pas par `B-21` ; elle conditionne la lecture de `σ_d = 0,069 MPa` au § 7 et donc la requalification de `H-27`. **Tant que `D-29` est ouverte, `H-27` reste une hypothèse vérifiée mais non arbitrée.**
 
 **Reste ouvert côté client : `T-04`** — la note de stabilité provisoire à demander à la MOE structure de conception, avec les grandeurs du § 6.2 de `B-25`.
 
-**Brique B-21 livrée en indice B — en attente de votre GO ou de vos observations.**
+**Brique B-21 re-livrée en indice C — en attente de votre GO ou de vos observations.**

@@ -1,5 +1,5 @@
 ==============================================================================
-B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — INDICE B
+B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — INDICE C
 ==============================================================================
 
 Aucune valeur n'est retenue. Les charges sont des effets de charge
@@ -37,14 +37,16 @@ repris de B-21 ; les résistances sont des valeurs de SENSIBILITÉ.
 
 --- E-03 SORTI DU CHAMP EN INDICE B (données D3 p. 10) -----------
     D3 p. 10 (EXI-01a) : 8x18 @ 0,50 m, portée 2,77 m, C18 (EXI-03, hypothèse)
-    Seule inconnue restante : PÉRIMÈTRE de la recharge de 15 cm (D4).
+    Périmètre de la recharge TRANCHÉ par D-35 (20/10/2026) : recharge =
+    dallage seul (D4 p. 5 et 14) → le cas SANS RECHARGE est RETENU.
     CAS                      p_ELU    M_Ed      sigma_m,d sigma/f_m,d w_ELS (C18)
-    sans recharge (RDC seul) 3.09     2.96      6.86      0.619     4.7 mm
+    sans recharge (RDC seul) 3.09     2.96      6.86      0.619     4.7 mm  <-- RETENU (D-35)
     avec recharge 15 cm      5.32     5.10      11.81     1.066     8.3 mm
     f_m,d (C18) = 11.08 MPa · flèche ELS à E_mean = 9 000 MPa (court terme),
     limite L/300 = 9.2 mm · à long terme (k_def = 0,6) la flèche est majorée.
-    AUCUNE CONCLUSION ICI : ce contrôle de cohérence motive la sortie de
-    E-03 et devient un point d'entrée dur pour B-43.
+    Le cas retenu passe : sigma/f_m,d = 0,619 (marge 38 %) et 4,7 mm
+    pour 9,2 mm admis (court terme). Reste R-24-B2 : état des abouts.
+    La vérification de section reste du ressort de B-43.
 
 --- TABLEAU 3 : ESSAIS ET SONDAGES NÉCESSAIRES --------------------
     ÉLÉMENT         ESSAI                                                   RÉFÉRENTIEL                                 NOMBRE                                ÉCHÉANCE

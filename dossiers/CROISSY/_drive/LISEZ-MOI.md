@@ -2,7 +2,7 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent le **filigrane `PRINCIPE — NE PAS EXÉCUTER`** : ce sont des documents de conception, pas des plans d'exécution.
 
-**Ce qui a changé le 20/10/2026** : `B-42` est **livrée en Ind. A** — c'est la **première note de calcul d'exécution** du dossier (poteaux et jambage en béton armé : ferraillage, cadres, débits). `B-24` est **livrée en Ind. A** (les huit éléments existants non sondés ont leur vérification littérale) — **la phase de conception est close**. `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
+**Ce qui a changé le 20/10/2026 (dernière passe)** : **la recharge de sol de `15 cm` a été localisée dans les pièces** — elle n'apparaît que **deux fois** dans les 29 planches du DCE graphique (`D4` p. 5, plan de démolition du RDC ; p. 14, sanitaires PMR), **jamais sur les planches de R+1**. C'est donc un **ouvrage de dallage**, pas une charge de plancher. Décision **`D-35`** : le dallage est calculé **comme si la recharge couvrait 100 % de son emprise** (hypothèse défavorable). Quatre notes sont révisées en conséquence : **`B-21` Ind. C** (planchers allégés, **charge du dallage `14,21 kN/m²`**), **`B-24` Ind. C** (`R-24-B1` close, solive `8 × 18` retenue à `0,619`), **`B-42` Ind. B** (`P2` `159,0 kN`) et **`B-40` Ind. F** (`SF1` `80 × 80 × 25`, planche `IndF`). `B-03` passe en **indice V** (35 décisions). `B-42` reste la **première note de calcul d'exécution** — c'est la **première note de calcul d'exécution** du dossier (poteaux et jambage en béton armé : ferraillage, cadres, débits). `B-24` est **livrée en Ind. A** (les huit éléments existants non sondés ont leur vérification littérale) — **la phase de conception est close**. `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
 
 ---
 
@@ -42,17 +42,17 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | Note | Indice | Objet |
 |---|---|---|
 | `00 — Index` | 20/10/2026 | Point d'entrée : état de la chaîne, tailles, glossaire, points ouverts |
-| `B-03 — Registre des décisions et réserves` | **U** | **34 décisions** (`D-01` à `D-24`, `D-26` à `D-34`, dont `D-29`), Articles `P1` à `P8` |
+| `B-03 — Registre des décisions et réserves` | **V** | **35 décisions** (`D-01` à `D-24`, `D-26` à `D-35`, dont `D-29`), Articles `P1` à `P8`, **`D-35`** : recharge `15 cm` sur 100 % du dallage |
 | `B-03 — Annexe hypothèses notifiées` | **H** | 30 hypothèses `H-01` à `H-30`, clause `D-34` mot pour mot |
 | `B-20 — Synthèse structurelle & conception GO` | B | Implantation de tous les ouvrages neufs, 3 planches, coupes `A-A` / `B-B` |
-| `B-21 — Descente de charges préliminaire` | B | Charges par zone, `F3` **+109 %** et `R1` **+126 %** vs `B-20` |
+| `B-21 — Descente de charges préliminaire` | **C** | Planchers **sans recharge** (`A` `1,80` · `B` `4,71 kN/m²`) · **dallage `g = 7,75` ⇒ `14,21 kN/m²` à l'ELU** sur `111,15 m²` · `F3` **+45 %** et `R1` **+57 %** vs `B-20` |
 | `B-22 — Note d'hypothèses de conception` | B | 30 hypothèses, 5 régimes de confirmation |
 | `B-23 — Exploitation du diagnostic` | **B** | **9 désordres classés**, 5 zones hors relevé, 9 appuis, séquences `P-1` à `P-7` · **planchers A et B documentés** (§ 3.2) |
-| `B-24 — Existant non sondé` | **B (`_P`)** | **7 éléments en attente de données** · 83 cas de sensibilité non contractuels · 5 campagnes d'essais · `E-03` (solives) **sorti du champ**. **Note suspendue : ne pas exécuter** |
-| `B-42 — Poteaux et jambages BA` | **A** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,400`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · 5 réserves |
+| `B-24 — Existant non sondé` | **C (`_P`)** | **7 éléments en attente de données** · 83 cas de sensibilité non contractuels · 5 campagnes d'essais · `E-03` (solives) **tranché à `0,619`** · **`R-24-B1` close**, `R-24-B2` (état des abouts) maintenue. **Note suspendue : ne pas exécuter** |
+| `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-25 — Stabilité globale, contreventement & joints` | **E** | `D-29` consignée, torsion, régularité, `D-28`. **Aucun point ouvert** |
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
-| `B-40 — Fondations superficielles & implantation PLS` | E | `SF1 80×80×25` (`D-30`), note `D-09` intégrale |
+| `B-40 — Fondations superficielles & implantation PLS` | **F** | `SF1 80×80×25` (`D-30`, `σ_ELS = 0,204 MPa`), **dallage rechargé sur 100 % de l'emprise** (`D-35`), note `D-09` intégrale |
 
 ### `02_Plans_PDF` — 10 planches PDF vectorielles
 
@@ -61,7 +61,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | B-20 Planche 1 — Synthèse structurelle `PH RDC` | B |
 | B-20 Planche 2 — Implantation des fondations `PB RDC / PLS` | B |
 | B-20 Planche 3 — `R+1` Charpente, coupes `A-A` / `B-B` et cheminement | B |
-| B-40 — Fondations `PLS` : implantation et ferraillage type | E |
+| B-40 — Fondations `PLS` : implantation et ferraillage type | **F** |
 | B-32 — Vue nettoyée structurelle RDC | D |
 | B-32 — Vue nettoyée structurelle `R+1` | D |
 | **B-25 — Contreventement, torsion, régularité** | **E** |
@@ -69,7 +69,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 
 ### `03_DXF` — 7 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
 
-Les mêmes sept familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-40 (ind. E), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**.
+Les mêmes sept familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**.
 
 ---
 

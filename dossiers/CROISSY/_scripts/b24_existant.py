@@ -254,8 +254,9 @@ def sensibilite():
 
 
 def e03_scenarios():
-    """E-03 avec ses données réelles : la seule inconnue est le PÉRIMÈTRE de
-    la recharge de 15 cm. Quatre cas, aucun retenu."""
+    """E-03 avec ses données réelles. Le périmètre de la recharge de 15 cm est
+    tranché par D-35 (recharge = dallage seul) : le cas « sans recharge » est
+    RETENU ; le cas « avec recharge » est conservé pour mémoire."""
     b, h = E03["b"], E03["h"]
     W = b * h ** 2 / 6.0
     I = b * h ** 3 / 12.0
@@ -359,7 +360,7 @@ def controle(note_txt, cas):
 # ---------------------------------------------------------------------------
 def main():
     log("=" * 78)
-    log("B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — INDICE B")
+    log("B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — INDICE C")
     log("=" * 78)
     log("")
     log("Aucune valeur n'est retenue. Les charges sont des effets de charge")
@@ -411,18 +412,21 @@ def main():
 
     log("--- E-03 SORTI DU CHAMP EN INDICE B (données D3 p. 10) -----------")
     log("    %s" % E03["source"])
-    log("    Seule inconnue restante : PÉRIMÈTRE de la recharge de 15 cm (D4).")
+    log("    Périmètre de la recharge TRANCHÉ par D-35 (20/10/2026) : recharge =")
+    log("    dallage seul (D4 p. 5 et 14) → le cas SANS RECHARGE est RETENU.")
     log("    %-24s %-8s %-9s %-9s %-9s %s"
         % ("CAS", "p_ELU", "M_Ed", "sigma_m,d", "sigma/f_m,d", "w_ELS (C18)"))
     for lab, p_, m_, sd_, w_ in e03_scenarios():
-        log("    %-24s %-8.2f %-9.2f %-9.2f %-9.3f %.1f mm"
-            % (lab, p_, m_, sd_, sd_ / fm_d("C18"), w_))
+        tag = "  <-- RETENU (D-35)" if lab.startswith("sans recharge") else ""
+        log("    %-24s %-8.2f %-9.2f %-9.2f %-9.3f %.1f mm%s"
+            % (lab, p_, m_, sd_, sd_ / fm_d("C18"), w_, tag))
     log("    f_m,d (C18) = %.2f MPa · flèche ELS à E_mean = 9 000 MPa (court terme),"
         % fm_d("C18"))
     log("    limite L/300 = %.1f mm · à long terme (k_def = 0,6) la flèche est majorée."
         % (E03["L"] / 300.0))
-    log("    AUCUNE CONCLUSION ICI : ce contrôle de cohérence motive la sortie de")
-    log("    E-03 et devient un point d'entrée dur pour B-43.")
+    log("    Le cas retenu passe : sigma/f_m,d = 0,619 (marge 38 %) et 4,7 mm")
+    log("    pour 9,2 mm admis (court terme). Reste R-24-B2 : état des abouts.")
+    log("    La vérification de section reste du ressort de B-43.")
     log("")
 
     log("--- TABLEAU 3 : ESSAIS ET SONDAGES NÉCESSAIRES --------------------")

@@ -1,7 +1,7 @@
 ==============================================================================================================
-B-21 — DESCENTE DE CHARGES PRÉLIMINAIRE — CONCEPTION — INDICE A
+B-21 — DESCENTE DE CHARGES PRÉLIMINAIRE — CONCEPTION — INDICE C
 Projet CROISSY-FLORA (ID-01) — CARNAC v3.0 — régime OUTILLÉ (V13)
-Exécution : 2026-10-20 14:46:10
+Exécution : 2026-10-20 21:37:46
 Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION (remplacée par les DDC d'exécution B-40 à B-50)
 ==============================================================================================================
 
@@ -37,12 +37,20 @@ Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION (remplacée par les DDC d'ex�
       Plancher A : D2 déclare 1.00 kN/m² · recalcul par couches 0.80 kN/m² → retenu 1.00
       Plancher B : D2 déclare 3.50 kN/m² · recalcul par couches 3.91 kN/m² → retenu 3.91  (D2 sous-déclare de 12 %)
 
-    Recharge de sol (D4 p. 5 et 14) : 3.30 kN/m² (ép. 0.15 m × γ 22 kN/m³) — H-28 — densité 22 kN/m³ retenue ; D4 prescrit l'épaisseur, pas la densité
+    Recharge de sol (D4 p. 5 et 14) : 3.30 kN/m² (ép. 0.15 m × γ 22 kN/m³) — H-28 (densité 22 kN/m³) · D-35 : réputée sur 100 % de l'emprise du dallage
     Cloisons forfaitaires : 0.80 kN/m² — EC1-1-1 § 6.3.1.2 (H-30)
 
-    → Plancher A avec recharge et cloisons : g = 5.10 kN/m²
-    → Plancher B avec recharge et cloisons : g = 8.01 kN/m²
+    → Plancher A + cloisons : g = 1.80 kN/m²  (sans recharge — D-35)
+    → Plancher B + cloisons : g = 4.71 kN/m²  (sans recharge — D-35)
     → Toiture : g = 0.95 kN/m²
+
+    DALLAGE (D-35) — la recharge est ici, sur 100 % de l'emprise :
+      Dallage BA C25/30 ép. 13 cm                     3.25 kN/m²   B-20 § infrastructure — dallage désolidarisé
+      Revêtement de sol (carrelage / sol souple)      0.40 kN/m²   D4 p. 8 (plans sols)
+      Recharge de sol 15 cm                           3.30 kN/m²   D-35 (hypothèse défavorable)
+      Cloisons forfaitaires                           0.80 kN/m²   H-30
+      TOTAL g                                         7.75 kN/m²
+      Exploitation q = 2.50 kN/m² (D-32)  →  p_ELS = 10.25 · p_ELU = 14.21 kN/m²
 
 [2] CHARGES D'EXPLOITATION PAR CATÉGORIE EC1
     Catégorie   q_k (kN/m²)  Source                                                                                    
@@ -54,79 +62,79 @@ Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION (remplacée par les DDC d'ex�
 [3] CHARGES LINÉIQUES SUR LES POUTRES ET LINTEAUX
     p = bande tributaire × (g plancher + q exploitation) + mur au-dessus
     Poutre   L(m)   bande(m)  mur(kN/m)  p_ELS(kN/m)   p_ELU(kN/m)   Source                                                                          
-    F1a      1.00   1.00      38.5       49.0          76.5          Mur de moellons au-dessus (0,50 m × 3,50 m) + bande de plancher 1,00 m          
-    F1b      0.90   1.00      38.5       49.0          76.5          Mur de moellons au-dessus + bande de plancher 1,00 m                            
-    F1c      0.85   1.00      38.5       49.0          76.5          Mur de moellons au-dessus + bande de plancher 1,00 m                            
-    F2       2.85   3.77      0.0        39.6          63.1          Bande 3,77 m = demi-portées 1→2 et 2→3 — plancher seul, mur supprimé            
-    F3       3.85   2.75      0.0        28.9          46.1          Bande 2,75 m = 0,98 m (vers file 3) + 1,77 m (vers file 4) — plancher seul      
-    F4       4.88   1.61      0.0        2.9           4.7           Bande 1,615 m = demi-portées B→C et C→D — toiture basse seule (aucun étage au-de
-    R1       3.85   3.46      0.0        36.3          57.9          Bande 3,455 m = demi-portées 3→4 et 4→5 — moisage sous poutre bois 20×15        
-    R2-N     3.82   2.08      0.0        21.9          34.8          Bande 2,08 m = demi-travée de part et d'autre du sous-solivage (4,16/2)         
-    R2-S     3.82   1.62      0.0        17.0          27.1          Bande 1,62 m = 2 × 0,81 m (demi-travée 2→3 et 3→refend)                         
+    F1a      1.00   1.00      38.5       52.6          71.4          Mur de moellons au-dessus (0,50 m × 3,50 m) + bande de plancher 1,00 m          
+    F1b      0.90   1.00      38.5       52.6          71.4          Mur de moellons au-dessus + bande de plancher 1,00 m                            
+    F1c      0.85   1.00      38.5       52.6          71.4          Mur de moellons au-dessus + bande de plancher 1,00 m                            
+    F2       2.85   3.77      0.0        31.3          43.8          Bande 3,77 m = demi-portées 1→2 et 2→3 — plancher seul, mur supprimé            
+    F3       3.85   2.75      0.0        22.8          32.0          Bande 2,75 m = 0,98 m (vers file 3) + 1,77 m (vers file 4) — plancher seul      
+    F4       4.88   1.61      0.0        3.3           4.7           Bande 1,615 m = demi-portées B→C et C→D — toiture basse seule (aucun étage au-de
+    R1       3.85   3.46      0.0        28.6          40.2          Bande 3,455 m = demi-portées 3→4 et 4→5 — moisage sous poutre bois 20×15        
+    R2-N     3.82   2.08      0.0        17.2          24.2          Bande 2,08 m = demi-travée de part et d'autre du sous-solivage (4,16/2)         
+    R2-S     3.82   1.62      0.0        13.4          18.8          Bande 1,62 m = 2 × 0,81 m (demi-travée 2→3 et 3→refend)                         
     R3-N     1.55   0.00      0.0        0.0           0.0           Linteau de baie : reprend la réaction de R2-N à mi-portée — appui de rive       
     R3-S     1.55   0.00      0.0        0.0           0.0           Linteau de baie : reprend la réaction de R2-S à mi-portée — appui de rive       
 
 [4] DESCENTE DE CHARGES PAR PORTEUR — TABLEAU ELS (ΣG_k + Q_k,1)
     Porteur         Type                A_inf(m²) G(kN)     Q(kN)     continuité  N_ELS(kN)       
-    P1-N            Poteau métal        0.63      75.6      6.3       1.00        81.9 kN         
-    P1-S            Poteau métal        0.63      75.6      6.3       1.00        81.9 kN         
-    P2              Poteau BA 15×25     11.46     118.1     38.9      1.15        157.0 kN        
-    P3              Poteau BA 50×40     0.23      27.0      2.2       1.00        29.3 kN         
-    J1              Jambage BA 24×50    0.25      30.0      2.5       1.00        32.5 kN         
-    M11 (RDC)       Voile maçonnerie    —         36.9      13.8      1.15        50.7 kN/m       
-    M03 (RDC)       Voile maçonnerie    —         31.0      11.6      1.15        42.5 kN/m       
-    SF1 (sous P2)   Semelle isolée      11.46     135.8     44.7      1.15        180.5 kN        
+    P1-N            Poteau métal        0.63      67.3      6.3       1.00        73.6 kN         
+    P1-S            Poteau métal        0.63      67.3      6.3       1.00        73.6 kN         
+    P2              Poteau BA 15×25     11.46     74.6      38.9      1.15        113.5 kN        
+    P3              Poteau BA 50×40     0.23      24.0      2.2       1.00        26.3 kN         
+    J1              Jambage BA 24×50    0.25      26.7      2.5       1.00        29.2 kN         
+    M11 (RDC)       Voile maçonnerie    —         23.3      13.8      1.15        37.1 kN/m       
+    M03 (RDC)       Voile maçonnerie    —         19.6      11.6      1.15        31.1 kN/m       
+    SF1 (sous P2)   Semelle isolée      11.46     85.8      44.7      1.15        130.5 kN        
 
 [5] DESCENTE DE CHARGES PAR PORTEUR — TABLEAU ELU (1,35 ΣG_k + 1,5 Q_k,1)
     Porteur         1,35·G     1,5·Q      continuité  N_ELU           N/A_inf     
-    P1-N            102.1      9.4        1.00        111.5 kN        177.1       
-    P1-S            102.1      9.4        1.00        111.5 kN        177.1       
-    P2              159.4      58.3       1.15        217.7 kN        19.0        
-    P3              36.5       3.4        1.00        39.8 kN         173.2       
-    J1              40.5       3.8        1.00        44.3 kN         177.1       
-    M11 (RDC)       49.8       20.7       1.15        81.0 kN/m       19.7        
-    M03 (RDC)       41.8       17.4       1.15        68.0 kN/m       19.7        
-    SF1 (sous P2)   183.3      67.1       1.15        250.4 kN        21.8        
+    P1-N            90.9       9.4        1.00        100.3 kN        159.2       
+    P1-S            90.9       9.4        1.00        100.3 kN        159.2       
+    P2              100.7      58.3       1.15        159.0 kN        13.9        
+    P3              32.5       3.4        1.00        35.8 kN         155.8       
+    J1              36.1       3.8        1.00        39.8 kN         159.2       
+    M11 (RDC)       31.4       20.7       1.15        59.9 kN/m       14.6        
+    M03 (RDC)       26.4       17.4       1.15        50.3 kN/m       14.6        
+    SF1 (sous P2)   115.8      67.1       1.15        182.9 kN        16.0        
 
 [6] VÉRIFICATION DE L'HYPOTHÈSE H-27 (σ_d SUR LES VOILES)
-    Charge totale ELU transmise aux voiles : 1766 kN
+    Charge totale ELU transmise aux voiles : 1290 kN
     Aire portante des 12 voiles RDC : 18.79 m²
-    σ_d,calculé = 1766 kN / 18.79 m² = 94 kPa = 0.094 MPa
+    σ_d,calculé = 1290 kN / 18.79 m² = 69 kPa = 0.069 MPa
     H-27 retient σ_d = 0,300 MPa → f_vk = 108 kPa
-    Valeur calculée     σ_d = 0.094 MPa → f_vk = 75 kPa
-    → H-27 est CONSERVATRICE : elle majore f_vk de 44 %.
-    → En retenant la valeur calculée, τ/f_vk de B-25 passerait de 0,028 à 0.040 — conclusion de B-25 inchangée.
+    Valeur calculée     σ_d = 0.069 MPa → f_vk = 71 kPa
+    → H-27 est CONSERVATRICE : elle majore f_vk de 52 %.
+    → En retenant la valeur calculée, τ/f_vk de B-25 passerait de 0,028 à 0.043 — conclusion de B-25 inchangée.
 
 [7] CONTRÔLE DE COHÉRENCE GLOBAL
     Somme des aires d'influence des 5 poteaux : 12.95 m²
     Surface de plancher R+1 (D-22) : 106.92 m²
     → les poteaux ne couvrent que 12.1 % de la surface : le reste est porté directement par les murs — cohérent avec un bâtiment en maçonnerie porteuse
-    Charge totale ELS estimée sur le R+1 : 1124 kN
-    Charge totale ELU estimée sur le R+1 : 1766 kN
+    Charge totale ELS estimée sur le R+1 : 771 kN
+    Charge totale ELU estimée sur le R+1 : 1290 kN
 
 [8] CONTRÔLE DE COHÉRENCE AVEC LE PRÉDIMENSIONNEMENT DE B-20
     On compare des EFFETS DE CHARGE (moment de flexion M_Ed = p_ELU·L²/8), jamais des
     résistances : la comparaison à M_el,Rd relève de B-45, pas de cette brique.
     Le coefficient de continuité 1,15 est appliqué à p puis à M — majoration volontaire.
     Élément           M_Ed B-20     M_Ed B-21     écart    Conséquence transmise                                         
-    F1a               10.7 kN·m     9.6 kN·m      -11 %    cohérent avec B-20 — poursuite sans réserve                   
-    F1b               10.7 kN·m     7.7 kN·m      -28 %    cohérent avec B-20 — poursuite sans réserve                   
-    F1c               10.7 kN·m     6.9 kN·m      -35 %    cohérent avec B-20 — poursuite sans réserve                   
-    F2                50.0 kN·m     64.1 kN·m     +28 %    B-45 : reprendre le calcul avec l'effet de charge B-21        
-    F3                40.8 kN·m     85.3 kN·m     +109 %   B-45 : reprendre le calcul avec l'effet de charge B-21        
+    F1a               10.7 kN·m     8.9 kN·m      -17 %    cohérent avec B-20 — poursuite sans réserve                   
+    F1b               10.7 kN·m     7.2 kN·m      -32 %    cohérent avec B-20 — poursuite sans réserve                   
+    F1c               10.7 kN·m     6.4 kN·m      -40 %    cohérent avec B-20 — poursuite sans réserve                   
+    F2                50.0 kN·m     44.5 kN·m     -11 %    cohérent avec B-20 — poursuite sans réserve                   
+    F3                40.8 kN·m     59.2 kN·m     +45 %    B-45 : reprendre le calcul avec l'effet de charge B-21        
     F4                20.1 kN·m     14.1 kN·m     -30 %    cohérent avec B-20 — poursuite sans réserve                   
-    R1                47.5 kN·m     107.2 kN·m    +126 %   B-45 : reprendre le calcul avec l'effet de charge B-21        
-    R2-N              43.5 kN·m     63.5 kN·m     +46 %    B-45 : reprendre le calcul avec l'effet de charge B-21        
-    R2-S              43.5 kN·m     49.5 kN·m     +14 %    cohérent avec B-20 — poursuite sans réserve                   
+    R1                47.5 kN·m     74.4 kN·m     +57 %    B-45 : reprendre le calcul avec l'effet de charge B-21        
+    R2-N              43.5 kN·m     44.1 kN·m     +1 %     cohérent avec B-20 — poursuite sans réserve                   
+    R2-S              43.5 kN·m     34.4 kN·m     -21 %    cohérent avec B-20 — poursuite sans réserve                   
 
     Poteau            N_ELU B-20    N_ELU B-21    écart    Conséquence transmise                                         
-    P1-N              60 kN         112 kN        +86 %    B-45 : capacité 546 kN, marge conservée                       
-    P2                85 kN         218 kN        +156 %   B-42 : flambement et section à reprendre                      
-    SF1 (N_ELS)       63,2 kN       180.5 kN      +186 %   B-40 : capacité portante à revérifier — voir § [9]            
+    P1-N              60 kN         100 kN        +67 %    B-45 : capacité 546 kN, marge conservée                       
+    P2                85 kN         159 kN        +87 %    B-42 : flambement et section à reprendre                      
+    SF1 (N_ELS)       63,2 kN       130.5 kN      +106 %   B-40 : capacité portante à revérifier — voir § [9]            
 
 [9] SF1 — COHÉRENCE DE LA SURFACE D'ASSISE AVEC LA DDC (ordre de grandeur, B-40 tranche)
-    Semelle actuelle : 60 × 60 cm = 0.36 m² (D-14, dimension plancher)
-    N_ELS = 180.5 kN → σ_ELS = 501 kPa = 0.50 MPa (admissible 0,30 MPa → NON CONFORME)
-    Largeur requise : B ≥ √(N_ELS / 0,30 MPa) = √(180.5/300) = 0.78 m
-    → si l'aire d'influence de 11,46 m² est confirmée, SF1 doit passer de 60 × 60 à 80 × 80 cm
-    → N_ELU = 250.4 kN sur 0,64 m² = 391 kPa (admissible 0,49 MPa → conforme)
+    Semelle retenue : 80 × 80 cm = 0.64 m² (D-30 ; D-10/D-14 : 60 x 60 minimum)
+    N_ELS = 130.5 kN → σ_ELS = 204 kPa = 0.20 MPa (admissible 0,30 MPa → conforme)
+    Largeur requise : B ≥ √(N_ELS / 0,30 MPa) = √(130.5/300) = 0.66 m
+    → largeur strictement requise : 66 cm ; D-30 retient 80 x 80 cm (conforme)
+    → N_ELU = 182.9 kN sur 0.64 m² = 286 kPa (admissible 0,49 MPa → conforme)

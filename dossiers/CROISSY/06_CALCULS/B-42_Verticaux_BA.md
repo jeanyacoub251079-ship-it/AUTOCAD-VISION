@@ -10,13 +10,15 @@
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b42_ba.py` |
-| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b42_ba.txt` |
-| Résultats machine | `dossiers/CROISSY/_rendus/b42_ba.json` |
+| Journal `OUT-03` | `dossiers/CROISSY/_rendus/b42_ba.txt` (2 976 o) |
+| Résultats machine | `dossiers/CROISSY/_rendus/b42_ba.json` (1 726 o) |
 | Sortie graphique | **Aucune** — le ferraillage est porté sur les plans `B-60` |
-| **Indice** | **A** — création de la brique |
+| **Indice** | **B** — `N_ELU` repris de `B-21 Ind. C` (la recharge de `15 cm` sort des planchers, `D-35`) ; sections et ferraillage **inchangés** |
 | Date | **20/10/2026** |
-| Brique suivante | **`B-43`** (planchers et plancher haut) |
+| Brique suivante | **`B-43`** (planchers, plancher haut et **dallage** — `D-35`) |
 
+> **Révision B — 20/10/2026 (`D-35`).** `B-21 Ind. C` a corrigé la localisation de la recharge de `15 cm` : elle pèse sur le **dallage**, pas sur les planchers hauts. Les efforts normaux baissent — `P2` de `217,7` à **`159,0 kN`** (`−27 %`), `P3` de `39,8` à `35,8`, `J1` de `44,3` à `39,8` — et **aucune section ni aucun ferraillage ne change** : `6 HA12` reste imposé par l'**espacement maximal** des barres sur les faces étroites, pas par la résistance. L'utilisation de `P2` passe de `0,400` à **`0,305`** ; la pression d'appui de `J1` sur la maçonnerie de `0,369` à **`0,332 MPa`** — le point dur du lot s'éloigne, il ne disparaît pas.
+>
 > **Ce que cette brique fait.** Trois porteurs verticaux en béton armé sont implantés par `B-20` : `P2` (`15 × 25`), `P3` (`50 × 40`) et `J1` (jambage `24 × 50`). `B-20` les avait **annoncés** surabondants — « capacité `510 kN` », « `850 kN` » — sans le démontrer. `B-42` remplace l'annonce par un **diagramme d'interaction `N-M`** calculé par compatibilité des déformations, un **flambement EC2 § 5.8** et un **ferraillage justifié**.
 
 ---
@@ -26,13 +28,13 @@
 | Constat | Chiffre | Conséquence |
 |---|---|---|
 | Porteurs vérifiés | **3** (`P2`, `P3`, `J1`) | Tous satisfont l'ELU de flexion composée |
-| Porteur **gouvernant** | **`P2`** | `M_Ed / M_Rd = 0,400` — c'est le seul des trois réellement sollicité |
-| `P3` et `J1` | `0,014` et `0,016` | Ce n'est pas la résistance qui les dimensionne : c'est le **minimum réglementaire** |
-| Seul porteur **élancé** | **`P2`** | `lambda = 64,7` contre `lambda_lim = 16,8` : les effets du 2ᵉ ordre **doivent** être calculés |
+| Porteur **gouvernant** | **`P2`** | `M_Ed / M_Rd = 0,305` — c'est le seul des trois réellement sollicité |
+| `P3` et `J1` | `0,013` et `0,015` | Ce n'est pas la résistance qui les dimensionne : c'est le **minimum réglementaire** |
+| Seul porteur **élancé** | **`P2`** | `lambda = 64,7` contre `lambda_lim = 19,7` : les effets du 2ᵉ ordre **doivent** être calculés |
 | Ferraillage retenu | **6 HA12** partout | `679 mm²` — imposé par l'**espacement maximal** des barres, pas par la résistance |
 | Points durs réels | **2** | (1) l'excentricité de l'appui de `F2` sur `P2` ; (2) la **pression d'appui de `J1` sur la maçonnerie** |
 
-> **Le résultat qui compte n'est pas `0,400`, c'est `0,92`.** `J1` transmet `44,3 kN` sur `0,12 m²`, soit `0,369 MPa`. À `f_k = 1,5 MPa` (`D-34`), cela consomme **62 %** de la résistance de calcul ; à `f_k = 1,0 MPa`, **92 %** ; à `0,5 MPa`, **185 % — non satisfait**. Autrement dit : **la clause `D-34` n'est pas une formalité contractuelle, c'est le risque d'exécution le plus concret du lot.** Le béton, lui, est confortable partout.
+> **Le résultat qui compte n'est pas `0,305`, c'est `0,83`.** `J1` transmet `39,8 kN` sur `0,12 m²`, soit `0,332 MPa`. À `f_k = 1,5 MPa` (`D-34`), cela consomme **55 %** de la résistance de calcul ; à `f_k = 1,0 MPa`, **83 %** ; à `0,5 MPa`, **166 % — non satisfait**. Autrement dit : **la clause `D-34` n'est pas une formalité contractuelle, c'est le risque d'exécution le plus concret du lot.** Le béton, lui, est confortable partout — `P2` travaille à `19 %` de son effort normal résistant.
 
 ---
 
@@ -69,9 +71,9 @@
 
 | Donnée | Valeur retenue | Source | Remarque |
 |---|---|---|---|
-| Effort normal `P2` | `N_ELU = 217,7 kN` | `B-21` § 6.2 (tableau 5) | `A_inf = 11,46 m²`, coefficient de continuité `1,15` |
-| Effort normal `P3` | `N_ELU = 39,8 kN` | `B-21` § 6.2 | `A_inf = 0,23 m²` |
-| Effort normal `J1` | `N_ELU = 44,3 kN` | `B-21` § 6.2 | `A_inf = 0,25 m²` |
+| Effort normal `P2` | `N_ELU = 159,0 kN` | **`B-21 Ind. C`** § 6.2 (tableau 5) | `A_inf = 11,46 m²`, continuité `1,15`, **sans recharge** (`D-35`) |
+| Effort normal `P3` | `N_ELU = 35,8 kN` | **`B-21 Ind. C`** § 6.2 | `A_inf = 0,23 m²` |
+| Effort normal `J1` | `N_ELU = 39,8 kN` | **`B-21 Ind. C`** § 6.2 | `A_inf = 0,25 m²` |
 | Section `P2` | `150 × 250 mm` | `B-20` planche 1 (`PH RDC`) | **Implantée : non modifiable sans reprise de `B-20`** |
 | Section `P3` | `400 × 500 mm` | `B-20` planche 1 | Idem |
 | Section `J1` | `240 × 500 mm` | `B-20` planche 1 | Idem |
@@ -107,9 +109,9 @@
 | `b_min` | `150 mm` | Section `150 × 250` — axe faible |
 | `i` | `43,3 mm` | `150 / √12` |
 | `lambda` | **`64,7`** | `2 800 / 43,3` |
-| `n = N_Ed / (A_c f_cd)` | `0,410` | `217 700 / (37 500 × 14,17)` |
-| `lambda_lim` | **`16,8`** | `20 × 0,7 × 1,1 × 0,7 / √0,410` |
-| Effets du 2ᵉ ordre | **OBLIGATOIRES** | `64,7 > 16,8` |
+| `n = N_Ed / (A_c f_cd)` | `0,299` | `159 000 / (37 500 × 14,17)` |
+| `lambda_lim` | **`19,7`** | `20 × 0,7 × 1,1 × 0,7 / √0,299` |
+| Effets du 2ᵉ ordre | **OBLIGATOIRES** | `64,7 > 19,7` |
 
 ### 4.2 Excentricités et moment de calcul
 
@@ -117,12 +119,14 @@
 |---|---|---|
 | `e_0` | `20,0 mm` | Minimum EC2 § 6.1(4) — `h/30 = 8,3 mm < 20 mm` |
 | `e_i` | `7,0 mm` | `l0 / 400 = 2 800 / 400` |
-| `K_r` | `0,992` | `(n_u − n)/(n_u − n_bal)` avec `n_u = 1,556`, `n_bal = 0,4` |
+| `K_r` | `1,00` | `(n_u − n)/(n_u − n_bal)` avec `n_u = 1,500`, `n_bal = 0,4` → `1,078`, **plafonné à `1,00`** |
 | `K_phi` | `1,70` | `1 + 0,35 × 2,0` |
-| `1/r` | `0,0399 m⁻¹` | `K_r · K_phi · 0,002174 / (0,45 × 0,204)` |
-| `e_2` | **`31,7 mm`** | `0,0399 × 2,8² / pi²` |
-| **`e_tot`** | **`58,7 mm`** | `20,0 + 7,0 + 31,7` |
-| **`M_Ed`** | **`12,8 kN·m`** | `217,7 × 0,0587` |
+| `1/r` | `0,0403 m⁻¹` | `K_r · K_phi · 0,002174 / (0,45 × 0,204)` |
+| `e_2` | **`32,0 mm`** | `0,0403 × 2,8² / pi²` |
+| **`e_tot`** | **`59,0 mm`** | `20,0 + 7,0 + 32,0` |
+| **`M_Ed`** | **`9,4 kN·m`** | `159,0 × 0,0590` |
+
+> **Ce qui a changé avec `D-35`, et ce qui n'a pas changé.** La charge baisse, donc `n` baisse (`0,410 → 0,299`) et `lambda_lim` remonte (`16,8 → 19,7`) : le poteau reste **largement au-delà** du seuil du 2ᵉ ordre (`64,7`). L'excentricité du 2ᵉ ordre, elle, **augmente légèrement** (`31,7 → 32,0 mm`) — un effort normal plus faible courbe davantage —, mais le moment de calcul chute avec `N` (`12,8 → 9,4 kN·m`). **C'est le couple `(N, M)` qui compte, pas l'un ou l'autre.**
 
 > Le bras utile est pris à `d = 204 mm` (soit `phi = 16 mm` supposé, alors que le ferraillage retenu est `HA12`). C'est **volontairement défavorable** : un `d` plus petit majore la courbure, donc `e_2`.
 
@@ -130,16 +134,16 @@
 
 | Grandeur | Valeur | Verdict |
 |---|---|---|
-| `N_Rd,max` | `826,6 kN` | `A_c f_cd + A_s f_yd` — `N_Ed / N_Rd = 0,263` |
-| `M_Rd` à `N_Ed = 217,7 kN` | `31,9 kN·m` | Interpolé sur le diagramme d'interaction (6 HA12) |
-| **`M_Ed / M_Rd`** | **`0,400`** | ✅ **Satisfait** — marge `60 %` |
+| `N_Rd,max` | `826,6 kN` | `A_c f_cd + A_s f_yd` — `N_Ed / N_Rd = 0,192` |
+| `M_Rd` à `N_Ed = 159,0 kN` | `30,7 kN·m` | Interpolé sur le diagramme d'interaction (6 HA12) |
+| **`M_Ed / M_Rd`** | **`0,305`** | ✅ **Satisfait** — marge `70 %` |
 | `As` retenu | `6 HA12 = 679 mm²` | Soit `1,81 %` de `A_c` |
-| `As,min` | `75 mm²` | `max(0,10 × 217 700 / 434,8 ; 0,002 × 37 500)` |
+| `As,min` | `75 mm²` | `max(0,10 × 159 000 / 434,8 ; 0,002 × 37 500) = max(36,6 ; 75)` |
 | `As,max` | `1 500 mm²` | `0,04 × 37 500` |
 | Distance entre barres | `83 mm` | `<= min(20 × 12 ; 150 ; 400) = 150 mm` ✅ |
 | Cadres | `HA8 e150` | `<= min(20 × 12 ; 150 ; 400) = 150 mm` ✅ — `phi_t = 8 >= max(6 ; 3)` |
 
-**Pourquoi 6 barres et non 4.** Avec 2 barres par face, la distance entre barres vaudrait `166 mm` sur la face de `250 mm` — au-delà de la limite de `150 mm` imposée par la largeur `b = 150 mm`. `P2` est donc ferraillé à **3 barres par face**, non pas parce que la résistance l'exige (`0,400`), mais parce que la **géométrie étroite** l'impose. C'est un point à ne pas « optimiser » en exécution.
+**Pourquoi 6 barres et non 4.** Avec 2 barres par face, la distance entre barres vaudrait `166 mm` sur la face de `250 mm` — au-delà de la limite de `150 mm` imposée par la largeur `b = 150 mm`. `P2` est donc ferraillé à **3 barres par face**, non pas parce que la résistance l'exige (`0,305`), mais parce que la **géométrie étroite** l'impose. C'est un point à ne pas « optimiser » en exécution.
 
 ---
 
@@ -149,17 +153,17 @@
 |---|---|---|
 | `i` (axe faible) | `115,5 mm` (`400 / √12`) | `69,3 mm` (`240 / √12`) |
 | `lambda` | `24,2` | `40,4` |
-| `n` | `0,012` | `0,022` |
-| `lambda_lim` | `91,0` | `66,8` |
+| `n` | `0,013` | `0,023` |
+| `lambda_lim` | `95,9` | `70,5` |
 | 2ᵉ ordre | **non nécessaire** | **non nécessaire** |
-| `M_Ed` (avec `e_0 + e_i`) | `1,1 kN·m` | `1,2 kN·m` |
-| `M_Rd` à `N_Ed` | `74,4 kN·m` | `73,0 kN·m` |
-| **`M_Ed / M_Rd`** | **`0,014`** | **`0,016`** |
+| `M_Ed` (avec `e_0 + e_i`) | `1,0 kN·m` | `1,1 kN·m` |
+| `M_Rd` à `N_Ed` | `73,6 kN·m` | `72,1 kN·m` |
+| **`M_Ed / M_Rd`** | **`0,013`** | **`0,015`** |
 | `As,min` | `400 mm²` (`0,002 A_c`) | `240 mm²` (`0,002 A_c`) |
 | `As` retenu | `6 HA12 = 679 mm²` | `6 HA12 = 679 mm²` |
 | Cadres | `HA8 e200` | `HA8 e200` |
 
-> **Ces deux porteurs sont massifs parce que le plan l'a voulu, pas parce que le calcul l'exige.** Un `50 × 40` sous `39,8 kN` travaille à `1,4 %` de son moment résistant. Je ne propose **pas** de réduire les sections : elles sont implantées, elles participent à la raideur et au contreventement, et `D-29` fait reposer la stabilité horizontale sur la maçonnerie **et** sur ces appuis. Réduire une section implantée serait une reprise de `B-20`, pas une optimisation de `B-42`.
+> **Ces deux porteurs sont massifs parce que le plan l'a voulu, pas parce que le calcul l'exige.** Un `50 × 40` sous `35,8 kN` travaille à `1,3 %` de son moment résistant. Je ne propose **pas** de réduire les sections : elles sont implantées, elles participent à la raideur et au contreventement, et `D-29` fait reposer la stabilité horizontale sur la maçonnerie **et** sur ces appuis. Réduire une section implantée serait une reprise de `B-20`, pas une optimisation de `B-42`.
 >
 > En revanche, `6 HA12` **est** le minimum utile : `4 HA12` ne satisferait pas l'espacement maximal sur la face de `500 mm` (`416 mm > 240 mm`).
 
@@ -169,9 +173,9 @@
 
 | Élément | Section | `N_Ed` | `M_Ed` | `M_Rd` | Utilisation | Acier | Cadres |
 |---|---|---|---|---|---|---|---|
-| **`P2`** | `15 × 25` | `217,7 kN` | `12,8 kN·m` | `31,9 kN·m` | **`0,400`** | `6 HA12` | `HA8 e150` |
-| **`P3`** | `50 × 40` | `39,8 kN` | `1,1 kN·m` | `74,4 kN·m` | `0,014` | `6 HA12` | `HA8 e200` |
-| **`J1`** | `24 × 50` | `44,3 kN` | `1,2 kN·m` | `73,0 kN·m` | `0,016` | `6 HA12` | `HA8 e200` |
+| **`P2`** | `15 × 25` | `159,0 kN` | `9,4 kN·m` | `30,7 kN·m` | **`0,305`** | `6 HA12` | `HA8 e150` |
+| **`P3`** | `50 × 40` | `35,8 kN` | `1,0 kN·m` | `73,6 kN·m` | `0,013` | `6 HA12` | `HA8 e200` |
+| **`J1`** | `24 × 50` | `39,8 kN` | `1,1 kN·m` | `72,1 kN·m` | `0,015` | `6 HA12` | `HA8 e200` |
 
 **Débits indicatifs**, à `H = 2 800 mm` (hypothèse `B-20`, à confirmer au relevé) — longueur de barre `H + 2 × 40 phi = 2 800 + 960 = 3 760 mm` :
 
@@ -190,20 +194,20 @@
 
 ### 7.1 `P2` sur `SF1` — béton sur béton, sans objet
 
-`P2` repose sur la semelle `SF1` (`80 × 80 × 25`, `D-30`, `B-40`), pas sur la maçonnerie : la pression vaut `217,7 / 0,64 = 0,34 MPa` sur du `C25/30`, soit un rapport très faible. La vérification de `SF1` elle-même appartient à `B-40`.
+`P2` repose sur la semelle `SF1` (`80 × 80 × 25`, `D-30`, `B-40`), pas sur la maçonnerie : la pression vaut `159,0 / 0,64 = 0,25 MPa` sur du `C25/30` — soit `16 %` de `f_cd`, un rapport très faible. La vérification de `SF1` elle-même appartient à `B-40`.
 
 ### 7.2 `P3` et `J1` sur la maçonnerie — **le vrai point dur**
 
 | Élément | `A_appui` | `sigma_d` | `f_k = 1,5 MPa` (`D-34`) | `f_k = 1,0 MPa` | `f_k = 0,5 MPa` |
 |---|---|---|---|---|---|
-| `P3` | `0,200 m²` | `0,199 MPa` | `0,33` ✅ | `0,50` ✅ | `0,99` ⚠️ |
-| `J1` | `0,120 m²` | `0,369 MPa` | `0,62` ✅ | `0,92` ⚠️ | **`1,85` ❌** |
+| `P3` | `0,200 m²` | `0,179 MPa` | `0,30` ✅ | `0,45` ✅ | `0,89` ⚠️ |
+| `J1` | `0,120 m²` | `0,332 MPa` | `0,55` ✅ | `0,83` ⚠️ | **`1,66` ❌** |
 
-> **`J1` est le point faible du lot.** Il consomme `62 %` de la résistance d'appui dans l'hypothèse `D-34`. Toute valeur de `f_k` inférieure à `1,15 MPa` le met en défaut. Deux issues, **à trancher en `B-46`** et non ici : soit les essais confirment `f_k >= 1,5 MPa`, soit un **dé de répartition** est ajouté sous `J1` — ce qui modifie la planche et relève d'une décision `RDR`, pas d'une initiative de note de calcul.
+> **`J1` reste le point faible du lot.** Il consomme `55 %` de la résistance d'appui dans l'hypothèse `D-34` — contre `62 %` à l'indice A. Toute valeur de `f_k` inférieure à **`0,83 MPa`** le met en défaut (contre `1,15 MPa`). **Le dé de répartition n'est plus une urgence, il reste une option** : si les essais donnent `f_k < 1,5 MPa`, il devient nécessaire. Deux issues, **à trancher en `B-46`** et non ici : soit les essais confirment `f_k >= 1,5 MPa`, soit un **dé de répartition** est ajouté sous `J1` — ce qui modifie la planche et relève d'une décision `RDR`, pas d'une initiative de note de calcul.
 
 ### 7.3 Excentricité de l'appui de `F2` sur `P2`
 
-`F2` (`HEB 200`, portée `2,85 m`, `p_ELU = 63,1 kN/m`) appuie sur `P2` par l'intermédiaire d'un appareil d'appui **non encore défini** (`B-50`). La note retient `e_0 = 20 mm` (minimum réglementaire). Si l'appui est excentré de `50 mm` — cas fréquent quand la poutre s'arrête au nu du poteau — la sensibilité du § 8 donne `0,605`, puis `0,739` en cumulant avec `l0 = 3 500 mm` : **la section tient encore**, mais la marge tombe à `26 %`.
+`F2` (`HEB 200`, portée `2,85 m`, `p_ELU = 43,8 kN/m`) appuie sur `P2` par l'intermédiaire d'un appareil d'appui **non encore défini** (`B-50`). La note retient `e_0 = 20 mm` (minimum réglementaire). Si l'appui est excentré de `50 mm` — cas fréquent quand la poutre s'arrête au nu du poteau — la sensibilité du § 8 donne `0,461`, puis `0,563` en cumulant avec `l0 = 3 500 mm` : **la section tient encore**, avec `44 %` de marge.
 
 ---
 
@@ -213,11 +217,11 @@
 
 | Élément | Nominal | `l0 = 3 500 mm` | `e_0 = 50 mm` | Les deux cumulés |
 |---|---|---|---|---|
-| **`P2`** | `0,400` | `0,534` | `0,605` | **`0,739`** ✅ |
-| `P3` | `0,014` | `0,015` | `0,030` | `0,031` ✅ |
-| `J1` | `0,016` | `0,017` | `0,035` | `0,036` ✅ |
+| **`P2`** | `0,305` | `0,407` | `0,461` | **`0,563`** ✅ |
+| `P3` | `0,013` | `0,014` | `0,028` | `0,029` ✅ |
+| `J1` | `0,015` | `0,016` | `0,031` | `0,032` ✅ |
 
-**Lecture.** Le cas le plus défavorable reste inférieur à `1,0` : `P2` tient même avec une hauteur d'étage de `3,50 m` **et** un appui excentré de `50 mm`. La conclusion ne bascule pas — c'est ce qui autorise à livrer la note en indice `A` tout en portant les réserves du § 9.
+**Lecture.** Le cas le plus défavorable reste inférieur à `1,0` : `P2` tient même avec une hauteur d'étage de `3,50 m` **et** un appui excentré de `50 mm`. La conclusion ne bascule pas — c'est ce qui autorise à livrer la note en indice `B` tout en portant les réserves du § 9.
 
 ---
 
@@ -226,8 +230,8 @@
 | Réf. | Objet | Conséquence si non levée | Destinataire |
 |---|---|---|---|
 | **`R-42-1`** | Hauteur d'étage réelle (`H ≈ 2,40 à 2,80 m` est une hypothèse de `B-20`) | Débits et longueurs d'ancrage faux si `H > 2,80 m` ; la résistance, elle, reste satisfaisante jusqu'à `l0 = 3,50 m` | Relevé / `B-60` |
-| **`R-42-2`** | Excentricité de l'appui de `F2` sur `P2` | Si `e_0 > 50 mm`, l'utilisation dépasse `0,74` et le ferraillage doit être repris | `B-50` (appareil d'appui) |
-| **`R-42-3`** | Pression d'appui de `J1` sur la maçonnerie (`0,369 MPa`) | Défaut dès `f_k < 1,15 MPa` ; nécessite un dé de répartition | `B-46` + `D-34` |
+| **`R-42-2`** | Excentricité de l'appui de `F2` sur `P2` | Si `e_0 > 50 mm`, l'utilisation dépasse `0,57` et le ferraillage doit être repris | `B-50` (appareil d'appui) |
+| **`R-42-3`** | Pression d'appui de `J1` sur la maçonnerie (`0,332 MPa`) | Défaut dès `f_k < 0,83 MPa` ; dé de répartition à décider selon le résultat des essais `D-34` | `B-46` + `D-34` |
 | **`R-42-4`** | Longueur d'ancrage `40 phi = 480 mm` dans les appuis | Ancrage insuffisant si la semelle ou le chaînage est moins profond | `B-50` · `B-40` |
 | **`R-42-5`** | Aucune vérification au feu | Hors mission, à la charge du bureau d'études incendie | Cadrage |
 
@@ -237,7 +241,7 @@
 
 | # | Point | Verdict | Preuve |
 |---|---|---|---|
-| 1 | Les 3 porteurs et leurs `N_ELU` de `B-21` figurent dans la note | ✅ | § 2 et § 4 à 6 |
+| 1 | Les 3 porteurs et leurs `N_ELU` de `B-21 Ind. C` figurent dans la note | ✅ | § 2 (`159,0` / `35,8` / `39,8 kN`) et § 4 à 6 |
 | 2 | Diagramme d'interaction `N-M` explicité (pas de flexion pure) | ✅ | § 3.3, § 4.3, § 5 |
 | 3 | Sections identiques aux plans `B-20` | ✅ | `15 × 25` · `50 × 40` · `24 × 50` |
 | 4 | Enrobage `30 mm` et classe `XA1` (`H-23`) rappelés | ✅ | § 2 |

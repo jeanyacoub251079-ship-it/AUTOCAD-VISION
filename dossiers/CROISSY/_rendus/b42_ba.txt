@@ -8,15 +8,15 @@ Matériaux : C25/30 (f_ck = 25 MPa) · S500 (f_yk = 500 MPa)
 
 --- TABLEAU 1 : ÉLANCEMENT ET FLAMBEMENT (EC2 § 5.8.3) -----------
     ID      b x h (mm)        i (mm)      lambda      lambda_lim    2d ordre ?
-    P2      150x250           43.3        64.7        16.8          OUI
-    P3      400x500           115.5       24.2        91.0          non
-    J1      240x500           69.3        40.4        66.8          non
+    P2      150x250           43.3        64.7        19.7          OUI
+    P3      400x500           115.5       24.2        95.9          non
+    J1      240x500           69.3        40.4        70.5          non
 
 --- TABLEAU 2 : FLEXION COMPOSÉE (N-M) ----------------------------
     ID      N_Ed (kN)     e_tot (mm)    M_Ed (kN.m)     M_Rd (kN.m)     M_Ed/M_Rd
-    P2      217.7         58.7          12.8            31.9            0.400
-    P3      39.8          27.0          1.1             74.4            0.014
-    J1      44.3          27.0          1.2             73.0            0.016
+    P2      159.0         59.0          9.4             30.7            0.305
+    P3      35.8          27.0          1.0             73.6            0.013
+    J1      39.8          27.0          1.1             72.1            0.015
 
 --- TABLEAU 3 : FERRAILLAGE RETENU ---------------------------------
     ID      disposition       As (mm2)      As,min      As,max      cadres
@@ -25,17 +25,17 @@ Matériaux : C25/30 (f_ck = 25 MPa) · S500 (f_yk = 500 MPa)
     J1      6 HA12            679           240         4800        HA8 e200
 
 --- SENSIBILITÉ (disposition retenue, non contractuelle) ---------
-    P2  6HA12  nominal 0.400 | l0 = 3500 : 0.534 | e0 = 50 : 0.605 | les deux : 0.739
-    P3  6HA12  nominal 0.014 | l0 = 3500 : 0.015 | e0 = 50 : 0.030 | les deux : 0.031
-    J1  6HA12  nominal 0.016 | l0 = 3500 : 0.017 | e0 = 50 : 0.035 | les deux : 0.036
+    P2  6HA12  nominal 0.305 | l0 = 3500 : 0.407 | e0 = 50 : 0.461 | les deux : 0.563
+    P3  6HA12  nominal 0.013 | l0 = 3500 : 0.014 | e0 = 50 : 0.028 | les deux : 0.029
+    J1  6HA12  nominal 0.015 | l0 = 3500 : 0.016 | e0 = 50 : 0.031 | les deux : 0.032
 
 --- TABLEAU 4 : PRESSION D'APPUI SUR LA MAÇONNERIE (EC6) ---------
     ID      A_appui (m2)  sigma (MPa)   f_d a 1,5     f_d a 1,0     f_d a 0,5
-    P3      0.200         0.199         0.33          0.50          0.99
-    J1      0.120         0.369         0.62          0.92          1.85
+    P3      0.200         0.179         0.30          0.45          0.89
+    J1      0.120         0.332         0.55          0.83          1.66
     (rapport sigma_d / f_d, gamma_M = 2,5 — H-26 ; > 1,00 = non satisfait)
     P2 exclu : il repose sur SF1 80x80 (D-30, B-40), pas sur la maçonnerie.
-    P2 sur SF1 : 218 kN / 0,64 m2 = 0,34 MPa sur béton C25/30 — sans objet ici.
+    P2 sur SF1 : 159 kN / 0,64 m2 = 0.25 MPa sur béton C25/30 — sans objet ici.
 
 --- CRITÈRE D'ACCEPTATION (8 POINTS) ------------------------------
     [OK] 1. Les 3 porteurs et leurs N_ELU de B-21 figurent dans la note

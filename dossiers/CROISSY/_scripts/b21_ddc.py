@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-B-21 — DESCENTE DE CHARGES PRÉLIMINAIRE — CONCEPTION
+B-21 — DESCENTE DE CHARGES (INDICE C) — CONCEPTION
 Projet : CROISSY-FLORA (ID-01) — CARNAC v3.0 — Indice A
 
 Régime OUTILLÉ (V13). Ce script produit :
@@ -21,8 +21,8 @@ import json
 import os
 from datetime import datetime
 
-JOURNAL = "dossiers/CROISSY/_rendus/b21_ddc.txt"
-JSONOUT = "dossiers/CROISSY/_rendus/b21_ddc.json"
+JOURNAL = "_rendus/b21_ddc.txt"
+JSONOUT = "_rendus/b21_ddc.json"
 
 # ---------------------------------------------------------------- trame B-20 (m, repère B-30)
 FIL_X = {"A": -0.32, "B": 0.68, "C": 2.88, "D": 3.91, "E": 9.48}
@@ -45,8 +45,19 @@ G_PLANCHER_B = [
     ("Solives IPE 160 e = 0,72 m", 0.16, 5.0, 0.11, "D3 p. 11 (15,8 kg/m / 0,72 m)"),
     ("Plafond + suspension", None, None, 0.15, "D3 p. 12"),
 ]
-RECHARGE = ("Recharge de sol 15 cm (D4 p. 5 et 14)", 0.15, 22.0, 3.30,
-            "H-28 — densité 22 kN/m³ retenue ; D4 prescrit l'épaisseur, pas la densité")
+# D-35 (20/10/2026) — la recharge de 15 cm est un ouvrage de SOL, pas une charge
+# de plancher : D4 p. 5 (planche de démolition, plan RDC) et p. 14 (SANITAIRES PMR
+# RDC, 1/50) la portent toutes deux au RDC. Aucune occurrence sur les planches de
+# R+1. Contrôle croisé : la vérification EVEN de la solive 8x18 (w = 7,7 mm à
+# 150 daN/m²) n'est compatible qu'avec un plancher non rechargé.
+RECHARGE = ("Recharge de sol 15 cm — DALLAGE uniquement (D4 p. 5 et 14)", 0.15, 22.0, 3.30,
+            "H-28 (densité 22 kN/m³) · D-35 : réputée sur 100 % de l'emprise du dallage")
+
+# Dallage BA — B-20 : « Dallage BA désolidarisé ép. 13 cm sur forme 40 cm »
+DALLAGE = [
+    ("Dallage BA C25/30 ép. 13 cm", 0.13, 25.0, 3.25, "B-20 § infrastructure — dallage désolidarisé"),
+    ("Revêtement de sol (carrelage / sol souple)", 0.02, 20.0, 0.40, "D4 p. 8 (plans sols)"),
+]
 TOITURE = [
     ("Tuiles + liteaux", 0.05, 8.0, 0.40, "D2 f. 02 (couverture) — H-29"),
     ("Chevrons + volige", 0.08, 5.5, 0.15, "D2 f. 02 — H-29"),
@@ -77,9 +88,9 @@ def table(rows, widths):
 
 
 def main():
-    os.makedirs("dossiers/CROISSY/_rendus", exist_ok=True)
+    os.makedirs("_rendus", exist_ok=True)
     log("=" * 110)
-    log("B-21 — DESCENTE DE CHARGES PRÉLIMINAIRE — CONCEPTION — INDICE A")
+    log("B-21 — DESCENTE DE CHARGES PRÉLIMINAIRE — CONCEPTION — INDICE C")
     log("Projet CROISSY-FLORA (ID-01) — CARNAC v3.0 — régime OUTILLÉ (V13)")
     log(f"Exécution : {datetime.now():%Y-%m-%d %H:%M:%S}")
     log("Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION (remplacée par les DDC d'exécution B-40 à B-50)")
@@ -118,12 +129,27 @@ def main():
         f"(ép. {RECHARGE[1]:.2f} m × γ {RECHARGE[2]:.0f} kN/m³) — {RECHARGE[4]}")
     log(f"    Cloisons forfaitaires : {CLOISON_FORFAIT:.2f} kN/m² — EC1-1-1 § 6.3.1.2 (H-30)")
 
-    # g total par zone (avec recharge et cloisons)
-    g_tot_A = g_A + RECHARGE[3] + CLOISON_FORFAIT
-    g_tot_B = g_B + RECHARGE[3] + CLOISON_FORFAIT
-    log(f"\n    → Plancher A avec recharge et cloisons : g = {g_tot_A:.2f} kN/m²")
-    log(f"    → Plancher B avec recharge et cloisons : g = {g_tot_B:.2f} kN/m²")
+    # g total par zone — SANS recharge (D-35) : la recharge est au dallage
+    g_tot_A = g_A + CLOISON_FORFAIT
+    g_tot_B = g_B + CLOISON_FORFAIT
+    log(f"\n    → Plancher A + cloisons : g = {g_tot_A:.2f} kN/m²  (sans recharge — D-35)")
+    log(f"    → Plancher B + cloisons : g = {g_tot_B:.2f} kN/m²  (sans recharge — D-35)")
     log(f"    → Toiture : g = {g_toit:.2f} kN/m²")
+
+    # ---- dallage : la recharge s'y applique, sur 100 % de l'emprise (D-35)
+    g_dallage_propre = sum(l[3] for l in DALLAGE)
+    g_dallage = g_dallage_propre + RECHARGE[3] + CLOISON_FORFAIT
+    q_dallage = Q_CAT["B"][0]
+    p_dallage_els = g_dallage + q_dallage
+    p_dallage_elu = 1.35 * g_dallage + 1.5 * q_dallage
+    log(f"\n    DALLAGE (D-35) — la recharge est ici, sur 100 % de l'emprise :")
+    for l in DALLAGE:
+        log(f"      {l[0]:<46s} {l[3]:5.2f} kN/m²   {l[4]}")
+    log(f"      {'Recharge de sol 15 cm':<46s} {RECHARGE[3]:5.2f} kN/m²   D-35 (hypothèse défavorable)")
+    log(f"      {'Cloisons forfaitaires':<46s} {CLOISON_FORFAIT:5.2f} kN/m²   H-30")
+    log(f"      {'TOTAL g':<46s} {g_dallage:5.2f} kN/m²")
+    log(f"      Exploitation q = {q_dallage:.2f} kN/m² (D-32)  →  "
+        f"p_ELS = {p_dallage_els:.2f} · p_ELU = {p_dallage_elu:.2f} kN/m²")
 
     # ------------------------------------------------------------ 2. exploitation
     log("\n[2] CHARGES D'EXPLOITATION PAR CATÉGORIE EC1")
@@ -219,7 +245,7 @@ def main():
             g_sol, q_sol = g_toit, q_neige + q_toit
         else:
             g_sol, q_sol = g_tot_B, q_B
-        p_els = b["strip"] * (g_sol + q_sol) + gm
+        p_els = b["cont"] * (b["strip"] * (g_sol + q_sol) + gm)   # même coefficient de continuité qu'à l'ELU
         p_elu = b["cont"] * (1.35 * (b["strip"] * g_sol + gm) + 1.5 * b["strip"] * q_sol)
         beam_res[b["id"]] = dict(L=b["L"], strip=b["strip"], mur=gm, g=g_sol, q=q_sol,
                                  p_els=p_els, p_elu=p_elu, cont=b["cont"], justif=b["justif"])
@@ -227,6 +253,10 @@ def main():
                      f"{p_els:.1f}", f"{p_elu:.1f}", b["justif"]))
     table(rows, (9, 7, 10, 11, 14, 14, 80))
     res["beams"] = beam_res
+    res["dallage"] = dict(recharge=RECHARGE[3], g_propre=g_dallage_propre,
+                          cloisons=CLOISON_FORFAIT, g=g_dallage, q=q_dallage,
+                          p_els=p_dallage_els, p_elu=p_dallage_elu,
+                          emprise=1.0, ref="D-35")
 
     log("\n[4] DESCENTE DE CHARGES PAR PORTEUR — TABLEAU ELS (ΣG_k + Q_k,1)")
     rows = [("Porteur", "Type", "A_inf(m²)", "G(kN)", "Q(kN)", "continuité", "N_ELS(kN)")]
@@ -356,18 +386,18 @@ def main():
     log("\n[9] SF1 — COHÉRENCE DE LA SURFACE D'ASSISE AVEC LA DDC (ordre de grandeur, B-40 tranche)")
     N_els_sf1 = els["SF1 (sous P2)"]["N"]
     N_elu_sf1 = elu["SF1 (sous P2)"]["N"]
-    B_act = 0.60
+    B_act = 0.80          # D-30 (20/10/2026) — SF1 portée de 60x60 à 80x80
     A_act = B_act ** 2
     sig_els = N_els_sf1 / A_act
     B_req = (N_els_sf1 / 300.0) ** 0.5
-    log(f"    Semelle actuelle : {B_act*100:.0f} × {B_act*100:.0f} cm = {A_act:.2f} m² (D-14, dimension plancher)")
+    log(f"    Semelle retenue : {B_act*100:.0f} × {B_act*100:.0f} cm = {A_act:.2f} m² (D-30 ; D-10/D-14 : 60 x 60 minimum)")
     log(f"    N_ELS = {N_els_sf1:.1f} kN → σ_ELS = {sig_els:.0f} kPa = {sig_els/1000:.2f} MPa"
         f" (admissible 0,30 MPa → {'NON CONFORME' if sig_els > 300 else 'conforme'})")
     log(f"    Largeur requise : B ≥ √(N_ELS / 0,30 MPa) = √({N_els_sf1:.1f}/300) = {B_req:.2f} m")
-    log(f"    → si l'aire d'influence de 11,46 m² est confirmée, SF1 doit passer de 60 × 60 à "
-        f"{int((B_req*100//10+1)*10)} × {int((B_req*100//10+1)*10)} cm")
-    log(f"    → N_ELU = {N_elu_sf1:.1f} kN sur 0,64 m² = {N_elu_sf1/0.64:.0f} kPa"
-        f" (admissible 0,49 MPa → {'NON CONFORME' if N_elu_sf1/0.64 > 490 else 'conforme'})")
+    log(f"    → largeur strictement requise : {B_req*100:.0f} cm ; D-30 retient 80 x 80 cm "
+        f"({'conforme' if B_act >= B_req else 'NON CONFORME'})")
+    log(f"    → N_ELU = {N_elu_sf1:.1f} kN sur {A_act:.2f} m² = {N_elu_sf1/A_act:.0f} kPa"
+        f" (admissible 0,49 MPa → {'NON CONFORME' if N_elu_sf1/A_act > 490 else 'conforme'})")
     res["sf1"] = dict(N_els=N_els_sf1, N_elu=N_elu_sf1, B_act=B_act,
                       sigma_els=sig_els, B_req=B_req,
                       b20=dict(N_els=63.2, sigma_els=63.2/0.36))
