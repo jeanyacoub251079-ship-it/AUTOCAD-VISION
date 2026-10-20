@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461334.701365741
+2461334.7254976854
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461334.701365741
+2461334.7255092594
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-3BD3A
+3BD3E
   9
 $SURFTAB1
  70
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{FBC2F5C7-13E1-4239-A835-E43BD0252683}
+{1AA8BFA3-635E-4C2E-A85C-EAA4095426C1}
   9
 $EXTNAMES
 290
@@ -277051,7 +277051,7 @@ AcDbText
  40
 21.0
   1
-PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. C)
+PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. D)
  11
 9770.0
  21
@@ -278831,9 +278831,129 @@ PA-02 verification de la liaison charpente-maconnerie des pignons — AVANT DEPO
 100
 AcDbText
   0
-LWPOLYLINE
+TEXT
   5
 3BD2F
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9764.0
+ 20
+5040.0
+ 30
+0.0
+ 40
+15.0
+  1
+8. MACONNERIE — HYPOTHESE D'ETUDE A CONFIRMER (D-34)
+ 11
+9764.0
+ 21
+5040.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD30
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+5018.0
+ 30
+0.0
+ 40
+10.2
+  1
+f_k = 1,5 MPa · E = 1 500 MPa · f_vk0 = 0,15 MPa : valeurs retenues pour nos etudes.
+ 11
+9770.0
+ 21
+5018.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD31
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+5001.0
+ 30
+0.0
+ 40
+10.2
+  1
+Leur confirmation par essais est HORS MISSION et a la charge du maitre d'ouvrage.
+ 11
+9770.0
+ 21
+5001.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD32
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+4984.0
+ 30
+0.0
+ 40
+10.2
+  1
+Essais non concluants -> reprise des etudes chiffree en prestation complementaire.
+ 11
+9770.0
+ 21
+4984.0
+ 31
+0.0
+100
+AcDbText
+  0
+LWPOLYLINE
+  5
+3BD33
 330
 70
 100
@@ -278869,7 +278989,7 @@ AcDbPolyline
   0
 TEXT
   5
-3BD30
+3BD34
 330
 70
 100
@@ -278899,7 +279019,7 @@ AcDbText
   0
 TEXT
   5
-3BD31
+3BD35
 330
 70
 100
@@ -278929,7 +279049,7 @@ AcDbText
   0
 TEXT
   5
-3BD32
+3BD36
 330
 70
 100
@@ -278959,7 +279079,7 @@ AcDbText
   0
 TEXT
   5
-3BD33
+3BD37
 330
 70
 100
@@ -278989,7 +279109,7 @@ AcDbText
   0
 LWPOLYLINE
   5
-3BD34
+3BD38
 330
 70
 100
@@ -279025,7 +279145,7 @@ AcDbPolyline
   0
 TEXT
   5
-3BD35
+3BD39
 330
 70
 100
@@ -279055,7 +279175,7 @@ AcDbText
   0
 TEXT
   5
-3BD36
+3BD3A
 330
 70
 100
@@ -279085,7 +279205,7 @@ AcDbText
   0
 TEXT
   5
-3BD37
+3BD3B
 330
 70
 100
@@ -279103,7 +279223,7 @@ AcDbText
  40
 11.5
   1
-Brique B-25 · Indice C · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
+Brique B-25 · Indice D · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
  11
 9766.0
  21
@@ -279115,7 +279235,7 @@ AcDbText
   0
 TEXT
   5
-3BD38
+3BD3C
 330
 70
 100
@@ -279145,7 +279265,7 @@ AcDbText
   0
 TEXT
   5
-3BD39
+3BD3D
 330
 70
 100
@@ -424299,7 +424419,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-10-20T16:49:58.936445+00:00
+1.4.5 @ 2026-10-20T17:24:44.407923+00:00
   0
 ENDSEC
   0

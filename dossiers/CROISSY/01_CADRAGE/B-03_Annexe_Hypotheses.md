@@ -10,7 +10,7 @@
 | Hypothèses | **H-01 à H-24** (validées) + **H-25 à H-27** (`B-25`) + **H-28 à H-30** (`B-21`) — **30 hypothèses actives**. **`H-31` est sortie du registre** : promue décision **`D-31`** le 20/10/2026 |
 | Statut | **VALIDÉES par le client le 19/10/2026** — 23 en accord global, **H-21 rectifiée**. **`H-28` à `H-30` NOTIFIÉES le 20/10/2026** (`B-21`) : le délai contradictoire de **2 jours** de `D-19` court à compter de cette date |
 | Date | 19/10/2026 |
-| Indice du livrable | **G** (remplace l'indice F du 20/10/2026 — doctrine `D-33`) |
+| Indice du livrable | **H** (remplace l'indice G du 20/10/2026 — décision `D-34`) |
 
 > **Indice F — ce qui change sans toucher une seule valeur.** `H-31` (salle de sport en catégorie C4) **sort du registre des hypothèses** : le client l'a confirmée le 20/10/2026, elle devient la **décision `D-31`** au RDR. Une hypothèse confirmée n'est pas « validée » : elle change de nature. La laisser au registre des hypothèses aurait maintenu un doute que la décision a supprimé, et aurait laissé croire qu'un simple silence de deux jours pouvait ramener la salle de sport à `2,50 kN/m²`. **Seules `H-28`, `H-29` et `H-30` restent notifiées** — ce sont des grandeurs que le marché ne fournit pas, pas des usages que le client arbitre.
 >
@@ -235,3 +235,18 @@ Les 24 hypothèses sont **validées**, pas **notifiées**. Entre les deux, il y 
 **Ce qu'elle ne change pas.** Les **nuages `D-19` restent posés** : un nuage de lecture n'est pas un nuage d'attente. Il dit « ceci est notre lecture d'une pièce, vérifiez-la », jamais « nous attendons une réponse ».
 
 > **Détail, justifications et historique : note `B-22` — Note d'hypothèses de conception (Indice A), `02_CONCEPTION/B-22_Note_Hypotheses.md`.** Cette annexe reste le registre de saisie ; `B-22` en est la **note unique opposable**, annexée à la FDC.
+
+---
+
+## 8. CLAUSE `D-34` — HYPOTHÈSE DE MAÇONNERIE (20/10/2026)
+
+**`H-25`** (`f_k = 1,5 MPa`, `E = 1 500 MPa`) et **`H-26`** (`f_vk0 = 0,15 MPa`) sont les deux hypothèses de ce registre qui portent **l'intégralité de la stabilité horizontale** du pavillon, **sans aucune mesure**. Elles reçoivent une **clause de conséquence**, décidée par le client le 20/10/2026 :
+
+| Ce que dit la clause | Portée |
+|---|---|
+| Nos études sont réalisées avec `f_k = 1,5 MPa` et `f_vk0 = 0,15 MPa` | La valeur n'est pas cachée : elle est écrite dans la note, sur la planche et ici |
+| **La confirmation par essais est hors de notre mission** | Ce n'est pas à nous de commander, financer ou interpréter les essais |
+| **Si les essais ne sont pas concluants, la reprise de nos études est chiffrée en prestation complémentaire** | L'hypothèse devait nous être fournie **avant le démarrage** : son défaut de fourniture a un coût, et ce coût n'est pas le nôtre |
+| La rédaction figure aussi sur les livrables | `B-25` § 3 et § 8.1bis, planche `B-25 Ind. D` pièce 8, `B-22` |
+
+> **Statut inchangé : `H-25` et `H-26` restent « À CONFIRMER ».** La clause ne confirme rien — elle dit **qui doit confirmer** et **qui paie si la confirmation contredit l'hypothèse**. Une hypothèse notifiée sans conséquence chiffrée est un nuage décoratif.

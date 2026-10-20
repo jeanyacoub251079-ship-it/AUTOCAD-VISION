@@ -54,7 +54,7 @@ def table(rows, widths):
 H = [
     ("H-01", "Géométrie", "Adresse du pavillon", "11 rue Paul Demange, 78290 Croissy-sur-Seine", "À CONFIRMER", "DOCUMENTAIRE", "MOE", "B-00", "B-60 · B-64", "19/10/2026"),
     ("H-02", "Autres", "Destination du bâtiment", "Cabinet paramédical (kiné, plateau technique, salle de sport)", "À CONFIRMER", "DOCUMENTAIRE", "MOA", "B-00", "B-60 · B-64", "19/10/2026"),
-    ("H-03", "Existant", "Renforts R1, R2, R3 exécutés", "R1/R2/R3 exécutés ; solives 8×18 non renforcées", "À CONFIRMER", "LECTURE", "Aucune — D-33", "B-00", "B-45", "19/10/2026"),
+    ("H-03", "Existant", "Renforts R1/R2/R3 — ouvrages neufs", "Non encore exécutés : à réaliser sur nos plans (entreprise en attente) ; solives 8×18 non renforcées", "À CONFIRMER", "LECTURE", "Aucune — D-33", "B-00", "B-45", "19/10/2026"),
     ("H-04", "Autres", "Périmètre du marché", "Pavillon Flora seul ; bâtiment Gardien exclu", "À CONFIRMER", "DOCUMENTAIRE", "MOE", "B-00", "B-60 · B-64", "19/10/2026"),
     ("H-05", "Géométrie", "Correspondance frangements F1-F4 / D4 p. 5", "4 frangements sur 5 interventions", "À CONFIRMER", "LECTURE", "Aucune — D-33", "B-00", "B-49", "19/10/2026"),
     ("H-06", "Géométrie", "Échelle des plans D2", "1/80 (cartouche « 1/50-1/20 » non mis à jour)", "À CONFIRMER", "LECTURE", "Aucune — D-33", "B-00", "B-30 · B-31 · B-20", "19/10/2026"),

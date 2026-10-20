@@ -13,12 +13,16 @@
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b25_stabilite.py` |
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b25_stabilite.txt` (7 216 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b25_stabilite.json` (13 409 o) |
-| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndC` (`.dxf` · `.pdf` · `.png`) |
-| **Indice** | **C** — remplace et annule l'indice B du 20/10/2026 (décision `D-28`) |
+| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndD` (`.dxf` · `.pdf` · `.png`) |
+| **Indice** | **D** — remplace et annule l'indice C du 20/10/2026 (décision `D-34`) |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-22`** (note d'hypothèses), `B-21` étant livrée en indice B |
 
-> **Ce qui change à l'indice C.** Une seule chose, et elle ne touche aucun résultat : **`D-28` est consignée.** L'absence de joint de dilatation cesse d'être une proposition soumise à arbitrage ; elle devient une **décision ferme du client du 20/10/2026**. Toutes les raideurs, tous les centres de rigidité, tous les `τ/f_vk` de cette note sont **inchangés** — un joint qui n'existe pas ne modifie aucune raideur, et c'est précisément pour cela qu'il fallait trancher avant d'y revenir un jour par inadvertance.
+> **Ce qui change à l'indice D.** **`D-34`** — les caractéristiques de la maçonnerie (`f_k = 1,5 MPa`, `f_vk0 = 0,15 MPa`) sont désormais **notifiées comme hypothèse d'étude à confirmer par essais**, avec deux conséquences écrites : **les essais sont hors de notre mission et à la charge du maître d'ouvrage**, et **en cas d'essais non concluants, la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée**. La clause figure au § 3, au § 8.1 et sur la planche (§ 8 de la colonne de notes). Aucun résultat n'est modifié.
+>
+> *Indice C : `D-28` — aucun joint de dilatation.*
+>
+> **Ce qui changeait à l'indice C.** Une seule chose, et elle ne touche aucun résultat : **`D-28` est consignée.** L'absence de joint de dilatation cesse d'être une proposition soumise à arbitrage ; elle devient une **décision ferme du client du 20/10/2026**. Toutes les raideurs, tous les centres de rigidité, tous les `τ/f_vk` de cette note sont **inchangés** — un joint qui n'existe pas ne modifie aucune raideur, et c'est précisément pour cela qu'il fallait trancher avant d'y revenir un jour par inadvertance.
 >
 > **Ce que la décision ne change pas.** L'absence de joint reste **conditionnelle au maintien de l'emprise** : elle devient fausse dès qu'une extension est accolée sans joint ou qu'une reprise en sous-œuvre coupe le bloc. La clause figure au § 5 et n'est pas levée par `D-28`.
 
@@ -62,9 +66,9 @@
 | Vent — catégorie de terrain | **III** · `z_0 = 0,30 m` · `z_min = 5 m` | CHG-06 | **Contractuelle** |
 | `c_pe,net` · `c_s c_d` | **1,30** · **1,00** | EC1-1-4 § 7.2 · bâtiment < 15 m | Méthode |
 | Hauteurs libres | RDC **3,00 m** · R+1 **3,00 m** · faîtage **6,30 m** | D2 (P2 `H = 3,00 m`) + D5 | Contractuelle |
-| Maçonnerie — `f_k` | **1,5 MPa** | H-25 (moellons + mortier bâtard) | **Hypothèse notifiée** |
-| Maçonnerie — `E` | **1 500 MPa** (`E = 1 000 f_k`, EC6 § 3.7.2) | H-25 | **Hypothèse notifiée** |
-| Maçonnerie — `f_vk0` | **0,15 MPa** | H-26 | **Hypothèse notifiée** |
+| Maçonnerie — `f_k` | **1,5 MPa** | H-25 (moellons + mortier bâtard) | **Hypothèse d'étude à confirmer par essais (`D-34`)** |
+| Maçonnerie — `E` | **1 500 MPa** (`E = 1 000 f_k`, EC6 § 3.7.2) | H-25 | **Déduite de `f_k` — suit `H-25`** |
+| Maçonnerie — `f_vk0` | **0,15 MPa** | H-26 | **Hypothèse d'étude à confirmer par essais (`D-34`)** |
 | Contrainte verticale `σ_d` | **0,30 MPa** | H-27 | **Hypothèse notifiée** |
 | Surfaces de plancher | RDC **111,15 m²** · R+1 **106,92 m²** | D-22 | Décision client |
 
@@ -298,7 +302,7 @@ Trois prescriptions restent dans notre livrable, mais **aucune ne porte sur la s
 
 ## 7. PIÈCE 5 — SCHÉMA DE CONTREVENTEMENT REPORTÉ SUR LE FOND `B-32`
 
-La planche **`FLORA_B25_CONTREVENTEMENT_IndC`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
+La planche **`FLORA_B25_CONTREVENTEMENT_IndD`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
 
 - les **12 voiles RDC comptés**, repérés `M01` à `M12`, avec leur raideur `K_x`/`K_y` et leur aire ;
 - les **quatre voiles majeurs** (`M11`, `M03`, `M09`, `M04` — 95,1 % de la raideur) mis en évidence ;
@@ -308,7 +312,8 @@ La planche **`FLORA_B25_CONTREVENTEMENT_IndC`** (`.dxf` · `.pdf` · `.png`, A3 
 - la mention **« AUCUN JOINT DE DILATATION »** et sa justification en trois lignes ;
 - le **renvoi de mission `D-26` / `D-27`** : ni vérification sismique, ni vérification de la stabilité provisoire, avec les grandeurs transmises à la MOE ;
 - la note **`D-09` intégrale**, le filigrane **`PRINCIPE — NE PAS EXÉCUTER — Indice P`** et le cartouche `B-25 Ind. C` ;
-- la mention **`D-28` consignée le 20/10/2026** dans la pièce 4, en lieu et place de la « proposition » de l'indice B.
+- la mention **`D-28` consignée le 20/10/2026** dans la pièce 4, en lieu et place de la « proposition » de l'indice B ;
+- la **clause `D-34`** sur la maçonnerie en pièce 8 : valeurs retenues, essais hors mission à la charge du maître d'ouvrage, reprise d'étude chiffrée si les essais sont non concluants.
 
 Les repères `M01` à `M12` sont **identiques** à ceux du journal `b25_stabilite.txt`, ce qui rend la planche vérifiable ligne à ligne contre le calcul — condition du critère de report graphique de la fiche.
 
@@ -323,6 +328,16 @@ Les repères `M01` à `M12` sont **identiques** à ceux du journal `b25_stabilit
 | **H-25** | `f_k = 1,5 MPa` · `E = 1 500 MPa` (`E = 1 000 f_k`) | EC6 § 3.7.2 et tableau 3.1 | Si `f_k = 1,0 MPa` : raideurs toutes divisées par 1,5 → `CR` et répartition **inchangés**, `τ/f_vk` de 0,028 à 0,045. **Conclusion inchangée** |
 | **H-26** | `f_vk0 = 0,15 MPa` | EC6 § 3.6.2 | Si `f_vk0 = 0,10 MPa` : `f_vk = 80 kPa`, `τ/f_vk` de 0,028 à 0,038. **Conclusion inchangée** |
 | **H-27** | `σ_d = 0,30 MPa` | EC6 § 3.6.2 (terme `0,4 σ_d`) | Si `σ_d = 0,20 MPa` : `f_vk = 92 kPa`, effet < 15 % sur les taux. **Conclusion inchangée** |
+
+### 8.1bis Clause `D-34` — ce que cette note engage sur `H-25` et `H-26`
+
+> **Nos études sont réalisées avec l'hypothèse `f_k = 1,5 MPa`, `E = 1 500 MPa` et `f_vk0 = 0,15 MPa`.**
+> **Cette hypothèse doit être confirmée par des essais, hors de notre mission et à la charge du maître d'ouvrage.**
+> **Si les essais ne sont pas concluants, la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée** : cette hypothèse devait nous être fournie **avant le démarrage de nos études**.
+
+**Pourquoi cette clause est écrite ici et pas seulement au registre.** `H-25` et `H-26` sont les deux seules hypothèses du dossier qui portent **toute la stabilité horizontale** d'un bâtiment existant sans aucune mesure. Un `f_k` réel de `1,0 MPa` au lieu de `1,5` ne fait pas s'écrouler le bâtiment — il **multiplie par 1,5 tous les déplacements** et déplace les centres de rigidité. Il faut donc que la limite de responsabilité soit lisible **dans la note qui utilise la valeur**, pas seulement dans un registre annexe que personne n'ouvre au moment de discuter.
+
+**Ce que la clause ne fait pas.** Elle ne transforme pas une hypothèse en fait, et elle ne rend pas la note fausse si les essais donnent autre chose : elle dit **qui porte la charge de la vérification** et **qui paiera la reprise**. C'est exactement le rôle d'une hypothèse notifiée — mais notifiée **avec son prix attaché quand elle est démentie**, ce qui est plus honnête qu'un nuage sans conséquence.
 
 **`H-24` (classe de sol C, `a_gr = 0,40 m/s²`) est marquée SANS OBJET** par `D-26` : aucune vérification sismique n'étant produite, la classe de sol et l'accélération n'ont plus d'emploi dans le dossier. L'hypothèse n'est pas supprimée — elle est **neutralisée**, et le resterait si un reclassement de zone survenait.
 
@@ -367,6 +382,7 @@ Les sept critères de la fiche `B-25` sont repris, **avec le statut réel de cha
 ## 10. POINT DE CONTRÔLE HUMAIN
 
 **`D-28` est close** le 20/10/2026 : aucun joint de dilatation. La question ne sera pas reposée.
+**`D-34` est consignée** le 20/10/2026 : hypothèse de maçonnerie à confirmer par essais hors mission, reprise d'étude chiffrée si les essais sont non concluants.
 
 **Une seule décision reste ouverte — `D-29` :**
 

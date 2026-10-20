@@ -22,7 +22,24 @@
 
 ---
 
-## 0. CE QUI CHANGE AVEC LA DOCTRINE `D-33`
+## 0. COMMENT LIRE CETTE NOTE — LES CODES, EN CLAIR
+
+Cette note et les réponses qui l'accompagnent emploient des codes. Voici ce qu'ils désignent, sans avoir besoin d'ouvrir une autre pièce.
+
+| Code | Ce que c'est | Exemple concret du dossier |
+|---|---|---|
+| **`H-xx`** | Une **hypothèse** : une valeur que nous retenons faute d'avoir été fournie | `H-25` : « la maçonnerie de moellons vaut `f_k = 1,5 MPa` » |
+| **`D-xx`** | Une **décision** : une réponse du client, écrite et datée | `D-30` : « la semelle `SF1` passe à 80 × 80 cm » |
+| **`B-xx`** | Une **brique** : un livrable du carnet (une note, une planche) | `B-25` : la note de stabilité globale |
+| **`R-xx`** | Une **réserve** du registre : une question ouverte, avec son responsable | `R-08` : poids propres de plancher |
+| **`PA-xx`** | Un **point d'arrêt** de chantier : on ne continue pas avant constat | `PA-01` : reconnaissance des voiles avant démolition |
+| **`T-xx`** | Une **tâche** à adresser à un tiers | `T-04` : demande de note de stabilité provisoire à la MOE |
+
+> **Règle de rédaction que je m'applique désormais** : un code ne part jamais seul. Il est toujours accompagné de son objet en clair — « `H-25` (résistance de la maçonnerie) », jamais « `H-25` ».
+
+---
+
+## 0.A CE QUI CHANGE AVEC LA DOCTRINE `D-33`
 
 ### 0.1 L'instruction reçue
 
@@ -73,7 +90,7 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 |---|---|---|---|---|---|---|
 | **H-01** | Géométrie | Adresse : 11 rue Paul Demange, 78290 Croissy-sur-Seine | B-00 | B-60 · B-64 | À CONFIRMER | DOCUMENTAIRE |
 | **H-02** | Autres | Destination : cabinet paramédical (kiné, plateau technique, salle de sport) | B-00 | B-60 · B-64 | À CONFIRMER | DOCUMENTAIRE |
-| **H-03** | Existant | `R1`, `R2`, `R3` exécutés ; solives 8×18 non renforcées | B-00 | B-45 | À CONFIRMER | **LECTURE** |
+| **H-03** | Existant | Renforts `R1`/`R2`/`R3` **non encore exécutés** : ouvrages neufs à réaliser sur nos plans | B-00 | B-45 | À CONFIRMER | **LECTURE** |
 | **H-04** | Autres | Périmètre : pavillon Flora seul, bâtiment Gardien exclu | B-00 | B-60 · B-64 | À CONFIRMER | DOCUMENTAIRE |
 | **H-05** | Géométrie | Frangements `F1` à `F4` = 4 des 5 interventions de `D4 p. 5` | B-00 | B-49 | À CONFIRMER | **LECTURE** |
 | **H-06** | Géométrie | Plans `D2` à l'échelle **1/80** (cartouche « 1/50-1/20 » non mis à jour) | B-00 | B-30 · B-31 · B-20 | À CONFIRMER | **LECTURE** |
@@ -95,8 +112,8 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 | **H-22** | Sol | Assise à −1,00 m dans les alluvions anciennes, `q ≥ 0,30 / 0,49 MPa` | B-10 | B-40 | **CONFIRMÉE** | DOCUMENTAIRE |
 | **H-23** | Sol | Agressivité **XA1** (« XA4 » du cartouche = erreur de saisie) | B-10 | B-40 · B-42 | À CONFIRMER | DOCUMENTAIRE |
 | **H-24** | Sol | Classe de sol C, `a_gr = 0,40 m/s²` — **ABANDONNÉE** par `D-26` | B-10 | aucune | **ABANDONNÉE** | — |
-| **H-25** | Existant | Maçonnerie : `f_k = 1,5 MPa`, `E = 1 500 MPa` | B-25 | B-25 · B-42 · B-46 | À CONFIRMER | **CALCUL** |
-| **H-26** | Existant | `f_vk0 = 0,15 MPa`, `γ_M = 2,5` | B-25 | B-25 · B-46 | À CONFIRMER | **CALCUL** |
+| **H-25** | Existant | Maçonnerie : `f_k = 1,5 MPa`, `E = 1 500 MPa` — **essais hors mission (`D-34`)** | B-25 | B-25 · B-42 · B-46 | À CONFIRMER | **CALCUL** |
+| **H-26** | Existant | `f_vk0 = 0,15 MPa`, `γ_M = 2,5` — **essais hors mission (`D-34`)** | B-25 | B-25 · B-46 | À CONFIRMER | **CALCUL** |
 | **H-27** | Charges | `σ_d = 0,30 MPa` — **vérifiée** par `B-21` (réel : `0,094`) | B-25 | B-25 · B-46 | **CONFIRMÉE** | **CALCUL** |
 | **H-28** | Charges | Recharge de sol 15 cm : `3,30 kN/m²` ; plancher B recalculé `3,91` | B-21 | B-43 · B-45 | À CONFIRMER | **CALCUL** |
 | **H-29** | Charges | Toiture : `0,95 kN/m²` | B-21 | B-44 | À CONFIRMER | **CALCUL** |
@@ -129,7 +146,7 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 |---|---|---|---|---|---|---|---|
 | **H-01** | Adresse du pavillon | 11 rue Paul Demange | `D2 p. 1` **et** `D4 p. 1` contre « 2 rue Alfred Dormeuil » du diagnostic : **deux pièces contre une**, sur un cartouche de plan | À CONFIRMER | B-00 | B-60 · B-64 | 19/10 |
 | **H-05** | Frangements ↔ `D4 p. 5` | 4 frangements pour 5 interventions | `D2 f. 01` porte 4 frangements, `D4 p. 5` décrit 5 interventions. La cinquième est l'ouverture de porte, sans renfort | À CONFIRMER | B-00 | B-49 | 19/10 |
-| **H-06** | Échelle des plans `D2` | **1/80** | Mention « (1/80) » sur le plan ; le cartouche « 1/50-1/20 » est un cartouche type non mis à jour. **Corroborée par `B-30`** : calage à `1,7 mm` de résidu sur 218 m² à cette échelle. Toutes les **cotes de renvoi priment** sur la mesure au scalimètre | À CONFIRMER | B-00 | B-30 · B-31 · B-20 | 19/10 |
+| **H-06** | Échelle des plans `D2` | **1/80** | Le plan porte « (1/80) » ; le cartouche affiche « 1/50 – 1/20 ». Le cartouche est un **cartouche type non mis à jour** — c'est une erreur d'imprimerie, pas une ambiguïté de géométrie. **`B-30` l'a démontré** : à l'échelle 1/80, les surfaces des deux niveaux se recalent à **`1,7 mm`** de résidu sur `218 m²`. Aucune réponse n'est attendue : **nous ne mesurons jamais au scalimètre**, nous travaillons sur les cotes et sur le fichier `DXF` | À CONFIRMER | B-00 | B-30 · B-31 · B-20 | 19/10 · rév. 20/10 |
 | **H-10** | Semelles isolées | **60 × 60 cm minimum** | `D-10` + `D-14` — **décisions**, pas hypothèses : le plancher est contractuel. `D-30` porte `SF1` à 80 × 80 sans la contredire (le minimum reste opposable) | **CONFIRMÉE** | B-00 | B-40 · PLS | 19/10 · rév. 20/10 |
 | **H-12** | Cote des semelles d'une même pièce | Même cote, tolérance **± 5 cm** | `D2 f. 04` admet une variabilité, sans la borner. Au-delà de 5 cm, **`D-09` s'applique** : approfondissement et gros béton `C16/20`, jamais de remontée | À CONFIRMER | B-00 | B-40 · PLS | 19/10 |
 | **H-17** | Linteaux des frangements | Dimensionnés par nous, appui ≥ 0,20 m | `D4 p. 5` (5 interventions) contre `D2 f. 01` (4 frangements). Le dimensionnement des linteaux est **dans notre lot**, l'appui de 20 cm est notre prescription | À CONFIRMER | B-00 | B-49 | 19/10 |
@@ -140,11 +157,11 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 
 | N° | Objet | Valeur retenue | Justification et source | Statut | Intro. | Impacte | Dates |
 |---|---|---|---|---|---|---|---|
-| **H-03** | Renforts `R1`, `R2`, `R3` | Exécutés ; solives 8×18 **non** renforcées | `D2 f. 01` prescrit `R1`-`R3` ; `D3 p. 18` conclut que « le renforcement des solives n'est pas jugé utile ». La conclusion porte sur les **solives seules** | À CONFIRMER | B-00 | B-45 | 19/10 |
+| **H-03** | État des renforts `R1`/`R2`/`R3` | **Non exécutés.** Ce sont des **ouvrages neufs**, conçus par nous, que l'entreprise réalisera sur nos plans d'exécution. Les solives 8×18 du plancher bas ne sont **pas** renforcées | `D2 f. 01` dessine `R1` (`2×UPE 200`), `R2-N/S` (`HEB 160`) et `R3-N/S` (`UPE 200`) ; l'entreprise **attend nos plans** pour les poser. `D3 p. 18` conclut que « le renforcement des solives n'est pas jugé utile » : cette conclusion porte sur les **solives seules**, pas sur les renforts de la poutre maîtresse | À CONFIRMER | B-00 | B-45 | 19/10 · rév. 20/10 |
 | **H-15** | Relevé des semelles existantes | Niveau, largeur et état relevés **avant coulage** | `D-09` ② et ③ ; `D3 p. 2` déclare l'état « inconnu ». Ce n'est pas une hypothèse mais un **point d'arrêt** : aucune semelle neuve n'est coulée avant consignation | À CONFIRMER | B-00 | B-40 · PLS | 19/10 |
 | **H-19** | Traitement de l'humidité | Hors lot ; renforts posés en ambiance sèche | `D3 p. 3-8` (désordres 4, 7, 9). Aucune pièce du lot structure ne traite la cause. À défaut de traitement préalable, **la durabilité des bois et des aciers n'est pas garantie par nous** | À CONFIRMER | B-00 | B-44 · B-45 | 19/10 |
-| **H-25** | Résistance de la maçonnerie | `f_k = 1,5 MPa` · `E = 1 500 MPa` | `D3` (nature des murs), `D5` (épaisseurs relevées), **aucun essai**. C'est la borne basse de la maçonnerie de pierre naturelle : elle gouverne les raideurs de contreventement et les centres de rigidité de `B-25` | À CONFIRMER | B-25 | B-25 · B-42 · B-46 | 20/10 |
-| **H-26** | Cohésion initiale au cisaillement | `f_vk0 = 0,15 MPa` · `γ_M = 2,5` | Idem `H-25`. Avec `σ_d` de `H-27`, donne `f_vk = 108 kPa` — valeur utilisée dans tous les ratios `τ/f_vk` de `B-25` | À CONFIRMER | B-25 | B-25 · B-46 | 20/10 |
+| **H-25** | Résistance de la maçonnerie | `f_k = 1,5 MPa` · `E = 1 500 MPa` | `D3` (nature des murs), `D5` (épaisseurs relevées), **aucun essai**. Borne basse de la maçonnerie de pierre naturelle ; gouverne les raideurs et les centres de rigidité de `B-25`. **`D-34`** : notre étude est faite avec cette valeur ; **sa confirmation par essais est hors de notre mission et à la charge du maître d'ouvrage** ; si les essais sont non concluants, la **reprise de nos études est chiffrée en prestation complémentaire** | À CONFIRMER | B-25 | B-25 · B-42 · B-46 | 20/10 |
+| **H-26** | Cohésion initiale au cisaillement | `f_vk0 = 0,15 MPa` · `γ_M = 2,5` | Idem `H-25`, avec la même clause `D-34`. Avec `σ_d` de `H-27`, donne `f_vk = 108 kPa` — valeur utilisée dans tous les ratios `τ/f_vk` de `B-25` | À CONFIRMER | B-25 | B-25 · B-46 | 20/10 |
 
 > **`H-25` et `H-26` sont les deux hypothèses les plus lourdes du dossier.** Elles portent **toute** la stabilité horizontale : un `f_k` réel de `1,0 MPa` au lieu de `1,5` ferait chuter les raideurs de 33 % et déplacerait les centres de rigidité. Aucun essai n'est prévu à notre mission — la valeur plancher est donc **assumée**, jamais présentée comme mesurée.
 
@@ -185,6 +202,9 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 | 20/10/2026 | `H-28`, `H-29`, `H-30` | **Création** — charges de plancher, de toiture et de cloisons | B-21 | DDC préliminaire : trois grandeurs absentes du marché |
 | 20/10/2026 | `H-31` | **Promotion en décision** — sortie du registre | Client (`D-31`) | Salle de sport confirmée en catégorie C4 |
 | 20/10/2026 | `H-01` à `H-30` | **Régime de confirmation** — colonne ajoutée, 9 hypothèses reclassées en LECTURE | Client (`D-33`) | Le CCTP est adressé à l'entreprise : aucune réponse ne viendra pour ces neuf-là |
+| 20/10/2026 | **`H-03`** | **Réécriture** — les renforts `R1`/`R2`/`R3` ne sont **pas** « exécutés » : ce sont des **ouvrages neufs** que l'entreprise réalisera sur nos plans, qu'elle attend | Client | L'ancienne rédaction laissait croire que les renforts existaient déjà — c'était faux |
+| 20/10/2026 | **`H-06`** | **Réécriture** — le doute portait sur le **cartouche** (erreur d'imprimerie), pas sur la géométrie ; `B-30` l'a tranché à `1,7 mm` | Client | Une hypothèse illisible à l'oral est une hypothèse mal rédigée |
+| 20/10/2026 | `H-25`, `H-26` | **Clause `D-34`** — essais hors mission à la charge du MO, reprise d'étude chiffrée si non concluants | Client | L'hypothèse devait être fournie avant le démarrage ; elle ne l'a pas été |
 
 ---
 
@@ -202,6 +222,26 @@ Les nuages `D-19` **restent posés** sur les plans et dans les notes. Un nuage d
 | Croisement des références dans les briques | ✅ **13 citations** vérifiées dans `B-20`, `B-21`, `B-25`, `B-40` — **toutes présentes au registre** |
 
 **Sorties vérifiables** : `_rendus/b22_hypotheses.txt` et `_rendus/b22_hypotheses.json`.
+
+---
+
+## 4.A DECISION `D-34` — HYPOTHÈSE DE MAÇONNERIE ET REPRISE D'ÉTUDE
+
+**La décision, mot pour mot dans son effet :**
+
+> Nos études sont réalisées **avec l'hypothèse `f_k = 1,5 MPa` et `f_vk0 = 0,15 MPa`**. Cette hypothèse **doit être confirmée par des essais**, qui sont **hors de notre mission**. Si les essais ne sont pas concluants, **la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée** — cette hypothèse devait nous être fournie **avant le démarrage de nos études**.
+
+**Où la clause est écrite**, pour qu'elle ne reste pas dans un registre que personne n'ouvre :
+
+| Emplacement | Forme |
+|---|---|
+| Note `B-25` § 8.1bis | Clause intégrale, avec l'explication mécanique (`f_k` réel `1,0` → déplacements × 1,5) |
+| Note `B-25` § 3 (tableau des données) | Statut des deux lignes : « hypothèse d'étude à confirmer par essais (`D-34`) » |
+| Planche `B-25 Ind. D`, pièce 8 | Trois lignes : valeurs retenues · essais hors mission à la charge du MO · reprise chiffrée si non concluant |
+| `B-22` (cette note) | `H-25` et `H-26`, colonne justification |
+| `B-03` RDR | Décision `D-34` au registre |
+
+**Pourquoi ce n'est pas une clause de style.** `H-25` et `H-26` sont les deux seules hypothèses du dossier qui portent **toute la stabilité horizontale** d'un bâtiment existant **sans une seule mesure**. La clause dit trois choses distinctes : ce que nous avons supposé, **qui doit vérifier**, et **qui paie si la vérification contredit l'hypothèse**. Sans le troisième point, un nuage « à confirmer » n'engage personne.
 
 ---
 

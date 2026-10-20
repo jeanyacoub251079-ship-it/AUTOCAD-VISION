@@ -11,10 +11,12 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **S** (remplace l'indice R du 20/10/2026 — décision `D-33`) |
+| **Indice du livrable** | **T** (remplace l'indice S du 20/10/2026 — décision `D-34`) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
-> **Indice S (20/10/2026)** : **`D-33`** — **doctrine de lecture du dossier de consultation des entreprises**. Un DCE est **adressé à l'entreprise** : son CCTP énumère les prestations que l'entreprise doit réaliser et **ne nous est pas adressé**. Certaines hypothèses du registre ne recevront donc **jamais** de réponse formelle (désamiantage, déplombage, cantonnements, méthodes de fouille). Elles sont reclassées en **régime `LECTURE`** dans `B-22` et sortent du circuit de relance. **`B-22` livrée en indice A** (30 hypothèses, 6/6).
+> **Indice T (20/10/2026)** : **`D-34`** — **hypothèse de maçonnerie (`f_k = 1,5 MPa`, `f_vk0 = 0,15 MPa`) : nos études sont faites avec cette valeur, sa confirmation par essais est hors de notre mission et à la charge du maître d'ouvrage, et des essais non concluants ouvrent une prestation complémentaire de reprise d'étude.** `B-25` révisée en **indice D** (planche `IndD`), `B-22` réécrite sur `H-03` et `H-06`.
+>
+> *Indice S (20/10/2026) : **`D-33`** — **doctrine de lecture du dossier de consultation des entreprises**. Un DCE est **adressé à l'entreprise** : son CCTP énumère les prestations que l'entreprise doit réaliser et **ne nous est pas adressé**. Certaines hypothèses du registre ne recevront donc **jamais** de réponse formelle (désamiantage, déplombage, cantonnements, méthodes de fouille). Elles sont reclassées en **régime `LECTURE`** dans `B-22` et sortent du circuit de relance. **`B-22` livrée en indice A** (30 hypothèses, 6/6).
 >
 > *Indice R (20/10/2026) : quatre arbitrages rendus en réponse à `B-21` — **`D-28`** (aucun joint de dilatation, confirmé), **`D-30`** (`SF1` portée à 80 × 80 cm), **`D-31`** (salle de sport en catégorie C4), **`D-32`** (`2,50 kN/m²` partout). Fermetures : **R-06**, **R-07**, **V-06**. **`B-21` révisée en indice B**, **`B-25` révisée en indice C** (planche `IndC`). **`D-29` reste ouverte** : elle est portée par `B-25`, pas par `B-21`.
 >
@@ -87,6 +89,7 @@
 | **`D-31`** | 20/10/2026 | **Salle de sport du R+1 — catégorie C4** | **La salle de sport (34,25 m², R+1) relève de la catégorie C4 de l'EC1** : `q_k = 5,00 kN/m²`. L'usage sportif est confirmé | Client | **`H-31` est promue décision** et sort du registre des hypothèses notifiées. **`+85,6 kN` à l'ELS** entrent en dur dans `B-43`, `B-44`, `B-45` ; **`+8,3 %`** de la charge du niveau. Un retour à `2,50 kN/m²` exigerait une **nouvelle décision écrite**, pas une observation de chantier. **Ferme `R-07`** ; **`B-21` révisée en indice B** |
 | **`D-32`** | 20/10/2026 | **Surcharge d'exploitation — `2,50 kN/m²`** | **La surcharge d'exploitation est de `2,50 kN/m²` pour tout le bâtiment**, hors le local `D-31`. Le conflit `D2` (250 daN/m²) / `D3` (150 daN/m²) est tranché | Client | **Ferme `R-06` et le verrou `V-06`.** `B-22` à `B-24` ne sont plus menées **en paramétrique sur deux valeurs** : une seule hypothèse subsiste. **`B-21` révisée en indice B** |
 | **`D-33`** | 20/10/2026 | **Doctrine de lecture du DCE — pièce adressée à l'entreprise** | **Un dossier de consultation des entreprises ou un dossier marché est adressé à l'entreprise.** Les prestations qu'il indique — notamment au CCTP — sont celles que **l'entreprise doit réaliser**. Le CCTP **n'est pas adressé au bureau d'études d'exécution**. Certaines prestations relèvent donc de l'entreprise et non de nous : désamiantage, déplombage, plans de cantonnements de chantier, méthodes d'exécution. **Notre travail : lire le CCTP et retenir les informations qui concernent nos études** | Client | **Crée le 4ᵉ qualificatif du registre des hypothèses : le RÉGIME DE CONFIRMATION.** 9 hypothèses (`H-03`, `H-05`, `H-06`, `H-09`, `H-11`, `H-13`, `H-16`, `H-19`, `H-21`) passent en régime `LECTURE` : **aucune relance, aucune attente** — le nuage signale une lecture, pas une question. Il ne reste que **10 hypothèses réellement relançables** et **2 en attente de relevé**. Le délai `D-19` de 2 jours ne court que sur le régime `DOCUMENTAIRE`. **`B-22` livrée en indice A** ; `B-03` annexe révisée en indice G |
+| **`D-34`** | 20/10/2026 | **Hypothèse de maçonnerie — à confirmer par essais, hors mission** | **Nos études sont réalisées avec l'hypothèse `f_k = 1,5 MPa` et `f_vk0 = 0,15 MPa`.** Cette hypothèse **doit être confirmée par des essais, hors de notre mission**. Si les essais ne sont pas concluants, **la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée** : l'hypothèse devait nous être fournie **avant le démarrage de nos études** | Client | **`H-25` et `H-26` reçoivent une clause de conséquence** : la valeur reste notre hypothèse d'étude, mais **la charge de la vérification sort de notre mission** et **la reprise est chiffrable**. La clause est écrite à quatre endroits (`B-25` § 3 et § 8.1bis, planche `B-25 Ind. D` pièce 8, `B-22`, présent registre) pour qu'elle soit lisible au moment où la discussion a lieu — pas dans une annexe que personne n'ouvre. **`B-25` révisée en indice D** |
 
 > **`D-29` n'est pas dans ce tableau** : elle reste **proposée**, portée par `B-25` § 10 (contreventement en service = maçonnerie existante seule). Tant qu'elle est ouverte, `H-27` de `B-25` et le `σ_d` du § 7 de `B-21` restent **examinés mais non arbitrés**.
 
@@ -142,6 +145,7 @@
 | ~~Surcharge d'exploitation 250 ou 150 daN/m²~~ | ✅ **TRANCHÉ par D-32** — `2,50 kN/m²` partout (hors `D-31`) |
 | ~~Catégorie d'usage de la salle de sport~~ | ✅ **TRANCHÉ par D-31** — catégorie C4, `5,00 kN/m²` |
 | **Régime des hypothèses sans destinataire** | ✅ **TRANCHÉ par D-33** — 9 hypothèses en `LECTURE`, hors circuit de relance |
+| **Rôle des renforts métalliques vis-à-vis du vent** | ⏳ **PROPOSÉE — `D-29`** : *le contreventement en service est assuré par la maçonnerie existante seule ; aucun renfort métallique, aucun poteau, aucun frangement n'est réputé reprendre les efforts horizontaux.* **En clair : quand le vent pousse sur le pignon, ce sont les murs qui tiennent le bâtiment, pas les poutres neuves.** Une seule conséquence : si un renfort était compté comme raidisseur, il faudrait le concevoir encastré et triangulé — ce que le projet ne fait pas |
 | ~~Référence du −1,00 m~~ | ✅ **TRANCHÉ par D-09** — terrain naturel |
 | ~~Traitement de l'interface avec l'existant~~ | ✅ **TRANCHÉ par D-09** — égalisation par gros béton |
 | ~~Géométrie de la semelle 25×25~~ | ✅ **TRANCHÉ par D-10** — semelle isolée 25 × 25 en plan |
@@ -274,7 +278,7 @@
 
 | Section | Nombre | Évolution depuis l'indice A |
 |---|---|---|
-| **Décisions (D-xx)** | **32** | **+4 (D-28, D-30, D-31, D-32)** — recompté : `D-01` à `D-24` (24) + `D-26`, `D-27` (2) + 4 + **`D-33`** = **32**. **`D-25` n'existe pas** (code jamais consigné, séquence close) |
+| **Décisions (D-xx)** | **33** | **+4 (D-28, D-30, D-31, D-32)** — recompté : `D-01` à `D-24` (24) + `D-26`, `D-27` (2) + 4 + **`D-33`** + **`D-34`** = **33**. **`D-25` n'existe pas** (code jamais consigné, séquence close) |
 | **Hypothèses (H-xx)** | **30 notifiées sur 31** — `H-01` à `H-31`, dont **`H-31` promue décision `D-31`** | H-01 à H-24 · `H-25` à `H-27` (`B-25`) · `H-28` à `H-30` (`B-21`) · `H-31` **sortie du registre** |
 | **Propositions de réserves restantes** | **3** — R-61, R-62, R-63 | R-39 à R-60 **retirées** par D-19 |
 | **Réserves (R-xx)** | **40** dont **29 ouvertes** et **11 fermées** | indice N : +1 ouverte (**R-64**) — *indice I : +1 ouverte (R-38) ; fermées : R-05, R-24, R-30, R-31, R-32, R-33, R-34, R-35, R-37 |

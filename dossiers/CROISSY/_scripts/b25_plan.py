@@ -4,7 +4,7 @@
 B-25 — PLANCHE DE CONTREVENTEMENT (Indice C) — CROISSY-FLORA
 Report du schéma de contreventement sur le fond structurel pur B-32 Ind. D.
 
-Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndC.{dxf,pdf,png}
+Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndD.{dxf,pdf,png}
 Filigrane obligatoire : PRINCIPE — NE PAS EXÉCUTER — Indice P
 Note D-09 reproduite intégralement.
 """
@@ -27,7 +27,7 @@ import b25_stabilite as b25  # noqa: E402
 
 SRC = "dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf"
 JSON = "dossiers/CROISSY/_rendus/b25_stabilite.json"
-OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndC"
+OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndD"
 X0, Y0 = b25.B30
 
 
@@ -153,7 +153,7 @@ def main():
     add_rect(msp, tx0, y_top - 92, tx1, y_top, "B25-ALERTE")
     add_rect(msp, tx0 + 8, y_top - 84, tx1 - 8, y_top - 8, "B25-ALERTE")
     add_txt(msp, tx0 + 30, y_top - 60,
-            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. C)", h=21.0, layer="B25-ALERTE")
+            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. D)", h=21.0, layer="B25-ALERTE")
 
     y = y_top - 140
     add_txt(msp, tx0 + 24, y, "1. SYSTEME DE CONTREVENTEMENT — VERDICT", h=16.0)
@@ -262,6 +262,17 @@ def main():
         add_txt(msp, tx0 + 30, y, line, h=10.8)
         y -= 18
 
+    y -= 4
+    add_txt(msp, tx0 + 24, y, "8. MACONNERIE — HYPOTHESE D'ETUDE A CONFIRMER (D-34)", h=15.0)
+    y -= 22
+    for line in [
+        "f_k = 1,5 MPa · E = 1 500 MPa · f_vk0 = 0,15 MPa : valeurs retenues pour nos etudes.",
+        "Leur confirmation par essais est HORS MISSION et a la charge du maitre d'ouvrage.",
+        "Essais non concluants -> reprise des etudes chiffree en prestation complementaire.",
+    ]:
+        add_txt(msp, tx0 + 30, y, line, h=10.2)
+        y -= 17
+
     # note D-09 intégrale
     ny = y_bot + 300
     add_rect(msp, tx0 + 18, ny, tx1 - 18, ny + 132, "B25-ALERTE")
@@ -281,7 +292,7 @@ def main():
     for txt, hh, yy, lay in [
         ("EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 18.0, cy1 - 42, "B25-CADR"),
         ("SCHEMA DE CONTREVENTEMENT — STABILITE GLOBALE (PH RDC)", 14.0, cy1 - 82, "B25-CADR"),
-        ("Brique B-25 · Indice C · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
+        ("Brique B-25 · Indice D · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
         ("Fond B-32 Ind. D · Echelle 1/80 · Unites DXF cm · Repere B-30 (P1)", 11.5, cy1 - 148, "B25-CADR"),
         ("PRINCIPE — NE PAS EXECUTER — Indice P", 19.0, cy1 - 196, "B25-ALERTE"),
     ]:
@@ -300,7 +311,7 @@ def main():
     ax.set_aspect("equal", adjustable="box")
     ax.axis("off")
     ax.set_title(
-        "CROISSY-FLORA — B-25 (Ind. C) — CONTREVENTEMENT, TORSION ET JOINTS — STABILITÉ EN SERVICE\n"
+        "CROISSY-FLORA — B-25 (Ind. D) — CONTREVENTEMENT, TORSION ET JOINTS — STABILITÉ EN SERVICE\n"
         "PRINCIPE — NE PAS EXÉCUTER — Indice P   (ni vérification sismique D-26, ni stabilité provisoire D-27)",
         fontsize=11.5, fontweight="bold", pad=8)
     fig.savefig(OUT + ".png", dpi=220, facecolor="white")
