@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461334.6115740743
+2461334.6988657406
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461334.6115856483
+2461334.698877315
   9
 $TDUUPDATE
  40
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{0E0450FA-986B-427F-926E-4E1BCB7DE185}
+{55C842A5-9A80-4E64-A7D5-8FA391D5FFB9}
   9
 $EXTNAMES
 290
@@ -278191,7 +278191,7 @@ AcDbText
  40
 11.4
   1
--> D-28 proposee : aucun joint · a reexaminer si l'emprise est modifiee
+-> D-28 consignee le 20/10/2026 : aucun joint · a reexaminer si l'emprise est modifiee
  11
 9770.0
  21
@@ -279103,7 +279103,7 @@ AcDbText
  40
 11.5
   1
-Brique B-25 · Indice B · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
+Brique B-25 · Indice C · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
  11
 9766.0
  21
@@ -424299,7 +424299,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-10-20T14:40:41.607380+00:00
+1.4.5 @ 2026-10-20T16:46:23.695193+00:00
   0
 ENDSEC
   0

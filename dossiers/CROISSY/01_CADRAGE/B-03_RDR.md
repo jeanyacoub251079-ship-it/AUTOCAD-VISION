@@ -7,14 +7,18 @@
 | **Code projet `ID-01`** | `CROISSY-FLORA` |
 | **Intitulé `ID-02`** | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
 | **Indice du dossier en vigueur `ID-05`** | ⚠ **NON UNIFIÉ — voir R-01.** Trois indicages coexistent : **D1 « V1 »** (13/03/2026) · **D2 « C »** (16/03/2026) · **D4 « C »** (13/03/2026) |
-| **Date de l'étude `ID-07`** | **19/10/2026** |
+| **Date de l'étude `ID-07`** | **19/10/2026** · mise à jour du **20/10/2026** |
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **Q** (remplace l'indice P du 20/10/2026 — décisions `D-26` et `D-27`) |
+| **Indice du livrable** | **R** (remplace l'indice Q du 20/10/2026 — décisions `D-28`, `D-30`, `D-31`, `D-32`) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
-> **Indice Q (20/10/2026)** : **`D-26`** — aucune vérification sismique (zone 1, séisme très faible) ; **`D-27`** — la stabilité en phase provisoire relève de la MOE structure de conception. **`B-25` révisée en indice B** : sections sismique et phases provisoires retirées du livrable, grandeurs transmises à la MOE.
+> **Indice R (20/10/2026)** : quatre arbitrages rendus en réponse à `B-21` — **`D-28`** (aucun joint de dilatation, confirmé), **`D-30`** (`SF1` portée à 80 × 80 cm), **`D-31`** (salle de sport en catégorie C4), **`D-32`** (`2,50 kN/m²` partout). Fermetures : **R-06**, **R-07**, **V-06**. **`B-21` révisée en indice B**, **`B-25` révisée en indice C** (planche `IndC`). **`D-29` reste ouverte** : elle est portée par `B-25`, pas par `B-21`.
+>
+> **Sur la séquence des codes — `D-25` n'existe pas.** La numérotation saute de **`D-24`** à **`D-26`** : un code `D-25` avait été annoncé puis **jamais consigné**, et le registre est passé directement aux décisions sismique et phases provisoires. Le numéro est **retiré de la séquence** et ne sera pas réutilisé : une décision ne se renumérote pas après diffusion, un trou documenté se lit, un code recyclé se confond. C'est l'origine de l'ambiguïté qui a fait poser à tort la question des joints de dilatation.
+>
+> *Indice Q (20/10/2026) : **`D-26`** — aucune vérification sismique (zone 1, séisme très faible) ; **`D-27`** — la stabilité en phase provisoire relève de la MOE structure de conception. **`B-25` révisée en indice B** : sections sismique et phases provisoires retirées du livrable, grandeurs transmises à la MOE.
 > *Indice P : **D-25 adoptée** — validation des **Articles méthodologiques P1 à P8 (« Synthèse structurelle du dossier »)** et révision coordonnée des trois briques graphiques :
 > - **B-32 révisée en Indice D** : purge intégrale des cloisons et complexes d'isolation (`020_cloi`, `020_cloisons` = `0 entité`), filtrage des portes et cotes de cloisons ;
 > - **B-20 révisée en Indice B** (mode **PARTIEL-DÉCLARÉ**) : inscription vectorielle exacte `D2 ↔ D5` au `1/80` (**résidu médian `21,0 mm`**, levant l'ancienne limite D5↔D2), implantation complète de **tous** les ouvrages neufs EVEN (`F1a/b/c, F2, F3, F4, R1, R2-N/S, R3-N/S, Stab1, P1-N/S, P2, P3, J1, S1, S2, SF1, Bêche, RSO passerelle, Charpente`) sur 3 planches + 2 coupes `A-A` et `B-B`, et rectificatifs factuels (`S275` fourni en D2 p. 1, `2×P1`, sommiers `S1/S2`, sondages Planchers A & B dans D3 p. 10) ;
@@ -76,6 +80,12 @@
 
 | **D-26** | 20/10/2026 | **Vérification sismique — non produite** | **Le projet est en zone de sismicité 1 (Île-de-France), séisme très faible. Aucune vérification sismique n'est à produire** — ni réglementaire, ni de sensibilité | Client | **Sort la sismique du livrable `B-25`** : `H-24` (classe de sol C, `a_gr = 0,40 m/s²`) est **neutralisée**, non supprimée. L'arrêté du 22/10/2010 (art. 3) ne soumet d'ailleurs aucune catégorie d'importance aux règles EC8 en zone 1 — la décision **et** le droit vont dans le même sens. **B-25 révisée en indice B** ; section sismique retirée |
 | **D-27** | 20/10/2026 | **Stabilité en phase provisoire — mission de la MOE structure de conception** | **Dans un bâtiment existant, la vérification du contreventement en phase provisoire incombe à la maîtrise d'œuvre structure de conception** | Client | **Retire du livrable `B-25` la vérification de la stabilité provisoire** produite à l'indice A, y compris le recalcul par retrait de voile et l'enveloppe de démolition. **Subsistent de notre lot** : l'étaiement d'exécution (`H-20`), le mode opératoire de pose, l'ordre `F3` avant `F2`, l'étaiement latéral des pignons (sécurité des personnes). **Obligation créée pour nous** : transmettre à la MOE les grandeurs de raideur, centres de rigidité et voiles majeurs (§ 6.2 de `B-25`) et formaliser la demande par `T-04`. **B-25 révisée en indice B** |
+| **`D-28`** | 20/10/2026 | **Joints de dilatation — aucun** | **Le pavillon Flora ne comporte AUCUN joint de dilatation.** Ce n'est pas une hypothèse à confirmer : c'est l'état du bâtiment et il est maintenu. Le fait ne figure sur aucune planche et ne sera plus soumis à arbitrage | Client | **Ferme la proposition `D-28` de `B-25`** : l'absence de joint passe de « proposée » à **consignée**. Aucune raideur, aucun centre de rigidité, aucun `τ/f_vk` n'est modifié — un joint qui n'existe pas ne change pas un calcul. **Clause maintenue** : la décision reste conditionnée au **maintien de l'emprise** ; elle devient fausse si une extension est accolée sans joint ou si une reprise en sous-œuvre coupe le bloc. **`B-25` révisée en indice C** (planche `IndC`) |
+| **`D-30`** | 20/10/2026 | **`SF1` portée à 80 × 80 cm** | **La semelle `SF1` sous `P2` passe de 60 × 60 à 80 × 80 cm** (h 25 cm, `C25/30`, `c_nom = 50 mm`) | Client | **Supprime la non-conformité de portance de `B-21`** : `σ_ELS` passe de `501 kPa` (admissible `300`) à **`282 kPa`** ; `σ_ELU` de `391 kPa` (admissible `490`) — conforme. **Ne prouve pas la portance** : `PA-01` et le sondage de soubassement (nuage `Z-P2`) restent ouverts. **Reporté en `B-40` indice suivant** : armatures, reprise de l'implantation `PLS` (+10 cm par côté), vérification mitoyenneté et réseaux. **`B-21` révisée en indice B** |
+| **`D-31`** | 20/10/2026 | **Salle de sport du R+1 — catégorie C4** | **La salle de sport (34,25 m², R+1) relève de la catégorie C4 de l'EC1** : `q_k = 5,00 kN/m²`. L'usage sportif est confirmé | Client | **`H-31` est promue décision** et sort du registre des hypothèses notifiées. **`+85,6 kN` à l'ELS** entrent en dur dans `B-43`, `B-44`, `B-45` ; **`+8,3 %`** de la charge du niveau. Un retour à `2,50 kN/m²` exigerait une **nouvelle décision écrite**, pas une observation de chantier. **Ferme `R-07`** ; **`B-21` révisée en indice B** |
+| **`D-32`** | 20/10/2026 | **Surcharge d'exploitation — `2,50 kN/m²`** | **La surcharge d'exploitation est de `2,50 kN/m²` pour tout le bâtiment**, hors le local `D-31`. Le conflit `D2` (250 daN/m²) / `D3` (150 daN/m²) est tranché | Client | **Ferme `R-06` et le verrou `V-06`.** `B-22` à `B-24` ne sont plus menées **en paramétrique sur deux valeurs** : une seule hypothèse subsiste. **`B-21` révisée en indice B** |
+
+> **`D-29` n'est pas dans ce tableau** : elle reste **proposée**, portée par `B-25` § 10 (contreventement en service = maçonnerie existante seule). Tant qu'elle est ouverte, `H-27` de `B-25` et le `σ_d` du § 7 de `B-21` restent **examinés mais non arbitrés**.
 
 ### 1.0bis Articles méthodologiques ajoutés au référentiel projet (`P1` à `P8` — Décision `D-25` du 20/10/2026)
 
@@ -126,8 +136,8 @@
 |---|---|
 | **Δc<sub>dev</sub>** (écart d'exécution) | **NON DÉCIDÉ** → **R-03** |
 | **Éléments classés XC4** | **NON DÉCIDÉ** → **R-04** |
-| **Surcharge d'exploitation 250 ou 150 daN/m²** | **NON DÉCIDÉ** → **R-06** |
-| **Catégorie d'usage de la salle de sport** | **NON DÉCIDÉ** → **R-07** |
+| ~~Surcharge d'exploitation 250 ou 150 daN/m²~~ | ✅ **TRANCHÉ par D-32** — `2,50 kN/m²` partout (hors `D-31`) |
+| ~~Catégorie d'usage de la salle de sport~~ | ✅ **TRANCHÉ par D-31** — catégorie C4, `5,00 kN/m²` |
 | ~~Référence du −1,00 m~~ | ✅ **TRANCHÉ par D-09** — terrain naturel |
 | ~~Traitement de l'interface avec l'existant~~ | ✅ **TRANCHÉ par D-09** — égalisation par gros béton |
 | ~~Géométrie de la semelle 25×25~~ | ✅ **TRANCHÉ par D-10** — semelle isolée 25 × 25 en plan |
@@ -150,11 +160,11 @@
 | **R-03** | **Δc<sub>dev</sub>** — 5 mm avec système qualité, ou 35 mm d'enrobage | Ouverte | **Calcul** | **Client / BET** | 19/10/2026 | Avant B-42, B-46 |
 | **R-04** | **Éléments en XC4** — nommer, ou retirer la classe | Ouverte | **Calcul** | **Client / BET** | 19/10/2026 | Avant B-42, B-46 |
 | ~~**R-05**~~ | ~~Ancrage des fondations — 40 vs 50 cm~~ | **FERMÉE** | — | BET / MOE | 19/10/2026 | **Fermée par D-08** (50 cm) |
-| **R-06** | Surcharge d'exploitation — 250 vs 150 daN/m² | Ouverte | **Calcul** | **MOE / MOA** | 19/10/2026 | Avant B-21 |
-| **R-07** | Catégorie d'usage — salle de sport 34,25 m² et plateau technique 33,14 m² | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-21 |
-| **R-08** | Poids propres de plancher vs recharge 15 cm | Ouverte | **Calcul** | **MOE / BET** | 19/10/2026 | Avant B-21 |
-| **R-09** | Poids propres de toiture | Ouverte | **Calcul** | **BET / MOE** | 19/10/2026 | Avant B-21, B-44 |
-| **R-10** | Cloisons et équipements lourds | Ouverte | **Calcul** | **MOE / BET** | 19/10/2026 | Avant B-21, B-43 |
+| ~~**R-06**~~ | ~~Surcharge d'exploitation — 250 vs 150 daN/m²~~ | **FERMÉE** | — | **Client** | 19/10/2026 | **Fermée par D-32** le 20/10/2026 — `2,50 kN/m²` partout |
+| ~~**R-07**~~ | ~~Catégorie d'usage — salle de sport 34,25 m² et plateau technique 33,14 m²~~ | **FERMÉE** | — | **Client** | 19/10/2026 | **Fermée par D-31** le 20/10/2026 — salle de sport en C4 ; **plateau technique RDC laissé en catégorie B** (voir réserve suivante) |
+| **R-08** | Poids propres de plancher vs recharge 15 cm | **TRAITÉE — valeur notifiée** | **Calcul** | **MOE / BET** | 19/10/2026 | **`H-28` notifiée le 20/10/2026** (`B-21`, `B-03` annexe ind. E) — délai contradictoire `D-19` de 2 jours ; le silence vaut acceptation |
+| **R-09** | Poids propres de toiture | **TRAITÉE — valeur notifiée** | **Calcul** | **BET / MOE** | 19/10/2026 | **`H-29` notifiée le 20/10/2026** (`0,95 kN/m²`) — délai `D-19` ; à confirmer en `B-44` |
+| **R-10** | Cloisons et équipements lourds | **TRAITÉE — valeur notifiée** | **Calcul** | **MOE / BET** | 19/10/2026 | **`H-30` notifiée le 20/10/2026** (`0,80 kN/m²`, EC1 § 6.3.1.2) — délai `D-19` ; les **équipements lourds de la salle de sport** restent à demander en `B-44` |
 | **R-11** | Action sismique — a<sub>gr</sub> et classe de sol | Ouverte | **Calcul** | **BET** | 19/10/2026 | Avant B-42, B-46 |
 | **R-12** | Sécurité incendie — CF, SF, catégorie | Ouverte | **Calcul** | **MOE / BE incendie** | 19/10/2026 | Avant B-42, B-43, B-49 |
 | **R-13** | **Coupe type et toit des alluvions** — *réduite de l'ex-« 3 extraits »* : la **nappe** est soldée par **D-16**, les **tassements** sortent du périmètre par **D-15**. Il ne reste que la coupe géologique | Ouverte | **Calcul** *(criticité ramenée de CHANTIER à CALCUL par D-16)* | **MOE / GEOEXPERTS** | 19/10/2026 | **Avant B-40** |
@@ -204,7 +214,7 @@
 |---|---|---|---|---|---|---|
 | **V-04** | **MAT-03b résiduel** — Δc<sub>dev</sub> et XC4 (R-03, R-04) | B-42, B-46 | 19/10/2026 | Client / BET | B-40 avec MAT-03a (50 mm, **décidé et conforme XC2**) ; B-45 | PARTIEL-DÉCLARÉ sur B-40 ; PARAMÉTRIQUE sur B-42, B-46 |
 | **V-05** | **MAT-02 / SOL-05** — classe XA (R-14) | B-40, B-42, B-43 | 19/10/2026 | GEOEXPERTS / BET | B-40 en partie courante sur XC2 ; B-45 | PARAMÉTRIQUE |
-| **V-06** | **CHG-02** — surcharge 250 vs 150 (R-06) | B-21 | 19/10/2026 | MOE / MOA | B-22, B-23, B-24 | PARAMÉTRIQUE — les deux valeurs en parallèle |
+| ~~**V-06**~~ | ~~**CHG-02** — surcharge 250 vs 150 (R-06)~~ | — | 19/10/2026 | Client | — | **FERMÉ par `D-32`** le 20/10/2026 — `2,50 kN/m²` partout. `B-22` à `B-24` ne sont plus paramétriques |
 | **V-07** | **CHG-03** — recharge 15 cm (R-08) | B-21 | 19/10/2026 | MOE / BET | B-22 à B-24 | PARAMÉTRIQUE |
 | **V-08** | **CHG-04** — poids propres de toiture (R-09) | B-21, B-44 | 19/10/2026 | BET / MOE | B-45, B-49 | PARAMÉTRIQUE |
 | **V-09** | **CHG-08** — cloisons et équipements lourds (R-10) | B-21, B-43 | 19/10/2026 | MOE / BET | B-45, B-49 | PARAMÉTRIQUE |
@@ -241,6 +251,7 @@
 | **V-F1** | B-41 SANS OBJET | 19/10/2026 | **D-04 + D-05** | Fondations superficielles déclarées |
 | **V-F2** | B-47 SANS OBJET | 19/10/2026 | **D-05** | Aucun escalier neuf |
 | **V-F3** | B-48 SANS OBJET | 19/10/2026 | **D-05** | Aucune prédalle ; DOC-09 NON NÉCESSAIRE |
+| **V-06** | CHG-02 — surcharge 250 vs 150 (R-06) | 20/10/2026 | **D-32** | Valeur tranchée : **`2,50 kN/m²`** pour tout le bâtiment, hors local en catégorie C4 (`D-31`). Le verrou paramétrique tombe |
 
 ### 3.3 Requalifications inscrites — verrou V12
 
@@ -259,8 +270,8 @@
 
 | Section | Nombre | Évolution depuis l'indice A |
 |---|---|---|
-| **Décisions (D-xx)** | **24** | +3 (D-22, D-23, D-24) |
-| **Hypothèses (H-xx)** | **24** — validées, **aucune notifiée** | H-01 à H-24 · 17 C1 · 4 C2 · **3 C3** (H-10, H-11, H-21) |
+| **Décisions (D-xx)** | **31** | **+4 (D-28, D-30, D-31, D-32)** — recompté : `D-01` à `D-24` (24) + `D-26`, `D-27` (2) + 4 = **31**. **`D-25` n'existe pas** (code jamais consigné, séquence close) |
+| **Hypothèses (H-xx)** | **30 notifiées sur 31** — `H-01` à `H-31`, dont **`H-31` promue décision `D-31`** | H-01 à H-24 · `H-25` à `H-27` (`B-25`) · `H-28` à `H-30` (`B-21`) · `H-31` **sortie du registre** |
 | **Propositions de réserves restantes** | **3** — R-61, R-62, R-63 | R-39 à R-60 **retirées** par D-19 |
 | **Réserves (R-xx)** | **40** dont **29 ouvertes** et **11 fermées** | indice N : +1 ouverte (**R-64**) — *indice I : +1 ouverte (R-38) ; fermées : R-05, R-24, R-30, R-31, R-32, R-33, R-34, R-35, R-37 |
 | **Verrous (V-xx)** | **30** dont **21 ouverts** | inchangé en nombre ; **V-18 réduit** de « suspension totale » à PARTIEL-DÉCLARÉ ; 9 fermetures (V-01, V-02, V-03, V-24, V-25, V-27, V-F1, V-F2, V-F3) |

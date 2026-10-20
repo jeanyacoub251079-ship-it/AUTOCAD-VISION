@@ -6,11 +6,15 @@
 | Pièce | **Annexe de B-03 (RDR)** — régime institué par **D-19** |
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
-| RDR de rattachement | `01_CADRAGE/B-03_RDR.md` — **indice J** |
-| Hypothèses | **H-01 à H-24** (validées) + **H-25 à H-27** (`B-25`) + **H-28 à H-31** (`B-21`) — **31 hypothèses** |
-| Statut | **VALIDÉES par le client le 19/10/2026** — 23 en accord global, **H-21 rectifiée**. **Aucune n'est encore notifiée : aucun délai ne court** |
+| RDR de rattachement | `01_CADRAGE/B-03_RDR.md` — **indice R** |
+| Hypothèses | **H-01 à H-24** (validées) + **H-25 à H-27** (`B-25`) + **H-28 à H-30** (`B-21`) — **30 hypothèses actives**. **`H-31` est sortie du registre** : promue décision **`D-31`** le 20/10/2026 |
+| Statut | **VALIDÉES par le client le 19/10/2026** — 23 en accord global, **H-21 rectifiée**. **`H-28` à `H-30` NOTIFIÉES le 20/10/2026** (`B-21`) : le délai contradictoire de **2 jours** de `D-19` court à compter de cette date |
 | Date | 19/10/2026 |
-| Indice du livrable | **D** (remplace l'indice C — `H-24` **neutralisée** par `D-26` le 20/10/2026) |
+| Indice du livrable | **F** (remplace l'indice E du 20/10/2026 — `H-31` promue `D-31`) |
+
+> **Indice F — ce qui change sans toucher une seule valeur.** `H-31` (salle de sport en catégorie C4) **sort du registre des hypothèses** : le client l'a confirmée le 20/10/2026, elle devient la **décision `D-31`** au RDR. Une hypothèse confirmée n'est pas « validée » : elle change de nature. La laisser au registre des hypothèses aurait maintenu un doute que la décision a supprimé, et aurait laissé croire qu'un simple silence de deux jours pouvait ramener la salle de sport à `2,50 kN/m²`. **Seules `H-28`, `H-29` et `H-30` restent notifiées** — ce sont des grandeurs que le marché ne fournit pas, pas des usages que le client arbitre.
+>
+> *Indice E : `H-28` à `H-31` créées, `H-31` encore notifiée. Indice D : `H-24` **neutralisée** par `D-26` le 20/10/2026.*
 
 ---
 
@@ -194,19 +198,19 @@ Les 24 hypothèses sont **validées**, pas **notifiées**. Entre les deux, il y 
 
 ---
 
-## 6. EXTENSION DU 20/10/2026 — H-28 À H-31 (BRIQUE `B-21`)
+## 6. EXTENSION DU 20/10/2026 — H-28 À H-30 NOTIFIÉES, H-31 PROMUE DÉCISION (BRIQUE `B-21`)
 
 **Origine.** La descente de charges exige quatre grandeurs que le marché ne fournit pas sous forme de charge : les **poids propres de plancher** (`CHG-03`, déclarés au cartouche `D2` en daN/m² mais incomplets au regard de `D4`), le **poids de toiture** (`CHG-04`, « couvertures identifiées sans aucune charge »), les **cloisons** (`CHG-08`, quatre types sans poids) et l'**usage réel de la salle de sport** du R+1 (34,25 m², non distinguée dans un cartouche qui applique `250 daN/m²` à tout le bâtiment).
 
-**Nature.** Trois sont des hypothèses **normatives bornables** (densité, forfait EC1). Une — `H-31` — est une hypothèse **d'usage** : elle ne borne pas une valeur, elle **requalifie un local** au regard de l'EC1. C'est la plus lourde, et c'est la seule qui engage une recette fonctionnelle.
+**Nature.** Les trois hypothèses qui restent sont **normatives et bornables** : une densité, un poids de couverture, un forfait de cloisons. Aucune n'engage l'usage du bâtiment — c'est précisément pourquoi elles peuvent être notifiées sous nuage, alors qu'une **requalification de local** ne le peut pas.
 
 | N° | Hypothèse retenue — **valeur exacte** | Norme d'appui | Fondement | Nuage sur | Si confirmée | Si rectifiée |
 |---|---|---|---|---|---|---|
 | **H-28** | **La recharge de sol prescrite en `D4 p. 5 et 14` (15 cm) pèse `3,30 kN/m²`** (densité 22 kN/m³). Le **plancher B** est recalculé par couches à **`3,91 kN/m²`** au lieu des `3,50` déclarés au cartouche `D2` | EC1-1-1 § 5.2 (poids propres) | `D4 p. 5 et 14` (épaisseur) · `D3 p. 11` (constitution) · `D2 p. 1` (valeur déclarée) | **Note `B-21`** + `B-43` + `B-45` | `g` plancher B = **8,01 kN/m²** (couches + recharge + cloisons) : `F3` et `R1` sont recalculés sur cette base en `B-45` | Si recharge en sable (`18 kN/m³`) : `2,70 kN/m²`, `−0,60`, effet `−7 %` sur `F3` — **conclusion de `B-21` inchangée** |
 | **H-29** | **La toiture pèse `0,95 kN/m²`** : tuiles + liteaux `0,40` · chevrons + volige `0,15` · pannes et fermes `0,25` · plafond de combles `0,15` | EC1-1-1 § 5.2 | `D2 f. 02` — constitution dessinée, **aucune charge au cartouche** | **Note `B-21`** + `B-44` | `F4` reçoit `2,9 kN/m` à l'ELS — cohérent avec `B-20` | Si ardoises ou couverture béton : `+0,20 kN/m²`, effet `< 5 %` sur `F4` |
 | **H-30** | **Les cloisons sont comptées forfaitairement à `0,80 kN/m²`** sur l'ensemble des planchers | EC1-1-1 § 6.3.1.2 (cloisons mobiles ≤ 2,0 kN/m) | `CHG-08` — quatre types de cloisons **sans aucun poids** au DCE | **Note `B-21`** + `B-43` | Le plancher est dimensionné avec les cloisons qu'il portera réellement | Si cloisons lourdes (`1,20 kN/m²`) : `+0,40 kN/m²` sur toute la surface — `+5 %` sur `F3` |
-| **H-31** | **La salle de sport du R+1 (34,25 m²) relève de la catégorie C4** de l'EC1 (`q_k = 5,00 kN/m²`), et non de la catégorie B appliquée uniformément par `D2` | EC1-1-1 tableau 6.1 — cat. C4, activités physiques | `CHG-01b` (`D4 p. 6 et 9`) : « salle de sport 34,25 m² » · `D2 p. 1` : `250 daN/m²` pour tout le bâtiment | **Note `B-21`** + `B-43` + `B-45` | Le supplément vaut **`+85,6 kN`** à l'ELS, soit `+8,3 %` de la charge du niveau. `F3`, `R1` et les solives de la zone Est sont recalculés à `5,00 kN/m²` | ⚠ Si la MOA atteste un usage de **bureau ou de salle polyvalente** : retour à `2,50 kN/m²`, `−85,6 kN`. **La décision doit être écrite** : c'est une recette fonctionnelle, pas une nuance de calcul |
+| ~~**H-31**~~ | ~~La salle de sport du R+1 (34,25 m²) relève de la catégorie C4 de l'EC1 (`5,00 kN/m²`)~~ | EC1-1-1 tableau 6.1 — cat. C4 | `CHG-01b` (`D4 p. 6 et 9`) | — | **PROMUE DÉCISION `D-31` le 20/10/2026** — l'usage sportif est confirmé par le client. Le supplément de **`+85,6 kN`** à l'ELS entre en dur dans `B-43`, `B-44` et `B-45` | **N'est plus une hypothèse.** Un retour à `2,50 kN/m²` exige une **nouvelle décision écrite** modifiant `D-31` |
 
 **Ce que ces hypothèses changent dans le dossier.** `H-28` fait passer `F3` de `40,8` à **`85,3 kN·m`** d'effet de charge et `R1` de `47,5` à **`107,2 kN·m`** : deux éléments qui avaient été prédimensionnés sur un plancher sans recharge. Le prédimensionnement de `B-20` n'était pas faux — il reposait sur les **hypothèses du cartouche**, qui ignorent une prescription écrite de l'architecte (`D4 p. 5`). C'est exactement le type d'écart qu'une descente de charges existe pour révéler.
 
-**Délai contradictoire.** Les quatre hypothèses sont notifiées sous nuage et soumises au délai de **deux jours ouvrés** de `D-19` : silence vaut acceptation et exonération.
+**Délai contradictoire.** `H-28`, `H-29` et `H-30` sont notifiées sous nuage et soumises au délai de **deux jours ouvrés** de `D-19` à compter du **20/10/2026** : silence vaut acceptation et exonération. `H-31` ne court plus — elle est décidée.

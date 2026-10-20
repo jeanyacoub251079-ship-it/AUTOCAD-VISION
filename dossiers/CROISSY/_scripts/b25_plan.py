@@ -4,7 +4,7 @@
 B-25 — PLANCHE DE CONTREVENTEMENT (Indice B) — CROISSY-FLORA
 Report du schéma de contreventement sur le fond structurel pur B-32 Ind. D.
 
-Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndB.{dxf,pdf,png}
+Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndC.{dxf,pdf,png}
 Filigrane obligatoire : PRINCIPE — NE PAS EXÉCUTER — Indice P
 Note D-09 reproduite intégralement.
 """
@@ -27,7 +27,7 @@ import b25_stabilite as b25  # noqa: E402
 
 SRC = "dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf"
 JSON = "dossiers/CROISSY/_rendus/b25_stabilite.json"
-OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndB"
+OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndC"
 X0, Y0 = b25.B30
 
 
@@ -214,7 +214,7 @@ def main():
     for line in [
         "Emprise 11,1 x 17,5 m · dilatation libre 5,2 mm · maçonnerie stabilisee",
         "Frangements appuyes (portee <= 4,88 m) : aucune reprise de dilatation",
-        "-> D-28 proposee : aucun joint · a reexaminer si l'emprise est modifiee",
+        "-> D-28 consignee le 20/10/2026 : aucun joint · a reexaminer si l'emprise est modifiee",
     ]:
         add_txt(msp, tx0 + 30, y, line, h=11.4)
         y -= 21
@@ -281,7 +281,7 @@ def main():
     for txt, hh, yy, lay in [
         ("EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 18.0, cy1 - 42, "B25-CADR"),
         ("SCHEMA DE CONTREVENTEMENT — STABILITE GLOBALE (PH RDC)", 14.0, cy1 - 82, "B25-CADR"),
-        ("Brique B-25 · Indice B · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
+        ("Brique B-25 · Indice C · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
         ("Fond B-32 Ind. D · Echelle 1/80 · Unites DXF cm · Repere B-30 (P1)", 11.5, cy1 - 148, "B25-CADR"),
         ("PRINCIPE — NE PAS EXECUTER — Indice P", 19.0, cy1 - 196, "B25-ALERTE"),
     ]:
@@ -300,7 +300,7 @@ def main():
     ax.set_aspect("equal", adjustable="box")
     ax.axis("off")
     ax.set_title(
-        "CROISSY-FLORA — B-25 (Ind. B) — CONTREVENTEMENT, TORSION ET JOINTS — STABILITÉ EN SERVICE\n"
+        "CROISSY-FLORA — B-25 (Ind. C) — CONTREVENTEMENT, TORSION ET JOINTS — STABILITÉ EN SERVICE\n"
         "PRINCIPE — NE PAS EXÉCUTER — Indice P   (ni vérification sismique D-26, ni stabilité provisoire D-27)",
         fontsize=11.5, fontweight="bold", pad=8)
     fig.savefig(OUT + ".png", dpi=220, facecolor="white")

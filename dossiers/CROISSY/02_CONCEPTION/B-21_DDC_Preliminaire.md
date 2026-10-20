@@ -5,7 +5,7 @@
 | Carnet | **CARNAC v3.0** |
 | Brique | **B-21** — Descente de charges préliminaire |
 | Phase | **3 — Conception et synthèse structurelle** (`B-20` → **`B-21`** → `B-22`) |
-| **Mode d'appel** | **HYPOTHÈSE-NOTIFIÉE** — `CHG-03` (poids propres) et `CHG-04` (toiture) ne sont pas fournis par le marché ; `CHG-02` est en conflit entre deux pièces. Traités par `H-28` à `H-31` |
+| **Mode d'appel** | **HYPOTHÈSE-NOTIFIÉE** — `CHG-03` (poids propres) et `CHG-04` (toiture) ne sont pas fournis par le marché ; `CHG-02` est en conflit entre deux pièces. Traités par `H-28` à `H-30` (charges) et tranchés par `D-31` (usage sportif) et `D-32` (exploitation) le 20/10/2026 |
 | Régime | **OUTILLÉ (V13)** — calcul intégral par script, journal d'exécution conservé |
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
@@ -13,9 +13,18 @@
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b21_ddc.txt` (12 239 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b21_ddc.json` (10 120 o) |
 | Sortie graphique | **Aucune** — la fiche `B-21` n'exige aucun livrable graphique |
-| **Indice** | **A** — création de la brique |
+| **Indice** | **B** — remplace et annule l'indice A du 20/10/2026 (décisions `D-28`, `D-30`, `D-31`, `D-32`) |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-22`** (note d'hypothèses consolidée), puis `B-40` à `B-50` |
+
+> **Ce qui change à l'indice B — décisions du 20/10/2026, aucune valeur numérique modifiée.**
+> Les quatre grandeurs que la DDC avait posées en attente d'arbitrage sont **tranchées**. Aucun calcul n'est repris : les valeurs retenues à l'indice A étaient déjà celles qui découlent de ces décisions, elles étaient seulement **conditionnelles**.
+> - **`D-28`** — **aucun joint de dilatation** sur le pavillon Flora. Confirmée par le client ; consigne `B-25` en indice C.
+> - **`D-30`** — **`SF1` portée à 80 × 80 cm** (§ 9). Le dépassement de portance de `67 %` constaté en 60 × 60 est supprimé par décision, non par discussion sur l'aire d'influence.
+> - **`D-31`** — la **salle de sport du R+1 est en catégorie C4** (`5,00 kN/m²`). `H-31` est **promue décision** ; elle cesse d'être notifiée sous nuage.
+> - **`D-32`** — **`2,50 kN/m²` confirmés** pour tout le reste du bâtiment. Le conflit `D2` / `D3` (`250` vs `150 daN/m²`) est **clos par décision**, et non plus par enveloppe.
+>
+> Les trois hypothèses de **charges** restent ouvertes et notifiées : `H-28` (densité de la recharge), `H-29` (poids de toiture), `H-30` (cloisons).
 
 > **Titre opposable : DDC PRÉLIMINAIRE — CONCEPTION.**
 > Cette note sert à **choisir et contrôler les sections en conception**. Elle **ne remplace pas** les DDC d'exécution des briques `B-40` à `B-50`, qui refont le calcul sur les schémas statiques réels, avec les surfaces d'influence exactes et les coefficients de continuité issus du schéma.
@@ -32,9 +41,9 @@ Quatre résultats sortent de cette brique, et trois d'entre eux **contredisent l
 | **1** | **La recharge de sol de 15 cm change tout le plancher B.** `D4 p. 5 et 14` prescrit « sol à recharger de 15 cm » ; `D2` ne la compte pas | `+3,30 kN/m²` sur **toute** la surface du plancher B, soit `g = 8,01 kN/m²` au lieu de `3,50` | `F3`, `F2`, `R1`, `R2` reçoivent **+28 % à +126 %** d'effet de charge par rapport à `B-20` |
 | **2** | **`F3 (HEB 160)` dépasse de 109 % l'effet de charge utilisé pour son prédimensionnement** | `M_Ed` passe de `40,8` à **`85,3 kN·m`** | `B-45` doit reprendre `F3` **en priorité** — le point de vigilance annoncé par `B-20` n'était pas une flèche, c'est un moment |
 | **3** | **`R1 (2×UPE 200)` dépasse de 126 %** — mais il partage la charge avec la poutre bois `20×15` qu'il moisit | `M_Ed` passe de `47,5` à **`107,2 kN·m`** | `B-45` doit établir la **répartition moisage/bois**, jamais faite jusqu'ici |
-| **4** | **`SF1` (60 × 60) est insuffisante** si l'aire d'influence de `P2` est celle de la trame | `N_ELS = 180,5 kN` → `σ = 0,50 MPa` **> 0,30 MPa** | `B-40` doit passer en **80 × 80**, ou justifier une aire d'influence réduite |
+| **4** | **`SF1` (60 × 60) est insuffisante** si l'aire d'influence de `P2` est celle de la trame | `N_ELS = 180,5 kN` → `σ = 0,50 MPa` **> 0,30 MPa** | **`D-30` : `SF1` passe à 80 × 80 cm** — `σ` revient à `0,28 MPa` |
 
-**Le reste est confortable :** les voiles travaillent à `σ_d = 0,094 MPa` (l'hypothèse `H-27` de `B-25` en retenait `0,300` — elle est donc **conservatrice de 69 %**), les poteaux BA `P3` et `J1` sont sous `45 kN`, et les poutres `F1a/b/c` et `F4` sont **cohérentes** avec `B-20`.
+**Le reste est confortable :** les voiles travaillent à `σ_d = 0,094 MPa` (l'hypothèse `H-27` de `B-25` en retenait `0,300` — elle est donc **conservatrice** : `σ_d` retenu `3,2×` le réel, `f_vk` majoré de `44 %`), les poteaux BA `P3` et `J1` sont sous `45 kN`, et les poutres `F1a/b/c` et `F4` sont **cohérentes** avec `B-20`.
 
 ---
 
@@ -44,7 +53,7 @@ Quatre résultats sortent de cette brique, et trois d'entre eux **contredisent l
 |---|---|---|---|
 | `CHG-01a` Programme RDC | Plateau technique 33,14 · Box kiné 11,20 / 9,60 / 9,15 · Bureaux 16,08 / 12,80 · Sanitaire PMR 5,19 | D4 p. 6 et 9 | **Contractuelle** |
 | `CHG-01b` Programme R+1 | **Salle de sport 34,25** · Salle commune 11,75 · Vestiaire 9,32 · Douche 2,37 · Bureaux consult. 13,26 / 16,50 · Dégagement 5,96 · Attente 8,38 | D4 p. 6 et 9 | **Contractuelle** |
-| `CHG-02` Exploitation | **2,50 kN/m²** (cat. B) — enveloppe retenue | D2 p. 1 (250 daN/m²) vs D3 p. 10-11 (150 daN/m² logement) | **Contractuelle haute** — l'écart est tranché par enveloppe, pas par décision |
+| `CHG-02` Exploitation | **2,50 kN/m²** (cat. B) — enveloppe retenue | D2 p. 1 (250 daN/m²) vs D3 p. 10-11 (150 daN/m² logement) | **`D-32`** — `2,50 kN/m²` confirmés le 20/10/2026 pour tout le bâtiment |
 | `CHG-03` Poids propres plancher | **Recalculé par couches** : plancher A `0,80` · plancher B `3,91 ` · + recharge `3,30` | D3 p. 10-12 + D4 p. 5 et 14 | **`H-28`** — valeurs déclarées au cartouche : 1,00 et 3,50 |
 | `CHG-04` Poids propres toiture | **0,95 kN/m²** par couches | D2 f. 02 (constitution) — aucune charge au cartouche | **`H-29`** |
 | `CHG-05` Neige | **0,45 kN/m²** — zone A1, altitude < 200 m, `s_k = 45 daN/m²` | D2 p. 1 | **Contractuelle** |
@@ -145,11 +154,11 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 | Zone | Usage (catégorie EC1) | `q_k` (kN/m²) | Cloisons (kN/m²) | Total (kN/m²) | Source |
 |---|---|---|---|---|---|
 | **RDC et R+1 — ensemble** | **B** — bureaux / cabinet paramédical | **2,50** | +0,80 | **3,30** | D2 p. 1 (250 daN/m²) — **enveloppe** vs 150 daN/m² de D3 |
-| **R+1 — salle de sport (34,25 m²)** | **C4** — activités physiques | **5,00** | +0,80 | **5,80** | **`H-31`** — voir § 4.1 |
+| **R+1 — salle de sport (34,25 m²)** | **C4** — activités physiques | **5,00** | +0,80 | **5,80** | **`D-31`** — catégorie confirmée le 20/10/2026 (§ 4.1) |
 | **Toiture** | **H** — toiture inaccessible, pente > 20° | **0,40** | — | **0,40** | EC1-1-1 tableau 6.10 |
 | **Toiture — neige** | Neige (action climatique) | **0,45** | — | **0,45** | `CHG-05` — zone A1, `s_k = 45 daN/m²` |
 
-### 4.1 `H-31` — la salle de sport n'est pas un bureau
+### 4.1 `D-31` — la salle de sport n'est pas un bureau (confirmé le 20/10/2026)
 
 `CHG-01b` nomme une **salle de sport de 34,25 m²** au R+1. Le cartouche `D2` applique **2,50 kN/m² à l'ensemble du bâtiment**, sans distinguer les locaux. Or une salle de sport relève de la **catégorie C4** de l'EC1-1-1 (`q_k = 5,00 kN/m²`) — **le double**.
 
@@ -160,11 +169,17 @@ Trame de référence : `B-20 Ind. B § 2.2` — files verticales `A` (`X = −0,
 | Part de la charge totale du R+1 | `85,6 / 1 036` | **+8,3 %** |
 | Effet sur une poutre traversant la zone | `(5,00−2,50) × bande` | jusqu'à **+2,5 kN/m²** localement |
 
-> **Ce n'est pas une hypothèse de confort.** Une salle de sport reçoit des charges concentrées et des efforts dynamiques que la catégorie B ne couvre pas. Retenir `B` sur ce local serait une **sous-déclaration opposable**. `H-31` est donc notifiée sous nuage, avec la conséquence explicite : si la MOA confirme l'usage sportif, `F3`, `R1` et les solives de la zone Est doivent être recalculés avec `q = 5,00` — et le différentiel de `+85,6 kN` remonte jusqu'aux voiles.
+**Arbitrage rendu.** Le client a confirmé le **20/10/2026** l'usage sportif du local : la **catégorie C4** s'applique et devient **opposable**. `H-31` est **promue décision `D-31`** — elle ne figure plus au registre des hypothèses notifiées, mais au registre des décisions.
 
-### 4.2 Ce que `CHG-02` ne tranche pas
+> **Ce que la confirmation verrouille.** `+85,6 kN` à l'ELS remontent jusqu'aux voiles et `+2,5 kN/m²` localement sur les poutres traversant la zone. Ce supplément **n'est plus une réserve** : il entre en dur dans `B-43`, `B-44` et `B-45`. Un retour ultérieur à `2,50 kN/m²` exigerait une **nouvelle décision écrite** modifiant `D-31`, pas une simple observation — c'est la contrepartie de l'arbitrage, et c'est ce qui protège le dimensionnement du bavardage de chantier.
 
-`D2` annonce `250 daN/m²` (bureaux), `D3` retenait `150 daN/m²` (logement). La DDC retient **2,50 kN/m²** partout : c'est l'**enveloppe**, et c'est la seule valeur défendable tant que la MOA n'a pas écrit sa décision. Une DDC bâtie sur `1,50` serait une DDC qui **minore le programme contractualisé de 67 %** — exactement ce que le diagnostic de `D3` ne couvre plus.
+**Ce que la décision ne dit pas.** `D-31` fixe la **catégorie**, pas la **répartition des charges concentrées**. Une salle de sport reçoit des engins et des agrès dont les points d'appui sont des charges ponctuelles que `5,00 kN/m²` ne couvre pas nécessairement. `B-44` doit demander à la MOA la **liste des équipements fixes** (bancs, espaliers, machines) avant d'arrêter les solives de la zone Est.
+
+### 4.2 `D-32` — `CHG-02` est tranchée : 2,50 kN/m² partout
+
+`D2` annonce `250 daN/m²` (bureaux), `D3` retenait `150 daN/m²` (logement). Le client a **confirmé le 20/10/2026** la valeur de **`2,50 kN/m²`** partout, hors le local `D-31`. Le conflit entre les deux pièces est **clos par décision `D-32`** : la DDC ne repose plus sur une enveloppe prudentielle mais sur une valeur opposable.
+
+> **Ce que cela ferme.** La réserve `R-06` du RDR (« 250 vs 150, avant `B-21` ») et le verrou `V-06` qui imposait de mener `B-22` à `B-24` **en paramétrique sur les deux valeurs** tombent. `B-22` n'a plus deux hypothèses à porter en parallèle : elle en porte une.
 
 ---
 
@@ -292,7 +307,7 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 
 ---
 
-## 9. `SF1` — LA SEMELLE DEVIENT INSUFFISANTE SI L'AIRE D'INFLUENCE EST CELLE DE LA TRAME
+## 9. `SF1` — LA SEMELLE ÉTAIT INSUFFISANTE : `D-30` LA PORTE À 80 × 80 CM
 
 | Grandeur | Valeur |
 |---|---|
@@ -316,10 +331,12 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 
 **Laquelle est vraie ?** Aucune pièce ne le dit. `P2` remplace un portique bois de façade Ouest Nord ; si le mur de moellons de part et d'autre reste continu et porteur, il reprend l'essentiel du plancher et `P2` ne reçoit que la réaction du portique. **Mais si `P2` est le seul appui vertical de la baie — ce que suggère la suppression du portique — c'est la valeur de la trame qui s'applique.**
 
-> **Décision à prendre — `D-30` proposée.** Trois issues, dans l'ordre de sécurité :
-> 1. **Élargir `SF1` à 80 × 80 cm** — coût négligeable, sécurité maximale, décision immédiate. **C'est la recommandation.**
-> 2. Justifier l'aire d'influence réduite par la continuité du mur de façade, et la consigner — ce qui suppose un relevé de la maçonnerie de part et d'autre de la baie.
-> 3. Attendre le sondage de soubassement (`PA-01`, nuage `Z-P2`) et dimensionner sur le résultat — mais on ne décide pas d'une fondation après avoir ouvert la fouille.
+> **`D-30` — DÉCISION PRISE le 20/10/2026 : `SF1` passe à 80 × 80 cm.**
+> L'option « justifier une aire d'influence réduite » supposait un relevé de la maçonnerie de part et d'autre de la baie, que nous n'avons pas et qui aurait de toute façon conduit à une semelle plus large qu'un ordre de grandeur de `0,28 MPa` sur `0,30` admissible — c'est-à-dire à une marge de 7 %, insuffisante pour une fondation sur alluvions dont les caractéristiques ne sont pas mesurées (`D-15` : tassements hors mission).
+> **Conséquences, toutes reportées en `B-40` indice suivant :**
+> - `SF1` : **80 × 80 × h 25 cm**, `C25/30`, `c_nom = 50 mm` (`D-06`), armatures en attente recalculées ;
+> - l'**implantation `PLS`** est à reprendre : la semelle gagne `10 cm` de chaque côté, ce qui doit être vérifié contre la **mitoyenneté** et contre les réseaux — `B-40` porte cette vérification, pas `B-21` ;
+> - le **nuage `Z-P2`** reste posé : la décision élargit la semelle, elle ne prouve pas la portance. `PA-01` et le sondage de soubassement restent ouverts.
 
 ---
 
@@ -327,12 +344,12 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 
 1. **Porteur le plus chargé en `N_ELU` :** `P2`, avec **217,7 kN** — suivi de `SF1` (250,4 kN, qui n'est que sa réaction transmise au sol).
 2. **Plus fort ratio `N/A_inf` :** `P1-N` et `P1-S`, à **177,1 kN/m²** — conséquence d'un linteau étroit qui porte un mur de 50 cm : la charge est concentrée sur 0,63 m².
-3. **Zone la plus pénalisante en exploitation :** la **salle de sport du R+1** (34,25 m²), à `5,00 kN/m²` si `H-31` est confirmée — **+85,6 kN** sur le niveau, **+8,3 %** de la charge totale.
+3. **Zone la plus pénalisante en exploitation :** la **salle de sport du R+1** (34,25 m²), à `5,00 kN/m²` par décision `D-31` — **+85,6 kN** sur le niveau, **+8,3 %** de la charge totale.
 4. **Charge totale du R+1 :** `1 036 kN` à l'ELS, **`1 766 kN` à l'ELU**, transmis aux voiles sur `18,79 m²` → `σ_d = 0,094 MPa`.
 5. **Trois éléments sortent du prédimensionnement de `B-20` :** `F3` (**+109 %**), `R1` (**+126 %**), `F2` (**+28 %**), `R2-N` (**+46 %**). `F3` et `R1` sont prioritaires en `B-45`.
-6. **`SF1` doit passer à 80 × 80 cm** si l'aire d'influence de `P2` est celle de la trame (`D-30` proposée).
+6. **`SF1` passe à 80 × 80 cm** par décision `D-30` — la semelle en 60 × 60 était non conforme de `67 %` sur la portance.
 7. **`H-27` est vérifiée et conservatrice** : `σ_d` réel `0,094 MPa` contre `0,300` retenu — `f_vk` est majoré de 44 %, dans le sens favorable.
-8. **Hypothèses à confirmer en EXE :** `H-28` (densité de la recharge, 22 kN/m³), `H-29` (poids de toiture, 0,95 kN/m²), `H-30` (cloisons, 0,80 kN/m²), `H-31` (salle de sport en catégorie C4).
+8. **Hypothèses de charges encore à confirmer en EXE :** `H-28` (densité de la recharge, 22 kN/m³), `H-29` (poids de toiture, 0,95 kN/m²), `H-30` (cloisons, 0,80 kN/m²) — `H-31` est sortie du registre, promue en `D-31`.
 
 ---
 
@@ -348,7 +365,9 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 | 6 | La sortie porte le titre « DDC PRÉLIMINAIRE — CONCEPTION » | ✅ **CONFORME** | En-tête et bandeau de tête |
 | 7 | Aucune vérification de section ni aucun ferraillage n'a été produit | ✅ **CONFORME** | § 8 compare des **effets de charge** à des effets de charge, jamais à une résistance ; § 9 est un **ordre de grandeur de surface d'assise** explicitement renvoyé à `B-40` ; aucun ferraillage |
 
-**Verdict de la brique `B-21` (Indice A) : ✅ CONFORME — 7/7.**
+**Verdict de la brique `B-21` (Indice B) : ✅ CONFORME — 7/7.**
+
+> **Sur la révision d'indice.** Le passage de A à B **ne corrige aucune erreur de calcul** : il enregistre quatre arbitrages (`D-28`, `D-30`, `D-31`, `D-32`) qui portaient sur des valeurs déjà retenues à l'indice A. Le critère 7 (aucune vérification de section) tient dans les deux cas : `D-30` fixe une **dimension d'assise** sur un critère de portance explicitement transmis à `B-40`, elle ne dimensionne ni ne ferraille la semelle. **Le ferraillage de `SF1` reste intégralement à produire en `B-40`.**
 
 ---
 
@@ -361,14 +380,14 @@ Ce n'est pas une incohérence de calcul, c'est une conséquence directe de la **
 | **H-28** | Recharge de sol 15 cm à **`22 kN/m³`** ; plancher B recalculé à **`3,91 kN/m²`** (au lieu des `3,50` déclarés) | D4 p. 5 et 14 (épaisseur) + EC1 (densité) | Si sable (`18 kN/m³`) : `−0,60 kN/m²`, `F3` à `−7 %` — conclusion inchangée |
 | **H-29** | Toiture à **`0,95 kN/m²`** (tuiles, chevrons, pannes, plafond) | D2 f. 02 — constitution sans charge | Si ardoises ou béton : `+0,20 kN/m²` — effet < 5 % sur `F4` |
 | **H-30** | Cloisons forfaitaires **`0,80 kN/m²`** | EC1-1-1 § 6.3.1.2 | Si cloisons lourdes (`1,20`) : `+0,40 kN/m²` sur tout le plancher |
-| **H-31** | Salle de sport R+1 en **catégorie C4** (`5,00 kN/m²`) | EC1-1-1 tableau 6.1 | Si la MOA confirme un usage bureaux : retour à `2,50`, `−85,6 kN` |
+| **H-31** | ~~Salle de sport R+1 en catégorie C4~~ — **PROMUE DÉCISION `D-31`** le 20/10/2026 | EC1-1-1 tableau 6.1 | N'est plus une hypothèse. Sortie du registre des hypothèses notifiées, inscrite au RDR |
 
 ### 12.2 Transmissions aux briques aval
 
 | Brique | Ce qu'elle reçoit de `B-21` |
 |---|---|
-| **`B-22`** | Les 4 hypothèses de charges à consigner et à notifier sous nuage |
-| **`B-40`** | `SF1` : `N_ELS = 180,5 kN` → **80 × 80** ou justification d'aire réduite ; `S1` sous `F3` : marge de 13 % seulement |
+| **`B-22`** | Les **3** hypothèses de charges restantes à consigner (`H-28`, `H-29`, `H-30`) ; `D-31` et `D-32` y entrent comme **décisions**, pas comme hypothèses |
+| **`B-40`** | `SF1` : **80 × 80 cm** par `D-30` — recalcul des armatures, reprise de l'implantation `PLS`, vérification de mitoyenneté et de réseaux ; `S1` sous `F3` : marge de 13 % seulement |
 | **`B-42`** | `P2` : `N_ELU = 217,7 kN` (contre 85 kN au prédimensionnement) — **flambement à reprendre**, `H/b = 20` |
 | **`B-45`** | **`F3` (+109 %)** et **`R1` (+126 %)** en priorité ; puis `F2` (+28 %) et `R2-N` (+46 %) ; `P1` à 111,5 kN (capacité conservée) |
 | **`B-46`** | Réactions aux sommiers `S1`/`S2` et `σ_d = 0,094 MPa` pour la vérification de la maçonnerie |
@@ -382,10 +401,10 @@ Aucun point d'arrêt chantier n'est créé par `B-21`. Les deux points d'arrêt 
 
 ## 13. POINT DE CONTRÔLE HUMAIN
 
-Trois décisions vous appartiennent :
+**Tranché le 20/10/2026.** `D-28` (aucun joint), `D-30` (`SF1` 80 × 80), `D-31` (catégorie C4) et `D-32` (`2,50 kN/m²` partout) sont consignées. **Aucune de ces quatre décisions ne modifie un chiffre de cette note** : elles convertissent des valeurs conditionnelles en valeurs opposables.
 
-1. **`D-30` — `SF1` : 80 × 80 cm, ou justification de l'aire d'influence réduite de `P2` ?** Je recommande l'élargissement : le coût est de quelques dizaines de kilos de béton, l'économie d'une discussion sur une aire d'influence non démontrable.
-2. **`H-31` — la salle de sport est-elle bien un usage sportif ?** Si oui, la catégorie C4 (`5,00 kN/m²`) s'applique et `F3`/`R1` sont recalculés avec cette charge. Si c'est une salle polyvalente, la catégorie C3 ou B peut se défendre — mais il faut une décision écrite.
-3. **`CHG-02` — `2,50 kN/m²` confirmé partout ailleurs ?** L'enveloppe est retenue ; une décision MOA à `1,50` serait une minoration du programme contractualisé.
+**Reste ouvert, et ne relève pas de cette brique : `D-29`** — *le contreventement en service est la maçonnerie existante seule*. Cette décision est portée par `B-25` (§ 10), pas par `B-21` ; elle conditionne la lecture de `σ_d = 0,094 MPa` au § 7 et donc la requalification de `H-27`. **Tant que `D-29` est ouverte, `H-27` reste une hypothèse vérifiée mais non arbitrée.**
 
-**Brique B-21 livrée en indice A — en attente de votre GO ou de vos observations.**
+**Reste ouvert côté client : `T-04`** — la note de stabilité provisoire à demander à la MOE structure de conception, avec les grandeurs du § 6.2 de `B-25`.
+
+**Brique B-21 livrée en indice B — en attente de votre GO ou de vos observations.**

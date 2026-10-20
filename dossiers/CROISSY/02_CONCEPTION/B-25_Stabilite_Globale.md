@@ -13,10 +13,14 @@
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b25_stabilite.py` |
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b25_stabilite.txt` (7 216 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b25_stabilite.json` (13 409 o) |
-| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndB` (`.dxf` · `.pdf` · `.png`) |
-| **Indice** | **B** — remplace et annule l'indice A du 20/10/2026 |
+| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndC` (`.dxf` · `.pdf` · `.png`) |
+| **Indice** | **C** — remplace et annule l'indice B du 20/10/2026 (décision `D-28`) |
 | Date | **20/10/2026** |
-| Brique suivante | **`B-21`** (DDC préliminaire), puis `B-22` et `B-40` à `B-50` |
+| Brique suivante | **`B-22`** (note d'hypothèses), `B-21` étant livrée en indice B |
+
+> **Ce qui change à l'indice C.** Une seule chose, et elle ne touche aucun résultat : **`D-28` est consignée.** L'absence de joint de dilatation cesse d'être une proposition soumise à arbitrage ; elle devient une **décision ferme du client du 20/10/2026**. Toutes les raideurs, tous les centres de rigidité, tous les `τ/f_vk` de cette note sont **inchangés** — un joint qui n'existe pas ne modifie aucune raideur, et c'est précisément pour cela qu'il fallait trancher avant d'y revenir un jour par inadvertance.
+>
+> **Ce que la décision ne change pas.** L'absence de joint reste **conditionnelle au maintien de l'emprise** : elle devient fausse dès qu'une extension est accolée sans joint ou qu'une reprise en sous-œuvre coupe le bloc. La clause figure au § 5 et n'est pas levée par `D-28`.
 
 > **Ce qui change à l'indice B — rectificatif factuel.** L'indice A produisait une vérification sismique de sensibilité et une vérification complète de la stabilité en phase provisoire. **Ces deux productions sortent du livrable**, sur décision du client du 20/10/2026 :
 > - **`D-26`** — zone de sismicité 1 (Île-de-France), séisme très faible : **aucune vérification sismique n'est produite**, ni réglementaire, ni de sensibilité.
@@ -35,7 +39,7 @@
 | 1 | **Quel système reprend les efforts horizontaux en service ?** | **La maçonnerie porteuse existante, et elle seule** — 12 voiles au RDC, 9 au R+1, raideur d'ensemble `ΣK = 1,21 à 1,64 GN/m`. Aucun cadre neuf n'est compté | § 2 · `b25_stabilite.txt` § [1] et [2] |
 | 2 | **Le cheminement est-il continu de la toiture au sol ?** | **Oui, avec deux ruptures localisées traitées** (`F2` et `F3` suppriment deux murs ; `F1a` perce un troisième). Traitement par frangement, **aucune rupture non traitée** | § 3 |
 | 3 | **La torsion est-elle maîtrisée ?** | **Oui** — excentricité structurale mesurée `≤ 0,14 m` au R+1 et `≤ 0,04 m` au RDC ; avec l'excentrique accidentelle `±0,05 L`, le mur le plus chargé reste à **`τ/f_vk ≤ 0,028`** | § 4 |
-| 4 | **Faut-il des joints de dilatation ?** | **Aucun joint à créer** — dilatation libre `5,2 mm` sur 17,5 m, maçonnerie stabilisée, frangements appuyés | § 5 |
+| 4 | **Faut-il des joints de dilatation ?** | **Aucun joint à créer** — dilatation libre `5,2 mm` sur 17,5 m, maçonnerie stabilisée, frangements appuyés. **`D-28` consignée** | § 5 |
 
 **Deux questions ne sont plus posées, et c'est une décision, pas un oubli :**
 
@@ -231,7 +235,7 @@ Largeurs chargées : `17,5 m` (façades Nord/Sud) et `11,1 m` (façades Est/Oues
 
 | Bloc `JD` | Position | Largeur | Motif du découpage | Report plan | Report coupe |
 |---|---|---|---|---|---|
-| **Aucun** | — | — | Aucun joint créé | Sans objet | Sans objet |
+| **Aucun** | — | — | Aucun joint créé — **`D-28` consignée le 20/10/2026** | Sans objet | Sans objet |
 
 **Justification chiffrée — les cinq motifs de la fiche testés un par un :**
 
@@ -294,7 +298,7 @@ Trois prescriptions restent dans notre livrable, mais **aucune ne porte sur la s
 
 ## 7. PIÈCE 5 — SCHÉMA DE CONTREVENTEMENT REPORTÉ SUR LE FOND `B-32`
 
-La planche **`FLORA_B25_CONTREVENTEMENT_IndB`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
+La planche **`FLORA_B25_CONTREVENTEMENT_IndC`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
 
 - les **12 voiles RDC comptés**, repérés `M01` à `M12`, avec leur raideur `K_x`/`K_y` et leur aire ;
 - les **quatre voiles majeurs** (`M11`, `M03`, `M09`, `M04` — 95,1 % de la raideur) mis en évidence ;
@@ -303,7 +307,8 @@ La planche **`FLORA_B25_CONTREVENTEMENT_IndB`** (`.dxf` · `.pdf` · `.png`, A3 
 - les **flèches de vent** `V_x = 63,2 kN` et `V_y = 40,0 kN` avec leur ligne d'action ;
 - la mention **« AUCUN JOINT DE DILATATION »** et sa justification en trois lignes ;
 - le **renvoi de mission `D-26` / `D-27`** : ni vérification sismique, ni vérification de la stabilité provisoire, avec les grandeurs transmises à la MOE ;
-- la note **`D-09` intégrale**, le filigrane **`PRINCIPE — NE PAS EXÉCUTER — Indice P`** et le cartouche `B-25 Ind. B`.
+- la note **`D-09` intégrale**, le filigrane **`PRINCIPE — NE PAS EXÉCUTER — Indice P`** et le cartouche `B-25 Ind. C` ;
+- la mention **`D-28` consignée le 20/10/2026** dans la pièce 4, en lieu et place de la « proposition » de l'indice B.
 
 Les repères `M01` à `M12` sont **identiques** à ceux du journal `b25_stabilite.txt`, ce qui rend la planche vérifiable ligne à ligne contre le calcul — condition du critère de report graphique de la fiche.
 
@@ -334,7 +339,7 @@ Les repères `M01` à `M12` sont **identiques** à ceux du journal `b25_stabilit
 |---|---|---|
 | **`D-26`** | **Aucune vérification sismique** — zone 1 (Île-de-France), séisme très faible | ✅ **CONSIGNÉE** le 20/10/2026 |
 | **`D-27`** | **Stabilité provisoire — MOE structure de conception** : la vérification du contreventement en phase provisoire dans un bâtiment existant lui incombe, hors de notre mission | ✅ **CONSIGNÉE** le 20/10/2026 |
-| **`D-28`** | **Aucun joint de dilatation** sur le pavillon Flora | ⏳ **PROPOSÉE** — en attente de votre arbitrage (§ 9, point 2) |
+| **`D-28`** | **Aucun joint de dilatation** sur le pavillon Flora | ✅ **CONSIGNÉE** le 20/10/2026 — décision ferme du client |
 | **`D-29`** | **Le contreventement en service est la maçonnerie existante seule** ; aucun cadre métallique n'est réputé contreventant | ⏳ **PROPOSÉE** — en attente de votre arbitrage (§ 9, point 1) |
 
 ---
@@ -353,7 +358,7 @@ Les sept critères de la fiche `B-25` sont repris, **avec le statut réel de cha
 | 6 | Les phases provisoires sont étudiées | **HORS MISSION — `D-27`** | § 6 : la vérification incombe à la MOE structure de conception ; les **grandeurs d'entrée lui sont transmises** (§ 6.2) et la demande est formalisée (`T-04`). **Ce n'est pas une non-conformité : c'est un retrait de périmètre décidé par le client** |
 | 7 | Aucun élément porteur n'a été dimensionné dans cette brique | ✅ **CONFORME** | Aucune section, aucun ferraillage, aucun assemblage ; `f_vk` est une **capacité existante** vérifiée, pas un dimensionnement |
 
-**Verdict de la brique `B-25` (Indice B) : 6 critères satisfaits sur 6 applicables, 1 critère hors mission par décision (`D-27`).**
+**Verdict de la brique `B-25` (Indice C) : 6 critères satisfaits sur 6 applicables, 1 critère hors mission par décision (`D-27`).**
 
 > **Sur la traçabilité de ce retrait.** Le critère 6 de la fiche n'est pas « non satisfait » : il est **retiré du périmètre par une décision écrite et datée**, ce qui est la seule manière propre de sortir d'un critère. Un critère non satisfait sans décision est une non-conformité ; un critère sorti par `D-27` est un périmètre. La distinction est consignée au RDR, pas seulement dans cette note.
 
@@ -361,13 +366,14 @@ Les sept critères de la fiche `B-25` sont repris, **avec le statut réel de cha
 
 ## 10. POINT DE CONTRÔLE HUMAIN
 
-Deux décisions vous appartiennent encore :
+**`D-28` est close** le 20/10/2026 : aucun joint de dilatation. La question ne sera pas reposée.
 
-1. **Le contreventement en service est la maçonnerie existante seule** — aucun frangement, aucun renfort, aucun poteau compté comme élément de reprise horizontale. **Confirmez-vous ?** (`D-29` proposé) C'est la décision qui verrouille toutes les suivantes : compter un jour les frangements supposerait de les concevoir encastrés et triangulés, ce qui n'est pas le projet.
-2. **Aucun joint de dilatation** sur 17,5 m de maçonnerie. **Confirmez-vous ?** (`D-28` proposé)
+**Une seule décision reste ouverte — `D-29` :**
+
+1. **Le contreventement en service est la maçonnerie existante seule** — aucun frangement, aucun renfort, aucun poteau compté comme élément de reprise horizontale. **Confirmez-vous ?** C'est la décision qui verrouille toutes les suivantes : compter un jour les frangements supposerait de les concevoir encastrés et triangulés, ce qui n'est pas le projet. **Tant qu'elle est ouverte, `H-27` (contrainte `σ_d`) reste une hypothèse examinée mais non arbitrée, et `B-21` en hérite au § 7.**
 
 Et une action à votre main, qui ne dépend pas de nous : **adresser la demande `T-04` à la MOE structure de conception** pour sa note de stabilité provisoire, avec les grandeurs du § 6.2. Sans cette note, le phasage de démolition ne peut pas être ouvert sur le chantier — et ce n'est pas notre production qui y supplée.
 
 Dans l'attente de vos observations, `PA-01` (reconnaissance des voiles) et `PA-02` (liaison charpente-maçonnerie) sont **ouverts** et conditionnent le démarrage des travaux, sans bloquer les briques documentaires suivantes.
 
-**Brique B-25 livrée en indice B — en attente de votre GO ou de vos observations.**
+**Brique B-25 livrée en indice C — en attente de votre GO ou de vos observations.**
