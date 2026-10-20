@@ -1,12 +1,12 @@
 # CROISSY-FLORA — INDEX DE L'ESPACE DE TRAVAIL
 
-> **Mis à jour le 20/10/2026** — **`B-42` livrée en indice A** : **première note de calcul d'exécution** (`P2`, `P3`, `J1` en béton armé), diagramme d'interaction `N-M` + flambement EC2, **8/8 CONFORME**. **La phase 4 est ouverte.** **`B-24` livrée en indice A** (mode PARAMÉTRIQUE, suffixe `_P`) : 8 éléments non sondés, `101` cas de sensibilité, 6 campagnes d'essais. **La phase 3 est close.** **`B-25` en indice E** (`D-29` consignée, aucun point ouvert) · **`B-23` en indice A** (9 désordres classés) · **`B-03` en indice U** (34 décisions).
+> **Mis à jour le 20/10/2026** — **`B-42` livrée en indice A** : **première note de calcul d'exécution** (`P2`, `P3`, `J1` en béton armé), diagramme d'interaction `N-M` + flambement EC2, **8/8 CONFORME**. **La phase 4 est ouverte.** **`B-24` et `B-23` révisées en indice B** : `E-03` (solives `8 x 18`) **sort du champ** — ses données existent (`D3` p. 10) — et les **planchers courants A et B** sortent des zones hors relevé. `B-24` : **7 éléments** non sondés, `83` cas de sensibilité, **5 campagnes**. **La phase 3 est close.** **`B-25` en indice E** (`D-29` consignée, aucun point ouvert) · **`B-23` en indice A** (9 désordres classés) · **`B-03` en indice U** (34 décisions).
 
 ---
 
 ## 1. RÉPONSE DIRECTE — CE QUI EXISTE ET CE QUI RESTE À PRODUIRE
 
-**À la date du 20/10/2026 : 23 notes documentaires CARNAC (dont `B-24` en mode PARAMÉTRIQUE, suffixe `_P`), 6 preuves de calage/superposition, et 21 fichiers de plans (`7 DXF + 7 PDF + 7 PNG = 27 Mo`) — tous purgés à 100 % des cloisons et complexes d'isolation (`0 entité` sur `020_cloi` / `020_cloisons`).**
+**À la date du 20/10/2026 : 23 notes documentaires CARNAC (dont `B-24 Ind. B` en mode PARAMÉTRIQUE, suffixe `_P`), 6 preuves de calage/superposition, et 21 fichiers de plans (`7 DXF + 7 PDF + 7 PNG = 27 Mo`) — tous purgés à 100 % des cloisons et complexes d'isolation (`0 entité` sur `020_cloi` / `020_cloisons`).**
 
 | Ce qui est produit et synchronisé sur Google Drive (`LIVRABLES_ARENA`) | Emplacement workspace |
 |---|---|
@@ -15,7 +15,7 @@
 | Calage `B-30 Ind. C`, superposition `B-31 Ind. C`, **Vues nettoyées structurelles `B-32 Ind. D`** (zéro cloison, zéro isolation) | `03_CALAGE/` + `_plans/` + `_calage/` |
 | **Synthèse structurelle & prédimensionnement `B-20 Ind. B`** : 3 planches A3 Paysage (`PH RDC`, `PB RDC / PLS`, `R+1 Charpente + Coupes A-A / B-B + Cheminement`) | `02_CONCEPTION/` + `_plans/` |
 | **Fondations superficielles & implantation `B-40 Ind. E`** : plan combiné `PLS` + détails d'exécution `SF1` (`60×60×30 BA`, `HA8 e150`, gros béton `D-09`) | `06_CALCULS/` + `_plans/` |
-| **Existant non sondé `B-24 Ind. A (_P)`** : 8 éléments en vérification littérale suspendue + 101 cas de sensibilité **non contractuels** + 6 campagnes d'essais. **Aucun élément conclu** | `02_CONCEPTION/` + `_rendus/` |
+| **Existant non sondé `B-24 Ind. B (_P)`** : **7 éléments** en vérification littérale suspendue + `83` cas de sensibilité **non contractuels** + **5 campagnes** d'essais · `E-03` **sorti du champ**. **Aucun élément conclu** | `02_CONCEPTION/` + `_rendus/` |
 | **Stabilité globale `B-25 Ind. E`** : contreventement par la maçonnerie existante seule (`D-29`), torsion, régularité, joints + planche `FLORA_B25_CONTREVENTEMENT_IndE`. Sismique et stabilité provisoire **hors mission** (`D-26`, `D-27`) · **`D-28`** : aucun joint, constaté | `02_CONCEPTION/` + `_plans/` + `_rendus/` |
 
 | Ce qui reste séquencé pour la suite de la chaîne CARNAC | Motif |
@@ -43,8 +43,8 @@
 | **B-40** | `06_CALCULS/B-40_Fondations.md` | **E** | **20/10/2026** | ✅ **CONFORME EN PARTIEL-DÉCLARÉ** — plan combiné `PLS` implanté + ferraillage `HA8 e150` + note `D-09` + justification `D-24 / R-36` |
 | **B-21** | `02_CONCEPTION/B-21_DDC_Preliminaire.md` | **B** | **20/10/2026** | ✅ **CONFORME 7/7** — `1 766 kN` ELU sur le R+1 · `F3` **+109 %** et `R1` **+126 %** vs `B-20` · **`D-30` `SF1` 80 × 80** · `H-27` vérifiée |
 | **B-22** | `02_CONCEPTION/B-22_Note_Hypotheses.md` | **B** | **20/10/2026** | ✅ **CONFORME 6/6** — **30 hypothèses** · **`D-33`** : 9 en régime `LECTURE` (aucune relance) · `H-27` vérifiée par `B-21` · famille Matériaux vide (assumée) |
-| **B-23** | `02_CONCEPTION/B-23_Exploitation_Diagnostic.md` | **A** | **20/10/2026** | ✅ **CONFORME 6/6** — 9 désordres classés (3 renforcement, 1 sous condition, 3 phasage, 3 coordination lot, 1 sans impact) · 5 zones hors relevé · 9 appuis · séquences `P-2` purge avant renfort et `P-3` flambement avant charge **nouvelles** |
-| **B-24** | `02_CONCEPTION/B-24_Existant_Non_Sonde_P.md` | **A (`_P`)** | **20/10/2026** | ✅ **CONFORME 7/7** — **8 éléments non sondés** · `101` cas de sensibilité **NON CONTRACTUEL** · **1 favorable** (`E-01` maçonnerie), **4 limites**, **2 défavorables** (`E-02`, `E-05`), **1 sans plage** (`E-07`) · **0 élément conclu** · 6 campagnes d'essais |
+| **B-23** | `02_CONCEPTION/B-23_Exploitation_Diagnostic.md` | **B** | **20/10/2026** | ✅ **CONFORME 6/6** — 9 désordres classés (3 renforcement, 1 sous condition, 3 phasage, 3 coordination lot, 1 sans impact) · 5 zones hors relevé · 9 appuis · séquences `P-2` et `P-3` · **§ 3.2 : planchers A et B documentés, seul le plancher haut d'étage reste hors relevé** |
+| **B-24** | `02_CONCEPTION/B-24_Existant_Non_Sonde_P.md` | **B (`_P`)** | **20/10/2026** | ✅ **CONFORME 7/7** — **7 éléments non sondés** · `83` cas de sensibilité **NON CONTRACTUEL** · **1 favorable** (`E-01`), **3 limites**, **2 défavorables** (`E-02`, `E-05`), **1 sans plage** (`E-07`) · **`E-03` sorti du champ** (§ 2.1) · **0 élément conclu** · 5 campagnes |
 | **B-42** | `06_CALCULS/B-42_Verticaux_BA.md` | **A** | **20/10/2026** | ✅ **CONFORME 8/8** — `P2` `15×25` seul porteur élancé (`lambda = 64,7`), `M_Ed/M_Rd = 0,400` · `P3` `0,014` · `J1` `0,016` · **6 HA12** partout · point dur : appui de `J1` sur maçonnerie (`0,62` à `f_k = 1,5 MPa`, `1,85` à `0,5`) |
 | **B-25** | `02_CONCEPTION/B-25_Stabilite_Globale.md` | **E** | **20/10/2026** | ✅ **CONFORME 6/6 applicables** — contreventement = maçonnerie seule, `ΣK = 1,21/1,64 GN/m`, torsion `τ/f_vk ≤ 0,028`, aucun joint. **Sismique retirée (`D-26`)** · **stabilité provisoire retirée, MOE (`D-27`)** |
 
@@ -62,8 +62,8 @@
 | `02_CONCEPTION/B-20_Conception_GO.md` | `30 101 o · 206 l.` | Synthèse structurelle & prédimensionnement GO Ind. B (rectificatifs + 13 postes + rattachement `B-11`) |
 | `06_CALCULS/B-40_Fondations.md` | `10 836 o · 108 l.` | Note de calcul & implantation « PLS » des fondations Ind. E (note `D-09` en tête) |
 | `03_CALAGE/B-32_Vue_Nettoyee.md` | `6 412 o · 73 l.` | Rapport de nettoyage structurel strict Ind. D (purge totale cloisons & isolation) |
-| `02_CONCEPTION/B-24_Existant_Non_Sonde_P.md` | `21 832 o · 210 l.` | **Existant non sondé Ind. A (`_P`)** : 4 tableaux, 8 éléments, 101 cas de sensibilité, 6 essais — **note suspendue, non exécutable** |
-| `02_CONCEPTION/B-23_Exploitation_Diagnostic.md` | `23 128 o · 198 l.` | **Exploitation du diagnostic Ind. A** : 4 tableaux, 9 désordres, 5 zones hors relevé, 7 séquences de phasage |
+| `02_CONCEPTION/B-24_Existant_Non_Sonde_P.md` | `25 810 o · 244 l.` | **Existant non sondé Ind. B (`_P`)** : 4 tableaux, **7 éléments**, `83` cas de sensibilité, 5 essais, `E-03` sorti — **note suspendue, non exécutable** |
+| `02_CONCEPTION/B-23_Exploitation_Diagnostic.md` | `25 260 o · 209 l.` | **Exploitation du diagnostic Ind. B** : 4 tableaux, 9 désordres, 5 zones hors relevé (§ 3.2 : planchers A et B documentés), 7 séquences |
 | `02_CONCEPTION/B-22_Note_Hypotheses.md` | `31 676 o · 279 l.` | **Note d'hypothèses Ind. B** : 30 hypothèses, 5 régimes de confirmation (`D-33`), historique des révisions |
 | `02_CONCEPTION/B-21_DDC_Preliminaire.md` | `32 812 o · 410 l.` | DDC PRÉLIMINAIRE — CONCEPTION **Ind. B** : 5 tableaux, 8 porteurs surfaciques, 14 porteurs linéaires, contrôle `B-20`, `D-30` |
 | `02_CONCEPTION/B-25_Stabilite_Globale.md` | `40 749 o · 399 l.` | Note de stabilité globale **Ind. E** (contreventement, torsion, régularité, joints — `D-29` consignée) — exclusions `D-26` (sismique) et `D-27` (stabilité provisoire → MOE) — journal `_rendus/b25_stabilite.txt` |

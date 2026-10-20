@@ -59,7 +59,18 @@ ZONES = [
     ("ZONE NON RELEVEE n.2", "non etablie", "toute verification de charpente", "releve de charpente"),
     ("Combles (ensemble)", "surface totale des combles", "etat sanitaire global de la charpente", "reconnaissance visuelle exhaustive"),
     ("Fondations", "9,90 x 18,49 m", "niveau, largeur et etat des semelles", "ouverture de fouilles (H-15)"),
-    ("Planchers", "non etablie", "composition, epaisseur, sens porteur", "sondage destructif"),
+    ("Plancher haut d'etage", "non etablie",
+     "nature, epaisseur, sens porteur, sections et entraxes",
+     "sondage destructif AVANT B-43"),
+]
+
+# Planchers courants A et B : DOCUMENTES par le diagnostic (D3 p. 10-12).
+# Ils ne sont pas des zones hors releve. L'indice B les sort du tableau 3.
+PLANCHERS_DOCUMENTES = [
+    ("Plancher A (aile Est)", "solives bois 8x18 @ 0,50 m, portee 2,77 m ; poutre 20x15, portee 4,34 m",
+     "D3 p. 10 (EXI-01a, EXI-01b, EXI-01e)", "B-43 / B-44"),
+    ("Plancher B (aile Ouest)", "solives IPE 160 @ 0,72 m ; poutre IPE 330 ; hourdis 7 cm + chape 10 cm",
+     "D3 p. 11-12 (EXI-01c, EXI-01d, EXI-01f)", "B-43 / B-44"),
 ]
 
 APPUIS = [
@@ -147,6 +158,11 @@ def main():
     log(f"\n    Emprises declarees NON ETABLIES : {len(non_etablies)} -> {non_etablies}")
     log("    Aucune emprise n'est reconstituee : une emprise inventee serait pire")
     log("    qu'une emprise absente.")
+    log("\n    PLANCHERS COURANTS — DOCUMENTES, hors zone hors releve (ind. B) :")
+    for p_ in PLANCHERS_DOCUMENTES:
+        log("      %-24s %s" % (p_[0], p_[1][:60]))
+        log("      %-24s source : %s -> %s" % ("", p_[2], p_[3]))
+    log("    Seul le PLANCHER HAUT D'ETAGE (desordre 5) reste hors releve.")
 
     # --- [5] appuis sur l'existant
     log("\n[5] APPUIS DE NOTRE STRUCTURE SUR L'EXISTANT")
@@ -214,12 +230,14 @@ def main():
         f.write("\n".join(LOG) + "\n")
     data = {
         "brique": "B-23",
-        "indice": "A",
+        "indice": "B",
         "date": "20/10/2026",
         "desordres": [{"num": d[0], "libelle": d[1], "categories": sorted(d[2]),
                        "ouvrage": d[3], "brique": d[4], "sequence": d[5]} for d in DESORDRES],
         "par_categorie": {CAT_LABEL[c]: compte.get(c, []) for c in CAT_LABEL},
         "zones_hors_releve": [{"zone": z[0], "emprise": z[1], "blocage": z[2], "releve": z[3]} for z in ZONES],
+        "planchers_documentes": [{"plancher": p_[0], "donnees": p_[1], "source": p_[2],
+                                  "brique": p_[3]} for p_ in PLANCHERS_DOCUMENTES],
         "appuis": [{"appui": a[0], "support": a[1], "N_ELU": a[2], "admissible": a[3], "verifie": a[4]} for a in APPUIS],
         "sequences": [{"ref": s[0], "sequence": s[1], "motif": s[2], "desordre": s[3]} for s in SEQUENCES],
         "verdict_6_criteres": sum(1 for _, ok in crit if ok),

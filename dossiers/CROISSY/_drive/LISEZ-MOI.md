@@ -30,7 +30,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 4. **La stabilité en phase provisoire n'est pas de notre mission** (`D-27`) : elle relève de la maîtrise d'œuvre structure de conception (transmission `T-04`). Les séquences de phasage de `B-23` (étaiement, purge, renfort) sont prescrites, mais leur stabilité n'est pas vérifiée ici.
 5. **La maçonnerie est prise à `f_k = 1,5 MPa` et `f_vk0 = 0,15 MPa`** (`D-34`). Ces valeurs sont des **hypothèses à confirmer par essais, hors mission**. Si les essais ne confirment pas, une **reprise d'étude chiffrée** est due, et l'hypothèse doit être fournie **avant** démarrage. La clause figure sur la planche et dans les notes de calcul.
 6. **Les renforts `R1`, `R2-N/S`, `R3-N/S` et `J1` sont des ouvrages neufs à exécuter sur nos plans** : ils ne sont **jamais** décrits comme « exécutés ». Seules les solives `8×18` relèvent de la réhabilitation existante (`D3` page 18).
-7. **Huit éléments existants ne sont pas sondés.** Leur résistance n'est pas connue : `B-24` en donne la vérification **littérale** et la liste des essais, sans conclure. Deux sont **défavorables pour toute la plage plausible** — la poutre maîtresse et la ferme de charpente : leur renforcement est acquis, seul son dimensionnement attend le relevé.
+7. **Sept éléments existants ne sont pas sondés.** Leur résistance n'est pas connue : `B-24` en donne la vérification **littérale** et la liste des essais, sans conclure. Deux sont **défavorables pour toute la plage plausible** — la poutre maîtresse et la ferme de charpente : leur renforcement est acquis, seul son dimensionnement attend le relevé.
 8. **Les hypothèses notifiées à l'entreprise ne recevront pas de réponse formelle** (`D-33`) : elles sont en régime **`LECTURE`** — pas d'attente, pas de relance. Les nuages `D-19` restent portés sur les planches pour la traçabilité.
 
 ---
@@ -47,8 +47,8 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-20 — Synthèse structurelle & conception GO` | B | Implantation de tous les ouvrages neufs, 3 planches, coupes `A-A` / `B-B` |
 | `B-21 — Descente de charges préliminaire` | B | Charges par zone, `F3` **+109 %** et `R1` **+126 %** vs `B-20` |
 | `B-22 — Note d'hypothèses de conception` | B | 30 hypothèses, 5 régimes de confirmation |
-| `B-23 — Exploitation du diagnostic` | **A** | **9 désordres classés**, 5 zones hors relevé, 9 appuis, séquences `P-1` à `P-7` |
-| `B-24 — Existant non sondé` | **A (`_P`)** | **8 éléments en attente de données** · 101 cas de sensibilité non contractuels · 6 campagnes d'essais. **Note suspendue : ne pas exécuter** |
+| `B-23 — Exploitation du diagnostic` | **B** | **9 désordres classés**, 5 zones hors relevé, 9 appuis, séquences `P-1` à `P-7` · **planchers A et B documentés** (§ 3.2) |
+| `B-24 — Existant non sondé` | **B (`_P`)** | **7 éléments en attente de données** · 83 cas de sensibilité non contractuels · 5 campagnes d'essais · `E-03` (solives) **sorti du champ**. **Note suspendue : ne pas exécuter** |
 | `B-42 — Poteaux et jambages BA` | **A** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,400`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · 5 réserves |
 | `B-25 — Stabilité globale, contreventement & joints` | **E** | `D-29` consignée, torsion, régularité, `D-28`. **Aucun point ouvert** |
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |

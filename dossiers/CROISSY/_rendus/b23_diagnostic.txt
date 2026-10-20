@@ -32,11 +32,18 @@ Des 9 desordres de B-11 aux contraintes de conception
     ZONE NON RELEVEE n.2      non etablie                 releve de charpente
     Combles (ensemble)        surface totale des combles  reconnaissance visuelle exhaustive
     Fondations                9,90 x 18,49 m              ouverture de fouilles (H-15)
-    Planchers                 non etablie                 sondage destructif
+    Plancher haut d'etage     non etablie                 sondage destructif AVANT B-43
 
-    Emprises declarees NON ETABLIES : 3 -> ['ZONE NON RELEVEE n.1', 'ZONE NON RELEVEE n.2', 'Planchers']
+    Emprises declarees NON ETABLIES : 3 -> ['ZONE NON RELEVEE n.1', 'ZONE NON RELEVEE n.2', "Plancher haut d'etage"]
     Aucune emprise n'est reconstituee : une emprise inventee serait pire
     qu'une emprise absente.
+
+    PLANCHERS COURANTS — DOCUMENTES, hors zone hors releve (ind. B) :
+      Plancher A (aile Est)    solives bois 8x18 @ 0,50 m, portee 2,77 m ; poutre 20x15, po
+                               source : D3 p. 10 (EXI-01a, EXI-01b, EXI-01e) -> B-43 / B-44
+      Plancher B (aile Ouest)  solives IPE 160 @ 0,72 m ; poutre IPE 330 ; hourdis 7 cm + c
+                               source : D3 p. 11-12 (EXI-01c, EXI-01d, EXI-01f) -> B-43 / B-44
+    Seul le PLANCHER HAUT D'ETAGE (desordre 5) reste hors releve.
 
 [5] APPUIS DE NOTRE STRUCTURE SUR L'EXISTANT
     Appui               Support existant                    N_ELU               Admissible          Verifie par

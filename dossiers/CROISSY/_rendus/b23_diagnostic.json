@@ -1,6 +1,6 @@
 {
   "brique": "B-23",
-  "indice": "A",
+  "indice": "B",
   "date": "20/10/2026",
   "desordres": [
     {
@@ -147,10 +147,24 @@
       "releve": "ouverture de fouilles (H-15)"
     },
     {
-      "zone": "Planchers",
+      "zone": "Plancher haut d'etage",
       "emprise": "non etablie",
-      "blocage": "composition, epaisseur, sens porteur",
-      "releve": "sondage destructif"
+      "blocage": "nature, epaisseur, sens porteur, sections et entraxes",
+      "releve": "sondage destructif AVANT B-43"
+    }
+  ],
+  "planchers_documentes": [
+    {
+      "plancher": "Plancher A (aile Est)",
+      "donnees": "solives bois 8x18 @ 0,50 m, portee 2,77 m ; poutre 20x15, portee 4,34 m",
+      "source": "D3 p. 10 (EXI-01a, EXI-01b, EXI-01e)",
+      "brique": "B-43 / B-44"
+    },
+    {
+      "plancher": "Plancher B (aile Ouest)",
+      "donnees": "solives IPE 160 @ 0,72 m ; poutre IPE 330 ; hourdis 7 cm + chape 10 cm",
+      "source": "D3 p. 11-12 (EXI-01c, EXI-01d, EXI-01f)",
+      "brique": "B-43 / B-44"
     }
   ],
   "appuis": [

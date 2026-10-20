@@ -114,13 +114,6 @@ ELEMENTS = [
          formule="sigma_m,d = M_Ed / (b h^2 / 6)  <=  f_m,d ;  M_Ed = p_ELU L^2 / 8",
          plage="b x h = 0,15x0,20 à 0,20x0,30 m ; C18 à C24",
          fermeture="B-44 (avec R1 : B-45)"),
-    dict(id="E-03", nom="Solives de plancher 8x18 (D3 p. 18)",
-         manque="entraxe réel, portée, classe, continuité, état des abouts",
-         charge="g + q = 8,01 + 2,50 = 10,51 kN/m² (plancher B, B-21)",
-         verif="Flexion simple + flèche ELS",
-         formule="sigma_m,d = p e L^2 / 8 / (b h^2 / 6)  <=  f_m,d  avec p = e (g + q)",
-         plage="entraxe 0,40 à 0,60 m ; portée 3,00 à 4,30 m ; C18 à C24",
-         fermeture="B-43 (planchers) / B-44"),
     dict(id="E-04", nom="Potelets de charpente (désordre 8)",
          manque="section, hauteur libre, classe, excentrement, contreventement",
          charge="N_Ed = (1,35 G + 1,5 Q) x e x L_trib = 1,96 kN/m² x surface reprise",
@@ -162,6 +155,24 @@ ELEMENTS = [
          fermeture="B-49"),
 ]
 
+# ---------------------------------------------------------------------------
+# 3 bis. ÉLÉMENT SORTI DU CHAMP EN INDICE B — E-03
+#   Les données existent : D3 p. 10 (EXI-01a, EXI-01b, EXI-01e) donnent
+#   solives 8x18 @ 0,50 m, portée 2,77 m, poutre 20x15 portée 4,34 m,
+#   complexe lambourde + parquet + lattis. La fiche B-24 n'a donc plus lieu
+#   d'être : le calcul devient possible et relève de B-43.
+#   Seule reste ouverte la question du PÉRIMÈTRE de la recharge de sol 15 cm
+#   (D4 p. 5 et 14) : planchers hauts ou sol du RDC seulement ?
+# ---------------------------------------------------------------------------
+E03 = dict(id="E-03", nom="Solives de plancher bois 8x18 @ 0,50 m (plancher A)",
+           b=80.0, h=180.0, e=500.0, L=2770.0,
+           source="D3 p. 10 (EXI-01a) : 8x18 @ 0,50 m, portée 2,77 m, C18 (EXI-03, hypothèse)")
+
+# g du plancher A : 1,00 (D3) + 0,80 cloisons (H-30) = 1,80 ; + 3,30 recharge (H-28)
+G_A_SANS_RECHARGE = 1.80
+G_A_AVEC_RECHARGE = 5.10
+Q_A = 2.50
+
 # Zones sans plage plausible (cas particulier de la fiche)
 ZONES_SANS_PLAGE = [
     ("ZONE NON RELEVEE n° 1", "emprise non cotée sur D2 f. 02",
@@ -193,17 +204,6 @@ def sensibilite():
         for cls in ("C18", "C24"):
             cas.append(("E-02", "%dx%d mm, %s" % (b * 1000, h * 1000, cls),
                         ratio(sd, fm_d(cls))))
-
-    # E-03 — solives 8x18 (flexion)
-    for e in (0.40, 0.50, 0.60):
-        for L in (3.00, 3.85, 4.30):
-            p = e * (G_PLANCHER_B + Q_EXPLOIT)
-            M = p * L ** 2 / 8.0
-            W = 80.0 * 180.0 ** 2 / 6.0
-            sd = M * 1e6 / W
-            for cls in ("C18", "C24"):
-                cas.append(("E-03", "e = %.2f m, L = %.2f m, %s" % (e, L, cls),
-                            ratio(sd, fm_d(cls))))
 
     # E-04 — potelets (flambement)
     for b in (0.08, 0.10):
@@ -253,6 +253,24 @@ def sensibilite():
     return cas
 
 
+def e03_scenarios():
+    """E-03 avec ses données réelles : la seule inconnue est le PÉRIMÈTRE de
+    la recharge de 15 cm. Quatre cas, aucun retenu."""
+    b, h = E03["b"], E03["h"]
+    W = b * h ** 2 / 6.0
+    I = b * h ** 3 / 12.0
+    out = []
+    for g, lab in ((G_A_SANS_RECHARGE, "sans recharge (RDC seul)"),
+                   (G_A_AVEC_RECHARGE, "avec recharge 15 cm")):
+        p = (E03["e"] / 1000.0) * (GAMMA_ELU_G * g + GAMMA_ELU_Q * Q_A)
+        M = p * (E03["L"] / 1000.0) ** 2 / 8.0
+        sd = M * 1e6 / W
+        pser = (E03["e"] / 1000.0) * (g + Q_A)
+        w = 5 * pser * E03["L"] ** 4 / (384 * 9000.0 * I)
+        out.append((lab, p, M, sd, w))
+    return out
+
+
 def verdict(ratios):
     """Favorable : satisfaisant pour TOUTE la plage. Limite : une partie.
     Défavorable : insuffisant pour toute la plage."""
@@ -276,9 +294,6 @@ ESSAIS = [
     ("E-02/E-05/E-06", "Relevé de charpente au mètre et au calibre (sections, classes, état)",
      "NF EN 338 (classement visuel) + NF EN 1995-1-1", "2 zones non relevées + combles",
      "Intégralité des combles, plan de repérage", "MOA / bureau mandaté", "avant B-44"),
-    ("E-03", "Sondage destructif de plancher (ouverture, entraxe, sections, nature)",
-     "NF EN 338 si bois / NF EN 1992 si BA", "3 ouvertures de 0,50 x 0,50 m",
-     "Une par travée de plancher courant", "MOA / bureau mandaté", "avant B-43"),
     ("E-07", "Sondage destructif du plancher haut (composition, sens porteur, portée)",
      "NF EN 338 / NF EN 1992 / NF EN 15037 selon la nature", "3 ouvertures de 0,50 x 0,50 m",
      "Plancher haut, un point par file de potelets", "MOA / bureau mandaté",
@@ -302,14 +317,15 @@ def controle(note_txt, cas):
 
     # 1. Chaque élément non sondé a une vérification littérale écrite
     ok1 = all(e["formule"] and e["verif"] for e in ELEMENTS) and \
-        all(e["id"] in note_txt for e in ELEMENTS)
-    crit.append(("1. Vérification littérale écrite pour chaque élément", ok1))
+        all(e["id"] in note_txt for e in ELEMENTS) and "E-03" in note_txt
+    crit.append(("1. Vérification littérale écrite pour les %d éléments en attente"
+                 % len(ELEMENTS), ok1))
 
     # 2. Chaque donnée manquante reste en symbole (jamais remplie)
     ok2 = all(e["manque"] for e in ELEMENTS) and \
         all(("f_k" in e["formule"] or "b" in e["formule"] or "NON DÉFINISSABLE" in e["formule"])
             for e in ELEMENTS)
-    crit.append(("2. Donnée manquante laissée en symbole", ok2))
+    crit.append(("2. Donnée manquante laissée en symbole (%d éléments)" % len(ELEMENTS), ok2))
 
     # 3. Tableau de sensibilité marqué NON CONTRACTUEL
     ok3 = "NON CONTRACTUEL" in note_txt and note_txt.count("NON CONTRACTUEL") >= 3
@@ -318,7 +334,8 @@ def controle(note_txt, cas):
 
     # 4. Essais listés avec référentiel, nombre et emprise
     ok4 = all(e[2] and e[3] and e[4] for e in ESSAIS) and "NF EN 338" in note_txt
-    crit.append(("4. Essais : référentiel + nombre + emprise", ok4))
+    ok4 = ok4 and "E-03" not in " ".join(a for a, _, _, _, _, _, _ in ESSAIS)
+    crit.append(("4. Essais : référentiel + nombre + emprise (E-03 sorti)", ok4))
 
     # 5. Aucun élément déclaré « vérifié »
     interdits = re.findall(r"\bvérifié(?:e|s|es)?\b", note_txt, flags=re.I)
@@ -342,7 +359,7 @@ def controle(note_txt, cas):
 # ---------------------------------------------------------------------------
 def main():
     log("=" * 78)
-    log("B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — MODE PARAMÉTRIQUE")
+    log("B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — INDICE B")
     log("=" * 78)
     log("")
     log("Aucune valeur n'est retenue. Les charges sont des effets de charge")
@@ -392,6 +409,22 @@ def main():
         % len(cas))
     log("")
 
+    log("--- E-03 SORTI DU CHAMP EN INDICE B (données D3 p. 10) -----------")
+    log("    %s" % E03["source"])
+    log("    Seule inconnue restante : PÉRIMÈTRE de la recharge de 15 cm (D4).")
+    log("    %-24s %-8s %-9s %-9s %-9s %s"
+        % ("CAS", "p_ELU", "M_Ed", "sigma_m,d", "sigma/f_m,d", "w_ELS (C18)"))
+    for lab, p_, m_, sd_, w_ in e03_scenarios():
+        log("    %-24s %-8.2f %-9.2f %-9.2f %-9.3f %.1f mm"
+            % (lab, p_, m_, sd_, sd_ / fm_d("C18"), w_))
+    log("    f_m,d (C18) = %.2f MPa · flèche ELS à E_mean = 9 000 MPa (court terme),"
+        % fm_d("C18"))
+    log("    limite L/300 = %.1f mm · à long terme (k_def = 0,6) la flèche est majorée."
+        % (E03["L"] / 300.0))
+    log("    AUCUNE CONCLUSION ICI : ce contrôle de cohérence motive la sortie de")
+    log("    E-03 et devient un point d'entrée dur pour B-43.")
+    log("")
+
     log("--- TABLEAU 3 : ESSAIS ET SONDAGES NÉCESSAIRES --------------------")
     table([("ÉLÉMENT", "ESSAI", "RÉFÉRENTIEL", "NOMBRE", "ÉCHÉANCE")] +
           [(a, b[:52], c[:40], d[:34], g) for a, b, c, d, _, _, g in ESSAIS],
@@ -420,7 +453,7 @@ def main():
     log("")
     log("SYNTHÈSE : %d éléments en attente de données · %d favorable(s) pour toute "
         "la plage · %d limite(s) · %d défavorable(s) pour toute la plage · "
-        "%d sans plage plausible"
+        "%d sans plage plausible · 1 élément SORTI du champ (E-03)"
         % (len(ELEMENTS), len(compte["FAVORABLE"]), len(compte["LIMITE"]),
            len(compte["DEFAVORABLE"]), len(compte["SANS PLAGE"])))
     log("")
@@ -443,6 +476,14 @@ def main():
         "essais": [dict(element=a, essai=b, referentiel=c, nombre=d,
                         emprise=e, responsable=f, echeance=g)
                    for a, b, c, d, e, f, g in ESSAIS],
+        "elements_sortis": [dict(id=E03["id"], nom=E03["nom"],
+                                 source=E03["source"],
+                                 scenarios=[dict(cas=l, p_ELU=round(p_, 2),
+                                                 M_Ed=round(m_, 2),
+                                                 sigma=round(sd_, 2),
+                                                 ratio_C18=round(sd_ / fm_d("C18"), 3),
+                                                 w_ELS_mm=round(w_, 1))
+                                            for l, p_, m_, sd_, w_ in e03_scenarios()])],
         "comptes": {k: v for k, v in compte.items()},
         "verdict_7_criteres": conformes,
     }

@@ -28,17 +28,6 @@
       "verdict": "DEFAVORABLE"
     },
     {
-      "id": "E-03",
-      "nom": "Solives de plancher 8x18 (D3 p. 18)",
-      "manque": "entraxe réel, portée, classe, continuité, état des abouts",
-      "charge": "g + q = 8,01 + 2,50 = 10,51 kN/m² (plancher B, B-21)",
-      "verif": "Flexion simple + flèche ELS",
-      "formule": "sigma_m,d = p e L^2 / 8 / (b h^2 / 6)  <=  f_m,d  avec p = e (g + q)",
-      "plage": "entraxe 0,40 à 0,60 m ; portée 3,00 à 4,30 m ; C18 à C24",
-      "fermeture": "B-43 (planchers) / B-44",
-      "verdict": "LIMITE"
-    },
-    {
       "id": "E-04",
       "nom": "Potelets de charpente (désordre 8)",
       "manque": "section, hauteur libre, classe, excentrement, contreventement",
@@ -161,96 +150,6 @@
       "element": "E-02",
       "cas": "200x300 mm, C24",
       "ratio": 3.02
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 3.00 m, C18",
-      "ratio": 0.988
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 3.00 m, C24",
-      "ratio": 0.741
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 3.85 m, C18",
-      "ratio": 1.628
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 3.85 m, C24",
-      "ratio": 1.221
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 4.30 m, C18",
-      "ratio": 2.031
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.40 m, L = 4.30 m, C24",
-      "ratio": 1.523
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 3.00 m, C18",
-      "ratio": 1.235
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 3.00 m, C24",
-      "ratio": 0.927
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 3.85 m, C18",
-      "ratio": 2.035
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 3.85 m, C24",
-      "ratio": 1.526
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 4.30 m, C18",
-      "ratio": 2.538
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.50 m, L = 4.30 m, C24",
-      "ratio": 1.904
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 3.00 m, C18",
-      "ratio": 1.483
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 3.00 m, C24",
-      "ratio": 1.112
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 3.85 m, C18",
-      "ratio": 2.442
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 3.85 m, C24",
-      "ratio": 1.831
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 4.30 m, C18",
-      "ratio": 3.046
-    },
-    {
-      "element": "E-03",
-      "cas": "e = 0.60 m, L = 4.30 m, C24",
-      "ratio": 2.284
     },
     {
       "element": "E-04",
@@ -642,15 +541,6 @@
       "echeance": "avant B-44"
     },
     {
-      "element": "E-03",
-      "essai": "Sondage destructif de plancher (ouverture, entraxe, sections, nature)",
-      "referentiel": "NF EN 338 si bois / NF EN 1992 si BA",
-      "nombre": "3 ouvertures de 0,50 x 0,50 m",
-      "emprise": "Une par travée de plancher courant",
-      "responsable": "MOA / bureau mandaté",
-      "echeance": "avant B-43"
-    },
-    {
       "element": "E-07",
       "essai": "Sondage destructif du plancher haut (composition, sens porteur, portée)",
       "referentiel": "NF EN 338 / NF EN 1992 / NF EN 15037 selon la nature",
@@ -669,12 +559,36 @@
       "echeance": "avant B-40"
     }
   ],
+  "elements_sortis": [
+    {
+      "id": "E-03",
+      "nom": "Solives de plancher bois 8x18 @ 0,50 m (plancher A)",
+      "source": "D3 p. 10 (EXI-01a) : 8x18 @ 0,50 m, portée 2,77 m, C18 (EXI-03, hypothèse)",
+      "scenarios": [
+        {
+          "cas": "sans recharge (RDC seul)",
+          "p_ELU": 3.09,
+          "M_Ed": 2.96,
+          "sigma": 6.86,
+          "ratio_C18": 0.619,
+          "w_ELS_mm": 4.7
+        },
+        {
+          "cas": "avec recharge 15 cm",
+          "p_ELU": 5.32,
+          "M_Ed": 5.1,
+          "sigma": 11.81,
+          "ratio_C18": 1.066,
+          "w_ELS_mm": 8.3
+        }
+      ]
+    }
+  ],
   "comptes": {
     "FAVORABLE": [
       "E-01"
     ],
     "LIMITE": [
-      "E-03",
       "E-04",
       "E-06",
       "E-08"
