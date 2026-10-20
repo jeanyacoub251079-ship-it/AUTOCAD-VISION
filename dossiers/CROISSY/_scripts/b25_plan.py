@@ -269,7 +269,7 @@ def main():
         "PRESCRIPTION OBLIGATOIRE D-09 (REPRODUCTION INTEGRALE) :",
         "« AU MEME NIVEAU QUE LES FONDATIONS EXISTANTES... RAJOUTER DU GROS BETON...",
         "  CETTE NOTE EST A INDIQUER SUR LES PLANS ET NOTE DE CALCULS »",
-        "0,00 RELATIF = plancher bas du RDC (D-20/D-21) · arase -1,00 m/TN mini (D-08/D-12) · 60x60 mini (D-14)",
+        "0,00 RELATIF = plancher bas du RDC (D-20/D-21) · arase -1,00 m/TN mini (D-08/D-12) · 60x60 mini (D-14) · SF1 80x80 (D-30)",
     ]):
         add_txt(msp, tx0 + 30, ny + 100 - k * 26, line, h=11.4,
                 layer="B25-ALERTE" if k < 3 else "B25-TEXTE")
