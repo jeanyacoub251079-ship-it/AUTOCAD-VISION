@@ -1,0 +1,105 @@
+==========================================================================================
+B-43 — PLANCHERS, PLANCHER HAUT ET DALLAGE — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13) — EC2 / EC5 / NF DTU 13.3
+==========================================================================================
+
+[1] DESCENTE DE CHARGES D'EXÉCUTION — PAR ZONE (distincte de B-21)
+------------------------------------------------------------------------------
+  Coefficient psi : psi_1 = 0.5 · psi_2 = 0.3 (EC0 tableau A1.1, cat. B)
+  ZONE                                    g (kN/m2)  q (kN/m2)  ELS car.  ELS freq.  ELS q-p    ELU     
+  A — solives bois 8x18 @ 0,50            1.80       2.50       4.30      3.05       2.55       6.18    
+  B — mixte IPE 160 @ 0,72 + hourdis      4.71       2.50       7.21      5.96       5.46       10.11   
+  D — dallage rechargé (D-35)             7.75       2.50       10.25     9.00       8.50       14.21   
+
+  Plancher haut d'étage (E-07) : AUCUNE charge établie — nature du support inconnue.
+
+[2] ZONE A — SOLIVE BOIS 8x18 @ 0,50 m, PORTÉE 2,77 m — EC5
+------------------------------------------------------------------------------
+  p_ELU = (1,35 x 1.80 + 1,50 x 2.50) x 0.50 = 3.09 kN/m
+  M_Ed = 2.96 kN.m · V_Ed = 4.28 kN
+  W = b h2/6 = 432000 mm3 · I = b h3/12 = 3.888e+07 mm4
+  f_m,d = 0.80 x 18 / 1.3 = 11.08 MPa · f_v,d = 1.23 MPa
+  f_c,90,d = 0.80 x 2.2 / 1.3 = 1.35 MPa · k_c,90 = 1.25 (appui 100 mm)
+  VÉRIFICATION                      ED          RD                RATIO    VERDICT  
+  Flexion EC5 6.1.6                 6.86 MPa    11.08 MPa         0.619    OK       
+  Cisaillement EC5 6.1.7            0.446 MPa   1.23 MPa          0.362    OK       
+  Compression appui EC5 6.1.5       0.535 MPa   1.69 MPa          0.316    OK       
+  Flèche instantanée EC5 7.2        4.7 mm      9.2 mm (L/300)    0.510    OK       
+  Flèche finale EC5 7.2             6.4 mm      11.1 mm (L/250)   0.576    OK       
+  Flèche finale = 1.97 x (1 + 0.6) + 2.74 x (1 + 0.3 x 0.6) = 6.4 mm
+  A_s : sans objet — section pleine bois, pas d'armature (EC5 §6.1).
+  Déversement : solives maintenues en compression par le parquet continu
+  → EC5 6.3.3 non déclenché (maintien latéral continu, k_crit = 1).
+  Réaction par solive : R_Ed = 4.28 kN · par ml d'appui : 8.56 kN/m
+
+[3] ZONE A — POUTRE 20x15 (b = 200, h = 150) — RÉACTIONS, PUIS RENVOI B-45
+------------------------------------------------------------------------------
+  Charge linéaire apportée par les solives : 3.09 x 2.77 / 2 = 4.28 kN/m
+  Réaction d'about (portée 4,34 m) : 9.29 kN par appui
+  Flèche constatée D3 p. 10-13 : 72.8 mm pour 10.4 mm admis (L/417).
+  → La poutre EXISTANTE est hors limites : son renfort par moisage (R1) est
+    dimensionné en B-45, pas ici. B-43 fournit la charge et la réaction.
+
+[4] ZONE B — PLANCHER MIXTE EXISTANT (IPE 160 @ 0,72 + hourdis) — RENVOI B-45
+------------------------------------------------------------------------------
+  p_ELU par solive = (1,35 x 4.71 + 1,50 x 2.50) x 0.72 = 7.28 kN/m
+  Charge surfacique ELU = 10.11 kN/m2 · ELS = 7.21 kN/m2
+  Hourdis briques 7 cm + chape 10 cm : éléments de maçonnerie existants,
+    ni BA ni bois — EC2 et EC5 ne s'y appliquent pas.
+  IPE 160 et IPE 330 : vérification de section en B-45 (EC3).
+  Diagnostic D3 p. 12 : flèche IPE 160 OK, IPE 330 OK, déversement IPE 160
+    instable → entretoises Stab1 retenues par B-20. Réaction IPE 330 : 6.9 t.
+  → B-43 ne dimensionne pas cette zone : il en fixe la charge et la réaction.
+
+[5] ZONE C — PLANCHER HAUT D'ÉTAGE (E-07) — AUCUN CALCUL POSSIBLE
+------------------------------------------------------------------------------
+  D3 p. 4 et p. 10 : « plancher haut non sondé » (cage centrale).
+  Ni nature, ni épaisseur, ni portée ne sont établies → aucune formule.
+  V15 : la chaîne toiture → potelets → plancher haut → murs est ROMPUE ici.
+  → Réserve R-43-1 · point d'arrêt PA-03 · aucun chiffre produit.
+
+[6] ZONE D — DALLAGE SUR TERRE-PLEIN, 100 % DE L'EMPRISE (D-35)
+------------------------------------------------------------------------------
+  g = 7.75 · q = 2.50 → p_ELS = 10.25 · p_ELU = 14.21 kN/m2
+  Emprise rechargée : 111.15 m2 → N_ELU total = 1580 kN
+  CRITÈRE               VALEUR      ADMISSIBLE    TAUX     VERDICT  
+  Portance ELS          10.2 kPa    300 kPa       3.4 %    OK       
+  Portance ELU          14.2 kPa    490 kPa       2.9 %    OK       
+  → la portance n'est pas le critère : le sol est sollicité à moins de 3 %.
+
+  Flexion : sous charge répartie, un dallage continu sur fond de forme suit
+  son support — le moment de flexion tend vers zéro. Les moments réels
+  proviennent des tassements différentiels (HORS MISSION, D-15) et des
+  charges concentrées (aucune dans le programme actuel).
+  → l'épaisseur est gouvernée par les dispositions constructives, pas par M_Ed.
+  A_s,min EC2 9.3.1.1 = max(0,26 x 2.56 / 500 x b d ; 0,0013 b d) = 122 mm2/m
+  Treillis retenu : ST25C (Ø7 e150) = 257 mm2/m → 2.10 x A_s,min
+  Fissuration EC2 7.3 : w_k <= 0,30 mm (XC1/XC2). Règles indirectes :
+    espacement des fils 150 mm <= 300 mm et Ø 7 mm <= 16 mm → satisfait sans calcul.
+
+  JOINTS DE RETRAIT — NF DTU 13.3 (dallage) / NF P11-213 :
+    - joints sciés sur 1/3 de l'épaisseur (43 mm) dès que le béton porte,
+      au plus tard 24 h après coulage, avant toute circulation ;
+    - espacement maximal retenu : 4,50 m dans les deux sens ;
+    - surface maximale d'un panneau : 4,50 x 4,50 = 20,25 m2 ;
+    - emprise 111.15 m2 → au moins 6 panneaux.
+    - joints de retrait ≠ joints de dilatation : D-28 interdit les seconds,
+      pas les premiers. Un dallage de 111 m2 sans joint de retrait fissure.
+
+  DÉSOLIDARISATION — au droit de CHAQUE semelle, poteau, mur et ouvrage
+  existant (D-09, D-35) : polystyrène 20 mm + mastic souple en surface,
+  sur toute la hauteur du dallage, + film polyane remonté.
+  Consigne de coulage : dallage coulé À MÊME les semelles, jamais compacté
+  sur leur débord ; vibration à 200 mm du joint minimum.
+
+[7] EFFORTS AUX APPUIS TRANSMIS À B-50 (assemblages) ET B-46 (existant)
+------------------------------------------------------------------------------
+  APPUI           OUVRAGE               EFFORT      UNITÉ                     DESTINATAIRE      
+  Solives A       mur / poutre 20x15    4.28        kN/solive                 B-50 · B-46       
+  Ligne A         appui continu         8.56        kN/m                      B-46              
+  Poutre 20x15    about                 9.29        kN                        B-45 · B-50       
+  IPE 160 (B)     charge linéaire       7.28        kN/m                      B-45              
+  IPE 330 (B)     appui central         67.7        kN (D3)                   B-46              
+  Dallage         sol support           14.2        kPa (ELU)                 B-40              
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndA.dxf (71549 o) — audit 0 erreur(s)
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndA.png / .pdf

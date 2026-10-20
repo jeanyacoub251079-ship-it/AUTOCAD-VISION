@@ -11,9 +11,11 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **U** (remplace l'indice T du 20/10/2026 — décision `D-29`) |
+| **Indice du livrable** | **W** (remplace l'indice V du 20/10/2026 — livraison `B-43`) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
+> **Indice W (20/10/2026)** : **`B-43` LIVRÉE EN INDICE A — planchers, plancher haut et dallage.** Aucune décision nouvelle n'est prise : le registre s'enrichit de **quatre réserves de brique** et d'**un point d'arrêt**. **`R-43-1`** plancher haut d'étage **non sondé** (`E-07`) — aucun calcul possible, chaîne de charge rompue (`V15`) ; **`R-43-2`** classe de bois `C18` **non mesurée** (`EXI-03`) ; **`R-43-3`** état sanitaire des abouts de solives (reprise de `R-24-B2`) ; **`R-43-4`** classement **termites** inconnu (`SEC-03` absent) — recoupe `R-26`. **`PA-03`** : sondage destructif du plancher haut, **avant `B-44`**. Ce qui est tranché sans réserve : les **solives `8 × 18`** de l'aile Est sont **conformes aux cinq vérifications EC5** (flexion `0,619`, flèche finale `0,576`) et le **dallage** est conforme (portance à `2,9 %`, treillis `ST25C` à `2,10 × A_s,min`, joints de retrait tous les `4,50 m`).
+>
 > **Indice V (20/10/2026)** : **`D-35` CONSIGNÉE** — « **qui peut le plus peut le moins** : le dallage est calculé et dimensionné comme si la surcharge de `15 cm` couvrait **la totalité de son emprise** ; hypothèse défavorable ». **La localisation de la recharge est tranchée par les pièces** : deux occurrences dans les 29 planches du `D4` (`p. 5` plan de démolition, `p. 14` sanitaires PMR), **toutes deux au RDC**, **aucune sur les planches de R+1**. Chaîne de révision : `B-21` **Ind. C**, `B-24` **Ind. C** (`R-24-B1` close), `B-42` **Ind. B**, `B-40` **Ind. F**.
 >
 > **Indice U (20/10/2026)** : **`D-29` CONSIGNÉE** — le contreventement en service est assuré par la maçonnerie existante **seule**. Aucun renfort métallique, aucun poteau, aucun frangement n'est réputé reprendre les efforts horizontaux. **Le dernier point ouvert de `B-25` est fermé** ; `B-25` révisée en **indice E**. **`B-23` livrée en indice A.**
@@ -180,9 +182,9 @@
 | **R-09** | Poids propres de toiture | **TRAITÉE — valeur notifiée** | **Calcul** | **BET / MOE** | 19/10/2026 | **`H-29` notifiée le 20/10/2026** (`0,95 kN/m²`) — délai `D-19` ; à confirmer en `B-44` |
 | **R-10** | Cloisons et équipements lourds | **TRAITÉE — valeur notifiée** | **Calcul** | **MOE / BET** | 19/10/2026 | **`H-30` notifiée le 20/10/2026** (`0,80 kN/m²`, EC1 § 6.3.1.2) — délai `D-19` ; les **équipements lourds de la salle de sport** restent à demander en `B-44` |
 | **R-11** | Action sismique — a<sub>gr</sub> et classe de sol | Ouverte | **Calcul** | **BET** | 19/10/2026 | Avant B-42, B-46 |
-| **R-12** | Sécurité incendie — CF, SF, catégorie | Ouverte | **Calcul** | **MOE / BE incendie** | 19/10/2026 | Avant B-42, B-43, B-49 |
+| **R-12** | Sécurité incendie — CF, SF, catégorie | Ouverte | **Calcul** | **MOE / BE incendie** | 19/10/2026 | Avant B-42, B-43, B-49 — **`B-43` livrée sans dimensionnement incendie (hors lot GO)** : mention reportée sur la planche `IndA` |
 | **R-13** | **Coupe type et toit des alluvions** — *réduite de l'ex-« 3 extraits »* : la **nappe** est soldée par **D-16**, les **tassements** sortent du périmètre par **D-15**. Il ne reste que la coupe géologique | Ouverte | **Calcul** *(criticité ramenée de CHANTIER à CALCUL par D-16)* | **MOE / GEOEXPERTS** | 19/10/2026 | **Avant B-40** |
-| **R-14** | Classement XA réel (« XA4 » inexistante) | Ouverte | **Calcul** | **GEOEXPERTS / BET** | 19/10/2026 | Avant B-40, B-43 |
+| **R-14** | Classement XA réel (« XA4 » inexistante) | Ouverte | **Calcul** | **GEOEXPERTS / BET** | 19/10/2026 | Avant B-40, B-43 — **`B-43` retient `XC1/XC2` et `c_nom = 30 mm`** : un classement `XA` réel imposerait de rouvrir l'enrobage |
 | **R-15** | Contrainte admissible de la maçonnerie | Ouverte | **Calcul** | **BET / laboratoire** | 19/10/2026 | Avant B-23, B-46 |
 | **R-16** | Résistance des moellons et du mortier | Ouverte | **Calcul** | **Laboratoire** | 19/10/2026 | Avant B-46, B-49 |
 | **R-17** | Classes de maçonnerie neuve (bloc, mortier, type) | Ouverte | **Calcul** | **BET** | 19/10/2026 | Avant B-46 |
@@ -193,8 +195,8 @@
 | **R-22** | **Charpente absente du CCTP** | Ouverte | ⚠ **CONTRACTUELLE** | **MOE / économiste** | 19/10/2026 | **Avant consultation** |
 | **R-23** | **Maître d'ouvrage divergent** — UNIVI (D1) vs SCI GEMS RC (D4) | Ouverte | ⚠ **CONTRACTUELLE** | **MOE** | 19/10/2026 | **Avant B-64** |
 | ~~**R-24**~~ | ~~DXF indice C non fourni~~ | **FERMÉE** | — | MOE | 19/10/2026 | **Fermée le 19/10/2026** — pièce **D5** `208_FLORA_Plans_DCE_IndC.dxf` retrouvée dans le Drive (4 399 016 o, AC1032) et inventoriée par script. **Mais voir R-37** : le fichier ne porte aucune donnée de structure |
-| **R-25** | Cote d'ensemble du bâtiment | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43, B-44 |
-| **R-26** | Classement termites | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43 |
+| **R-25** | Cote d'ensemble du bâtiment | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43, B-44 — **sans effet sur `B-43`** (aucun coffrage produit : planche de principes seulement) ; reste requise pour `B-44` et `B-60` |
+| **R-26** | Classement termites | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43 — **`B-43` livrée sans réponse** : réserves `R-43-4` ; si la commune est classée, barrière anti-termites à ajouter sous le dallage |
 | **R-27** | DOE / plans de récolement | Ouverte | **Production** | **MOA** | 19/10/2026 | Avant B-11 |
 | **R-28** | Classe de service du bois (MAT-08) | Ouverte | **Calcul** | **Production interne (B-22)** | 19/10/2026 | Avant B-44 |
 | **R-29** | Seuils GEO-10, GEO-11, GEO-12 | Ouverte | **Production** | **Client / BET** | 19/10/2026 | Avant B-30 à B-33 |

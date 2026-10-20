@@ -1,0 +1,87 @@
+{
+ "zones": {
+  "A": {
+   "g": 1.8,
+   "q": 2.5,
+   "els": 4.3,
+   "elu": 6.18
+  },
+  "B": {
+   "g": 4.71,
+   "q": 2.5,
+   "els": 7.21,
+   "elu": 10.11
+  },
+  "D": {
+   "g": 7.75,
+   "q": 2.5,
+   "els": 10.25,
+   "elu": 14.21
+  }
+ },
+ "zoneA": {
+  "p_elu": 3.09,
+  "M": 2.96,
+  "V": 4.28,
+  "sigma_m": 6.86,
+  "fm_d": 11.08,
+  "r_flex": 0.619,
+  "tau": 0.446,
+  "fv_d": 1.23,
+  "r_shear": 0.362,
+  "sig_c90": 0.535,
+  "r_c90": 0.316,
+  "w_inst": 4.71,
+  "w_fin": 6.39,
+  "lim_inst": 9.23,
+  "lim_fin": 11.08
+ },
+ "zoneA_poutre": {
+  "p": 4.28,
+  "R": 9.29,
+  "fleche_d3": 72.8
+ },
+ "zoneB": {
+  "p_solive": 7.28,
+  "p_elu": 10.11,
+  "p_els": 7.21,
+  "reaction_ipe330_t": 6.9
+ },
+ "zoneC": {
+  "calcul": false,
+  "reserve": "R-43-1",
+  "pa": "PA-03"
+ },
+ "dallage": {
+  "g": 7.75,
+  "q": 2.5,
+  "p_els": 10.25,
+  "p_elu": 14.21,
+  "emprise": 111.15,
+  "N_elu": 1580.0,
+  "taux_els": 3.4,
+  "taux_elu": 2.9,
+  "h": 130.0,
+  "d": 92.0,
+  "as_min": 122.0,
+  "treillis": "ST25C",
+  "as_treillis": 257.0,
+  "ratio_treillis": 2.1,
+  "joints": {
+   "espacement": 4.5,
+   "profondeur": 43.0,
+   "panneau_max": 20.25,
+   "n_panneaux": 6
+  },
+  "desolidarisation": "polystyrene 20 mm + mastic, perimetre et au droit de chaque appui"
+ },
+ "appuis": {
+  "solive": 4.28,
+  "ligne": 8.56,
+  "poutre": 9.29,
+  "ipe160": 7.28,
+  "ipe330": 67.7,
+  "dallage": 14.2
+ },
+ "journal_octets": 7218
+}
