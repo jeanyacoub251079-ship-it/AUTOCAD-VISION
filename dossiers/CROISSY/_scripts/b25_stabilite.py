@@ -12,11 +12,11 @@ Régime OUTILLÉ (V13). Ce script produit la preuve numérique de la brique :
   3. Applique l'action du vent EC1-1-4 (vb = 24 m/s, terrain III) par niveau,
      puis répartit les efforts avec torsion structurale + excentrique accidentelle.
   4. Vérifie le cisaillement des murs (EC6 § 3.6.2) et l'élancement hors plan.
-  5. Évalue la sensibilité sismique EC8 (zone 1, cat. II retenue ; sensibilité
-     cat. III pour un ERP type J) au moyen de la méthode des forces latérales.
-  6. Teste les phases provisoires : retrait successif de chaque mur entaillé par
-     un frangement, recalcul du centre de rigidité et du taux de travail.
-  7. Statue sur les joints de dilatation (température + retrait + phasage).
+  5. Statue sur les joints de dilatation (température + retrait + phasage).
+  6. Identifie les voiles majeurs et transmet les grandeurs de phase provisoire à la
+     maîtrise d'œuvre structure de conception (D-27). La vérification de la stabilité
+     provisoire n'est PAS produite : elle n'est pas dans notre mission.
+  7. Aucune vérification sismique n'est produite (D-26 — zone 1, IDF).
 
 Sorties :
   - dossiers/CROISSY/_rendus/b25_stabilite.txt   (journal OUT-03)
@@ -52,8 +52,6 @@ H_MASONRY = dict(
 )
 H_GEOM = dict(h_rdc=3.00, h_r1=3.00)     # m — hauteurs libres (D2 : P2 H = 3,00 m)
 H_WIND = dict(vb=24.0, rho=1.25, z0=0.30, zmin=5.0, cpe_net=1.30, cscd=1.0, terrain="III")
-H_SEIS = dict(ag=0.40, gamma_I=1.20, S=1.50, TB=0.15, TC=0.40, q=1.50)   # sol C (S=1,50) — H-24
-H_MASS = dict(g_floor=4.50, q_floor=2.50, psi2=0.30, g_roof=0.80)
 A_RDC, A_R1 = 111.15, 106.92            # m² — surfaces D-22
 
 LOG = []
@@ -188,6 +186,10 @@ def main():
     log(f"Exécution : {datetime.now():%Y-%m-%d %H:%M:%S}")
     log(f"Sources   : {SRC_RDC}")
     log(f"            {SRC_R1}  (translation d'empilement dy = +{DY_R1:.0f} cm — B-31)")
+    log("EXCLUSIONS DE MISSION (décisions D-26 et D-27 du 20/10/2026) :")
+    log("  · aucune vérification sismique n'est produite — zone 1 (Île-de-France), séisme très faible (D-26)")
+    log("  · la stabilité provisoire d'ensemble n'est pas vérifiée — elle incombe à la MOE")
+    log("    structure de conception ; seules les grandeurs utiles lui sont transmises (D-27)")
     log("=" * 104)
 
     walls_rdc = extract_walls(SRC_RDC, BLOCK_RDC)
@@ -208,9 +210,8 @@ def main():
     results = {"project": "CROISSY-FLORA", "brick": "B-25", "indice": "A",
                "date": datetime.now().isoformat(timespec="seconds"),
                "hypotheses": {"masonry": H_MASONRY, "geom": H_GEOM, "wind": H_WIND,
-                              "seis": H_SEIS, "mass": H_MASS,
                               "surfaces": {"RDC": A_RDC, "R+1": A_R1}},
-               "levels": {}, "wind": {}, "seis": {}, "phases": [], "joints": {}}
+               "levels": {}, "wind": {}, "joints": {}}
 
     # ------------------------------------------------------------ raideurs globales
     log("\n[2] CENTRES DE RIGIDITÉ, CENTRES DE MASSE ET RAIDEURS D'ENSEMBLE")
@@ -291,100 +292,28 @@ def main():
             f" → {verdict}")
         results["slenderness_{}".format(name)] = dict(id=who["id"], t_eq=who["t_eq"], ratio=ratio)
 
-    # ------------------------------------------------------------ sismique
-    log("\n[6] POSITION SISMIQUE — EC8-1 / arrêté du 22 octobre 2010")
-    W = (A_RDC + A_R1) * (H_MASS["g_floor"] + H_MASS["psi2"] * H_MASS["q_floor"]) + A_R1 * H_MASS["g_roof"]
-    T1 = 0.05 * 6.30 ** 0.75
-    Sd = H_SEIS["ag"] * H_SEIS["S"] * 2.5 / H_SEIS["q"] * H_SEIS["gamma_I"]
-    Vb = Sd * W / 9.81
-    log(f"    W = (111,15 + 106,92) × (4,50 + 0,30 × 2,50) + 106,92 × 0,80 = {W:.0f} kN ({W/9.81:.1f} t)")
-    log(f"    T1 = Ct·H^0,75 = 0,05 × 6,30^0,75 = {T1:.3f} s → plateau du spectre de calcul")
-    log(f"    Sd(T1) = ag·S·2,5/q·γI = {H_SEIS['ag']:.2f}×{H_SEIS['S']:.2f}×2,5/{H_SEIS['q']:.1f}"
-        f"×{H_SEIS['gamma_I']:.1f} = {Sd:.2f} m/s²")
-    log(f"    Vb = Sd·W/g = {Vb:.1f} kN (hypothèse enveloppe catégorie III, à arbitrer — D2 annonce II)")
-    log(f"    Vent : Vx = {sum(wx.values()):.1f} kN · Vy = {sum(wy.values()):.1f} kN")
-    log(f"    → le séisme d'enveloppe cat. III ({Vb:.0f} kN) vaut {Vb/max(sum(wx.values()),1e-9):.1f} fois le vent X")
-    log("    → zone 1 (très faible) : l'arrêté du 22/10/2010 (art. 3) ne rend les règles EC8 applicables")
-    log("      qu'en zones 2 à 5 — aucune catégorie d'importance n'y est soumise en zone 1.")
-    log("      La vérification ci-dessus est donc une SENSIBILITÉ (enveloppe cat. III), pas une obligation.")
-    # répartition par la méthode des forces latérales : F_i = Vb · z_i·m_i / Σ z_j·m_j
-    m_r1 = A_R1 * (H_MASS["g_floor"] + H_MASS["psi2"] * H_MASS["q_floor"]) + A_R1 * H_MASS["g_roof"]
-    m_rdc = A_RDC * (H_MASS["g_floor"] + H_MASS["psi2"] * H_MASS["q_floor"])
-    z_r1, z_rdc = 6.30, 3.15
-    den = z_r1 * m_r1 + z_rdc * m_rdc
-    F_r1, F_rdc = Vb * z_r1 * m_r1 / den, Vb * z_rdc * m_rdc / den
-    log(f"    Répartition en hauteur : m_R+1 = {m_r1:.0f} kN · m_RDC = {m_rdc:.0f} kN"
-        f" → F_R+1 = {F_r1:.1f} kN · F_RDC = {F_rdc:.1f} kN")
-    seis_checks = {}
-    for name, ws, F in (("R+1", walls_r1, F_r1), ("RDC", walls_rdc, F_rdc)):
-        L = results["levels"][name]
-        for axe, K, cr, idx, span in (("X", "Kx", L["cr_y"], 1, Bx), ("Y", "Ky", L["cr_x"], 0, By)):
-            Mt = F * (abs(L["e_struct"][1] if axe == "X" else L["e_struct"][0]) + 0.05 * span)
-            vv = distribute(ws, K, idx, cr, L[K], L["KT_" + axe.lower()], F, Mt)
-            vmax_id = max(vv, key=lambda k: abs(vv[k]))
-            wr = next(w for w in ws if w["id"] == vmax_id)
-            tau = abs(vv[vmax_id]) / wr["A"]
-            log(f"      {name} — séisme {axe} : F = {F:5.1f} kN · Mt = {Mt:5.1f} kN·m"
-                f" · mur {vmax_id} V = {abs(vv[vmax_id]):5.1f} kN · τ/fvk = {tau/fvk:.3f}")
-            seis_checks[f"{name}-{axe}"] = dict(F=F, Mt=Mt, vmax_id=vmax_id,
-                                               vmax=abs(vv[vmax_id]), tau=tau,
-                                               ratio=tau / fvk, vv=vv)
-    results["seis"] = dict(W=W, mass_t=W / 9.81, T1=T1, Sd=Sd, Vb=Vb, F={"R+1": F_r1, "RDC": F_rdc},
-                           checks=seis_checks)
-
-    # ------------------------------------------------------------ phases provisoires
-    log("\n[7] PHASES PROVISOIRES — retrait d'un mur entaillé, recalcul complet")
-    phases = []
+    # ------------------------------------------------------------ voiles majeurs (information)
+    log("\n[6] VOILES MAJEURS — INFORMATION TRANSMISE À LA MAÎTRISE D'ŒUVRE")
+    log("    La vérification du contreventement en phase provisoire n'est PAS produite ici :")
+    log("    elle incombe à la maîtrise d'œuvre structure de conception (D-27).")
+    log("    Nous transmettons les grandeurs qui la concernent, sans conclure sur la stabilité :")
+    major = []
     for name, ws, h in levels:
         L = results["levels"][name]
-        K0 = L["Ky"]
-        for w in ws:
-            reste = [x for x in ws if x["id"] != w["id"]]
-            cr2, K2 = centre_rigidite(reste, "Ky", 0)
-            KT2 = torsion_stiffness(reste, "Ky", 0, cr2)
-            V = wy[name]
-            Mt = V * (0.05 * By + abs(cr2 - L["cr_x"]))
-            vv = distribute(reste, "Ky", 0, cr2, K2, KT2, V, Mt)
-            vmax_id = max(vv, key=lambda k: abs(vv[k]))
-            wr = next(x for x in reste if x["id"] == vmax_id)
-            tau = abs(vv[vmax_id]) / wr["A"]
-            phases.append(dict(level=name, removed=w["id"], dCR=cr2 - L["cr_x"],
-                               K2=K2, K0=K0, part=K2 / K0, ratio=tau / fvk, tau=tau,
-                               vmax_id=vmax_id, vmax=abs(vv[vmax_id])))
-    phases.sort(key=lambda p: -p["ratio"])
-    log("    Situations les plus défavorables (mur retiré · déplacement du CR · raideur restante · taux) :")
-    for p in phases[:8]:
-        log(f"      {p['level']} — retrait {p['removed']} : ΔCR = {p['dCR']:+5.2f} m"
-            f" · ΣKy = {p['K2']:8.0f}/{p['K0']:8.0f} kN/m ({100*p['part']:5.1f} %)"
-            f" · mur {p['vmax_id']} V = {p['vmax']:5.1f} kN · τ/fvk = {p['ratio']:.3f}")
-    results["phases"] = phases
-
-    # enveloppe de démolition : retrait simultané des deux murs les plus défavorables
-    log("\n[7bis] ENVELOPPE DE DÉMOLITION — retrait simultané des deux murs les plus défavorables")
-    env = {}
-    for name, ws, h in levels:
-        L = results["levels"][name]
-        worst = sorted([p for p in phases if p["level"] == name], key=lambda p: -abs(p["dCR"]))[:2]
-        ids = [p["removed"] for p in worst]
-        reste = [x for x in ws if x["id"] not in ids]
-        cr2, K2 = centre_rigidite(reste, "Ky", 0)
-        KT2 = torsion_stiffness(reste, "Ky", 0, cr2)
-        V = wy[name]
-        Mt = V * (0.05 * By + abs(cr2 - L["cr_x"]))
-        vv = distribute(reste, "Ky", 0, cr2, K2, KT2, V, Mt)
-        vmax_id = max(vv, key=lambda k: abs(vv[k]))
-        wr = next(x for x in reste if x["id"] == vmax_id)
-        tau = abs(vv[vmax_id]) / wr["A"]
-        log(f"    {name} — retrait {ids[0]} + {ids[1]} : ΔCR = {cr2-L['cr_x']:+5.2f} m"
-            f" · ΣKy = {K2:8.0f}/{L['Ky']:8.0f} kN/m ({100*K2/L['Ky']:5.1f} %)"
-            f" · mur {vmax_id} V = {abs(vv[vmax_id]):5.1f} kN · τ/fvk = {tau/fvk:.3f}")
-        env[name] = dict(removed=ids, dCR=cr2 - L["cr_x"], K2=K2, K0=L["Ky"],
-                         part=K2 / L["Ky"], vmax_id=vmax_id, vmax=abs(vv[vmax_id]),
-                         tau=tau, ratio=tau / fvk)
-    results["envelope_demolition"] = env
+        tot = L["Kx"] + L["Ky"]
+        top = sorted(ws, key=lambda w: -(w["Kx"] + w["Ky"]))[:4]
+        part = sum(w["Kx"] + w["Ky"] for w in top) / tot
+        log(f"    {name} : les 4 voiles les plus raides ({', '.join(w['id'] for w in top)})"
+            f" portent {100*part:.1f} % de la raideur totale")
+        for w in top:
+            log(f"        {w['id']} : Kx = {w['Kx']:8.0f} kN/m · Ky = {w['Ky']:8.0f} kN/m"
+                f" · A = {w['A']:.2f} m² · centre ({w['c'][0]:+.2f} ; {w['c'][1]:+.2f})")
+        major.append(dict(level=name, ids=[w["id"] for w in top], part=part))
+    results["major_walls"] = major
+    log("    → éléments transmis à la MOE pour sa note de stabilité provisoire (T-04).")
 
     # ------------------------------------------------------------ joints
-    log("\n[8] JOINTS DE DILATATION")
+    log("\n[7] JOINTS DE DILATATION")
     Lmax = max(By, Bx)
     dT = 30.0
     dl = 10e-6 * dT * Lmax * 1000
@@ -392,7 +321,7 @@ def main():
     log(f"    Dilatation thermique libre : α·ΔT·L = 10⁻⁵ × {dT:.0f} × {Lmax:.1f} = {dl:.1f} mm")
     log("    Maçonnerie existante sans joint depuis sa construction, mortier ancien stabilisé,")
     log("    aucun tassement différencié identifié dans D3, frangements neufs appuyés (portée ≤ 4,88 m).")
-    log("    → AUCUN joint de dilatation à créer (D-xx à consigner au RDR).")
+    log("    → AUCUN joint de dilatation à créer (D-28 proposée au RDR).")
     results["joints"] = dict(dim=[By, Bx], delta_T=dT, dl_mm=dl, nb_joints=0)
 
     with open(JSONOUT, "w", encoding="utf-8") as f:

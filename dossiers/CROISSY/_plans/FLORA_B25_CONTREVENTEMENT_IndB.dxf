@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461334.604259259
+2461334.6115740743
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461334.6042708335
+2461334.6115856483
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-3BD37
+3BD3A
   9
 $SURFTAB1
  70
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{D5EC016F-22D7-43F7-B2C2-AF363D638D00}
+{0E0450FA-986B-427F-926E-4E1BCB7DE185}
   9
 $EXTNAMES
 290
@@ -277051,7 +277051,7 @@ AcDbText
  40
 21.0
   1
-PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. A)
+PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. B)
  11
 9770.0
  21
@@ -277801,7 +277801,7 @@ AcDbText
  40
 10.8
   1
-3  M11 voile majeur RDC (815 171 kN/m en Y) — ne pas ouvrir avec M03
+3  M11 voile majeur RDC (815 171 kN/m en Y) — grandeur transmise a la MOE
  11
 9770.0
  21
@@ -277831,7 +277831,7 @@ AcDbText
  40
 10.8
   1
-4  M09 voile majeur RDC cote Est (192 477 kN/m en Y)
+4  M09 voile majeur RDC cote Est (192 477 kN/m en Y) — idem M03
  11
 9770.0
  21
@@ -278191,7 +278191,7 @@ AcDbText
  40
 11.4
   1
--> D-26 propose : aucun joint · a reexaminer si l'emprise est modifiee
+-> D-28 proposee : aucun joint · a reexaminer si l'emprise est modifiee
  11
 9770.0
  21
@@ -278221,7 +278221,7 @@ AcDbText
  40
 16.0
   1
-5. PHASES PROVISOIRES — UN SEUL VOILE MAJEUR A LA FOIS
+5. PHASE PROVISOIRE — HORS MISSION (D-27)
  11
 9764.0
  21
@@ -278249,9 +278249,9 @@ AcDbText
  30
 0.0
  40
-11.4
+10.8
   1
-P-1 demolition F2 · P-2 demolition F3 (F3 AVANT F2) · P-3 ouverture F1a
+La verification du contreventement en phase provisoire incombe a la
  11
 9770.0
  21
@@ -278275,17 +278275,17 @@ AcDbText
  10
 9770.0
  20
-5417.0
+5420.0
  30
 0.0
  40
-11.4
+10.8
   1
-P-4 depose charpente -> etaiement lateral des pignons · P-5 fouilles passes alternees
+maitrise d'oeuvre structure de conception (batiment existant).
  11
 9770.0
  21
-5417.0
+5420.0
  31
 0.0
 100
@@ -278305,17 +278305,17 @@ AcDbText
  10
 9770.0
  20
-5396.0
+5402.0
  30
 0.0
  40
-11.4
+10.8
   1
-Retrait d'UN voile majeur : ΣKy >= 69 % · dCR <= 0,90 m · tau/fvk <= 0,024
+AUCUNE verification provisoire n'est produite par nos soins.
  11
 9770.0
  21
-5396.0
+5402.0
  31
 0.0
 100
@@ -278335,17 +278335,17 @@ AcDbText
  10
 9770.0
  20
-5375.0
+5384.0
  30
 0.0
  40
-11.4
+10.8
   1
-Retrait de DEUX voiles (R+1 M03+M08) : dCR = +3.03 m · ΣKy = 41.6 %
+Grandeurs transmises a la MOE (T-04) :
  11
 9770.0
  21
-5375.0
+5384.0
  31
 0.0
 100
@@ -278365,17 +278365,17 @@ AcDbText
  10
 9770.0
  20
-5354.0
+5366.0
  30
 0.0
  40
-11.4
+10.8
   1
-Etaiement AVANT decoupe · clavetage AVANT decinrement · jamais 2 voiles majeurs ouverts
+  R+1  4 voiles majeurs = 88.9 % de la raideur totale
  11
 9770.0
  21
-5354.0
+5366.0
  31
 0.0
 100
@@ -278393,19 +278393,19 @@ B25-TEXTE
 100
 AcDbText
  10
-9764.0
+9770.0
  20
-5319.0
+5348.0
  30
 0.0
  40
-16.0
+10.8
   1
-6. POSITION SISMIQUE — EC8 ET ARRETE DU 22/10/2010
+       M08, M03, M09, M02
  11
-9764.0
+9770.0
  21
-5319.0
+5348.0
  31
 0.0
 100
@@ -278425,17 +278425,17 @@ AcDbText
  10
 9770.0
  20
-5293.0
+5330.0
  30
 0.0
  40
-11.2
+10.8
   1
-Zone 1 (tres faible) : l'article 3 de l'arrete ne soumet AUCUNE categorie
+  RDC  4 voiles majeurs = 95.1 % de la raideur totale
  11
 9770.0
  21
-5293.0
+5330.0
  31
 0.0
 100
@@ -278455,17 +278455,17 @@ AcDbText
  10
 9770.0
  20
-5272.0
+5312.0
  30
 0.0
  40
-11.2
+10.8
   1
-d'importance aux regles EC8 en zone 1 -> EC8 NON APPLICABLE.
+       M11, M03, M09, M04
  11
 9770.0
  21
-5272.0
+5312.0
  31
 0.0
 100
@@ -278485,17 +278485,17 @@ AcDbText
  10
 9770.0
  20
-5251.0
+5294.0
  30
 0.0
  40
-11.2
+10.8
   1
-Zone 1 / cat. II (D2) · agr = 0.40 m/s2 · sol C (H-24) · gamma_I = 1,20 (enveloppe III)
+Restent de notre lot : etaiement d'execution (H-20) · mode operatoire
  11
 9770.0
  21
-5251.0
+5294.0
  31
 0.0
 100
@@ -278515,17 +278515,17 @@ AcDbText
  10
 9770.0
  20
-5230.0
+5276.0
  30
 0.0
  40
-11.2
+10.8
   1
-W = 1230 kN · T1 = 0.199 s · Sd = 1.20 m/s2 · Vb = 150.5 kN
+de pose · ordre F3 avant F2 · etaiement lateral des pignons (securite)
  11
 9770.0
  21
-5230.0
+5276.0
  31
 0.0
 100
@@ -278543,19 +278543,19 @@ B25-TEXTE
 100
 AcDbText
  10
-9770.0
+9764.0
  20
-5209.0
+5250.0
  30
 0.0
  40
-11.2
+16.0
   1
-F(R+1) = 103.7 kN · F(RDC) = 46.8 kN
+6. POSITION SISMIQUE — NON VERIFIEE (D-26)
  11
-9770.0
+9764.0
  21
-5209.0
+5250.0
  31
 0.0
 100
@@ -278575,17 +278575,17 @@ AcDbText
  10
 9770.0
  20
-5188.0
+5224.0
  30
 0.0
  40
-11.2
+10.8
   1
-tau/fvk max (sensibilite cat. III) = 0.069
+Zone 1 (Ile-de-France) · seisme tres faible.
  11
 9770.0
  21
-5188.0
+5224.0
  31
 0.0
 100
@@ -278605,17 +278605,17 @@ AcDbText
  10
 9770.0
  20
-5167.0
+5206.0
  30
 0.0
  40
-11.2
+10.8
   1
-VERDICT : sans objet reglementaire · sensibilite tenue (tau/fvk < 0,07)
+Arrete du 22/10/2010, art. 3 : aucune categorie d'importance n'est
  11
 9770.0
  21
-5167.0
+5206.0
  31
 0.0
 100
@@ -278633,19 +278633,19 @@ B25-TEXTE
 100
 AcDbText
  10
-9764.0
+9770.0
  20
-5134.0
+5188.0
  30
 0.0
  40
-16.0
+10.8
   1
-7. POINTS D'ARRET OUVERTS
+soumise aux regles EC8 en zone 1 -> EC8 NON APPLICABLE.
  11
-9764.0
+9770.0
  21
-5134.0
+5188.0
  31
 0.0
 100
@@ -278665,17 +278665,17 @@ AcDbText
  10
 9770.0
  20
-5108.0
+5170.0
  30
 0.0
  40
-11.2
+10.8
   1
-PA-01 reconnaissance contradictoire de la continuite des voiles M03/M11/M08/M05
+DECISION CLIENT : aucune verification sismique produite, ni reglementaire,
  11
 9770.0
  21
-5108.0
+5170.0
  31
 0.0
 100
@@ -278695,17 +278695,17 @@ AcDbText
  10
 9770.0
  20
-5087.0
+5152.0
  30
 0.0
  40
-11.2
+10.8
   1
-      (epaisseur, chainages, liaisons d'angle) — AVANT TOUTE DEMOLITION
+ni de sensibilite. H-24 (sol C, agr 0,40) est neutralisee, non supprimee.
  11
 9770.0
  21
-5087.0
+5152.0
  31
 0.0
 100
@@ -278723,19 +278723,109 @@ B25-TEXTE
 100
 AcDbText
  10
-9770.0
+9764.0
  20
-5066.0
+5124.0
  30
 0.0
  40
-11.2
+16.0
+  1
+7. POINTS D'ARRET OUVERTS
+ 11
+9764.0
+ 21
+5124.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD2C
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+5098.0
+ 30
+0.0
+ 40
+10.8
+  1
+PA-01 reconnaissance contradictoire de la continuite des voiles
+ 11
+9770.0
+ 21
+5098.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD2D
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+5080.0
+ 30
+0.0
+ 40
+10.8
+  1
+      M11/M03/M04 · M08/M03/M09 · trumeau M05 — AVANT TOUTE DEMOLITION
+ 11
+9770.0
+ 21
+5080.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+3BD2E
+330
+70
+100
+AcDbEntity
+  8
+B25-TEXTE
+100
+AcDbText
+ 10
+9770.0
+ 20
+5062.0
+ 30
+0.0
+ 40
+10.8
   1
 PA-02 verification de la liaison charpente-maconnerie des pignons — AVANT DEPOSE
  11
 9770.0
  21
-5066.0
+5062.0
  31
 0.0
 100
@@ -278743,7 +278833,7 @@ AcDbText
   0
 LWPOLYLINE
   5
-3BD2C
+3BD2F
 330
 70
 100
@@ -278779,7 +278869,7 @@ AcDbPolyline
   0
 TEXT
   5
-3BD2D
+3BD30
 330
 70
 100
@@ -278809,7 +278899,7 @@ AcDbText
   0
 TEXT
   5
-3BD2E
+3BD31
 330
 70
 100
@@ -278839,7 +278929,7 @@ AcDbText
   0
 TEXT
   5
-3BD2F
+3BD32
 330
 70
 100
@@ -278869,7 +278959,7 @@ AcDbText
   0
 TEXT
   5
-3BD30
+3BD33
 330
 70
 100
@@ -278899,7 +278989,7 @@ AcDbText
   0
 LWPOLYLINE
   5
-3BD31
+3BD34
 330
 70
 100
@@ -278935,7 +279025,7 @@ AcDbPolyline
   0
 TEXT
   5
-3BD32
+3BD35
 330
 70
 100
@@ -278965,7 +279055,7 @@ AcDbText
   0
 TEXT
   5
-3BD33
+3BD36
 330
 70
 100
@@ -278995,7 +279085,7 @@ AcDbText
   0
 TEXT
   5
-3BD34
+3BD37
 330
 70
 100
@@ -279013,7 +279103,7 @@ AcDbText
  40
 11.5
   1
-Brique B-25 · Indice A · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
+Brique B-25 · Indice B · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)
  11
 9766.0
  21
@@ -279025,7 +279115,7 @@ AcDbText
   0
 TEXT
   5
-3BD35
+3BD38
 330
 70
 100
@@ -279055,7 +279145,7 @@ AcDbText
   0
 TEXT
   5
-3BD36
+3BD39
 330
 70
 100
@@ -424209,7 +424299,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-10-20T14:30:09.264726+00:00
+1.4.5 @ 2026-10-20T14:40:41.607380+00:00
   0
 ENDSEC
   0

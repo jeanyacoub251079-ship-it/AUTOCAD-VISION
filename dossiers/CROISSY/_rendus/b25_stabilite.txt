@@ -1,9 +1,13 @@
 ========================================================================================================
 B-25 — STABILITÉ GLOBALE, CONTREVENTEMENT, JOINTS ET SISMIQUE — INDICE A
 Projet CROISSY-FLORA (ID-01) — CARNAC v3.0 — régime OUTILLÉ (V13)
-Exécution : 2026-10-20 14:27:35
+Exécution : 2026-10-20 14:39:32
 Sources   : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf
             dossiers/CROISSY/_plans/FLORA_R1_VUE-NETTOYEE_IndD.dxf  (translation d'empilement dy = +3755 cm — B-31)
+EXCLUSIONS DE MISSION (décisions D-26 et D-27 du 20/10/2026) :
+  · aucune vérification sismique n'est produite — zone 1 (Île-de-France), séisme très faible (D-26)
+  · la stabilité provisoire d'ensemble n'est pas vérifiée — elle incombe à la MOE
+    structure de conception ; seules les grandeurs utiles lui sont transmises (D-27)
 ========================================================================================================
 
 [1] GÉOMÉTRIE — murs porteurs surfaciques extraits des fonds B-32 Ind. D
@@ -72,40 +76,25 @@ Sources   : dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf
     R+1 : h/t_eq maximal =  17.0 (mur M06, t_eq = A/L = 0.18 m) → OK (≤ 20)
     RDC : h/t_eq maximal =  20.0 (mur M05, t_eq = A/L = 0.15 m) → À VÉRIFIER (> 20)
 
-[6] POSITION SISMIQUE — EC8-1 / arrêté du 22 octobre 2010
-    W = (111,15 + 106,92) × (4,50 + 0,30 × 2,50) + 106,92 × 0,80 = 1230 kN (125.4 t)
-    T1 = Ct·H^0,75 = 0,05 × 6,30^0,75 = 0.199 s → plateau du spectre de calcul
-    Sd(T1) = ag·S·2,5/q·γI = 0.40×1.50×2,5/1.5×1.2 = 1.20 m/s²
-    Vb = Sd·W/g = 150.5 kN (hypothèse enveloppe catégorie III, à arbitrer — D2 annonce II)
-    Vent : Vx = 63.2 kN · Vy = 40.0 kN
-    → le séisme d'enveloppe cat. III (151 kN) vaut 2.4 fois le vent X
-    → zone 1 (très faible) : l'arrêté du 22/10/2010 (art. 3) ne rend les règles EC8 applicables
-      qu'en zones 2 à 5 — aucune catégorie d'importance n'y est soumise en zone 1.
-      La vérification ci-dessus est donc une SENSIBILITÉ (enveloppe cat. III), pas une obligation.
-    Répartition en hauteur : m_R+1 = 647 kN · m_RDC = 584 kN → F_R+1 = 103.7 kN · F_RDC = 46.8 kN
-      R+1 — séisme X : F = 103.7 kN · Mt = 105.4 kN·m · mur M08 V =  47.7 kN · τ/fvk = 0.069
-      R+1 — séisme Y : F = 103.7 kN · Mt =  69.1 kN·m · mur M08 V =  27.0 kN · τ/fvk = 0.039
-      RDC — séisme X : F =  46.8 kN · Mt =  42.7 kN·m · mur M11 V =  24.4 kN · τ/fvk = 0.041
-      RDC — séisme Y : F =  46.8 kN · Mt =  27.2 kN·m · mur M11 V =  20.7 kN · τ/fvk = 0.035
+[6] VOILES MAJEURS — INFORMATION TRANSMISE À LA MAÎTRISE D'ŒUVRE
+    La vérification du contreventement en phase provisoire n'est PAS produite ici :
+    elle incombe à la maîtrise d'œuvre structure de conception (D-27).
+    Nous transmettons les grandeurs qui la concernent, sans conclure sur la stabilité :
+    R+1 : les 4 voiles les plus raides (M08, M03, M09, M02) portent 88.9 % de la raideur totale
+        M08 : Kx =   789200 kN/m · Ky =   871781 kN/m · A = 6.37 m² · centre (+3.32 ; +15.62)
+        M03 : Kx =   631744 kN/m · Ky =   773316 kN/m · A = 5.50 m² · centre (+3.02 ; +6.70)
+        M09 : Kx =   135980 kN/m · Ky =   512697 kN/m · A = 3.47 m² · centre (+9.27 ; +15.78)
+        M02 : Kx =   142065 kN/m · Ky =   480133 kN/m · A = 3.35 m² · centre (+9.21 ; +3.33)
+    RDC : les 4 voiles les plus raides (M11, M03, M09, M04) portent 95.1 % de la raideur totale
+        M11 : Kx =   503490 kN/m · Ky =   815171 kN/m · A = 5.49 m² · centre (+4.27 ; +15.49)
+        M03 : Kx =   525216 kN/m · Ky =   439310 kN/m · A = 4.58 m² · centre (+5.01 ; +7.21)
+        M09 : Kx =   113878 kN/m · Ky =   192477 kN/m · A = 2.79 m² · centre (+9.50 ; +11.34)
+        M04 : Kx =    17609 kN/m · Ky =   100161 kN/m · A = 1.76 m² · centre (+9.78 ; +7.57)
+    → éléments transmis à la MOE pour sa note de stabilité provisoire (T-04).
 
-[7] PHASES PROVISOIRES — retrait d'un mur entaillé, recalcul complet
-    Situations les plus défavorables (mur retiré · déplacement du CR · raideur restante · taux) :
-      R+1 — retrait M09 : ΔCR = -0.87 m · ΣKy =  2305478/ 2818175 kN/m ( 81.8 %) · mur M02 V =   8.8 kN · τ/fvk = 0.024
-      R+1 — retrait M02 : ΔCR = -0.79 m · ΣKy =  2338042/ 2818175 kN/m ( 83.0 %) · mur M09 V =   8.7 kN · τ/fvk = 0.023
-      R+1 — retrait M08 : ΔCR = +0.90 m · ΣKy =  1946394/ 2818175 kN/m ( 69.1 %) · mur M09 V =   7.7 kN · τ/fvk = 0.021
-      RDC — retrait M03 : ΔCR = +0.10 m · ΣKy =  1201921/ 1641231 kN/m ( 73.2 %) · mur M11 V =  12.1 kN · τ/fvk = 0.021
-      R+1 — retrait M03 : ΔCR = +0.88 m · ΣKy =  2044858/ 2818175 kN/m ( 72.6 %) · mur M09 V =   7.5 kN · τ/fvk = 0.020
-      RDC — retrait M11 : ΔCR = +0.99 m · ΣKy =   826061/ 1641231 kN/m ( 50.3 %) · mur M03 V =   8.2 kN · τ/fvk = 0.017
-      RDC — retrait M09 : ΔCR = -0.56 m · ΣKy =  1448754/ 1641231 kN/m ( 88.3 %) · mur M11 V =   9.5 kN · τ/fvk = 0.016
-      RDC — retrait M04 : ΔCR = -0.29 m · ΣKy =  1541070/ 1641231 kN/m ( 93.9 %) · mur M11 V =   9.0 kN · τ/fvk = 0.015
-
-[7bis] ENVELOPPE DE DÉMOLITION — retrait simultané des deux murs les plus défavorables
-    R+1 — retrait M08 + M03 : ΔCR = +3.03 m · ΣKy =  1173078/ 2818175 kN/m ( 41.6 %) · mur M09 V =  14.9 kN · τ/fvk = 0.040
-    RDC — retrait M11 + M09 : ΔCR = +0.00 m · ΣKy =   633583/ 1641231 kN/m ( 38.6 %) · mur M03 V =  13.5 kN · τ/fvk = 0.027
-
-[8] JOINTS DE DILATATION
+[7] JOINTS DE DILATATION
     Emprise du bloc : 11.1 m × 17.5 m
     Dilatation thermique libre : α·ΔT·L = 10⁻⁵ × 30 × 17.5 = 5.2 mm
     Maçonnerie existante sans joint depuis sa construction, mortier ancien stabilisé,
     aucun tassement différencié identifié dans D3, frangements neufs appuyés (portée ≤ 4,88 m).
-    → AUCUN joint de dilatation à créer (D-xx à consigner au RDR).
+    → AUCUN joint de dilatation à créer (D-28 proposée au RDR).

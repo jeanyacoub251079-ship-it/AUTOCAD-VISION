@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-B-25 — PLANCHE DE CONTREVENTEMENT (Indice A) — CROISSY-FLORA
+B-25 — PLANCHE DE CONTREVENTEMENT (Indice B) — CROISSY-FLORA
 Report du schéma de contreventement sur le fond structurel pur B-32 Ind. D.
 
-Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndA.{dxf,pdf,png}
+Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndB.{dxf,pdf,png}
 Filigrane obligatoire : PRINCIPE — NE PAS EXÉCUTER — Indice P
 Note D-09 reproduite intégralement.
 """
@@ -27,7 +27,7 @@ import b25_stabilite as b25  # noqa: E402
 
 SRC = "dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf"
 JSON = "dossiers/CROISSY/_rendus/b25_stabilite.json"
-OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndA"
+OUT = "dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndB"
 X0, Y0 = b25.B30
 
 
@@ -153,7 +153,7 @@ def main():
     add_rect(msp, tx0, y_top - 92, tx1, y_top, "B25-ALERTE")
     add_rect(msp, tx0 + 8, y_top - 84, tx1 - 8, y_top - 8, "B25-ALERTE")
     add_txt(msp, tx0 + 30, y_top - 60,
-            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. A)", h=21.0, layer="B25-ALERTE")
+            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. B)", h=21.0, layer="B25-ALERTE")
 
     y = y_top - 140
     add_txt(msp, tx0 + 24, y, "1. SYSTEME DE CONTREVENTEMENT — VERDICT", h=16.0)
@@ -187,8 +187,8 @@ def main():
     for line in [
         "1  R-1 : F2 + F3 supprimes -> fonction horizontale perdue, non reconstituee",
         "2  R-2 : F1a perce le refend 50 cm -> voile scinde en 2 trumeaux",
-        "3  M11 voile majeur RDC (815 171 kN/m en Y) — ne pas ouvrir avec M03",
-        "4  M09 voile majeur RDC cote Est (192 477 kN/m en Y)",
+        "3  M11 voile majeur RDC (815 171 kN/m en Y) — grandeur transmise a la MOE",
+        "4  M09 voile majeur RDC cote Est (192 477 kN/m en Y) — idem M03",
         "5  CR / G du RDC — ecart e_struct = 0,04 m (X) / 0,03 m (Y)",
     ]:
         add_txt(msp, tx0 + 30, y, line, h=10.8)
@@ -214,51 +214,53 @@ def main():
     for line in [
         "Emprise 11,1 x 17,5 m · dilatation libre 5,2 mm · maçonnerie stabilisee",
         "Frangements appuyes (portee <= 4,88 m) : aucune reprise de dilatation",
-        "-> D-26 propose : aucun joint · a reexaminer si l'emprise est modifiee",
+        "-> D-28 proposee : aucun joint · a reexaminer si l'emprise est modifiee",
     ]:
         add_txt(msp, tx0 + 30, y, line, h=11.4)
         y -= 21
     y -= 12
 
-    add_txt(msp, tx0 + 24, y, "5. PHASES PROVISOIRES — UN SEUL VOILE MAJEUR A LA FOIS", h=16.0)
+    add_txt(msp, tx0 + 24, y, "5. PHASE PROVISOIRE — HORS MISSION (D-27)", h=16.0)
     y -= 26
-    env = data["envelope_demolition"]
+    major = data["major_walls"]
     for line in [
-        "P-1 demolition F2 · P-2 demolition F3 (F3 AVANT F2) · P-3 ouverture F1a",
-        "P-4 depose charpente -> etaiement lateral des pignons · P-5 fouilles passes alternees",
-        f"Retrait d'UN voile majeur : ΣKy >= 69 % · dCR <= 0,90 m · tau/fvk <= 0,024",
-        f"Retrait de DEUX voiles (R+1 M03+M08) : dCR = {env['R+1']['dCR']:+.2f} m · ΣKy = {100*env['R+1']['part']:.1f} %",
-        "Etaiement AVANT decoupe · clavetage AVANT decinrement · jamais 2 voiles majeurs ouverts",
+        "La verification du contreventement en phase provisoire incombe a la",
+        "maitrise d'oeuvre structure de conception (batiment existant).",
+        "AUCUNE verification provisoire n'est produite par nos soins.",
+        "Grandeurs transmises a la MOE (T-04) :",
+        f"  R+1  4 voiles majeurs = {100*major[0]['part']:.1f} % de la raideur totale",
+        f"       {', '.join(major[0]['ids'])}",
+        f"  RDC  4 voiles majeurs = {100*major[1]['part']:.1f} % de la raideur totale",
+        f"       {', '.join(major[1]['ids'])}",
+        "Restent de notre lot : etaiement d'execution (H-20) · mode operatoire",
+        "de pose · ordre F3 avant F2 · etaiement lateral des pignons (securite)",
     ]:
-        add_txt(msp, tx0 + 30, y, line, h=11.4)
-        y -= 21
+        add_txt(msp, tx0 + 30, y, line, h=10.8)
+        y -= 18
+    y -= 8
 
-    y -= 14
-    add_txt(msp, tx0 + 24, y, "6. POSITION SISMIQUE — EC8 ET ARRETE DU 22/10/2010", h=16.0)
+    add_txt(msp, tx0 + 24, y, "6. POSITION SISMIQUE — NON VERIFIEE (D-26)", h=16.0)
     y -= 26
-    seis = data["seis"]
     for line in [
-        "Zone 1 (tres faible) : l'article 3 de l'arrete ne soumet AUCUNE categorie",
-        "d'importance aux regles EC8 en zone 1 -> EC8 NON APPLICABLE.",
-        f"Zone 1 / cat. II (D2) · agr = {b25.H_SEIS['ag']:.2f} m/s2 · sol C (H-24) · gamma_I = 1,20 (enveloppe III)",
-        f"W = {seis['W']:.0f} kN · T1 = {seis['T1']:.3f} s · Sd = {seis['Sd']:.2f} m/s2 · Vb = {seis['Vb']:.1f} kN",
-        f"F(R+1) = {seis['F']['R+1']:.1f} kN · F(RDC) = {seis['F']['RDC']:.1f} kN",
-        f"tau/fvk max (sensibilite cat. III) = {max(c['ratio'] for c in seis['checks'].values()):.3f}",
-        "VERDICT : sans objet reglementaire · sensibilite tenue (tau/fvk < 0,07)",
+        "Zone 1 (Ile-de-France) · seisme tres faible.",
+        "Arrete du 22/10/2010, art. 3 : aucune categorie d'importance n'est",
+        "soumise aux regles EC8 en zone 1 -> EC8 NON APPLICABLE.",
+        "DECISION CLIENT : aucune verification sismique produite, ni reglementaire,",
+        "ni de sensibilite. H-24 (sol C, agr 0,40) est neutralisee, non supprimee.",
     ]:
-        add_txt(msp, tx0 + 30, y, line, h=11.2)
-        y -= 21
-    y -= 12
+        add_txt(msp, tx0 + 30, y, line, h=10.8)
+        y -= 18
+    y -= 10
 
     add_txt(msp, tx0 + 24, y, "7. POINTS D'ARRET OUVERTS", h=16.0)
     y -= 26
     for line in [
-        "PA-01 reconnaissance contradictoire de la continuite des voiles M03/M11/M08/M05",
-        "      (epaisseur, chainages, liaisons d'angle) — AVANT TOUTE DEMOLITION",
+        "PA-01 reconnaissance contradictoire de la continuite des voiles",
+        "      M11/M03/M04 · M08/M03/M09 · trumeau M05 — AVANT TOUTE DEMOLITION",
         "PA-02 verification de la liaison charpente-maconnerie des pignons — AVANT DEPOSE",
     ]:
-        add_txt(msp, tx0 + 30, y, line, h=11.2)
-        y -= 21
+        add_txt(msp, tx0 + 30, y, line, h=10.8)
+        y -= 18
 
     # note D-09 intégrale
     ny = y_bot + 300
@@ -279,7 +281,7 @@ def main():
     for txt, hh, yy, lay in [
         ("EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 18.0, cy1 - 42, "B25-CADR"),
         ("SCHEMA DE CONTREVENTEMENT — STABILITE GLOBALE (PH RDC)", 14.0, cy1 - 82, "B25-CADR"),
-        ("Brique B-25 · Indice A · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
+        ("Brique B-25 · Indice B · 20/10/2026 · Mode HYPOTHESE-NOTIFIEE · Regime OUTILLE (V13)", 11.5, cy1 - 118, "B25-CADR"),
         ("Fond B-32 Ind. D · Echelle 1/80 · Unites DXF cm · Repere B-30 (P1)", 11.5, cy1 - 148, "B25-CADR"),
         ("PRINCIPE — NE PAS EXECUTER — Indice P", 19.0, cy1 - 196, "B25-ALERTE"),
     ]:
@@ -298,8 +300,8 @@ def main():
     ax.set_aspect("equal", adjustable="box")
     ax.axis("off")
     ax.set_title(
-        "CROISSY-FLORA — B-25 (Ind. A) — CONTREVENTEMENT, TORSION, JOINTS ET PHASES PROVISOIRES\n"
-        "PRINCIPE — NE PAS EXÉCUTER — Indice P   (fond structurel pur B-32 Ind. D : cloisons et isolation supprimées)",
+        "CROISSY-FLORA — B-25 (Ind. B) — CONTREVENTEMENT, TORSION ET JOINTS — STABILITÉ EN SERVICE\n"
+        "PRINCIPE — NE PAS EXÉCUTER — Indice P   (ni vérification sismique D-26, ni stabilité provisoire D-27)",
         fontsize=11.5, fontweight="bold", pad=8)
     fig.savefig(OUT + ".png", dpi=220, facecolor="white")
     fig.savefig(OUT + ".pdf", facecolor="white")

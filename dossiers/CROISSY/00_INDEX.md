@@ -1,6 +1,6 @@
 # CROISSY-FLORA — INDEX DE L'ESPACE DE TRAVAIL
 
-> **Mis à jour le 20/10/2026** — ajout de la brique **`B-25` (stabilité globale, contreventement, joints, sismique)**, puis suite à la validation de la décision **D-25 (Articles P1 à P8 — Synthèse structurelle du dossier)** et à la refonte intégrale des vues nettoyées (`B-32 Ind. D`), de la synthèse structurelle (`B-20 Ind. B`) et de l'implantation des fondations (`B-40 Ind. E`).
+> **Mis à jour le 20/10/2026** — **`B-25` en indice B** : `D-26` (aucune vérification sismique, zone 1) et `D-27` (stabilité en phase provisoire → MOE structure de conception) ; puis validation de la décision **D-25 (Articles P1 à P8 — Synthèse structurelle du dossier)** et à la refonte intégrale des vues nettoyées (`B-32 Ind. D`), de la synthèse structurelle (`B-20 Ind. B`) et de l'implantation des fondations (`B-40 Ind. E`).
 
 ---
 
@@ -14,7 +14,7 @@
 | Calage `B-30 Ind. C`, superposition `B-31 Ind. C`, **Vues nettoyées structurelles `B-32 Ind. D`** (zéro cloison, zéro isolation) | `03_CALAGE/` + `_plans/` + `_calage/` |
 | **Synthèse structurelle & prédimensionnement `B-20 Ind. B`** : 3 planches A3 Paysage (`PH RDC`, `PB RDC / PLS`, `R+1 Charpente + Coupes A-A / B-B + Cheminement`) | `02_CONCEPTION/` + `_plans/` |
 | **Fondations superficielles & implantation `B-40 Ind. E`** : plan combiné `PLS` + détails d'exécution `SF1` (`60×60×30 BA`, `HA8 e150`, gros béton `D-09`) | `06_CALCULS/` + `_plans/` |
-| **Stabilité globale `B-25 Ind. A`** : système de contreventement, torsion, joints, phases provisoires, position sismique + planche `FLORA_B25_CONTREVENTEMENT_IndA` | `02_CONCEPTION/` + `_plans/` + `_rendus/` |
+| **Stabilité globale `B-25 Ind. B`** : système de contreventement, torsion, régularité, joints + planche `FLORA_B25_CONTREVENTEMENT_IndB`. Sismique et stabilité provisoire **hors mission** (`D-26`, `D-27`) | `02_CONCEPTION/` + `_plans/` + `_rendus/` |
 
 | Ce qui reste séquencé pour la suite de la chaîne CARNAC | Motif |
 |---|---|
@@ -40,7 +40,7 @@
 | **B-32** | `03_CALAGE/B-32_Vue_Nettoyee.md` | **D** | **20/10/2026** | ✅ **CONFORME** — cloisons & isolation 100 % supprimées (`0 entité` sur `020_cloi`/`020_cloisons`), audit `0 erreur` |
 | **B-20** | `02_CONCEPTION/B-20_Conception_GO.md` | **B** | **20/10/2026** | ✅ **CONFORME** — synthèse intégrale `D1+D2+D3+D4+D5`, calage vectoriel `1/80` (`21,0 mm`), 100 % des ouvrages implantés, 3 planches + 2 coupes `A-A / B-B` |
 | **B-40** | `06_CALCULS/B-40_Fondations.md` | **E** | **20/10/2026** | ✅ **CONFORME EN PARTIEL-DÉCLARÉ** — plan combiné `PLS` implanté + ferraillage `HA8 e150` + note `D-09` + justification `D-24 / R-36` |
-| **B-25** | `02_CONCEPTION/B-25_Stabilite_Globale.md` | **A** | **20/10/2026** | ✅ **CONFORME 7/7** — contreventement = maçonnerie seule, `ΣK = 1,21/1,64 GN/m`, torsion `τ/f_vk ≤ 0,028`, aucun joint, EC8 non applicable (zone 1), 5 phases provisoires |
+| **B-25** | `02_CONCEPTION/B-25_Stabilite_Globale.md` | **B** | **20/10/2026** | ✅ **CONFORME 6/6 applicables** — contreventement = maçonnerie seule, `ΣK = 1,21/1,64 GN/m`, torsion `τ/f_vk ≤ 0,028`, aucun joint. **Sismique retirée (`D-26`)** · **stabilité provisoire retirée, MOE (`D-27`)** |
 
 ---
 
@@ -54,7 +54,7 @@
 | `02_CONCEPTION/B-20_Conception_GO.md` | `30 101 o · 206 l.` | Synthèse structurelle & prédimensionnement GO Ind. B (rectificatifs + 13 postes + rattachement `B-11`) |
 | `06_CALCULS/B-40_Fondations.md` | `10 836 o · 108 l.` | Note de calcul & implantation « PLS » des fondations Ind. E (note `D-09` en tête) |
 | `03_CALAGE/B-32_Vue_Nettoyee.md` | `6 412 o · 73 l.` | Rapport de nettoyage structurel strict Ind. D (purge totale cloisons & isolation) |
-| `02_CONCEPTION/B-25_Stabilite_Globale.md` | `42 793 o · 417 l.` | Note de stabilité globale Ind. A (contreventement, torsion, joints, sismique, phases provisoires) — journal de preuve `_rendus/b25_stabilite.txt` |
+| `02_CONCEPTION/B-25_Stabilite_Globale.md` | `45 802 o · 419 l.` | Note de stabilité globale **Ind. B** (contreventement, torsion, régularité, joints) — exclusions `D-26` (sismique) et `D-27` (stabilité provisoire → MOE) — journal `_rendus/b25_stabilite.txt` |
 
 ### 3.2 Planches graphiques actives dans `_plans/` (18 fichiers — 22,2 Mo — audit `0 erreur` sur les 6 DXF)
 

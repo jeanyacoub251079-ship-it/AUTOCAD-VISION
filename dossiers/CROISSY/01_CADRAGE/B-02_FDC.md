@@ -9,10 +9,11 @@
 | Code projet `ID-01` | `CROISSY-FLORA` |
 | Intitulé `ID-02` | EHPAD La Roseraie — Pavillon Flora — aménagement d'un cabinet paramédical |
 | Entrée | MPD B-01 indice **B** + pièces D1 à D4 + décisions client du 19/10/2026 |
-| **Indice du livrable** | **F** (remplace l'indice E du 19/10/2026) |
+| **Indice du livrable** | **G** (remplace l'indice F du 19/10/2026 — `D-26` : sismique sans objet) |
 | Date | 19/10/2026 |
 | Brique suivante | B-03 (RDR) — non engagée |
 
+> **Indice G (20/10/2026)** : **`D-26`** — la vérification sismique est **sortie du périmètre** (zone 1, Île-de-France, séisme très faible). `CHG-07a` passe en « contractuelle sans emploi », `CHG-07b` passe en **SANS OBJET**, `H-24` est **neutralisée**.
 > **Indice F** : intègre **D-14** (dimension minimale de fondation **60 × 60 cm** — la semelle isolée passe de 25 × 25 à **60 × 60 minimum**), **D-15** (tassements **hors mission**) et **D-16** (**absence de nappe phréatique**). **Prescription ENC révisée en version 3** (douze alinéas), **SOL-03, SOL-06 et SOL-07** mises à jour, **une réserve ouverte (R-36)** sur la justification de l'encastrement.
 > *Indice E : D-10 (semelle isolée 25 × 25), D-11 (« PLS »), D-12 (D-09 = plancher) ; ENC v2.*
 > *Indice D : décision D-09 — référence au terrain naturel, prescription ENC créée.*
@@ -237,7 +238,7 @@ Le mécanisme de rupture d'une semelle de 60 cm développe un bulbe qui s'étend
 |---|---|---|---|---|---|---|
 | CHG-05 | Neige | Zone **A1** · altitude **< 200 m** · **sk = 45** · **sAd non renseigné (« – »)** | daN/m² | D2 p. 1 | **Contractuelle** *(sAd absent)* | B-21, B-44 |
 | CHG-06 | Vent | Zone **2** · **vb = 24** · c<sub>d</sub> = **1** (10°-150° : 0,70) · saison **1** (avril-sept. : 0,80) · terrain **III** | m/s | D2 p. 1 | **Contractuelle** | B-21, B-44, B-45 |
-| CHG-07a | Zone de sismicité | **Zone 1** · catégorie d'importance **II** | — | D2 p. 1 | **Contractuelle** | B-42, B-46 |
+| CHG-07a | Zone de sismicité | **Zone 1** · catégorie d'importance **II** — **AUCUNE VÉRIFICATION SISMIQUE PRODUITE** (zone 1, séisme très faible — `D-26`) | — | D2 p. 1 + **D-26** | **Contractuelle — sans emploi** | *aucune brique : sortie de périmètre* |
 
 ### 1.6 Sol et fondations
 
@@ -292,7 +293,7 @@ Le mécanisme de rupture d'une semelle de 60 cm développe un bulbe qui s'étend
 | **MAT-08** — classe de service et durée de charge | B-44 | **Décision BET** — produite par B-22 ; les désordres d'humidité 4, 6, 7 et 8 imposent de trancher classe 1 ou 2 | B-22 |
 | **CHG-04** — poids propres de toiture | B-21, B-44 | **Relevé** — couvertures identifiées (tuiles, ardoises, béton, zinc) **sans aucune charge** | BET / MOE |
 | **CHG-08** — cloisons et équipements lourds | B-21, B-43 | **Relevé + Décision** — 4 types de cloisons sans poids ; ballon ECS 300 L, chaudière ADe Dietrich GT 413, chambre froide | MOE / BET |
-| **CHG-07b** — a<sub>gr</sub> et classe de sol | B-42, B-46 | **Décision BET** — zone 1 et catégorie II connues, **a<sub>gr</sub> vide, classe de sol vide** | BET structure |
+| ~~**CHG-07b** — a<sub>gr</sub> et classe de sol~~ | ~~B-42, B-46~~ | **SANS OBJET par `D-26`** — aucune vérification sismique n'est produite. `H-24` (sol C, `a_gr = 0,40`) est **neutralisée mais conservée** au registre, réactivable en cas de reclassement de zone | — |
 | **SEC-01** — degré coupe-feu par élément | B-42, B-43, B-49 | **Décision MOE** — section SECURITE INCENDIE **intégralement vide** (catégorie, CF, SF, locaux à risques) | MOE / bureau d'études incendie |
 | **SEC-03** — classement termites | B-43 | **Décision MOE** — traitement prescrit sans arrêté préfectoral ni classement de la commune | MOE |
 | **DOC-08** — plans de récolement / DOE | B-11 | **Relevé** — aucun DOE ; fondations décrites « inconnues » au diagnostic | MOA |

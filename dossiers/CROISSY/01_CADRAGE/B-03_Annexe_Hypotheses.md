@@ -10,7 +10,7 @@
 | Hypothèses | **H-01 à H-24** (validées) + **H-25 à H-27** (extension du 20/10/2026, brique `B-25`) — **27 hypothèses** |
 | Statut | **VALIDÉES par le client le 19/10/2026** — 23 en accord global, **H-21 rectifiée**. **Aucune n'est encore notifiée : aucun délai ne court** |
 | Date | 19/10/2026 |
-| Indice du livrable | **C** (remplace l'indice B — ajout de `H-25` à `H-27` par la brique `B-25`) |
+| Indice du livrable | **D** (remplace l'indice C — `H-24` **neutralisée** par `D-26` le 20/10/2026) |
 
 ---
 
@@ -94,7 +94,7 @@ J'ai classé les 21 hypothèses par **force du silence** — parce qu'elles ne s
 
 | **H-22** | **L'assise à −1,00 m atteint les alluvions anciennes** sur toute l'emprise du pavillon (9,90 × 18,49 m). Aucune couche de remblai ni de terrain compressible n'est traversée entre −0,50 m et −1,00 m. La portance de la couche d'assise est au moins égale à q<sub>ELS</sub> = 0,30 MPa et q<sub>ELU</sub> = 0,49 MPa | R-13 · V-12 · RI-02 | D-08 (toit des alluvions **déduit** à −0,50 m) · D-02 · D-03 · D-18 | **Note B-40**, chapitre hypothèses géotechniques + **PLS** | **B-40 devient calculable** : la coupe n'est plus nécessaire pour dimensionner | Si une couche molle est rencontrée en fouille : arrêt, reconnaissance, reprise du dimensionnement |
 | **H-23** | **Le classement d'agressivité du milieu est XA1** (milieu non agressif au sens de la NF EN 206). La mention « XA4 » du cartouche est réputée **erreur de saisie**. L'enrobage de **50 mm en fondation** reste conforme ; celui de **30 mm hors fondation** reste subordonné à **Δc<sub>dev</sub> = 5 mm** (R-03) | R-14 · V-05 · RI-03 | D2 p. 1 (« XA4 ») vs CCTP § 01.1.1 (NP EN 206, XA1 à XA3) | **Note B-40 et B-42**, chapitre durabilité + cartouche des plans | La durabilité est fixée et le cartouche corrigé | Si XA2 ou XA3 est confirmé : **enrobage 30 mm non conforme**, passage à 45-50 mm et reprise des plans de coffrage |
-| **H-24** | **La classe de sol sismique est C** (sites meubles — alluvions) et **a<sub>gr</sub> = 0,40 m/s²** (zone 1, catégorie d'importance II). L'action sismique est calculée avec ces valeurs | R-11 · V-10 · RI-21 | D2 p. 1 (zone 1, catégorie II, **a<sub>gr</sub> et classe vides**) | **Note B-42 et B-46** + cartouche | L'action sismique devient calculable ; V-10 se ferme | Si la classe est D ou E, le spectre change et les efforts sont à recalculer |
+| **H-24** | ⚠ **NEUTRALISÉE le 20/10/2026 par `D-26`** — hypothèse conservée au registre, sans emploi dans le dossier. **La classe de sol sismique est C** (sites meubles — alluvions) et **a<sub>gr</sub> = 0,40 m/s²** (zone 1, catégorie d'importance II). L'action sismique est calculée avec ces valeurs | R-11 · V-10 · RI-21 | D2 p. 1 (zone 1, catégorie II, **a<sub>gr</sub> et classe vides**) | **Note B-42 et B-46** + cartouche | L'action sismique devient calculable ; V-10 se ferme | Si la classe est D ou E, le spectre change et les efforts sont à recalculer |
 
 ### 3.2 — Hypothèses C2 : périmètre (4)
 
