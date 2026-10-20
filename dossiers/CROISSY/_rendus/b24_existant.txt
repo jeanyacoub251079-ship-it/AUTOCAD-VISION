@@ -1,0 +1,61 @@
+==============================================================================
+B-24 — EXISTANT NON SONDÉ — CROISSY-FLORA — MODE PARAMÉTRIQUE
+==============================================================================
+
+Aucune valeur n'est retenue. Les charges sont des effets de charge
+repris de B-21 ; les résistances sont des valeurs de SENSIBILITÉ.
+
+--- TABLEAU 1 : ÉLÉMENTS NON SONDÉS -------------------------------
+    ID      ÉLÉMENT                                         DONNÉE MANQUANTE                                              FERMETURE
+    E-01    Murs de moellons porteurs (façades et refends)  f_k (résistance), épaisseur réelle, présence de chaînages     B-46
+    E-02    Poutre maîtresse bois (désordre 3)              section b x h, classe de bois (MAT-06), continuité, état      B-44 (avec R1 :
+    E-03    Solives de plancher 8x18 (D3 p. 18)             entraxe réel, portée, classe, continuité, état des abouts     B-43 (planchers)
+    E-04    Potelets de charpente (désordre 8)              section, hauteur libre, classe, excentrement, contreventem    B-44
+    E-05    Ferme de charpente altérée (désordre 6)         sections des arbalétriers et de l'entrait, classe, section    B-44
+    E-06    Pannes de couverture                            section, portée entre fermes, entraxe, classe                 B-44
+    E-07    Plancher haut portant la charpente par potelet  NATURE du plancher (bois / BA / hourdis), épaisseur, sens     B-43
+    E-08    Linteaux existants au-dessus des baies (désord  section, matériau, portée libre, longueur d'appui, état       B-49
+
+--- PARAMÈTRES DE SENSIBILITÉ (non contractuels) ------------------
+    k_mod = 0.80  ·  gamma_M bois = 1.30  ·  gamma_M maçonnerie = 2.50 (H-26)
+    C18 : f_m,d = 11.08 MPa  ·  f_c,0,d = 11.08 MPa
+    C24 : f_m,d = 14.77 MPa  ·  f_c,0,d = 12.92 MPa
+
+        E-04 : 80x80 mm -> k_c = 0.317 (lambda_rel = 1.66), N_b,Rd = 22.5 kN
+        E-04 : 100x100 mm -> k_c = 0.465 (lambda_rel = 1.33), N_b,Rd = 51.5 kN
+
+--- TABLEAU 2 : SENSIBILITÉ — NON CONTRACTUEL — POUR INFORMATION --
+    ID     CAS LE PLUS DÉFAVORABLE DE LA PLAGE                        ratio min ratio max VERDICT
+    E-01   f_k = 0.5 MPa                                              0.177     0.885     FAVORABLE
+    E-02   150x200 mm, C18                                            3.020     12.081    DEFAVORABLE
+    E-03   e = 0.60 m, L = 4.30 m, C18                                0.741     3.046     LIMITE
+    E-04   80x80 mm, surface reprise 12.00 m², C18                    0.142     1.046     LIMITE
+    E-05   arb. 80x180 mm, e = 3.5 m, C18                             3.524     17.541    DEFAVORABLE
+    E-06   80x120 mm, e = 2.25 m, C18                                 0.458     2.651     LIMITE
+    E-07   aucune borne posable sans connaître la nature              -         -         SANS PLAGE
+    E-08   200x200 mm, h = 2.00 m, L = 1.55 m, C18                    0.066     1.108     LIMITE
+
+    Grille complète : 101 cas testés, tous dans la plage plausible.
+
+--- TABLEAU 3 : ESSAIS ET SONDAGES NÉCESSAIRES --------------------
+    ÉLÉMENT         ESSAI                                                   RÉFÉRENTIEL                                 NOMBRE                                ÉCHÉANCE
+    E-01            Essais de compression sur maçonnerie de moellons (ca    NF EN 1996-1-1 + NF EN 1052-1               6 carottes (2 murs x 3 points)        avant B-46
+    E-01            Essais de cisaillement (cohésion initiale f_vk0)        NF EN 1052-3 / NF EN 1052-4                 3 éprouvettes                         avant B-46
+    E-02/E-05/E-06  Relevé de charpente au mètre et au calibre (sections    NF EN 338 (classement visuel) + NF EN 19    2 zones non relevées + combles        avant B-44
+    E-03            Sondage destructif de plancher (ouverture, entraxe,     NF EN 338 si bois / NF EN 1992 si BA        3 ouvertures de 0,50 x 0,50 m         avant B-43
+    E-07            Sondage destructif du plancher haut (composition, se    NF EN 338 / NF EN 1992 / NF EN 15037 sel    3 ouvertures de 0,50 x 0,50 m         AVANT B-43 — p
+    E-01            Ouverture de fouilles au droit des appuis neufs         NF EN 1997-2                                5 fouilles (P1-N, P1-S, P2, P3, J1    avant B-40
+
+--- CRITÈRE D'ACCEPTATION (7 POINTS) ------------------------------
+    [OK] 1. Vérification littérale écrite pour chaque élément
+    [OK] 2. Donnée manquante laissée en symbole
+    [OK] 3. Sensibilité marquée NON CONTRACTUEL (4 occurrences)
+    [OK] 4. Essais : référentiel + nombre + emprise
+    [OK] 5. Aucun élément déclaré « vérifié » (0 occurrence(s))
+    [OK] 6. Suffixe _P + filigrane « EN ATTENTE DE »
+    [OK] 7. Aucune valeur de repli proposée (renvoi RDR)
+
+RÉSULTAT : 7/7 CONFORME
+
+SYNTHÈSE : 8 éléments en attente de données · 1 favorable(s) pour toute la plage · 4 limite(s) · 2 défavorable(s) pour toute la plage · 1 sans plage plausible
+

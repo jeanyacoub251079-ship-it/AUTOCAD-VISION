@@ -1,0 +1,691 @@
+{
+  "brique": "B-24",
+  "indice": "A",
+  "mode": "PARAMETRIQUE",
+  "date": "20/10/2026",
+  "note": "B-24_Existant_Non_Sonde_P.md",
+  "elements": [
+    {
+      "id": "E-01",
+      "nom": "Murs de moellons porteurs (façades et refends)",
+      "manque": "f_k (résistance), épaisseur réelle, présence de chaînages",
+      "charge": "sigma = 0,177 MPa sous P1-N/P1-S (B-21) ; 0,094 MPa moyenne voiles",
+      "verif": "Compression verticale",
+      "formule": "sigma_d = N_Ed / A_inf  <=  f_d = f_k / gamma_M",
+      "plage": "f_k = 0,5 à 2,5 MPa",
+      "fermeture": "B-46",
+      "verdict": "FAVORABLE"
+    },
+    {
+      "id": "E-02",
+      "nom": "Poutre maîtresse bois (désordre 3)",
+      "manque": "section b x h, classe de bois (MAT-06), continuité, état",
+      "charge": "p_ELU = 57,9 kN/m (R1, B-21) ; L = 4,3 m (B-11)",
+      "verif": "Flexion simple + cisaillement + flèche ELS",
+      "formule": "sigma_m,d = M_Ed / (b h^2 / 6)  <=  f_m,d ;  M_Ed = p_ELU L^2 / 8",
+      "plage": "b x h = 0,15x0,20 à 0,20x0,30 m ; C18 à C24",
+      "fermeture": "B-44 (avec R1 : B-45)",
+      "verdict": "DEFAVORABLE"
+    },
+    {
+      "id": "E-03",
+      "nom": "Solives de plancher 8x18 (D3 p. 18)",
+      "manque": "entraxe réel, portée, classe, continuité, état des abouts",
+      "charge": "g + q = 8,01 + 2,50 = 10,51 kN/m² (plancher B, B-21)",
+      "verif": "Flexion simple + flèche ELS",
+      "formule": "sigma_m,d = p e L^2 / 8 / (b h^2 / 6)  <=  f_m,d  avec p = e (g + q)",
+      "plage": "entraxe 0,40 à 0,60 m ; portée 3,00 à 4,30 m ; C18 à C24",
+      "fermeture": "B-43 (planchers) / B-44",
+      "verdict": "LIMITE"
+    },
+    {
+      "id": "E-04",
+      "nom": "Potelets de charpente (désordre 8)",
+      "manque": "section, hauteur libre, classe, excentrement, contreventement",
+      "charge": "N_Ed = (1,35 G + 1,5 Q) x e x L_trib = 1,96 kN/m² x surface reprise",
+      "verif": "Compression + flambement",
+      "formule": "N_Ed / (k_c A f_c,0,d)  <=  1  avec lambda = L_cr / i",
+      "plage": "section 0,08x0,08 à 0,10x0,10 m ; L_cr 2,20 m ; e x L_trib 3,75 à 12,00 m²",
+      "fermeture": "B-44",
+      "verdict": "LIMITE"
+    },
+    {
+      "id": "E-05",
+      "nom": "Ferme de charpente altérée (désordre 6)",
+      "manque": "sections des arbalétriers et de l'entrait, classe, section résiduelle après purge, entraxe des fermes, contreventement",
+      "charge": "p = 1,96 kN/m² x entraxe des fermes ; portée 9,90 m (D2 f. 02)",
+      "verif": "Flexion de l'arbalétrier (borne) + compression + flambement",
+      "formule": "sigma_m,d = p L^2 / 8 / (b h^2 / 6)  <=  f_m,d  ;  puis N_Ed / (k_c A f_c,0,d) <= 1",
+      "plage": "arbalétrier 0,08x0,18 à 0,12x0,24 m ; entraxe 2,5 à 3,5 m ; C18 à C24",
+      "fermeture": "B-44",
+      "verdict": "DEFAVORABLE"
+    },
+    {
+      "id": "E-06",
+      "nom": "Pannes de couverture",
+      "manque": "section, portée entre fermes, entraxe, classe",
+      "charge": "p = 1,96 kN/m² x entraxe des pannes",
+      "verif": "Flexion biaise + flèche ELS",
+      "formule": "sigma_m,d = p L^2 / 8 / (b h^2 / 6)  <=  f_m,d",
+      "plage": "section 0,08x0,12 à 0,12x0,18 m ; entraxe 1,75 à 2,25 m ; L = 3,20 m",
+      "fermeture": "B-44",
+      "verdict": "LIMITE"
+    },
+    {
+      "id": "E-07",
+      "nom": "Plancher haut portant la charpente par potelets (désordre 5)",
+      "manque": "NATURE du plancher (bois / BA / hourdis), épaisseur, sens porteur, portée, sections et entraxes (EXI-04 absent)",
+      "charge": "Réactions des potelets de charpente, augmentées par nos renforts B-44",
+      "verif": "Flexion du solivage + réaction d'appui — non formulable en l'état",
+      "formule": "Indéterminée : la nature du support conditionne la formule (EC5 si bois, EC2 si BA)",
+      "plage": "NON DÉFINISSABLE — aucune borne ne peut être posée sans connaître la nature",
+      "fermeture": "B-43",
+      "verdict": "SANS PLAGE"
+    },
+    {
+      "id": "E-08",
+      "nom": "Linteaux existants au-dessus des baies (désordre 1)",
+      "manque": "section, matériau, portée libre, longueur d'appui, état",
+      "charge": "p = 22 x h + bande de plancher (B-21 § 5)",
+      "verif": "Flexion + cisaillement + appui",
+      "formule": "sigma_m,d = M_Ed / (b h^2 / 6)  <=  f_m,d  ;  R / (a b) <= f_d",
+      "plage": "section 0,20x0,20 à 0,25x0,25 m ; h de maçonnerie portée 0,80 à 2,00 m",
+      "fermeture": "B-49",
+      "verdict": "LIMITE"
+    }
+  ],
+  "zones_sans_plage": [
+    {
+      "zone": "ZONE NON RELEVEE n° 1",
+      "emprise": "emprise non cotée sur D2 f. 02",
+      "action": "Inspection visuelle + relevé de charpente avant toute vérification"
+    },
+    {
+      "zone": "ZONE NON RELEVEE n° 2",
+      "emprise": "emprise non cotée sur D2 f. 02",
+      "action": "Inspection visuelle + relevé de charpente avant toute vérification"
+    }
+  ],
+  "sensibilite": [
+    {
+      "element": "E-01",
+      "cas": "f_k = 0.5 MPa",
+      "ratio": 0.885
+    },
+    {
+      "element": "E-01",
+      "cas": "f_k = 1.0 MPa",
+      "ratio": 0.443
+    },
+    {
+      "element": "E-01",
+      "cas": "f_k = 1.5 MPa",
+      "ratio": 0.295
+    },
+    {
+      "element": "E-01",
+      "cas": "f_k = 2.0 MPa",
+      "ratio": 0.221
+    },
+    {
+      "element": "E-01",
+      "cas": "f_k = 2.5 MPa",
+      "ratio": 0.177
+    },
+    {
+      "element": "E-02",
+      "cas": "150x200 mm, C18",
+      "ratio": 12.081
+    },
+    {
+      "element": "E-02",
+      "cas": "150x200 mm, C24",
+      "ratio": 9.061
+    },
+    {
+      "element": "E-02",
+      "cas": "200x220 mm, C18",
+      "ratio": 7.488
+    },
+    {
+      "element": "E-02",
+      "cas": "200x220 mm, C24",
+      "ratio": 5.616
+    },
+    {
+      "element": "E-02",
+      "cas": "200x300 mm, C18",
+      "ratio": 4.027
+    },
+    {
+      "element": "E-02",
+      "cas": "200x300 mm, C24",
+      "ratio": 3.02
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 3.00 m, C18",
+      "ratio": 0.988
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 3.00 m, C24",
+      "ratio": 0.741
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 3.85 m, C18",
+      "ratio": 1.628
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 3.85 m, C24",
+      "ratio": 1.221
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 4.30 m, C18",
+      "ratio": 2.031
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.40 m, L = 4.30 m, C24",
+      "ratio": 1.523
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 3.00 m, C18",
+      "ratio": 1.235
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 3.00 m, C24",
+      "ratio": 0.927
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 3.85 m, C18",
+      "ratio": 2.035
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 3.85 m, C24",
+      "ratio": 1.526
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 4.30 m, C18",
+      "ratio": 2.538
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.50 m, L = 4.30 m, C24",
+      "ratio": 1.904
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 3.00 m, C18",
+      "ratio": 1.483
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 3.00 m, C24",
+      "ratio": 1.112
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 3.85 m, C18",
+      "ratio": 2.442
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 3.85 m, C24",
+      "ratio": 1.831
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 4.30 m, C18",
+      "ratio": 3.046
+    },
+    {
+      "element": "E-03",
+      "cas": "e = 0.60 m, L = 4.30 m, C24",
+      "ratio": 2.284
+    },
+    {
+      "element": "E-04",
+      "cas": "80x80 mm, surface reprise 3.75 m², C18",
+      "ratio": 0.327
+    },
+    {
+      "element": "E-04",
+      "cas": "80x80 mm, surface reprise 6.00 m², C18",
+      "ratio": 0.523
+    },
+    {
+      "element": "E-04",
+      "cas": "80x80 mm, surface reprise 12.00 m², C18",
+      "ratio": 1.046
+    },
+    {
+      "element": "E-04",
+      "cas": "100x100 mm, surface reprise 3.75 m², C18",
+      "ratio": 0.142
+    },
+    {
+      "element": "E-04",
+      "cas": "100x100 mm, surface reprise 6.00 m², C18",
+      "ratio": 0.228
+    },
+    {
+      "element": "E-04",
+      "cas": "100x100 mm, surface reprise 12.00 m², C18",
+      "ratio": 0.456
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 2.5 m, C18",
+      "ratio": 12.529
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 2.5 m, C24",
+      "ratio": 9.397
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 2.5 m, C18",
+      "ratio": 8.119
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 2.5 m, C24",
+      "ratio": 6.089
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 2.5 m, C18",
+      "ratio": 4.698
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 2.5 m, C24",
+      "ratio": 3.524
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 3.0 m, C18",
+      "ratio": 15.035
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 3.0 m, C24",
+      "ratio": 11.276
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 3.0 m, C18",
+      "ratio": 9.743
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 3.0 m, C24",
+      "ratio": 7.307
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 3.0 m, C18",
+      "ratio": 5.638
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 3.0 m, C24",
+      "ratio": 4.229
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 3.5 m, C18",
+      "ratio": 17.541
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 80x180 mm, e = 3.5 m, C24",
+      "ratio": 13.156
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 3.5 m, C18",
+      "ratio": 11.366
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 100x200 mm, e = 3.5 m, C24",
+      "ratio": 8.525
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 3.5 m, C18",
+      "ratio": 6.578
+    },
+    {
+      "element": "E-05",
+      "cas": "arb. 120x240 mm, e = 3.5 m, C24",
+      "ratio": 4.933
+    },
+    {
+      "element": "E-06",
+      "cas": "80x120 mm, e = 1.75 m, C18",
+      "ratio": 2.062
+    },
+    {
+      "element": "E-06",
+      "cas": "80x120 mm, e = 1.75 m, C24",
+      "ratio": 1.546
+    },
+    {
+      "element": "E-06",
+      "cas": "100x150 mm, e = 1.75 m, C18",
+      "ratio": 1.056
+    },
+    {
+      "element": "E-06",
+      "cas": "100x150 mm, e = 1.75 m, C24",
+      "ratio": 0.792
+    },
+    {
+      "element": "E-06",
+      "cas": "120x180 mm, e = 1.75 m, C18",
+      "ratio": 0.611
+    },
+    {
+      "element": "E-06",
+      "cas": "120x180 mm, e = 1.75 m, C24",
+      "ratio": 0.458
+    },
+    {
+      "element": "E-06",
+      "cas": "80x120 mm, e = 2.25 m, C18",
+      "ratio": 2.651
+    },
+    {
+      "element": "E-06",
+      "cas": "80x120 mm, e = 2.25 m, C24",
+      "ratio": 1.988
+    },
+    {
+      "element": "E-06",
+      "cas": "100x150 mm, e = 2.25 m, C18",
+      "ratio": 1.357
+    },
+    {
+      "element": "E-06",
+      "cas": "100x150 mm, e = 2.25 m, C24",
+      "ratio": 1.018
+    },
+    {
+      "element": "E-06",
+      "cas": "120x180 mm, e = 2.25 m, C18",
+      "ratio": 0.785
+    },
+    {
+      "element": "E-06",
+      "cas": "120x180 mm, e = 2.25 m, C24",
+      "ratio": 0.589
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 0.85 m, C18",
+      "ratio": 0.172
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 0.85 m, C24",
+      "ratio": 0.129
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 0.85 m, C18",
+      "ratio": 0.088
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 0.85 m, C24",
+      "ratio": 0.066
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 1.00 m, C18",
+      "ratio": 0.238
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 1.00 m, C24",
+      "ratio": 0.178
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 1.00 m, C18",
+      "ratio": 0.122
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 1.00 m, C24",
+      "ratio": 0.091
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 1.55 m, C18",
+      "ratio": 0.572
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 0.80 m, L = 1.55 m, C24",
+      "ratio": 0.429
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 1.55 m, C18",
+      "ratio": 0.293
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 0.80 m, L = 1.55 m, C24",
+      "ratio": 0.219
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 0.85 m, C18",
+      "ratio": 0.266
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 0.85 m, C24",
+      "ratio": 0.2
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 0.85 m, C18",
+      "ratio": 0.136
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 0.85 m, C24",
+      "ratio": 0.102
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 1.00 m, C18",
+      "ratio": 0.368
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 1.00 m, C24",
+      "ratio": 0.276
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 1.00 m, C18",
+      "ratio": 0.189
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 1.00 m, C24",
+      "ratio": 0.141
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 1.55 m, C18",
+      "ratio": 0.885
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 1.50 m, L = 1.55 m, C24",
+      "ratio": 0.664
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 1.55 m, C18",
+      "ratio": 0.453
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 1.50 m, L = 1.55 m, C24",
+      "ratio": 0.34
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 0.85 m, C18",
+      "ratio": 0.333
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 0.85 m, C24",
+      "ratio": 0.25
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 0.85 m, C18",
+      "ratio": 0.171
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 0.85 m, C24",
+      "ratio": 0.128
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 1.00 m, C18",
+      "ratio": 0.461
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 1.00 m, C24",
+      "ratio": 0.346
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 1.00 m, C18",
+      "ratio": 0.236
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 1.00 m, C24",
+      "ratio": 0.177
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 1.55 m, C18",
+      "ratio": 1.108
+    },
+    {
+      "element": "E-08",
+      "cas": "200x200 mm, h = 2.00 m, L = 1.55 m, C24",
+      "ratio": 0.831
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 1.55 m, C18",
+      "ratio": 0.567
+    },
+    {
+      "element": "E-08",
+      "cas": "250x250 mm, h = 2.00 m, L = 1.55 m, C24",
+      "ratio": 0.426
+    }
+  ],
+  "essais": [
+    {
+      "element": "E-01",
+      "essai": "Essais de compression sur maçonnerie de moellons (carottages)",
+      "referentiel": "NF EN 1996-1-1 + NF EN 1052-1",
+      "nombre": "6 carottes (2 murs x 3 points)",
+      "emprise": "Façade Ouest et refend central, sur 2,00 m de haut",
+      "responsable": "MOA (D-34 : hors mission)",
+      "echeance": "avant B-46"
+    },
+    {
+      "element": "E-01",
+      "essai": "Essais de cisaillement (cohésion initiale f_vk0)",
+      "referentiel": "NF EN 1052-3 / NF EN 1052-4",
+      "nombre": "3 éprouvettes",
+      "emprise": "Même emprise que les carottages",
+      "responsable": "MOA (D-34 : hors mission)",
+      "echeance": "avant B-46"
+    },
+    {
+      "element": "E-02/E-05/E-06",
+      "essai": "Relevé de charpente au mètre et au calibre (sections, classes, état)",
+      "referentiel": "NF EN 338 (classement visuel) + NF EN 1995-1-1",
+      "nombre": "2 zones non relevées + combles",
+      "emprise": "Intégralité des combles, plan de repérage",
+      "responsable": "MOA / bureau mandaté",
+      "echeance": "avant B-44"
+    },
+    {
+      "element": "E-03",
+      "essai": "Sondage destructif de plancher (ouverture, entraxe, sections, nature)",
+      "referentiel": "NF EN 338 si bois / NF EN 1992 si BA",
+      "nombre": "3 ouvertures de 0,50 x 0,50 m",
+      "emprise": "Une par travée de plancher courant",
+      "responsable": "MOA / bureau mandaté",
+      "echeance": "avant B-43"
+    },
+    {
+      "element": "E-07",
+      "essai": "Sondage destructif du plancher haut (composition, sens porteur, portée)",
+      "referentiel": "NF EN 338 / NF EN 1992 / NF EN 15037 selon la nature",
+      "nombre": "3 ouvertures de 0,50 x 0,50 m",
+      "emprise": "Plancher haut, un point par file de potelets",
+      "responsable": "MOA / bureau mandaté",
+      "echeance": "AVANT B-43 — priorité 1"
+    },
+    {
+      "element": "E-01",
+      "essai": "Ouverture de fouilles au droit des appuis neufs",
+      "referentiel": "NF EN 1997-2",
+      "nombre": "5 fouilles (P1-N, P1-S, P2, P3, J1)",
+      "emprise": "Au droit de chaque appui, jusqu'au niveau d'assise",
+      "responsable": "MOA (point d'arrêt H-15)",
+      "echeance": "avant B-40"
+    }
+  ],
+  "comptes": {
+    "FAVORABLE": [
+      "E-01"
+    ],
+    "LIMITE": [
+      "E-03",
+      "E-04",
+      "E-06",
+      "E-08"
+    ],
+    "DEFAVORABLE": [
+      "E-02",
+      "E-05"
+    ],
+    "SANS PLAGE": [
+      "E-07"
+    ]
+  },
+  "verdict_7_criteres": 7
+}

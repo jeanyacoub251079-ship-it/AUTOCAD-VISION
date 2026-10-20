@@ -2,7 +2,7 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent le **filigrane `PRINCIPE — NE PAS EXÉCUTER`** : ce sont des documents de conception, pas des plans d'exécution.
 
-**Ce qui a changé le 20/10/2026** : `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
+**Ce qui a changé le 20/10/2026** : `B-24` est **livrée en Ind. A** (les huit éléments existants non sondés ont leur vérification littérale) — **la phase de conception est close**. `B-25` passe en **indice E** (décision `D-29` consignée : le contreventement est assuré par la maçonnerie existante seule), `B-23` est **livrée en indice A** (exploitation du diagnostic), `B-03` passe en **indice U** (34 décisions). Les pièces antérieures sont à la corbeille : il ne doit circuler qu'un seul indice par note.
 
 ---
 
@@ -30,13 +30,14 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 4. **La stabilité en phase provisoire n'est pas de notre mission** (`D-27`) : elle relève de la maîtrise d'œuvre structure de conception (transmission `T-04`). Les séquences de phasage de `B-23` (étaiement, purge, renfort) sont prescrites, mais leur stabilité n'est pas vérifiée ici.
 5. **La maçonnerie est prise à `f_k = 1,5 MPa` et `f_vk0 = 0,15 MPa`** (`D-34`). Ces valeurs sont des **hypothèses à confirmer par essais, hors mission**. Si les essais ne confirment pas, une **reprise d'étude chiffrée** est due, et l'hypothèse doit être fournie **avant** démarrage. La clause figure sur la planche et dans les notes de calcul.
 6. **Les renforts `R1`, `R2-N/S`, `R3-N/S` et `J1` sont des ouvrages neufs à exécuter sur nos plans** : ils ne sont **jamais** décrits comme « exécutés ». Seules les solives `8×18` relèvent de la réhabilitation existante (`D3` page 18).
-7. **Les hypothèses notifiées à l'entreprise ne recevront pas de réponse formelle** (`D-33`) : elles sont en régime **`LECTURE`** — pas d'attente, pas de relance. Les nuages `D-19` restent portés sur les planches pour la traçabilité.
+7. **Huit éléments existants ne sont pas sondés.** Leur résistance n'est pas connue : `B-24` en donne la vérification **littérale** et la liste des essais, sans conclure. Deux sont **défavorables pour toute la plage plausible** — la poutre maîtresse et la ferme de charpente : leur renforcement est acquis, seul son dimensionnement attend le relevé.
+8. **Les hypothèses notifiées à l'entreprise ne recevront pas de réponse formelle** (`D-33`) : elles sont en régime **`LECTURE`** — pas d'attente, pas de relance. Les nuages `D-19` restent portés sur les planches pour la traçabilité.
 
 ---
 
 ## 3. ARBORESCENCE
 
-### `01_Notes` — 10 Google Docs natifs
+### `01_Notes` — 11 Google Docs natifs
 
 | Note | Indice | Objet |
 |---|---|---|
@@ -47,6 +48,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-21 — Descente de charges préliminaire` | B | Charges par zone, `F3` **+109 %** et `R1` **+126 %** vs `B-20` |
 | `B-22 — Note d'hypothèses de conception` | B | 30 hypothèses, 5 régimes de confirmation |
 | `B-23 — Exploitation du diagnostic` | **A** | **9 désordres classés**, 5 zones hors relevé, 9 appuis, séquences `P-1` à `P-7` |
+| `B-24 — Existant non sondé` | **A (`_P`)** | **8 éléments en attente de données** · 101 cas de sensibilité non contractuels · 6 campagnes d'essais. **Note suspendue : ne pas exécuter** |
 | `B-25 — Stabilité globale, contreventement & joints` | **E** | `D-29` consignée, torsion, régularité, `D-28`. **Aucun point ouvert** |
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | E | `SF1 80×80×25` (`D-30`), note `D-09` intégrale |
@@ -85,6 +87,6 @@ Les mêmes sept familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-
 
 ## 5. SUITE DE LA CHAÎNE
 
-La brique suivante est **`B-24` — Existant non sondé** : elle hérite directement des **5 zones hors relevé** identifiées par `B-23` (deux emprises non cotées sur `D2` feuille 02, les combles, les fondations, les planchers). Viendront ensuite `B-43` (plancher haut), `B-42` / `B-44` (charpente), `B-45` (profilés — priorité `F3` et `R1`), `B-40`, `B-46`, `B-50`, puis `B-60` / `B-62`.
+**La phase de conception est close** : `B-20` → `B-25` → `B-21` → `B-22` → `B-23` → `B-24`. La suite est la **phase de calcul d'exécution**, qui commence par **`B-42` — poteaux et jambages BA** : `B-42` puis `B-43` (planchers et plancher haut), `B-44` (charpente), `B-45` (profilés — priorité `F3` et `R1`), `B-46` (maçonnerie), `B-47`/`B-49` (escaliers, linteaux), `B-50` (assemblages). Ensuite seulement viennent les **plans d'exécution** : `B-60` (plans cotés coffrage et ferraillage) et `B-62` (nomenclatures).
 
 Chaque brique ne démarre que sur un **`GO` explicite** portant son nom.
