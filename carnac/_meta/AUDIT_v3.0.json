@@ -1,0 +1,3428 @@
+{
+ "target_version": "v3.0",
+ "summary": {
+  "total_tests": 10,
+  "pass_count": 10,
+  "warn_count": 0,
+  "fail_count": 0,
+  "total_errors": 0,
+  "total_warnings": 0
+ },
+ "tests": {
+  "T1_parite_compilation": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": [],
+   "metrics": {
+    "md_files": 51,
+    "bytes": 1194287,
+    "sha256": "4601a209eb0a5666b377db782ac25b585ba6a7239f747e7ecd5eeba91f56aa2f",
+    "start_tags": 51,
+    "matching_end_tags": 51,
+    "internal_example_end_tags": []
+   }
+  },
+  "T2_versions_et_chemins": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": [],
+   "metrics": {
+    "total_version_tokens": 474,
+    "by_class": {
+     "COURANT_AUTO": 58,
+     "HISTORIQUE_PROTEGE": 271,
+     "CONTEXTUEL": 145
+    }
+   },
+   "inventory": [
+    {
+     "file": "00_MASTER.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "# 00_MASTER.md — CARNAC v3.0 (document maître refondu — posture BET d'études d'exécution)"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 3,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 3,
+     "token": "3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 54,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "4. **Exhaustivité du corpus** (nouveau en v3.0, V14) — aucun ouvrage n'est déclaré absent, hors périmètre ou non plaçabl"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 57,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "### 1.2 Posture métier (v3.0)"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 122,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "### Verrous d'exhaustivité et de continuité (nouveaux en v3.0)"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 240,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   └── B-25_Stabilite_Globale.md   ← Nouveau en v3.0"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 262,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   ├── B-34_Synthese_Reservations.md ← Nouveau en v3.0"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 291,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60)."
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 298,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "`B-XX_Intitulé_Court.md` — le numéro en premier, l'intitulé en second, séparés par un underscore. Pas de caractères spéc"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 301,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "Chaque fiche porte en en-tête : version (x.y, incrémentée à chaque modification de la fiche) et dernière révision (date "
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 301,
+     "token": "3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "Chaque fiche porte en en-tête : version (x.y, incrémentée à chaque modification de la fiche) et dernière révision (date "
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 306,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "* Une modification qui supprime un verrou sans le remplacer est interdite (non-régression). La v3.0 conserve les verrous"
+    },
+    {
+     "file": "00_MASTER.md",
+     "line": 340,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "## 10. CE QUI CHANGE EN v3.0 (synthèse)"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 01_DICTIONNAIRE/CARNAC_v3.0_variables.md — CARNAC v3.0"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 5,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "CARNAC — DICTIONNAIRE DES VARIABLES (v3.0)"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 7,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "Le dictionnaire v3.0 compte 106 variables : 94 variables reprises de la version précédente (aucune supprimée), dont deux"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 37,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| DOC-07 | Diagnostic amiante/plomb (cité en exemple v1.1, défini en v2.0) | — (variable de référence) |"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 37,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| DOC-07 | Diagnostic amiante/plomb (cité en exemple v1.1, défini en v2.0) | — (variable de référence) |"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 94,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| SIT-02 | Contraintes de site (cité en exemple v1.1, défini en v2.0) | — (variable de référence) |"
+    },
+    {
+     "file": "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
+     "line": 94,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| SIT-02 | Contraintes de site (cité en exemple v1.1, défini en v2.0) | — (variable de référence) |"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 02_PHASE_0_CADRAGE/B-00_Inventaire.md — CARNAC v3.0"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+     "line": 148,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+     "line": 156,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 02_PHASE_0_CADRAGE/B-01_MPD.md — CARNAC v3.0"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+     "line": 154,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+     "line": 162,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 02_PHASE_0_CADRAGE/B-02_FDC.md — CARNAC v3.0"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+     "line": 158,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+     "line": 166,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 02_PHASE_0_CADRAGE/B-03_RDR.md — CARNAC v3.0"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+     "line": 203,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+     "line": 211,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 02_PHASE_0_CADRAGE/B-04_PTD.md — CARNAC v3.0"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+     "line": 163,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+     "line": 171,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+     "line": 182,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+     "line": 190,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+     "line": 204,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+     "line": 212,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+     "line": 172,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+     "line": 180,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-13_Contradictions.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+     "line": 213,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+     "line": 221,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+     "line": 180,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+     "line": 188,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md — CARNAC v3.0"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+     "line": 207,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+     "line": 215,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-20_Conception_GO.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+     "line": 233,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+     "line": 241,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+     "line": 217,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+     "line": 225,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+     "line": 221,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+     "line": 229,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+     "line": 196,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+     "line": 204,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+     "line": 210,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+     "line": 218,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md — CARNAC v3.0"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — création de la brique (voir Journal des modifications, entrée v3.0) |"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — création de la brique (voir Journal des modifications, entrée v3.0) |"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+     "line": 170,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
+     "line": 176,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Brique nouvelle v3.0.** B-25 est la seule brique habilitée à statuer sur la stabilité d'ensemble. Aucune brique de cal"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 05_PHASE_3_CALAGE/B-30_Calage.md — CARNAC v3.0"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 182,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 187,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+     "line": 195,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md — CARNAC v3.0"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 210,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 215,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+     "line": 223,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md — CARNAC v3.0"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 217,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 222,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## COMPLÉMENT v2.1 — §R. PROTOCOLE DE RECONNAISSANCE DES PORTEURS (obligatoire avant tout nettoyage B-32)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 234,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### R.3bis Chaînage des tronçons en parois (obligatoire — enseignement v2.2)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 263,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### R.4bis Projection automatique des porteurs BET (critère C1 — enseignement v2.2)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 290,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+     "line": 298,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 05_PHASE_3_CALAGE/B-33_Verification_Croisee.md — CARNAC v3.0"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 208,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 213,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+     "line": 221,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 319,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 325,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 340,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+     "line": 348,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 267,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 273,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 288,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+     "line": 296,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-42_Verticaux_BA.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 370,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 376,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 388,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+     "line": 396,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 355,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 361,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 373,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+     "line": 381,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-44_Charpente_Bois.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 290,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 296,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 305,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+     "line": 313,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-45_Structure_Metallique.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 293,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 299,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 308,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+     "line": 316,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-46_Maconnerie.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 365,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 371,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 383,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+     "line": 391,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-47_Escaliers.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 305,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 311,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 323,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+     "line": 331,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-48_Predalles.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 305,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 311,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 323,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+     "line": 331,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 351,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 357,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 369,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+     "line": 377,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md — CARNAC v3.0"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 366,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 372,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 384,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+     "line": 392,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md — CARNAC v3.0"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — création de la brique (voir Journal des modifications, entrée v3.0) |"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — création de la brique (voir Journal des modifications, entrée v3.0) |"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+     "line": 157,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
+     "line": 163,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Brique nouvelle v3.0.** B-34 est obligatoire en gabarit `L-XL` et pour tout ouvrage comportant des trémies en voile ou"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md — CARNAC v3.0"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 307,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 312,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+     "line": 320,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-62_Nomenclature.md — CARNAC v3.0"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 288,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 293,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+     "line": 301,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md — CARNAC v3.0"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+     "line": 293,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+     "line": 301,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md — CARNAC v3.0"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+     "line": 274,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+     "line": 282,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 08_PHASE_6_CLOTURE/B-71_Indicage.md — CARNAC v3.0"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+     "line": 263,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+     "line": 271,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md — CARNAC v3.0"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+     "line": 217,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+     "line": 225,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "09_TRANSVERSE/T-01_Sincerite.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 09_TRANSVERSE/T-01_Sincerite.md — CARNAC v3.0"
+    },
+    {
+     "file": "09_TRANSVERSE/T-01_Sincerite.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-01_Sincerite.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-01_Sincerite.md",
+     "line": 236,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "09_TRANSVERSE/T-01_Sincerite.md",
+     "line": 244,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "09_TRANSVERSE/T-02_Recadrage.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 09_TRANSVERSE/T-02_Recadrage.md — CARNAC v3.0"
+    },
+    {
+     "file": "09_TRANSVERSE/T-02_Recadrage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-02_Recadrage.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-02_Recadrage.md",
+     "line": 241,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "09_TRANSVERSE/T-02_Recadrage.md",
+     "line": 249,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 09_TRANSVERSE/T-03_Meta_Amelioration.md — CARNAC v3.0"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 16,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Entrées lues | Le carnet CARNAC (v3.0), le journal de clôture du projet (B-72), les corrections effectuées (T-02), les"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 231,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+     "line": 239,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 09_TRANSVERSE/T-04_Demande_Complement.md — CARNAC v3.0"
+    },
+    {
+     "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+     "line": 241,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 5. COMPLÉMENT v3.0 — RÈGLES UNIVERSELLES APPLICABLES À CETTE FICHE"
+    },
+    {
+     "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+     "line": 249,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "**Position dans la chaîne v3.0.** Cette fiche s'exécute dans la phase indiquée en en-tête, selon l'ordonnancement du doc"
+    },
+    {
+     "file": "10_ANNEXES/A_Conventions_Livrables.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 10_ANNEXES/A_Conventions_Livrables.md — CARNAC v3.0"
+    },
+    {
+     "file": "10_ANNEXES/A_Conventions_Livrables.md",
+     "line": 2,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/A_Conventions_Livrables.md",
+     "line": 2,
+     "token": "3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/A_Conventions_Livrables.md",
+     "line": 369,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## 11. COMPLÉMENT v2.0 — TOLÉRANCES D'EXÉCUTION ET ENROBAGE"
+    },
+    {
+     "file": "10_ANNEXES/A_Conventions_Livrables.md",
+     "line": 376,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## 8. PURETÉ STRUCTURELLE, HYPOTHÈSES NOTIFIÉES ET CONTRÔLE DE RENDU (nouveau en v3.0)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 10_ANNEXES/C_Journal_Revisions.md — CARNAC v3.0"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 2,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 2,
+     "token": "3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 20,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.0 | 17/10/2026 | Version de travail, non émise | Rédaction initiale : document maître, dictionnaire, fiches B-00 à "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 21,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.1 | 17/10/2026 | Version de référence historique (remplacée par v2.3) | Première émission formelle. Intègre les mod"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 21,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.1 | 17/10/2026 | Version de référence historique (remplacée par v2.3) | Première émission formelle. Intègre les mod"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 22,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.2 | Non produite | Absorbée par la refonte v2.0 | Corrections issues de T-03 (méta-amélioration), ajustements de fi"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 22,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.2 | Non produite | Absorbée par la refonte v2.0 | Corrections issues de T-03 (méta-amélioration), ajustements de fi"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 23,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | 10/2026 | Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6 | Révision de fond "
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 25,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 25,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 25,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 25,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 30,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.1 Version v1.0 — Version de travail"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 36,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Élément | Statut en v1.0 |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 52,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Note : la v1.0 est conservée pour traçabilité comme version de travail. Elle n'a pas été diffusée. La version de référen"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 52,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Note : la v1.0 est conservée pour traçabilité comme version de travail. Elle n'a pas été diffusée. La version de référen"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 56,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.2 Version v1.1 — Version de référence historique (remplacée par v2.3)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 56,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.2 Version v1.1 — Version de référence historique (remplacée par v2.3)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 60,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Modifications intégrées par rapport à v1.0 :"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 72,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Contenu de la v1.1 :"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 74,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Élément | Statut en v1.1 |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 91,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Note : les fiches individuelles sont en cours de production dans l'arborescence de fichiers. La version v1.1 est complèt"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 95,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.3 Version v1.2 — Prévue, non produite (absorbée par la refonte v2.0)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 95,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.3 Version v1.2 — Prévue, non produite (absorbée par la refonte v2.0)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 96,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Date : à déterminer (après le premier projet complet exécuté avec v1.1)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 108,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Devenue sans objet : la v1.2 n'a pas été produite, la refonte v2.0 l'a absorbée."
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 108,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Devenue sans objet : la v1.2 n'a pas été produite, la refonte v2.0 l'a absorbée."
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 112,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 112,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 112,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 112,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 125,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Condition de production : la v2.0 ne sera produite qu'après trois projets complets exécutés avec la même version majeure"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 143,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Modification de principe (verrou, mode, arborescence) | Version mineure du carnet (v1.1 → v1.2) |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 143,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Modification de principe (verrou, mode, arborescence) | Version mineure du carnet (v1.1 → v1.2) |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 144,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Changement d'architecture | Version majeure du carnet (v1.x → v2.0) |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 145,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Correction d'erreur (erratum) | Version mineure du carnet (v1.1 → v1.2) ou version de la fiche selon l'ampleur |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 145,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Correction d'erreur (erratum) | Version mineure du carnet (v1.1 → v1.2) ou version de la fiche selon l'ampleur |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 178,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Dictionnaire de variables | Variables, avec leur version (v1.0 ou v1.1) | 01_DICTIONNAIRE/CARNAC_v1.1_variables.csv |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 178,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| Dictionnaire de variables | Variables, avec leur version (v1.0 ou v1.1) | 01_DICTIONNAIRE/CARNAC_v1.1_variables.csv |"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 183,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### Additif — Versions v2.0 à v2.6 (section mise à jour à chaque version)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 183,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### Additif — Versions v2.0 à v2.6 (section mise à jour à chaque version)"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 184,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+    },
+    {
+     "file": "10_ANNEXES/C_Journal_Revisions.md",
+     "line": 186,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### 3.5 Version v3.0 — refonte majeure (posture BET d'exécution)"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "Fichier 10_ANNEXES/D_Mode_Emploi.md — CARNAC v3.0"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 11,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé e"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 324,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Additif v2.3 — Durées indicatives en voie rapide (document maître §6) : pour une affaire simple (un seul type de livrabl"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 327,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "### Additif v2.4 — Ce que les versions v2.x changent à l'usage quotidien"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 331,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "- **Voie rapide** : phases 0 et 1 fusionnables pour les affaires simples (voir l'additif v2.3 ci-dessus et le document m"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 342,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "## ORDONNANCEMENT v3.0 — MODE D'EMPLOI EN 6 PHASES (remplace l'ordre v2.x)"
+    },
+    {
+     "file": "10_ANNEXES/D_Mode_Emploi.md",
+     "line": 344,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "> L'ordre historique du présent document (cadrage → analyse → conception → calage → calculs → livrables → clôture) est c"
+    },
+    {
+     "file": "10_ANNEXES/O_Outillage.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "CONTEXTUEL",
+     "snippet": "# Annexe O — COUCHE OUTILLAGE ET PROTOCOLE CAO (refondue en v3.0)"
+    },
+    {
+     "file": "10_ANNEXES/O_Outillage.md",
+     "line": 2,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/O_Outillage.md",
+     "line": 2,
+     "token": "3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+    },
+    {
+     "file": "10_ANNEXES/O_Outillage.md",
+     "line": 71,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## 9. PROTOCOLE CAO DE NETTOYAGE STRUCTUREL (nouveau en v3.0)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 1,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "# Journal des modifications — CARNAC v3.0"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 2,
+     "token": "v3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — ce journal fait foi de la version en vigueur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 2,
+     "token": "3.0",
+     "class": "COURANT_AUTO",
+     "snippet": "> Version du document : 3.0 (carnet CARNAC v3.0) — ce journal fait foi de la version en vigueur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 4,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v3.0 — REFONTE MAJEURE (20/10/2026)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 12,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| E-02 | Correction | Restauration des libellés corrompus `LIV-01` (« Conventions de calques DXF ») et `LIV-03` (« Forma"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 14,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| E-04 | Correction | Alignement des mentions de version résiduelles (`T-03` restée en v1.1, bandeaux en v1.5) et du com"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 14,
+     "token": "v1.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| E-04 | Correction | Alignement des mentions de version résiduelles (`T-03` restée en v1.1, bandeaux en v1.5) et du com"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 25,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-10 | Refonte | Annexe D : ordonnancement v3.0 en 6 phases et points de contrôle humain par phase | 10_ANNEXES/D_Mode"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 26,
+     "token": "v3.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-11 | Mise à jour | Annexe C §3.5 : version v3.0 | 10_ANNEXES/C_Journal_Revisions.md |"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 42,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| CC-03 | Protection | Les entrées v1.0 à v2.4 du présent journal et les exemples `12_EXEMPLES` sont conservés sans modi"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 42,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| CC-03 | Protection | Les entrées v1.0 à v2.4 du présent journal et les exemples `12_EXEMPLES` sont conservés sans modi"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 47,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Ce journal recense toutes les modifications apportées au carnet CARNAC depuis la version de travail v1.0. Il permet à un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 56,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-01 | Contenu | 17/10/2026 | Ajout de 4 variables (MAT-09 à MAT-12) pour la conception de maçonnerie | Dictionnaire, "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 57,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-02 | Structure | 17/10/2026 | Fusion de B-61 (coupes et détails) dans B-60 | B-60, B-61 (vacante) | v1.1 |"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 58,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-03 | Structure | 17/10/2026 | Intégration de B-63 (export DXF) dans B-60 | B-60, B-63 (vacante) | v1.1 |"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 59,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-04 | Erratum | 17/10/2026 | Correction de numérotation : B-48 → B-50 pour les assemblages | B-50 | v1.1 |"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 60,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-05 | Structure | 17/10/2026 | Renumérotation des phases 4, 5 et 6 (voir §4) | B-47 à B-50, B-60 à B-72 | v1.0 → v1.1"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 60,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| C-05 | Structure | 17/10/2026 | Renumérotation des phases 4, 5 et 6 (voir §4) | B-47 à B-50, B-60 à B-72 | v1.0 → v1.1"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 61,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| E-01 | Erratum | 17/10/2026 | Compte de variables : 74 → 92 | 00_MASTER.md | v1.1 |"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 62,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| CC-01 | Cohérence | 17/10/2026 | Mentions de B-61 corrigées en B-60 dans le dictionnaire (LIV-01 à LIV-03) | Dictionna"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 63,
+     "token": "V2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.0 | Refonte | 10/2026 | Verrou V13, annexe O (outillage), dictionnaire intégré, seuils adaptatifs GEO-09, complémen"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 63,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.0 | Refonte | 10/2026 | Verrou V13, annexe O (outillage), dictionnaire intégré, seuils adaptatifs GEO-09, complémen"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 64,
+     "token": "V2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.1 | Complément de brique | 10/2026 | Protocole de reconnaissance des porteurs (B-32 §R) ; variables GEO-10, GEO-11 "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 64,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.1 | Complément de brique | 10/2026 | Protocole de reconnaissance des porteurs (B-32 §R) ; variables GEO-10, GEO-11 "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 65,
+     "token": "V2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.2 | Complément de brique | 10/2026 | Chaînage des parois (R.3bis), projection automatique des porteurs BET (R.4bis)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 65,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.2 | Complément de brique | 10/2026 | Chaînage des parois (R.3bis), projection automatique des porteurs BET (R.4bis)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 66,
+     "token": "V2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.3 | Correctif de versionnage | 10/2026 | En-têtes normalisés, annexe C et récapitulatif à jour, compte de variables"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 66,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.3 | Correctif de versionnage | 10/2026 | En-têtes normalisés, annexe C et récapitulatif à jour, compte de variables"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 67,
+     "token": "V2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.4 | Correctif de cohérence | 10/2026 | Création de GEO-12 (seuils), compte de briques corrigé (37), compléments int"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 67,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.4 | Correctif de cohérence | 10/2026 | Création de GEO-12 (seuils), compte de briques corrigé (37), compléments int"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 68,
+     "token": "V2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.5 | Correctif final (relectures externes) | 10/2026 | Annexe C et récapitulatif prolongés, exemples expurgés et req"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 68,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.5 | Correctif final (relectures externes) | 10/2026 | Annexe C et récapitulatif prolongés, exemples expurgés et req"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 69,
+     "token": "V2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.6 | Consolidation (relecture externe, point par point) | 10/2026 | Exemples expurgés des traces de génération, note"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 69,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| V2.6 | Consolidation (relecture externe, point par point) | 10/2026 | Exemples expurgés des traces de génération, note"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 132,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Conséquence pour l'utilisateur : dans tout document antérieur à v1.1, une mention de « B-48 » pour les assemblages est à"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 148,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Après (v1.1) :"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 170,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Conséquence pour l'utilisateur : dans tout document antérieur à v1.1, une mention « B-50 » pour les plans d'exécution es"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 171,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Note : cette renumérotation a eu lieu avant la production des fiches définitives. Les fiches produites en v1.1 portent d"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 178,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 178,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 178,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 178,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 179,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Avant : « 74 variables (70 v1.0 + 4 v1.1) »"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 179,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Avant : « 74 variables (70 v1.0 + 4 v1.1) »"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 180,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Après : « 92 variables (88 v1.0 + 4 v1.1) »"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 180,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Après : « 92 variables (88 v1.0 + 4 v1.1) »"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 181,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Détail par famille (v1.1) :"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 232,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Ces décisions ont façonné le carnet, mais ne sont pas des modifications à proprement parler : elles ont été prises avant"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 281,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.2 | Après le premier projet complet exécuté avec v1.1 | Corrections issues de T-03 (méta-amélioration), ajustements"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 281,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v1.2 | Après le premier projet complet exécuté avec v1.1 | Corrections issues de T-03 (méta-amélioration), ajustements"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 282,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| v2.0 | Après trois projets complets avec la même version majeure | Révision de fond si un changement d'architecture es"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 287,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.0 — REFONTE (rédacteur : refonte assistée, validée par l'utilisateur)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 288,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : refonte de carnet (incrémentation majeure v1.1 → v2.0)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 288,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : refonte de carnet (incrémentation majeure v1.1 → v2.0)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 294,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "5. Correction de la contradiction d'unités v1.1 (cotes de plan : millimètres partout ; B-60 alignée sur l'annexe A)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 302,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.1 — PROTOCOLE DE RECONNAISSANCE DES PORTEURS (B-32 §R)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 303,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : complément de brique (incrémentation mineure v2.0 → v2.1), validé par l'utilisateur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 303,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : complément de brique (incrémentation mineure v2.0 → v2.1), validé par l'utilisateur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 304,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : la v2.0 nettoyait par calques en présupposant les porteurs identifiés ; la reconnaissance élément par élément (p"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 314,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.2 — CHAÎNAGE DES PAROIS ET PROJECTION BET (B-32 §R.3bis et §R.4bis)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 315,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : complément de brique (incrémentation mineure v2.1 → v2.2), sur GO explicite de l'utilisateur, à la suite du tes"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 315,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : complément de brique (incrémentation mineure v2.1 → v2.2), sur GO explicite de l'utilisateur, à la suite du tes"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 326,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.3 — PASSE CORRECTIVE DE VERSIONNAGE"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 327,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.2 → v2.3), sur GO explicite de l'utilisateur, à la suite d'un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 327,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.2 → v2.3), sur GO explicite de l'utilisateur, à la suite d'un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 328,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : incohérences de versionnage résiduelles héritées des bascules successives (en-têtes de fiches non normalisés, an"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 331,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 332,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 332,
+     "token": "v2.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 332,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 332,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 333,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "4. Compte de variables unifié à 93 dans les renvois fonctionnels (document maître, B-01, B-02, annexe D) ; les mentions "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 341,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.4 — COHÉRENCE INTERNE (GEO-12, compte de briques, compléments intégrés)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 342,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 342,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 342,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 343,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : conflit sémantique sur GEO-09 (le dictionnaire le définit « Échelle tracé » depuis la v1.1, le document maître l"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 343,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : conflit sémantique sur GEO-09 (le dictionnaire le définit « Échelle tracé » depuis la v1.1, le document maître l"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 347,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 347,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 347,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 347,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 353,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.5 — PASSE CORRECTIVE FINALE (relectures externes)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 354,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.4 → v2.5), sur GO explicite de l'utilisateur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 354,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.4 → v2.5), sur GO explicite de l'utilisateur."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 355,
+     "token": "v2.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 355,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 355,
+     "token": "v2.3",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 355,
+     "token": "v2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 355,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 357,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "1. Annexe C : version en vigueur = v2.5 ; règle permanente ajoutée (la dernière entrée du présent journal fait foi)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 358,
+     "token": "V2.4",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Journal : lignes V2.4 et V2.5 ajoutées au tableau récapitulatif (§2)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 358,
+     "token": "V2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Journal : lignes V2.4 et V2.5 ajoutées au tableau récapitulatif (§2)."
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 359,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. 12_EXEMPLES : fragments conversationnels supprimés ; bandeau « exemples historiques v1.1 » ajouté en tête ; le mot « "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 359,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. 12_EXEMPLES : fragments conversationnels supprimés ; bandeau « exemples historiques v1.1 » ajouté en tête ; le mot « "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 366,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "## Entrée v2.6 — CONSOLIDATION DES CORRECTIONS (relecture externe, point par point)"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 367,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.5 → v2.6), sur GO explicites successifs de l'utilisateur, un "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 367,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Nature : correctif documentaire (incrémentation mineure v2.5 → v2.6), sur GO explicites successifs de l'utilisateur, un "
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 368,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : relecture externe de la v2.5 ayant relevé des traces de génération subsistant dans 12_EXEMPLES malgré l'entrée v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 368,
+     "token": "v2.5",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Motif : relecture externe de la v2.5 ayant relevé des traces de génération subsistant dans 12_EXEMPLES malgré l'entrée v"
+    },
+    {
+     "file": "11_HISTORIQUE/Journal_des_modifications.md",
+     "line": 371,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. Signalétique des comptes : note de compte au dictionnaire (« 94 en vigueur ; 92 et 93 = traces historiques ») ; étiqu"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 1,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "# 12_EXEMPLES — Exemples historiques (produits sous CARNAC v1.1)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 3,
+     "token": "v2.6",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 3,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 3,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 88,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| LIV-01 | Conventions calques | Annexe A du carnet CARNAC v1.1 | — | Carnet | Contractuelle | B-60 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 91,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| LIV-04 | Cartouche | Modèle unique CARNAC v1.1 | — | Carnet | Contractuelle | B-60 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 161,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Version du RDR : v1.0 (ouverture)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 280,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Récapitulatif complet — Arborescence CARNAC v1.1"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 282,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Le carnet CARNAC v1.1 est organisé en 11 répertoires contenant 49 fichiers :"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 312,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│       └── 92 variables avec bloque/mentionnée, version (v1.0 ou v1.1)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 312,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│       └── 92 variables avec bloque/mentionnée, version (v1.0 ou v1.1)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 373,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 373,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 373,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 373,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 485,
+     "token": "v1.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| 10_ANNEXES/C_Journal_Revisions.md | Versions du carnet (v1.0, v1.1, v1.2, v2.0) | 5-6 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 485,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| 10_ANNEXES/C_Journal_Revisions.md | Versions du carnet (v1.0, v1.1, v1.2, v2.0) | 5-6 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 485,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| 10_ANNEXES/C_Journal_Revisions.md | Versions du carnet (v1.0, v1.1, v1.2, v2.0) | 5-6 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 485,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "| 10_ANNEXES/C_Journal_Revisions.md | Versions du carnet (v1.0, v1.1, v1.2, v2.0) | 5-6 |"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 512,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "1. Le tester à blanc sur un projet existant (par exemple, rejouer Flora avec CARNAC v1.1) — pour identifier les ajusteme"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 513,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "2. L'enrichir après chaque projet réel (T-03 → v1.2) — pour intégrer les corrections issues de la pratique."
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 514,
+     "token": "v2.0",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "3. Le réviser après trois projets (v2.0) — si un changement d'architecture s'avère nécessaire."
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 520,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "Check-list de démarrage de projet — CARNAC v1.1"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 532,
+     "token": "v1.1",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "☐ Vérifier que le carnet CARNAC v1.1 est complet (49 fichiers)"
+    },
+    {
+     "file": "12_EXEMPLES/Exemples_Phase_0.md",
+     "line": 833,
+     "token": "v1.2",
+     "class": "HISTORIQUE_PROTEGE",
+     "snippet": "⚠ Si nouvelle version : incrémenter la version (v1.2) et mettre à jour le journal des révisions"
+    }
+   ]
+  },
+  "T3_dictionnaire_variables": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": [],
+   "metrics": {
+    "variables_in_dict": 106,
+    "variables_in_csv": 106,
+    "consumer_mismatches_count": 0
+   }
+  },
+  "T4_graphe_amont_aval": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": [],
+   "metrics": {
+    "b_sheets": 39,
+    "t_sheets": 4,
+    "asymmetric_edges": 0
+   }
+  },
+  "T5_compteurs_cardinaux": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": []
+  },
+  "T6_renvois_internes": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": []
+  },
+  "T7_non_regression_verrous": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": [],
+   "metrics": {
+    "locks_found": [
+     "V1",
+     "V2",
+     "V3",
+     "V4",
+     "V5",
+     "V6",
+     "V7",
+     "V8",
+     "V9",
+     "V10",
+     "V11",
+     "V12",
+     "V13",
+     "V14",
+     "V15"
+    ]
+   }
+  },
+  "T8_placeholders_V7": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": []
+  },
+  "T9_journal_et_proprete": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": []
+  },
+  "T10_completude_fiches": {
+   "status": "PASS",
+   "errors": [],
+   "warnings": []
+  }
+ }
+}

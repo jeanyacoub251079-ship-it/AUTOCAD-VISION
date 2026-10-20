@@ -1,0 +1,3754 @@
+{
+  "target_version": "v2.6",
+  "summary": {
+    "total_tests": 10,
+    "pass_count": 5,
+    "warn_count": 2,
+    "fail_count": 3,
+    "total_errors": 9,
+    "total_warnings": 322
+  },
+  "tests": {
+    "T1_parite_compilation": {
+      "status": "PASS",
+      "errors": [],
+      "warnings": [
+        "2 marqueurs internes '[Fin de ...]' non-fichiers détectés dans 12_EXEMPLES : [\"l'exemple de FDC\", \"l'exemple de RDR\"]"
+      ],
+      "metrics": {
+        "md_files": 49,
+        "bytes": 934431,
+        "sha256": "1116327ae6dbf29b49ec20088f44172f699dad79fe5efe7351139842f5870603",
+        "start_tags": 49,
+        "matching_end_tags": 49,
+        "internal_example_end_tags": [
+          "l'exemple de FDC",
+          "l'exemple de RDR"
+        ]
+      }
+    },
+    "T2_versions_et_chemins": {
+      "status": "FAIL",
+      "errors": [
+        "01_DICTIONNAIRE/CARNAC_v2.6_variables.md:6 — en-tête ou chemin non aligné sur v2.6: '**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur'",
+        "10_ANNEXES/C_Journal_Revisions.md:2 — en-tête ou chemin non aligné sur v2.6: '> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE'",
+        "10_ANNEXES/O_Outillage.md:2 — en-tête ou chemin non aligné sur v2.6: '> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE'",
+        "11_HISTORIQUE/Journal_des_modifications.md:1 — en-tête ou chemin non aligné sur v2.6: 'Fichier 11_HISTORIQUE/Journal_des_modifications.md — CARNAC v2.5'",
+        "10_ANNEXES/C_Journal_Revisions.md:128 — corruption d'archive historique : section v1.1 cite 'Dictionnaire (01_DICTIONNAIRE/CARNAC_v2.6_variables.csv)' au lieu de v1.1"
+      ],
+      "warnings": [
+        "00_MASTER.md:259 — mention contextuelle hors v2.6: 'Statut : 37 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-'",
+        "00_MASTER.md:274 — mention contextuelle hors v2.6: '* Une modification qui supprime un verrou sans le remplacer est interdite (non-régression). La '",
+        "02_PHASE_0_CADRAGE/B-00_Inventaire.md:149 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "02_PHASE_0_CADRAGE/B-01_MPD.md:138 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "02_PHASE_0_CADRAGE/B-02_FDC.md:157 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "02_PHASE_0_CADRAGE/B-03_RDR.md:194 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "02_PHASE_0_CADRAGE/B-04_PTD.md:173 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md:195 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md:217 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md:191 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-13_Contradictions.md:237 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md:197 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md:231 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md:252 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md:233 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md:228 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md:218 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md:232 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "05_PHASE_3_CALAGE/B-30_Calage.md:204 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md:219 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md:241 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md:224 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md:345 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md:276 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md:378 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md:378 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md:308 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md:298 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-46_Maconnerie.md:378 — mention contextuelle hors v2.6: 'Modifications depuis v1.0, en particulier C-01 (ajout MAT-09 à MAT-12)'",
+        "06_PHASE_4_CALCULS/B-47_Escaliers.md:327 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-48_Predalles.md:330 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md:373 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md:363 — mention contextuelle hors v2.6: 'Modifications depuis v1.0, en particulier C-04 (B-50 pas B-48) et D-06 (option C)'",
+        "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md:315 — mention contextuelle hors v2.6: 'Modifications depuis v1.0, en particulier C-02 (fusion B-61) et C-03 (intégration B-63)'",
+        "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md:300 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md:298 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md:278 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "08_PHASE_6_CLOTURE/B-71_Indicage.md:277 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md:251 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "09_TRANSVERSE/T-01_Sincerite.md:226 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "09_TRANSVERSE/T-02_Recadrage.md:245 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:18 — mention contextuelle hors v2.6: 'Nouvelle version du carnet CARNAC (v1.2, v2.0) — voir Annexe C'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:22 — mention contextuelle hors v2.6: 'Le carnet CARNAC (v1.1), le journal de clôture du projet (B-72), les corrections effectuées (T-'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:31 — mention contextuelle hors v2.6: 'Ce que vous fournissez à l'IA : le carnet CARNAC (v1.1), le journal de clôture du projet (B-72)'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:57 — mention contextuelle hors v2.6: 'T-03 est la brique qui transforme un incident en amélioration générale. C'est la boucle d'appre'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:209 — mention contextuelle hors v2.6: 'Nouvelle version du carnet (v1.2, v2.0)'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:247 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:251 — mention contextuelle hors v2.6: 'Cas particulier — plusieurs projets : si T-03 est appelée après plusieurs projets (par exemple,'",
+        "09_TRANSVERSE/T-04_Demande_Complement.md:253 — mention contextuelle hors v2.6: 'Modifications depuis v1.0'",
+        "10_ANNEXES/A_Conventions_Livrables.md:531 — mention contextuelle hors v2.6: '3. Les cotes de plan sont en millimètres (entiers) ; les cotes de niveau en mètres (3 décimales'"
+      ],
+      "metrics": {
+        "total_version_tokens": 472,
+        "by_class": {
+          "COURANT_AUTO": 61,
+          "HISTORIQUE_PROTEGE": 229,
+          "CONTEXTUEL": 182
+        }
+      },
+      "inventory": [
+        {
+          "file": "00_MASTER.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "# 00_MASTER.md — CARNAC v2.6 (document maître refondu)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 2,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.6 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 2,
+          "token": "2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.6 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 52,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. **Preuve d'exécution** (nouveau en v2.0) — tout livrable géométrique ou numérique est produit par un script exécuté, "
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 113,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### Verrou d'exécution (nouveau en v2.0)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 139,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## 4. LA COUCHE OUTILLAGE (nouveau en v2.0)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 156,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## 5. SEUILS ADAPTATIFS (nouveau en v2.0)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 173,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## 6. VOIE RAPIDE PETITES AFFAIRES (nouveau en v2.0)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 250,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│   └── O_Outillage.md              ← Nouveau en v2.0"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 259,
+          "token": "v2.4",
+          "class": "CONTEXTUEL",
+          "snippet": "Statut : 37 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, intégrés à B-60). Tou"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 274,
+          "token": "v2.0",
+          "class": "CONTEXTUEL",
+          "snippet": "* Une modification qui supprime un verrou sans le remplacer est interdite (non-régression). La v2.0 ajoute le verrou V13"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 303,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## 10. CE QUI CHANGE EN v2.0 (synthèse)"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 306,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. **Dictionnaire intégré** : les variables sont livrées avec le carnet (CSV + lecture Markdown), reconstruites depuis l"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 306,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. **Dictionnaire intégré** : les variables sont livrées avec le carnet (CSV + lecture Markdown), reconstruites depuis l"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 306,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. **Dictionnaire intégré** : les variables sont livrées avec le carnet (CSV + lecture Markdown), reconstruites depuis l"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 306,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. **Dictionnaire intégré** : les variables sont livrées avec le carnet (CSV + lecture Markdown), reconstruites depuis l"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 312,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "8. **Reconnaissance des porteurs (v2.1, complétée en v2.2)** : la classification des parois (PORTEUR CERTAIN / NON PORTE"
+        },
+        {
+          "file": "00_MASTER.md",
+          "line": 312,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "8. **Reconnaissance des porteurs (v2.1, complétée en v2.2)** : la classification des parois (PORTEUR CERTAIN / NON PORTE"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "# 01_DICTIONNAIRE — CARNAC v2.6"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 3,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Bibliothèque de variables reconstruite en v2.0 à partir des tables « Variables consommées » des fiches (le fichier CSV d"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 3,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Bibliothèque de variables reconstruite en v2.0 à partir des tables « Variables consommées » des fiches (le fichier CSV d"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v2.5",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v2.1",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v2.4",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v1.1",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v2.1",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 6,
+          "token": "v2.3",
+          "class": "COURANT_AUTO",
+          "snippet": "**Note de compte (à lire avant toute citation d'un nombre de variables).** Le compte en vigueur est de **94 variables** "
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 32,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "| DOC-07 | Diagnostic amiante/plomb (cité en exemple v1.1, défini en v2.0) |  |"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 32,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "| DOC-07 | Diagnostic amiante/plomb (cité en exemple v1.1, défini en v2.0) |  |"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 89,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "| SIT-02 | Contraintes de site (cité en exemple v1.1, défini en v2.0) |  |"
+        },
+        {
+          "file": "01_DICTIONNAIRE/CARNAC_v2.6_variables.md",
+          "line": 89,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "| SIT-02 | Contraintes de site (cité en exemple v1.1, défini en v2.0) |  |"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 02_PHASE_0_CADRAGE/B-00_Inventaire.md — CARNAC v2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
+          "line": 149,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 02_PHASE_0_CADRAGE/B-01_MPD.md — CARNAC v2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-01_MPD.md",
+          "line": 138,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 02_PHASE_0_CADRAGE/B-02_FDC.md — CARNAC v2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-02_FDC.md",
+          "line": 157,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 02_PHASE_0_CADRAGE/B-03_RDR.md — CARNAC v2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-03_RDR.md",
+          "line": 194,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 02_PHASE_0_CADRAGE/B-04_PTD.md — CARNAC v2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "02_PHASE_0_CADRAGE/B-04_PTD.md",
+          "line": 173,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
+          "line": 195,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
+          "line": 217,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-12_Audit_Geotechnique.md",
+          "line": 191,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-13_Contradictions.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-13_Contradictions.md",
+          "line": 237,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-14_Perimetre_Lot.md",
+          "line": 197,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md — CARNAC v2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "03_PHASE_1_ANALYSE/B-15_Synthese_Risques.md",
+          "line": 231,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-20_Conception_GO.md — CARNAC v2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
+          "line": 252,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md — CARNAC v2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
+          "line": 233,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md — CARNAC v2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-22_Note_Hypotheses.md",
+          "line": 228,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md — CARNAC v2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-23_Exploitation_Diagnostic.md",
+          "line": 218,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md — CARNAC v2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "04_PHASE_2_CONCEPTION/B-24_Existant_Non_Sonde.md",
+          "line": 232,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 05_PHASE_3_CALAGE/B-30_Calage.md — CARNAC v2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 204,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-30_Calage.md",
+          "line": 219,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md — CARNAC v2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 219,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-31_Preuve_Superposition.md",
+          "line": 243,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md — CARNAC v2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 241,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 259,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 264,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## COMPLÉMENT v2.1 — §R. PROTOCOLE DE RECONNAISSANCE DES PORTEURS (obligatoire avant tout nettoyage B-32)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 276,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### R.3bis Chaînage des tronçons en parois (obligatoire — enseignement v2.2)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md",
+          "line": 305,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### R.4bis Projection automatique des porteurs BET (critère C1 — enseignement v2.2)"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 05_PHASE_3_CALAGE/B-33_Verification_Croisee.md — CARNAC v2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 224,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
+          "line": 239,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 345,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 372,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-40_Fondations_Superficielles.md",
+          "line": 378,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 276,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 300,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-41_Fondations_Profondes.md",
+          "line": 306,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-42_Verticaux_BA.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 378,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 413,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-42_Verticaux_BA.md",
+          "line": 419,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 378,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 409,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-43_Planchers_Dallages.md",
+          "line": 415,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-44_Charpente_Bois.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 308,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 345,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-44_Charpente_Bois.md",
+          "line": 351,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-45_Structure_Metallique.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 298,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 333,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-45_Structure_Metallique.md",
+          "line": 339,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-46_Maconnerie.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 378,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0, en particulier C-01 (ajout MAT-09 à MAT-12)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 421,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-46_Maconnerie.md",
+          "line": 427,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-47_Escaliers.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 327,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 361,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-47_Escaliers.md",
+          "line": 367,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-48_Predalles.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 330,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 355,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-48_Predalles.md",
+          "line": 361,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 373,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 413,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-49_Linteaux_Seuils.md",
+          "line": 419,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md — CARNAC v2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 363,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0, en particulier C-04 (B-50 pas B-48) et D-06 (option C)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 409,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "06_PHASE_4_CALCULS/B-50_Assemblages_Ancrages.md",
+          "line": 415,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — CALCULS, ELS ET TOLÉRANCES"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md — CARNAC v2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 315,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0, en particulier C-02 (fusion B-61) et C-03 (intégration B-63)"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
+          "line": 341,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-62_Nomenclature.md — CARNAC v2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 300,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
+          "line": 335,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### COMPLÉMENT v2.0 — RÉGIME OUTILLÉ (verrou V13, annexe O)"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md — CARNAC v2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
+          "line": 298,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md — CARNAC v2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md",
+          "line": 278,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 08_PHASE_6_CLOTURE/B-71_Indicage.md — CARNAC v2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-71_Indicage.md",
+          "line": 277,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md — CARNAC v2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "08_PHASE_6_CLOTURE/B-72_Journal_Cloture.md",
+          "line": 251,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "09_TRANSVERSE/T-01_Sincerite.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 09_TRANSVERSE/T-01_Sincerite.md — CARNAC v2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-01_Sincerite.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-01_Sincerite.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-01_Sincerite.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-01_Sincerite.md",
+          "line": 226,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "09_TRANSVERSE/T-02_Recadrage.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 09_TRANSVERSE/T-02_Recadrage.md — CARNAC v2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-02_Recadrage.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-02_Recadrage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-02_Recadrage.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-02_Recadrage.md",
+          "line": 245,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 09_TRANSVERSE/T-03_Meta_Amelioration.md — CARNAC v2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 18,
+          "token": "v1.2",
+          "class": "CONTEXTUEL",
+          "snippet": "Nouvelle version du carnet CARNAC (v1.2, v2.0) — voir Annexe C"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 18,
+          "token": "v2.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Nouvelle version du carnet CARNAC (v1.2, v2.0) — voir Annexe C"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 22,
+          "token": "v1.1",
+          "class": "CONTEXTUEL",
+          "snippet": "Le carnet CARNAC (v1.1), le journal de clôture du projet (B-72), les corrections effectuées (T-02), les points ouverts ("
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 31,
+          "token": "v1.1",
+          "class": "CONTEXTUEL",
+          "snippet": "Ce que vous fournissez à l'IA : le carnet CARNAC (v1.1), le journal de clôture du projet (B-72), les corrections effectu"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 57,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "T-03 est la brique qui transforme un incident en amélioration générale. C'est la boucle d'apprentissage qui fait progres"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 57,
+          "token": "v1.1",
+          "class": "CONTEXTUEL",
+          "snippet": "T-03 est la brique qui transforme un incident en amélioration générale. C'est la boucle d'apprentissage qui fait progres"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 57,
+          "token": "v1.2",
+          "class": "CONTEXTUEL",
+          "snippet": "T-03 est la brique qui transforme un incident en amélioration générale. C'est la boucle d'apprentissage qui fait progres"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 57,
+          "token": "v2.0",
+          "class": "CONTEXTUEL",
+          "snippet": "T-03 est la brique qui transforme un incident en amélioration générale. C'est la boucle d'apprentissage qui fait progres"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 209,
+          "token": "v1.2",
+          "class": "CONTEXTUEL",
+          "snippet": "Nouvelle version du carnet (v1.2, v2.0)"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 209,
+          "token": "v2.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Nouvelle version du carnet (v1.2, v2.0)"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 247,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 251,
+          "token": "v1.1",
+          "class": "CONTEXTUEL",
+          "snippet": "Cas particulier — plusieurs projets : si T-03 est appelée après plusieurs projets (par exemple, après trois projets avec"
+        },
+        {
+          "file": "09_TRANSVERSE/T-03_Meta_Amelioration.md",
+          "line": 251,
+          "token": "v2.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Cas particulier — plusieurs projets : si T-03 est appelée après plusieurs projets (par exemple, après trois projets avec"
+        },
+        {
+          "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 09_TRANSVERSE/T-04_Demande_Complement.md — CARNAC v2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "09_TRANSVERSE/T-04_Demande_Complement.md",
+          "line": 253,
+          "token": "v1.0",
+          "class": "CONTEXTUEL",
+          "snippet": "Modifications depuis v1.0"
+        },
+        {
+          "file": "10_ANNEXES/A_Conventions_Livrables.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 10_ANNEXES/A_Conventions_Livrables.md — CARNAC v2.6"
+        },
+        {
+          "file": "10_ANNEXES/A_Conventions_Livrables.md",
+          "line": 2,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.6 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "10_ANNEXES/A_Conventions_Livrables.md",
+          "line": 2,
+          "token": "2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.6 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "10_ANNEXES/A_Conventions_Livrables.md",
+          "line": 528,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## 11. COMPLÉMENT v2.0 — TOLÉRANCES D'EXÉCUTION ET ENROBAGE"
+        },
+        {
+          "file": "10_ANNEXES/A_Conventions_Livrables.md",
+          "line": 531,
+          "token": "v1.1",
+          "class": "CONTEXTUEL",
+          "snippet": "3. Les cotes de plan sont en millimètres (entiers) ; les cotes de niveau en mètres (3 décimales). Aucune autre conventio"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 10_ANNEXES/C_Journal_Revisions.md — CARNAC v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 2,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 2,
+          "token": "2.5",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 25,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.0"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 30,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 32,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version de référence historique (remplacée par v2.3)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 35,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.2"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 37,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Absorbée par la refonte v2.0"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 40,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 41,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Produite (refonte), puis v2.1, v2.2, v2.3, v2.4, v2.5 ; version en vigueur : v2.6"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 44,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 44,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 44,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 44,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version en vigueur : v2.6 — elle remplace v1.1 (17/10/2026) et les versions v2.0 à v2.5. Règle permanente : la version e"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 49,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.1 Version v1.0 — Version de travail"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 55,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Statut en v1.0"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 82,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Note : la v1.0 est conservée pour traçabilité comme version de travail. Elle n'a pas été diffusée. La version de référen"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 82,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Note : la v1.0 est conservée pour traçabilité comme version de travail. Elle n'a pas été diffusée. La version de référen"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 86,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.2 Version v1.1 — Version de référence historique (remplacée par v2.3)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 86,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.2 Version v1.1 — Version de référence historique (remplacée par v2.3)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 90,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Modifications intégrées par rapport à v1.0 :"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 123,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Contenu de la v1.1 :"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 125,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Statut en v1.1"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 154,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Note : les fiches individuelles sont en cours de production dans l'arborescence de fichiers. La version v1.1 est complèt"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 158,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.3 Version v1.2 — Prévue, non produite (absorbée par la refonte v2.0)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 158,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.3 Version v1.2 — Prévue, non produite (absorbée par la refonte v2.0)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 159,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Date : à déterminer (après le premier projet complet exécuté avec v1.1)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 173,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Devenue sans objet : la v1.2 n'a pas été produite, la refonte v2.0 l'a absorbée."
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 173,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Devenue sans objet : la v1.2 n'a pas été produite, la refonte v2.0 l'a absorbée."
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 177,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 177,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 177,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 177,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3.4 Version v2.0 — Produite (refonte), suivie de v2.1, v2.2 et v2.3"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 192,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Condition de production : la v2.0 ne sera produite qu'après trois projets complets exécutés avec la même version majeure"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 214,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version mineure du carnet (v1.1 → v1.2)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 214,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version mineure du carnet (v1.1 → v1.2)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 216,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version majeure du carnet (v1.x → v2.0)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 218,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version mineure du carnet (v1.1 → v1.2) ou version de la fiche selon l'ampleur"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 218,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version mineure du carnet (v1.1 → v1.2) ou version de la fiche selon l'ampleur"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 255,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Variables, avec leur version (v1.0 ou v1.1)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 255,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Variables, avec leur version (v1.0 ou v1.1)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 260,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### Additif — Versions v2.0 à v2.6 (section mise à jour à chaque version)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 260,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### Additif — Versions v2.0 à v2.6 (section mise à jour à chaque version)"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/C_Journal_Revisions.md",
+          "line": 261,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils adaptatifs, compléments normatifs, corpus a"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 1,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 10_ANNEXES/D_Mode_Emploi.md — CARNAC v2.6"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 10,
+          "token": "2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "2.6"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 12,
+          "token": "v2.6",
+          "class": "CONTEXTUEL",
+          "snippet": "v2.6 — consolidation des corrections issues des relectures externes (voir Journal des modifications, entrée v2.6) ; fond"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 436,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Additif v2.3 — Durées indicatives en voie rapide (document maître §6) : pour une affaire simple (un seul type de livrabl"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 439,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "### Additif v2.4 — Ce que les versions v2.x changent à l'usage quotidien"
+        },
+        {
+          "file": "10_ANNEXES/D_Mode_Emploi.md",
+          "line": 443,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "- **Voie rapide** : phases 0 et 1 fusionnables pour les affaires simples (voir l'additif v2.3 ci-dessus et le document m"
+        },
+        {
+          "file": "10_ANNEXES/O_Outillage.md",
+          "line": 1,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "# Annexe O — COUCHE OUTILLAGE (nouveau en v2.0)"
+        },
+        {
+          "file": "10_ANNEXES/O_Outillage.md",
+          "line": 2,
+          "token": "v2.6",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "10_ANNEXES/O_Outillage.md",
+          "line": 2,
+          "token": "2.5",
+          "class": "COURANT_AUTO",
+          "snippet": "> Version du document : 2.5 (carnet CARNAC v2.6) — historique des modifications : 11_HISTORIQUE/Journal_des_modification"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 1,
+          "token": "v2.5",
+          "class": "COURANT_AUTO",
+          "snippet": "Fichier 11_HISTORIQUE/Journal_des_modifications.md — CARNAC v2.5"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 3,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Ce journal recense toutes les modifications apportées au carnet CARNAC depuis la version de travail v1.0. Il permet à un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 20,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 26,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 32,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 38,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 44,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.0 → v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 44,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.0 → v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 50,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 56,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 58,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 59,
+          "token": "V2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.0"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 64,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 65,
+          "token": "V2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 70,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.2"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 71,
+          "token": "V2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.2"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 76,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.3"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 77,
+          "token": "V2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.3"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 82,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.4"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 83,
+          "token": "V2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.4"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 88,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.5"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 89,
+          "token": "V2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.5"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 94,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.6"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 95,
+          "token": "V2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "V2.6"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 172,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Conséquence pour l'utilisateur : dans tout document antérieur à v1.1, une mention de « B-48 » pour les assemblages est à"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 189,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Après (v1.1) :"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 214,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Conséquence pour l'utilisateur : dans tout document antérieur à v1.1, une mention « B-50 » pour les plans d'exécution es"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 215,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Note : cette renumérotation a eu lieu avant la production des fiches définitives. Les fiches produites en v1.1 portent d"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 222,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 222,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 222,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 222,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : la synthèse finale du tronçon 10 annonçait « 74 variables (70 v1.0 + 4 v1.1) ». Le compte réel est 88 en v1.0 et"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 223,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Avant : « 74 variables (70 v1.0 + 4 v1.1) »"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 223,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Avant : « 74 variables (70 v1.0 + 4 v1.1) »"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 224,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Après : « 92 variables (88 v1.0 + 4 v1.1) »"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 224,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Après : « 92 variables (88 v1.0 + 4 v1.1) »"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 225,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Détail par famille (v1.1) :"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 290,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Ces décisions ont façonné le carnet, mais ne sont pas des modifications à proprement parler : elles ont été prises avant"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 365,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v1.2"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 366,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Après le premier projet complet exécuté avec v1.1"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 368,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "v2.0"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 374,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.0 — REFONTE (rédacteur : refonte assistée, validée par l'utilisateur)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 375,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : refonte de carnet (incrémentation majeure v1.1 → v2.0)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 375,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : refonte de carnet (incrémentation majeure v1.1 → v2.0)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 381,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "5. Correction de la contradiction d'unités v1.1 (cotes de plan : millimètres partout ; B-60 alignée sur l'annexe A)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 389,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.1 — PROTOCOLE DE RECONNAISSANCE DES PORTEURS (B-32 §R)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 390,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : complément de brique (incrémentation mineure v2.0 → v2.1), validé par l'utilisateur."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 390,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : complément de brique (incrémentation mineure v2.0 → v2.1), validé par l'utilisateur."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 391,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : la v2.0 nettoyait par calques en présupposant les porteurs identifiés ; la reconnaissance élément par élément (p"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 401,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.2 — CHAÎNAGE DES PAROIS ET PROJECTION BET (B-32 §R.3bis et §R.4bis)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 402,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : complément de brique (incrémentation mineure v2.1 → v2.2), sur GO explicite de l'utilisateur, à la suite du tes"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 402,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : complément de brique (incrémentation mineure v2.1 → v2.2), sur GO explicite de l'utilisateur, à la suite du tes"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 413,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.3 — PASSE CORRECTIVE DE VERSIONNAGE"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 414,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.2 → v2.3), sur GO explicite de l'utilisateur, à la suite d'un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 414,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.2 → v2.3), sur GO explicite de l'utilisateur, à la suite d'un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 415,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : incohérences de versionnage résiduelles héritées des bascules successives (en-têtes de fiches non normalisés, an"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 418,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Annexe C : version en vigueur = v2.3 ; v1.1 reléguée en référence historique ; feuille de route (v1.2 non produite, v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 419,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 419,
+          "token": "v2.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 419,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 419,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Journal des modifications : lignes v2.0, v2.1, v2.2, v2.3 ajoutées au tableau récapitulatif."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 420,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "4. Compte de variables unifié à 93 dans les renvois fonctionnels (document maître, B-01, B-02, annexe D) ; les mentions "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 428,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.4 — COHÉRENCE INTERNE (GEO-12, compte de briques, compléments intégrés)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 429,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 429,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 429,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif de cohérence (incrémentation mineure v2.3 → v2.4), sur GO explicite de l'utilisateur, à la suite d'un"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 430,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : conflit sémantique sur GEO-09 (le dictionnaire le définit « Échelle tracé » depuis la v1.1, le document maître l"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 430,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : conflit sémantique sur GEO-09 (le dictionnaire le définit « Échelle tracé » depuis la v1.1, le document maître l"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 434,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 434,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 434,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 434,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Compléments de version (blocs v2.0 à v2.4) intégrés dans le corps des fiches, avant leur marqueur « Fin de » ; entrée"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 440,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.5 — PASSE CORRECTIVE FINALE (relectures externes)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 441,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.4 → v2.5), sur GO explicite de l'utilisateur."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 441,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.4 → v2.5), sur GO explicite de l'utilisateur."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 442,
+          "token": "v2.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 442,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 442,
+          "token": "v2.3",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 442,
+          "token": "v2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 442,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : résidus relevés par deux relectures externes indépendantes de la v2.2 puis de la v2.4, vérifiés point par point "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 444,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "1. Annexe C : version en vigueur = v2.5 ; règle permanente ajoutée (la dernière entrée du présent journal fait foi)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 445,
+          "token": "V2.4",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Journal : lignes V2.4 et V2.5 ajoutées au tableau récapitulatif (§2)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 445,
+          "token": "V2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Journal : lignes V2.4 et V2.5 ajoutées au tableau récapitulatif (§2)."
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 446,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. 12_EXEMPLES : fragments conversationnels supprimés ; bandeau « exemples historiques v1.1 » ajouté en tête ; le mot « "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 446,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. 12_EXEMPLES : fragments conversationnels supprimés ; bandeau « exemples historiques v1.1 » ajouté en tête ; le mot « "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 453,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "## Entrée v2.6 — CONSOLIDATION DES CORRECTIONS (relecture externe, point par point)"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 454,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.5 → v2.6), sur GO explicites successifs de l'utilisateur, un "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 454,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Nature : correctif documentaire (incrémentation mineure v2.5 → v2.6), sur GO explicites successifs de l'utilisateur, un "
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 455,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : relecture externe de la v2.5 ayant relevé des traces de génération subsistant dans 12_EXEMPLES malgré l'entrée v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 455,
+          "token": "v2.5",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Motif : relecture externe de la v2.5 ayant relevé des traces de génération subsistant dans 12_EXEMPLES malgré l'entrée v"
+        },
+        {
+          "file": "11_HISTORIQUE/Journal_des_modifications.md",
+          "line": 458,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. Signalétique des comptes : note de compte au dictionnaire (« 94 en vigueur ; 92 et 93 = traces historiques ») ; étiqu"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "# 12_EXEMPLES — Exemples historiques (produits sous CARNAC v1.1)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 3,
+          "token": "v2.6",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 3,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 3,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "> **Bandeau de qualification (v2.6)** — Les exemples qui suivent ont été produits sous CARNAC **v1.1**, sur le projet fi"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 454,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Annexe A du carnet CARNAC v1.1"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 475,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Modèle unique CARNAC v1.1"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 623,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Version du RDR : v1.0 (ouverture)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 924,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Récapitulatif complet — Arborescence CARNAC v1.1"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 926,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Le carnet CARNAC v1.1 est organisé en 11 répertoires contenant 49 fichiers :"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 996,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│       └── 92 variables avec bloque/mentionnée, version (v1.0 ou v1.1)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 996,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│       └── 92 variables avec bloque/mentionnée, version (v1.0 ou v1.1)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1057,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1057,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1057,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1057,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "│   ├── C_Journal_Revisions.md          ← Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1176,
+          "token": "v1.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1176,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1176,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1176,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Versions du carnet (v1.0, v1.1, v1.2, v2.0)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1207,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "1. Le tester à blanc sur un projet existant (par exemple, rejouer Flora avec CARNAC v1.1) — pour identifier les ajusteme"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1208,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "2. L'enrichir après chaque projet réel (T-03 → v1.2) — pour intégrer les corrections issues de la pratique."
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1209,
+          "token": "v2.0",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "3. Le réviser après trois projets (v2.0) — si un changement d'architecture s'avère nécessaire."
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1215,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "Check-list de démarrage de projet — CARNAC v1.1"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1227,
+          "token": "v1.1",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "☐ Vérifier que le carnet CARNAC v1.1 est complet (49 fichiers)"
+        },
+        {
+          "file": "12_EXEMPLES/Exemples_Phase_0.md",
+          "line": 1528,
+          "token": "v1.2",
+          "class": "HISTORIQUE_PROTEGE",
+          "snippet": "⚠ Si nouvelle version : incrémenter la version (v1.2) et mettre à jour le journal des révisions"
+        }
+      ]
+    },
+    "T3_dictionnaire_variables": {
+      "status": "FAIL",
+      "errors": [
+        "01_DICTIONNAIRE: variable LIV-01 a un libellé corrompu 'B-61' (vestige d'une ancienne colonne)",
+        "01_DICTIONNAIRE: variable LIV-03 a un libellé corrompu 'B-61' (vestige d'une ancienne colonne)"
+      ],
+      "warnings": [
+        "CHG-01: dict_seul=[] | fiches_seules=['B-42', 'B-43', 'B-45', 'B-47', 'B-48', 'B-49']",
+        "CHG-02: dict_seul=[] | fiches_seules=['B-42', 'B-43', 'B-45', 'B-47', 'B-48', 'B-49']",
+        "CHG-03: dict_seul=[] | fiches_seules=['B-42', 'B-43', 'B-45', 'B-49']",
+        "EXI-01: dict_seul=[] | fiches_seules=['B-20', 'B-46', 'B-49']",
+        "EXI-03: dict_seul=[] | fiches_seules=['B-20', 'B-46', 'B-49']",
+        "GEO-01: dict_seul=[] | fiches_seules=['B-20', 'B-21', 'B-23', 'B-33', 'B-40', 'B-47', 'B-60']",
+        "GEO-02: dict_seul=[] | fiches_seules=['B-20', 'B-21', 'B-23', 'B-33', 'B-40', 'B-42', 'B-45', 'B-60']",
+        "GEO-03: dict_seul=[] | fiches_seules=['B-20', 'B-21', 'B-23', 'B-33', 'B-40', 'B-46', 'B-49', 'B-60']",
+        "GEO-04: dict_seul=[] | fiches_seules=['B-20', 'B-21', 'B-23', 'B-33', 'B-40', 'B-42', 'B-45', 'B-60']",
+        "GEO-05: dict_seul=[] | fiches_seules=['B-20', 'B-23', 'B-33', 'B-40', 'B-42', 'B-46', 'B-47', 'B-49', 'B-60']",
+        "GEO-12: dict_seul=['B-31', 'B-33'] | fiches_seules=[]",
+        "LIV-01: dict_seul=[] | fiches_seules=['B-60']",
+        "LIV-02: dict_seul=[] | fiches_seules=['B-60']",
+        "LIV-03: dict_seul=[] | fiches_seules=['B-60']",
+        "LIV-04: dict_seul=[] | fiches_seules=['B-60']",
+        "LIV-05: dict_seul=[] | fiches_seules=['B-60']",
+        "MAT-01: dict_seul=[] | fiches_seules=['B-43', 'B-48', 'B-49', 'B-50', 'B-62']",
+        "MAT-02: dict_seul=[] | fiches_seules=['B-43', 'B-48', 'B-49', 'B-50', 'B-62']",
+        "MAT-03: dict_seul=[] | fiches_seules=['B-43', 'B-48', 'B-49', 'B-50', 'B-62']",
+        "MAT-04: dict_seul=[] | fiches_seules=['B-43', 'B-48', 'B-49', 'B-50', 'B-62']",
+        "MAT-06: dict_seul=[] | fiches_seules=['B-43']",
+        "MAT-08: dict_seul=[] | fiches_seules=['B-43']",
+        "MAT-09: dict_seul=[] | fiches_seules=['B-50', 'B-62']",
+        "MAT-10: dict_seul=[] | fiches_seules=['B-50', 'B-62']",
+        "MAT-11: dict_seul=[] | fiches_seules=['B-50', 'B-62']",
+        "NIV-01: dict_seul=[] | fiches_seules=['B-40']",
+        "NIV-02: dict_seul=[] | fiches_seules=['B-42', 'B-43', 'B-47', 'B-48', 'B-60']",
+        "NIV-03: dict_seul=[] | fiches_seules=['B-42', 'B-47']",
+        "NIV-04: dict_seul=[] | fiches_seules=['B-40']",
+        "NIV-05: dict_seul=[] | fiches_seules=['B-43', 'B-60']",
+        "NIV-06: dict_seul=[] | fiches_seules=['B-43', 'B-48']",
+        "OUT-01: dict_seul=['B-30', 'B-31', 'B-32', 'B-33', 'B-60', 'B-62'] | fiches_seules=[]",
+        "OUT-02: dict_seul=['B-30', 'B-40', 'B-41', 'B-42', 'B-43', 'B-44', 'B-45', 'B-46', 'B-47', 'B-48', 'B-49', 'B-50', 'B-60', 'B-62'] | fiches_seules=[]",
+        "OUT-03: dict_seul=['B-31', 'B-33', 'B-60', 'B-70'] | fiches_seules=[]",
+        "OUT-04: dict_seul=['B-31', 'B-32', 'B-60'] | fiches_seules=[]",
+        "SIT-04: dict_seul=[] | fiches_seules=['B-40']",
+        "SIT-05: dict_seul=[] | fiches_seules=['B-40']",
+        "SOL-01: dict_seul=[] | fiches_seules=['B-20', 'B-41']",
+        "SOL-02: dict_seul=[] | fiches_seules=['B-20', 'B-41']",
+        "SOL-03: dict_seul=[] | fiches_seules=['B-20', 'B-41']",
+        "SOL-04: dict_seul=[] | fiches_seules=['B-20']",
+        "SOL-05: dict_seul=[] | fiches_seules=['B-20', 'B-41']",
+        "SOL-06: dict_seul=[] | fiches_seules=['B-41']",
+        "SOL-07: dict_seul=[] | fiches_seules=['B-41']"
+      ],
+      "metrics": {
+        "variables_in_dict": 94,
+        "variables_in_csv": 94,
+        "consumer_mismatches_count": 44
+      }
+    },
+    "T4_graphe_amont_aval": {
+      "status": "WARN",
+      "errors": [],
+      "warnings": [
+        "Asymétrie aval->amont : B-01 cite B-40 en aval, mais B-40 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-41 en aval, mais B-41 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-42 en aval, mais B-42 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-43 en aval, mais B-43 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-44 en aval, mais B-44 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-45 en aval, mais B-45 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-46 en aval, mais B-46 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-47 en aval, mais B-47 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-48 en aval, mais B-48 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-49 en aval, mais B-49 ne cite pas B-01 en amont",
+        "Asymétrie aval->amont : B-01 cite B-50 en aval, mais B-50 ne cite pas B-01 en amont",
+        "Asymétrie amont->aval : B-02 cite B-00 en amont, mais B-00 ne cite pas B-02 en aval",
+        "Asymétrie aval->amont : B-03 cite B-50 en aval, mais B-50 ne cite pas B-03 en amont",
+        "Asymétrie aval->amont : B-10 cite T-04 en aval, mais T-04 ne cite pas B-10 en amont",
+        "Asymétrie amont->aval : B-10 cite B-00 en amont, mais B-00 ne cite pas B-10 en aval",
+        "Asymétrie amont->aval : B-10 cite B-01 en amont, mais B-01 ne cite pas B-10 en aval",
+        "Asymétrie amont->aval : B-10 cite B-03 en amont, mais B-03 ne cite pas B-10 en aval",
+        "Asymétrie aval->amont : B-11 cite T-04 en aval, mais T-04 ne cite pas B-11 en amont",
+        "Asymétrie amont->aval : B-11 cite B-00 en amont, mais B-00 ne cite pas B-11 en aval",
+        "Asymétrie amont->aval : B-11 cite B-01 en amont, mais B-01 ne cite pas B-11 en aval",
+        "Asymétrie amont->aval : B-11 cite B-03 en amont, mais B-03 ne cite pas B-11 en aval",
+        "Asymétrie amont->aval : B-12 cite B-00 en amont, mais B-00 ne cite pas B-12 en aval",
+        "Asymétrie amont->aval : B-12 cite B-01 en amont, mais B-01 ne cite pas B-12 en aval",
+        "Asymétrie amont->aval : B-12 cite B-03 en amont, mais B-03 ne cite pas B-12 en aval",
+        "Asymétrie aval->amont : B-13 cite B-03 en aval, mais B-03 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-04 en aval, mais B-04 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-40 en aval, mais B-40 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-41 en aval, mais B-41 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-42 en aval, mais B-42 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-43 en aval, mais B-43 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-44 en aval, mais B-44 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-45 en aval, mais B-45 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-46 en aval, mais B-46 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-47 en aval, mais B-47 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-48 en aval, mais B-48 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-49 en aval, mais B-49 ne cite pas B-13 en amont",
+        "Asymétrie aval->amont : B-13 cite B-50 en aval, mais B-50 ne cite pas B-13 en amont",
+        "Asymétrie amont->aval : B-13 cite B-01 en amont, mais B-01 ne cite pas B-13 en aval",
+        "Asymétrie aval->amont : B-14 cite B-03 en aval, mais B-03 ne cite pas B-14 en amont",
+        "Asymétrie aval->amont : B-14 cite T-04 en aval, mais T-04 ne cite pas B-14 en amont",
+        "Asymétrie amont->aval : B-14 cite B-01 en amont, mais B-01 ne cite pas B-14 en aval",
+        "Asymétrie amont->aval : B-14 cite B-13 en amont, mais B-13 ne cite pas B-14 en aval",
+        "Asymétrie aval->amont : B-15 cite B-03 en aval, mais B-03 ne cite pas B-15 en amont",
+        "Asymétrie aval->amont : B-15 cite B-20 en aval, mais B-20 ne cite pas B-15 en amont",
+        "Asymétrie aval->amont : B-15 cite B-72 en aval, mais B-72 ne cite pas B-15 en amont",
+        "Asymétrie aval->amont : B-15 cite T-04 en aval, mais T-04 ne cite pas B-15 en amont",
+        "Asymétrie amont->aval : B-15 cite B-03 en amont, mais B-03 ne cite pas B-15 en aval",
+        "Asymétrie aval->amont : B-20 cite B-50 en aval, mais B-50 ne cite pas B-20 en amont",
+        "Asymétrie amont->aval : B-20 cite B-00 en amont, mais B-00 ne cite pas B-20 en aval",
+        "Asymétrie amont->aval : B-20 cite B-01 en amont, mais B-01 ne cite pas B-20 en aval",
+        "Asymétrie amont->aval : B-20 cite B-11 en amont, mais B-11 ne cite pas B-20 en aval",
+        "Asymétrie amont->aval : B-20 cite B-12 en amont, mais B-12 ne cite pas B-20 en aval",
+        "Asymétrie amont->aval : B-20 cite B-13 en amont, mais B-13 ne cite pas B-20 en aval",
+        "Asymétrie amont->aval : B-20 cite B-24 en amont, mais B-24 ne cite pas B-20 en aval",
+        "Asymétrie aval->amont : B-21 cite B-20 en aval, mais B-20 ne cite pas B-21 en amont",
+        "Asymétrie aval->amont : B-21 cite B-46 en aval, mais B-46 ne cite pas B-21 en amont",
+        "Asymétrie aval->amont : B-21 cite B-47 en aval, mais B-47 ne cite pas B-21 en amont",
+        "Asymétrie aval->amont : B-21 cite B-50 en aval, mais B-50 ne cite pas B-21 en amont",
+        "Asymétrie amont->aval : B-21 cite B-00 en amont, mais B-00 ne cite pas B-21 en aval",
+        "Asymétrie amont->aval : B-21 cite B-01 en amont, mais B-01 ne cite pas B-21 en aval",
+        "Asymétrie aval->amont : B-22 cite B-41 en aval, mais B-41 ne cite pas B-22 en amont",
+        "Asymétrie aval->amont : B-22 cite B-50 en aval, mais B-50 ne cite pas B-22 en amont",
+        "Asymétrie amont->aval : B-22 cite B-02 en amont, mais B-02 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-03 en amont, mais B-03 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-24 en amont, mais B-24 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-40 en amont, mais B-40 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-41 en amont, mais B-41 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-42 en amont, mais B-42 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-43 en amont, mais B-43 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-44 en amont, mais B-44 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-45 en amont, mais B-45 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-46 en amont, mais B-46 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-47 en amont, mais B-47 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-48 en amont, mais B-48 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-49 en amont, mais B-49 ne cite pas B-22 en aval",
+        "Asymétrie amont->aval : B-22 cite B-50 en amont, mais B-50 ne cite pas B-22 en aval",
+        "Asymétrie aval->amont : B-23 cite B-45 en aval, mais B-45 ne cite pas B-23 en amont",
+        "Asymétrie aval->amont : B-23 cite B-47 en aval, mais B-47 ne cite pas B-23 en amont",
+        "Asymétrie aval->amont : B-23 cite B-48 en aval, mais B-48 ne cite pas B-23 en amont",
+        "Asymétrie aval->amont : B-23 cite B-49 en aval, mais B-49 ne cite pas B-23 en amont",
+        "Asymétrie aval->amont : B-23 cite B-50 en aval, mais B-50 ne cite pas B-23 en amont",
+        "Asymétrie amont->aval : B-23 cite B-13 en amont, mais B-13 ne cite pas B-23 en aval",
+        "Asymétrie amont->aval : B-23 cite B-14 en amont, mais B-14 ne cite pas B-23 en aval",
+        "Asymétrie aval->amont : B-24 cite B-03 en aval, mais B-03 ne cite pas B-24 en amont",
+        "Asymétrie aval->amont : B-24 cite B-04 en aval, mais B-04 ne cite pas B-24 en amont",
+        "Asymétrie aval->amont : B-24 cite B-45 en aval, mais B-45 ne cite pas B-24 en amont",
+        "Asymétrie aval->amont : B-24 cite T-04 en aval, mais T-04 ne cite pas B-24 en amont",
+        "Asymétrie amont->aval : B-24 cite B-02 en amont, mais B-02 ne cite pas B-24 en aval",
+        "Asymétrie amont->aval : B-24 cite B-21 en amont, mais B-21 ne cite pas B-24 en aval",
+        "Asymétrie aval->amont : B-30 cite B-71 en aval, mais B-71 ne cite pas B-30 en amont",
+        "Asymétrie amont->aval : B-30 cite B-00 en amont, mais B-00 ne cite pas B-30 en aval",
+        "Asymétrie amont->aval : B-30 cite B-01 en amont, mais B-01 ne cite pas B-30 en aval",
+        "Asymétrie aval->amont : B-31 cite B-32 en aval, mais B-32 ne cite pas B-31 en amont",
+        "Asymétrie aval->amont : B-31 cite B-71 en aval, mais B-71 ne cite pas B-31 en amont",
+        "Asymétrie amont->aval : B-31 cite B-41 en amont, mais B-41 ne cite pas B-31 en aval",
+        "Asymétrie aval->amont : B-32 cite B-71 en aval, mais B-71 ne cite pas B-32 en amont",
+        "Asymétrie amont->aval : B-32 cite B-00 en amont, mais B-00 ne cite pas B-32 en aval",
+        "Asymétrie aval->amont : B-33 cite B-32 en aval, mais B-32 ne cite pas B-33 en amont",
+        "Asymétrie aval->amont : B-33 cite B-60 en aval, mais B-60 ne cite pas B-33 en amont",
+        "Asymétrie aval->amont : B-33 cite B-71 en aval, mais B-71 ne cite pas B-33 en amont",
+        "Asymétrie amont->aval : B-33 cite B-41 en amont, mais B-41 ne cite pas B-33 en aval",
+        "Asymétrie amont->aval : B-40 cite B-42 en amont, mais B-42 ne cite pas B-40 en aval",
+        "Asymétrie amont->aval : B-40 cite B-45 en amont, mais B-45 ne cite pas B-40 en aval",
+        "Asymétrie amont->aval : B-40 cite B-50 en amont, mais B-50 ne cite pas B-40 en aval",
+        "Asymétrie aval->amont : B-41 cite B-50 en aval, mais B-50 ne cite pas B-41 en amont",
+        "Asymétrie aval->amont : B-41 cite B-72 en aval, mais B-72 ne cite pas B-41 en amont",
+        "Asymétrie aval->amont : B-41 cite T-04 en aval, mais T-04 ne cite pas B-41 en amont",
+        "Asymétrie amont->aval : B-41 cite B-40 en amont, mais B-40 ne cite pas B-41 en aval",
+        "Asymétrie amont->aval : B-42 cite B-40 en amont, mais B-40 ne cite pas B-42 en aval",
+        "Asymétrie amont->aval : B-42 cite B-50 en amont, mais B-50 ne cite pas B-42 en aval",
+        "Asymétrie amont->aval : B-43 cite B-40 en amont, mais B-40 ne cite pas B-43 en aval",
+        "Asymétrie amont->aval : B-43 cite B-42 en amont, mais B-42 ne cite pas B-43 en aval",
+        "Asymétrie amont->aval : B-43 cite B-46 en amont, mais B-46 ne cite pas B-43 en aval",
+        "Asymétrie amont->aval : B-44 cite B-11 en amont, mais B-11 ne cite pas B-44 en aval",
+        "Asymétrie amont->aval : B-45 cite B-40 en amont, mais B-40 ne cite pas B-45 en aval",
+        "Asymétrie amont->aval : B-45 cite B-42 en amont, mais B-42 ne cite pas B-45 en aval",
+        "Asymétrie amont->aval : B-45 cite B-43 en amont, mais B-43 ne cite pas B-45 en aval",
+        "Asymétrie amont->aval : B-46 cite B-11 en amont, mais B-11 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-46 cite B-40 en amont, mais B-40 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-46 cite B-42 en amont, mais B-42 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-46 cite B-43 en amont, mais B-43 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-46 cite B-44 en amont, mais B-44 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-46 cite B-45 en amont, mais B-45 ne cite pas B-46 en aval",
+        "Asymétrie amont->aval : B-47 cite B-42 en amont, mais B-42 ne cite pas B-47 en aval",
+        "Asymétrie amont->aval : B-47 cite B-43 en amont, mais B-43 ne cite pas B-47 en aval",
+        "Asymétrie amont->aval : B-47 cite B-50 en amont, mais B-50 ne cite pas B-47 en aval",
+        "Asymétrie amont->aval : B-48 cite B-42 en amont, mais B-42 ne cite pas B-48 en aval",
+        "Asymétrie amont->aval : B-48 cite B-43 en amont, mais B-43 ne cite pas B-48 en aval",
+        "Asymétrie amont->aval : B-48 cite B-50 en amont, mais B-50 ne cite pas B-48 en aval",
+        "Asymétrie amont->aval : B-49 cite B-24 en amont, mais B-24 ne cite pas B-49 en aval",
+        "Asymétrie amont->aval : B-49 cite B-42 en amont, mais B-42 ne cite pas B-49 en aval",
+        "Asymétrie amont->aval : B-49 cite B-46 en amont, mais B-46 ne cite pas B-49 en aval",
+        "Asymétrie amont->aval : B-49 cite B-50 en amont, mais B-50 ne cite pas B-49 en aval",
+        "Asymétrie aval->amont : B-60 cite B-70 en aval, mais B-70 ne cite pas B-60 en amont",
+        "Asymétrie amont->aval : B-60 cite B-02 en amont, mais B-02 ne cite pas B-60 en aval",
+        "Asymétrie aval->amont : B-62 cite B-70 en aval, mais B-70 ne cite pas B-62 en amont",
+        "Asymétrie amont->aval : B-62 cite B-30 en amont, mais B-30 ne cite pas B-62 en aval",
+        "Asymétrie amont->aval : B-62 cite B-32 en amont, mais B-32 ne cite pas B-62 en aval",
+        "Asymétrie amont->aval : B-62 cite B-41 en amont, mais B-41 ne cite pas B-62 en aval",
+        "Asymétrie aval->amont : B-64 cite B-70 en aval, mais B-70 ne cite pas B-64 en amont",
+        "Asymétrie aval->amont : B-64 cite B-72 en aval, mais B-72 ne cite pas B-64 en amont",
+        "Asymétrie amont->aval : B-64 cite B-03 en amont, mais B-03 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-22 en amont, mais B-22 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-40 en amont, mais B-40 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-41 en amont, mais B-41 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-42 en amont, mais B-42 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-43 en amont, mais B-43 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-44 en amont, mais B-44 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-45 en amont, mais B-45 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-46 en amont, mais B-46 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-47 en amont, mais B-47 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-48 en amont, mais B-48 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-49 en amont, mais B-49 ne cite pas B-64 en aval",
+        "Asymétrie amont->aval : B-64 cite B-50 en amont, mais B-50 ne cite pas B-64 en aval",
+        "Asymétrie aval->amont : B-72 cite T-04 en aval, mais T-04 ne cite pas B-72 en amont",
+        "Asymétrie aval->amont : T-01 cite B-03 en aval, mais B-03 ne cite pas T-01 en amont",
+        "Asymétrie aval->amont : T-01 cite T-03 en aval, mais T-03 ne cite pas T-01 en amont",
+        "Asymétrie amont->aval : T-01 cite B-00 en amont, mais B-00 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-01 en amont, mais B-01 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-02 en amont, mais B-02 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-03 en amont, mais B-03 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-04 en amont, mais B-04 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-10 en amont, mais B-10 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-11 en amont, mais B-11 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-12 en amont, mais B-12 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-13 en amont, mais B-13 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-14 en amont, mais B-14 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-15 en amont, mais B-15 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-20 en amont, mais B-20 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-21 en amont, mais B-21 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-23 en amont, mais B-23 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-24 en amont, mais B-24 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-30 en amont, mais B-30 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-31 en amont, mais B-31 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-32 en amont, mais B-32 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-33 en amont, mais B-33 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-40 en amont, mais B-40 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-41 en amont, mais B-41 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-42 en amont, mais B-42 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-43 en amont, mais B-43 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-44 en amont, mais B-44 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-45 en amont, mais B-45 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-46 en amont, mais B-46 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-47 en amont, mais B-47 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-48 en amont, mais B-48 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-49 en amont, mais B-49 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-50 en amont, mais B-50 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-60 en amont, mais B-60 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-62 en amont, mais B-62 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-64 en amont, mais B-64 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-70 en amont, mais B-70 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-71 en amont, mais B-71 ne cite pas T-01 en aval",
+        "Asymétrie amont->aval : T-01 cite B-72 en amont, mais B-72 ne cite pas T-01 en aval",
+        "Asymétrie aval->amont : T-02 cite B-31 en aval, mais B-31 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-33 en aval, mais B-33 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-40 en aval, mais B-40 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-41 en aval, mais B-41 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-42 en aval, mais B-42 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-43 en aval, mais B-43 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-44 en aval, mais B-44 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-45 en aval, mais B-45 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-46 en aval, mais B-46 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-47 en aval, mais B-47 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-48 en aval, mais B-48 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-49 en aval, mais B-49 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-50 en aval, mais B-50 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-02 cite B-60 en aval, mais B-60 ne cite pas T-02 en amont",
+        "Asymétrie aval->amont : T-04 cite B-03 en aval, mais B-03 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-40 en aval, mais B-40 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-41 en aval, mais B-41 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-42 en aval, mais B-42 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-43 en aval, mais B-43 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-44 en aval, mais B-44 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-45 en aval, mais B-45 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-46 en aval, mais B-46 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-47 en aval, mais B-47 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-48 en aval, mais B-48 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-49 en aval, mais B-49 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-50 en aval, mais B-50 ne cite pas T-04 en amont",
+        "Asymétrie aval->amont : T-04 cite B-72 en aval, mais B-72 ne cite pas T-04 en amont",
+        "Asymétrie amont->aval : T-04 cite B-02 en amont, mais B-02 ne cite pas T-04 en aval"
+      ],
+      "metrics": {
+        "b_sheets": 37,
+        "t_sheets": 4,
+        "asymmetric_edges": 221
+      }
+    },
+    "T5_compteurs_cardinaux": {
+      "status": "FAIL",
+      "errors": [
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:162 — mention '12 verrous' != 13 verrous : 'Les 12 verrous sont la protection du carnet contre les dérives. Une correction qui supprim'",
+        "09_TRANSVERSE/T-03_Meta_Amelioration.md:182 — mention '12 verrous' != 13 verrous : '* les 12 verrous sont la protection du carnet contre les dérives ;'"
+      ],
+      "warnings": []
+    },
+    "T6_renvois_internes": {
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    "T7_non_regression_verrous": {
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "locks_found": [
+          "V1",
+          "V2",
+          "V3",
+          "V4",
+          "V5",
+          "V6",
+          "V7",
+          "V8",
+          "V9",
+          "V10",
+          "V11",
+          "V12",
+          "V13"
+        ]
+      }
+    },
+    "T8_placeholders_V7": {
+      "status": "WARN",
+      "errors": [],
+      "warnings": [
+        "05_PHASE_3_CALAGE/B-30_Calage.md: placeholders prompt=['ID-01', 'ID-02'] != Rappel V7=['ID-01', 'ID-02', 'mode']",
+        "05_PHASE_3_CALAGE/B-32_Vue_Nettoyee.md: placeholders prompt=['ID-01', 'ID-02', 'code_livrable', 'indice_livrable'] != Rappel V7=['ID-01', 'ID-02', 'code_livrable', 'indice_livrable', 'mode']",
+        "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md: placeholders prompt=['ID-01', 'ID-02', 'indice', 'mode', 'type_livrable'] != Rappel V7=['ID-01', 'ID-02', 'mode', 'type_livrable']",
+        "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md: placeholders prompt=['ID-01', 'ID-02', 'type_livrable'] != Rappel V7=['ID-01', 'ID-02', 'mode', 'type_livrable']",
+        "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md: placeholders prompt=['ID-01', 'ID-02', 'type_livrable'] != Rappel V7=['ID-01', 'ID-02', 'mode', 'type_livrable']",
+        "08_PHASE_6_CLOTURE/B-70_AutoControle_Synthese.md: placeholders prompt=['ID-01', 'ID-02', 'périmètre'] != Rappel V7=['ID-01', 'ID-02', 'mode', 'périmètre']"
+      ]
+    },
+    "T9_journal_et_proprete": {
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    },
+    "T10_completude_fiches": {
+      "status": "PASS",
+      "errors": [],
+      "warnings": []
+    }
+  }
+}
