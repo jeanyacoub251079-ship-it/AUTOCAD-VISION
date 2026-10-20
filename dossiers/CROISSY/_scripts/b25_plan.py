@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-B-25 — PLANCHE DE CONTREVENTEMENT (Indice B) — CROISSY-FLORA
+B-25 — PLANCHE DE CONTREVENTEMENT (Indice C) — CROISSY-FLORA
 Report du schéma de contreventement sur le fond structurel pur B-32 Ind. D.
 
 Sortie : dossiers/CROISSY/_plans/FLORA_B25_CONTREVENTEMENT_IndC.{dxf,pdf,png}
@@ -153,7 +153,7 @@ def main():
     add_rect(msp, tx0, y_top - 92, tx1, y_top, "B25-ALERTE")
     add_rect(msp, tx0 + 8, y_top - 84, tx1 - 8, y_top - 8, "B25-ALERTE")
     add_txt(msp, tx0 + 30, y_top - 60,
-            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. B)", h=21.0, layer="B25-ALERTE")
+            "PRINCIPE — NE PAS EXECUTER — Indice P   (B-25 Ind. C)", h=21.0, layer="B25-ALERTE")
 
     y = y_top - 140
     add_txt(msp, tx0 + 24, y, "1. SYSTEME DE CONTREVENTEMENT — VERDICT", h=16.0)
