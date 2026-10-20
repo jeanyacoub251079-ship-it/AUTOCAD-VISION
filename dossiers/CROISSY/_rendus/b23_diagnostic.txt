@@ -1,0 +1,85 @@
+==============================================================================
+B-23 — EXPLOITATION DU DIAGNOSTIC EXISTANT — CROISSY-FLORA
+Des 9 desordres de B-11 aux contraintes de conception
+==============================================================================
+
+[1] RATTACHEMENT AUX DESORDRES NUMEROTES PAR B-11
+    Desordres B-11 attendus : 9 (numeros 1 a 9)
+    Repris dans B-23        : 9
+    Manquants   : aucun
+    Ajoutes     : aucun
+    Doublons    : aucun
+
+[2] CLASSEMENT PAR CATEGORIE
+    Categorie                         Nombre    Desordres
+    renforcement obligatoire          4         n.1, n.3, n.6, n.8
+    renforcement sous condition       1         n.5
+    phasage                           3         n.3, n.6, n.8
+    coordination lot                  3         n.2, n.4, n.7
+    sans impact                       1         n.9
+
+    Desordres classes : 9/9
+    Sans categorie    : aucun
+
+[3] DESORDRES CUMMULANT RENFORCEMENT ET PHASAGE
+    3 desordres : [3, 6, 8]
+    -> ce sont eux qui imposent un ORDRE d'execution, pas seulement un ouvrage.
+    -> deux d'entre eux (6 et 8) n'etaient couverts par aucune prescription.
+
+[4] ZONES HORS RELEVE
+    Zone                      Emprise                     Releve requis
+    ZONE NON RELEVEE n.1      non etablie                 releve de charpente
+    ZONE NON RELEVEE n.2      non etablie                 releve de charpente
+    Combles (ensemble)        surface totale des combles  reconnaissance visuelle exhaustive
+    Fondations                9,90 x 18,49 m              ouverture de fouilles (H-15)
+    Planchers                 non etablie                 sondage destructif
+
+    Emprises declarees NON ETABLIES : 3 -> ['ZONE NON RELEVEE n.1', 'ZONE NON RELEVEE n.2', 'Planchers']
+    Aucune emprise n'est reconstituee : une emprise inventee serait pire
+    qu'une emprise absente.
+
+[5] APPUIS DE NOTRE STRUCTURE SUR L'EXISTANT
+    Appui               Support existant                    N_ELU               Admissible          Verifie par
+    P1-N / P1-S         Mur moellons facade Ouest ep. 0,50  111,5 kN            inconnue            B-46 / B-40
+    P2                  Mur moellons facade Ouest           217,7 kN            inconnue            B-46 / B-40
+    P3                  Refend interieur moellons           39,8 kN             inconnue            B-46
+    J1                  Refend central majeur ep. 0,50 m    44,3 kN             inconnue            B-46
+    F1a / F1b / F1c     Mur moellons ep. 0,50 m             76,5 kN/m           inconnue            B-46 / B-49
+    R1                  Refend central (file D) et facade   57,9 kN/m           inconnue            B-46 / B-50
+    R2-N / R2-S         Refends transversaux moellons       34,8 / 27,1 kN/m    inconnue            B-46
+    R3-N / R3-S         Maconnerie facade Est au-dessus de  66,5 kN (reaction)  inconnue            B-49 / B-46
+    M11 / M03           Murs existants (voiles comptes)     81,0 / 68,0 kN/m    0,094 MPa (calcule  B-46
+
+    Appuis rattaches a un ouvrage identifie : 9/9
+    Contrainte admissible CONNUE : 1/9 -> ['M11 / M03']
+    -> 8 appuis sur 9 reposent sur une resistance non mesuree (H-25, clause D-34).
+
+[6] SEQUENCES DE PHASAGE IMPOSEES
+    Ref     Sequence                                        Motif                       Desordre
+    P-1     Etaiement -> renfort -> depose                  fleche deja consommee       3
+    P-2     Purge -> traitement -> renfort de ferme         bois altere = bois mort     6
+    P-3     Verification flambement -> augmentation de cha  potelets instables          8
+    P-4     Zinguerie -> pose des ouvrages bois et acier    chemin d'eau                4 / 2
+    P-5     Fissuration facade -> renforts de facade        appuis de linteaux mouille  2
+    P-6     F3 avant F2                                     ordre de pose B-25          -
+    P-7     Reprises en sous-oeuvre par passes alternees <  D2 f. 04 / H-13             -
+
+    Sequences introduites par B-23 (absentes du dossier avant) : ['P-2', 'P-3']
+
+[7] CONTROLE D'ABSENCE DE SOLUTION CHIFFREE DANS LA NOTE
+    Tableau 2 (orientations) : aucune section, aucun ferraillage, aucune nuance.
+    Les valeurs numeriques du tableau 4 sont des EFFETS DE CHARGE de B-21,
+    jamais des resistances.
+
+[8] SYNTHESE — CONTROLE DU NOMBRE DE LIGNES
+    Lignes numerotees de la synthese : 8 (maximum 8)
+
+[9] AUTO-CONTROLE DES SIX CRITERES DE LA FICHE B-23
+    1. Chaque contrainte rattachee a un desordre numerote de B-11   OK
+    2. Chaque contrainte classee dans l'une des cinq categories     OK
+    3. Chaque zone hors releve : blocage + releve identifie         OK
+    4. Chaque appui rattache a un ouvrage existant identifie        OK
+    5. Aucune solution technique chiffree proposee                  OK
+    6. Synthese en 8 lignes maximum                                 OK
+
+    VERDICT : 6/6 — CONFORME

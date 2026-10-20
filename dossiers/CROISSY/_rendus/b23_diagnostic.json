@@ -1,0 +1,266 @@
+{
+  "brique": "B-23",
+  "indice": "A",
+  "date": "20/10/2026",
+  "desordres": [
+    {
+      "num": 1,
+      "libelle": "Linteaux non porteurs deformes (facade Ouest)",
+      "categories": [
+        "RENF"
+      ],
+      "ouvrage": "F1a/F1b/F1c",
+      "brique": "B-45",
+      "sequence": null
+    },
+    {
+      "num": 2,
+      "libelle": "Fissuration jonction bois/brique (facades)",
+      "categories": [
+        "LOT"
+      ],
+      "ouvrage": "Facades",
+      "brique": "-",
+      "sequence": "P-5"
+    },
+    {
+      "num": 3,
+      "libelle": "Fleche de la poutre maitresse 20x15",
+      "categories": [
+        "PHAS",
+        "RENF"
+      ],
+      "ouvrage": "R1/R2/R3",
+      "brique": "B-45",
+      "sequence": "P-1"
+    },
+    {
+      "num": 4,
+      "libelle": "Humidite au droit des descentes EP",
+      "categories": [
+        "LOT"
+      ],
+      "ouvrage": "Zinguerie",
+      "brique": "-",
+      "sequence": "P-4"
+    },
+    {
+      "num": 5,
+      "libelle": "Fissures du plancher haut portant la charpente",
+      "categories": [
+        "COND"
+      ],
+      "ouvrage": "Plancher haut",
+      "brique": "B-43",
+      "sequence": null
+    },
+    {
+      "num": 6,
+      "libelle": "Ferme de charpente alteree par l'humidite",
+      "categories": [
+        "PHAS",
+        "RENF"
+      ],
+      "ouvrage": "Ferme",
+      "brique": "B-44",
+      "sequence": "P-2"
+    },
+    {
+      "num": 7,
+      "libelle": "Traces d'humidite sale d'eau / menuiseries",
+      "categories": [
+        "LOT"
+      ],
+      "ouvrage": "Second oeuvre",
+      "brique": "B-50",
+      "sequence": null
+    },
+    {
+      "num": 8,
+      "libelle": "Chevrons alteres, potelets instables",
+      "categories": [
+        "PHAS",
+        "RENF"
+      ],
+      "ouvrage": "Potelets Est",
+      "brique": "B-44",
+      "sequence": "P-3"
+    },
+    {
+      "num": 9,
+      "libelle": "Lattis-platre fissure",
+      "categories": [
+        "SANS"
+      ],
+      "ouvrage": "Plafond",
+      "brique": "-",
+      "sequence": null
+    }
+  ],
+  "par_categorie": {
+    "renforcement obligatoire": [
+      1,
+      3,
+      6,
+      8
+    ],
+    "renforcement sous condition": [
+      5
+    ],
+    "phasage": [
+      3,
+      6,
+      8
+    ],
+    "coordination lot": [
+      2,
+      4,
+      7
+    ],
+    "sans impact": [
+      9
+    ]
+  },
+  "zones_hors_releve": [
+    {
+      "zone": "ZONE NON RELEVEE n.1",
+      "emprise": "non etablie",
+      "blocage": "toute verification de charpente",
+      "releve": "releve de charpente"
+    },
+    {
+      "zone": "ZONE NON RELEVEE n.2",
+      "emprise": "non etablie",
+      "blocage": "toute verification de charpente",
+      "releve": "releve de charpente"
+    },
+    {
+      "zone": "Combles (ensemble)",
+      "emprise": "surface totale des combles",
+      "blocage": "etat sanitaire global de la charpente",
+      "releve": "reconnaissance visuelle exhaustive"
+    },
+    {
+      "zone": "Fondations",
+      "emprise": "9,90 x 18,49 m",
+      "blocage": "niveau, largeur et etat des semelles",
+      "releve": "ouverture de fouilles (H-15)"
+    },
+    {
+      "zone": "Planchers",
+      "emprise": "non etablie",
+      "blocage": "composition, epaisseur, sens porteur",
+      "releve": "sondage destructif"
+    }
+  ],
+  "appuis": [
+    {
+      "appui": "P1-N / P1-S",
+      "support": "Mur moellons facade Ouest ep. 0,50 m",
+      "N_ELU": "111,5 kN",
+      "admissible": "inconnue",
+      "verifie": "B-46 / B-40"
+    },
+    {
+      "appui": "P2",
+      "support": "Mur moellons facade Ouest",
+      "N_ELU": "217,7 kN",
+      "admissible": "inconnue",
+      "verifie": "B-46 / B-40"
+    },
+    {
+      "appui": "P3",
+      "support": "Refend interieur moellons",
+      "N_ELU": "39,8 kN",
+      "admissible": "inconnue",
+      "verifie": "B-46"
+    },
+    {
+      "appui": "J1",
+      "support": "Refend central majeur ep. 0,50 m",
+      "N_ELU": "44,3 kN",
+      "admissible": "inconnue",
+      "verifie": "B-46"
+    },
+    {
+      "appui": "F1a / F1b / F1c",
+      "support": "Mur moellons ep. 0,50 m",
+      "N_ELU": "76,5 kN/m",
+      "admissible": "inconnue",
+      "verifie": "B-46 / B-49"
+    },
+    {
+      "appui": "R1",
+      "support": "Refend central (file D) et facade",
+      "N_ELU": "57,9 kN/m",
+      "admissible": "inconnue",
+      "verifie": "B-46 / B-50"
+    },
+    {
+      "appui": "R2-N / R2-S",
+      "support": "Refends transversaux moellons",
+      "N_ELU": "34,8 / 27,1 kN/m",
+      "admissible": "inconnue",
+      "verifie": "B-46"
+    },
+    {
+      "appui": "R3-N / R3-S",
+      "support": "Maconnerie facade Est au-dessus des baies",
+      "N_ELU": "66,5 kN (reaction)",
+      "admissible": "inconnue",
+      "verifie": "B-49 / B-46"
+    },
+    {
+      "appui": "M11 / M03",
+      "support": "Murs existants (voiles comptes)",
+      "N_ELU": "81,0 / 68,0 kN/m",
+      "admissible": "0,094 MPa (calculee)",
+      "verifie": "B-46"
+    }
+  ],
+  "sequences": [
+    {
+      "ref": "P-1",
+      "sequence": "Etaiement -> renfort -> depose",
+      "motif": "fleche deja consommee",
+      "desordre": "3"
+    },
+    {
+      "ref": "P-2",
+      "sequence": "Purge -> traitement -> renfort de ferme",
+      "motif": "bois altere = bois mort",
+      "desordre": "6"
+    },
+    {
+      "ref": "P-3",
+      "sequence": "Verification flambement -> augmentation de charge",
+      "motif": "potelets instables",
+      "desordre": "8"
+    },
+    {
+      "ref": "P-4",
+      "sequence": "Zinguerie -> pose des ouvrages bois et acier",
+      "motif": "chemin d'eau",
+      "desordre": "4 / 2"
+    },
+    {
+      "ref": "P-5",
+      "sequence": "Fissuration facade -> renforts de facade",
+      "motif": "appuis de linteaux mouilles",
+      "desordre": "2"
+    },
+    {
+      "ref": "P-6",
+      "sequence": "F3 avant F2",
+      "motif": "ordre de pose B-25",
+      "desordre": "-"
+    },
+    {
+      "ref": "P-7",
+      "sequence": "Reprises en sous-oeuvre par passes alternees <= 1,00 m",
+      "motif": "D2 f. 04 / H-13",
+      "desordre": "-"
+    }
+  ],
+  "verdict_6_criteres": 6
+}

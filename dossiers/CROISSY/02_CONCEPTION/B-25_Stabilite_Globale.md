@@ -13,12 +13,16 @@
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b25_stabilite.py` |
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b25_stabilite.txt` (7 216 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b25_stabilite.json` (13 409 o) |
-| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndD` (`.dxf` · `.pdf` · `.png`) |
-| **Indice** | **D** — remplace et annule l'indice C du 20/10/2026 (décision `D-34`) |
+| Planche `B-25` | `_plans/FLORA_B25_CONTREVENTEMENT_IndE` (`.dxf` · `.pdf` · `.png`) |
+| **Indice** | **E** — remplace et annule l'indice D du 20/10/2026 (décision `D-29`) |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-22`** (note d'hypothèses), `B-21` étant livrée en indice B |
 
-> **Ce qui change à l'indice D.** **`D-34`** — les caractéristiques de la maçonnerie (`f_k = 1,5 MPa`, `f_vk0 = 0,15 MPa`) sont désormais **notifiées comme hypothèse d'étude à confirmer par essais**, avec deux conséquences écrites : **les essais sont hors de notre mission et à la charge du maître d'ouvrage**, et **en cas d'essais non concluants, la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée**. La clause figure au § 3, au § 8.1 et sur la planche (§ 8 de la colonne de notes). Aucun résultat n'est modifié.
+> **Ce qui change à l'indice E.** **`D-29` est consignée** : le contreventement en service est assuré par **la maçonnerie existante seule** — aucun renfort métallique, aucun poteau, aucun frangement n'est réputé reprendre les efforts horizontaux. **Aucun résultat n'est modifié** : c'était déjà l'hypothèse du calcul. Ce qui change est la **qualité** de cette hypothèse : elle passe de *proposition de l'ingénieur* à *décision du client*. Les trois hypothèses de maçonnerie (`H-25`, `H-26`, `H-27`) passent de **vérifiées** à **arbitrées**. **Il ne reste aucun point ouvert dans cette note.**
+>
+> *Indice D : `D-34` — hypothèse de maçonnerie à confirmer par essais.*
+>
+> **Ce qui changeait à l'indice D.** **`D-34`** — les caractéristiques de la maçonnerie (`f_k = 1,5 MPa`, `f_vk0 = 0,15 MPa`) sont désormais **notifiées comme hypothèse d'étude à confirmer par essais**, avec deux conséquences écrites : **les essais sont hors de notre mission et à la charge du maître d'ouvrage**, et **en cas d'essais non concluants, la reprise de nos études fait l'objet d'une prestation complémentaire chiffrée**. La clause figure au § 3, au § 8.1 et sur la planche (§ 8 de la colonne de notes). Aucun résultat n'est modifié.
 >
 > *Indice C : `D-28` — aucun joint de dilatation.*
 >
@@ -302,7 +306,7 @@ Trois prescriptions restent dans notre livrable, mais **aucune ne porte sur la s
 
 ## 7. PIÈCE 5 — SCHÉMA DE CONTREVENTEMENT REPORTÉ SUR LE FOND `B-32`
 
-La planche **`FLORA_B25_CONTREVENTEMENT_IndD`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
+La planche **`FLORA_B25_CONTREVENTEMENT_IndE`** (`.dxf` · `.pdf` · `.png`, A3 paysage, `1/80`) reporte sur le fond structurel pur `B-32 Ind. D` :
 
 - les **12 voiles RDC comptés**, repérés `M01` à `M12`, avec leur raideur `K_x`/`K_y` et leur aire ;
 - les **quatre voiles majeurs** (`M11`, `M03`, `M09`, `M04` — 95,1 % de la raideur) mis en évidence ;
@@ -355,7 +359,7 @@ Les repères `M01` à `M12` sont **identiques** à ceux du journal `b25_stabilit
 | **`D-26`** | **Aucune vérification sismique** — zone 1 (Île-de-France), séisme très faible | ✅ **CONSIGNÉE** le 20/10/2026 |
 | **`D-27`** | **Stabilité provisoire — MOE structure de conception** : la vérification du contreventement en phase provisoire dans un bâtiment existant lui incombe, hors de notre mission | ✅ **CONSIGNÉE** le 20/10/2026 |
 | **`D-28`** | **Aucun joint de dilatation** sur le pavillon Flora | ✅ **CONSIGNÉE** le 20/10/2026 — décision ferme du client |
-| **`D-29`** | **Le contreventement en service est la maçonnerie existante seule** ; aucun cadre métallique n'est réputé contreventant | ⏳ **PROPOSÉE** — en attente de votre arbitrage (§ 9, point 1) |
+| **`D-29`** | **Le contreventement en service est la maçonnerie existante seule** ; aucun cadre métallique n'est réputé contreventant | ✅ **CONSIGNÉE** le 20/10/2026 — décision ferme du client |
 
 ---
 
@@ -373,7 +377,7 @@ Les sept critères de la fiche `B-25` sont repris, **avec le statut réel de cha
 | 6 | Les phases provisoires sont étudiées | **HORS MISSION — `D-27`** | § 6 : la vérification incombe à la MOE structure de conception ; les **grandeurs d'entrée lui sont transmises** (§ 6.2) et la demande est formalisée (`T-04`). **Ce n'est pas une non-conformité : c'est un retrait de périmètre décidé par le client** |
 | 7 | Aucun élément porteur n'a été dimensionné dans cette brique | ✅ **CONFORME** | Aucune section, aucun ferraillage, aucun assemblage ; `f_vk` est une **capacité existante** vérifiée, pas un dimensionnement |
 
-**Verdict de la brique `B-25` (Indice C) : 6 critères satisfaits sur 6 applicables, 1 critère hors mission par décision (`D-27`).**
+**Verdict de la brique `B-25` (Indice E) : 6 critères satisfaits sur 6 applicables, 1 critère hors mission par décision (`D-27`).**
 
 > **Sur la traçabilité de ce retrait.** Le critère 6 de la fiche n'est pas « non satisfait » : il est **retiré du périmètre par une décision écrite et datée**, ce qui est la seule manière propre de sortir d'un critère. Un critère non satisfait sans décision est une non-conformité ; un critère sorti par `D-27` est un périmètre. La distinction est consignée au RDR, pas seulement dans cette note.
 
@@ -384,7 +388,7 @@ Les sept critères de la fiche `B-25` sont repris, **avec le statut réel de cha
 **`D-28` est close** le 20/10/2026 : aucun joint de dilatation. La question ne sera pas reposée.
 **`D-34` est consignée** le 20/10/2026 : hypothèse de maçonnerie à confirmer par essais hors mission, reprise d'étude chiffrée si les essais sont non concluants.
 
-**Une seule décision reste ouverte — `D-29` :**
+**`D-29` est close** le 20/10/2026 : le contreventement est assuré par la maçonnerie existante seule. **Aucune décision ne reste ouverte dans cette note.**
 
 1. **Le contreventement en service est la maçonnerie existante seule** — aucun frangement, aucun renfort, aucun poteau compté comme élément de reprise horizontale. **Confirmez-vous ?** C'est la décision qui verrouille toutes les suivantes : compter un jour les frangements supposerait de les concevoir encastrés et triangulés, ce qui n'est pas le projet. **Tant qu'elle est ouverte, `H-27` (contrainte `σ_d`) reste une hypothèse examinée mais non arbitrée, et `B-21` en hérite au § 7.**
 
@@ -392,4 +396,4 @@ Et une action à votre main, qui ne dépend pas de nous : **adresser la demande 
 
 Dans l'attente de vos observations, `PA-01` (reconnaissance des voiles) et `PA-02` (liaison charpente-maçonnerie) sont **ouverts** et conditionnent le démarrage des travaux, sans bloquer les briques documentaires suivantes.
 
-**Brique B-25 livrée en indice C — en attente de votre GO ou de vos observations.**
+**Brique B-25 livrée en indice E — aucun point ouvert. En attente de votre GO ou de vos observations.**
