@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `VERT` — poteaux et jambages d'exécution — est livrée en indice A.** `P2` (`150 × 250`), `P3` (`400 × 500`) et `J1` (`240 × 500`) sont **implantés sur le fond `B-32`**, ferraillés `6 HA12`, `c_nom 30 mm`. `D-34` figure **sur le plan**. Les nuages `D-19` restent sous `P3`/`J1`. `H = 2 800 mm` reste une **hypothèse** (`R-42-1` ouverte). `B-03` passe en **indice AE**. Restent : `PLANCHER` (dallage sur RDC BAS), `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `LINTEAU`, `ASSEMBLAGE`.
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `PLANCHER` — dallage implanté sur le RDC BAS — est livrée en indice A.** Hachure d'emprise `111,15 m²` (`B-43`, non remesurée), joints de **retrait** `e ≤ 4 500 mm` (ce ne sont **pas** des joints de dilatation, `D-28`), désolidarisation `20 mm`, recharge `150 mm` sur `100 %` (`D-35`). Les solives `8 × 18` et les `IPE` restent de l'**existant**. Le DXF est **purgé** (11 blocs, `971 ko`) : le message `Maximum call stack size exceeded` du viewer JS sur les DXF `~2,7 Mo` / 454 blocs **n'est pas un fichier corrompu**. `B-03` passe en **indice AF**.
+
+**Juste avant (`B-60` VERT)** : **`B-60` type `VERT` — poteaux et jambages d'exécution — est livrée en indice A.** `P2` (`150 × 250`), `P3` (`400 × 500`) et `J1` (`240 × 500`) sont **implantés sur le fond `B-32`**, ferraillés `6 HA12`, `c_nom 30 mm`. `D-34` figure **sur le plan**. Les nuages `D-19` restent sous `P3`/`J1`. `H = 2 800 mm` reste une **hypothèse** (`R-42-1` ouverte). `B-03` passe en **indice AE**. Restent : `PLANCHER` (dallage sur RDC BAS), `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `LINTEAU`, `ASSEMBLAGE`.
 
 **Juste avant (`B-60` FOND)** : **`B-60` type `FOND` — plan `PLS` d'exécution — est livrée en indice A.** Semelle `SF1` `800 × 800 × 250 mm` avec les attentes **`6 HA12` équerre** (`l_bd 166 mm`) : les trois conditions de `R-50-1` sont **sur le plan**. L'ENC v3 figure **intégralement**. Les nuages `D-19` restent. Le fond est `B-32` Ind. D (aucune cloison). `B-03` passe en **indice AD**.
 
@@ -62,6 +64,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-60 — Plans d'exécution type PLANCHER` | **A** | **Dallage sur RDC BAS** · `ST25C` · JR `e≤4500` · `D-35`/`D-28` · DXF 11 blocs |
 | `B-60 — Plans d'exécution type VERT` | **A** | **`P2`/`P3`/`J1` implantés sur `B-32`** · `6 HA12` · `c_nom 30 mm` · `D-34` · `R-42-1` ouverte |
 | `B-60 — Plans d'exécution type FOND (PLS)` | **A** | **`SF1` `800×800×250` + `6 HA12` équerre `l_bd 166`** · ENC v3 · `R-50-1` close · `D-19` maintenus · fond `B-32` D |
 | `B-44 — Charpente bois` | **A** | **Neufs OK** — pannes `75×200 C24` `0,830` · DF `100×200`/`75×200` · CF `75×225` `0,940` · **`E-07` non chargé** · existant hors calcul · `D-38` |
@@ -72,7 +75,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | **F** | `SF1 80×80×25` (`D-30`, `σ_ELS = 0,204 MPa`), **dallage rechargé sur 100 % de l'emprise** (`D-35`), note `D-09` intégrale |
 
-### `02_Plans_PDF` — 18 planches PDF vectorielles
+### `02_Plans_PDF` — 19 planches PDF vectorielles
 
 | Planche | Indice |
 |---|---|
@@ -88,14 +91,17 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | **B-44 — Charpente bois** | **A** |
 | **B-60 — FOND EXE (PLS)** | **A** |
 | **B-60 — VERT EXE (P2/P3/J1)** | **A** |
+| **B-60 — PLANCHER EXE (dallage RDC BAS)** | **A** |
 | **B-50 — Assemblages et ancrages** | **A** |
 | **B-45 — Structure métallique : profilés, moisage, entretoises** | **A** |
 | **B-43 — Dallage : ferraillage, joints de retrait, désolidarisation** | **B** |
 | Preuves de calage B-30, B-31 A, B-31 B | 3 pièces |
 
-### `03_DXF` — 15 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
+### `03_DXF` — 16 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
 
-Les mêmes familles, plus **B-60 VERT EXE (ind. A)** : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-44 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)**, **B-50 (ind. A)**, **B-60 FOND (ind. A)** et **B-60 VERT (ind. A)**.
+Les mêmes familles, plus **B-60 PLANCHER EXE (ind. A, DXF purgé 11 blocs)** : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-44 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)**, **B-50 (ind. A)**, **B-60 FOND (ind. A)**, **B-60 VERT (ind. A)** et **B-60 PLANCHER (ind. A)**.
+
+**Viewer JS.** Les DXF d'overlay `B-32` (`~2,7 Mo`, 454 blocs) font saturer le panneau (`Maximum call stack size exceeded`). **Fichiers valides** (audit 0, PDF OK). Lire le **PDF/PNG** dans la fenêtre, le DXF dans AutoCAD. `B-60 PLANCHER` est purgé (`971 ko`, 11 blocs).
 
 ---
 

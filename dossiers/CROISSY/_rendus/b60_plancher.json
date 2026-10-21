@@ -1,0 +1,17 @@
+{
+ "type": "PLANCHER",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "dallage_mm": 130,
+ "treillis": "ST25C",
+ "joints_mm": 4500,
+ "D28": "aucun joint de dilatation",
+ "D35": "recharge 150 mm 100%",
+ "emprise_m2": 111.15,
+ "purge_blocs": 443,
+ "blocs_restants": 11,
+ "audit": 0,
+ "n_PLANCHER": 121,
+ "calques_manquants": [],
+ "octets": 970998
+}

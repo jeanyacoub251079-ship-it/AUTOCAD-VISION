@@ -1,0 +1,69 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type PLANCHER — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (B-43 B · D-35 · D-19 non levé · STR-03 absent)
+==============================================================================
+
+[0] ENTRÉES — ÉTAPE 1
+------------------------------------------------------------------------------
+  Note amont     : B-43 Ind. B — dallage CONFORME, solives A 0,619, zone B → B-45, E-07 impossible
+  Vue nettoyée   : B-32 Ind. D  — /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf (2719320 o)
+  Calage         : B-30
+  Cloisons/isol. : 0 — D-25
+  Dalle BA 20 cm : ÉCARTÉE (décision ferme)
+  Hors type      : FOND (livré) · VERT (livré) · METAL · MACON · LINTEAU · CHARPENTE
+
+[1] HYPOTHÈSES ET CLAUSES OPPOSABLES
+------------------------------------------------------------------------------
+  D-28 : AUCUN JOINT DE DILATATION. Joints de RETRAIT ≠ dilatation (NF DTU 13.3).
+  D-35 : recharge 15 cm sur le DALLAGE à 100 %, jamais sur planchers A et B.
+  D-09 : dallage coulé À MÊME les semelles, désolidarisé, JAMAIS sur leur débord.
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE.
+  c_nom = 30 mm (H-23) — le dallage n'est PAS une fondation (50 mm).
+  Termites : PRESCRITES D1 § 01.2.1.9.2 — sous dallage, avec polyane et géotextile.
+  E-07 / PA-03 / R-43-1 : plancher haut NON sondé — hors cette planche.
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO).
+  H-06 : emprise 111,15 m² = B-43 / B-21 — NON remesurée.
+
+[2] ZONES (B-43 — rien recalculé)
+------------------------------------------------------------------------------
+  D  dallage BA 13 cm ST25C   111,15 m²   p_ELU 14,21 kN/m²   portance 2,9 %   EXE ce plan
+  A  solives 8×18 e500 C18    existant    flexion 0,619        EXISTANT — pas un coffrage neuf
+  B  IPE 160 e720 + IPE 330   existant    7,28 kN/m            RENVOI B-45 / B-60 METAL
+  C  plancher haut            E-07        incalculable         PA-03 — hors planche (R+1)
+
+[3] DALLAGE — DISPOSITIONS D'EXÉCUTION
+------------------------------------------------------------------------------
+  Épaisseur     : 130 mm C25/30
+  Treillis      : ST25C Ø7 e150 = 257 mm²/m ≥ As,min 122  — PARTIE HAUTE, 40 mm sous nu sup.
+  Joints retrait: sciés e ≤ 4 500 mm, profondeur 43 mm (1/3 h), < 24 h, treillis NON coupé
+  Panneaux      : ≥ 6, ≤ 20,25 m²
+  Désolid.      : polystyrène 20 mm + mastic — périmètre ET P2/P3/J1/SF1/murs
+  Film          : polyane 200 µm remonté 100 mm
+  Fond de forme : GNT 40 cm
+  Recharge      : 150 mm sur 100 % (D-35)
+  Compactage    : INTERDIT sur débord de semelle
+  purge blocs non référencés : −443  → 11 blocs restants (géométrie B-32 inchangée)
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_PLANCHER_EXE_IndA.dxf (970998 o) — audit 0 erreur(s) — blocs 11
+
+[4] TEST DE RELECTURE DXF (V13)
+------------------------------------------------------------------------------
+  calque                          n
+  PLANCHER-AXES                    40
+  PLANCHER-HABILLAGE-TEXTE         14
+  PLANCHER-COTATION                12
+  PLANCHER-ACIER                   11
+  PLANCHER-JOINTS                  10
+  PLANCHER-DESOLID                  9
+  PLANCHER-DALLAGE                  8
+  PLANCHER-EXISTANT                 5
+  PLANCHER-DETAILS                  4
+  PLANCHER-NOMENCLATURE             4
+  PLANCHER-CARTOUCHE                2
+  PLANCHER-HYP                      2
+  PLANCHER-* total = 121  ·  calque 0 ajouts = 0  ·  blocs = 11
+  calques attendus : 12  · manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_PLANCHER_EXE_IndA.png / .pdf
