@@ -1,0 +1,14 @@
+{
+ "type": "MACON",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "coussins": 6,
+ "w_b_mm": 300,
+ "D37": true,
+ "purge": 443,
+ "blocs": 11,
+ "audit": 0,
+ "n_MACON": 106,
+ "calques_manquants": [],
+ "octets": 968922
+}

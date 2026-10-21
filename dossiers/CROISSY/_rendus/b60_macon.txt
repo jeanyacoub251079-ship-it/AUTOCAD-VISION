@@ -1,0 +1,53 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type MACON — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (B-46 A · D-37 · D-34 · MAT-09..12 bloquants)
+==============================================================================
+
+[0] ENTRÉES
+------------------------------------------------------------------------------
+  Note amont : B-46 Ind. A — 5 appuis OK, R1/F2/F3 → coussin w_b >= 300 mm
+  Décision   : D-37 (21/10) — coussin prescrit, R-46-1 / R-46-2 CLOSE
+  Positions  : B-20 Ind. B — millimètre, aucune position inventée
+  Vue        : B-32 Ind. D
+  Hors type  : F1/R3 (LINTEAU livré) · remplissage D-36 (METAL) · chaînages MAT-12 non relevés
+
+[1] CLAUSES
+------------------------------------------------------------------------------
+  D-34 : f_k=1,5 MPa · f_vk0=0,15 MPa · essais hors mission — PLAN ET NOTE.
+  D-37 : on prescrit le coussin w_b >= 300 mm sous R1 / F2 / F3.
+  Ce n'est PAS un linteau. D-26 : AUCUNE vérif. sismique. D-28 : AUCUN joint de dilatation.
+  Sommier centré en épaisseur (e <= t/4). Lit de mortier complet.
+  Compactage / injection / tirants : hors type (spécialiste).
+  Protection au feu : ADEQUATE A PREVOIR (hors lot GO).
+  MAT-09..12 bloquants : aucune maçonnerie NEUVE dimensionnée.
+
+[2] COUSSINS (report B-20, w_b élargi à 300 mm)
+------------------------------------------------------------------------------
+  RÉP      SOUS         V_Ed     GEOM
+  C-F2-O   F2 Ouest     62,4 kN  S1 → 300 mm
+  C-F2-E   F2 Est       62,4 kN  S1 → 300 mm
+  C-F3-O   F3 Ouest     61,6 kN  S1 → 300 mm
+  C-F3-E   F3 Est       61,6 kN  S1 → 300 mm
+  C-R1-O   R1 Ouest     77,4 kN  S2 → 300 mm
+  C-R1-E   R1 Est       77,4 kN  S2 → 300 mm
+  N_Rdc (w_b=300, a1=0) >= 84 kN > 77,4  — verdict inconditionnel (B-46 §4).
+  purge blocs : −443 → 11 restants
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_MACON_EXE_IndA.dxf (968922 o) — audit 0 — blocs 11
+
+[3] V13
+------------------------------------------------------------------------------
+  MACON-AXES                       39
+  MACON-COUSSIN                    27
+  MACON-HABILLAGE-TEXTE            13
+  MACON-PROFILES                    8
+  MACON-DETAILS                     7
+  MACON-NOMENCLATURE                7
+  MACON-CARTOUCHE                   2
+  MACON-COTATION                    2
+  MACON-HYP                         1
+  MACON-* = 106  ·  calque 0 ajouts = 0  ·  manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_MACON_EXE_IndA.png / .pdf

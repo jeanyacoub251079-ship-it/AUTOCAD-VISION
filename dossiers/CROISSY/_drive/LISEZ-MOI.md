@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `LINTEAU` — cinq linteaux neufs implantés sur le RDC — est livrée en indice A.** `F1a/b/c` (`2 × HEA 200`) et `R3-N/S` (`UPE 200` + `D-36`) aux positions `B-20`. Les `S1` de `R3` sont sur les **abouts de mur**, hors bois (`E-08` court-circuité, aucun relevé). Seuils BA **SANS OBJET**. `D-37` (coussins) reste `B-60 MACON`. DXF purgé (11 blocs). `B-03` passe en **indice AG**.
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `MACON` — six coussins `w_b = 300 mm` sous `R1`/`F2`/`F3` — est livrée en indice A.** Prescription `D-37` exécutée sur le RDC. Verdict inconditionnel (`N_Rdc ≥ 84 kN` dès `a₁ = 0`). Ce n'est **pas** un linteau. `B-03` passe en **indice AH**. Restent : `METAL` (`D-36` + profilés), `CHARPENTE`, `ASSEMBLAGE`.
+
+**Juste avant (`B-60` LINTEAU)** : **`B-60` type `LINTEAU` — cinq linteaux neufs implantés sur le RDC — est livrée en indice A.** `F1a/b/c` (`2 × HEA 200`) et `R3-N/S` (`UPE 200` + `D-36`) aux positions `B-20`. Les `S1` de `R3` sont sur les **abouts de mur**, hors bois (`E-08` court-circuité, aucun relevé). Seuils BA **SANS OBJET**. `D-37` (coussins) reste `B-60 MACON`. DXF purgé (11 blocs). `B-03` passe en **indice AG**.
 
 **Juste avant (`B-60` PLANCHER)** : **`B-60` type `PLANCHER` — dallage implanté sur le RDC BAS — est livrée en indice A.** Hachure d'emprise `111,15 m²` (`B-43`, non remesurée), joints de **retrait** `e ≤ 4 500 mm` (ce ne sont **pas** des joints de dilatation, `D-28`), désolidarisation `20 mm`, recharge `150 mm` sur `100 %` (`D-35`). Les solives `8 × 18` et les `IPE` restent de l'**existant**. Le DXF est **purgé** (11 blocs, `971 ko`) : le message `Maximum call stack size exceeded` du viewer JS sur les DXF `~2,7 Mo` / 454 blocs **n'est pas un fichier corrompu**. `B-03` passe en **indice AF**.
 
@@ -66,6 +68,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-60 — Plans d'exécution type MACON` | **A** | **6 coussins `D-37`** · `w_b=300 mm` sous `R1`/`F2`/`F3` · verdict inconditionnel |
 | `B-60 — Plans d'exécution type LINTEAU` | **A** | **5 linteaux sur RDC** · `F1` `2×HEA 200` · `R3` `UPE 200`+`D-36` · `S1` hors bois · seuils SO |
 | `B-60 — Plans d'exécution type PLANCHER` | **A** | **Dallage sur RDC BAS** · `ST25C` · JR `e≤4500` · `D-35`/`D-28` · DXF 11 blocs |
 | `B-60 — Plans d'exécution type VERT` | **A** | **`P2`/`P3`/`J1` implantés sur `B-32`** · `6 HA12` · `c_nom 30 mm` · `D-34` · `R-42-1` ouverte |
@@ -78,7 +81,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | **F** | `SF1 80×80×25` (`D-30`, `σ_ELS = 0,204 MPa`), **dallage rechargé sur 100 % de l'emprise** (`D-35`), note `D-09` intégrale |
 
-### `02_Plans_PDF` — 20 planches PDF vectorielles
+### `02_Plans_PDF` — 21 planches PDF vectorielles
 
 | Planche | Indice |
 |---|---|
@@ -96,14 +99,15 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | **B-60 — VERT EXE (P2/P3/J1)** | **A** |
 | **B-60 — PLANCHER EXE (dallage RDC BAS)** | **A** |
 | **B-60 — LINTEAU EXE (F1/R3)** | **A** |
+| **B-60 — MACON EXE (coussins D-37)** | **A** |
 | **B-50 — Assemblages et ancrages** | **A** |
 | **B-45 — Structure métallique : profilés, moisage, entretoises** | **A** |
 | **B-43 — Dallage : ferraillage, joints de retrait, désolidarisation** | **B** |
 | Preuves de calage B-30, B-31 A, B-31 B | 3 pièces |
 
-### `03_DXF` — 17 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
+### `03_DXF` — 18 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
 
-Les mêmes familles, plus **B-60 LINTEAU EXE (ind. A, DXF purgé 11 blocs)** : B-20 ×3, B-40 F, B-32 ×2, B-25 E, B-46 A, B-49 A, B-44 A, B-43 B, B-45 A, B-50 A, B-60 FOND A, B-60 VERT A, B-60 PLANCHER A et **B-60 LINTEAU A**.
+Les mêmes familles, plus **B-60 MACON EXE (ind. A, DXF purgé 11 blocs)** : B-20 ×3, B-40 F, B-32 ×2, B-25 E, B-46 A, B-49 A, B-44 A, B-43 B, B-45 A, B-50 A, B-60 FOND/VERT/PLANCHER/LINTEAU A et **B-60 MACON A**.
 
 **Viewer JS.** Les DXF d'overlay `B-32` (`~2,7 Mo`, 454 blocs) font saturer le panneau (`Maximum call stack size exceeded`). **Fichiers valides** (audit 0, PDF OK). Lire le **PDF/PNG** dans la fenêtre, le DXF dans AutoCAD. `B-60 PLANCHER` est purgé (`971 ko`, 11 blocs).
 
