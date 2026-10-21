@@ -277,6 +277,7 @@ CARNAC_v3.0/
 │
 ├── 10_ANNEXES/
 │   ├── A_Conventions_Livrables.md
+│   ├── A1_Addendum_v3.0.1.md     ← Nouveau en v3.0.1
 │   ├── C_Journal_Revisions.md
 │   ├── D_Mode_Emploi.md
 │   └── O_Outillage.md
@@ -288,7 +289,7 @@ CARNAC_v3.0/
     └── Exemples_Phase_0.md         ← Exemples commentés (conservés comme archive de référence)
 ```
 
-Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les 52 fichiers de l'arborescence sont produits et contrôlés (v3.0).
+Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les **53 fichiers** de l'arborescence (52 Markdown + CSV dictionnaire) sont produits et contrôlés (**v3.0.1**). L'addendum `A1` est le 52ᵉ Markdown. En cas d'écart, l'arborescence fait foi.
 
 ---
 

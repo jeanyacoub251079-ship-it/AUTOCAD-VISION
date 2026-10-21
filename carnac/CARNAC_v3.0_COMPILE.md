@@ -281,6 +281,7 @@ CARNAC_v3.0/
 │
 ├── 10_ANNEXES/
 │   ├── A_Conventions_Livrables.md
+│   ├── A1_Addendum_v3.0.1.md     ← Nouveau en v3.0.1
 │   ├── C_Journal_Revisions.md
 │   ├── D_Mode_Emploi.md
 │   └── O_Outillage.md
@@ -292,7 +293,7 @@ CARNAC_v3.0/
     └── Exemples_Phase_0.md         ← Exemples commentés (conservés comme archive de référence)
 ```
 
-Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les 52 fichiers de l'arborescence sont produits et contrôlés (v3.0).
+Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les **53 fichiers** de l'arborescence (52 Markdown + CSV dictionnaire) sont produits et contrôlés (**v3.0.1**). L'addendum `A1` est le 52ᵉ Markdown. En cas d'écart, l'arborescence fait foi.
 
 ---
 
@@ -353,6 +354,24 @@ Aucune version du carnet n'est publiée sans exécution du compilateur de cohér
 8. **Dictionnaire porté à 106 variables** : restauration des libellés corrompus `LIV-01` (conventions de calques) et `LIV-03` (formats de sortie), développement des plages de consommation, et douze variables nouvelles (`CFG-01` à `CFG-03`, `DEC-05` à `DEC-07`, `GEO-13`, `GEO-14`, `NIV-07`, `STR-01` à `STR-03`).
 9. **Assainissement formel complet** : tableaux convertis en tables Markdown normalisées, mentions de version alignées, compteurs de verrous et de modes corrigés, placeholders alignés entre prompt et rappel, symétrie intégrale du graphe amont/aval, archives historiques protégées.
 10. **Contrôle automatique obligatoire** : `10/10 PASS` (zéro erreur, zéro avertissement) exigé avant toute publication d'une version du carnet.
+
+---
+
+## 11. COMPLÉMENT v3.0.1 — LECTURE ADRESSÉE, CARNET DES FAITS, PRÉSENTATION
+
+Voir `10_ANNEXES/A1_Addendum_v3.0.1.md` (texte opposable). Synthèse :
+
+### 1.5 Lecture adressée du DCE
+Le DCE / CCTP est **adressé à l'entreprise**. Le BET d'exécution en **extrait** ce qui concerne ses études. Il n'attend aucune réponse formelle sur une prestation qui ne lui est pas adressée (désamiantage, déplombage, cantonnements, PGC). Il ne demande un document que s'il est **nécessaire à un ouvrage prescrit** par le programme des travaux (CCTP + plans archi + EVEN). Diagnostic ≠ programme.
+
+### 1.6 Carnet des faits
+Dès `B-00`, un tableau sourcé (natures de planchers, niveaux, matériaux, neufs vs existants) est **consommé** par toutes les briques aval. Oublier un fait déjà au dossier est une non-conformité — distincte de `V14` (déclarer absent sans épuisement).
+
+### 1.7 Présentation
+Plans : fond blanc, existant gris léger **extrait** (pas dump `B-32`), ouvrages neufs en couleur, implantation **obligatoire** sur le niveau, codes CARNAC **en note**. Notes : §0 hypothèses → matériaux → charges → géométrie → DDC → vérifs → points à lever ; codes en annexe.
+
+### 1.8 Sismique zone 1 · stabilité provisoire
+Zone 1 : **aucune** vérification sismique (`B-25` SANS OBJET sur ce volet). Stabilité provisoire d'un existant : **MOE conception**, pas BET EXE.
 
 **[Fin de 00_MASTER.md]**
 
@@ -891,7 +910,15 @@ Toute valeur issue du mode `HYPOTHÈSE-NOTIFIÉE` est reportée :
 Une hypothèse sans norme d'appui n'est pas notifiée : c'est une valeur de repli interdite (V3).
 
 ### 8.4 Prescriptions chantier `ENC` et Points d'Arrêt `PA-xx`
-Toute inconnue physique est portée par un encadré `ENC` (prescription opposable : sondage, dépose, fouille, curage, essai) et par un Point d'Arrêt `PA-xx` (arrêt de production avant poursuite, avec critère de lever et conséquence chiffrée). L'encadré figure **à la fois** sur le plan et en tête de la note, mot pour mot.
+Toute inconnue physique est portée par un encadré `ENC` (prescription opposable : sondage, dépose, fouille, curage, essai) et par un Point d'Arrêt `PA-xx` (arrêt de production avant poursuite, avec critère de lever et conséquence chiffrée).
+
+**v3.0.1.** Le mot-pour-mot vit **en note**. Sur le plan : **un** encadré `ENC` de **cinq lignes maximum**, lisible à 1 m. Un mur de douze alinéas sur le dessin est une non-conformité de présentation (`LIV-06`, addendum A1).
+
+### 8.7 Présentation (v3.0.1 — `LIV-06` / `LIV-07`)
+- Fond blanc, existant gris léger extrait, ouvrages neufs en couleur simple.
+- Implantation obligatoire sur le niveau concerné ; coupe type hachurée.
+- Notes : ordre §0 hypothèses → matériaux → charges → géométrie → DDC → vérifs → points à lever ; codes CARNAC en annexe.
+- Voir `10_ANNEXES/A1_Addendum_v3.0.1.md`.
 
 ### 8.5 Contrôle de rendu obligatoire (`0` collision)
 Aucun plan n'est diffusé avant contrôle automatisé, journalisé au format de l'annexe O §7 :
@@ -908,6 +935,178 @@ Aucun plan n'est diffusé avant contrôle automatisé, journalisé au format de 
 Le plan de réservations est établi sur le fond structurel pur, avec tableau intégré (repère, niveau, élément porteur, position, dimensions, altitude, lot, statut). Il porte les mêmes axes et les mêmes repères que les plans de coffrage, et il est référencé dans la notice de synthèse.
 
 **[Fin de 10_ANNEXES/A_Conventions_Livrables.md]**
+
+---
+
+**[Début du fichier : 10_ANNEXES/A1_Addendum_v3.0.1.md]**
+
+# A1 — ADDENDUM v3.0.1 — GARDE-FOUS DE LECTURE, DE DEMANDE ET DE PRÉSENTATION
+
+> Version : **3.0.1** (21/10/2026) — complément de CARNAC v3.0, **sans suppression de verrou**.
+> Origine : méta-amélioration `T-03` après l'affaire CROISSY-FLORA (frictions de session).
+> Classement : **GÉNÉRALE** — s'applique à toutes les affaires futures.
+> Non-régression : `V1`–`V15` inchangés. Aucune brique supprimée. Aucun numéro réattribué.
+
+Cet addendum corrige six dérives observées : demander ce que le programme des travaux ne prescrit pas ; oublier un fait déjà dans le dossier ; relancer le maître d'ouvrage sur des prestations **non adressées** au BET d'exécution ; vérifier le séisme en zone 1 ; endosser la stabilité provisoire de l'existant ; produire des plans illisibles (dump DXF + murs de codes).
+
+________________
+
+## 1. LECTURE ADRESSÉE DU DCE (`DEC-08`)
+
+### 1.1 Le DCE n'est pas adressé au BET d'exécution
+
+Un dossier de consultation / dossier marché est **adressé à l'entreprise**. Le CCTP prescrit des prestations **à la charge de l'entreprise** (désamiantage, déplombage, cantonnements, phasage, PGC, PPSPS, etc.).
+
+Le BET d'exécution **lit** le CCTP. Il **retient** les informations qui concernent ses études (charges, matériaux, ouvrages, interfaces). Il **n'attend pas** de réponse formelle sur une prestation qui ne lui est pas adressée. L'absence de PV, d'arrêté, de plan de cantonnement ou de mode opératoire entreprise **n'est pas un verrou** de nos notes.
+
+### 1.2 Programme des travaux = CCTP + plans archi + plans structure (EVEN / BET MOE)
+
+Le diagnostic décrit un état. **Le programme des travaux** est ce que le CCTP et les plans **prescrivent de faire**.
+
+Règle : **on ne demande un document, un essai ou un relevé que s'il est nécessaire à un ouvrage que le programme nous charge de concevoir ou de vérifier.**
+
+| Situation | Traitement |
+|---|---|
+| CCTP + archi + EVEN **ne prescrivent aucune intervention sur le bois** | Interdit de demander l'arrêté termites, l'état des abouts, un PV de traitement, un classement biologique. Le diagnostic a déjà conclu ; le programme a déjà tranché. |
+| Renforts existants **non repris** par nos ouvrages | Interdit de demander les PV de réception de ces renforts. |
+| Désamiantage, déplombage, cantonnements, PGC | Constat d'interface en `B-10` (tableau « non adressé »). **Aucune** demande `T-04`. **Aucune** réserve de nos notes. |
+| Protection termites **déjà prescrite** au CCTP (ex. sous dallage) | C'est une **prescription d'entreprise**, reportée en note comme contrainte de pose — pas une donnée manquante. |
+
+### 1.3 Ce qui reste une vraie demande
+
+Une demande `T-04` n'est légitime que si **les trois** conditions sont réunies :
+
+1. la donnée manque **après épuisement** du corpus (`V14`) ;
+2. elle est **nécessaire** à un calcul ou à un plan **de notre mission** ;
+3. le destinataire est **celui à qui la pièce est adressée** (MOE conception, MOA, BET MOE) — jamais « l'entreprise » pour un document qu'elle n'a pas à nous remettre.
+
+Une demande qui échoue au test 1, 2 ou 3 **n'est pas rédigée**. Elle n'entre pas au RDR comme point ouvert.
+
+________________
+
+## 2. CARNET DES FAITS (`DEC-09`) — ANTI-OUBLI
+
+`V14` interdit de déclarer une donnée absente sans épuisement. Il n'interdisait pas **d'oublier une donnée présente**.
+
+Dès `B-00` / `B-10` / `B-11`, l'assistant constitue un **carnet des faits** — tableau unique, sourcé, **consommé** par toutes les briques aval :
+
+| Fait | Exemples | Source |
+|---|---|---|
+| Nature des planchers par zone | bois `8×18` / hourdis + `IPE` / dallage / non sondé | Diagnostic, plans EVEN, CCTP |
+| Niveaux et usages | PB, PH, R+1, cabinet, locaux | Archi, CCTP |
+| Matériaux prescrits | `S275`, `C25/30`, `C24` | EVEN, CCTP |
+| Ouvrages neufs vs existants | liste `F1`…`PN` vs `E-xx` | EVEN |
+| Exclusions de mission | feu, fluides, amiante, curage | CCTP + `B-00` |
+
+**Non-conformité** : une brique aval qui redemande, ignore ou « découvre » un fait déjà porté au carnet. Le carnet est une entrée bloquante de `B-20` à `B-64`.
+
+________________
+
+## 3. SISMIQUE ZONE 1 ET STABILITÉ PROVISOIRE
+
+### 3.1 Zone de sismicité 1 (très faible) — Île-de-France type
+
+Arrêté du 22 octobre 2010 : **aucune règle parasismique** n'est applicable en zone 1. `B-25` **ne produit aucune** vérification sismique, **ne demande aucune** catégorie d'importance pour un spectre, **n'ouvre aucun** `H-xx` sismique.
+
+La mention unique autorisée : « Zone 1 — vérification sismique **sans objet**. »
+
+### 3.2 Stabilité provisoire d'un bâtiment existant
+
+La vérification du contreventement **en phase provisoire** (étaiement, dépose de refend, ouverture de baie, stabilité du bâtiment occupé) **incombe à la maîtrise d'œuvre structure de conception**.
+
+Le BET d'exécution **signale** l'interface (phasage, charge de chantier sur un plancher). Il **ne calcule pas** la stabilité provisoire de l'existant. Il **ne relance pas** la MOA. Destinataire unique si une alerte est utile : **MOE conception**, en information — pas en `T-04` bloquant.
+
+________________
+
+## 4. PRÉSENTATION DES PLANS (`LIV-06`)
+
+### 4.1 Ce qu'un plan d'exécution doit être
+
+Un plan se lit **debout, sur chantier**, en dix secondes : l'ouvrage, les cotes, le matériau.
+
+| Autorisé et attendu | Interdit |
+|---|---|
+| Fond **blanc** | Dump du DXF `B-32` complet (calques archi, textes, blocs) |
+| Existant en **gris léger** (empreinte extraite, pas redessinée) | Murs de codes `D-xx` / `R-xx` / `H-xx` / `ENC` 12 alinéas |
+| Ouvrages neufs en **couleur simple** (un type = une couleur) | Croquis de coupe **flottant**, sans plan d'implantation du niveau |
+| Cotes en mm (plan) et m 3 déc. (niveaux) | Cartouche-registre (historique d'indices, glossaire CARNAC) |
+| Titre **trois lignes** : qui / quoi / indice + matériau | Filigrane qui masque la géométrie |
+| Une coupe type **hachurée**, barres dessinées | Fusion de plusieurs types sur un plan EXE |
+| Nomenclature graphique **courte** (repère, section, qté) | |
+
+**Report, jamais redessin** (`B-60`) signifie : les **coordonnées** et les **dimensions** viennent de `B-32` / `B-20` / de la note. Cela **n'autorise pas** à coller le fichier `B-32` entier comme fond. L'empreinte est **extraite** (murs porteurs, baies, trémie) et redessinée en trait fin gris.
+
+### 4.2 Implantation obligatoire
+
+Chaque plan `B-60` d'un type comporte **obligatoirement** :
+
+1. **le plan d'implantation du niveau concerné** (RDC BAS, PH, R+1) avec **tous les ouvrages de ce type** figurés à leur place ;
+2. **au moins une coupe** ou un détail type à 1/20 ou 1/10.
+
+Un dallage représenté **seulement** en coupe, sans hachure d'emprise sur le RDC BAS, est **refusé**. Un linteau représenté **seulement** en détail, sans baie sur le plan, est **refusé**.
+
+Un type = un plan EXE (**inchangé**). La vue qui montre **tous** les ouvrages neufs ensemble n'est **pas** un plan EXE fusionné : c'est une **vue d'ensemble de lecture** (pièce facultative après le dernier type, filigrane `LECTURE — NE PAS EXÉCUTER`). Elle répond à la question « où est-ce, dans le bâtiment ? ».
+
+### 4.3 Codes CARNAC : la note, pas le dessin
+
+| Sur le plan | Dans la note |
+|---|---|
+| Repères d'ouvrage (`SF1`, `P2`, `F3`) | Codes `D-xx`, `R-xx`, `H-xx`, `PA-xx` |
+| Cotes, niveaux, sections | Historique d'indice, « ce que la brique ne fait pas » |
+| **Un** encadré `ENC` de **5 lignes maximum** | Prescription intégrale |
+| **Un** nuage `H-xx` ou `D-19` **par zone**, pastille courte | Tableau des hypothèses |
+| Filigrane **une ligne** : `NE PAS EXÉCUTER SANS VISA` | Visas, destinataires, échéances |
+
+`A_Conventions` §8.3 et §8.4 (nuage `H-xx`, `ENC` mot pour mot sur le plan) sont **restreints** par le présent addendum : le mot-pour-mot vit **en note** ; le plan porte l'information **opposable et lisible**.
+
+________________
+
+## 5. PRÉSENTATION DES NOTES DE CALCUL (`LIV-07`)
+
+Toute note `B-40` à `B-50` et la notice `B-64` s'ouvrent dans cet ordre, **sans glossaire CARNAC en tête** :
+
+| § | Contenu |
+|---|---|
+| En-tête | Opération, adresse, indice, date, matériau, mention visa — **cinq lignes** |
+| **§0** | **Hypothèses à valider** — tableau `n° / objet / valeur / source / statut` |
+| **§1** | Matériaux et normes |
+| **§2** | Charges (couche par couche) |
+| **§3** | Géométrie et implantation |
+| **§4** | Descente de charges |
+| **§5** | Vérifications (formule littérale → numérique → taux → verdict) |
+| **§6** | Points à lever (critiques / importants / suivi) |
+| **Annexe** | Traçabilité CARNAC (`D-xx`, `H-xx`, `PA-xx`, scripts) — **après** le calcul |
+
+Interdit en tête de note : « ce que cette brique fait / ne fait pas », historique d'indices AL/AK/AJ, glossaire de vingt codes. Ces éléments, s'ils sont utiles, vont en **annexe**.
+
+`B-64` reste 2–4 pages. Elle ne recopie pas la note. Elle ne noie pas le lecteur sous les codes.
+
+________________
+
+## 6. FICHES TOUCHÉES
+
+| Fiche | Nature du complément |
+|---|---|
+| `00_MASTER.md` | §1.5 lecture adressée · §1.6 carnet des faits · §1.7 présentation |
+| `B-00` | Étape carnet des faits |
+| `B-10` | Tableau 5 « prestations lues, non adressées » |
+| `T-04` | Test des trois conditions avant toute demande |
+| `B-25` | Zone 1 = SO sismique · stab. prov. = MOE conception |
+| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin |
+| `B-64` | Ordre §0 / charges / vérif |
+| `A_Conventions` | `LIV-06` / `LIV-07` · ENC court |
+
+________________
+
+## 7. CE QUE CET ADDENDUM NE CHANGE PAS
+
+- Un type `B-60` = un plan EXE.
+- Report des **cotes**, jamais invention d'empreinte.
+- `V14` épuisement, `V15` continuité mécanique.
+- `D-26` (aucune sismique), `D-27` (stab. prov. MOE), `D-28` (aucun joint de dilatation) — déjà décidés ; le présent texte les **généralise**.
+- Zéro placeholder, zéro devis, zéro protection incendie dimensionnée.
+
+**[Fin de 10_ANNEXES/A1_Addendum_v3.0.1.md]**
 
 ---
 
@@ -1624,6 +1823,14 @@ v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils a
 
 **Compatibilité** : les numéros de briques existants sont conservés (aucun renumérotage), afin de ne casser ni les archives de projet antérieures ni les références documentaires en cours.
 
+### 3.6 Version v3.0.1 — addendum de garde-fous (lecture, demande, présentation)
+
+**Nature** : complément mineur. Aucun verrou supprimé. Aucune brique supprimée.
+
+**Contenu** : addendum `A1` (lecture adressée du DCE, carnet des faits, sismique zone 1 sans objet, stabilité provisoire existant = MOE conception, présentation des plans et notes). Arborescence : **53 fichiers** (52 Markdown + CSV). Le document compilé et le zip v3.0 restent l'archive ; la référence opérationnelle est **v3.0.1**.
+
+**Diffusion** : pour une nouvelle affaire, transmettre le **compilé v3.0.1** (fichier 07 v3.0.1). Le zip 08 v3.0.1 est l'arborescence de référence. En cas d'écart, l'arborescence fait foi.
+
 **[Fin de 10_ANNEXES/C_Journal_Revisions.md]**
 
 ---
@@ -1679,6 +1886,12 @@ Liste les éléments structurants cités dans les pièces, en rattachant CHACUN 
 - niveaux, hauteurs, épaisseurs ;
 - usages et surcharges annoncées ;
 - contraintes de site (occupation, voisinage, accès).
+
+ÉTAPE 2 bis — Carnet des faits (v3.0.1, addendum A1)
+Dès cette brique, ouvre un tableau unique **consommé** par toutes les briques aval. Oublier un fait déjà au dossier est une non-conformité.
+Colonnes : fait | valeur | source (pièce + folio) | zone.
+Faits minimaux : **nature de chaque plancher** (bois / hourdis / BA / dallage / non sondé) ; matériaux prescrits ; liste des ouvrages neufs vs existants ; niveaux ; exclusions de mission.
+Une brique aval qui redemande ou « découvre » un fait de ce carnet est non conforme.
 
 
 ÉTAPE 3 — Contradictions détectées
@@ -2736,6 +2949,16 @@ ________________
 **Ordre inversé.** L'audit croisé s'exécute désormais **après** le socle géométrique : B-10 lit les plans sur le fond calé et nettoyé (`B-30`, `B-32`), ce qui supprime les contradictions fantômes produites par les cloisons et les doublages.
 
 **Preuve d'épuisement.** Avant d'inscrire une lacune, B-10 produit le journal d'épuisement `V14` : pièces examinées, passages, résultat par pièce. Une lacune non prouvée n'est pas une lacune : c'est une pièce non lue.
+
+---
+
+### 6. COMPLÉMENT v3.0.1 — PRESTATIONS NON ADRESSÉES · CARNET DES FAITS
+
+**Tableau 5 obligatoire (nouveau).** Prestations **lues** dans le CCTP mais **non adressées** au BET d'exécution : désamiantage, déplombage, cantonnements, PGC, PPSPS, modes opératoires entreprise, PV de réception d'ouvrages que le programme ne nous charge pas de vérifier. Pour chacune : article CCTP | constat | **aucune demande `T-04`**.
+
+**Programme vs diagnostic.** Une prescription absente du CCTP **et** des plans archi **et** des plans EVEN n'est pas une lacune de nos études — c'est un ouvrage hors programme. Interdit de la transformer en demande (arrêté termites, état des abouts, PV de renforts existants) si aucune intervention n'est prescrite.
+
+**Carnet des faits.** B-10 alimente le carnet ouvert en B-00 : nature des planchers par zone, matériaux prescrits, neufs vs existants. Une « lacune » qui figure déjà au carnet est une non-conformité de lecture, pas une donnée manquante.
 **[Fin de 03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md]**
 
 ---
@@ -5119,7 +5342,11 @@ Point de contrôle humain : à la sortie de B-25, vous validez le système de co
 
 Cas particulier — bâtiment sans système de contreventement explicite : B-25 s'appelle en INTERNE-GO et conçoit le système (voiles de contreventement, palées, triangulations), avec alerte sur les conséquences contractuelles si la conception n'est pas dans la mission.
 
-Cas particulier — données sismiques absentes : si la zone sismique ou la catégorie d'importance n'est pas fournie, B-25 s'appelle en HYPOTHÈSE-NOTIFIÉE : elle retient l'enveloppe la plus défavorable compatible avec la localisation connue du projet, cite l'article d'appui, reporte l'hypothèse sous nuage et la soumet au délai DEC-06. Une donnée sismique n'est jamais « supposée conforme ».
+Cas particulier — **zone de sismicité 1 (très faible)** (v3.0.1) : **aucune vérification sismique**. Arrêté du 22/10/2010. B-25 mentionne « Zone 1 — sismique SANS OBJET » et **s'arrête** sur ce volet. Interdit : spectre, catégorie d'importance demandée pour un calcul sismique, `H-xx` sismique, relance MOA.
+
+Cas particulier — données sismiques absentes **hors zone 1** : si la zone n'est pas 1 et que la catégorie d'importance n'est pas fournie, B-25 s'appelle en HYPOTHÈSE-NOTIFIÉE : elle retient l'enveloppe la plus défavorable compatible avec la localisation connue, cite l'article d'appui, reporte l'hypothèse sous nuage et la soumet au délai DEC-06. Une donnée sismique n'est jamais « supposée conforme ».
+
+Cas particulier — **stabilité provisoire d'un bâtiment existant** (v3.0.1) : la vérification du contreventement en phase provisoire **incombe à la MOE structure de conception**. B-25 **signale** l'interface (dépose de refend, charge de chantier). Elle **ne calcule pas** la stabilité provisoire de l'existant. Elle **ne produit pas** de `T-04` bloquant à ce titre.
 
 Cas particulier — bâtiment existant conservé : le contreventement de l'existant est qualifié avant d'être compté (continuité, liaisons, état). Un existant non qualifié n'est jamais compté comme système de reprise ; il est porté en PA-xx avec prescription ENC.
 
@@ -10551,6 +10778,20 @@ Cette brique est en **régime outillé** : elle produit un script (OUT-02), l'ex
 **Zéro collision de textes.** Chaque plan est contrôlé par script : `0` chevauchement de textes, `0` cote orpheline, `0` entité sur le calque `0`. Un plan non contrôlé n'est pas diffusé.
 
 **Report, jamais redessin.** Le plan reporte la géométrie du fond `B-32` et les éléments calculés ; il ne redessine jamais l'empreinte architecturale et n'invente aucune position.
+
+---
+
+### 6. COMPLÉMENT v3.0.1 — IMPLANTATION LISIBLE (addendum A1)
+
+**Fond simplifié, pas dump.** « Report, jamais redessin » porte sur les **coordonnées et dimensions**. Interdit de coller le DXF `B-32` entier (calques, blocs, textes). L'existant est **extrait** (murs porteurs, baies, trémie) et figuré en **gris léger** sur fond **blanc**.
+
+**Implantation obligatoire.** Chaque type comporte (1) le **plan du niveau** avec **tous** les ouvrages de ce type à leur place, (2) au moins une coupe ou un détail type. Un croquis de coupe **sans** plan d'implantation (dallage, linteau, semelle) est **refusé**.
+
+**Codes hors dessin.** Sur le plan : repères d'ouvrage, cotes, un encadré `ENC` ≤ 5 lignes, pastilles `H-xx`/`D-19` courtes, filigrane une ligne. Les codes `D-xx`/`R-xx`, l'historique d'indice et « ce que la brique ne fait pas » vont **en note**.
+
+**Vue d'ensemble de lecture.** Après le dernier type, une pièce facultative peut superposer tous les ouvrages neufs. Filigrane `LECTURE — NE PAS EXÉCUTER`. Ce n'est **pas** un plan EXE fusionné (la règle un type = un plan EXE reste).
+
+**Titre trois lignes.** Qui / quoi / indice + matériau. Cartouche visuellement court. Couleurs : un type = une couleur. Coupe hachurée, barres dessinées.
 **[Fin de 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md]**
 
 ---
@@ -10925,6 +11166,8 @@ La raison d'être de B-64 : sans notice de synthèse, un lecteur (MOE, BC) doit 
    * quels points restent à lever ;
    * quels visas sont requis.
 La notice de synthèse est le document d'entrée du livrable — elle permet au lecteur de décider s'il doit approfondir, ou si le livrable est suffisamment clair.
+
+**v3.0.1.** Ordre de lecture : en-tête cinq lignes → §0 hypothèses → périmètre → points de principe → points à lever → visas. Codes `D-xx`/`H-xx` en fin ou omis s'ils n'aident pas le BC. Voir addendum A1 `LIV-07`.
 ________________
 
 
@@ -12830,8 +13073,9 @@ INTERDICTIONS
 - Ne rédige aucune demande sans échéance : une demande sans échéance est une demande sans priorité.
 - Ne mélange pas les demandes URGENTES et les demandes de suivi : elles n'ont pas le même traitement.
 - Ne rédige pas de demande vague (« fournir les données manquantes ») : chaque demande porte sur une donnée précise, avec sa référence au RDR.
-- N'oublie aucun point ouvert : chaque point du RDR doit avoir sa demande correspondante.
+- N'oublie aucun point ouvert **légitime** : chaque point du RDR qui passe le test des trois conditions (§ v3.0.1) a sa demande ; les autres sont **clos comme non adressés**, pas relancés.
 - Ne produis pas de demande sans consignation au RDR : une demande non consignée n'est pas opposable.
+- **v3.0.1 — Ne rédige aucune demande qui échoue au test des trois conditions** (addendum A1) : (1) donnée absente après épuisement `V14` ; (2) nécessaire à un ouvrage **de notre mission** ; (3) destinataire = celui à qui la pièce est adressée. Interdit : arrêté termites / état des abouts / PV de réception si le programme (CCTP + archi + EVEN) ne prescrit pas l'intervention ; interdit : relancer MOA/MOE sur désamiantage, déplombage, cantonnements, PGC.
 
 
 SORTIE
@@ -12981,7 +13225,22 @@ ________________
 **[Début du fichier : 11_HISTORIQUE/Journal_des_modifications.md]**
 
 # Journal des modifications — CARNAC v3.0
-> Version du document : 3.0 (carnet CARNAC v3.0) — ce journal fait foi de la version en vigueur.
+> Version du document : 3.0.1 (carnet CARNAC v3.0 + addendum A1) — ce journal fait foi de la version en vigueur.
+
+## Entrée v3.0.1 — GARDE-FOUS LECTURE / DEMANDE / PRÉSENTATION (21/10/2026)
+
+**Nature** : complément mineur. Aucun verrou supprimé. Aucune brique supprimée.
+
+| N° | Nature | Objet | Fichiers |
+| --- | --- | --- | --- |
+| C-22 | Ajout | Addendum A1 : lecture adressée du DCE, carnet des faits, sismique zone 1, stab. prov. MOE, présentation plans/notes | `10_ANNEXES/A1_Addendum_v3.0.1.md`, `00_MASTER` §11 |
+| C-23 | Enrichissement | B-00 carnet des faits · B-10 tableau 5 non adressé · T-04 test 3 conditions | B-00, B-10, T-04 |
+| C-24 | Correction | B-25 : zone 1 = SO sismique ; stab. provisoire existant = MOE conception | B-25 |
+| C-25 | Enrichissement | B-60 implantation obligatoire, fond simplifié, codes hors dessin ; A_Conventions ENC court | B-60, A_Conventions, B-64 |
+
+| C-26 | Publication | Republication v3.0.1 : compilé 07, zip 08 (53 fichiers), packs SOCLE + A1. v3.0 conservée en archive Drive. | compilé, zip, packs |
+
+Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles). Republication GO 21/10/2026.
 
 ## Entrée v3.0 — REFONTE MAJEURE (20/10/2026)
 

@@ -510,6 +510,20 @@ Cette brique est en **régime outillé** : elle produit un script (OUT-02), l'ex
 **Zéro collision de textes.** Chaque plan est contrôlé par script : `0` chevauchement de textes, `0` cote orpheline, `0` entité sur le calque `0`. Un plan non contrôlé n'est pas diffusé.
 
 **Report, jamais redessin.** Le plan reporte la géométrie du fond `B-32` et les éléments calculés ; il ne redessine jamais l'empreinte architecturale et n'invente aucune position.
+
+---
+
+### 6. COMPLÉMENT v3.0.1 — IMPLANTATION LISIBLE (addendum A1)
+
+**Fond simplifié, pas dump.** « Report, jamais redessin » porte sur les **coordonnées et dimensions**. Interdit de coller le DXF `B-32` entier (calques, blocs, textes). L'existant est **extrait** (murs porteurs, baies, trémie) et figuré en **gris léger** sur fond **blanc**.
+
+**Implantation obligatoire.** Chaque type comporte (1) le **plan du niveau** avec **tous** les ouvrages de ce type à leur place, (2) au moins une coupe ou un détail type. Un croquis de coupe **sans** plan d'implantation (dallage, linteau, semelle) est **refusé**.
+
+**Codes hors dessin.** Sur le plan : repères d'ouvrage, cotes, un encadré `ENC` ≤ 5 lignes, pastilles `H-xx`/`D-19` courtes, filigrane une ligne. Les codes `D-xx`/`R-xx`, l'historique d'indice et « ce que la brique ne fait pas » vont **en note**.
+
+**Vue d'ensemble de lecture.** Après le dernier type, une pièce facultative peut superposer tous les ouvrages neufs. Filigrane `LECTURE — NE PAS EXÉCUTER`. Ce n'est **pas** un plan EXE fusionné (la règle un type = un plan EXE reste).
+
+**Titre trois lignes.** Qui / quoi / indice + matériau. Cartouche visuellement court. Couleurs : un type = une couleur. Coupe hachurée, barres dessinées.
 **[Fin de 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md]**
 
 ---
@@ -884,6 +898,8 @@ La raison d'être de B-64 : sans notice de synthèse, un lecteur (MOE, BC) doit 
    * quels points restent à lever ;
    * quels visas sont requis.
 La notice de synthèse est le document d'entrée du livrable — elle permet au lecteur de décider s'il doit approfondir, ou si le livrable est suffisamment clair.
+
+**v3.0.1.** Ordre de lecture : en-tête cinq lignes → §0 hypothèses → périmètre → points de principe → points à lever → visas. Codes `D-xx`/`H-xx` en fin ou omis s'ils n'aident pas le BC. Voir addendum A1 `LIV-07`.
 ________________
 
 
@@ -3024,8 +3040,9 @@ INTERDICTIONS
 - Ne rédige aucune demande sans échéance : une demande sans échéance est une demande sans priorité.
 - Ne mélange pas les demandes URGENTES et les demandes de suivi : elles n'ont pas le même traitement.
 - Ne rédige pas de demande vague (« fournir les données manquantes ») : chaque demande porte sur une donnée précise, avec sa référence au RDR.
-- N'oublie aucun point ouvert : chaque point du RDR doit avoir sa demande correspondante.
+- N'oublie aucun point ouvert **légitime** : chaque point du RDR qui passe le test des trois conditions (§ v3.0.1) a sa demande ; les autres sont **clos comme non adressés**, pas relancés.
 - Ne produis pas de demande sans consignation au RDR : une demande non consignée n'est pas opposable.
+- **v3.0.1 — Ne rédige aucune demande qui échoue au test des trois conditions** (addendum A1) : (1) donnée absente après épuisement `V14` ; (2) nécessaire à un ouvrage **de notre mission** ; (3) destinataire = celui à qui la pièce est adressée. Interdit : arrêté termites / état des abouts / PV de réception si le programme (CCTP + archi + EVEN) ne prescrit pas l'intervention ; interdit : relancer MOA/MOE sur désamiantage, déplombage, cantonnements, PGC.
 
 
 SORTIE

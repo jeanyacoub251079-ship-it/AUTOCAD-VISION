@@ -2,19 +2,24 @@
   {
     "pack": "00_SOCLE.md",
     "titre": "PACK 00 — SOCLE (à coller en premier, toujours)",
-    "bytes": 103411,
-    "chars": 99679,
-    "estimated_tokens": 29734,
+    "bytes": 115837,
+    "chars": 111711,
+    "estimated_tokens": 33318,
     "files": [
       {
         "rel_path": "00_MASTER.md",
-        "bytes": 35700,
-        "sha256": "5138b21def0e53c834aafa95c85cadbfef46e8247e511874cf43165b3b518bbf"
+        "bytes": 37293,
+        "sha256": "e033aff9ec690a2304bfa429976e5600140893068e816320ca3f75c3b0302f3b"
       },
       {
         "rel_path": "10_ANNEXES/A_Conventions_Livrables.md",
-        "bytes": 18966,
-        "sha256": "6d922f610aa642e3be7253762e261fd0e51fd1b45c8d80b9ec5a72148bc856c6"
+        "bytes": 19507,
+        "sha256": "7e4836a6f3d027e2ebfd6af62ff9359a8fcc69128abbc34c5472c112f3444d40"
+      },
+      {
+        "rel_path": "10_ANNEXES/A1_Addendum_v3.0.1.md",
+        "bytes": 10083,
+        "sha256": "d7b00c362d1cc0081386912cd697388da39f97d67f978123f637ac8a7cb9272e"
       },
       {
         "rel_path": "10_ANNEXES/D_Mode_Emploi.md",
@@ -36,14 +41,14 @@
   {
     "pack": "01_PHASE_0.md",
     "titre": "PACK 01 — PHASE 0 : CADRAGE (B-00 à B-04)",
-    "bytes": 81076,
-    "chars": 78065,
-    "estimated_tokens": 23214,
+    "bytes": 81615,
+    "chars": 78590,
+    "estimated_tokens": 23373,
     "files": [
       {
         "rel_path": "02_PHASE_0_CADRAGE/B-00_Inventaire.md",
-        "bytes": 13173,
-        "sha256": "1f9b02f2d0188bea523a9614af49aadcab55d3b7d41d76a6d4fd397e0e9f6241"
+        "bytes": 13712,
+        "sha256": "1a05ab88f365d40080886f854690f60eb169e3672769de54d59b4a4379f13e3c"
       },
       {
         "rel_path": "02_PHASE_0_CADRAGE/B-01_MPD.md",
@@ -70,14 +75,14 @@
   {
     "pack": "02_PHASES_1-2.md",
     "titre": "PACK 02 — PHASES 1 ET 2 : SOCLE GÉOMÉTRIQUE PUIS AUDIT CROISÉ (B-30, B-32, B-31 puis B-10 à B-15)",
-    "bytes": 187834,
-    "chars": 181117,
-    "estimated_tokens": 54220,
+    "bytes": 188834,
+    "chars": 182092,
+    "estimated_tokens": 54515,
     "files": [
       {
         "rel_path": "03_PHASE_1_ANALYSE/B-10_Audit_CCTP.md",
-        "bytes": 15516,
-        "sha256": "71f385dc18b772b65bfbc32a8299e296b6b5280646bbf5788e1824f191fd9f41"
+        "bytes": 16516,
+        "sha256": "79a3fea64207fa8b04091f00db501ccf4ef74f1fef8f34881a5ce59ed2c985c9"
       },
       {
         "rel_path": "03_PHASE_1_ANALYSE/B-11_Audit_Diagnostic.md",
@@ -124,9 +129,9 @@
   {
     "pack": "03_PHASE_3.md",
     "titre": "PACK 03 — PHASE 3 : CONCEPTION ET SYNTHÈSE STRUCTURELLE (B-20 à B-25)",
-    "bytes": 123088,
-    "chars": 118655,
-    "estimated_tokens": 35390,
+    "bytes": 123799,
+    "chars": 119343,
+    "estimated_tokens": 35599,
     "files": [
       {
         "rel_path": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
@@ -135,8 +140,8 @@
       },
       {
         "rel_path": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
-        "bytes": 16663,
-        "sha256": "4ec05093a321675b7dd41a1e0f2ec189f7e5a724945b0a67fa9282bec2f64754"
+        "bytes": 17374,
+        "sha256": "1136e7817544fe33c928b167bf6a59d152e8d93f49a2710d24c729efe33add8b"
       },
       {
         "rel_path": "04_PHASE_2_CONCEPTION/B-21_DDC_Preliminaire.md",
@@ -227,9 +232,9 @@
   {
     "pack": "05_PHASES_5-6.md",
     "titre": "PACK 05 — PHASES 5 ET 6 : RÉSERVATIONS, LIVRABLES, VÉRIFICATION ET CLÔTURE (B-34, B-60 à B-64, B-33, B-70 à B-72)",
-    "bytes": 261431,
-    "chars": 251299,
-    "estimated_tokens": 75290,
+    "bytes": 263516,
+    "chars": 253317,
+    "estimated_tokens": 75901,
     "files": [
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
@@ -238,8 +243,8 @@
       },
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
-        "bytes": 27795,
-        "sha256": "25b671ecb56ee4ac167451f52d62972e553db28d3baf66bdbd93c2a3761a445a"
+        "bytes": 29071,
+        "sha256": "a25eccebad76c428d2879aeddf99b32b003caf61034da686829562d36d65bec8"
       },
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",
@@ -248,8 +253,8 @@
       },
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-64_Notice_Synthese.md",
-        "bytes": 23325,
-        "sha256": "c82042c7f68d1689e7a2cd9d7971a6c1c4c910db24b8dee3cef862600efc786d"
+        "bytes": 23556,
+        "sha256": "a449ec82cb192eb4d699e796b79b49aacc039c3136af757530a632072082f8d7"
       },
       {
         "rel_path": "05_PHASE_3_CALAGE/B-33_Verification_Croisee.md",
@@ -288,8 +293,8 @@
       },
       {
         "rel_path": "09_TRANSVERSE/T-04_Demande_Complement.md",
-        "bytes": 21133,
-        "sha256": "198136089edbb023e315fb774645c4fbf674a1308382259b054d86b4ac66db6c"
+        "bytes": 21711,
+        "sha256": "d8aa22e82db4d59b0792201fb8b9d1cd90ee3de4a71afc1d42d67e4b75c14e31"
       }
     ]
   }

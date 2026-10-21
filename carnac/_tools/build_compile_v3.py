@@ -15,6 +15,7 @@ ORDER = [
     "00_MASTER.md",
     "01_DICTIONNAIRE/CARNAC_v3.0_variables.md",
     "10_ANNEXES/A_Conventions_Livrables.md",
+    "10_ANNEXES/A1_Addendum_v3.0.1.md",
     "10_ANNEXES/O_Outillage.md",
     "10_ANNEXES/D_Mode_Emploi.md",
     "10_ANNEXES/C_Journal_Revisions.md",
