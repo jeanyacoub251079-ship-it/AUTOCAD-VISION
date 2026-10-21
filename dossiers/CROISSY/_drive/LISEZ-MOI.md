@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-44` — charpente bois — est livrée en indice A.** Les bois **neufs** passent : 3 pannes `75 × 200 C24` (taux `0,830`, la flèche gouverne), arbalétriers de demi-ferme `100 × 200` (`0,626`, flambement), entraits `75 × 200` (`0,108`), contrefiches `75 × 225` (`0,940`). Les demi-fermes sont **désolidarisées du plancher** : `E-07` n'est pas chargé, `PA-03` reste un arrêt de `B-43`. L'existant (`E-04`/`E-05`/`E-06`) n'est pas calculé. **`D-38`** : pas de pieu, pas de prédalle — `B-41` et `B-48` **SANS OBJET**. `B-03` passe en **indice AC** (38 décisions).
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `FOND` — plan `PLS` d'exécution — est livrée en indice A.** Semelle `SF1` `800 × 800 × 250 mm` avec les attentes **`6 HA12` équerre** (`l_bd 166 mm`) : les trois conditions de `R-50-1` sont **sur le plan**. L'ENC v3 figure **intégralement**. Les nuages `D-19` restent. Le fond est `B-32` Ind. D (aucune cloison). `B-03` passe en **indice AD**. Les autres types `B-60` (`VERT`, `MACON` coussins `D-37`, `METAL` remplissage `D-36`, etc.) ne sont **pas** dans ce tour.
+
+**Juste avant (`B-44`)** : **`B-44` — charpente bois — est livrée en indice A.** Les bois **neufs** passent : 3 pannes `75 × 200 C24` (taux `0,830`, la flèche gouverne), arbalétriers de demi-ferme `100 × 200` (`0,626`, flambement), entraits `75 × 200` (`0,108`), contrefiches `75 × 225` (`0,940`). Les demi-fermes sont **désolidarisées du plancher** : `E-07` n'est pas chargé, `PA-03` reste un arrêt de `B-43`. L'existant (`E-04`/`E-05`/`E-06`) n'est pas calculé. **`D-38`** : pas de pieu, pas de prédalle — `B-41` et `B-48` **SANS OBJET**. `B-03` passe en **indice AC** (38 décisions).
 
 **Juste avant (`B-49`)** : **`B-49` — linteaux — est livrée en indice A.** Cinq linteaux métalliques neufs, tous conformes : `F1a/b/c` (`2 × HEA 200`) en **triangle de charge 60°** (taux `0,010`) et enveloppe `B-45` (`0,059`) ; `R3-N/S` flexion `0,291`, torsion close par le remplissage (`D-36`). Les deux linteaux bois de la façade Est (`E-08`) sont **court-circuités** par `R3` : aucun calcul de bois, aucun relevé — ce n'est pas prescrit. Les seuils BA sont **SANS OBJET**. **`D-37`** : le coussin `w_b ≥ 300 mm` sous `R1`, `F2`, `F3` est **accepté** (`R-46-1` et `R-46-2` closes). `B-03` passe en **indice AB** (37 décisions).
 
@@ -58,6 +60,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-60 — Plans d'exécution type FOND (PLS)` | **A** | **`SF1` `800×800×250` + `6 HA12` équerre `l_bd 166`** · ENC v3 · `R-50-1` close · `D-19` maintenus · fond `B-32` D |
 | `B-44 — Charpente bois` | **A** | **Neufs OK** — pannes `75×200 C24` `0,830` · DF `100×200`/`75×200` · CF `75×225` `0,940` · **`E-07` non chargé** · existant hors calcul · `D-38` |
 | `B-49 — Linteaux et seuils` | **A** | **5 linteaux neufs OK** — `F1` triangle `0,010` / enveloppe `0,059` · `R3` `0,291` + `D-36` · **`E-08` court-circuité** (pas de relevé bois) · seuils **SANS OBJET** · `D-37` coussin |
 | `B-46 — Maçonnerie : vérification et conception` | **A** | **8 appuis vérifiés `EC6 § 6.1.3`** — 5 OK sans réserve, **`R1`/`F2`/`F3`** sous réserve d'`a₁` et de groupe d'unités (`R-46-1`/`R-46-2`) → **coussin `w_b ≥ 300 mm`** · voiles **12/12 OK** · `E-08` → `B-49` · clause `D-34` sur la planche et la note |
@@ -66,7 +69,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | **F** | `SF1 80×80×25` (`D-30`, `σ_ELS = 0,204 MPa`), **dallage rechargé sur 100 % de l'emprise** (`D-35`), note `D-09` intégrale |
 
-### `02_Plans_PDF` — 16 planches PDF vectorielles
+### `02_Plans_PDF` — 17 planches PDF vectorielles
 
 | Planche | Indice |
 |---|---|
@@ -80,14 +83,15 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | **B-46 — Maçonnerie : vérification des appuis** | **A** |
 | **B-49 — Linteaux métalliques** | **A** |
 | **B-44 — Charpente bois** | **A** |
+| **B-60 — FOND EXE (PLS)** | **A** |
 | **B-50 — Assemblages et ancrages** | **A** |
 | **B-45 — Structure métallique : profilés, moisage, entretoises** | **A** |
 | **B-43 — Dallage : ferraillage, joints de retrait, désolidarisation** | **B** |
 | Preuves de calage B-30, B-31 A, B-31 B | 3 pièces |
 
-### `03_DXF` — 13 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
+### `03_DXF` — 14 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
 
-Les mêmes dix familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-44 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)** et **B-50 (ind. A)**.
+Les mêmes familles, plus **B-60 FOND EXE (ind. A, `PLS`)** : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-44 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)**, **B-50 (ind. A)** et **B-60 FOND (ind. A)**.
 
 ---
 

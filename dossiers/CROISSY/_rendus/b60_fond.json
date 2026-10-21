@@ -1,0 +1,23 @@
+{
+ "type": "FOND",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "SF1_mm": [
+  800,
+  800,
+  250
+ ],
+ "c_nom_mm": 50,
+ "A1_HA12": 6,
+ "l_bd_mm": 166,
+ "R50_1": true,
+ "audit": 0,
+ "n_FOND": 196,
+ "calques_manquants": [],
+ "D19": [
+  "Z-P1N",
+  "Z-P1S",
+  "Z-P3",
+  "Z-J1"
+ ]
+}

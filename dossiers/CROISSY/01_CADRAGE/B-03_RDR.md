@@ -11,8 +11,10 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AC** (remplace l'indice AB du 21/10/2026 — `B-44` Ind. A, `D-38`) |
+| **Indice du livrable** | **AD** (remplace l'indice AC du 21/10/2026 — `B-60` FOND Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
+
+> **Indice AD (21/10/2026)** : **`B-60` TYPE `FOND` LIVRÉE EN INDICE A — PLAN `PLS` EXE.** Fond `B-32` D (report, jamais redessin). `SF1` `800 × 800 × 250 mm` + attentes **`6 HA12` équerre** (`l_bd 166 mm`, `R-50-1` **CLOSE** : les 3 conditions sont sur le plan). ENC v3 **intégrale**. Nuages `D-19` maintenus. `D-23` porté (non corrigé). Types restants : `VERT`, `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `LINTEAU`, `ASSEMBLAGE`, `PLANCHER`.
 
 > **Indice AC (21/10/2026)** : **`B-44` LIVRÉE EN INDICE A — CHARPENTE BOIS.** Mode **PARTIEL-DÉCLARÉ**. Bois **neufs** conformes : pannes `75 × 200 C24` (taux **`0,830`**, flèche) · arbalétrier `100 × 200` (**`0,626`**, flambement) · entrait `75 × 200` (**`0,108`**) · contrefiches `75 × 225` (**`0,940`**, flambement). **`E-07` non chargé** (demi-fermes désolidarisées) — `PA-03` reste à `B-43`. Existant `E-04/05/06` hors calcul (`B-24`). **`D-38`** : `B-41` et `B-48` **SANS OBJET** (« il n'y en a pas sur le projet »). **`R-28` CLOSE** (`MAT-08` = classe de service 2). `R-20`/`R-21`/`R-22` maintenues.
 

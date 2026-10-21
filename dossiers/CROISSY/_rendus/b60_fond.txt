@@ -1,0 +1,90 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type FOND — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13) — PLS (D-11)
+Mode : PARTIEL-DÉCLARÉ (B-40 F · nuages D-19 · ENC v3)
+==============================================================================
+
+[0] ENTRÉES — ÉTAPE 1
+------------------------------------------------------------------------------
+  Note amont     : B-40 Ind. F  — SF1 80×80×25, type 60×60×30, ENC v3
+  Vue nettoyée   : B-32 Ind. D  — /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf (2719320 o)
+  Calage         : B-30 (résidu médian 21,0 mm) — D-23 translation rigide R+1/RDC
+  Attentes       : B-50 A1 — 6 HA12, l_bd 166 ≤ 200 mm, 3 conditions R-50-1
+  Poteau         : B-42 B — P2 15×25, 6 HA12, N_Ed 159,0 kN
+  Cartouche      : modèle FLORA (annexe A) — unités mm sur cotes, DXF cm (B-32)
+  Cloisons/isol. : 0 — D-25 / V9
+  B-34 / B-33    : non livrées — STR-03 NON BLOQUANTE ; B-33 est aval (phase 6)
+
+[1] HYPOTHÈSES ET CLAUSES OPPOSABLES
+------------------------------------------------------------------------------
+  D-09 / D-12 : ARASE −1,00 m / TN MINIMUM — jamais une cote fixe, jamais de remontée.
+  D-11 : titre PLS = plan de fondations.
+  D-14 : semelle ≥ 60×60. D-30 : SF1 = 80×80×25.
+  D-06 : c_nom = 50 mm en fondation.
+  D-16 : hors nappe — venue d'eau = point d'arrêt.
+  D-15 : tassements hors mission GO.
+  D-19 : nuages Z-P1N, Z-P1S, Z-P3, Z-J1 MAINTEUS.
+  D-23 : écart R+1/RDC 10,1 cm porté comme DONNÉE, non corrigé.
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE. D-28 : AUCUN JOINT DE DILATATION.
+  D-34 : f_k = 1,5 MPa — essais hors mission.
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO) — NON dimensionnée.
+
+[2] IMPLANTATION (report B-40, aucune position inventée)
+------------------------------------------------------------------------------
+  REPÈRE                X m            Y m OUVRAGE                      STATUT
+  SF1                 95,35          59,29 80×80×25 BA                  CERTAIN — D-30 / B-40 F
+  Z-P1N               95,41          49,04 vérif. moellons ou 60×60     NUAGE D-19
+  Z-P1S               95,41          47,78 vérif. moellons ou 60×60     NUAGE D-19
+  Z-P3                94,09          54,89 appui P3 50×40 + GB          NUAGE D-19
+  Z-J1                89,78          54,52 appui J1 24×50 + GB          NUAGE D-19
+  BÊCHE         86,67→89,53          46,77 ép. 20 cm, L=2,85 m          EXI-07c
+  RSO-PASS      87,70→93,50      63,3→64,3 passes ≤ 1,00 m C16/20       EXI-07e
+
+[3] SF1 — FERRAILLAGE D'EXÉCUTION (B-40 + B-50 A1)
+------------------------------------------------------------------------------
+  Semelle        : 800 × 800 × 250 mm  C25/30  (D-30)
+  c_nom          : 50 mm sur 4 faces (D-06) — NON AJUSTABLE
+  Lit inférieur  : HA8 e150  2 directions  (A_s = 335 mm²/m ≥ A_s,min 323)
+  Nb barres SF1  : 6 HA8 par direction (B-40 §2.3)
+  Cadres         : HA8 e150 jusqu'au lit inférieur (R-50-1 condition 3)
+  Attentes P2    : 6 HA12, équerre en pied, l_bd = 166 mm ≤ 200 mm (B-50 A1)
+  Si équerre ôtée: l_bd = 237 mm > 200 mm — NON CONFORME (R-50-1)
+  Gros béton     : C16/20 SOUS la semelle si existant plus profond (D-09)
+  Propreté       : 50 mm
+  N_ELS / N_ELU  : 130,5 / 182,9 kN  σ = 0,204 / 0,286 MPa
+  Poinçonnement  : v_Ed 0,279 ≤ v_Rd,c 0,392 MPa (0,71)
+
+[4] NOMENCLATURE GRAPHIQUE (détail B-62)
+------------------------------------------------------------------------------
+  RÉP      DÉSIGNATION                  SECTION            QTÉ            MATÉRIAU
+  SF1      Semelle isolée BA            800×800×250        1              C25/30
+  SF-T     Semelle type (si fouille)    600×600×300 mini   selon D-19     C25/30
+  HA8      Lit inf. croisé + cadres     HA8 e150           6+6 / SF1      S500B
+  HA12     Attentes P2 dans SF1         HA12 équerre       6              S500B, l_bd 166
+  GB       Gros béton rattrapage        C16/20             selon fouille  sous semelle
+  BP       Béton de propreté            50 mm              sous SF1       —
+  BÊCHE    Réhausse dallage SE          200 mm × 2,85 m    1              C25/30
+  RSO      Passerelle château           passes ≤ 1000 mm   1 zone         C16/20
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_FOND_EXE_IndA.dxf (2756413 o) — audit 0 erreur(s)
+
+[5] TEST DE RELECTURE DXF (V13 / annexe O §6)
+------------------------------------------------------------------------------
+  calque                          n
+  FOND-AXES                        46
+  FOND-ACIER-INF                   40
+  FOND-COTATION                    32
+  FOND-COFFRAGE                    21
+  FOND-HYP-D19                     16
+  FOND-HABILLAGE-TEXTE             15
+  FOND-ACIER-SUP                    9
+  FOND-GROS-BETON                   9
+  FOND-NOMENCLATURE                 5
+  FOND-CARTOUCHE                    2
+  FOND-DETAILS                      1
+  FOND-* total = 196  ·  calque 0 (fond B-32 inclus) = 0
+  Les entités FOND-* ne sont PAS sur 0. Fond B-32 conserve ses calques source.
+  calques FOND attendus : 11  · manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_FOND_EXE_IndA.png / .pdf
