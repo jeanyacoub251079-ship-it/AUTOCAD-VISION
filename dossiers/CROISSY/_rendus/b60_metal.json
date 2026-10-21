@@ -1,0 +1,16 @@
+{
+ "type": "METAL",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "poutres": 6,
+ "poteaux": 2,
+ "stab": 4,
+ "r3_d36": 2,
+ "D36": true,
+ "purge": 443,
+ "blocs": 11,
+ "audit": 0,
+ "n_METAL": 146,
+ "calques_manquants": [],
+ "octets": 977886
+}

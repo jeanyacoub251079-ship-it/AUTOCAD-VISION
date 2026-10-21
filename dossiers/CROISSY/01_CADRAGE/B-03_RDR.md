@@ -11,8 +11,10 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AH** (remplace l'indice AG du 21/10/2026 — `B-60` MACON Ind. A) |
+| **Indice du livrable** | **AI** (remplace l'indice AH du 21/10/2026 — `B-60` METAL Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
+
+> **Indice AI (21/10/2026)** : **`B-60` TYPE `METAL` LIVRÉE EN INDICE A — PROFILÉS + `D-36`.** `F2`/`F3`/`F4`/`R1`/`R2-N/S`/`P1-N/S`/`Stab1` implantés (`B-20`). Remplissage `C25/30` des `UPE 200` de `R3` (`D-36`) **porté** — sans ce béton, `R3` **non posable**. `F1` = LINTEAU. Coussins = MACON. Assemblages → `ASSEMBLAGE`. `R-45-1` ouverte (`F3` `w 0,971`). Types restants : `CHARPENTE`, `ASSEMBLAGE`.
 
 > **Indice AH (21/10/2026)** : **`B-60` TYPE `MACON` LIVRÉE EN INDICE A — COUSSINS `D-37`.** Six coussins `w_b = 300 mm` sous `R1`/`F2`/`F3` implantés (`B-20`). Verdict inconditionnel. `R-46-1`/`R-46-2` CLOSE. Pas un linteau. Types restants : `METAL` (`D-36`), `CHARPENTE`, `ASSEMBLAGE`.
 

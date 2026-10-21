@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `MACON` — six coussins `w_b = 300 mm` sous `R1`/`F2`/`F3` — est livrée en indice A.** Prescription `D-37` exécutée sur le RDC. Verdict inconditionnel (`N_Rdc ≥ 84 kN` dès `a₁ = 0`). Ce n'est **pas** un linteau. `B-03` passe en **indice AH**. Restent : `METAL` (`D-36` + profilés), `CHARPENTE`, `ASSEMBLAGE`.
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-60` type `METAL` — profilés neufs implantés + remplissage `D-36` — est livrée en indice A.** `F2` (`HEB 200`), `F3` (`HEB 160`), `F4` (`IPE 200`), `R1` (`2 × UPE 200`), `R2-N/S` (`HEB 160`), `P1-N/S` (`SHS 140 × 6,3`) et `Stab1` (`IPE 120`, 4 files) aux positions `B-20`. Le remplissage `C25/30` des `UPE 200` de `R3` est **porté** : sans ce béton, `R3` **ne peut pas être posé**. `F1` reste LINTEAU. Coussins restent MACON. Boulons / platines / scellements → `ASSEMBLAGE`. `F3` : **aucune charge ajoutée** (`R-45-1`, flèche `0,971`). DXF purgé (11 blocs). `B-03` passe en **indice AI**. Restent : `CHARPENTE`, `ASSEMBLAGE`.
+
+**Juste avant (`B-60` MACON)** : **`B-60` type `MACON` — six coussins `w_b = 300 mm` sous `R1`/`F2`/`F3` — est livrée en indice A.** Prescription `D-37` exécutée sur le RDC. Verdict inconditionnel (`N_Rdc ≥ 84 kN` dès `a₁ = 0`). Ce n'est **pas** un linteau. `B-03` passe en **indice AH**. Restent : `METAL` (`D-36` + profilés), `CHARPENTE`, `ASSEMBLAGE`.
 
 **Juste avant (`B-60` LINTEAU)** : **`B-60` type `LINTEAU` — cinq linteaux neufs implantés sur le RDC — est livrée en indice A.** `F1a/b/c` (`2 × HEA 200`) et `R3-N/S` (`UPE 200` + `D-36`) aux positions `B-20`. Les `S1` de `R3` sont sur les **abouts de mur**, hors bois (`E-08` court-circuité, aucun relevé). Seuils BA **SANS OBJET**. `D-37` (coussins) reste `B-60 MACON`. DXF purgé (11 blocs). `B-03` passe en **indice AG**.
 
@@ -68,6 +70,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-60 — Plans d'exécution type METAL` | **A** | **Profilés + `D-36`** · `F2`/`F3`/`F4`/`R1`/`R2`/`P1`/`Stab1` · remplissage `C25/30` `R3` · `R-45-1` |
 | `B-60 — Plans d'exécution type MACON` | **A** | **6 coussins `D-37`** · `w_b=300 mm` sous `R1`/`F2`/`F3` · verdict inconditionnel |
 | `B-60 — Plans d'exécution type LINTEAU` | **A** | **5 linteaux sur RDC** · `F1` `2×HEA 200` · `R3` `UPE 200`+`D-36` · `S1` hors bois · seuils SO |
 | `B-60 — Plans d'exécution type PLANCHER` | **A** | **Dallage sur RDC BAS** · `ST25C` · JR `e≤4500` · `D-35`/`D-28` · DXF 11 blocs |
