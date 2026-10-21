@@ -1,0 +1,28 @@
+{
+ "mode": "PARTIEL-DÉCLARÉ",
+ "a1": {
+  "f_bd": 2.7,
+  "l_b_rqd": 483,
+  "l_bd": 166,
+  "l_b_min": 145,
+  "dispo": 200,
+  "ok": true
+ },
+ "a2": {
+  "Fv_Rk_kN": 18.2,
+  "Fv_Rd_bois": 11.19,
+  "n": 10,
+  "taux": 0.691
+ },
+ "a3": {
+  "tau": 221.6,
+  "tau_Rd": 158.8,
+  "taux": 1.396,
+  "verdict": "NON"
+ },
+ "a5": {
+  "taux_pression": 0.118
+ },
+ "ecarts": 2,
+ "renvois": 2
+}

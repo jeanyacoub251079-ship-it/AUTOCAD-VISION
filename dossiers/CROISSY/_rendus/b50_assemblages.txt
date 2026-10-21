@@ -1,0 +1,164 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-50 — ASSEMBLAGES ET ANCRAGES — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13) — EC2 §8.4/§6.7 · EC3-1-8 · EC5 §8.2
+Famille : TOUS — ancrages BA, assemblages métalliques, assemblages bois,
+          scellements maçonnerie. Mode : PARTIEL-DÉCLARÉ (DOC-09 exclue).
+==============================================================================
+
+[1] INVENTAIRE — CHAQUE ASSEMBLAGE ET SON ÉMETTEUR D'EFFORTS
+------------------------------------------------------------------------------
+  REF  ASSEMBLAGE                                           ÉMETTEUR       EFFORTS                    RÉFÉRENTIEL
+  A1   Ancrage des 6 HA12 de P2 dans SF1                    B-42 Ind. B    N 159,0 kN · M 9,4 kN·m    EC2 §8.4.4
+  A2   Boulonnage du moisage R1 (2 × UPE 200 / bois 20×15)  B-45 Ind. A    V 77,4 kN · M 74,5 kN·m    EC5 §8.2 + EC3-1-8 §3.6
+  A3   Platine d'appui R3 sur R2 + reprise de torsion       B-45 Ind. A    V 23,1 kN · Mt 1,85 kN·m   EC3-1-8 §6.2
+  A4   Scellement des entretoises Stab1 dans le voutain     B-45 Ind. A    F 5,8 kN par file          EC6 §8 / NF EN 1992-4
+  A5   Platine de pied P1 sur SF1 (4 tiges)                 B-45 Ind. A    N 100,3 kN                 EC2 §6.7 + EC3-1-8 §3.6
+  A6   Appuis F1 à R3 sur maçonnerie (8 appuis)             B-45 Ind. A    44,6 à 77,4 kN             EC6 §8 — RENVOI B-46
+
+[2] A1 — ANCRAGE DES 6 HA12 DE P2 DANS SF1 (EC2 § 8.4)
+------------------------------------------------------------------------------
+  f_ctd = 1.80 / 1.5 = 1.200 MPa
+  f_bd = 2,25 x n1 x n2 x f_ctd = 2,25 x 1,0 x 1,0 x 1.200 = 2.70 MPa (EC2 8.4.2)
+  n1 = 1,0 (bonnes conditions d'adhérence, barres verticales coulées en fond
+       de coffrage) · n2 = 1,0 (phi = 12 <= 32 mm)
+
+  sigma_sd = f_yd = 500 / 1,15 = 434.8 MPa  (cas enveloppe)
+  l_b,rqd = (phi/4) (sigma_sd/f_bd) = (12/4) x (434.8/2.70) = 483 mm
+  a1 = 0,70 (équerre, tab. 8.2) · a2 = 0,70 (c_nom 50 >= 3 phi) · a3 = 0,70 (cadres)
+  l_bd = a1 a2 a3 l_b,rqd = 0,70^3 x 483 = 166 mm
+  l_b,min = max(0,3 l_b,rqd ; 10 phi ; 100) = max(145 ; 120 ; 100) = 145 mm
+
+  Longueur disponible dans SF1 : h 250 - c_nom 50 = 200 mm
+  l_bd = 166 mm <= 200 mm  ->  OK
+  Marge = 34 mm (21 % de la longueur requise)
+
+  CONTRÔLE CROISÉ (pièce 4) : le logement de SF1 (25 cm, c_nom 50) accepte
+  l'ancrage à condition que les TROIS réductions soient effectives :
+    - équerre en pied obligatoire (a1) : sinon l_bd = 237 mm > 200 mm  -> NON
+    - enrobage 50 mm tenu sur les 4 faces (a2)
+    - cadres HA8 e150 jusqu'en pied de semelle (a3)
+  Si une seule tombe, l'ancrage ne rentre plus : B-40 doit augmenter h.
+  -> Réserve R-50-1 : condition de validité, pas un écart constaté.
+
+  Recouvrement avec le treillis de SF1 : non nécessaire (barres d'attente
+  continues depuis la semelle), mais la jonction est prescrite en équerre
+  posée sur le lit inférieur (voir planche, détail 1).
+
+[3] A2 — BOULONNAGE DU MOISAGE R1 (EC5 § 8.2, Johansen)
+------------------------------------------------------------------------------
+  Bois : rho_k = 350 kg/m3 · t1 = 200 mm (largeur de poutre) · d = 16 mm
+  f_h,0,k = 0,082 (1 - 0,01 d) rho_k = 24.11 MPa (EC5 8.5.1.1)
+  M_y,Rk = 0,3 f_u,k d^2,6 = 162141 N.mm = 162.1 N.m (EC5 8.5.1.1)
+  Double cisaillement, plaques acier extérieures (2 x UPE) :
+    a) f_h t1 d ....................... = 77146 N
+    b) f_h t1 d [sqrt(2+4My/(fh d t1^2)) - 1] = 33095 N
+    c) 2,3 sqrt(My f_h d) ............. = 18189 N
+  F_v,Rk = min = 18.2 kN par boulon (la ruine est le BROCHAGE du bois)
+  F_v,Rd = k_mod F_v,Rk / gM,conn = 0,80 x 18.2 / 1,3 = 11.19 kN
+  Côté acier M16 8.8 : F_v,Rd = 0,6 x 800 x 157 / 1,25 = 60.3 kN par plan de
+  cisaillement -> 120.6 kN en double cisaillement. LE BOIS GOUVERNE (11.2 kN).
+
+  V_Ed (R1) = 77.4 kN -> n >= 6.9 boulons
+  RETENU : 10 boulons M16 8.8 par face, soit 5 rangées de 2
+  Capacité = 10 x 11.19 = 111.9 kN pour 77.4 kN demandés -> taux 0.691
+  Espacements EC5 8.2.2 : e1 >= 4d = 64 mm · e2 >= 4d = 64 mm ·
+  e3 >= max(7d ; 80) = 112 mm · e4 >= 3d = 48 mm
+  Sur 3,85 m de poutre, 5 rangées à 700 mm d'entraxe : e1 = 700 mm >> 112 mm.
+  Hauteur 150 mm : 2 boulons par rangée à 50 mm du nu -> e2 = 90 mm > 64 mm.
+  CONDITION DE MAINTIEN LATÉRAL (R-45-2) : les UPE sont boulonnés de part et
+  d'autre, l'effort de stabilisation 5.8 kN est repris par le même boulonnage.
+
+[4] A3 — LINTEAU R3 : TORSION DE LA SECTION OUVERTE (EC3 § 6.2.7)
+------------------------------------------------------------------------------
+  M_t = P x e = 46,2 x 0,040 = 1.85 kN.m (excentrement de l'axe de cisaillement)
+  Torsion de Saint-Venant : tau_t = M_t t / I_T
+  I_T (UPE 200) = 96000 mm4 · t = t_f = 11.5 mm
+  tau_t = 1.85e+06 x 11.5 / 96000 = 221.6 MPa
+  tau_Rd = f_y / (sqrt(3) gM0) = 158.8 MPa
+  TAUX DE TORSION = 1.396  ->  NON
+
+  LA TORSION SEULE DÉPASSE LA RÉSISTANCE DE CISAILLEMENT : le UPE 200 ne peut
+  pas reprendre son excentrement, même avant d'ajouter la flexion.
+  -> La vérification de flexion de B-45 (0,291) est donc INSUFFISANTE seule :
+     elle ignore un effet qui vaut 140 % de la résistance.
+
+  PRESCRIPTION RETENUE (une seule, et elle est constructive) :
+    REMPLISSAGE BÉTON C25/30 ENTRE LES AILES DU UPE, SUR TOUTE LA LONGUEUR.
+    Le U devient une section fermée : I_T passe de 9,6e4 à l'ordre de 1e7 mm4
+    (évaluation d'ordre de grandeur, NON contractuelle), et la torsion n'est
+    plus un critère. Sans ce remplissage, le linteau est non conforme.
+    Variante possible : platine de répartition soudée en continu (B-60).
+  -> Réserve R-50-2 : prescription constructive à porter sur le plan coté.
+
+[5] A4 — SCELLEMENT DES ENTRETOISES Stab1 DANS LE VOUTAIN — PARAMÉTRIQUE
+------------------------------------------------------------------------------
+  Effort transmis par B-45 : F = 5,8 kN par file (enveloppe, portée 5,40 m).
+  Support : voutain de briques creuses 7 cm — MAÇONNERIE, pas béton.
+  Référentiel : EC6 § 8 et NF EN 1992-4 pour les ancrages chimiques.
+
+  CE QUI MANQUE, ET QUI N'EST PAS INVENTÉ :
+    - la fiche technique du scellement (DOC-09) : la FDC l'exclut explicitement
+      (D-05 : DOC-09 = fiches de prédalles, NON NÉCESSAIRE — B-48 sans objet) ;
+    - la résistance f_k de la maçonnerie (MAT-07, R-15) : non mesurée.
+  Sans ces deux données, AUCUNE capacité de scellement n'est calculable.
+
+  CE QUI EST PRESCRIT SANS CAPACITÉ CHIFFRÉE (et déclaré comme tel) :
+    - 2 tiges M12 par file, entraxe >= 100 mm, entraxe aux bords >= 150 mm ;
+    - scellement chimique à résine, profondeur >= 80 mm dans la brique pleine
+      (jamais dans une alvéole creuse) ;
+    - reprise de l'effort par BUTÉE sur le hourdis en plus du scellement :
+      l'entretoise ne travaille pas en traction pure, elle est en appui.
+  -> Réserve R-50-3 : capacité de scellement à justifier par fiche + essai
+     d'arrachement sur 1 file sur 4 avant généralisation.
+
+[6] A5 — PLATINE DE PIED DE P1 SUR SF1
+------------------------------------------------------------------------------
+  N_Ed = 100.3 kN · platine 200 x 200 mm · A_c0 = 400 cm2
+  f_cd = 0,85 x 25 / 1,5 = 14.17 MPa · F_Rdu = 1,5 f_cd A_c0 = 850 kN
+  Pression diamétrale (EC2 6.7) : taux = 0.118  -> OK
+  4 tiges M16 8.8 : cisaillement = 4 x 60.3 = 241.2 kN
+  Effort tranchant à la base de P1 : NON fourni par B-45 (poteau comprimé,
+  vent non traité — CHG-06 non applicable, stabilité horizontale par la
+  maçonnerie, D-29). Les 4 tiges sont donc dimensionnées par le MINIMUM
+  constructif, pas par un effort : c'est écrit, pas sous-entendu.
+  -> Réserve R-50-4 : si un effort horizontal apparaît (vent, choc), le
+     nombre de tiges se recalcule. Aucune valeur n'est supposée ici.
+
+[7] A6 — APPUIS MÉTALLIQUES SUR MAÇONNERIE : RENVOI À B-46, SANS CALCUL
+------------------------------------------------------------------------------
+  8 appuis (F1a/b/c, F2, F3, F4, R1, R2-N/S, R3-N/S) reposent sur de la
+  maçonnerie en moellons. La contrainte d'appui vaut sigma = V_Ed / (a x b).
+  La résistance correspondante est f_k — MAT-07, NON MESURÉE (R-15).
+  D-34 fixe f_k = 1,5 MPa comme HYPOTHÈSE, pas comme mesure.
+  B-50 ne calcule donc PAS ces appuis : il transmet les réactions et renvoie
+  à B-46, qui porte la maçonnerie. C'est la règle de circulation de la fiche.
+  -> Réserve R-50-5 : appuis sur maçonnerie à vérifier en B-46 avec f_k
+
+[8] CONTRÔLE CROISÉ — PIÈCE 4 (obligatoire)
+------------------------------------------------------------------------------
+  REF  ANCRAGE CALCULÉ          LOGEMENT / SUPPORT           CONTRÔLE                   VERDICT          RENVOI
+  A1   6 HA12 de P2             SF1 80x80x25, c_nom 50       l_bd 166 mm <= 200 mm      OK sous 3 conditions -
+  A2   10 M16 8.8 par face      poutre 20x15, 3,85 m         e1 700 / e2 90 mm          OK               -
+  A3   torsion 1,85 kN.m        UPE 200 ouvert               tau 222 > 159 MPa          NON              B-60 (plan) — remplissage béton
+  A4   5,8 kN par file          voutain brique 7 cm          capacité inconnue          NON CALCULABLE   DOC-09 exclue + MAT-07
+  A5   4 M16 8.8                SF1 80x80, platine 200x200   sigma 2,51 MPa             OK               -
+  A6   8 appuis sur maçonnerie  moellons, f_k non mesuré     sigma non calculable       RENVOI           B-46
+
+  RÈGLE APPLIQUÉE : B-50 ne corrige AUCUN écart à la place des briques.
+  Les deux écarts constatés (A3, A4) sont signalés, identifiés et renvoyés.
+  Aucune valeur n'est réduite, aucune capacité n'est inventée.
+
+[9] NOMENCLATURE DES CONNECTEURS
+------------------------------------------------------------------------------
+  DÉSIGNATION                                    QTÉ    EMPLOI
+  Boulon M16 8.8 + écrou + 2 rondelles           20 u   Moisage R1 (10 par face)
+  Tige M16 8.8 à scellement chimique             8 u    Platine de pied P1 (4 par poteau)
+  Tige M12 à scellement chimique                 8 u    Stab1 (2 par file, 4 files)
+  Platine 200 x 200 x 15                         2 u    Pied de P1-N et P1-S
+  Platine d'about 160 x 160 x 12                 18 u   Appuis F1 à R3 sur maçonnerie
+  Béton C25/30 de remplissage                    —      Remplissage des UPE 200 de R3
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B50_ASSEMBLAGES_IndA.dxf (79300 o) — audit 0 erreur(s)
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B50_ASSEMBLAGES_IndA.png / .pdf
