@@ -11,9 +11,11 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AL** (remplace l'indice AK du 21/10/2026 — `B-62` Nomenclature Ind. A) |
+| **Indice du livrable** | **AM** (remplace l'indice AL du 21/10/2026 — `B-64` Notice Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
+> **Indice AM (21/10/2026)** : **`B-64` NOTICE DE SYNTHÈSE LIVRÉE EN INDICE A.** Paquet EXE (8 types `B-60` + `B-62`) en **PARTIEL-DÉCLARÉ**. **NE PAS EXÉCUTER SANS EXE COTÉ ET VISA.** `P2` HA12 / `A4` / `PA-03` / `D-19` / `R-42-1` **non clos**. Suite : `B-70`.
+>
 > **Indice AL (21/10/2026)** : **`B-62` NOMENCLATURE ET FAÇONNAGE LIVRÉE EN INDICE A.** Extraction `V13` des 8 DXF `B-60` (audit **0**, 44 TEXT, 62 lignes, 5 écarts **signalés non corrigés**). `P2` 6 HA12 **NON COMMANDABLE** (ÉQUERRE plan vs DROITE `B-42`). `A4` / sabots / `Stab1` `L` / forages `D-36` / cadres `SF1` **en attente**. Filigrane **NE PAS COMMANDER SANS VISA**. Suite : `B-64`.
 >
 > **Indice AK (21/10/2026)** : **`B-60` TYPE `ASSEMBLAGE` LIVRÉE EN INDICE A.** `A2` `10 M16` sur `R1` · `A5` platines `P1` · `A4` `M12` `Stab1` **non chiffré** (`R-50-3` ouverte). `A1` déjà `FOND` · `A3` déjà `METAL` · `A6` déjà `MACON`. Sabots charpente **non inventés**. **Tous les types `B-60` livrés.**

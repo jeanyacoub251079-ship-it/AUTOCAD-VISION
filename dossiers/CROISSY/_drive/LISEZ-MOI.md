@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-62` — nomenclature et façonnage — est livrée en indice A.** Extraction script (`V13`) des 8 DXF `B-60` : **62 lignes**, 5 écarts **signalés non corrigés**. Les `6 HA12` de `P2` sont **non commandables** (ÉQUERRE au plan FOND vs DROITE à `B-42`). `A4`, sabots, `L` de `Stab1`, forages `D-36` et cadres `SF1` restent **en attente**. Filigrane **NE PAS COMMANDER SANS VISA**. `B-03` passe en **indice AL**. Suite : `B-64` (notice de synthèse).
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-64` — notice de synthèse du paquet EXE — est livrée en indice A.** Elle tient en 4 pages : objet, hypothèses, principes, points à lever, visas. **NE PAS EXÉCUTER SANS EXE COTÉ ET VISA.** `PA-03` / `R-50-3` / `R-42-1` / `R-45-1` **restent ouverts**. `B-03` passe en **indice AM**. Suite : `B-70`.
+
+**Juste avant (`B-62`)** : **`B-62` — nomenclature et façonnage — est livrée en indice A.** Extraction script (`V13`) des 8 DXF `B-60` : **62 lignes**, 5 écarts **signalés non corrigés**. Les `6 HA12` de `P2` sont **non commandables** (ÉQUERRE au plan FOND vs DROITE à `B-42`). `A4`, sabots, `L` de `Stab1`, forages `D-36` et cadres `SF1` restent **en attente**. Filigrane **NE PAS COMMANDER SANS VISA**. `B-03` passe en **indice AL**. Suite : `B-64` (notice de synthèse).
 
 **Juste avant (`B-60` ASSEMBLAGE)** : **`B-60` type `ASSEMBLAGE` — connecteurs d'exécution — est livrée en indice A.** `A2` : `10 M16 8.8` par face sur le moisage `R1` (taux `0,691`, **le bois gouverne**). `A5` : platines `200 × 200 × 15` sous `P1` (`4 M16` constructif). `A4` : `2 M12` par file `Stab1`, **aucune capacité écrite** (`DOC-09`, `R-50-3` ouverte). `A1` déjà `FOND`, `A3` déjà `METAL`, `A6` déjà `MACON`. Sabots charpente **non inventés**. **Tous les types `B-60` sont livrés.** `B-03` passe en **indice AK**.
 
@@ -66,7 +68,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | Note | Indice | Objet |
 |---|---|---|
 | `00 — Index` | 20/10/2026 | Point d'entrée : état de la chaîne, tailles, glossaire, points ouverts |
-| `B-03 — Registre des décisions et réserves` | **AL** | **38 décisions** · **`B-62` A livrée** · filigrane commande |
+| `B-03 — Registre des décisions et réserves` | **AM** | **38 décisions** · **`B-64` A livrée** · NE PAS EXÉCUTER SANS VISA |
 | `B-03 — Annexe hypothèses notifiées` | **H** | 30 hypothèses `H-01` à `H-30`, clause `D-34` mot pour mot |
 | `B-20 — Synthèse structurelle & conception GO` | B | Implantation de tous les ouvrages neufs, 3 planches, coupes `A-A` / `B-B` |
 | `B-21 — Descente de charges préliminaire` | **C** | Planchers **sans recharge** (`A` `1,80` · `B` `4,71 kN/m²`) · **dallage `g = 7,75` ⇒ `14,21 kN/m²` à l'ELU** sur `111,15 m²` · `F3` **+45 %** et `R1` **+57 %** vs `B-20` |
@@ -76,6 +78,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-64 — Notice de synthèse` | **A** | Paquet EXE 8 types + `B-62` · PARTIEL-DÉCLARÉ · **NE PAS EXÉCUTER SANS VISA** |
 | `B-62 — Nomenclature et façonnage` | **A** | **62 lignes** · 5 écarts signalés · `P2` HA12 non commandable · **NE PAS COMMANDER SANS VISA** |
 | `B-60 — Plans d'exécution type ASSEMBLAGE` | **A** | **A2** `10 M16` · **A5** platines `P1` · **A4** non chiffré · A1/A3/A6 déjà livrés |
 | `B-60 — Plans d'exécution type CHARPENTE` | **A** | **R+1** · `PN 75×200` · `DF` · `CF 75×225` · `E-07` non chargé · `PA-03` ouvert |
@@ -140,6 +143,6 @@ Les mêmes familles, plus **B-60 MACON EXE (ind. A, DXF purgé 11 blocs)** : B-2
 
 ## 5. SUITE DE LA CHAÎNE
 
-**La phase 5 est ouverte.** Tous les types `B-60` sont livrés. **`B-62` nomenclature est livrée** (Ind. A, PARTIEL-DÉCLARÉ, non commandable en l'état). Suite : **`B-64` notice de synthèse**.
+**La phase 5 est close pour le paquet EXE.** `B-60` (8 types) · `B-62` · **`B-64` notice** sont livrés, tous en PARTIEL-DÉCLARÉ. Suite : **`B-70` auto-contrôle de synthèse**.
 
 Chaque brique ne démarre que sur un **`GO` explicite** portant son nom.
