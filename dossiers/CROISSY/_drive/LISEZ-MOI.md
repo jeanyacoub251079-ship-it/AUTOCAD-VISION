@@ -2,7 +2,9 @@
 
 Ce dossier est la **diffusion unique** des livrables produits pour le projet **CROISSY**. Toutes les pièces portent un **filigrane** — `PRINCIPE — NE PAS EXÉCUTER` pour les pièces de conception, `NE PAS EXÉCUTER SANS EXE COTÉ ET VISA` pour les planches d'exécution — : aucune n'est exécutable en l'état.
 
-**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-49` — linteaux — est livrée en indice A.** Cinq linteaux métalliques neufs, tous conformes : `F1a/b/c` (`2 × HEA 200`) en **triangle de charge 60°** (taux `0,010`) et enveloppe `B-45` (`0,059`) ; `R3-N/S` flexion `0,291`, torsion close par le remplissage (`D-36`). Les deux linteaux bois de la façade Est (`E-08`) sont **court-circuités** par `R3` : aucun calcul de bois, aucun relevé — ce n'est pas prescrit. Les seuils BA sont **SANS OBJET**. **`D-37`** : le coussin `w_b ≥ 300 mm` sous `R1`, `F2`, `F3` est **accepté** (`R-46-1` et `R-46-2` closes). `B-03` passe en **indice AB** (37 décisions).
+**Ce qui a changé le 21/10/2026 (dernière passe)** : **`B-44` — charpente bois — est livrée en indice A.** Les bois **neufs** passent : 3 pannes `75 × 200 C24` (taux `0,830`, la flèche gouverne), arbalétriers de demi-ferme `100 × 200` (`0,626`, flambement), entraits `75 × 200` (`0,108`), contrefiches `75 × 225` (`0,940`). Les demi-fermes sont **désolidarisées du plancher** : `E-07` n'est pas chargé, `PA-03` reste un arrêt de `B-43`. L'existant (`E-04`/`E-05`/`E-06`) n'est pas calculé. **`D-38`** : pas de pieu, pas de prédalle — `B-41` et `B-48` **SANS OBJET**. `B-03` passe en **indice AC** (38 décisions).
+
+**Juste avant (`B-49`)** : **`B-49` — linteaux — est livrée en indice A.** Cinq linteaux métalliques neufs, tous conformes : `F1a/b/c` (`2 × HEA 200`) en **triangle de charge 60°** (taux `0,010`) et enveloppe `B-45` (`0,059`) ; `R3-N/S` flexion `0,291`, torsion close par le remplissage (`D-36`). Les deux linteaux bois de la façade Est (`E-08`) sont **court-circuités** par `R3` : aucun calcul de bois, aucun relevé — ce n'est pas prescrit. Les seuils BA sont **SANS OBJET**. **`D-37`** : le coussin `w_b ≥ 300 mm` sous `R1`, `F2`, `F3` est **accepté** (`R-46-1` et `R-46-2` closes). `B-03` passe en **indice AB** (37 décisions).
 
 **Juste avant (`B-46`)** : **`B-46` — maçonnerie — est livrée en indice A.** Les **8 appuis** de nos frangements et renforts (`F1` à `R3`, `11,5` à `77,4 kN`) reposent sur les sommiers `S1`/`S2` en tête de mur et sont vérifiés à l'`EC6 § 6.1.3` : **5 sont admissibles sans réserve**, les trois plus chargés — **`R1`, `F2`, `F3`** — le sont seulement si le sommier est posé à plus de `0,20`–`0,30 m` du bout de mur (`R-46-1`) et si les moellons sont du groupe 1 (`R-46-2`) ; la note prescrit donc un **coussin de répartition ou sommier élargi (`w_b ≥ 300 mm`)**, qui rend leur admissibilité inconditionnelle. Les voiles existants sont **très peu sollicités** (taux `0,290`) et les appuis des neufs sur le soubassement passent (`0,464`), sous réserve de la reconnaissance en fouille (`D-19`). **`R-50-5` est close.** Par ailleurs le client tranche (`D-36`) : le **remplissage béton `C25/30` des `UPE 200` de `R3`** est accepté — **`R-50-2` est close**, l'exécution est renvoyée à `B-60`. `B-03` passe en **indice AA** (36 décisions).
 
@@ -56,6 +58,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-42 — Poteaux et jambages BA` | **B** | **Note de calcul d'exécution** : `P2` `15 × 25` (`M_Ed/M_Rd = 0,305`), `P3` `50 × 40`, `J1` `24 × 50` · **6 HA12** + cadres `HA8 e150/e200` · appui de `J1` à `0,332 MPa` · 5 réserves |
 | `B-43 — Planchers, plancher haut & dallage` | **B** | **Solives bois `8 × 18` conformes EC5** (flexion `0,619`, flèche finale `0,576`) · **dallage `C25/30` `13 cm` + `ST25C`**, joints de retrait `4,50 m`, désolidarisation, **protection anti-termites prescrite au CCTP** · **plancher mixte B → `B-45`** · **plancher haut `E-07` non calculable** (`R-43-1`, `PA-03`) · **une seule réserve** |
 | `B-45 — Structure métallique` | **A** | **11 barres, toutes classe 1** : `F1` `0,059` · `F2` `0,252` · **`F3` `0,609`, M-V `0,672`, flèche `0,971`** · `R1` déversement `0,880` · `R3` `0,291` + torsion `1,85 kN·m` · `P1` `0,123` · `Stab1` `5,8 kN`/file · `IPE 330` non calculée (existant) |
+| `B-44 — Charpente bois` | **A** | **Neufs OK** — pannes `75×200 C24` `0,830` · DF `100×200`/`75×200` · CF `75×225` `0,940` · **`E-07` non chargé** · existant hors calcul · `D-38` |
 | `B-49 — Linteaux et seuils` | **A** | **5 linteaux neufs OK** — `F1` triangle `0,010` / enveloppe `0,059` · `R3` `0,291` + `D-36` · **`E-08` court-circuité** (pas de relevé bois) · seuils **SANS OBJET** · `D-37` coussin |
 | `B-46 — Maçonnerie : vérification et conception` | **A** | **8 appuis vérifiés `EC6 § 6.1.3`** — 5 OK sans réserve, **`R1`/`F2`/`F3`** sous réserve d'`a₁` et de groupe d'unités (`R-46-1`/`R-46-2`) → **coussin `w_b ≥ 300 mm`** · voiles **12/12 OK** · `E-08` → `B-49` · clause `D-34` sur la planche et la note |
 | `B-50 — Assemblages et ancrages` | **A** | `A1` `l_bd 166 ≤ 200` (3 conditions) · `A2` `10 M16 8.8`, taux `0,691` — **le bois gouverne** · **`A3` linteau `R3` NON conforme en torsion** (`τ 222 > 159`, taux `1,40`) → remplissage béton · `A4` non calculable · `A5` `0,118` · `A6` → `B-46` |
@@ -63,7 +66,7 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | `B-32 — Vue nettoyée structurelle RDC & R+1` | D | `0 entité` sur les calques cloisons et isolation |
 | `B-40 — Fondations superficielles & implantation PLS` | **F** | `SF1 80×80×25` (`D-30`, `σ_ELS = 0,204 MPa`), **dallage rechargé sur 100 % de l'emprise** (`D-35`), note `D-09` intégrale |
 
-### `02_Plans_PDF` — 15 planches PDF vectorielles
+### `02_Plans_PDF` — 16 planches PDF vectorielles
 
 | Planche | Indice |
 |---|---|
@@ -76,14 +79,15 @@ Le **glossaire complet** (matériaux, ouvrages neufs `F1` à `F4`, `R1` à `R3`,
 | **B-25 — Contreventement, torsion, régularité** | **E** |
 | **B-46 — Maçonnerie : vérification des appuis** | **A** |
 | **B-49 — Linteaux métalliques** | **A** |
+| **B-44 — Charpente bois** | **A** |
 | **B-50 — Assemblages et ancrages** | **A** |
 | **B-45 — Structure métallique : profilés, moisage, entretoises** | **A** |
 | **B-43 — Dallage : ferraillage, joints de retrait, désolidarisation** | **B** |
 | Preuves de calage B-30, B-31 A, B-31 B | 3 pièces |
 
-### `03_DXF` — 12 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
+### `03_DXF` — 13 fichiers AutoCAD `AC1032` (`audit = 0 erreur`)
 
-Les mêmes neuf familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)** et **B-50 (ind. A)**.
+Les mêmes dix familles de planches, en DXF : B-20 planches 1 à 3 (ind. B), B-40 (ind. F), B-32 RDC et `R+1` (ind. D), **B-25 (ind. E)**, **B-46 (ind. A)**, **B-49 (ind. A)**, **B-44 (ind. A)**, **B-43 (ind. B)**, **B-45 (ind. A)** et **B-50 (ind. A)**.
 
 ---
 

@@ -1,0 +1,190 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-44 — CHARPENTE BOIS — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13) — EC5 §6 / §7.2 · EC1-1-3 · EC1-1-4
+Mode : PARTIEL-DÉCLARÉ (H-29 toiture, H-14 périmètre, existant non sondé).
+Neufs : C24 prescrit. Existant E-04/05/06 : B-24. E-07 : non chargé.
+==============================================================================
+
+[0] HYPOTHÈSES ET CLAUSES OPPOSABLES
+------------------------------------------------------------------------------
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE (zone 1).
+  D-28 : AUCUN JOINT DE DILATATION.
+  D-34 : f_k = 1,5 MPa HYPOTHÈSE — essais hors mission (maçonnerie, pas le bois neuf).
+  D-38 : B-41 et B-48 SANS OBJET — « il n'y en a pas sur le projet » (21/10/2026).
+  MAT-08 : classe de service 2 (toiture, désordre 6 humidité) — produit par B-44.
+  Bois neuf : C24 NF EN 338 — SPÉCIFICATION d'approvisionnement (comme S275).
+  H-29 : G_toiture = 0,95 kN/m² (CHG-04 absent). H-14 : charpente dans le lot 01.
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO) — NON dimensionnée.
+  k_mod = 0,80 (T3.1, cl. 2, moyenne durée) · k_def = 0,80 (T3.2, cl. 2, massif).
+  k_cr = 0,67 (EC5 §6.1.7(2)) · γ_M = 1,30.
+  Déversement : AUCUN maintien supposé (chevrons existants altérés, Désordre 8).
+
+[1] INVENTAIRE — PREUVE D'ÉPUISEMENT (V14)
+------------------------------------------------------------------------------
+  RÉF   OUVRAGE                      SECTION          L m    EMPLACEMENT            STATUT
+  PN1   Panne neuve Est              C24 à dim.       3,20   aile Est, D2 f.02      NEUF — B-20
+  PN2   Panne neuve Nord             C24 à dim.       3,20   hall / Ouest           NEUF — B-20
+  PN3   Panne neuve Sud              C24 à dim.       3,20   hall / Ouest           NEUF — B-20
+  DF1   Demi-ferme n°1               C24 à dim.       3,20   aile Est N, File A–C   NEUF — suppr. potelet
+  DF2   Demi-ferme n°2               C24 à dim.       3,20   aile Est S, File A–C   NEUF — suppr. potelet
+  CF    Contrefiches ferme tradi     C24 à dim.       2,62   Ouest, Désordre 6      NEUF — après purge
+  E-04  Potelets existants           non sondé        —      Désordre 8             SUPPRIMÉS par DF — B-24
+  E-05  Ferme tradi existante        non sondé        9,90   Désordre 6             B-24 — purge puis CF
+  E-06  Pannes existantes            non sondé        3,20   couverture             B-24 — non calculées
+  E-07  Plancher haut                nature inconnue  —      Désordre 5             NON CHARGÉ — PA-03 B-43
+  ZN1   ZONE NON RELEVÉE n°1         —                —      D2 f.02 Nord           AUCUN CALCUL — D-19
+  ZN2   ZONE NON RELEVÉE n°2         —                —      D2 f.02 Sud            AUCUN CALCUL — D-19
+
+  Épuisement : D1 (aucune section bois — C-07/R-22) · D2 f.02 (2 demi-fermes,
+  3 pannes, contrefiches, 2 zones non relevées) · D3 p.7-9/14-15 (dés. 5, 6, 8) ·
+  D4 p.26-27 NIV-02c · B-20 planche 3 · B-21 H-29 · B-23 P-2/P-3 · B-24 E-04..07 ·
+  B-25 q_p=500 Pa · B-43 R-43-1/PA-03. Aucun pieu. Aucune prédalle.
+
+[2] CHARGES — DDC D'EXÉCUTION (distincte de B-21, cohérente)
+------------------------------------------------------------------------------
+  G     = 0.95 kN/m²  (H-29 : tuiles 0,40 + chevrons 0,15 + pannes/fermes 0,25 + plafond 0,15)
+  Q_s   = 0.45 kN/m²  (CHG-05 sk=0,45 — μ1 NON réduit, enveloppe B-21)
+  Q_H   = 0.40 kN/m²  (cat. H, NON combiné à la neige)
+  q_p   = 0.50 kN/m²  (B-25, z=6 m) · |c_pe| courante = 0.70
+  p_ELU = 1,35 G + 1,5 Q_s = 1.958 kN/m²
+  p_ELS,G = 0.95 · p_ELS,Q = 0.45
+  w_dépression = q_p · |c_pe| = 0.35 kN/m²
+  p_uplift ELU = 1,5 w − 1,0 G = -0.425 kN/m²  → PAS DE SOULÈVEMENT NET (G gouverne)
+  α = 28.0° (NIV-02c min) · L_arb = L_DF/cos α = 3.624 m · h_DF = 1.701 m
+  D-26 : EC8 non applicable (zone 1).
+
+[3] PANNES NEUVES PN1/PN2/PN3 — EC5 §6.1 / §6.3.3 / §7.2
+------------------------------------------------------------------------------
+  L = 3.20 m · e = 1.60 m · 3 unités identiques (B-20).
+  Appuis simples. Semelle comprimée NON maintenue (Désordre 8 : chevrons altérés).
+  Formules :
+    M_Ed = p L² / 8 · V_Ed = p L / 2
+    σ_m,d = M_Ed / W  ≤  k_crit · f_m,d     (EC5 6.11 + 6.3.3)
+    τ_d   = 1,5 V_Ed / (k_cr b h)  ≤ f_v,d  (EC5 6.13 + 6.1.7)
+    σ_c,90,d = V_Ed / (b · l_app)  ≤ k_c,90 f_c,90,d  (l_app = 100 mm, k_c,90 = 1,5 appuis)
+    w_inst = 5 p L⁴ / (384 E I) · w_fin = w_G(1+k_def) + w_Q(1+ψ2 k_def)
+    w_lim = L/300 (EC5 T7.2, éléments de toiture).
+  Catalogue C24 (b×h mm) — premier qui passe TOUTES les vérifications :
+  SECTION     σ/f    τ/f    c90  w_fin k_crit  λ_rel  VERDICT
+  75×200    0.554  0.310  0.295  0.830  1.000   0.69  OK
+  75×225    0.438  0.276  0.296  0.585  1.000   0.73  OK
+  100×200   0.418  0.234  0.223  0.629  1.000   0.52  OK
+  100×225   0.331  0.209  0.224  0.444  1.000   0.55  OK
+  100×250   0.269  0.188  0.224  0.325  1.000   0.58  OK
+  120×240   0.245  0.164  0.188  0.309  1.000   0.47  OK
+  150×250   0.182  0.128  0.152  0.222  1.000   0.38  OK
+  150×300   0.128  0.107  0.153  0.131  1.000   0.42  OK
+  200×300   0.098  0.082  0.117  0.101  1.000   0.32  OK
+
+  RETENU : 75×200 C24
+    p_ELU = 3.194 kN/m (dont g_propre 0.062) · M_Ed = 4.088 kN·m · V_Ed = 5.110 kN
+    k_h = 1.000 · f_m,d = 14.77 MPa · k_crit = 1.000 (λ_rel,m = 0.69, σ_crit = 50.7 MPa)
+    flexion k_crit : 0.554 · cisaillement : 0.310 · appui : 0.295 · flèche : 0.830
+    w_inst = 5.71 mm · w_fin = 8.86 mm · L/300 = 10.67 mm
+
+[4] DEMI-FERMES DF1/DF2 — TREILLIS (arbalétrier + entrait)
+------------------------------------------------------------------------------
+  L_horiz = 3.20 m · α = 28.0° · L_arb = 3.624 m · h = 1.701 m
+  2 unités. Désolidarisées du plancher (B-20). Potelets E-04 SUPPRIMÉS après pose.
+  Surface tributaire par DF : (Y_est / 2) × L_DF = 4.75 × 3.20 = 15.22 m²
+  W_ELU = p_ELU × A = 1.958 × 15.22 = 29.79 kN  (charge verticale totale)
+  Treillis isostatique triangle :
+    H_entrait = (W L / 4) / h     [2 appuis, M_eq = W L/4 en bipoint médian conserv.]
+    N_arb     = (W / 2) / sin α
+    V_appui   = W / 2
+    H_entrait = 14.00 kN (traction) · N_arb = 31.72 kN (compression) · V_appui = 14.89 kN
+  Arbalétrier : compression + flambement (EC5 §6.3.2) + flexion de poids propre.
+  Entrait : traction parallèle (EC5 §6.1.2).
+  Arbalétrier — catalogue :
+  SECTION   λ_rel    k_c   taux    σ_c  VERDICT
+  75×200    2.838  0.116  1.426   2.11  NON
+  75×225    2.838  0.116  1.268   1.88  NON
+  100×200   2.129  0.200  0.626   1.59  OK
+  100×225   2.129  0.200  0.557   1.41  OK
+  100×250   2.129  0.200  0.501   1.27  OK
+  120×240   1.774  0.281  0.315   1.10  OK
+  150×250   1.419  0.417  0.168   0.85  OK
+  150×300   1.419  0.417  0.140   0.70  OK
+  200×300   1.064  0.641  0.073   0.53  OK
+
+  RETENU arbalétrier : 100×200 C24 — taux interaction 0.626 · λ_rel = 2.129 · k_c = 0.200
+  RETENU entrait     : 75×200 C24 — traction 0.108 (N = 14.00 kN, σ = 0.93 MPa, f_t,0,d = 8.62)
+  Appui mural : V = 14.89 kN par about → B-46/B-50 (PA-02 liaison charpente-maçonnerie).
+
+[5] CONTREFICHES SUR FERME TRADI — COMPRESSION + FLAMBEMENT (EC5 §6.3.2)
+------------------------------------------------------------------------------
+  L_ef = 2.62 m (hauteur de versant NIV-02c min, conservateur).
+  Rôle : reprendre la ferme E-05 APRÈS purge (B-23 P-2). La ferme elle-même n'est pas calculée.
+  Charge : fraction de la ferme. Enveloppe : bande 3,20 m × demi-portée 4,90 m / 2 appuis.
+  File C–E = 6.60 m · A_trib = 10.56 m² · W = 20.67 kN · N_cf = W/sin α = 44.03 kN
+  Formule : N_Ed / (k_c A f_c,0,d) ≤ 1  (EC5 6.3.2). Pas de flexion (bielles).
+  SECTION   λ_rel    k_c    σ_c   taux  VERDICT
+  75×200    2.052  0.215   2.94  1.058  NON
+  75×225    2.052  0.215   2.61  0.940  OK
+  100×200   1.539  0.363   2.20  0.470  OK
+  100×225   1.539  0.363   1.96  0.418  OK
+  100×250   1.539  0.363   1.76  0.376  OK
+  120×240   1.282  0.492   1.53  0.240  OK
+  150×250   1.026  0.670   1.17  0.136  OK
+  150×300   1.026  0.670   0.98  0.113  OK
+  200×300   0.769  0.842   0.73  0.067  OK
+
+  RETENU : 75×225 C24 — taux 0.940 · λ_rel = 2.052 · k_c = 0.215 · N_Ed = 44.03 kN
+
+[6] EXISTANT ET PLANCHER HAUT — HORS CALCUL
+------------------------------------------------------------------------------
+  E-04 potelets : B-20 les SUPPRIME (remplacés par DF1/DF2). Pas de flambement à vérifier
+    sous charge augmentée : la charge est DÉVIÉE vers les murs. Séquence : pose DF →
+    reprise → dépose potelets (B-23 P-3 inversé par le parti B-20).
+  E-05 ferme : B-24 DÉFAVORABLE sur toute plage. Renfort = CF après purge (B-23 P-2).
+    Aucune section résiduelle retenue. Aucune valeur de B-24 n'est contractuelle.
+  E-06 pannes existantes : B-24 LIMITE. 3 pannes neuves AJOUTÉES, existant non calculé.
+  E-07 plancher haut : les DF sont DÉSOLIDARISÉES (B-20, coupe A-A). Les neufs
+    chargent les MURS, pas E-07. PA-03 reste un point d'arrêt de B-43 (nature de E-07),
+    il NE BLOQUE PAS B-44. Si la charpente sortait du programme, PA-03 tombait (B-43) ;
+    le GO de B-44 la maintient dans le programme (H-14).
+  ZN1 / ZN2 : emprises non cotées (B-23 §3). Relevé avant taille — déjà prescrit
+    (B-20 point 6, nuage D-19). Pas une demande nouvelle.
+
+[7] EFFORTS AUX APPUIS ET ASSEMBLAGES → B-50
+------------------------------------------------------------------------------
+  NŒUD     NATURE                     N_Ed     V_Ed     M_Ed  TYPE
+  PN-app   panne / sablière ou DF     0.00     5.11     0.00  sabot ou entaille
+  DF-mur   entrait / mur File A ou C    14.00    14.89     0.00  sabot + ancrage anti-soulèvement
+  DF-faît  arbalétrier / poinçon     31.72     0.00     0.00  boulonné / entaillé
+  CF-arb   contrefiche / arbalétrier E-05    44.03     0.00     0.00  boulonné — APRÈS purge
+  CF-ent   contrefiche / entrait E-05    44.03     0.00     0.00  boulonné — APRÈS purge
+  Soulèvement net toiture : -0.425 kN/m² → néant (G > 1,5 w)
+  PA-02 (liaison charpente-maçonnerie) MAINTENU — B-21. Efforts fournis, logements B-50.
+  Aucun Johansen ici. Aucun sabot chiffré.
+
+[8] DISPOSITIONS CONSTRUCTIVES
+------------------------------------------------------------------------------
+  Contreventement de toiture : ABSENT au D2 (B-25). Les pannes neuves ne constituent
+    PAS un diaphragme. Croix de Saint-André / entretoises → B-60, hors calcul de section.
+  Ventilation sous-face : lame d'air + chatières — prescription, pas un calcul.
+  Phasage E-05 : 1. purge bois mort  2. traitement  3. pose CF  (B-23 P-2). Ordre inverse interdit.
+  Phasage E-04 : 1. pose DF1/DF2  2. reprise des pannes  3. dépose potelets.
+  Classe de service 2 : toiture, humidité (désordre 6). Pas de classe 1.
+  Termites : D1 § 01.2.1.9.2 déjà prescrit (ne pas rouvrir).
+
+[9] AUTO-CONTRÔLE DÉCLARÉ
+------------------------------------------------------------------------------
+  RÉF    ÉLÉMENT                SECTION    TAUX     VERDICT
+  PN1-3  Pannes neuves          75×200     0.830    OK
+  DF-arb Arbalétrier DF         100×200    0.626    OK
+  DF-ent Entrait DF             75×200     0.108    OK
+  CF     Contrefiches           75×225     0.940    OK
+  E-04   Potelets               —          —        SUPPRIMÉS — hors calcul
+  E-05   Ferme tradi            —          —        B-24 + purge — hors calcul
+  E-06   Pannes exist.          —          —        B-24 — hors calcul
+  E-07   Plancher haut          —          —        NON CHARGÉ — PA-03 B-43
+  ZN     2 zones NR             —          —        D-19 — hors calcul
+
+  COMPLET interdit (V12) : EXI-01g / MAT-06 existant absents, CHG-04 = H-29,
+  2 zones non cotées. PARTIEL-DÉCLARÉ assumé.
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B44_CHARPENTE_IndA.dxf (70537 o) — audit 0 erreur(s)
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B44_CHARPENTE_IndA.png / .pdf
