@@ -1,0 +1,24 @@
+﻿FILIGRANE;NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE — CROISSY-FLORA B-62 Ind. A — 21/10/2026
+
+famille;type_b60;repere;designation;section;l_unit_mm;n;l_tot_mm;poids_kg;calque;statut;note
+BARRE;FOND;SF1-HA8;Lit HA8 e150 2 directions;HA8 S500B;700;12;8400;3,320;FOND-NOMENCLATURE;CERTAIN;6+6 lus sur DXF · L=800−2×c_nom50=700 mm · 2 lits croisés = 1 nappe
+BARRE;FOND;A1-HA12;Attentes P2 dans SF1 — ÉQUERRE;HA12 S500B;;6;;;FOND-NOMENCLATURE;ÉCART-FORME;6 HA12 = longitudinales P2, pas un surplus. Forme ÉQUERRE l_bd 166 mm. B-42 a débité DROITE 3760 mm — écart signalé, non tranché.
+BARRE;VERT;P2-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;P2-CAD;Cadres HA8 e150;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+BARRE;VERT;P3-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;P3-CAD;Cadres HA8 e200;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+BARRE;VERT;J1-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;J1-CAD;Cadres HA8 e200;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+TREILLIS;PLANCHER;ST25C;Treillis soudé partie haute;ST25C Ø7 e150 257 mm²/m;;1;;224,500;PLANCHER-NOMENCLATURE;CERTAIN (emprise B-43);continu sous joints de retrait · 224.52 kg à 2,02 kg/m² · STR-03 absent (encadrements non coupés)
+BARRE;MACON;C-R1-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+BARRE;MACON;C-F2-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+BARRE;MACON;C-F3-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+BARRE;VERT;P2-CAD-B42;Cadres P2 (débit note B-42);HA8 S500B;720;20;14400;5,690;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(150+250)−8×30+2×80 = 720 mm · n=20 = f(H=2800/e150)
+BARRE;VERT;P3-CAD-B42;Cadres P3 (débit note B-42);HA8 S500B;1720;15;25800;10,190;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(400+500)−8×30+2×80 = 1720 mm · n=15 = f(H=2800/e200)
+BARRE;VERT;J1-CAD-B42;Cadres J1 (débit note B-42);HA8 S500B;1320;15;19800;7,820;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(240+500)−8×30+2×80 = 1320 mm · n=15
+BARRE;VERT;P3-HA12-FAC;Longitudinales P3 — DROITE (B-42);HA12 S500B;3760;6;22560;20,030;note B-42 §6;INDICATIF (H hyp.);H+2×40φ = 2800+960 = 3760 · D-19 pied · pas d'équerre SF1
+BARRE;VERT;J1-HA12-FAC;Longitudinales J1 — DROITE (B-42);HA12 S500B;3760;6;22560;20,030;note B-42 §6;INDICATIF (H hyp.);H+2×40φ = 3760 · D-19 pied · D-34 f_k=1,5
+BARRE;FOND;P2-HA12-EQ;Longitudinales P2 — ÉQUERRE (plan FOND);HA12 S500B;3110;6;18660;16,570;FOND-NOMENCLATURE (forme) + H hyp. VERT;NON COMMANDABLE — écart forme;L_dev = H_hyp 2800 + l_bd 166 + 12φ 144 = 3110 mm · MÊMES 6 barres que A1 · B-42 disait DROITE 3760 — écart
+BARRE;MACON;C-R1-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;440;8;3520;1,390;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON
+BARRE;MACON;C-F2-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;340;8;2720;1,070;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON
+BARRE;MACON;C-F3-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;340;8;2720;1,070;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON

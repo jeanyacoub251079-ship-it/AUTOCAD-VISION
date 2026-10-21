@@ -1,0 +1,120 @@
+{
+  "livrable": "B-62 Nomenclature et façonnage",
+  "indice": "A",
+  "date": "2026-10-21",
+  "mode": "PARTIEL-DECLARE",
+  "filigrane": "NE PAS COMMANDER SANS VISA",
+  "n_lignes": 62,
+  "n_ecarts": 5,
+  "n_en_attente": 7,
+  "dxf": {
+    "FOND": {
+      "size": 2756413,
+      "audit": 0,
+      "n_ent": 196,
+      "n_nom": 4
+    },
+    "VERT": {
+      "size": 2748052,
+      "audit": 0,
+      "n_ent": 155,
+      "n_nom": 5
+    },
+    "PLANCHER": {
+      "size": 970998,
+      "audit": 0,
+      "n_ent": 121,
+      "n_nom": 3
+    },
+    "LINTEAU": {
+      "size": 975411,
+      "audit": 0,
+      "n_ent": 131,
+      "n_nom": 7
+    },
+    "MACON": {
+      "size": 968922,
+      "audit": 0,
+      "n_ent": 106,
+      "n_nom": 6
+    },
+    "METAL": {
+      "size": 977886,
+      "audit": 0,
+      "n_ent": 146,
+      "n_nom": 6
+    },
+    "CHARPENTE": {
+      "size": 974250,
+      "audit": 0,
+      "n_ent": 263,
+      "n_nom": 7
+    },
+    "ASSEMBLAGE": {
+      "size": 972082,
+      "audit": 0,
+      "n_ent": 129,
+      "n_nom": 6
+    }
+  },
+  "ecarts": [
+    {
+      "quoi": "P1 L",
+      "plan": "calque METAL-NOMENCLATURE : SHS sans L",
+      "note": "B-60 METAL §2 : L=3,00 m",
+      "traitement": "B-62 prend L de la note, signale l'absence au calque. Pas d'invention."
+    },
+    {
+      "quoi": "Forages D-36 R3",
+      "plan": "B-60 METAL HABILLAGE : « Diam./entraxe -> B-62 » — AUCUNE cote de forage sur le plan",
+      "note": "B-50 A3 prescrit le remplissage, pas le piquage",
+      "traitement": "B-62 N'INVENTE PAS les diamètres ni l'entraxe. Renvoyé à B-60 METAL Ind. B."
+    },
+    {
+      "quoi": "DF-arb L",
+      "plan": "NOMENCLATURE : L_horiz=3200 (entrait) — arbalétrier sans L propre",
+      "note": "DETAILS / B-44 : L=3,62 m",
+      "traitement": "B-62 prend L=3620 du calque DETAILS. Signale l'absence au calque NOMENCLATURE."
+    },
+    {
+      "quoi": "P2 HA12 forme",
+      "plan": "B-60 FOND : 6 HA12 ÉQUERRE l_bd 166 mm (A1, opposable, R-50-1 CLOSE)",
+      "note": "B-42 §6 : DROITE L=3 760 mm (H+2×40φ) — débits « indicatifs, B-62 les établira »",
+      "traitement": "MÊMES 6 barres, DEUX géométries. B-62 ne tranche pas. Façonnage ÉQUERRE porté (plan EXE opposable) ; débit B-42 conservé en vis-à-vis. Commande de ces 6 barres BLOQUÉE tant que l'écart n'est pas levé par B-42 Ind. C ou B-60 FOND Ind. B."
+    },
+    {
+      "quoi": "Cadres P2/P3/J1 nombre",
+      "plan": "B-60 VERT NOMENCLATURE : HA8 e150 / e200 — PAS de quantité",
+      "note": "B-42 §6 : P2 20 cadres L=0,72 m · P3 15 L=1,72 · J1 15 L=1,32 · total 50 · 83,8 kg",
+      "traitement": "B-62 PORTE les débits B-42 en INDICATIF (H hyp.) et signale l'absence de qté au plan."
+    }
+  ],
+  "en_attente": [
+    "SF-T 600×600 — quantité selon D-19",
+    "GB C16/20 — volume selon fouille",
+    "H = 2 800 mm = hypothèse B-20 — R-42-1 ouverte — débits INDICATIFS",
+    "Stab1 IPE 120 ×4 — L unitaire absente (portée IPE 160 non relevée)",
+    "A4 scellement M12 — capacité NON écrite (DOC-09) — R-50-3 ouverte",
+    "Forages de remplissage R3 — diam. et entraxe non portés",
+    "Cadres SF1 HA8 e150 jusqu'au lit — quantité absente du plan FOND"
+  ],
+  "hors": [
+    "Zones A/B existant (solives 8×18, IPE 160/330) — hors nomenclature neuve",
+    "Zone C E-07 — PA-03 ouvert, hors planche",
+    "F1/R3/R2/F4 — pas de coussin (B-46 OK sans)",
+    "E-04 potelets SUPPRIMÉS · E-05/06 existant B-24 · E-07 non chargé · ZN1/ZN2 D-19",
+    "Contreventement toiture ABSENT au D2 — non inventé",
+    "Sabots DF/PN — efforts B-44 V=14,89 / 5,11 kN — type NON catalogué DOC-09 — NON INVENTÉ"
+  ],
+  "csv": {
+    "MASTER": "B-62_nomenclature.csv",
+    "B-62_barres.csv": "B-62_barres.csv",
+    "B-62_beton.csv": "B-62_beton.csv",
+    "B-62_bois.csv": "B-62_bois.csv",
+    "B-62_connecteurs.csv": "B-62_connecteurs.csv",
+    "B-62_profiles.csv": "B-62_profiles.csv"
+  },
+  "faconnage_png": "FLORA_B62_FACONNAGE_IndA.png",
+  "faconnage_pdf": "FLORA_B62_FACONNAGE_IndA.pdf",
+  "verdict": "CONFORME AVEC RESERVES — PARTIEL-DECLARE — non commandable en l'etat"
+}

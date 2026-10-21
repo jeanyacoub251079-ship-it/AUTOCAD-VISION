@@ -1,0 +1,7 @@
+﻿FILIGRANE;NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE — CROISSY-FLORA B-62 Ind. A — 21/10/2026
+
+famille;type_b60;repere;designation;section;l_unit_mm;n;l_tot_mm;poids_kg;calque;statut;note
+CONNECTEUR;ASSEMBLAGE;A2-M16;Boulon moisage R1;M16 8.8 + écrou + 2 rondelles LARGES;;20;;;ASSEMBLAGE-NOMENCLATURE;CERTAIN;20 u lus · 10 / face · harnais INTERDIT · galva ISO 1461 70 µm
+CONNECTEUR;ASSEMBLAGE;A5-M16;Tige scellement pied P1;M16 8.8 scellement chimique;;8;;;ASSEMBLAGE-NOMENCLATURE;CERTAIN (constructif);8 u lus · 4 / poteau · σ 0,118
+CONNECTEUR;ASSEMBLAGE;A4-M12;Tige scellement Stab1;M12 scellement chimique;;8;;;ASSEMBLAGE-NOMENCLATURE;NON CHIFFRÉ — R-50-3;8 u lus (2 / file × 4) · capacité NON écrite DOC-09 · NON COMMANDABLE en l'état · essai 1/4 files
+CONNECTEUR;ASSEMBLAGE;A5-PLAT;Platine de pied P1;200×200×15 S275;;2;;9,420;ASSEMBLAGE-NOMENCLATURE;CERTAIN;2 u lus · 4.71 kg / u

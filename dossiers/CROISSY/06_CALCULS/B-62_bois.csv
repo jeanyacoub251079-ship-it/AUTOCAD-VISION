@@ -1,0 +1,7 @@
+﻿FILIGRANE;NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE — CROISSY-FLORA B-62 Ind. A — 21/10/2026
+
+famille;type_b60;repere;designation;section;l_unit_mm;n;l_tot_mm;poids_kg;calque;statut;note
+BOIS;CHARPENTE;PN1/2/3;Pannes neuves;75×200 C24;3200;3;9600;60,480;CHARPENTE-NOMENCLATURE;CERTAIN;x3 L=3200 lus · volume 0.1440 m³ · ρ_mean 420 kg/m³ info · commande en m³
+BOIS;CHARPENTE;DF-arb;Arbalétrier demi-ferme;100×200 C24;3620;2;7240;60,820;CHARPENTE-DETAILS (L) + NOMENCLATURE (n);L HORS CALQUE NOMENCLATURE;n=2 lu NOMENCLATURE · L=3620 mm lue DETAILS · L_horiz=3200 au calque NOMENCLATURE
+BOIS;CHARPENTE;DF-ent;Entrait demi-ferme;75×200 C24;3200;2;6400;40,320;CHARPENTE-NOMENCLATURE;CERTAIN;n=2 L_horiz=3200 lus · désolidarisées E-07
+BOIS;CHARPENTE;CF;Contrefiches — APRÈS purge E-05;75×225 C24;2620;2;5240;37,140;CHARPENTE-NOMENCLATURE;CERTAIN — APRÈS PURGE;x2 L=2620 lus · inverse de phasage INTERDIT

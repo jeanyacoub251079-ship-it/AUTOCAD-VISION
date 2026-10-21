@@ -1,0 +1,249 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-62 — NOMENCLATURE ET FAÇONNAGE — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (H non relevée · D-19 · A4 DOC-09 · sabots non catalogués)
+Filigrane : NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE
+==============================================================================
+
+[0] ENVIRONNEMENT (OUT-01)
+------------------------------------------------------------------------------
+  interpréteur : Python 3 · ezdxf 1.4.5 · matplotlib 3.11.2
+  rôle : lecture DXF B-60, extraction TEXT, CSV UTF-8, façonnage PNG/PDF
+  écriture persistante : oui · relecture : oui
+
+[1] ENTRÉES — 8 DXF B-60 Ind. A
+------------------------------------------------------------------------------
+  FOND          2756413 o  audit=0  entités FOND-* = 196  TEXT nomenclature = 4
+  VERT          2748052 o  audit=0  entités VERT-* = 155  TEXT nomenclature = 5
+  PLANCHER       970998 o  audit=0  entités PLANCHER-* = 121  TEXT nomenclature = 3
+  LINTEAU        975411 o  audit=0  entités LINTEAU-* = 131  TEXT nomenclature = 7
+  MACON          968922 o  audit=0  entités MACON-* = 106  TEXT nomenclature = 6
+  METAL          977886 o  audit=0  entités METAL-* = 146  TEXT nomenclature = 6
+  CHARPENTE      974250 o  audit=0  entités CHARPENTE-* = 263  TEXT nomenclature = 7
+  ASSEMBLAGE     972082 o  audit=0  entités ASSEMBLAGE-* = 129  TEXT nomenclature = 6
+
+[1b] TEXTES BRUTS — calques *-NOMENCLATURE (preuve V13)
+------------------------------------------------------------------------------
+  -- FOND --
+    3. NOMENCLATURE GRAPHIQUE (faconnage -> B-62)
+    SF1  800x800x250 C25/30  ×1   |  HA8 e150  6+6  S500B  |  6 HA12 equerre  l_bd 166 mm
+    TYPE 600x600x300 mini (D-14) si fouille D-19  |  GB C16/20 sous semelle  |  proprete 50 mm
+    BECHE 200 mm × 2850 mm C25/30  |  RSO passerelle passes <= 1000 mm C16/20
+  -- VERT --
+    3. NOMENCLATURE GRAPHIQUE (faconnage -> B-62)
+    P2  150x250 C25/30  x1  |  6 HA12 S500B  |  cadres HA8 e150  |  N_Ed 159,0 kN  |  CERTAIN
+    P3  400x500 C25/30  x1  |  6 HA12 S500B  |  cadres HA8 e200  |  N_Ed  35,8 kN  |  D-19
+    J1  240x500 C25/30  x1  |  6 HA12 S500B  |  cadres HA8 e200  |  N_Ed  39,8 kN  |  D-19 / D-34
+    H = 2800 mm HYPOTHESE B-20 — debits indicatifs (B-62). P1-N/S, R1/R2/R3, F2/F3 : hors type.
+  -- PLANCHER --
+    3. NOMENCLATURE GRAPHIQUE (faconnage -> B-62)
+    Dallage  130 mm C25/30  111,15 m2  |  ST25C Ø7 e150  257 mm2/m  |  joints scies e<=4500  |  desolid. 20 mm
+    GNT 400 mm  |  polyane 200 um  |  recharge 150 mm (D-35)  |  termites CCTP  |  A/B existant hors nomencl. neuve
+  -- LINTEAU --
+    3. NOMENCLATURE GRAPHIQUE (faconnage -> B-62)
+    F1a  2xHEA 200  L=1000  x1  |  S2 200x500x200  |  File D  |  taux 0,010 / 0,059
+    F1b  2xHEA 200  L= 900  x1  |  S2 + P3         |  File 4  |  taux 0,008 / 0,059
+    F1c  2xHEA 200  L= 850  x1  |  2x S2           |  File 3  |  taux 0,007 / 0,059
+    R3-N UPE 200 + C25/30  L_baie=1550  x1  |  2x S1 ABOUTS  |  0,291  |  D-36
+    R3-S UPE 200 + C25/30  L_baie=1550  x1  |  2x S1 ABOUTS  |  0,291  |  D-36
+    S1 x4 (R3)  200x400x200 C25/30  |  S2 x4 (F1)  200x500x200 C25/30  |  S275 profilés
+  -- MACON --
+    3. NOMENCLATURE GRAPHIQUE (faconnage -> B-62)
+    C-R1-O / C-R1-E   coussin BA  300 x 500 x 200  C25/30  x2  |  sous R1  |  4 HA8
+    C-F2-O / C-F2-E   coussin BA  300 x 400 x 200  C25/30  x2  |  sous F2  |  4 HA8
+    C-F3-O / C-F3-E   coussin BA  300 x 400 x 200  C25/30  x2  |  sous F3  |  4 HA8
+    TOTAL  6 coussins.  w_b = 300 mm MINI  —  ne pas reduire.  Mortier complet.  e <= t/4.
+    Hors nomencl. : F1/R3 (LINTEAU) · R2/F4 (OK sans coussin) · profilés (METAL) · D-36 (METAL).
+  -- METAL --
+    3. NOMENCLATURE GRAPHIQUE (faconnage / boulons -> B-62 / ASSEMBLAGE)
+    F2 x1 HEB 200 S275 L=2850   |  F3 x1 HEB 160 S275 L=3850   |  F4 x1 IPE 200 S275 L=4880
+    R1 x2 UPE 200 S275 L=3850 moisage   |  R2-N/S x2 HEB 160 S275 L=3820
+    R3-N/S x2 UPE 200 S275 L=1550 + C25/30 (D-36)   |  P1-N/S x2 SHS 140x140x6,3
+    Stab1 x4 files IPE 120  pas 2500  F<=5,8 kN   |  scellement A4 NON chiffre (DOC-09)
+    Hors nomencl. : F1 (LINTEAU) · coussins (MACON) · 10 M16 / platines (ASSEMBLAGE).
+  -- CHARPENTE --
+    3. NOMENCLATURE GRAPHIQUE (assemblages -> B-62 / ASSEMBLAGE)
+    PN1/PN2/PN3  x3  75 x 200 C24  L=3200  entraxe 1600  |  flèche gouverne 0,830
+    DF1/DF2  x2  arb 100 x 200 + ent 75 x 200 C24  L_horiz=3200  |  desolidarisees
+    CF  x2  75 x 225 C24  L=2620  |  sur E-05  |  APRES purge (B-23 P-2)
+    Hors nomencl. : E-04 supprimes · E-05/06 B-24 · E-07 non charge · ZN1/ZN2 D-19.
+    PHASAGE E-04 : 1. pose DF1/DF2  2. reprise pannes  3. depose potelets. Inverse INTERDIT.
+    PHASAGE E-05 : 1. purge bois mort  2. traitement  3. pose CF. Inverse INTERDIT.
+  -- ASSEMBLAGE --
+    3. NOMENCLATURE GRAPHIQUE (façonnage -> B-62)
+    Boulon M16 8.8 + ecrou + 2 rondelles LARGES   20 u   moisage R1 (10 / face)
+    Tige M16 8.8 scellement chimique               8 u   pied P1 (4 / poteau)
+    Tige M12 scellement chimique                   8 u   Stab1 (2 / file) — A4 NON chiffre
+    Platine 200 x 200 x 15 S275                    2 u   pied P1-N / P1-S
+    Hors nomencl. : A1 (FOND) · D-36 (METAL) · coussins (MACON) · sabots DF (DOC-09).
+
+[2] NOMENCLATURE DÉTAILLÉE — 62 lignes
+------------------------------------------------------------------------------
+  FAM      TYPE        REPÈRE         SECTION                                  L_u mm    n       kg  STATUT
+  BETON    FOND        SF1            800×800×250 C25/30                                 1        —  CERTAIN
+  BARRE    FOND        SF1-HA8        HA8 S500B                                   700   12    3,320  CERTAIN
+  BARRE    FOND        A1-HA12        HA12 S500B                                         6        —  ÉCART-FORME
+  BETON    FOND        SF-T           600×600×300 mini C25/30                            —        —  EN ATTENTE D-19
+  BETON    FOND        GB             C16/20                                             —        —  EN ATTENTE D-19
+  BETON    FOND        BP             50 mm                                              1        —  CERTAIN
+  BETON    FOND        BECHE          200 mm × 2850 mm C25/30                    2850    1        —  CERTAIN
+  BETON    FOND        RSO            C16/20 passes ≤ 1000 mm                            1        —  CERTAIN
+  BETON    VERT        P2             150×250 C25/30                             2800    1        —  INDICATIF (H hyp.)
+  BARRE    VERT        P2-HA12        HA12 S500B                                         6        —  INDICATIF (H hyp.)
+  BARRE    VERT        P2-CAD         HA8 S500B                                          —        —  INDICATIF (H hyp.)
+  BETON    VERT        P3             400×500 C25/30                             2800    1        —  INDICATIF (H hyp.)
+  BARRE    VERT        P3-HA12        HA12 S500B                                         6        —  INDICATIF (H hyp.)
+  BARRE    VERT        P3-CAD         HA8 S500B                                          —        —  INDICATIF (H hyp.)
+  BETON    VERT        J1             240×500 C25/30                             2800    1        —  INDICATIF (H hyp.)
+  BARRE    VERT        J1-HA12        HA12 S500B                                         6        —  INDICATIF (H hyp.)
+  BARRE    VERT        J1-CAD         HA8 S500B                                          —        —  INDICATIF (H hyp.)
+  BETON    PLANCHER    DALLAGE        130 mm C25/30                                      1        —  CERTAIN (emprise B-43)
+  TREILLIS PLANCHER    ST25C          ST25C Ø7 e150 257 mm²/m                            1  224,500  CERTAIN (emprise B-43)
+  BETON    PLANCHER    RECHARGE       150 mm (D-35)                                      1        —  CERTAIN (D-35)
+  DIVERS   PLANCHER    GNT            GNT 400 mm                                         1        —  CERTAIN
+  DIVERS   PLANCHER    POLYANE        200 µm                                             1        —  CERTAIN
+  DIVERS   PLANCHER    DESOLID        polystyrène 20 mm + mastic                         1        —  CERTAIN
+  PROFILE  LINTEAU     F1a            HEA 200 S275                               1000    2   84,600  CERTAIN
+  PROFILE  LINTEAU     F1b            HEA 200 S275                                900    2   76,140  CERTAIN
+  PROFILE  LINTEAU     F1c            HEA 200 S275                                850    2   71,910  CERTAIN
+  PROFILE  LINTEAU     R3-N           UPE 200 S275                               1550    1   34,720  CERTAIN — D-36 OBLIGATOIRE
+  PROFILE  LINTEAU     R3-S           UPE 200 S275                               1550    1   34,720  CERTAIN — D-36 OBLIGATOIRE
+  BETON    LINTEAU     S1             200×400×200 C25/30                                 4        —  CERTAIN
+  BETON    LINTEAU     S2             200×500×200 C25/30                                 4        —  CERTAIN
+  BETON    MACON       C-R1-O/E       300×500×200 C25/30                                 2        —  CERTAIN (D-37)
+  BARRE    MACON       C-R1-O/E-HA8   HA8 S500B                                          8        —  CONSTRUCTIF
+  BETON    MACON       C-F2-O/E       300×400×200 C25/30                                 2        —  CERTAIN (D-37)
+  BARRE    MACON       C-F2-O/E-HA8   HA8 S500B                                          8        —  CONSTRUCTIF
+  BETON    MACON       C-F3-O/E       300×400×200 C25/30                                 2        —  CERTAIN (D-37)
+  BARRE    MACON       C-F3-O/E-HA8   HA8 S500B                                          8        —  CONSTRUCTIF
+  PROFILE  METAL       F2             HEB 200 S275                               2850    1  174,700  CERTAIN
+  PROFILE  METAL       F3             HEB 160 S275                               3850    1  164,010  CERTAIN — R-45-1
+  PROFILE  METAL       F4             IPE 200 S275                               4880    1  109,310  CERTAIN
+  PROFILE  METAL       R1             UPE 200 S275                               3850    2  172,480  CERTAIN
+  PROFILE  METAL       R2-N           HEB 160 S275                               3820    1  162,730  CERTAIN
+  PROFILE  METAL       R2-S           HEB 160 S275                               3820    1  162,730  CERTAIN
+  BETON    METAL       R3-D36         C25/30 entre ailes                         1550    2        —  CONDITION DE POSE
+  PROFILE  METAL       P1-N/S         SHS 140×140×6,3 S275                       3000    2  158,400  L HORS CALQUE NOMENCLATURE
+  PROFILE  METAL       Stab1          IPE 120 S275                                       4        —  EN ATTENTE — L non portée
+  BOIS     CHARPENTE   PN1/2/3        75×200 C24                                 3200    3   60,480  CERTAIN
+  BOIS     CHARPENTE   DF-arb         100×200 C24                                3620    2   60,820  L HORS CALQUE NOMENCLATURE
+  BOIS     CHARPENTE   DF-ent         75×200 C24                                 3200    2   40,320  CERTAIN
+  BOIS     CHARPENTE   CF             75×225 C24                                 2620    2   37,140  CERTAIN — APRÈS PURGE
+  CONNECTEUR ASSEMBLAGE  A2-M16         M16 8.8 + écrou + 2 rondelles LARGES              20        —  CERTAIN
+  CONNECTEUR ASSEMBLAGE  A5-M16         M16 8.8 scellement chimique                        8        —  CERTAIN (constructif)
+  CONNECTEUR ASSEMBLAGE  A4-M12         M12 scellement chimique                            8        —  NON CHIFFRÉ — R-50-3
+  CONNECTEUR ASSEMBLAGE  A5-PLAT        200×200×15 S275                                    2    9,420  CERTAIN
+  BARRE    VERT        P2-CAD-B42     HA8 S500B                                   720   20    5,690  INDICATIF (H hyp.) — source note
+  BARRE    VERT        P3-CAD-B42     HA8 S500B                                  1720   15   10,190  INDICATIF (H hyp.) — source note
+  BARRE    VERT        J1-CAD-B42     HA8 S500B                                  1320   15    7,820  INDICATIF (H hyp.) — source note
+  BARRE    VERT        P3-HA12-FAC    HA12 S500B                                 3760    6   20,030  INDICATIF (H hyp.)
+  BARRE    VERT        J1-HA12-FAC    HA12 S500B                                 3760    6   20,030  INDICATIF (H hyp.)
+  BARRE    FOND        P2-HA12-EQ     HA12 S500B                                 3110    6   16,570  NON COMMANDABLE — écart forme
+  BARRE    MACON       C-R1-HA8-FAC   HA8 S500B                                   440    8    1,390  CONSTRUCTIF — forme non dessinée
+  BARRE    MACON       C-F2-HA8-FAC   HA8 S500B                                   340    8    1,070  CONSTRUCTIF — forme non dessinée
+  BARRE    MACON       C-F3-HA8-FAC   HA8 S500B                                   340    8    1,070  CONSTRUCTIF — forme non dessinée
+
+[3] RÉCAPITULATIF PAR FAMILLE / CALQUE
+------------------------------------------------------------------------------
+  BETON         17 lignes   poids porté 0.0 + EN ATTENTE kg
+  BARRE         20 lignes   poids porté 87.2 + EN ATTENTE kg
+  TREILLIS       1 lignes   poids porté 224.5 kg
+  DIVERS         3 lignes   poids porté 0.0 + EN ATTENTE kg
+  PROFILE       13 lignes   poids porté 1406.5 + EN ATTENTE kg
+  BOIS           4 lignes   poids porté 198.8 kg
+  CONNECTEUR     4 lignes   poids porté 9.4 + EN ATTENTE kg
+
+[4] FAÇONNAGE ACIERS BA
+------------------------------------------------------------------------------
+  Mandrin mini EC2 : HA12 → 4φ = 48 mm · HA8 → 4φ = 32 mm.
+  Recouvrement : aucun (barres unitaires, pas de raccord).
+
+  Rép.           Forme      Cotes (mm)                         L_dev   n   Mandrin  Statut
+  P2-HA12-EQ     ÉQUERRE    H=2800 hyp. + l_bd=166 + 12φ=144    3110    6   48 mm    NON COMMANDABLE (écart)
+  P3-HA12-FAC    DROITE     H+2×40φ = 3760                     3760    6   —        INDICATIF H hyp.
+  J1-HA12-FAC    DROITE     H+2×40φ = 3760                     3760    6   —        INDICATIF H hyp.
+  P2-CAD-B42     CADRE      150×250, c=30, retours 80          720    20   32 mm    INDICATIF H hyp.
+  P3-CAD-B42     CADRE      400×500, c=30, retours 80          1720   15   32 mm    INDICATIF H hyp.
+  J1-CAD-B42     CADRE      240×500, c=30, retours 80          1320   15   32 mm    INDICATIF H hyp.
+  SF1-HA8        DROITE     700 (800−2×50) + crochets 5φ       700    12   32 mm    CERTAIN (nappe)
+  C-R1-HA8-FAC   DROITE     440 (500−2×30)                     440     8   32 mm    constructif, forme non dessinée
+  C-F2-HA8-FAC   DROITE     340 (400−2×30)                     340     8   32 mm    constructif, forme non dessinée
+  C-F3-HA8-FAC   DROITE     340 (400−2×30)                     340     8   32 mm    constructif, forme non dessinée
+  ST25C          NAPPE      111,15 m² Ø7 e150 partie haute     —      1   —        CERTAIN emprise B-43
+
+  Cadres SF1 (HA8 e150 jusqu'au lit) : NOMBRE NON PORTÉ au plan FOND — non débité.
+
+[5] COHÉRENCE PLAN ↔ NOMENCLATURE
+------------------------------------------------------------------------------
+  Repères attendus retrouvés : 37 · manquants : 0
+
+[5b] HORS NOMENCLATURE (déclaré sur les plans)
+------------------------------------------------------------------------------
+  · Zones A/B existant (solives 8×18, IPE 160/330) — hors nomenclature neuve
+  · Zone C E-07 — PA-03 ouvert, hors planche
+  · F1/R3/R2/F4 — pas de coussin (B-46 OK sans)
+  · E-04 potelets SUPPRIMÉS · E-05/06 existant B-24 · E-07 non chargé · ZN1/ZN2 D-19
+  · Contreventement toiture ABSENT au D2 — non inventé
+  · Sabots DF/PN — efforts B-44 V=14,89 / 5,11 kN — type NON catalogué DOC-09 — NON INVENTÉ
+
+[5c] EN ATTENTE / NON COMMANDABLE
+------------------------------------------------------------------------------
+  · SF-T 600×600 — quantité selon D-19
+  · GB C16/20 — volume selon fouille
+  · H = 2 800 mm = hypothèse B-20 — R-42-1 ouverte — débits INDICATIFS
+  · Stab1 IPE 120 ×4 — L unitaire absente (portée IPE 160 non relevée)
+  · A4 scellement M12 — capacité NON écrite (DOC-09) — R-50-3 ouverte
+  · Forages de remplissage R3 — diam. et entraxe non portés
+  · Cadres SF1 HA8 e150 jusqu'au lit — quantité absente du plan FOND
+
+[5d] ÉCARTS PLAN ↔ NOTE — SIGNALÉS, NON CORRIGÉS
+------------------------------------------------------------------------------
+  · P1 L
+      plan : calque METAL-NOMENCLATURE : SHS sans L
+      note : B-60 METAL §2 : L=3,00 m
+      B-62 : B-62 prend L de la note, signale l'absence au calque. Pas d'invention.
+  · Forages D-36 R3
+      plan : B-60 METAL HABILLAGE : « Diam./entraxe -> B-62 » — AUCUNE cote de forage sur le plan
+      note : B-50 A3 prescrit le remplissage, pas le piquage
+      B-62 : B-62 N'INVENTE PAS les diamètres ni l'entraxe. Renvoyé à B-60 METAL Ind. B.
+  · DF-arb L
+      plan : NOMENCLATURE : L_horiz=3200 (entrait) — arbalétrier sans L propre
+      note : DETAILS / B-44 : L=3,62 m
+      B-62 : B-62 prend L=3620 du calque DETAILS. Signale l'absence au calque NOMENCLATURE.
+  · P2 HA12 forme
+      plan : B-60 FOND : 6 HA12 ÉQUERRE l_bd 166 mm (A1, opposable, R-50-1 CLOSE)
+      note : B-42 §6 : DROITE L=3 760 mm (H+2×40φ) — débits « indicatifs, B-62 les établira »
+      B-62 : MÊMES 6 barres, DEUX géométries. B-62 ne tranche pas. Façonnage ÉQUERRE porté (plan EXE opposable) ; débit B-42 conservé en vis-à-vis. Commande de ces 6 barres BLOQUÉE tant que l'écart n'est pas levé par B-42 Ind. C ou B-60 FOND Ind. B.
+  · Cadres P2/P3/J1 nombre
+      plan : B-60 VERT NOMENCLATURE : HA8 e150 / e200 — PAS de quantité
+      note : B-42 §6 : P2 20 cadres L=0,72 m · P3 15 L=1,72 · J1 15 L=1,32 · total 50 · 83,8 kg
+      B-62 : B-62 PORTE les débits B-42 en INDICATIF (H hyp.) et signale l'absence de qté au plan.
+
+[6] EXPORT TABLEUR CSV (UTF-8, séparateur ;)
+------------------------------------------------------------------------------
+  MASTER  B-62_nomenclature.csv  10708 o  62 lignes
+  B-62_barres.csv         4215 o  21 lignes
+  B-62_beton.csv          3146 o  20 lignes
+  B-62_bois.csv            942 o   4 lignes
+  B-62_connecteurs.csv     927 o   4 lignes
+  B-62_profiles.csv       2286 o  13 lignes
+  B-62_coherence.csv  2144 o
+
+[7] PLAN DE FAÇONNAGE (PNG + PDF)
+------------------------------------------------------------------------------
+  PNG  FLORA_B62_FACONNAGE_IndA.png  257073 o
+  PDF  FLORA_B62_FACONNAGE_IndA.pdf  54293 o
+  JSON b62_nomenclature.json  4142 o
+
+[8] VERDICT
+------------------------------------------------------------------------------
+  Lignes de nomenclature : 62
+  Écarts signalés (non corrigés) : 5
+  En attente / non commandable : 7
+  Audit DXF amont : FOND=0, VERT=0, PLANCHER=0, LINTEAU=0, MACON=0, METAL=0, CHARPENTE=0, ASSEMBLAGE=0
+  COMPLET : INTERDIT (H, D-19, A4, sabots, forages, écart P2).
+  Devis / commande : HORS PÉRIMÈTRE.
+  PA-03 / R-50-3 / R-42-1 / R-45-1 : NON CLOS.
+  Verdict : CONFORME AVEC RÉSERVES — PARTIEL-DÉCLARÉ — NE PAS COMMANDER SANS VISA.

@@ -1,0 +1,65 @@
+﻿FILIGRANE;NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE — CROISSY-FLORA B-62 Ind. A — 21/10/2026
+
+famille;type_b60;repere;designation;section;l_unit_mm;n;l_tot_mm;poids_kg;calque;statut;note
+BETON;FOND;SF1;Semelle isolée sous P2;800×800×250 C25/30;;1;;;FOND-NOMENCLATURE;CERTAIN;volume = 0.160 m³
+BARRE;FOND;SF1-HA8;Lit HA8 e150 2 directions;HA8 S500B;700;12;8400;3,320;FOND-NOMENCLATURE;CERTAIN;6+6 lus sur DXF · L=800−2×c_nom50=700 mm · 2 lits croisés = 1 nappe
+BARRE;FOND;A1-HA12;Attentes P2 dans SF1 — ÉQUERRE;HA12 S500B;;6;;;FOND-NOMENCLATURE;ÉCART-FORME;6 HA12 = longitudinales P2, pas un surplus. Forme ÉQUERRE l_bd 166 mm. B-42 a débité DROITE 3760 mm — écart signalé, non tranché.
+BETON;FOND;SF-T;Semelle type si fouille D-19;600×600×300 mini C25/30;;;;;FOND-NOMENCLATURE;EN ATTENTE D-19;quantité selon fouille — non commandable
+BETON;FOND;GB;Gros béton de rattrapage;C16/20;;;;;FOND-NOMENCLATURE;EN ATTENTE D-19;sous semelle SI existant plus profond — jamais de remontée
+BETON;FOND;BP;Béton de propreté sous SF1;50 mm;;1;;;FOND-NOMENCLATURE;CERTAIN;emprise 800×800
+BETON;FOND;BECHE;Réhausse SE existante;200 mm × 2850 mm C25/30;2850;1;2850;;FOND-NOMENCLATURE;CERTAIN;hauteur d'ouvrage NON portée — volume non calculé
+BETON;FOND;RSO;Passerelle passes alternées;C16/20 passes ≤ 1000 mm;;1;;;FOND-NOMENCLATURE;CERTAIN;zone, pas un cube — volume non calculé
+BETON;VERT;P2;Poteau/jambage BA;150×250 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 159,0 kN · volume 0.105 m³ à H=2800 hyp. · R-42-1 ouverte
+BARRE;VERT;P2-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;P2-CAD;Cadres HA8 e150;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+BETON;VERT;P3;Poteau/jambage BA;400×500 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 35,8 kN · volume 0.560 m³ à H=2800 hyp. · R-42-1 ouverte
+BARRE;VERT;P3-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;P3-CAD;Cadres HA8 e200;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+BETON;VERT;J1;Poteau/jambage BA;240×500 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 39,8 kN · volume 0.336 m³ à H=2800 hyp. · R-42-1 ouverte
+BARRE;VERT;J1-HA12;Longitudinales 6 HA12;HA12 S500B;;6;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);6 lus sur DXF · L_dev dépend de H et de la forme (voir façonnage)
+BARRE;VERT;J1-CAD;Cadres HA8 e200;HA8 S500B;;;;;VERT-NOMENCLATURE;INDICATIF (H hyp.);espacement lu · nombre = f(H) — voir façonnage B-42
+BETON;PLANCHER;DALLAGE;Dallage BA RDC BAS;130 mm C25/30;;1;;;PLANCHER-NOMENCLATURE;CERTAIN (emprise B-43);111,15 m² B-43 NON remesurée (H-06) · volume = 14.45 m³
+TREILLIS;PLANCHER;ST25C;Treillis soudé partie haute;ST25C Ø7 e150 257 mm²/m;;1;;224,500;PLANCHER-NOMENCLATURE;CERTAIN (emprise B-43);continu sous joints de retrait · 224.52 kg à 2,02 kg/m² · STR-03 absent (encadrements non coupés)
+BETON;PLANCHER;RECHARGE;Recharge sur 100 % emprise;150 mm (D-35);;1;;;PLANCHER-NOMENCLATURE;CERTAIN (D-35);111,15 × 0,15 = 16,67 m³ — lot GO, pas un ferraillage
+DIVERS;PLANCHER;GNT;Fond de forme;GNT 400 mm;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;volume 111,15 × 0,40 = 44,46 m³
+DIVERS;PLANCHER;POLYANE;Film polyane;200 µm;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;remonté 100 mm
+DIVERS;PLANCHER;DESOLID;Désolidarisation périphérique;polystyrène 20 mm + mastic;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;périmètre + P2/P3/J1
+PROFILE;LINTEAU;F1a;Frangement 2 × HEA 200;HEA 200 S275;1000;2;2000;84,600;LINTEAU-NOMENCLATURE;CERTAIN;n=2 lus (2xHEA) · L=1000 mm lue
+PROFILE;LINTEAU;F1b;Frangement 2 × HEA 200;HEA 200 S275;900;2;1800;76,140;LINTEAU-NOMENCLATURE;CERTAIN;n=2 lus (2xHEA) · L=900 mm lue
+PROFILE;LINTEAU;F1c;Frangement 2 × HEA 200;HEA 200 S275;850;2;1700;71,910;LINTEAU-NOMENCLATURE;CERTAIN;n=2 lus (2xHEA) · L=850 mm lue
+PROFILE;LINTEAU;R3-N;Linteau UPE 200 + D-36;UPE 200 S275;1550;1;1550;34,720;LINTEAU-NOMENCLATURE;CERTAIN — D-36 OBLIGATOIRE;sans béton : NE PAS POSER (B-50 A3 τ=1,40) · aussi porté METAL
+PROFILE;LINTEAU;R3-S;Linteau UPE 200 + D-36;UPE 200 S275;1550;1;1550;34,720;LINTEAU-NOMENCLATURE;CERTAIN — D-36 OBLIGATOIRE;sans béton : NE PAS POSER (B-50 A3 τ=1,40) · aussi porté METAL
+BETON;LINTEAU;S1;Sommier abouts R3;200×400×200 C25/30;;4;;;LINTEAU-NOMENCLATURE;CERTAIN;hors bois E-08 · volume 4×0,016 = 0,064 m³
+BETON;LINTEAU;S2;Sommier F1;200×500×200 C25/30;;4;;;LINTEAU-NOMENCLATURE;CERTAIN;volume 4×0,020 = 0,080 m³
+BETON;MACON;C-R1-O/E;Coussin de répartition D-37;300×500×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.060 m³
+BARRE;MACON;C-R1-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+BETON;MACON;C-F2-O/E;Coussin de répartition D-37;300×400×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.048 m³
+BARRE;MACON;C-F2-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+BETON;MACON;C-F3-O/E;Coussin de répartition D-37;300×400×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.048 m³
+BARRE;MACON;C-F3-O/E-HA8;Armatures constructives;HA8 S500B;;8;;;MACON-NOMENCLATURE;CONSTRUCTIF;4 HA8 lus / coussin · forme NON dessinée — façonnage DROITE assumé, signalé
+PROFILE;METAL;F2;Poutre neuve;HEB 200 S275;2850;1;2850;174,700;METAL-NOMENCLATURE;CERTAIN;L=2850 mm lue · n=1 lu
+PROFILE;METAL;F3;Poutre neuve — R-45-1 aucune charge ajoutée;HEB 160 S275;3850;1;3850;164,010;METAL-NOMENCLATURE;CERTAIN — R-45-1;L=3850 mm lue · n=1 lu
+PROFILE;METAL;F4;Poutre neuve;IPE 200 S275;4880;1;4880;109,310;METAL-NOMENCLATURE;CERTAIN;L=4880 mm lue · n=1 lu
+PROFILE;METAL;R1;Moisage — boulons A2 déjà ASSEMBLAGE;UPE 200 S275;3850;2;7700;172,480;METAL-NOMENCLATURE;CERTAIN;L=3850 mm lue · n=2 lu
+PROFILE;METAL;R2-N;Refend Nord — n=1 de la paire x2;HEB 160 S275;3820;1;3820;162,730;METAL-NOMENCLATURE;CERTAIN;L=3820 mm lue · n=1 lu
+PROFILE;METAL;R2-S;Refend Sud — n=1 de la paire x2;HEB 160 S275;3820;1;3820;162,730;METAL-NOMENCLATURE;CERTAIN;L=3820 mm lue · n=1 lu
+BETON;METAL;R3-D36;Remplissage UPE 200 D-36;C25/30 entre ailes;1550;2;3100;;METAL-NOMENCLATURE;CONDITION DE POSE;volume indicatif — forages diam./entraxe NON PORTÉS sur B-60 METAL → écart
+PROFILE;METAL;P1-N/S;Poteau tube;SHS 140×140×6,3 S275;3000;2;6000;158,400;METAL-NOMENCLATURE + note B-60 METAL §2;L HORS CALQUE NOMENCLATURE;n=2 lu sur DXF · L=3000 mm lue à la NOTE B-60 METAL §2, absente du calque NOMENCLATURE
+PROFILE;METAL;Stab1;Entretoise anti-déversement IPE 160 existants;IPE 120 S275;;4;;;METAL-NOMENCLATURE;EN ATTENTE — L non portée;4 files lues · pas 2500 mm lu · L unitaire NON écrite (portée IPE 160 inconnue) — NON COMMANDABLE
+BOIS;CHARPENTE;PN1/2/3;Pannes neuves;75×200 C24;3200;3;9600;60,480;CHARPENTE-NOMENCLATURE;CERTAIN;x3 L=3200 lus · volume 0.1440 m³ · ρ_mean 420 kg/m³ info · commande en m³
+BOIS;CHARPENTE;DF-arb;Arbalétrier demi-ferme;100×200 C24;3620;2;7240;60,820;CHARPENTE-DETAILS (L) + NOMENCLATURE (n);L HORS CALQUE NOMENCLATURE;n=2 lu NOMENCLATURE · L=3620 mm lue DETAILS · L_horiz=3200 au calque NOMENCLATURE
+BOIS;CHARPENTE;DF-ent;Entrait demi-ferme;75×200 C24;3200;2;6400;40,320;CHARPENTE-NOMENCLATURE;CERTAIN;n=2 L_horiz=3200 lus · désolidarisées E-07
+BOIS;CHARPENTE;CF;Contrefiches — APRÈS purge E-05;75×225 C24;2620;2;5240;37,140;CHARPENTE-NOMENCLATURE;CERTAIN — APRÈS PURGE;x2 L=2620 lus · inverse de phasage INTERDIT
+CONNECTEUR;ASSEMBLAGE;A2-M16;Boulon moisage R1;M16 8.8 + écrou + 2 rondelles LARGES;;20;;;ASSEMBLAGE-NOMENCLATURE;CERTAIN;20 u lus · 10 / face · harnais INTERDIT · galva ISO 1461 70 µm
+CONNECTEUR;ASSEMBLAGE;A5-M16;Tige scellement pied P1;M16 8.8 scellement chimique;;8;;;ASSEMBLAGE-NOMENCLATURE;CERTAIN (constructif);8 u lus · 4 / poteau · σ 0,118
+CONNECTEUR;ASSEMBLAGE;A4-M12;Tige scellement Stab1;M12 scellement chimique;;8;;;ASSEMBLAGE-NOMENCLATURE;NON CHIFFRÉ — R-50-3;8 u lus (2 / file × 4) · capacité NON écrite DOC-09 · NON COMMANDABLE en l'état · essai 1/4 files
+CONNECTEUR;ASSEMBLAGE;A5-PLAT;Platine de pied P1;200×200×15 S275;;2;;9,420;ASSEMBLAGE-NOMENCLATURE;CERTAIN;2 u lus · 4.71 kg / u
+BARRE;VERT;P2-CAD-B42;Cadres P2 (débit note B-42);HA8 S500B;720;20;14400;5,690;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(150+250)−8×30+2×80 = 720 mm · n=20 = f(H=2800/e150)
+BARRE;VERT;P3-CAD-B42;Cadres P3 (débit note B-42);HA8 S500B;1720;15;25800;10,190;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(400+500)−8×30+2×80 = 1720 mm · n=15 = f(H=2800/e200)
+BARRE;VERT;J1-CAD-B42;Cadres J1 (débit note B-42);HA8 S500B;1320;15;19800;7,820;note B-42 §6 (PAS le DXF);INDICATIF (H hyp.) — source note;2(240+500)−8×30+2×80 = 1320 mm · n=15
+BARRE;VERT;P3-HA12-FAC;Longitudinales P3 — DROITE (B-42);HA12 S500B;3760;6;22560;20,030;note B-42 §6;INDICATIF (H hyp.);H+2×40φ = 2800+960 = 3760 · D-19 pied · pas d'équerre SF1
+BARRE;VERT;J1-HA12-FAC;Longitudinales J1 — DROITE (B-42);HA12 S500B;3760;6;22560;20,030;note B-42 §6;INDICATIF (H hyp.);H+2×40φ = 3760 · D-19 pied · D-34 f_k=1,5
+BARRE;FOND;P2-HA12-EQ;Longitudinales P2 — ÉQUERRE (plan FOND);HA12 S500B;3110;6;18660;16,570;FOND-NOMENCLATURE (forme) + H hyp. VERT;NON COMMANDABLE — écart forme;L_dev = H_hyp 2800 + l_bd 166 + 12φ 144 = 3110 mm · MÊMES 6 barres que A1 · B-42 disait DROITE 3760 — écart
+BARRE;MACON;C-R1-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;440;8;3520;1,390;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON
+BARRE;MACON;C-F2-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;340;8;2720;1,070;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON
+BARRE;MACON;C-F3-HA8-FAC;HA8 coussin — DROITE assumée;HA8 S500B;340;8;2720;1,070;MACON-NOMENCLATURE (4 HA8) · L calculée;CONSTRUCTIF — forme non dessinée;L = grand côté − 2×c_nom30 · forme NON sur B-60 MACON

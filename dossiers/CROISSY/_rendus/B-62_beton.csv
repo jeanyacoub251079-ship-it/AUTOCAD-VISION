@@ -1,0 +1,23 @@
+﻿FILIGRANE;NE PAS COMMANDER SANS VISA — PARTIEL-DECLARE — CROISSY-FLORA B-62 Ind. A — 21/10/2026
+
+famille;type_b60;repere;designation;section;l_unit_mm;n;l_tot_mm;poids_kg;calque;statut;note
+BETON;FOND;SF1;Semelle isolée sous P2;800×800×250 C25/30;;1;;;FOND-NOMENCLATURE;CERTAIN;volume = 0.160 m³
+BETON;FOND;SF-T;Semelle type si fouille D-19;600×600×300 mini C25/30;;;;;FOND-NOMENCLATURE;EN ATTENTE D-19;quantité selon fouille — non commandable
+BETON;FOND;GB;Gros béton de rattrapage;C16/20;;;;;FOND-NOMENCLATURE;EN ATTENTE D-19;sous semelle SI existant plus profond — jamais de remontée
+BETON;FOND;BP;Béton de propreté sous SF1;50 mm;;1;;;FOND-NOMENCLATURE;CERTAIN;emprise 800×800
+BETON;FOND;BECHE;Réhausse SE existante;200 mm × 2850 mm C25/30;2850;1;2850;;FOND-NOMENCLATURE;CERTAIN;hauteur d'ouvrage NON portée — volume non calculé
+BETON;FOND;RSO;Passerelle passes alternées;C16/20 passes ≤ 1000 mm;;1;;;FOND-NOMENCLATURE;CERTAIN;zone, pas un cube — volume non calculé
+BETON;VERT;P2;Poteau/jambage BA;150×250 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 159,0 kN · volume 0.105 m³ à H=2800 hyp. · R-42-1 ouverte
+BETON;VERT;P3;Poteau/jambage BA;400×500 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 35,8 kN · volume 0.560 m³ à H=2800 hyp. · R-42-1 ouverte
+BETON;VERT;J1;Poteau/jambage BA;240×500 C25/30;2800;1;2800;;VERT-NOMENCLATURE;INDICATIF (H hyp.);N_Ed 39,8 kN · volume 0.336 m³ à H=2800 hyp. · R-42-1 ouverte
+BETON;PLANCHER;DALLAGE;Dallage BA RDC BAS;130 mm C25/30;;1;;;PLANCHER-NOMENCLATURE;CERTAIN (emprise B-43);111,15 m² B-43 NON remesurée (H-06) · volume = 14.45 m³
+BETON;PLANCHER;RECHARGE;Recharge sur 100 % emprise;150 mm (D-35);;1;;;PLANCHER-NOMENCLATURE;CERTAIN (D-35);111,15 × 0,15 = 16,67 m³ — lot GO, pas un ferraillage
+DIVERS;PLANCHER;GNT;Fond de forme;GNT 400 mm;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;volume 111,15 × 0,40 = 44,46 m³
+DIVERS;PLANCHER;POLYANE;Film polyane;200 µm;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;remonté 100 mm
+DIVERS;PLANCHER;DESOLID;Désolidarisation périphérique;polystyrène 20 mm + mastic;;1;;;PLANCHER-NOMENCLATURE;CERTAIN;périmètre + P2/P3/J1
+BETON;LINTEAU;S1;Sommier abouts R3;200×400×200 C25/30;;4;;;LINTEAU-NOMENCLATURE;CERTAIN;hors bois E-08 · volume 4×0,016 = 0,064 m³
+BETON;LINTEAU;S2;Sommier F1;200×500×200 C25/30;;4;;;LINTEAU-NOMENCLATURE;CERTAIN;volume 4×0,020 = 0,080 m³
+BETON;MACON;C-R1-O/E;Coussin de répartition D-37;300×500×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.060 m³
+BETON;MACON;C-F2-O/E;Coussin de répartition D-37;300×400×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.048 m³
+BETON;MACON;C-F3-O/E;Coussin de répartition D-37;300×400×200 C25/30;;2;;;MACON-NOMENCLATURE;CERTAIN (D-37);w_b=300 mm MINI — ne pas réduire · volume 0.048 m³
+BETON;METAL;R3-D36;Remplissage UPE 200 D-36;C25/30 entre ailes;1550;2;3100;;METAL-NOMENCLATURE;CONDITION DE POSE;volume indicatif — forages diam./entraxe NON PORTÉS sur B-60 METAL → écart

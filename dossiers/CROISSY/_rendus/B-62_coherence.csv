@@ -1,0 +1,23 @@
+﻿quoi;plan;note;traitement
+P1 L;calque METAL-NOMENCLATURE : SHS sans L;B-60 METAL §2 : L=3,00 m;B-62 prend L de la note, signale l'absence au calque. Pas d'invention.
+Forages D-36 R3;B-60 METAL HABILLAGE : « Diam./entraxe -> B-62 » — AUCUNE cote de forage sur le plan;B-50 A3 prescrit le remplissage, pas le piquage;B-62 N'INVENTE PAS les diamètres ni l'entraxe. Renvoyé à B-60 METAL Ind. B.
+DF-arb L;NOMENCLATURE : L_horiz=3200 (entrait) — arbalétrier sans L propre;DETAILS / B-44 : L=3,62 m;B-62 prend L=3620 du calque DETAILS. Signale l'absence au calque NOMENCLATURE.
+P2 HA12 forme;B-60 FOND : 6 HA12 ÉQUERRE l_bd 166 mm (A1, opposable, R-50-1 CLOSE);B-42 §6 : DROITE L=3 760 mm (H+2×40φ) — débits « indicatifs, B-62 les établira »;"MÊMES 6 barres, DEUX géométries. B-62 ne tranche pas. Façonnage ÉQUERRE porté (plan EXE opposable) ; débit B-42 conservé en vis-à-vis. Commande de ces 6 barres BLOQUÉE tant que l'écart n'est pas levé par B-42 Ind. C ou B-60 FOND Ind. B."
+Cadres P2/P3/J1 nombre;B-60 VERT NOMENCLATURE : HA8 e150 / e200 — PAS de quantité;B-42 §6 : P2 20 cadres L=0,72 m · P3 15 L=1,72 · J1 15 L=1,32 · total 50 · 83,8 kg;B-62 PORTE les débits B-42 en INDICATIF (H hyp.) et signale l'absence de qté au plan.
+
+EN_ATTENTE
+SF-T 600×600 — quantité selon D-19
+GB C16/20 — volume selon fouille
+H = 2 800 mm = hypothèse B-20 — R-42-1 ouverte — débits INDICATIFS
+Stab1 IPE 120 ×4 — L unitaire absente (portée IPE 160 non relevée)
+A4 scellement M12 — capacité NON écrite (DOC-09) — R-50-3 ouverte
+Forages de remplissage R3 — diam. et entraxe non portés
+Cadres SF1 HA8 e150 jusqu'au lit — quantité absente du plan FOND
+
+HORS_NOMENCLATURE
+Zones A/B existant (solives 8×18, IPE 160/330) — hors nomenclature neuve
+Zone C E-07 — PA-03 ouvert, hors planche
+F1/R3/R2/F4 — pas de coussin (B-46 OK sans)
+E-04 potelets SUPPRIMÉS · E-05/06 existant B-24 · E-07 non chargé · ZN1/ZN2 D-19
+Contreventement toiture ABSENT au D2 — non inventé
+Sabots DF/PN — efforts B-44 V=14,89 / 5,11 kN — type NON catalogué DOC-09 — NON INVENTÉ
