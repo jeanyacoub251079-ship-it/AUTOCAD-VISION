@@ -11,9 +11,11 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **W** (remplace l'indice V du 20/10/2026 — livraison `B-43`) |
+| **Indice du livrable** | **X** (remplace l'indice W du 20/10/2026 — `B-43` Ind. B) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
+> **Indice X (20/10/2026)** : **`B-43` RÉVISÉE EN INDICE B — TROIS RÉSERVES FERMÉES, AUCUN CALCUL MODIFIÉ.** `R-43-2` (classe `C18`) et `R-43-3` (état des abouts) n'étaient pas des données manquantes : la première est une **hypothèse de calcul notifiée** (`EXI-03`), la seconde une **condition de réceptivité du moisage `R1`** qui appartient à `R-24-B2`. `R-43-4` (termites) était une **erreur de rédaction** : la protection est **prescrite au CCTP** (`D1 § 01.2.1.9.2`, rubrique dallage) — elle devient une prescription ferme, seule la classe reste à justifier. **`R-43-1` et `PA-03` sont maintenus et reformulés** : ce n'est pas le bois existant qui est en cause, c'est le **support de nos propres renforts de charpente** (`D2` f. 02) ; si la charpente sort du programme, `PA-03` tombe avec elle (`R-22`/`C-07`).
+>
 > **Indice W (20/10/2026)** : **`B-43` LIVRÉE EN INDICE A — planchers, plancher haut et dallage.** Aucune décision nouvelle n'est prise : le registre s'enrichit de **quatre réserves de brique** et d'**un point d'arrêt**. **`R-43-1`** plancher haut d'étage **non sondé** (`E-07`) — aucun calcul possible, chaîne de charge rompue (`V15`) ; **`R-43-2`** classe de bois `C18` **non mesurée** (`EXI-03`) ; **`R-43-3`** état sanitaire des abouts de solives (reprise de `R-24-B2`) ; **`R-43-4`** classement **termites** inconnu (`SEC-03` absent) — recoupe `R-26`. **`PA-03`** : sondage destructif du plancher haut, **avant `B-44`**. Ce qui est tranché sans réserve : les **solives `8 × 18`** de l'aile Est sont **conformes aux cinq vérifications EC5** (flexion `0,619`, flèche finale `0,576`) et le **dallage** est conforme (portance à `2,9 %`, treillis `ST25C` à `2,10 × A_s,min`, joints de retrait tous les `4,50 m`).
 >
 > **Indice V (20/10/2026)** : **`D-35` CONSIGNÉE** — « **qui peut le plus peut le moins** : le dallage est calculé et dimensionné comme si la surcharge de `15 cm` couvrait **la totalité de son emprise** ; hypothèse défavorable ». **La localisation de la recharge est tranchée par les pièces** : deux occurrences dans les 29 planches du `D4` (`p. 5` plan de démolition, `p. 14` sanitaires PMR), **toutes deux au RDC**, **aucune sur les planches de R+1**. Chaîne de révision : `B-21` **Ind. C**, `B-24` **Ind. C** (`R-24-B1` close), `B-42` **Ind. B**, `B-40` **Ind. F**.
@@ -196,7 +198,7 @@
 | **R-23** | **Maître d'ouvrage divergent** — UNIVI (D1) vs SCI GEMS RC (D4) | Ouverte | ⚠ **CONTRACTUELLE** | **MOE** | 19/10/2026 | **Avant B-64** |
 | ~~**R-24**~~ | ~~DXF indice C non fourni~~ | **FERMÉE** | — | MOE | 19/10/2026 | **Fermée le 19/10/2026** — pièce **D5** `208_FLORA_Plans_DCE_IndC.dxf` retrouvée dans le Drive (4 399 016 o, AC1032) et inventoriée par script. **Mais voir R-37** : le fichier ne porte aucune donnée de structure |
 | **R-25** | Cote d'ensemble du bâtiment | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43, B-44 — **sans effet sur `B-43`** (aucun coffrage produit : planche de principes seulement) ; reste requise pour `B-44` et `B-60` |
-| **R-26** | Classement termites | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43 — **`B-43` livrée sans réponse** : réserves `R-43-4` ; si la commune est classée, barrière anti-termites à ajouter sous le dallage |
+| **R-26** | Classement termites | Ouverte | **Calcul** | **MOE** | 19/10/2026 | Avant B-43 — **`B-43` Ind. B : la protection anti-termites est PRESCRITE** (`D1 § 01.2.1.9.2`, rubrique dallage), indépendamment du classement. `R-26` ne conditionne plus que la **classe** du produit |
 | **R-27** | DOE / plans de récolement | Ouverte | **Production** | **MOA** | 19/10/2026 | Avant B-11 |
 | **R-28** | Classe de service du bois (MAT-08) | Ouverte | **Calcul** | **Production interne (B-22)** | 19/10/2026 | Avant B-44 |
 | **R-29** | Seuils GEO-10, GEO-11, GEO-12 | Ouverte | **Production** | **Client / BET** | 19/10/2026 | Avant B-30 à B-33 |

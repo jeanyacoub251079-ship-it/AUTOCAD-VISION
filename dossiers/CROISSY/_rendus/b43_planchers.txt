@@ -101,5 +101,5 @@ CARNAC v3.0 — régime OUTILLÉ (V13) — EC2 / EC5 / NF DTU 13.3
   IPE 160 (B)     charge linéaire       7.28        kN/m                      B-45              
   IPE 330 (B)     appui central         67.7        kN (D3)                   B-46              
   Dallage         sol support           14.2        kPa (ELU)                 B-40              
-  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndA.dxf (71782 o) — audit 0 erreur(s)
-  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndA.png / .pdf
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndB.dxf (71788 o) — audit 0 erreur(s)
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B43_DALLAGE_IndB.png / .pdf

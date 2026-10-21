@@ -5,6 +5,8 @@
 >
 > **`D-28` — AUCUN JOINT DE DILATATION DANS LE BÂTIMENT.** Les **joints de retrait** du dallage (§ 8.4) ne sont **pas** des joints de dilatation : ils ne séparent aucun bloc structurel, ils organisent une fissuration qui se produirait autrement, au hasard.
 
+> **Révision B — 20/10/2026.** Trois réserves de l'indice A sont **fermées comme mal fondées**, et la note le dit sans détour : **`R-43-2`** (classe `C18`) et **`R-43-3`** (état des abouts) ne demandaient rien de neuf — la première est une **hypothèse de calcul notifiée** (`EXI-03`, `D3` p. 10), la seconde une **condition de validité du moisage** déjà portée par `R-24-B2`. **`R-43-4`** (termites) était pire : la prescription **existe** au CCTP — `D1 § 01.2.1.9.2`, rubrique dallage — et la note la présentait comme conditionnelle. Elle devient une **prescription ferme**. **Aucune valeur de calcul ne change** : les cinq vérifications EC5, le dallage et les joints sont identiques. **`R-43-1`** et **`PA-03`** sont **maintenus et reformulés** : ce n'est pas le bois existant qui est en cause, c'est le **support de nos propres renforts de charpente** (`D2` f. 02).
+
 | Champ | Valeur |
 |---|---|
 | Carnet | **CARNAC v3.0** |
@@ -17,8 +19,8 @@
 | Script `OUT-02` | `dossiers/CROISSY/_scripts/b43_planchers.py` |
 | Journal `OUT-03` | `dossiers/CROISSY/_rendus/b43_planchers.txt` (7 218 o) |
 | Résultats machine | `dossiers/CROISSY/_rendus/b43_planchers.json` (1 375 o) |
-| Sortie graphique | `_plans/FLORA_B43_DALLAGE_IndA.dxf` (71 782 o · AC1032 · audit **0 erreur**) · `.pdf` (454 792 o) · `.png` (573 659 o) |
-| **Indice** | **A** — création de la brique |
+| Sortie graphique | `_plans/FLORA_B43_DALLAGE_IndB.dxf` (71 788 o · AC1032 · audit **0 erreur**) · `.pdf` (452 776 o) · `.png` (573 586 o) |
+| **Indice** | **B** — remplace l'indice A : **3 réserves fermées**, aucune valeur de calcul modifiée |
 | Date | **20/10/2026** |
 | Brique suivante | **`B-45`** (profilés de plancher et moisage `R1`) · **`B-50`** (assemblages et ancrages) |
 
@@ -132,7 +134,7 @@
 
 **Déversement (EC5 § 6.3.3) : non déclenché.** Les solives sont maintenues latéralement en zone comprimée par le parquet continu et le lattis-plâtre. Le maintien est **continu**, pas ponctuel : `k_crit = 1`.
 
-**Sur la classe `C18`.** C'est une **hypothèse de calcul du diagnostic** (`EXI-03`), pas une mesure. Si le bois s'avérait être du `C24`, les ratios baisseraient de `25 %` ; s'il s'agissait d'un résineux non classé, **aucune** des cinq vérifications ne serait opposable. La note ne prétend pas le contraire.
+**Condition de validité — classe `C18` (et non réserve).** `C18` est l'**hypothèse de calcul notifiée** du diagnostic (`EXI-03`, `D3` p. 10), déjà portée à l'annexe hypothèses en vigueur. Les cinq vérifications ci-dessus valent pour cette classe ; un `C24` les améliorerait de `25 %`, un résineux non classé les invaliderait. **Ce n'est pas une donnée manquante à réclamer** : c'est le cadre de validité de la note, et il est écrit ici comme tel — l'indice A en avait fait à tort une réserve.
 
 ---
 
@@ -147,6 +149,8 @@
 > **La poutre est hors limites d'un facteur 7, et ce n'est pas un résultat de `B-43`.** Le diagnostic l'a mesurée ; `B-20` a retenu un **moisage `R1` (`2 × UPE 200`)** ; son dimensionnement appartient à `B-45`. `B-43` fournit la **charge** (`4,28 kN/m`) et la **réaction** (`9,29 kN`) — ce sont les deux valeurs dont `B-45` a besoin, et elles sont plus faibles que celles de l'indice B de `B-21` puisque la recharge a quitté les planchers.
 >
 > **Ce que `B-43` peut dire de plus.** Les solives qui s'appuient sur cette poutre ne sont pas en cause : leur portée (`2,77 m`) est courte et leur flèche est vérifiée. **Le problème est la poutre, pas le plancher.**
+
+**Condition de validité — état des abouts (et non réserve).** Le moisage `R1` solidarise un profilé neuf et une poutre ancienne : le transfert d'effort n'est établi que si le bois en about est sain. Cette condition **n'ouvre aucune prestation sur le bois** : elle constate que le renfort prescrit au `D2` suppose un support réceptif, et elle relève de `R-24-B2`, sa vraie maison. **Rien à demander au maître d'ouvrage, rien à chiffrer** — c'est une phrase de la note de calcul, pas une tâche.
 
 ---
 
@@ -175,7 +179,9 @@
 
 **Aucune formule n'est écrite, et aucune ne le sera avant le sondage.** C'est le seul endroit du dossier où `B-43` ne produit aucun chiffre — et c'est volontaire : un plancher dont on ignore s'il est en bois, en béton armé ou en hourdis ne se calcule pas « au plus défavorable », il se **sonde**.
 
-> **Réserve `R-43-1` · Point d'arrêt `PA-03`** — sondage destructif du plancher haut d'étage (cage centrale), à réaliser **avant** `B-44` (charpente) et avant toute commande de renfort de toiture.
+> **Réserve `R-43-1` · Point d'arrêt `PA-03`** — **reformulés en indice B.** L'objet n'est **pas** le bois existant : c'est le **support de nos propres renforts**. Les plans `D2` folio 02 prescrivent deux demi-fermes en sous-œuvre, des fermes renforcées et des pannes ajoutées ; ces charges descendent par un plancher haut dont **aucune pièce n'établit la nature, l'épaisseur ni le sens porteur** (`B-23` § 3.2, `E-07`). Vérifier ce chemin n'est pas reprendre l'existant : c'est vérifier que **nos renforts ont un appui**.
+>
+> **Corollaire honnête** : si la charpente sort du programme, `PA-03` tombe avec elle. Les deux sont liées par `R-22` / `C-07` — charpente dessinée au `D2` f. 02, absente du CCTP. `B-43` ne tranche pas cette question de périmètre ; il en dépend.
 
 ---
 
@@ -235,6 +241,7 @@ Sous une **charge répartie**, un dallage continu sur fond de forme **suit son s
 | **Film polyane** | `200 µm`, remonté sur `10 cm` en périphérie |
 | **Consigne de coulage** | Dallage coulé **à même** la semelle ; **compactage interdit** sur le débord ; vibration à `200 mm` minimum du joint |
 | **Pourquoi** | Une semelle se tasse plus qu'un dallage : sans désolidarisation, le dallage se fissure en arc au droit de l'appui |
+| **Protection anti-termites** | **Prescrite au CCTP** (`D1 § 01.2.1.9.2`), sous le dallage, au même titre que le géotextile anti-contaminant et le film polyane. Produit et classement à justifier par l'entreprise ; le classement de la commune (`SEC-03`) ne conditionne que le **niveau** de protection |
 
 Cette consigne est **une prescription de chantier, pas un calcul** — mais c'est celle dont l'oubli coûte le plus cher, parce qu'il ne se voit qu'après le carrelage.
 
@@ -242,7 +249,7 @@ Cette consigne est **une prescription de chantier, pas un calcul** — mais c'es
 
 - **Les tassements différentiels** : hors mission (`D-15`), aucune valeur mesurée.
 - **La portance réelle** : `D-02`/`D-03` sont **contractuelles**, pas mesurées ; le sondage sous `P2` reste ouvert (`PA-01`).
-- **La présence de termites** : `SEC-03` n'est pas fourni. Si la commune est classée, une **barrière anti-termites physico-chimique** est à prévoir sous le dallage — réserve `R-43-4`.
+- **Le classement termites de la commune** : `SEC-03` n'est pas encore fourni. **Cela ne conditionne pas la prescription** — `D1 § 01.2.1.9.2` impose une **protection anti-termites sous dallage**, au même titre que le géotextile et le polyane (analyse DCE § 6.4). Seule la **classe** du produit reste à justifier par l'entreprise.
 
 ---
 
@@ -286,7 +293,7 @@ Cette consigne est **une prescription de chantier, pas un calcul** — mais c'es
 | 4 | Chaque appui a ses efforts transmis à `B-50` | ✅ **CONFORME** | § 9 — 6 appuis, efforts et destinataires nommés |
 | 5 | Chaque réservation est compatible avec le ferraillage | ⚠️ **PARTIEL DÉCLARÉ** | Aucune trémie n'est fournie (`STR-03` absent) ; la **règle d'encadrement** est prescrite, le calepinage reste à faire |
 | 6 | Joints de retrait et de désolidarisation prévus | ✅ **CONFORME** | § 8.4 et 8.5 — espacement, profondeur, délai, polystyrène, mastic, consigne de coulage |
-| 7 | Échelle cohérente | ✅ **CONFORME** | Planche `IndA` A3 paysage, unités DXF mm : **détails 1 et 2 au `1:5`** (géométrie à l'échelle) ; **détails 3 et 4 déclarés « schéma de principe, sans échelle »** — une coupe de désolidarisation à `1:5` ne tiendrait pas dans la colonne |
+| 7 | Échelle cohérente | ✅ **CONFORME** | Planche `IndB` A3 paysage, unités DXF mm : **détails 1 et 2 au `1:5`** (géométrie à l'échelle) ; **détails 3 et 4 déclarés « schéma de principe, sans échelle »** — une coupe de désolidarisation à `1:5` ne tiendrait pas dans la colonne |
 | 8 | Cartouche complet | ✅ **CONFORME** | Indice, date, mode `PARTIEL-DÉCLARÉ`, filigrane, mention incendie |
 
 **Verdict : 6 conformes, 2 partiels déclarés — la brique n'est pas « 8/8 » et ne le prétend pas.** Les deux points partiels ne sont pas des négligences : l'un porte sur des éléments qui **ne relèvent pas de `B-43`** (profilés), l'autre sur une donnée **qui n'existe pas** (plancher haut non sondé). Les déclarer conformes serait exactement le genre de fausse complétude que le dossier cherche à éviter.
@@ -302,30 +309,39 @@ Cette consigne est **une prescription de chantier, pas un calcul** — mais c'es
 | **`B-45`** | `IPE 160` : `7,28 kN/m` · `IPE 330` : charge et réaction · poutre `20 × 15` : `4,28 kN/m` et `9,29 kN` par about — **moisage `R1` à dimensionner** |
 | **`B-46`** | `8,56 kN/m` sur les murs d'appui des solives · `67,7 kN` sous l'`IPE 330` · contrainte de dallage `14,2 kPa` |
 | **`B-50`** | Réactions d'appui (§ 9) ; aucune solution d'assemblage n'est proposée |
-| **`B-60`** | Planche `FLORA_B43_DALLAGE_IndA` — les principes sont opposables, **le calepinage des joints reste à reporter sur la vue cotée** |
-| **`B-03`** | `R-43-1` à `R-43-4` (§ 12.2) |
+| **`B-60`** | Planche `FLORA_B43_DALLAGE_IndB` — les principes sont opposables, **le calepinage des joints reste à reporter sur la vue cotée** |
+| **`B-03`** | `R-43-1` seule (§ 12.2) — `R-43-2/3/4` **fermées en indice B** |
 
-### 12.2 Réserves nées de cette brique
+### 12.2 Réserves nées de cette brique — **une seule subsiste**
 
 | Réf. | Objet | Conséquence si non levée | Destinataire |
 |---|---|---|---|
-| **`R-43-1`** | **Plancher haut d'étage non sondé** (`E-07`) | Aucune vérification possible ; la chaîne de charge de la toiture reste rompue (`V15`) | Sondage — `PA-03` · `B-44` |
-| **`R-43-2`** | **Classe de bois `C18` non mesurée** (`EXI-03`) | Les 5 vérifications de la zone A valent pour `C18` ; un bois non classé les invaliderait | Relevé / `B-46` |
-| **`R-43-3`** | **État sanitaire des abouts** des solives (reprise de `R-24-B2`) | Ne bloque pas le calcul, **bloque la réception** de la zone A | `B-60` / ouverture |
-| **`R-43-4`** | **Classement termites inconnu** (`SEC-03` absent) | Si la commune est classée, barrière anti-termites à ajouter sous le dallage | MOE / mairie |
+| **`R-43-1`** | **Plancher haut d'étage non sondé** (`E-07`) — support des renforts de charpente prescrits au `D2` f. 02 | Aucune vérification possible du chemin de descente ; `B-44` resterait calculée sur une hypothèse de report (`V15`) | Sondage — `PA-03` · `B-44` |
+
+**Trois réserves de l'indice A sont fermées — et le motif de fermeture est explicite :**
+
+| Réf. fermée | Pourquoi elle n'aurait pas dû être ouverte | Où la prescription vit maintenant |
+|---|---|---|
+| ~~`R-43-2`~~ classe `C18` | `EXI-03` est une **hypothèse de calcul notifiée** (`D3` p. 10), déjà à l'annexe hypothèses. Ce n'est pas une donnée manquante | **§ 4** — condition de validité |
+| ~~`R-43-3`~~ état des abouts | Aucune prestation sur le bois n'est demandée : c'est la **condition de réceptivité du moisage `R1`**. Elle appartient à `R-24-B2`, pas à `B-43` | **§ 5** — condition de validité, renvoi `R-24-B2` |
+| ~~`R-43-4`~~ termites | La prescription **existe** au CCTP (`D1 § 01.2.1.9.2`, rubrique dallage). La présenter comme conditionnelle était une **faute de formulation** | **§ 8.5** — prescription ferme |
+
+> **Ce que la révision B ne change pas.** Aucune valeur : les cinq vérifications EC5 (`0,619` / `0,362` / `0,316` / `0,510` / `0,576`), la portance du dallage à `2,9 %`, le treillis `ST25C` et les joints `4,50 m` sont identiques à l'indice A. Une révision qui ferme des réserves **sans toucher aux chiffres** est le signe que le calcul était bon et que la rédaction ne l'était pas.
 
 ### 12.3 Point d'arrêt créé
 
-**`PA-03` — sondage destructif du plancher haut d'étage** (cage centrale). Il conditionne `B-44` (charpente) et toute commande de renfort de toiture. Il ne conditionne **pas** le dallage, qui peut être coulé sans attendre.
+**`PA-03` — sondage destructif du plancher haut d'étage** (cage centrale). Il conditionne `B-44` (charpente) et toute commande de renfort de toiture. Il ne conditionne **pas** le dallage, qui peut être coulé sans attendre. **Il tombe si la charpente sort du programme** (`R-22` / `C-07`) — les deux questions sont liées, `B-43` ne tranche pas le périmètre.
 
 ---
 
 ## 13. POINT DE CONTRÔLE HUMAIN
 
-**Trois questions, et trois seulement, attendent une réponse de votre part :**
+**Une seule question attend une réponse, et elle est de périmètre, pas de calcul :**
 
-1. **Le plancher haut doit-il être sondé maintenant ?** C'est le seul moyen de fermer `R-43-1` et de débloquer `B-44`. Sans lui, la charpente restera calculée sur une hypothèse de report.
-2. **La commune est-elle classée termites ?** Un arrêté préfectoral suffit à répondre ; à défaut, la barrière est à prévoir par précaution (`R-43-4`).
-3. **Les trémies et réservations sont-elles arrêtées ?** Tant qu'elles ne le sont pas, le treillis est prescrit **continu** et les encadrements seront à reporter au `B-60`.
+1. **La charpente (demi-fermes, fermes renforcées, pannes — `D2` f. 02) est-elle dans le programme ?** Si oui, le plancher haut qui la porte doit être sondé (`PA-03`). Si non, `R-43-1` et `PA-03` tombent ensemble, et `B-43` est **close sans réserve**.
 
-**Brique `B-43` livrée en indice A — en attente de votre `GO` ou de vos observations.**
+**Une information utile, non bloquante :** le **classement termites** de la commune (`SEC-03`). Il ne conditionne pas l'existence de la protection — elle est prescrite — seulement sa **classe**.
+
+**Une information de production :** les **trémies et réservations**. Tant qu'elles ne sont pas arrêtées, le treillis est prescrit **continu** et les encadrements seront reportés au `B-60`.
+
+**Brique `B-43` livrée en indice B — en attente de votre `GO` ou de vos observations.**

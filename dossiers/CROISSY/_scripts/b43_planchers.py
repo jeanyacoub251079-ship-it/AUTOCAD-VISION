@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""B-43 — PLANCHERS, PLANCHER HAUT ET DALLAGE — CROISSY-FLORA — Indice A.
+"""B-43 — PLANCHERS, PLANCHER HAUT ET DALLAGE — CROISSY-FLORA — Indice B.
 Régime OUTILLÉ (V13). Toutes les valeurs numériques de la note sortent d'ici.
 Entrées : B-21 Ind. C (§ 3 et § 6), D3 p. 10-12 (constitutions), D-35, D-31, D-32.
-Sorties : _rendus/b43_planchers.txt / .json + _plans/FLORA_B43_DALLAGE_IndA.{dxf,png,pdf}
+Sorties : _rendus/b43_planchers.txt / .json + _plans/FLORA_B43_DALLAGE_IndB.{dxf,png,pdf}
 """
 import json
 import math
@@ -19,7 +19,7 @@ from ezdxf.addons.drawing.config import Configuration, BackgroundPolicy
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_TXT = os.path.join(ROOT, "_rendus", "b43_planchers.txt")
 OUT_JSON = os.path.join(ROOT, "_rendus", "b43_planchers.json")
-BASE = os.path.join(ROOT, "_plans", "FLORA_B43_DALLAGE_IndA")
+BASE = os.path.join(ROOT, "_plans", "FLORA_B43_DALLAGE_IndB")
 
 LOG = []
 
@@ -339,7 +339,7 @@ def dessiner(res):
     # cadre A3 paysage
     rect(8, 8, 412, 289, "PLANCHER-CARTOUCHE")
     txt(14, 279, "CROISSY-FLORA — B-43 — DALLAGE : FERRAILLAGE, JOINTS DE RETRAIT, DÉSOLIDARISATION", 4.0, "PLANCHER-AXES")
-    txt(14, 272, "Indice A — 20/10/2026 — NE PAS EXÉCUTER SANS EXE COTÉ ET VISA", 2.8, "PLANCHER-AXES")
+    txt(14, 272, "Indice B — 20/10/2026 — NE PAS EXÉCUTER SANS EXE COTÉ ET VISA", 2.8, "PLANCHER-AXES")
     txt(14, 266.5, "AUCUN JOINT DE DILATATION (D-28) — LES JOINTS DE RETRAIT NE SONT PAS DES JOINTS DE DILATATION",
         2.6, "PLANCHER-JOINTS")
     txt(14, 261.5, "D-09 : DALLAGE COULÉ À MÊME LES SEMELLES, DÉSOLIDARISÉ — JAMAIS SUR LEUR DÉBORD",
@@ -421,7 +421,7 @@ def dessiner(res):
         ("6. AUCUN joint de dilatation (D-28) — les joints de retrait ne le sont pas.", 2.3, None),
         ("7. Charge : g 7,75 · q 2,50 → p_ELU 14,21 kN/m² sur 111,15 m² (D-35).", 2.3, None),
         ("8. Portance sol : 14,2 kPa à l'ELU = 2,9 % de 490 kPa — non gouvernante.", 2.3, None),
-        ("9. Barrière anti-termites à prévoir si la commune est classée (SEC-03 absent).", 2.3, None),
+        ("9. Protection anti-termites PRESCRITE au CCTP (D1 01.2.1.9.2) — classe à justifier.", 2.3, None),
         ("10. Protection au feu adéquate à prévoir (hors lot GO).", 2.3, None),
     ]
     for k, (t, h, lay) in enumerate(notes):
@@ -432,7 +432,7 @@ def dessiner(res):
     rect(cx0, cy0, cx1, cy1, "PLANCHER-CARTOUCHE")
     txt(cx0 + 4, cy1 - 10, "EHPAD LA ROSERAIE — PAVILLON FLORA (CROISSY-SUR-SEINE)", 3.4, "PLANCHER-AXES")
     txt(cx0 + 4, cy1 - 18, "B-43 — PLANCHERS, PLANCHER HAUT & DALLAGE — DALLAGE : PRINCIPES", 2.7)
-    txt(cx0 + 4, cy1 - 25, "Brique B-43 · Indice A · 20/10/2026 · Mode PARTIEL-DÉCLARÉ · Unités DXF : mm", 2.2)
+    txt(cx0 + 4, cy1 - 25, "Brique B-43 · Indice B · 20/10/2026 · Mode PARTIEL-DÉCLARÉ · Unités DXF : mm", 2.2)
     txt(cx0 + 4, cy1 - 32, "Détails 1 et 2 au 1:5 · schémas 3 et 4 sans échelle · CARNAC v3.0 · EC2 / NF DTU 13.3", 2.2)
     txt(cx0 + 4, cy1 - 42, "NE PAS EXÉCUTER SANS EXE COTÉ ET VISA", 4.2, "PLANCHER-AXES")
 
