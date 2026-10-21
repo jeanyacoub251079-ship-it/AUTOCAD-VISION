@@ -192,3 +192,13 @@ ________________
 **Ordre inversé.** L'audit croisé s'exécute désormais **après** le socle géométrique : B-10 lit les plans sur le fond calé et nettoyé (`B-30`, `B-32`), ce qui supprime les contradictions fantômes produites par les cloisons et les doublages.
 
 **Preuve d'épuisement.** Avant d'inscrire une lacune, B-10 produit le journal d'épuisement `V14` : pièces examinées, passages, résultat par pièce. Une lacune non prouvée n'est pas une lacune : c'est une pièce non lue.
+
+---
+
+### 6. COMPLÉMENT v3.0.1 — PRESTATIONS NON ADRESSÉES · CARNET DES FAITS
+
+**Tableau 5 obligatoire (nouveau).** Prestations **lues** dans le CCTP mais **non adressées** au BET d'exécution : désamiantage, déplombage, cantonnements, PGC, PPSPS, modes opératoires entreprise, PV de réception d'ouvrages que le programme ne nous charge pas de vérifier. Pour chacune : article CCTP | constat | **aucune demande `T-04`**.
+
+**Programme vs diagnostic.** Une prescription absente du CCTP **et** des plans archi **et** des plans EVEN n'est pas une lacune de nos études — c'est un ouvrage hors programme. Interdit de la transformer en demande (arrêté termites, état des abouts, PV de renforts existants) si aucune intervention n'est prescrite.
+
+**Carnet des faits.** B-10 alimente le carnet ouvert en B-00 : nature des planchers par zone, matériaux prescrits, neufs vs existants. Une « lacune » qui figure déjà au carnet est une non-conformité de lecture, pas une donnée manquante.

@@ -103,8 +103,9 @@ INTERDICTIONS
 - Ne rédige aucune demande sans échéance : une demande sans échéance est une demande sans priorité.
 - Ne mélange pas les demandes URGENTES et les demandes de suivi : elles n'ont pas le même traitement.
 - Ne rédige pas de demande vague (« fournir les données manquantes ») : chaque demande porte sur une donnée précise, avec sa référence au RDR.
-- N'oublie aucun point ouvert : chaque point du RDR doit avoir sa demande correspondante.
+- N'oublie aucun point ouvert **légitime** : chaque point du RDR qui passe le test des trois conditions (§ v3.0.1) a sa demande ; les autres sont **clos comme non adressés**, pas relancés.
 - Ne produis pas de demande sans consignation au RDR : une demande non consignée n'est pas opposable.
+- **v3.0.1 — Ne rédige aucune demande qui échoue au test des trois conditions** (addendum A1) : (1) donnée absente après épuisement `V14` ; (2) nécessaire à un ouvrage **de notre mission** ; (3) destinataire = celui à qui la pièce est adressée. Interdit : arrêté termites / état des abouts / PV de réception si le programme (CCTP + archi + EVEN) ne prescrit pas l'intervention ; interdit : relancer MOA/MOE sur désamiantage, déplombage, cantonnements, PGC.
 
 
 SORTIE

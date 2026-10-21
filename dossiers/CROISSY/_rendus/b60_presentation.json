@@ -1,0 +1,56 @@
+{
+ "FOND": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_FOND_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 15
+ },
+ "VERT": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_VERT_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 18
+ },
+ "PLANCHER": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_PLANCHER_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 14
+ },
+ "METAL": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_METAL_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 23
+ },
+ "LINTEAU": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_LINTEAU_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 12
+ },
+ "MACON": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_MACON_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 12
+ },
+ "CHARPENTE": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_CHARPENTE_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 12
+ },
+ "ASSEMBLAGE": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_ASSEMBLAGE_EXE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 12
+ },
+ "ENSEMBLE": {
+  "dxf": "/home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_ENSEMBLE_LECTURE_IndB.dxf",
+  "audit": 0,
+  "layer0": 0,
+  "n": 13
+ }
+}

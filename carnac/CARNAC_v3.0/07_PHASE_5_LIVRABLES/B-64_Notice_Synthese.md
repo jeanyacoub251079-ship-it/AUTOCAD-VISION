@@ -57,6 +57,8 @@ La raison d'être de B-64 : sans notice de synthèse, un lecteur (MOE, BC) doit 
    * quels points restent à lever ;
    * quels visas sont requis.
 La notice de synthèse est le document d'entrée du livrable — elle permet au lecteur de décider s'il doit approfondir, ou si le livrable est suffisamment clair.
+
+**v3.0.1.** Ordre de lecture : en-tête cinq lignes → §0 hypothèses → périmètre → points de principe → points à lever → visas. Codes `D-xx`/`H-xx` en fin ou omis s'ils n'aident pas le BC. Voir addendum A1 `LIV-07`.
 ________________
 
 

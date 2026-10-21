@@ -349,3 +349,21 @@ Aucune version du carnet n'est publiée sans exécution du compilateur de cohér
 8. **Dictionnaire porté à 106 variables** : restauration des libellés corrompus `LIV-01` (conventions de calques) et `LIV-03` (formats de sortie), développement des plages de consommation, et douze variables nouvelles (`CFG-01` à `CFG-03`, `DEC-05` à `DEC-07`, `GEO-13`, `GEO-14`, `NIV-07`, `STR-01` à `STR-03`).
 9. **Assainissement formel complet** : tableaux convertis en tables Markdown normalisées, mentions de version alignées, compteurs de verrous et de modes corrigés, placeholders alignés entre prompt et rappel, symétrie intégrale du graphe amont/aval, archives historiques protégées.
 10. **Contrôle automatique obligatoire** : `10/10 PASS` (zéro erreur, zéro avertissement) exigé avant toute publication d'une version du carnet.
+
+---
+
+## 11. COMPLÉMENT v3.0.1 — LECTURE ADRESSÉE, CARNET DES FAITS, PRÉSENTATION
+
+Voir `10_ANNEXES/A1_Addendum_v3.0.1.md` (texte opposable). Synthèse :
+
+### 1.5 Lecture adressée du DCE
+Le DCE / CCTP est **adressé à l'entreprise**. Le BET d'exécution en **extrait** ce qui concerne ses études. Il n'attend aucune réponse formelle sur une prestation qui ne lui est pas adressée (désamiantage, déplombage, cantonnements, PGC). Il ne demande un document que s'il est **nécessaire à un ouvrage prescrit** par le programme des travaux (CCTP + plans archi + EVEN). Diagnostic ≠ programme.
+
+### 1.6 Carnet des faits
+Dès `B-00`, un tableau sourcé (natures de planchers, niveaux, matériaux, neufs vs existants) est **consommé** par toutes les briques aval. Oublier un fait déjà au dossier est une non-conformité — distincte de `V14` (déclarer absent sans épuisement).
+
+### 1.7 Présentation
+Plans : fond blanc, existant gris léger **extrait** (pas dump `B-32`), ouvrages neufs en couleur, implantation **obligatoire** sur le niveau, codes CARNAC **en note**. Notes : §0 hypothèses → matériaux → charges → géométrie → DDC → vérifs → points à lever ; codes en annexe.
+
+### 1.8 Sismique zone 1 · stabilité provisoire
+Zone 1 : **aucune** vérification sismique (`B-25` SANS OBJET sur ce volet). Stabilité provisoire d'un existant : **MOE conception**, pas BET EXE.

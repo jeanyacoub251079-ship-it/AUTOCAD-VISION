@@ -48,6 +48,12 @@ Liste les éléments structurants cités dans les pièces, en rattachant CHACUN 
 - usages et surcharges annoncées ;
 - contraintes de site (occupation, voisinage, accès).
 
+ÉTAPE 2 bis — Carnet des faits (v3.0.1, addendum A1)
+Dès cette brique, ouvre un tableau unique **consommé** par toutes les briques aval. Oublier un fait déjà au dossier est une non-conformité.
+Colonnes : fait | valeur | source (pièce + folio) | zone.
+Faits minimaux : **nature de chaque plancher** (bois / hourdis / BA / dallage / non sondé) ; matériaux prescrits ; liste des ouvrages neufs vs existants ; niveaux ; exclusions de mission.
+Une brique aval qui redemande ou « découvre » un fait de ce carnet est non conforme.
+
 
 ÉTAPE 3 — Contradictions détectées
 Liste TOUTES les contradictions entre pièces, SANS LES TRANCHER :

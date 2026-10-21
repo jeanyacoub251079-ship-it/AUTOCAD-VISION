@@ -324,3 +324,17 @@ Cette brique est en **régime outillé** : elle produit un script (OUT-02), l'ex
 **Zéro collision de textes.** Chaque plan est contrôlé par script : `0` chevauchement de textes, `0` cote orpheline, `0` entité sur le calque `0`. Un plan non contrôlé n'est pas diffusé.
 
 **Report, jamais redessin.** Le plan reporte la géométrie du fond `B-32` et les éléments calculés ; il ne redessine jamais l'empreinte architecturale et n'invente aucune position.
+
+---
+
+### 6. COMPLÉMENT v3.0.1 — IMPLANTATION LISIBLE (addendum A1)
+
+**Fond simplifié, pas dump.** « Report, jamais redessin » porte sur les **coordonnées et dimensions**. Interdit de coller le DXF `B-32` entier (calques, blocs, textes). L'existant est **extrait** (murs porteurs, baies, trémie) et figuré en **gris léger** sur fond **blanc**.
+
+**Implantation obligatoire.** Chaque type comporte (1) le **plan du niveau** avec **tous** les ouvrages de ce type à leur place, (2) au moins une coupe ou un détail type. Un croquis de coupe **sans** plan d'implantation (dallage, linteau, semelle) est **refusé**.
+
+**Codes hors dessin.** Sur le plan : repères d'ouvrage, cotes, un encadré `ENC` ≤ 5 lignes, pastilles `H-xx`/`D-19` courtes, filigrane une ligne. Les codes `D-xx`/`R-xx`, l'historique d'indice et « ce que la brique ne fait pas » vont **en note**.
+
+**Vue d'ensemble de lecture.** Après le dernier type, une pièce facultative peut superposer tous les ouvrages neufs. Filigrane `LECTURE — NE PAS EXÉCUTER`. Ce n'est **pas** un plan EXE fusionné (la règle un type = un plan EXE reste).
+
+**Titre trois lignes.** Qui / quoi / indice + matériau. Cartouche visuellement court. Couleurs : un type = une couleur. Coupe hachurée, barres dessinées.

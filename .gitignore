@@ -19,6 +19,11 @@ web/.vite/
 # Données Drive (lourdes, persistées mais non versionnées)
 google_drive/
 
+# Rasters de comparaison et sondages locaux
+dossiers/CROISSY/_rendus/cmp_ancienne_ia/
+dossiers/CROISSY/_rendus/*.png
+dossiers/CROISSY/_drive/
+
 # Divers
 *.log
 .DS_Store

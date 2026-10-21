@@ -402,7 +402,15 @@ Toute valeur issue du mode `HYPOTHÈSE-NOTIFIÉE` est reportée :
 Une hypothèse sans norme d'appui n'est pas notifiée : c'est une valeur de repli interdite (V3).
 
 ### 8.4 Prescriptions chantier `ENC` et Points d'Arrêt `PA-xx`
-Toute inconnue physique est portée par un encadré `ENC` (prescription opposable : sondage, dépose, fouille, curage, essai) et par un Point d'Arrêt `PA-xx` (arrêt de production avant poursuite, avec critère de lever et conséquence chiffrée). L'encadré figure **à la fois** sur le plan et en tête de la note, mot pour mot.
+Toute inconnue physique est portée par un encadré `ENC` (prescription opposable : sondage, dépose, fouille, curage, essai) et par un Point d'Arrêt `PA-xx` (arrêt de production avant poursuite, avec critère de lever et conséquence chiffrée).
+
+**v3.0.1.** Le mot-pour-mot vit **en note**. Sur le plan : **un** encadré `ENC` de **cinq lignes maximum**, lisible à 1 m. Un mur de douze alinéas sur le dessin est une non-conformité de présentation (`LIV-06`, addendum A1).
+
+### 8.7 Présentation (v3.0.1 — `LIV-06` / `LIV-07`)
+- Fond blanc, existant gris léger extrait, ouvrages neufs en couleur simple.
+- Implantation obligatoire sur le niveau concerné ; coupe type hachurée.
+- Notes : ordre §0 hypothèses → matériaux → charges → géométrie → DDC → vérifs → points à lever ; codes CARNAC en annexe.
+- Voir `10_ANNEXES/A1_Addendum_v3.0.1.md`.
 
 ### 8.5 Contrôle de rendu obligatoire (`0` collision)
 Aucun plan n'est diffusé avant contrôle automatisé, journalisé au format de l'annexe O §7 :

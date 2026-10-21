@@ -158,7 +158,11 @@ Point de contrôle humain : à la sortie de B-25, vous validez le système de co
 
 Cas particulier — bâtiment sans système de contreventement explicite : B-25 s'appelle en INTERNE-GO et conçoit le système (voiles de contreventement, palées, triangulations), avec alerte sur les conséquences contractuelles si la conception n'est pas dans la mission.
 
-Cas particulier — données sismiques absentes : si la zone sismique ou la catégorie d'importance n'est pas fournie, B-25 s'appelle en HYPOTHÈSE-NOTIFIÉE : elle retient l'enveloppe la plus défavorable compatible avec la localisation connue du projet, cite l'article d'appui, reporte l'hypothèse sous nuage et la soumet au délai DEC-06. Une donnée sismique n'est jamais « supposée conforme ».
+Cas particulier — **zone de sismicité 1 (très faible)** (v3.0.1) : **aucune vérification sismique**. Arrêté du 22/10/2010. B-25 mentionne « Zone 1 — sismique SANS OBJET » et **s'arrête** sur ce volet. Interdit : spectre, catégorie d'importance demandée pour un calcul sismique, `H-xx` sismique, relance MOA.
+
+Cas particulier — données sismiques absentes **hors zone 1** : si la zone n'est pas 1 et que la catégorie d'importance n'est pas fournie, B-25 s'appelle en HYPOTHÈSE-NOTIFIÉE : elle retient l'enveloppe la plus défavorable compatible avec la localisation connue, cite l'article d'appui, reporte l'hypothèse sous nuage et la soumet au délai DEC-06. Une donnée sismique n'est jamais « supposée conforme ».
+
+Cas particulier — **stabilité provisoire d'un bâtiment existant** (v3.0.1) : la vérification du contreventement en phase provisoire **incombe à la MOE structure de conception**. B-25 **signale** l'interface (dépose de refend, charge de chantier). Elle **ne calcule pas** la stabilité provisoire de l'existant. Elle **ne produit pas** de `T-04` bloquant à ce titre.
 
 Cas particulier — bâtiment existant conservé : le contreventement de l'existant est qualifié avant d'être compté (continuité, liaisons, état). Un existant non qualifié n'est jamais compté comme système de reprise ; il est porté en PA-xx avec prescription ENC.
 

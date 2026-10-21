@@ -1,5 +1,18 @@
 # Journal des modifications — CARNAC v3.0
-> Version du document : 3.0 (carnet CARNAC v3.0) — ce journal fait foi de la version en vigueur.
+> Version du document : 3.0.1 (carnet CARNAC v3.0 + addendum A1) — ce journal fait foi de la version en vigueur.
+
+## Entrée v3.0.1 — GARDE-FOUS LECTURE / DEMANDE / PRÉSENTATION (21/10/2026)
+
+**Nature** : complément mineur. Aucun verrou supprimé. Aucune brique supprimée.
+
+| N° | Nature | Objet | Fichiers |
+| --- | --- | --- | --- |
+| C-22 | Ajout | Addendum A1 : lecture adressée du DCE, carnet des faits, sismique zone 1, stab. prov. MOE, présentation plans/notes | `10_ANNEXES/A1_Addendum_v3.0.1.md`, `00_MASTER` §11 |
+| C-23 | Enrichissement | B-00 carnet des faits · B-10 tableau 5 non adressé · T-04 test 3 conditions | B-00, B-10, T-04 |
+| C-24 | Correction | B-25 : zone 1 = SO sismique ; stab. provisoire existant = MOE conception | B-25 |
+| C-25 | Enrichissement | B-60 implantation obligatoire, fond simplifié, codes hors dessin ; A_Conventions ENC court | B-60, A_Conventions, B-64 |
+
+Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles).
 
 ## Entrée v3.0 — REFONTE MAJEURE (20/10/2026)
 

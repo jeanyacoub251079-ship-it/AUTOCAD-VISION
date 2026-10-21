@@ -11,9 +11,11 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AM** (remplace l'indice AL du 21/10/2026 — `B-64` Notice Ind. A) |
+| **Indice du livrable** | **AN** (remplace l'indice AM du 21/10/2026 — passe présentation Ind. B) |
 | Brique suivante | B-04 (PTD) — non engagée |
 
+> **Indice AN (21/10/2026)** : **PASSE PRÉSENTATION — `B-60` Ind. B + notes recollées + `B-64` Ind. B.** Mêmes chiffres, mêmes réserves ouvertes (`P2` HA12, `A4`, `E-07`, `H=2800`, `F3`). Plans type BET (fond blanc, implantation, codes hors dessin). CARNAC v3.0.1 addendum A1 (lecture adressée, carnet des faits, zone 1, stab. prov. MOE). **`D-39`** : passe présentation. Suite : `B-70` si GO.
+>
 > **Indice AM (21/10/2026)** : **`B-64` NOTICE DE SYNTHÈSE LIVRÉE EN INDICE A.** Paquet EXE (8 types `B-60` + `B-62`) en **PARTIEL-DÉCLARÉ**. **NE PAS EXÉCUTER SANS EXE COTÉ ET VISA.** `P2` HA12 / `A4` / `PA-03` / `D-19` / `R-42-1` **non clos**. Suite : `B-70`.
 >
 > **Indice AL (21/10/2026)** : **`B-62` NOMENCLATURE ET FAÇONNAGE LIVRÉE EN INDICE A.** Extraction `V13` des 8 DXF `B-60` (audit **0**, 44 TEXT, 62 lignes, 5 écarts **signalés non corrigés**). `P2` 6 HA12 **NON COMMANDABLE** (ÉQUERRE plan vs DROITE `B-42`). `A4` / sabots / `Stab1` `L` / forages `D-36` / cadres `SF1` **en attente**. Filigrane **NE PAS COMMANDER SANS VISA**. Suite : `B-64`.

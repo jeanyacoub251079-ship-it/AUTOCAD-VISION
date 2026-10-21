@@ -1,0 +1,11 @@
+B-60 PRÉSENTATION Ind. B — CROISSY-FLORA
+Mêmes chiffres. Fond blanc. Implantation obligatoire.
+  FOND          audit=0  calque0=0  entités préfixe=15
+  VERT          audit=0  calque0=0  entités préfixe=18
+  PLANCHER      audit=0  calque0=0  entités préfixe=14
+  METAL         audit=0  calque0=0  entités préfixe=23
+  LINTEAU       audit=0  calque0=0  entités préfixe=12
+  MACON         audit=0  calque0=0  entités préfixe=12
+  CHARPENTE     audit=0  calque0=0  entités préfixe=12
+  ASSEMBLAGE    audit=0  calque0=0  entités préfixe=12
+  ENSEMBLE      audit=0  calque0=0  entités préfixe=13
