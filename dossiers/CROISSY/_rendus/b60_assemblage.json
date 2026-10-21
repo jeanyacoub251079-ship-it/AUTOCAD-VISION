@@ -1,0 +1,15 @@
+{
+ "type": "ASSEMBLAGE",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "A2_boulons": 20,
+ "A5_platines": 2,
+ "A4_chiffre": false,
+ "R50_3": "ouverte",
+ "purge": 443,
+ "blocs": 11,
+ "audit": 0,
+ "n_ASSEMBLAGE": 129,
+ "calques_manquants": [],
+ "octets": 972082
+}
