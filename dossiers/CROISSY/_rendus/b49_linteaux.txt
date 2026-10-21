@@ -1,0 +1,117 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-49 — LINTEAUX ET SEUILS — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13) — EC3 §6.2 / EC6 §8.1.6 / triangle 60°
+Type : LINTEAU MÉTALLIQUE (5 neufs). Seuils BA : SANS OBJET.
+Mode : PARTIEL-DÉCLARÉ (SEC-01 non dimensionnée — hors lot GO).
+==============================================================================
+
+[0] HYPOTHÈSES ET CLAUSES OPPOSABLES
+------------------------------------------------------------------------------
+  D-34 : f_k = 1,5 MPa HYPOTHÈSE — essais hors mission, reprise chiffrée.
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE (zone 1).
+  D-28 : AUCUN JOINT DE DILATATION.
+  D-09 : ARASE −1,00 M / TN MINIMUM — ÉGALISATION GROS BÉTON SI ÉCART.
+  D-36 : remplissage béton C25/30 des UPE 200 de R3 — ACCEPTÉ.
+  D-37 : coussin w_b ≥ 300 mm sous R1, F2, F3 — ACCEPTÉ (B-46, pas un linteau).
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO) — NON dimensionnée.
+
+[1] INVENTAIRE — PREUVE D'ÉPUISEMENT (V14)
+------------------------------------------------------------------------------
+  RÉF    OUVRAGE            SECTION          L m    EMPLACEMENT              STATUT
+  L1     F1a                2×HEA 200        1,00   refend central File D    NEUF — D2 f.01
+  L2     F1b                2×HEA 200        0,90   mur Nord hall File 4     NEUF — D2 f.01
+  L3     F1c                2×HEA 200        0,85   mur Sud hall File 3      NEUF — D2 f.01
+  L4     R3-N               UPE 200+béton    1,55   façade Est baie N        NEUF — D2 f.01 · D-36
+  L5     R3-S               UPE 200+béton    1,55   façade Est baie S        NEUF — D2 f.01 · D-36
+  E-08   2 linteaux bois    existant déformé 1,55   façade Est Désordre 1    COURT-CIRCUITÉ par R3
+  —      linteau bois Ouest 23×15 existant   2,52   façade Ouest Sud         SOULAGÉ par P1 — hors lot
+  —      seuils BA          —                —      —                        SANS OBJET — 0 prescription
+
+  Épuisement : D1 § 01.2.1 (aucun seuil BA, aucun linteau BA prescrit) ·
+  D2 f.01 (F1 2×HEA 200, R3 UPE 200, P1 sous linteau bois) · D3 p.5 (Désordre 1,
+  2 linteaux non porteurs façade Est) · D3 p.16 (linteau bois Ouest 23×15) ·
+  D4 p.23-25 (GEO-05 baies, aucun seuil structurel) · B-20 §4-5 · B-21 §5 ·
+  B-23 désordre 1 · B-24 E-08 · B-45 §4 et §9 · B-46 Z2/Z4 · B-50 A3/A6.
+  Aucun linteau BA. Aucun seuil BA. Aucun linteau maçonnerie neuf.
+
+[2] F1a/b/c — LINTEAUX COURTS : TRIANGLE DE CHARGE (60°)
+------------------------------------------------------------------------------
+  Formule : h_Δ = L × √3/2  (triangle isocèle 60°, pratique FR / DTU 20.1)
+  W_k = ½ · L · h_Δ · t · γ   si h_Δ ≤ H_mur = 3,50 m  (triangle formé)
+  Plancher : p_ELU = 1,35×4,71 + 1,5×2,50 = 10,11 kN/m sur bande 1,00 m
+  M_Ed = W_ELU·L/6 + p_plan·L²/8   (triangle + uniforme, appuis simples)
+  Enveloppe B-45 : p_ELU = 71,4 kN/m sur L_calc = 1,25 m (mur pleine hauteur)
+
+  RÉF    L m    h_Δ m    W_k kN   M_Δ      M_env    taux_Δ   taux_env VERDICT
+  F1a    1.00   0.866    4.76     2.34     13.9     0.0099   0.059    OK
+  F1b    0.90   0.779    3.86     1.80     13.9     0.0076   0.059    OK
+  F1c    0.85   0.736    3.44     1.57     13.9     0.0067   0.059    OK
+
+  M_Rd (2×HEA 200) = 236.2 kN·m · V_Rd = 573.2 kN
+  Triangle FORMÉ pour les 3 (h_Δ ≤ 3,50 m) : la maçonnerie au-dessus du
+  triangle va aux jambages, pas au linteau. B-21 mettait 38,5 kN/m de mur
+  (pleine hauteur) : c'est l'enveloppe conservatrice déjà vérifiée en B-45
+  (taux 0,059). B-49 n'y touche pas : il ajoute la méthode du triangle,
+  qui est la bonne pour un linteau court, et confirme que F1 n'est pas le sujet.
+  Appui : sommier S2 20×50×20, w_b = 200 mm ≥ 90 mm (EC6 §8.1.6) — B-46 Z2 OK.
+
+[3] R3-N / R3-S — LINTEAUX SOUS CHARGE PONCTUELLE (B-45 §9, D-36)
+------------------------------------------------------------------------------
+  P_Ed = 46.2 kN à mi-portée (réaction R2-N, B-21 §5)
+  L_baie = 1.55 m · profilé livré 2.50 m
+  M_Ed = P·L/4 = 17.90 kN·m  /  M_Rd = 61.6 kN·m  →  taux 0.291
+  V_Ed = P/2 = 23.1 kN  →  taux cisaillement (B-45) 0,051
+  Flèche = 0.9 mm  /  L/250 = 6.2 mm  →  0.144
+  Torsion : D-36 — remplissage C25/30 entre ailes → section FERMÉE,
+  I_T ~ 10^7 mm⁴, torsion hors critère (R-50-2 CLOSE, B-50 A3).
+  Appui : 2 × S1 20×40×20 par linteau, w_b = 200 ≥ 90 mm — B-46 Z2 OK
+  (R3 admissible même en a1 = 0 et β = 1). Coussin D-37 NON requis sur R3.
+
+[4] E-08 ET LINTEAU OUEST — PAS DE CALCUL, PAS DE RELEVÉ DE BOIS
+------------------------------------------------------------------------------
+  Façade Est, Désordre 1 (D3 p.5) : 2 linteaux bois déformés, NON PORTEURS.
+  B-20 §5 : R3-N/S + 4×S1 COURT-CIRCUITENT totalement ces linteaux.
+  Les sommiers S1 tombent sur les ABOUTS DE MUR, hors emprise des bois.
+  → R-46-4 CLOSE : aucun sommier n'est censé reposer sur un linteau bois.
+  Contrôle d'implantation = B-60 (cotation), pas un sondage de bois.
+
+  Façade Ouest Sud : linteau bois 23×15 (D3 p.16), L = 2,52 m entre P1-N/S.
+  D2 f.01 : P1 « en renfort du linteau bois existant » — le bois RESTE,
+  P1 le soulage. Aucune intervention sur le bois n'est prescrite (CCTP,
+  D2, D4). Pas de relevé, pas de réserve bois (règle du 20/10).
+  P1 est un POTEAU (B-45, B-42) — pas un linteau.
+
+[5] SEUILS BA — SANS OBJET
+------------------------------------------------------------------------------
+  D1 : aucun seuil BA au CCTP GO. D2 f.01-04 : aucun seuil coté.
+  D4 p.23-25 (GEO-05) : nomenclatures de baies, pas de seuil structurel.
+  Le dallage (B-43) est désolidarisé 20 mm — pas un seuil.
+  Verdict : SANS OBJET. Réactivable si un seuil porteur est prescrit.
+
+[6] LONGUEURS D'APPUI ET CONTRAINTES (renvoi B-46, pas un nouveau calcul)
+------------------------------------------------------------------------------
+  F1a/b/c : S2, N_Rdc (β=1) = 60 kN ≥ V_Ed enveloppe 44,6 kN — OK (B-46).
+  R3-N/S  : S1, N_Rdc (β=1) = 48 kN ≥ V_Ed 23,1 kN — OK (B-46).
+  Mini EC6 §8.1.6 = 90 mm : w_b = 200 mm — OK.
+  Coussin D-37 (w_b ≥ 300 mm) : R1, F2, F3 — CE NE SONT PAS DES LINTEAUX.
+  Aucun scellement calculé ici (B-50).
+
+[7] AUTO-CONTRÔLE DÉCLARÉ — LINTEAU PAR LINTEAU
+------------------------------------------------------------------------------
+  F1a      triangle 60° + enveloppe B-45        OK 0,010 / 0,059       S2, B-46 OK
+  F1b      idem, L=0,90 m                       OK                     S2, B-46 OK
+  F1c      idem, L=0,85 m                       OK                     S2, B-46 OK
+  R3-N     ponctuel 46,2 kN + D-36              OK 0,291 flexion       S1, B-46 OK, torsion close
+  R3-S     idem R3-N                            OK                     S1, B-46 OK
+  E-08     court-circuité par R3                HORS CALCUL            R-46-4 close
+  Seuils   0 prescription                       SANS OBJET             —
+
+  Points DE PRINCIPE : triangle appliqué aux linteaux courts ; enveloppe
+  B-45 non réduite ; aucun bois calculé ; aucun scellement ; pas de feu.
+  Points À LEVER : aucun sur les 5 linteaux neufs. Implantation S1 hors
+  bois = B-60 (cotation), pas une réserve de calcul.
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B49_LINTEAUX_IndA.dxf (74486 o) — audit 0 erreur(s)
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B49_LINTEAUX_IndA.png / .pdf

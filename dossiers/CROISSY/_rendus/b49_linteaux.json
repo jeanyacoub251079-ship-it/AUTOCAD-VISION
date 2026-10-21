@@ -1,0 +1,51 @@
+{
+ "mode": "PARTIEL-DÉCLARÉ",
+ "type": "linteau métallique",
+ "seuils": "SANS OBJET",
+ "f1": [
+  {
+   "ref": "F1a",
+   "L": 1.0,
+   "h_tri": 0.866,
+   "forme": true,
+   "Wk": 4.76,
+   "M_tri": 2.34,
+   "V_tri": 8.27,
+   "M_env": 13.95,
+   "taux_tri": 0.0099,
+   "taux_env": 0.059
+  },
+  {
+   "ref": "F1b",
+   "L": 0.9,
+   "h_tri": 0.779,
+   "forme": true,
+   "Wk": 3.86,
+   "M_tri": 1.8,
+   "V_tri": 7.15,
+   "M_env": 13.95,
+   "taux_tri": 0.0076,
+   "taux_env": 0.059
+  },
+  {
+   "ref": "F1c",
+   "L": 0.85,
+   "h_tri": 0.736,
+   "forme": true,
+   "Wk": 3.44,
+   "M_tri": 1.57,
+   "V_tri": 6.62,
+   "M_env": 13.95,
+   "taux_tri": 0.0067,
+   "taux_env": 0.059
+  }
+ ],
+ "r3": {
+  "P": 46.2,
+  "M": 17.9,
+  "taux": 0.291,
+  "w_mm": 0.89
+ },
+ "e08": "court-circuité",
+ "ecarts": 0
+}
