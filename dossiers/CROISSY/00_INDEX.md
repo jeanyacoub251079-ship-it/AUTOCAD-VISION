@@ -122,6 +122,7 @@
 |---|---|---|
 | `T-04` | Stabilité des ouvrages provisoires (étaiement, phases) | Transmise à la MOE structure de conception (`D-27`) |
 | `PA-01` / `PA-02` | Reconnaissance du soubassement sous `P2` | En attente — aucune valeur de portance inventée ; `SF1 80×80` retenue sur l'hypothèse déclarée |
+| **`PA-03`** | **Sondage du plancher haut d'étage, support des renforts de charpente** (`D2` f. 02) | Ouvert — **tombe si la charpente sort du programme** (`R-22`/`C-07`) ; ne bloque pas le dallage |
 | Interface façades | Qui traite la fissuration `F5` relevée au pignon ? | À trancher (lot façades) |
 | Interface zinguerie | Reprise des `P-4` (zinguerie avant pose) | À trancher (lot couverture) |
 | Interface second œuvre | Séquence de dépose/repose des doublages en zone de renfort | À trancher (lot second œuvre) |
