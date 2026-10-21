@@ -1,0 +1,268 @@
+{
+ "mode": "PARTIEL-DÉCLARÉ",
+ "fk_MPa": 1.5,
+ "fd_MPa": 0.6,
+ "gamma_M": 2.5,
+ "z1_voiles": [
+  {
+   "voile": "M01",
+   "t_eq": 0.31,
+   "lambda": 9.7,
+   "phi_i": 0.957,
+   "taux": 0.277,
+   "ok": true
+  },
+  {
+   "voile": "M02",
+   "t_eq": 0.39,
+   "lambda": 7.7,
+   "phi_i": 0.966,
+   "taux": 0.274,
+   "ok": true
+  },
+  {
+   "voile": "M03",
+   "t_eq": 0.88,
+   "lambda": 3.4,
+   "phi_i": 0.985,
+   "taux": 0.269,
+   "ok": true
+  },
+  {
+   "voile": "M04",
+   "t_eq": 0.57,
+   "lambda": 5.3,
+   "phi_i": 0.977,
+   "taux": 0.271,
+   "ok": true
+  },
+  {
+   "voile": "M05",
+   "t_eq": 0.15,
+   "lambda": 20.0,
+   "phi_i": 0.911,
+   "taux": 0.291,
+   "ok": true
+  },
+  {
+   "voile": "M06",
+   "t_eq": 0.24,
+   "lambda": 12.5,
+   "phi_i": 0.944,
+   "taux": 0.281,
+   "ok": true
+  },
+  {
+   "voile": "M07",
+   "t_eq": 0.21,
+   "lambda": 14.3,
+   "phi_i": 0.937,
+   "taux": 0.283,
+   "ok": true
+  },
+  {
+   "voile": "M08",
+   "t_eq": 0.36,
+   "lambda": 8.3,
+   "phi_i": 0.963,
+   "taux": 0.275,
+   "ok": true
+  },
+  {
+   "voile": "M09",
+   "t_eq": 0.85,
+   "lambda": 3.5,
+   "phi_i": 0.984,
+   "taux": 0.269,
+   "ok": true
+  },
+  {
+   "voile": "M10",
+   "t_eq": 0.48,
+   "lambda": 6.2,
+   "phi_i": 0.972,
+   "taux": 0.273,
+   "ok": true
+  },
+  {
+   "voile": "M11",
+   "t_eq": 0.6,
+   "lambda": 5.0,
+   "phi_i": 0.978,
+   "taux": 0.271,
+   "ok": true
+  },
+  {
+   "voile": "M12",
+   "t_eq": 0.37,
+   "lambda": 8.1,
+   "phi_i": 0.964,
+   "taux": 0.275,
+   "ok": true
+  }
+ ],
+ "z2_appuis": [
+  {
+   "appui": "F1a/b/c",
+   "V_kN": 44.6,
+   "sommier": "S2 20x50x20",
+   "A_b_mm2": 100000.0,
+   "N_beta1_kN": 60.0,
+   "N_a1_0_kN": 75.0,
+   "N_a1_2m_kN": 90.0,
+   "a1_crit_mm": 0.0,
+   "verdict": "OK"
+  },
+  {
+   "appui": "F2",
+   "V_kN": 62.4,
+   "sommier": "S1 20x40x20",
+   "A_b_mm2": 80000.0,
+   "N_beta1_kN": 48.0,
+   "N_a1_0_kN": 60.0,
+   "N_a1_2m_kN": 72.0,
+   "a1_crit_mm": 300.0,
+   "verdict": "OK si a1≥0.30"
+  },
+  {
+   "appui": "F3",
+   "V_kN": 61.6,
+   "sommier": "S1 20x40x20",
+   "A_b_mm2": 80000.0,
+   "N_beta1_kN": 48.0,
+   "N_a1_0_kN": 60.0,
+   "N_a1_2m_kN": 72.0,
+   "a1_crit_mm": 200.0,
+   "verdict": "OK si a1≥0.20"
+  },
+  {
+   "appui": "F4",
+   "V_kN": 11.5,
+   "sommier": "S1 20x40x20",
+   "A_b_mm2": 80000.0,
+   "N_beta1_kN": 48.0,
+   "N_a1_0_kN": 60.0,
+   "N_a1_2m_kN": 72.0,
+   "a1_crit_mm": 0.0,
+   "verdict": "OK"
+  },
+  {
+   "appui": "R1",
+   "V_kN": 77.4,
+   "sommier": "S2 20x50x20",
+   "A_b_mm2": 100000.0,
+   "N_beta1_kN": 60.0,
+   "N_a1_0_kN": 75.0,
+   "N_a1_2m_kN": 90.0,
+   "a1_crit_mm": 240.0,
+   "verdict": "OK si a1≥0.24"
+  },
+  {
+   "appui": "R2-N",
+   "V_kN": 46.2,
+   "sommier": "S2 20x50x20",
+   "A_b_mm2": 100000.0,
+   "N_beta1_kN": 60.0,
+   "N_a1_0_kN": 75.0,
+   "N_a1_2m_kN": 90.0,
+   "a1_crit_mm": 0.0,
+   "verdict": "OK"
+  },
+  {
+   "appui": "R2-S",
+   "V_kN": 35.9,
+   "sommier": "S2 20x50x20",
+   "A_b_mm2": 100000.0,
+   "N_beta1_kN": 60.0,
+   "N_a1_0_kN": 75.0,
+   "N_a1_2m_kN": 90.0,
+   "a1_crit_mm": 0.0,
+   "verdict": "OK"
+  },
+  {
+   "appui": "R3-N/S",
+   "V_kN": 23.1,
+   "sommier": "S1 20x40x20",
+   "A_b_mm2": 80000.0,
+   "N_beta1_kN": 48.0,
+   "N_a1_0_kN": 60.0,
+   "N_a1_2m_kN": 72.0,
+   "a1_crit_mm": 0.0,
+   "verdict": "OK"
+  }
+ ],
+ "sensibilite_fk": {
+  "F1a/b/c": [
+   1.487,
+   0.743,
+   0.496,
+   0.372
+  ],
+  "F2": [
+   2.6,
+   1.3,
+   0.867,
+   0.65
+  ],
+  "F3": [
+   2.567,
+   1.283,
+   0.856,
+   0.642
+  ],
+  "F4": [
+   0.479,
+   0.24,
+   0.16,
+   0.12
+  ],
+  "R1": [
+   2.58,
+   1.29,
+   0.86,
+   0.645
+  ],
+  "R2-N": [
+   1.54,
+   0.77,
+   0.513,
+   0.385
+  ],
+  "R2-S": [
+   1.197,
+   0.598,
+   0.399,
+   0.299
+  ],
+  "R3-N/S": [
+   0.963,
+   0.481,
+   0.321,
+   0.241
+  ]
+ },
+ "z3_neufs": [
+  {
+   "ref": "P1-N",
+   "N_kN": 100.3,
+   "sigma_MPa": 0.279
+  },
+  {
+   "ref": "P1-S",
+   "N_kN": 100.3,
+   "sigma_MPa": 0.279
+  },
+  {
+   "ref": "P3",
+   "N_kN": 35.8,
+   "sigma_MPa": 0.099
+  },
+  {
+   "ref": "J1",
+   "N_kN": 39.8,
+   "sigma_MPa": 0.111
+  }
+ ],
+ "ecarts": 3,
+ "renvois": 2
+}
