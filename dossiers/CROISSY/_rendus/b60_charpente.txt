@@ -1,0 +1,55 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type CHARPENTE — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (B-44 A · H-29 · PA-03 ouvert · existant hors calcul)
+==============================================================================
+
+[0] ENTRÉES
+------------------------------------------------------------------------------
+  Note amont : B-44 Ind. A — neufs OK : PN 0,830 · DF-arb 0,626 · DF-ent 0,108 · CF 0,940
+  Positions  : B-20 Ind. B planche 3 — millimètre, DY=-3726 cm, aucune position inventée
+  Vue        : B-32 Ind. D R+1
+  Hors type  : assemblages (sabots, ancrages) → B-60 ASSEMBLAGE
+  Hors type  : E-04/05/06 existant (B-24) · E-07 non chargé · ZN1/ZN2 aucun calcul
+
+[1] CLAUSES
+------------------------------------------------------------------------------
+  D-34 : f_k=1,5 MPa · f_vk0=0,15 MPa · essais hors mission — PLAN ET NOTE.
+  D-26 : AUCUNE vérif. sismique. D-28 : AUCUN joint de dilatation.
+  D-38 : B-41 / B-48 SANS OBJET.
+  C24 spécification d'approvisionnement. Classe de service 2 (MAT-08).
+  E-07 NON CHARGÉ — demi-fermes désolidarisées. PA-03 reste ouvert (B-43).
+  Contreventement de toiture : ABSENT au D2 — pannes ≠ diaphragme. Non inventé.
+  Protection au feu : ADEQUATE A PREVOIR (hors lot GO) — NON dimensionnee.
+
+[2] IMPLANTATION (report B-20 R+1, cm DXF)
+------------------------------------------------------------------------------
+  RÉP          X0       Y0       X1       Y1 SECTION                  L       
+  PN1      8856.0   1235.7   8856.0   2155.7 75x200 C24               3,20 m  
+  PN2      9002.5   1809.6   9537.1   1809.6 75x200 C24               3,20 m  
+  PN3      9002.5   1545.3   9537.1   1545.3 75x200 C24               3,20 m  
+  DF1      8567.5   1840.6   8952.5   1840.6 arb 100x200 + ent 75x200 3,20 m  
+  DF2      8567.5   1550.8   8952.5   1550.8 arb 100x200 + ent 75x200 3,20 m  
+  CF       9537.1   1413.2   9537.1   1941.7 75x225 C24               2,62 m  
+  ZN1/ZN2 : nuages D-19 — AUCUN CALCUL. E-07 non chargé. Rien n'est recalculé.
+  purge blocs : −447 → 7 restants
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_CHARPENTE_EXE_IndA.dxf (974250 o) — audit 0 — blocs 7
+
+[3] V13
+------------------------------------------------------------------------------
+  CHARPENTE-HYP                   150
+  CHARPENTE-AXES                   41
+  CHARPENTE-FERMES                 16
+  CHARPENTE-HABILLAGE-TEXTE        13
+  CHARPENTE-PANNES                 12
+  CHARPENTE-DETAILS                 9
+  CHARPENTE-NOMENCLATURE            8
+  CHARPENTE-CONTREFICHES            6
+  CHARPENTE-COTATION                3
+  CHARPENTE-EXISTANT                3
+  CHARPENTE-CARTOUCHE               2
+  CHARPENTE-* = 263  ·  calque 0 ajouts = 0  ·  manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_CHARPENTE_EXE_IndA.png / .pdf

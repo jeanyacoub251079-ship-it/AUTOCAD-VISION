@@ -11,8 +11,10 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AI** (remplace l'indice AH du 21/10/2026 — `B-60` METAL Ind. A) |
+| **Indice du livrable** | **AJ** (remplace l'indice AI du 21/10/2026 — `B-60` CHARPENTE Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
+
+> **Indice AJ (21/10/2026)** : **`B-60` TYPE `CHARPENTE` LIVRÉE EN INDICE A — R+1.** `PN1/2/3` `75 × 200 C24`, `DF1/2` (arb. `100 × 200` + entrait `75 × 200`), `CF` `75 × 225` implantés (`B-20` pl. 3). `E-07` **non chargé**. `PA-03` **reste ouvert**. Contreventement de toiture **non inventé**. Types restants : `ASSEMBLAGE`.
 
 > **Indice AI (21/10/2026)** : **`B-60` TYPE `METAL` LIVRÉE EN INDICE A — PROFILÉS + `D-36`.** `F2`/`F3`/`F4`/`R1`/`R2-N/S`/`P1-N/S`/`Stab1` implantés (`B-20`). Remplissage `C25/30` des `UPE 200` de `R3` (`D-36`) **porté** — sans ce béton, `R3` **non posable**. `F1` = LINTEAU. Coussins = MACON. Assemblages → `ASSEMBLAGE`. `R-45-1` ouverte (`F3` `w 0,971`). Types restants : `CHARPENTE`, `ASSEMBLAGE`.
 

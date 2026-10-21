@@ -1,0 +1,16 @@
+{
+ "type": "CHARPENTE",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "pannes": 3,
+ "demi_fermes": 2,
+ "contrefiches": 1,
+ "E07_charge": false,
+ "PA03": "ouvert",
+ "purge": 447,
+ "blocs": 7,
+ "audit": 0,
+ "n_CHARPENTE": 263,
+ "calques_manquants": [],
+ "octets": 974250
+}
