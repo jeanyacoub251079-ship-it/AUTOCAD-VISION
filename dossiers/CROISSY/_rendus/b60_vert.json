@@ -1,0 +1,21 @@
+{
+ "type": "VERT",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "porteurs": [
+  "P2",
+  "P3",
+  "J1"
+ ],
+ "ferraillage": "6 HA12",
+ "c_nom_mm": 30,
+ "H_mm_hypothese": 2800,
+ "R42_1": "OUVERTE",
+ "D19": [
+  "Z-P3",
+  "Z-J1"
+ ],
+ "audit": 0,
+ "n_VERT": 155,
+ "calques_manquants": []
+}

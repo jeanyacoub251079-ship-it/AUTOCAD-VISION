@@ -1,0 +1,77 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type VERT — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (B-42 B · nuages D-19 · H hypothèse B-20 · D-34)
+==============================================================================
+
+[0] ENTRÉES — ÉTAPE 1
+------------------------------------------------------------------------------
+  Note amont     : B-42 Ind. B — P2 / P3 / J1, 6 HA12, 8/8 CONFORME
+  Vue nettoyée   : B-32 Ind. D  — /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_RDC_VUE-NETTOYEE_IndD.dxf (2719320 o)
+  Calage         : B-30 (résidu médian 21,0 mm)
+  Ancrage pied   : B-50 A1 / B-60 FOND — 6 HA12 équerre, l_bd 166 mm (P2/SF1)
+  Cartouche      : modèle FLORA — cotes mm, DXF cm (B-32)
+  Cloisons/isol. : 0 — D-25 / V9
+  Hors type      : R1/R2/R3 (METAL/MACON) · F2/F3 (METAL) · P1-N/S (METAL)
+  B-34 / B-33    : non livrées — STR-03 NON BLOQUANTE
+
+[1] HYPOTHÈSES ET CLAUSES OPPOSABLES
+------------------------------------------------------------------------------
+  H-23 / D-06 : c_nom = 30 mm hors fondation (XA1). 50 mm = FOND seulement.
+  H = 2 800 mm = BORNE HAUTE B-20 — HYPOTHÈSE, pas un relevé (R-42-1 OUVERTE).
+  D-19 : nuages Z-P3 et Z-J1 MAINTEUS (pieds sur maçonnerie).
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE.
+  D-34 : f_k = 1,5 MPa, f_vk0 = 0,15 MPa ; essais hors mission ;
+         reprise chiffrée si non concluants — SUR LE PLAN ET LA NOTE.
+  D-28 : AUCUN JOINT DE DILATATION.
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO) — NON dimensionnée.
+  R-42-2 : excentricité F2/P2 → B-50 (appareil d'appui) — non tranchée ici.
+  R-42-3 : pression J1 0,332 MPa → B-46 + D-34 — non tranchée ici.
+
+[2] IMPLANTATION (report B-40 / B-42, aucune position inventée)
+------------------------------------------------------------------------------
+  RÉP             X m        Y m SECTION            STATUT
+  P2            95,35      59,29 150×250 mm BA      CERTAIN — sur SF1 / B-60 FOND
+  P3            94,09      54,89 400×500 mm BA      NUAGE D-19 — pied maçonnerie
+  J1            89,78      54,52 240×500 mm BA      NUAGE D-19 — pied maçonnerie
+
+[3] FERRAILLAGE D'EXÉCUTION (B-42 B — rien recalculé)
+------------------------------------------------------------------------------
+  P2  150×250  N_Ed 159,0 kN  M_Ed/M_Rd 0,305  6 HA12  cadres HA8 e150
+  P3  400×500  N_Ed  35,8 kN  M_Ed/M_Rd 0,013  6 HA12  cadres HA8 e200
+  J1  240×500  N_Ed  39,8 kN  M_Ed/M_Rd 0,015  6 HA12  cadres HA8 e200
+  c_nom 30 mm  C25/30  S500B
+  6 HA12 imposé par l'espacement max, pas par la résistance.
+  P2 : 3 barres / face 250 mm (2 barres → 166 > 150 mm — interdit).
+  Ancrage pied P2 : B-60 FOND / B-50 A1 (équerre, l_bd 166 mm).
+  H = 2800 mm HYPOTHÈSE — débits indicatifs seulement (B-62).
+
+[4] NOMENCLATURE GRAPHIQUE (façonnage → B-62)
+------------------------------------------------------------------------------
+  RÉP      DÉSIGNATION            SECTION    QTÉ                    MATÉRIAU
+  P2       Poteau BA sous F2      150×250    1                      C25/30 · 6 HA12 · HA8 e150
+  P3       Poteau BA refend       400×500    1                      C25/30 · 6 HA12 · HA8 e200
+  J1       Jambage BA refend      240×500    1                      C25/30 · 6 HA12 · HA8 e200
+  HA12     Longitudinal           HA12       18                     S500B — 6 / fût
+  HA8      Cadres                 HA8        P2 e150 · P3/J1 e200   S500B
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_VERT_EXE_IndA.dxf (2748052 o) — audit 0 erreur(s)
+
+[5] TEST DE RELECTURE DXF (V13 / annexe O §6)
+------------------------------------------------------------------------------
+  calque                          n
+  VERT-AXES                        40
+  VERT-COTATION                    32
+  VERT-ACIER-LONG                  23
+  VERT-HABILLAGE-TEXTE             18
+  VERT-COFFRAGE                    15
+  VERT-ACIER-TRANS                  8
+  VERT-HYP-D19                      8
+  VERT-NOMENCLATURE                 6
+  VERT-DETAILS                      3
+  VERT-CARTOUCHE                    2
+  VERT-* total = 155  ·  calque 0 (ajouts) = 0
+  calques VERT attendus : 10  · manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_VERT_EXE_IndA.png / .pdf

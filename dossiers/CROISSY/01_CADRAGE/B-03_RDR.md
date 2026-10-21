@@ -11,8 +11,10 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AD** (remplace l'indice AC du 21/10/2026 — `B-60` FOND Ind. A) |
+| **Indice du livrable** | **AE** (remplace l'indice AD du 21/10/2026 — `B-60` VERT Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
+
+> **Indice AE (21/10/2026)** : **`B-60` TYPE `VERT` LIVRÉE EN INDICE A — POTEAUX/JAMBAGES EXE.** `P2` `150×250`, `P3` `400×500`, `J1` `240×500` **implantés sur `B-32`**. `6 HA12` partout, `c_nom 30 mm`. `D-34` mot pour mot. Nuages `D-19` sur `P3`/`J1`. `R-42-1` **ouverte** (`H = 2 800 mm` hypothèse). Types restants : `PLANCHER`, `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `LINTEAU`, `ASSEMBLAGE`.
 
 > **Indice AD (21/10/2026)** : **`B-60` TYPE `FOND` LIVRÉE EN INDICE A — PLAN `PLS` EXE.** Fond `B-32` D (report, jamais redessin). `SF1` `800 × 800 × 250 mm` + attentes **`6 HA12` équerre** (`l_bd 166 mm`, `R-50-1` **CLOSE** : les 3 conditions sont sur le plan). ENC v3 **intégrale**. Nuages `D-19` maintenus. `D-23` porté (non corrigé). Types restants : `VERT`, `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `LINTEAU`, `ASSEMBLAGE`, `PLANCHER`.
 
