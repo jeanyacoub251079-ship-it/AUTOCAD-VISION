@@ -1,0 +1,50 @@
+
+==============================================================================
+------------------------------------------------------------------------------
+B-60 — PLANS D'EXÉCUTION — type LINTEAU — CROISSY-FLORA — INDICE A
+CARNAC v3.0 — régime OUTILLÉ (V13)
+Mode : PARTIEL-DÉCLARÉ (B-49 A · D-34 · SEC-01 hors lot)
+==============================================================================
+
+[0] ENTRÉES
+------------------------------------------------------------------------------
+  Note amont   : B-49 Ind. A — 5 linteaux neufs OK · seuils SO · E-08 hors calcul
+  Positions    : B-20 Ind. B — report, millimètre, aucune position inventée
+  Vue          : B-32 Ind. D
+  Hors type    : F2/F3/R1 (METAL/MACON, D-37) · P1 (METAL) · FOND/VERT/PLANCHER livrés
+
+[1] CLAUSES
+------------------------------------------------------------------------------
+  D-34 : f_k=1,5 MPa · f_vk0=0,15 MPa · essais hors mission — SUR LE PLAN ET LA NOTE.
+  D-36 : remplissage C25/30 des UPE 200 de R3 ACCEPTÉ — porté ici, détail METAL.
+  D-26 : AUCUNE VÉRIFICATION SISMIQUE. D-28 : AUCUN JOINT DE DILATATION.
+  D-37 : coussins R1/F2/F3 — PAS des linteaux → B-60 MACON.
+  E-08 : COURT-CIRCUITÉ. Aucun relevé de bois. S1 hors emprise bois.
+  Seuils BA : SANS OBJET.
+  Protection au feu : ADÉQUATE À PRÉVOIR (hors lot GO).
+
+[2] IMPLANTATION (B-20, cm DXF)
+------------------------------------------------------------------------------
+  RÉP          X0       Y0       X1       Y1 PROF       L        APPUI
+  F1a      8977.4   5320.2   8977.4   5464.1 2xHEA200   1,00 m   File D · S2+J1
+  F1b      9279.8   5489.2   9427.5   5489.2 2xHEA200   0,90 m   File 4 · S2+P3
+  F1c      9407.5   5214.0   9532.5   5214.0 2xHEA200   0,85 m   File 3 · 2xS2
+  R3-N     8570.5   5584.2   8570.5   5834.1 UPE200+B   1,55 m   Est Nord · 2xS1
+  R3-S     8570.5   5007.9   8570.5   5258.0 UPE200+B   1,55 m   Est Sud · 2xS1
+  purge blocs : −443 → 11 restants
+
+  écrit : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_LINTEAU_EXE_IndA.dxf (975411 o) — audit 0 — blocs 11
+
+[3] V13
+------------------------------------------------------------------------------
+  LINTEAU-AXES                     39
+  LINTEAU-PROFILES                 30
+  LINTEAU-SOMMIER                  25
+  LINTEAU-HABILLAGE-TEXTE          15
+  LINTEAU-NOMENCLATURE              8
+  LINTEAU-EXISTANT                  7
+  LINTEAU-HYP                       3
+  LINTEAU-CARTOUCHE                 2
+  LINTEAU-DETAILS                   2
+  LINTEAU-* = 131  ·  calque 0 ajouts = 0  ·  manquants : aucun
+  rendus : /home/user/AUTOCAD-VISION/dossiers/CROISSY/_plans/FLORA_B60_LINTEAU_EXE_IndA.png / .pdf

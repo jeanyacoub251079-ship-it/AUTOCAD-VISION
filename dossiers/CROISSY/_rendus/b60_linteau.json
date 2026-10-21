@@ -1,0 +1,20 @@
+{
+ "type": "LINTEAU",
+ "indice": "A",
+ "mode": "PARTIEL-DECLARE",
+ "neufs": [
+  "F1a",
+  "F1b",
+  "F1c",
+  "R3-N",
+  "R3-S"
+ ],
+ "seuils": "SANS OBJET",
+ "E08": "court-circuite",
+ "purge": 443,
+ "blocs": 11,
+ "audit": 0,
+ "n_LINTEAU": 131,
+ "calques_manquants": [],
+ "octets": 975411
+}

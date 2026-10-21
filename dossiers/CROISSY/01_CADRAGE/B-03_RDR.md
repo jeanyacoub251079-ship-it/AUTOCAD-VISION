@@ -11,8 +11,10 @@
 | Carnet | CARNAC v2.6 |
 | Brique | **B-03** — Registre des Décisions et Réserves |
 | Phase | 0 — Cadrage *(puis mis à jour à chaque décision, réserve ou verrou)* |
-| **Indice du livrable** | **AF** (remplace l'indice AE du 21/10/2026 — `B-60` PLANCHER Ind. A) |
+| **Indice du livrable** | **AG** (remplace l'indice AF du 21/10/2026 — `B-60` LINTEAU Ind. A) |
 | Brique suivante | B-04 (PTD) — non engagée |
+
+> **Indice AG (21/10/2026)** : **`B-60` TYPE `LINTEAU` LIVRÉE EN INDICE A — F1/R3 SUR RDC.** Cinq linteaux neufs implantés (`B-20`). `S1` de `R3` sur **abouts de mur**, hors bois (`R-46-4`). `E-08` court-circuité. Seuils **SO**. `D-36` porté. `D-37` → `MACON`. Types restants : `MACON`, `METAL`, `CHARPENTE`, `ASSEMBLAGE`.
 
 > **Indice AF (21/10/2026)** : **`B-60` TYPE `PLANCHER` LIVRÉE EN INDICE A — DALLAGE SUR RDC BAS.** Emprise `111,15 m²` (`B-43`, non remesurée). Joints de **retrait** `e ≤ 4 500 mm` (`D-28` : pas de dilatation). Désolidarisation `20 mm`. `D-35` recharge `150 mm` `100 %`. Zones A/B = existant. `E-07` hors planche. DXF **purgé** (11 blocs) pour le viewer. Types restants : `LINTEAU`, `MACON` (`D-37`), `METAL` (`D-36`), `CHARPENTE`, `ASSEMBLAGE`.
 
