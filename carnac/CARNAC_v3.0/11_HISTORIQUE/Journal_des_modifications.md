@@ -1,5 +1,15 @@
 # Journal des modifications — CARNAC v3.0
-> Version du document : 3.0.1 (carnet CARNAC v3.0 + addendum A1) — ce journal fait foi de la version en vigueur.
+> Version du document : 3.0.2 (carnet CARNAC v3.0 + addendum A1 + plan de principe B-20) — ce journal fait foi de la version en vigueur.
+
+## Entrée v3.0.2 — PLAN DE PRINCIPE B-20 (22/10/2026)
+
+**Nature** : complément. Aucune brique ajoutée. Aucun verrou supprimé.
+
+| N° | Nature | Objet | Fichiers |
+| --- | --- | --- | --- |
+| C-27 | Enrichissement | Le livrable de B-20 que l'humain vise est le **plan de principe** (après B-32, avant les calculs), pas une liste. Repères P/Pt/SI/SF/Lt/Dg. B-60 reprend les mêmes repères. Sans étude de conception : plan obligatoire. | B-20, B-60, A1 §8, MASTER §1.9, D_Mode_Emploi |
+
+Motif : une liste est trop abstraite ; sans dessin avant calcul, l'humain ne peut pas voir si l'IA a compris le bâtiment.
 
 ## Entrée v3.0.1 — GARDE-FOUS LECTURE / DEMANDE / PRÉSENTATION (21/10/2026)
 
@@ -12,9 +22,7 @@
 | C-24 | Correction | B-25 : zone 1 = SO sismique ; stab. provisoire existant = MOE conception | B-25 |
 | C-25 | Enrichissement | B-60 implantation obligatoire, fond simplifié, codes hors dessin ; A_Conventions ENC court | B-60, A_Conventions, B-64 |
 
-| C-26 | Publication | Republication v3.0.1 : compilé 07, zip 08 (53 fichiers), packs SOCLE + A1. v3.0 conservée en archive Drive. | compilé, zip, packs |
-
-Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles). Republication GO 21/10/2026.
+Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles).
 
 ## Entrée v3.0 — REFONTE MAJEURE (20/10/2026)
 

@@ -1,8 +1,8 @@
 {
   "source_compiled_file": "/home/user/AUTOCAD-VISION/carnac/CARNAC_v3.0_COMPILE.md",
-  "source_bytes": 1212792,
-  "source_lines": 14606,
-  "source_sha256": "cb888ce1525a8c56d3f9463b7423f04bdbd710d75f01cfb20aa694c1f65f5403",
+  "source_bytes": 1216325,
+  "source_lines": 14661,
+  "source_sha256": "820ae6ebc995333854f135bb2cf18a1308fc4dc179b46550d8e85640f352d368",
   "markdown_files_count": 52,
   "total_tree_files_count": 53,
   "leading_prefix": "---\n\n",
@@ -20,9 +20,9 @@
       "start_header": "**[Début du fichier : 00_MASTER.md]**\n",
       "end_line": "**[Fin de 00_MASTER.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 37293,
-      "lines": 370,
-      "sha256": "e033aff9ec690a2304bfa429976e5600140893068e816320ca3f75c3b0302f3b"
+      "bytes": 37465,
+      "lines": 372,
+      "sha256": "420ac62a71b5a2b5951cb1d82ab2e265b8b695eab1748dd7d7da3249294e9142"
     },
     {
       "index": 2,
@@ -56,9 +56,9 @@
       "start_header": "**[Début du fichier : 10_ANNEXES/A1_Addendum_v3.0.1.md]**\n",
       "end_line": "**[Fin de 10_ANNEXES/A1_Addendum_v3.0.1.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 10083,
-      "lines": 165,
-      "sha256": "d7b00c362d1cc0081386912cd697388da39f97d67f978123f637ac8a7cb9272e"
+      "bytes": 10846,
+      "lines": 176,
+      "sha256": "436a644a95727bf6d104090d1101e98b7cdb5b02f57fee836454ba9a1860b663"
     },
     {
       "index": 5,
@@ -80,9 +80,9 @@
       "start_header": "**[Début du fichier : 10_ANNEXES/D_Mode_Emploi.md]**\n",
       "end_line": "**[Fin de 10_ANNEXES/D_Mode_Emploi.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 26599,
+      "bytes": 26737,
       "lines": 383,
-      "sha256": "3713c6e47f10ee2dcb42f969190ca7d09c3daa2284fa5d5e5386eb270e98d38e"
+      "sha256": "4699bbb8bf9984cc22e7b43df6abac1b493427b589a7521e2d6733e45973494e"
     },
     {
       "index": 7,
@@ -92,9 +92,9 @@
       "start_header": "**[Début du fichier : 10_ANNEXES/C_Journal_Revisions.md]**\n",
       "end_line": "**[Fin de 10_ANNEXES/C_Journal_Revisions.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 13043,
-      "lines": 209,
-      "sha256": "bc9a74ce51d6677994f23b2171ec6f692012fbe8b1df53c8f67bf6aa890ec8f4"
+      "bytes": 12668,
+      "lines": 205,
+      "sha256": "c2704584d9f01a37a7f6630d78a47a35691950077938eacd2cc6ed285ec5e957"
     },
     {
       "index": 8,
@@ -236,9 +236,9 @@
       "start_header": "**[Début du fichier : 04_PHASE_2_CONCEPTION/B-20_Conception_GO.md]**\n",
       "end_line": "**[Fin de 04_PHASE_2_CONCEPTION/B-20_Conception_GO.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 24991,
-      "lines": 247,
-      "sha256": "945ce98b1191b450c0e699a1b8019c8c6b244857577805062655d7f124064da4"
+      "bytes": 26948,
+      "lines": 277,
+      "sha256": "185ba96cf38f88ca46f746f4d35867846f9bd2548b3307be079d65623936cc3f"
     },
     {
       "index": 20,
@@ -500,9 +500,9 @@
       "start_header": "**[Début du fichier : 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md]**\n",
       "end_line": "**[Fin de 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 29071,
-      "lines": 340,
-      "sha256": "a25eccebad76c428d2879aeddf99b32b003caf61034da686829562d36d65bec8"
+      "bytes": 29493,
+      "lines": 348,
+      "sha256": "0ea9d31aa5034251e3849ddcfc8dc8dc59ac7b6607e39091fe2c9b09f278d995"
     },
     {
       "index": 42,
@@ -620,9 +620,9 @@
       "start_header": "**[Début du fichier : 11_HISTORIQUE/Journal_des_modifications.md]**\n",
       "end_line": "**[Fin de 11_HISTORIQUE/Journal_des_modifications.md]**\n",
       "separator_after": "\n---\n\n",
-      "bytes": 28271,
-      "lines": 390,
-      "sha256": "b13aeed934bb4ccd844aa37d651f038ee9acf22babc9139c18bc0bb81defcaa1"
+      "bytes": 28727,
+      "lines": 398,
+      "sha256": "b8a9f843d0b8aeaad0a7013d05f9a43fe77adabcda99f92c4d006d140809c21b"
     },
     {
       "index": 52,

@@ -150,7 +150,8 @@ ________________
 | `B-10` | Tableau 5 « prestations lues, non adressées » |
 | `T-04` | Test des trois conditions avant toute demande |
 | `B-25` | Zone 1 = SO sismique · stab. prov. = MOE conception |
-| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin |
+| `B-20` | **v3.0.2** : plan de principe = livrable principal (repères, après B-32, avant calculs) |
+| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin · **reprend les repères B-20** |
 | `B-64` | Ordre §0 / charges / vérif |
 | `A_Conventions` | `LIV-06` / `LIV-07` · ENC court |
 
@@ -163,3 +164,13 @@ ________________
 - `V14` épuisement, `V15` continuité mécanique.
 - `D-26` (aucune sismique), `D-27` (stab. prov. MOE), `D-28` (aucun joint de dilatation) — déjà décidés ; le présent texte les **généralise**.
 - Zéro placeholder, zéro devis, zéro protection incendie dimensionnée.
+
+________________
+
+## 8. PLAN DE PRINCIPE `B-20` (v3.0.2 — C-27)
+
+Après `B-32`, avant `B-40`. Le **plan** est le livrable de conception que l'humain vise. Pas une liste seule.
+
+Fond `B-32` extrait. Ouvrages implantés. Repères uniques (`P1`, `Pt1`, `SI1`, `SF1`, `Lt1`, `Dg1`…) + légende sur la feuille. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. Ce qui n'est pas sur le plan n'existe pas. Sections : mini / enveloppe / à caler, ou symbole sans cote. `B-60` reprend les **mêmes** repères après calcul.
+
+Sans BET conception : plan **obligatoire** (première proposition de structure). `B-60` n'est pas cette planche.

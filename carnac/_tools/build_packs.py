@@ -46,7 +46,7 @@ PACKS = [
         "file": "00_SOCLE.md",
         "titre": "PACK 00 — SOCLE (à coller en premier, toujours)",
         "quand": "À l'ouverture de CHAQUE nouvelle discussion, avant toute pièce de projet.",
-        "contient": "Document maître (protocole §0, 15 verrous, 6 modes, `CFG-1..4`, gabarits, ordonnancement) · annexe A (livrables, pureté structurelle) · addendum A1 v3.0.1 (lecture adressée, carnet des faits, zone 1, stab. prov., présentation) · annexe D (mode d'emploi) · annexe O (outillage et protocole CAO) · dictionnaire des 106 variables.",
+        "contient": "Document maître (protocole §0, 15 verrous, 6 modes, `CFG-1..4`, gabarits, ordonnancement) · annexe A (livrables, pureté structurelle) · annexe D (mode d'emploi) · annexe O (outillage et protocole CAO) · dictionnaire des 106 variables.",
         "note": "Ce pack suffit à faire comprendre le protocole à une IA. Il ne permet pas encore de produire une brique : il faut y ajouter le pack de la phase concernée.",
         "files": SOCLE,
     },

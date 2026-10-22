@@ -360,7 +360,7 @@ Restent **incompressibles à toute échelle** : le protocole de session (§0, po
 Audits sur fond calé (`B-10`, `B-11`, `B-12`), contradictions et réconciliation quantitative (`B-13`), périmètre de lot (`B-14`), risques et **Pré-Audit Flash d'Exécutabilité** (`B-15`), avec preuve d'épuisement `V14` avant toute déclaration d'absence.
 
 ### Phase 3 — Conception et synthèse structurelle (B-20 → B-25 → B-21 → B-22 → B-23 → B-24)
-Synthèse indissociable sur fond nettoyé (`B-20`), stabilité globale et contreventement (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`).
+**Plan de principe** sur fond nettoyé (`B-20`, livrable = le dessin référencé, après `B-32`, avant tout calcul), stabilité globale (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`). Une liste sans plan est refusée.
 
 ### Phase 4 — Calculs d'exécution (B-40 à B-50)
 Notes scriptées, hypothèses actives citées, prescriptions `ENC` et `PA-xx` reportées, flèches sous maçonnerie vérifiées, assemblages renvoyés à `B-50`.
@@ -377,7 +377,7 @@ Vérification croisée globale (`B-33`), auto-contrôle de synthèse (`B-70`), i
 | 0 | Qualification `CFG-01`, gabarit `CFG-02`, MPD ligne à ligne, table `NIV-07` |
 | 1 | Résidus de calage, périmètre de nettoyage, différentiel `EXISTANT / DÉMOLITION / PROJET` |
 | 2 | Classement gravité × nature des contradictions, risques résiduels acceptés |
-| 3 | Système de contreventement, hypothèses `H-xx` et leur délai, Points d'Arrêt `PA-xx` |
+| 3 | **Le plan de principe B-20** (ouvrages implantés, repères, « l'IA a-t-elle compris le bâtiment ? ») ; puis contreventement, `H-xx`, `PA-xx` |
 | 4 | Sections et ferraillages retenus, hypothèses actives citées |
 | 5 | Indice des plans, carnet de réservations, titre véridique, `0` collision |
 | 6 | Verdict global, supersession, points ouverts à la clôture |

@@ -2,14 +2,14 @@
   {
     "pack": "00_SOCLE.md",
     "titre": "PACK 00 — SOCLE (à coller en premier, toujours)",
-    "bytes": 115837,
-    "chars": 111711,
-    "estimated_tokens": 33318,
+    "bytes": 116814,
+    "chars": 112669,
+    "estimated_tokens": 33636,
     "files": [
       {
         "rel_path": "00_MASTER.md",
-        "bytes": 37293,
-        "sha256": "e033aff9ec690a2304bfa429976e5600140893068e816320ca3f75c3b0302f3b"
+        "bytes": 37465,
+        "sha256": "420ac62a71b5a2b5951cb1d82ab2e265b8b695eab1748dd7d7da3249294e9142"
       },
       {
         "rel_path": "10_ANNEXES/A_Conventions_Livrables.md",
@@ -18,13 +18,13 @@
       },
       {
         "rel_path": "10_ANNEXES/A1_Addendum_v3.0.1.md",
-        "bytes": 10083,
-        "sha256": "d7b00c362d1cc0081386912cd697388da39f97d67f978123f637ac8a7cb9272e"
+        "bytes": 10846,
+        "sha256": "436a644a95727bf6d104090d1101e98b7cdb5b02f57fee836454ba9a1860b663"
       },
       {
         "rel_path": "10_ANNEXES/D_Mode_Emploi.md",
-        "bytes": 26599,
-        "sha256": "3713c6e47f10ee2dcb42f969190ca7d09c3daa2284fa5d5e5386eb270e98d38e"
+        "bytes": 26737,
+        "sha256": "4699bbb8bf9984cc22e7b43df6abac1b493427b589a7521e2d6733e45973494e"
       },
       {
         "rel_path": "10_ANNEXES/O_Outillage.md",
@@ -129,14 +129,14 @@
   {
     "pack": "03_PHASE_3.md",
     "titre": "PACK 03 — PHASE 3 : CONCEPTION ET SYNTHÈSE STRUCTURELLE (B-20 à B-25)",
-    "bytes": 123799,
-    "chars": 119343,
-    "estimated_tokens": 35599,
+    "bytes": 125756,
+    "chars": 121243,
+    "estimated_tokens": 36175,
     "files": [
       {
         "rel_path": "04_PHASE_2_CONCEPTION/B-20_Conception_GO.md",
-        "bytes": 24991,
-        "sha256": "945ce98b1191b450c0e699a1b8019c8c6b244857577805062655d7f124064da4"
+        "bytes": 26948,
+        "sha256": "185ba96cf38f88ca46f746f4d35867846f9bd2548b3307be079d65623936cc3f"
       },
       {
         "rel_path": "04_PHASE_2_CONCEPTION/B-25_Stabilite_Globale.md",
@@ -232,9 +232,9 @@
   {
     "pack": "05_PHASES_5-6.md",
     "titre": "PACK 05 — PHASES 5 ET 6 : RÉSERVATIONS, LIVRABLES, VÉRIFICATION ET CLÔTURE (B-34, B-60 à B-64, B-33, B-70 à B-72)",
-    "bytes": 263516,
-    "chars": 253317,
-    "estimated_tokens": 75901,
+    "bytes": 263938,
+    "chars": 253729,
+    "estimated_tokens": 76026,
     "files": [
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-34_Synthese_Reservations.md",
@@ -243,8 +243,8 @@
       },
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md",
-        "bytes": 29071,
-        "sha256": "a25eccebad76c428d2879aeddf99b32b003caf61034da686829562d36d65bec8"
+        "bytes": 29493,
+        "sha256": "0ea9d31aa5034251e3849ddcfc8dc8dc59ac7b6607e39091fe2c9b09f278d995"
       },
       {
         "rel_path": "07_PHASE_5_LIVRABLES/B-62_Nomenclature.md",

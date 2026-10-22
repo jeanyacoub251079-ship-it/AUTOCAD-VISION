@@ -281,7 +281,6 @@ CARNAC_v3.0/
 │
 ├── 10_ANNEXES/
 │   ├── A_Conventions_Livrables.md
-│   ├── A1_Addendum_v3.0.1.md     ← Nouveau en v3.0.1
 │   ├── C_Journal_Revisions.md
 │   ├── D_Mode_Emploi.md
 │   └── O_Outillage.md
@@ -293,7 +292,7 @@ CARNAC_v3.0/
     └── Exemples_Phase_0.md         ← Exemples commentés (conservés comme archive de référence)
 ```
 
-Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les **53 fichiers** de l'arborescence (52 Markdown + CSV dictionnaire) sont produits et contrôlés (**v3.0.1**). L'addendum `A1` est le 52ᵉ Markdown. En cas d'écart, l'arborescence fait foi.
+Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les 52 fichiers de l'arborescence sont produits et contrôlés (v3.0).
 
 ---
 
@@ -372,6 +371,9 @@ Plans : fond blanc, existant gris léger **extrait** (pas dump `B-32`), ouvrages
 
 ### 1.8 Sismique zone 1 · stabilité provisoire
 Zone 1 : **aucune** vérification sismique (`B-25` SANS OBJET sur ce volet). Stabilité provisoire d'un existant : **MOE conception**, pas BET EXE.
+
+### 1.9 Plan de principe `B-20` (v3.0.2)
+Après le nettoyage `B-32`, **avant** les calculs : le livrable de conception que l'humain vise est **le plan** (repères `P` / `Pt` / `SI` / `SF` / `Lt` / `Dg`…), pas une liste. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. `B-60` (EXE) reprend les mêmes repères. Sans étude de conception, ce plan est obligatoire.
 
 **[Fin de 00_MASTER.md]**
 
@@ -1092,7 +1094,8 @@ ________________
 | `B-10` | Tableau 5 « prestations lues, non adressées » |
 | `T-04` | Test des trois conditions avant toute demande |
 | `B-25` | Zone 1 = SO sismique · stab. prov. = MOE conception |
-| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin |
+| `B-20` | **v3.0.2** : plan de principe = livrable principal (repères, après B-32, avant calculs) |
+| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin · **reprend les repères B-20** |
 | `B-64` | Ordre §0 / charges / vérif |
 | `A_Conventions` | `LIV-06` / `LIV-07` · ENC court |
 
@@ -1105,6 +1108,16 @@ ________________
 - `V14` épuisement, `V15` continuité mécanique.
 - `D-26` (aucune sismique), `D-27` (stab. prov. MOE), `D-28` (aucun joint de dilatation) — déjà décidés ; le présent texte les **généralise**.
 - Zéro placeholder, zéro devis, zéro protection incendie dimensionnée.
+
+________________
+
+## 8. PLAN DE PRINCIPE `B-20` (v3.0.2 — C-27)
+
+Après `B-32`, avant `B-40`. Le **plan** est le livrable de conception que l'humain vise. Pas une liste seule.
+
+Fond `B-32` extrait. Ouvrages implantés. Repères uniques (`P1`, `Pt1`, `SI1`, `SF1`, `Lt1`, `Dg1`…) + légende sur la feuille. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. Ce qui n'est pas sur le plan n'existe pas. Sections : mini / enveloppe / à caler, ou symbole sans cote. `B-60` reprend les **mêmes** repères après calcul.
+
+Sans BET conception : plan **obligatoire** (première proposition de structure). `B-60` n'est pas cette planche.
 
 **[Fin de 10_ANNEXES/A1_Addendum_v3.0.1.md]**
 
@@ -1593,7 +1606,7 @@ Restent **incompressibles à toute échelle** : le protocole de session (§0, po
 Audits sur fond calé (`B-10`, `B-11`, `B-12`), contradictions et réconciliation quantitative (`B-13`), périmètre de lot (`B-14`), risques et **Pré-Audit Flash d'Exécutabilité** (`B-15`), avec preuve d'épuisement `V14` avant toute déclaration d'absence.
 
 ### Phase 3 — Conception et synthèse structurelle (B-20 → B-25 → B-21 → B-22 → B-23 → B-24)
-Synthèse indissociable sur fond nettoyé (`B-20`), stabilité globale et contreventement (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`).
+**Plan de principe** sur fond nettoyé (`B-20`, livrable = le dessin référencé, après `B-32`, avant tout calcul), stabilité globale (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`). Une liste sans plan est refusée.
 
 ### Phase 4 — Calculs d'exécution (B-40 à B-50)
 Notes scriptées, hypothèses actives citées, prescriptions `ENC` et `PA-xx` reportées, flèches sous maçonnerie vérifiées, assemblages renvoyés à `B-50`.
@@ -1610,7 +1623,7 @@ Vérification croisée globale (`B-33`), auto-contrôle de synthèse (`B-70`), i
 | 0 | Qualification `CFG-01`, gabarit `CFG-02`, MPD ligne à ligne, table `NIV-07` |
 | 1 | Résidus de calage, périmètre de nettoyage, différentiel `EXISTANT / DÉMOLITION / PROJET` |
 | 2 | Classement gravité × nature des contradictions, risques résiduels acceptés |
-| 3 | Système de contreventement, hypothèses `H-xx` et leur délai, Points d'Arrêt `PA-xx` |
+| 3 | **Le plan de principe B-20** (ouvrages implantés, repères, « l'IA a-t-elle compris le bâtiment ? ») ; puis contreventement, `H-xx`, `PA-xx` |
 | 4 | Sections et ferraillages retenus, hypothèses actives citées |
 | 5 | Indice des plans, carnet de réservations, titre véridique, `0` collision |
 | 6 | Verdict global, supersession, points ouverts à la clôture |
@@ -1823,13 +1836,9 @@ v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils a
 
 **Compatibilité** : les numéros de briques existants sont conservés (aucun renumérotage), afin de ne casser ni les archives de projet antérieures ni les références documentaires en cours.
 
-### 3.6 Version v3.0.1 — addendum de garde-fous (lecture, demande, présentation)
+### 3.6 Version v3.0.2 — plan de principe B-20 (C-27)
 
-**Nature** : complément mineur. Aucun verrou supprimé. Aucune brique supprimée.
-
-**Contenu** : addendum `A1` (lecture adressée du DCE, carnet des faits, sismique zone 1 sans objet, stabilité provisoire existant = MOE conception, présentation des plans et notes). Arborescence : **53 fichiers** (52 Markdown + CSV). Le document compilé et le zip v3.0 restent l'archive ; la référence opérationnelle est **v3.0.1**.
-
-**Diffusion** : pour une nouvelle affaire, transmettre le **compilé v3.0.1** (fichier 07 v3.0.1). Le zip 08 v3.0.1 est l'arborescence de référence. En cas d'écart, l'arborescence fait foi.
+Le livrable de conception visé par l'humain est le **plan de principe** (`B-20`), après nettoyage `B-32` et avant les calculs. Pas de nouvelle brique. `B-60` reprend les mêmes repères. Sans BET conception, ce plan est obligatoire. Diffusion : compilé **07 v3.0.2**.
 
 **[Fin de 10_ANNEXES/C_Journal_Revisions.md]**
 
@@ -4033,23 +4042,23 @@ B-20 — CONCEPTION STRUCTURE GO
 | Champ | Valeur |
 | --- | --- |
 | Version | 3.0 |
-| Dernière révision | v3.0 — refonte majeure (voir Journal des modifications, entrée v3.0) ; fond de la fiche conservé et enrichi |
+| Dernière révision | v3.0.2 — C-27 : le plan de principe référencé est le livrable principal (après B-32, avant les calculs) |
 | Phase | 3 — Conception et synthèse structurelle |
 | Brique précédente | B-15 (Synthèse des risques) — ou la première brique exécutable selon le PTD |
 | Brique suivante | B-21 (DDC préliminaire), B-22 (Note d'hypothèses), B-23 (Exploitation du diagnostic), B-24 (Existant non sondé) |
 | Modes d'appel | INTERNE-GO (aucun BET de conception, diagnostic + plans de principe seulement — cas type Flora) · PARTIEL-DÉCLARÉ (BET partiel : on complète ce qui manque, on cite ce qui existe) · SANS OBJET (BET complet fourni : la conception n'est pas à nous) |
-| Entrées lues | MPD (AC-03, DOC-03), B-11, B-12, B-23, B-24 (si exécutée), DOC-02 (plans archi), énoncé de mission (B-00) |
-| Sortie unique | Dossier de conception : (1) note de prédimensionnement, (2) plans de principe graphiques (DXF + PDF + PNG), (3) liste des points à faire valider par un tiers |
+| Entrées lues | **Vue nettoyée B-32 (bloquante)** , MPD (AC-03, DOC-03), B-11, B-12, B-15, B-23, B-24 (si exécutée), DOC-02, énoncé de mission (B-00), carnet des faits (B-00/B-10) |
+| Sortie unique | **(1) plans de principe graphiques** (DXF + PDF + PNG, fond B-32, repères uniques) · (2) légende + une page d'hypothèses et de points à viser · (3) **pas** de note de 3–10 pages à la place du plan |
 | Critère d'acceptation | Voir section 2 (dernier bloc du prompt) |
 
 Quand appeler cette brique : au début de la phase 2, quand AC-03 (BET structure de conception) est À PRODUIRE PAR GO ou PARTIELLE. En mode SANS OBJET, B-20 est appelée uniquement pour produire une ligne de justification.
 Ce que vous fournissez à l'IA : la MPD validée (statut de AC-03 et DOC-03), les audits B-11 et B-12, les sorties de B-23 et B-24 (si disponibles), les plans architecte (DOC-02), l'énoncé de mission. Vous copiez uniquement le bloc de code de la section 2, en ayant remplacé {{ID-01}}, {{ID-02}} et {{mode}}.
 Ce que vous validez à la sortie :
-   * la trame structurelle et sa justification par la géométrie archi et les contraintes existantes ;
-   * les sections de principe et leur méthode de prédimensionnement (jamais « par expérience ») ;
-   * les renforts de l'existant et le désordre qu'ils corrigent (renvoi B-11) ;
-   * les plans de principe (filigrane « PRINCIPE — NE PAS EXÉCUTER ») ;
-   * la liste des points à faire valider par un tiers.
+   * **le plan** : tous les ouvrages neufs et renforts **implantés** sur le fond B-32, chacun avec un **repère unique** (P1, Pt1, SI1, SF1, Lt1, Dg1…) et une légende sur la feuille ;
+   * **ce qui n'est pas sur le plan n'existe pas** — une liste sans dessin ne suffit pas ;
+   * filigrane « PRINCIPE — NE PAS EXÉCUTER » ;
+   * aucune cote de section qui ait l'air d'un EXE (mini / enveloppe / « à caler », ou symbole sans cote) ;
+   * les points à viser (une page).
 Ce que B-20 produit — le périmètre exact :
 
 | Élément | Nature | Renvoi |
@@ -4092,9 +4101,9 @@ MÉTHODE
 1. Établis la trame structurelle : axes, entraxes, positions des porteurs neufs et des appuis sur l'existant. Justifie chaque position par la géométrie archi et les contraintes existantes (murs porteurs, baies, refends, poutres existantes).
 2. Prédimensionne les sections de principe par ratios et formules approchées, en explicitant la méthode utilisée (ex. : poteau BA prédimensionné à A_c ≥ N_Ed/(0,3·f_cd) ; poutre métallique prédimensionnée à h ≈ L/20 en plancher, L/15 en toiture ; semelle à B ≥ N/q_adm). La méthode est TOUJOURS citée ; tu n'inventes aucune section « au feeling ».
 3. Identifie les renforts de l'existant nécessaires : moisage, sommier de répartition, entretoise anti-déversement, contrefiche, etc. Justifie chaque choix par le désordre qu'il corrige (renvoi au diagnostic B-11).
-4. Produis les plans de principe : plan de trame, plan des porteurs neufs et des renforts, coupes schématiques. Fond archi conservé (pas de redessin de l'empreinte). Ajouts en couleur avec légende. Filigrane « PRINCIPE — NE PAS EXÉCUTER » systématique.
-5. Rédige la note de prédimensionnement : hypothèses, formules, sections retenues, ratios utilisés. Chaque section retenue est justifiée par le calcul approché ou par le ratio. Aucune section « par expérience ».
-6. Liste les points à faire valider par un tiers : sections à confirmer par calcul d'exécution, hypothèses à viser par BET ou bureau de contrôle, choix constructifs à confirmer par la MOE.
+4. Produis **d'abord** les plans de principe (livrable principal, voir complément §6) : fond **B-32** extrait (existant gris, pas dump, pas redessin d'empreinte). Tous les ouvrages neufs et renforts **implantés**, chacun un **repère unique** (P, Pt, SI, SF, Lt, Dg… + numéro) et une **légende sur la feuille**. Filigrane « PRINCIPE — NE PAS EXÉCUTER » systématique. Ce qui n'est pas sur le plan n'existe pas.
+5. Les sections, si figurées, sont **mini / enveloppe / à caler** — jamais une cote qui a l'air définitive. Si tu cites une méthode de prédimensionnement, elle est écrite ; tu n'inventes aucune section « au feeling » présentée comme EXE.
+6. Une **page** suffit à côté du plan : hypothèses, points à viser, ce qui est hors mission. Pas de note de 3–10 pages à la place du dessin.
 
 
 INTERDICTIONS
@@ -4109,35 +4118,33 @@ INTERDICTIONS
 
 
 SORTIE
-Pièce 1 — Note de prédimensionnement (document texte, 3 à 10 pages selon complexité) :
-Section 1 : Hypothèses de conception (renvoi B-22).
-Section 2 : Trame structurelle retenue et justification.
-Section 3 : Sections de principe des porteurs neufs (tableau : élément, section retenue, méthode de prédimensionnement, formule, valeur de calcul approchée, ratio de contrôle).
-Section 4 : Renforts de l'existant (tableau : élément existant, désordre corrigé, renfort retenu, méthode de prédimensionnement).
-Section 5 : Points à faire valider par un tiers (tableau : point, brique CARNAC qui validera, tiers viseur).
-
-
-Pièce 2 — Plans de principe (DXF + PDF + PNG) :
-- Plan de trame ;
-- Plan des porteurs neufs et renforts ;
-- Coupes schématiques (2 minimum) ;
+Pièce 1 — Plans de principe (DXF + PDF + PNG) — LIVRABLE PRINCIPAL :
+- Un plan par niveau concerné (RDC, PH, R+1…) sur fond B-32 extrait ;
+- Tous les ouvrages neufs et renforts implantés, repère unique collé à l'ouvrage, légende sur la feuille ;
+- Coupes schématiques seulement si elles aident à lire le plan (pas de coupe orpheline sans implantation) ;
 Tous filigranés « PRINCIPE — NE PAS EXÉCUTER — Indice P ».
+Ce qui n'est pas sur le plan n'existe pas.
 
 
-Pièce 3 — Liste des points à lever
-Points de conception non tranchés à la sortie de B-20 : objet, raison, brique qui tranchera (B-40 à B-50), échéance.
+Pièce 2 — Une page (pas davantage, sauf L-XL) :
+Hypothèses de conception (renvoi B-22) · points à viser · hors mission.
+Pas de tableau de sections qui se prend pour un EXE. Si une enveloppe est citée : méthode en une ligne, mention MINI / ENVELOPPE / À CALER.
+
+
+Pièce 3 — Points à lever (peut tenir dans la page 2)
+Objet, raison, brique qui tranchera (B-40 à B-50).
 
 
 CRITÈRE D'ACCEPTATION
 Le dossier est accepté si :
-- chaque position de porteur est justifiée par la géométrie archi, le diagnostic ou une contrainte citée ;
-- chaque section retenue est justifiée par une méthode de prédimensionnement citée et un calcul approché chiffré ;
-- chaque renfort est rattaché au désordre qu'il corrige (référence B-11) ;
+- le **plan** est le livrable qu'on juge : tous les ouvrages du programme prescrit sont **sur le plan**, à leur place, avec un repère unique et une légende ;
+- ce qui n'est pas sur le plan n'existe pas ;
+- le fond est la vue **B-32** extraite (après nettoyage) — jamais avant B-32, jamais dump, jamais empreinte inventée ;
 - chaque plan porte le filigrane « PRINCIPE — NE PAS EXÉCUTER » et un indice P ;
-- aucun calcul d'exécution n'a été produit ;
-- aucune protection au feu n'a été dimensionnée ;
-- la liste des points à faire valider est complète (sections, hypothèses, choix constructifs).
-Si un seul de ces sept points n'est pas satisfait, tu signales l'écart et tu t'arrêtes.
+- aucune cote de section n'a l'air d'un EXE (mini / enveloppe / à caler, ou symbole seul) ;
+- aucun calcul d'exécution n'a été produit ; aucune protection au feu n'a été dimensionnée ;
+- les points à viser tiennent sur une page.
+Si un seul de ces points n'est pas satisfait, tu signales l'écart et tu t'arrêtes.
 Rappel V7 — zéro placeholder résiduel : avant d'envoyer ce prompt, remplacez {{ID-01}}, {{ID-02}} et {{mode}} (par INTERNE-GO, PARTIEL-DÉCLARÉ ou SANS OBJET). Aucun {{...}} ne doit subsister.
 ________________
 
@@ -4270,6 +4277,38 @@ ________________
 **Transcription vectorielle intégrale.** En `CFG-2` et `CFG-3`, les porteurs conçus par le BET MOE sont transcrits vectoriellement à 100 % sur le fond structurel pur, avec leurs interfaces et les ouvrages manquants (reprises, transferts, fondations non dessinées). En `CFG-1`, B-20 conçoit l'ensemble de la structure en `INTERNE-GO` et porte l'alerte contractuelle d'extension de mission et d'assurance.
 
 **Continuité descendante et stabilité globale.** Toute trame produite est justifiée par une descente de charges continue `Toiture → Fondations` (`V15`), un système de contreventement identifié (`STR-01`) et, en `L-XL`, un découpage `JD` explicite. L'absence de fondations MOE n'autorise ni l'impasse ni la reproduction d'un modèle type : les fondations sont conçues ou transcrites, jamais omises.
+
+---
+
+### 6. COMPLÉMENT v3.0.2 — LE PLAN DE PRINCIPE EST LE LIVRABLE (C-27)
+
+**Quand.** Après le nettoyage (`B-32` / `B-31`) et l'audit (`B-10` à `B-15`). **Avant** la descente de charges fine (`B-21`) et **avant** tout calcul d'exécution (`B-40` à `B-50`). Jamais avant `B-32`.
+
+**Quoi.** Le livrable que l'humain vise, c'est **le plan**, pas une liste. Une liste sans dessin est trop abstraite : elle est **refusée** comme seule sortie.
+
+**Repères (légende obligatoire sur la feuille).** Un code + un numéro, unique, collé à l'ouvrage :
+
+| Préfixe | Ouvrage |
+| --- | --- |
+| `P` | Poteau |
+| `Pt` | Poutre |
+| `SI` | Semelle isolée |
+| `SF` | Semelle filante |
+| `Lt` | Linteau |
+| `Dg` | Dallage |
+| `Pl` | Plancher (si distinct du dallage) |
+
+D'autres préfixes sont licites s'ils sont **uniques** et **légendés** (R renfort, PN panne, CF contrefiche…). `P1` ≠ `P`. Deux ouvrages, deux numéros.
+
+**Règle d'exhaustivité.** Ce qui n'est pas sur le plan n'existe pas. Un linteau oublié, c'est un plan faux : on relivre le plan. `B-60` **reprend les mêmes repères** et substitue l'enveloppe par la section calculée (`P2` reste `P2`).
+
+**Cotes.** Mini, enveloppe ou « à caler » — écrites comme telles. Interdit : une section qui a l'air définitive. Interdit : le « pif » **non étiqueté**.
+
+**Sans étude de conception** (`INTERNE-GO`) : le plan de principe **est** la première proposition de structure. Il est **obligatoire**. C'est le test « l'IA a-t-elle compris le bâtiment ? »
+
+**Avec BET conception complet** (`SANS OBJET`) : on ne redessine pas un autre projet. Calque de contrôle facultatif : avons-nous tout transcrit ?
+
+`B-60` ne produit **pas** ces planches. `B-60` = EXE **après** calculs.
 **[Fin de 04_PHASE_2_CONCEPTION/B-20_Conception_GO.md]**
 
 ---
@@ -10792,6 +10831,14 @@ Cette brique est en **régime outillé** : elle produit un script (OUT-02), l'ex
 **Vue d'ensemble de lecture.** Après le dernier type, une pièce facultative peut superposer tous les ouvrages neufs. Filigrane `LECTURE — NE PAS EXÉCUTER`. Ce n'est **pas** un plan EXE fusionné (la règle un type = un plan EXE reste).
 
 **Titre trois lignes.** Qui / quoi / indice + matériau. Cartouche visuellement court. Couleurs : un type = une couleur. Coupe hachurée, barres dessinées.
+
+---
+
+### 7. COMPLÉMENT v3.0.2 — SUBSTITUTION DES REPÈRES B-20 (C-27)
+
+`B-60` **n'est pas** le plan de principe. Le principe est `B-20`, après `B-32`, avant les calculs.
+
+`B-60` (EXE) **reprend les mêmes repères** (`P2` reste `P2`, `Lt1` reste `Lt1`) et substitue l'enveloppe par la section calculée. Interdit d'inventer un nouveau système de repères en EXE. Interdit d'appeler `B-60` pour produire un principe.
 **[Fin de 07_PHASE_5_LIVRABLES/B-60_Plans_Execution.md]**
 
 ---
@@ -13225,7 +13272,17 @@ ________________
 **[Début du fichier : 11_HISTORIQUE/Journal_des_modifications.md]**
 
 # Journal des modifications — CARNAC v3.0
-> Version du document : 3.0.1 (carnet CARNAC v3.0 + addendum A1) — ce journal fait foi de la version en vigueur.
+> Version du document : 3.0.2 (carnet CARNAC v3.0 + addendum A1 + plan de principe B-20) — ce journal fait foi de la version en vigueur.
+
+## Entrée v3.0.2 — PLAN DE PRINCIPE B-20 (22/10/2026)
+
+**Nature** : complément. Aucune brique ajoutée. Aucun verrou supprimé.
+
+| N° | Nature | Objet | Fichiers |
+| --- | --- | --- | --- |
+| C-27 | Enrichissement | Le livrable de B-20 que l'humain vise est le **plan de principe** (après B-32, avant les calculs), pas une liste. Repères P/Pt/SI/SF/Lt/Dg. B-60 reprend les mêmes repères. Sans étude de conception : plan obligatoire. | B-20, B-60, A1 §8, MASTER §1.9, D_Mode_Emploi |
+
+Motif : une liste est trop abstraite ; sans dessin avant calcul, l'humain ne peut pas voir si l'IA a compris le bâtiment.
 
 ## Entrée v3.0.1 — GARDE-FOUS LECTURE / DEMANDE / PRÉSENTATION (21/10/2026)
 
@@ -13238,9 +13295,7 @@ ________________
 | C-24 | Correction | B-25 : zone 1 = SO sismique ; stab. provisoire existant = MOE conception | B-25 |
 | C-25 | Enrichissement | B-60 implantation obligatoire, fond simplifié, codes hors dessin ; A_Conventions ENC court | B-60, A_Conventions, B-64 |
 
-| C-26 | Publication | Republication v3.0.1 : compilé 07, zip 08 (53 fichiers), packs SOCLE + A1. v3.0 conservée en archive Drive. | compilé, zip, packs |
-
-Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles). Republication GO 21/10/2026.
+Motif : frictions CROISSY-FLORA (demandes hors programme, oubli de faits présents, DCE adressé à l'entreprise, plans illisibles).
 
 ## Entrée v3.0 — REFONTE MAJEURE (20/10/2026)
 

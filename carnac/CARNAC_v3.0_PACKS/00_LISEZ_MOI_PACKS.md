@@ -10,14 +10,14 @@
 
 | Ordre | Fichier | Contenu | Poids |
 |---|---|---|---|
-| **1** | `00_SOCLE.md` | Document maître + annexes A, **A1 v3.0.1**, D, O + dictionnaire des 106 variables | **≈ 33 300 tokens** |
+| **1** | `00_SOCLE.md` | Document maître (protocole, 15 verrous, 6 modes, `CFG-1..4`, gabarits, ordonnancement) + annexes A, D, O + dictionnaire des 106 variables | **≈ 29 700 tokens** |
 | 2 | `01_PHASE_0.md` | `B-00` à `B-04` — inventaire, `CFG-01`, MPD, `CFG-02`, FDC, `NIV-07`, RDR, PTD | ≈ 23 200 tokens |
 | 3 | `02_PHASES_1-2.md` | `B-30`, `B-32`, `B-31` (calage, nettoyage, preuve) puis `B-10` à `B-15` (audits, contradictions, risques) | ≈ 54 200 tokens |
 | 4 | `03_PHASE_3.md` | `B-20`, `B-25`, `B-21`, `B-22`, `B-23`, `B-24` — synthèse, stabilité globale, DDC, hypothèses | ≈ 35 400 tokens |
 | 5 | `04_PHASE_4.md` | `B-40` à `B-50` — les onze notes de calcul d'exécution | ≈ 97 100 tokens |
 | 6 | `05_PHASES_5-6.md` | `B-34`, `B-60`, `B-62`, `B-64`, `B-33`, `B-70` à `B-72` + annexe transverse `T-01` à `T-04` | ≈ 75 300 tokens |
 
-**Total des six packs** : ≈ 320 000 tokens — mais vous n'en collez jamais plus de deux à la fois (socle + une phase), soit **de 56 000 à 130 000 tokens**.
+**Total des six packs** : ≈ 315 000 tokens — mais vous n'en collez jamais plus de deux à la fois (socle + une phase), soit **de 53 000 à 127 000 tokens**.
 
 ---
 
@@ -56,9 +56,9 @@ Ces trois fichiers restent disponibles dans l'arborescence (`08 — .zip`) et da
 Les fichiers contenus dans les packs sont reproduits **à l'octet près** depuis l'arborescence `CARNAC_v3.0`. Contrôle exécuté :
 
 ```text
-Fichiers vérifiés : 49 · identiques : 49 · écarts : 0
-Couverture : 49/52 fichiers Markdown de l'arborescence
-Cohérence manifeste : 49 fichiers déclarés / 49 retrouvés
+Fichiers vérifiés : 48 · identiques : 48 · écarts : 0
+Couverture : 48/51 fichiers Markdown de l'arborescence
+Cohérence manifeste : 48 fichiers déclarés / 48 retrouvés
 ```
 
 Le détail (`octets` + `SHA-256` par fichier) est dans **`PACKS_MANIFEST.json`**. Si vous modifiez une fiche source, régénérez les packs (`carnac/_tools/build_packs.py`) puis revérifiez (`carnac/_tools/verify_packs.py`) : ne corrigez jamais un pack à la main.

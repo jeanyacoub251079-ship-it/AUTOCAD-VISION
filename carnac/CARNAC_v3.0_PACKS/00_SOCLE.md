@@ -4,7 +4,7 @@
 
 **Quand coller ce pack** : À l'ouverture de CHAQUE nouvelle discussion, avant toute pièce de projet.
 
-**Ce qu'il contient** : Document maître (protocole §0, 15 verrous, 6 modes, `CFG-1..4`, gabarits, ordonnancement) · annexe A (livrables, pureté structurelle) · addendum A1 v3.0.1 (lecture adressée, carnet des faits, zone 1, stab. prov., présentation) · annexe D (mode d'emploi) · annexe O (outillage et protocole CAO) · dictionnaire des 106 variables.
+**Ce qu'il contient** : Document maître (protocole §0, 15 verrous, 6 modes, `CFG-1..4`, gabarits, ordonnancement) · annexe A (livrables, pureté structurelle) · annexe D (mode d'emploi) · annexe O (outillage et protocole CAO) · dictionnaire des 106 variables.
 
 **Note d'usage** : Ce pack suffit à faire comprendre le protocole à une IA. Il ne permet pas encore de produire une brique : il faut y ajouter le pack de la phase concernée.
 
@@ -294,7 +294,6 @@ CARNAC_v3.0/
 │
 ├── 10_ANNEXES/
 │   ├── A_Conventions_Livrables.md
-│   ├── A1_Addendum_v3.0.1.md     ← Nouveau en v3.0.1
 │   ├── C_Journal_Revisions.md
 │   ├── D_Mode_Emploi.md
 │   └── O_Outillage.md
@@ -306,7 +305,7 @@ CARNAC_v3.0/
     └── Exemples_Phase_0.md         ← Exemples commentés (conservés comme archive de référence)
 ```
 
-Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les **53 fichiers** de l'arborescence (52 Markdown + CSV dictionnaire) sont produits et contrôlés (**v3.0.1**). L'addendum `A1` est le 52ᵉ Markdown. En cas d'écart, l'arborescence fait foi.
+Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les 52 fichiers de l'arborescence sont produits et contrôlés (v3.0).
 
 ---
 
@@ -385,6 +384,9 @@ Plans : fond blanc, existant gris léger **extrait** (pas dump `B-32`), ouvrages
 
 ### 1.8 Sismique zone 1 · stabilité provisoire
 Zone 1 : **aucune** vérification sismique (`B-25` SANS OBJET sur ce volet). Stabilité provisoire d'un existant : **MOE conception**, pas BET EXE.
+
+### 1.9 Plan de principe `B-20` (v3.0.2)
+Après le nettoyage `B-32`, **avant** les calculs : le livrable de conception que l'humain vise est **le plan** (repères `P` / `Pt` / `SI` / `SF` / `Lt` / `Dg`…), pas une liste. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. `B-60` (EXE) reprend les mêmes repères. Sans étude de conception, ce plan est obligatoire.
 
 **[Fin de 00_MASTER.md]**
 
@@ -978,7 +980,8 @@ ________________
 | `B-10` | Tableau 5 « prestations lues, non adressées » |
 | `T-04` | Test des trois conditions avant toute demande |
 | `B-25` | Zone 1 = SO sismique · stab. prov. = MOE conception |
-| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin |
+| `B-20` | **v3.0.2** : plan de principe = livrable principal (repères, après B-32, avant calculs) |
+| `B-60` | Implantation obligatoire · fond simplifié · codes hors dessin · **reprend les repères B-20** |
 | `B-64` | Ordre §0 / charges / vérif |
 | `A_Conventions` | `LIV-06` / `LIV-07` · ENC court |
 
@@ -991,6 +994,16 @@ ________________
 - `V14` épuisement, `V15` continuité mécanique.
 - `D-26` (aucune sismique), `D-27` (stab. prov. MOE), `D-28` (aucun joint de dilatation) — déjà décidés ; le présent texte les **généralise**.
 - Zéro placeholder, zéro devis, zéro protection incendie dimensionnée.
+
+________________
+
+## 8. PLAN DE PRINCIPE `B-20` (v3.0.2 — C-27)
+
+Après `B-32`, avant `B-40`. Le **plan** est le livrable de conception que l'humain vise. Pas une liste seule.
+
+Fond `B-32` extrait. Ouvrages implantés. Repères uniques (`P1`, `Pt1`, `SI1`, `SF1`, `Lt1`, `Dg1`…) + légende sur la feuille. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. Ce qui n'est pas sur le plan n'existe pas. Sections : mini / enveloppe / à caler, ou symbole sans cote. `B-60` reprend les **mêmes** repères après calcul.
+
+Sans BET conception : plan **obligatoire** (première proposition de structure). `B-60` n'est pas cette planche.
 
 **[Fin de 10_ANNEXES/A1_Addendum_v3.0.1.md]**
 
@@ -1360,7 +1373,7 @@ Restent **incompressibles à toute échelle** : le protocole de session (§0, po
 Audits sur fond calé (`B-10`, `B-11`, `B-12`), contradictions et réconciliation quantitative (`B-13`), périmètre de lot (`B-14`), risques et **Pré-Audit Flash d'Exécutabilité** (`B-15`), avec preuve d'épuisement `V14` avant toute déclaration d'absence.
 
 ### Phase 3 — Conception et synthèse structurelle (B-20 → B-25 → B-21 → B-22 → B-23 → B-24)
-Synthèse indissociable sur fond nettoyé (`B-20`), stabilité globale et contreventement (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`).
+**Plan de principe** sur fond nettoyé (`B-20`, livrable = le dessin référencé, après `B-32`, avant tout calcul), stabilité globale (`B-25`), descente de charges (`B-21`), hypothèses `H-xx` (`B-22`), exploitation du diagnostic (`B-23`), existant non sondé et `PA-xx` (`B-24`). Une liste sans plan est refusée.
 
 ### Phase 4 — Calculs d'exécution (B-40 à B-50)
 Notes scriptées, hypothèses actives citées, prescriptions `ENC` et `PA-xx` reportées, flèches sous maçonnerie vérifiées, assemblages renvoyés à `B-50`.
@@ -1377,7 +1390,7 @@ Vérification croisée globale (`B-33`), auto-contrôle de synthèse (`B-70`), i
 | 0 | Qualification `CFG-01`, gabarit `CFG-02`, MPD ligne à ligne, table `NIV-07` |
 | 1 | Résidus de calage, périmètre de nettoyage, différentiel `EXISTANT / DÉMOLITION / PROJET` |
 | 2 | Classement gravité × nature des contradictions, risques résiduels acceptés |
-| 3 | Système de contreventement, hypothèses `H-xx` et leur délai, Points d'Arrêt `PA-xx` |
+| 3 | **Le plan de principe B-20** (ouvrages implantés, repères, « l'IA a-t-elle compris le bâtiment ? ») ; puis contreventement, `H-xx`, `PA-xx` |
 | 4 | Sections et ferraillages retenus, hypothèses actives citées |
 | 5 | Indice des plans, carnet de réservations, titre véridique, `0` collision |
 | 6 | Verdict global, supersession, points ouverts à la clôture |

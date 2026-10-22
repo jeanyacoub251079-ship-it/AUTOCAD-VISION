@@ -338,3 +338,11 @@ Cette brique est en **régime outillé** : elle produit un script (OUT-02), l'ex
 **Vue d'ensemble de lecture.** Après le dernier type, une pièce facultative peut superposer tous les ouvrages neufs. Filigrane `LECTURE — NE PAS EXÉCUTER`. Ce n'est **pas** un plan EXE fusionné (la règle un type = un plan EXE reste).
 
 **Titre trois lignes.** Qui / quoi / indice + matériau. Cartouche visuellement court. Couleurs : un type = une couleur. Coupe hachurée, barres dessinées.
+
+---
+
+### 7. COMPLÉMENT v3.0.2 — SUBSTITUTION DES REPÈRES B-20 (C-27)
+
+`B-60` **n'est pas** le plan de principe. Le principe est `B-20`, après `B-32`, avant les calculs.
+
+`B-60` (EXE) **reprend les mêmes repères** (`P2` reste `P2`, `Lt1` reste `Lt1`) et substitue l'enveloppe par la section calculée. Interdit d'inventer un nouveau système de repères en EXE. Interdit d'appeler `B-60` pour produire un principe.

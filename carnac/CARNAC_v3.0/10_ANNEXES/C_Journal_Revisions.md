@@ -200,10 +200,6 @@ v2.0 : refonte (verrou V13, annexe O outillage, dictionnaire intégré, seuils a
 
 **Compatibilité** : les numéros de briques existants sont conservés (aucun renumérotage), afin de ne casser ni les archives de projet antérieures ni les références documentaires en cours.
 
-### 3.6 Version v3.0.1 — addendum de garde-fous (lecture, demande, présentation)
+### 3.6 Version v3.0.2 — plan de principe B-20 (C-27)
 
-**Nature** : complément mineur. Aucun verrou supprimé. Aucune brique supprimée.
-
-**Contenu** : addendum `A1` (lecture adressée du DCE, carnet des faits, sismique zone 1 sans objet, stabilité provisoire existant = MOE conception, présentation des plans et notes). Arborescence : **53 fichiers** (52 Markdown + CSV). Le document compilé et le zip v3.0 restent l'archive ; la référence opérationnelle est **v3.0.1**.
-
-**Diffusion** : pour une nouvelle affaire, transmettre le **compilé v3.0.1** (fichier 07 v3.0.1). Le zip 08 v3.0.1 est l'arborescence de référence. En cas d'écart, l'arborescence fait foi.
+Le livrable de conception visé par l'humain est le **plan de principe** (`B-20`), après nettoyage `B-32` et avant les calculs. Pas de nouvelle brique. `B-60` reprend les mêmes repères. Sans BET conception, ce plan est obligatoire. Diffusion : compilé **07 v3.0.2**.

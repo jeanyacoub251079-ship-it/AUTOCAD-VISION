@@ -277,7 +277,6 @@ CARNAC_v3.0/
 │
 ├── 10_ANNEXES/
 │   ├── A_Conventions_Livrables.md
-│   ├── A1_Addendum_v3.0.1.md     ← Nouveau en v3.0.1
 │   ├── C_Journal_Revisions.md
 │   ├── D_Mode_Emploi.md
 │   └── O_Outillage.md
@@ -289,7 +288,7 @@ CARNAC_v3.0/
     └── Exemples_Phase_0.md         ← Exemples commentés (conservés comme archive de référence)
 ```
 
-Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les **53 fichiers** de l'arborescence (52 Markdown + CSV dictionnaire) sont produits et contrôlés (**v3.0.1**). L'addendum `A1` est le 52ᵉ Markdown. En cas d'écart, l'arborescence fait foi.
+Statut : 39 fiches de brique opérationnelles, 4 prompts transverse, 2 numéros vacants (B-61, B-63, fusionnés dans B-60). Les 52 fichiers de l'arborescence sont produits et contrôlés (v3.0).
 
 ---
 
@@ -368,3 +367,6 @@ Plans : fond blanc, existant gris léger **extrait** (pas dump `B-32`), ouvrages
 
 ### 1.8 Sismique zone 1 · stabilité provisoire
 Zone 1 : **aucune** vérification sismique (`B-25` SANS OBJET sur ce volet). Stabilité provisoire d'un existant : **MOE conception**, pas BET EXE.
+
+### 1.9 Plan de principe `B-20` (v3.0.2)
+Après le nettoyage `B-32`, **avant** les calculs : le livrable de conception que l'humain vise est **le plan** (repères `P` / `Pt` / `SI` / `SF` / `Lt` / `Dg`…), pas une liste. Filigrane `PRINCIPE — NE PAS EXÉCUTER`. `B-60` (EXE) reprend les mêmes repères. Sans étude de conception, ce plan est obligatoire.
