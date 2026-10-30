@@ -1,0 +1,11 @@
+# Dépendances obligatoires
+ezdxf>=1.1.0
+shapely>=2.0.0
+loguru>=0.7.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Dépendances optionnelles (recommandées pour le mode Vision IA et PDF)
+# pip install torch segmentation-models-pytorch
+# pip install onnxruntime
+# pip install pymupdf opencv-python

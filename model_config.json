@@ -1,0 +1,11 @@
+{
+  "encoder_name": "resnet34",
+  "input_size": [512, 512],
+  "in_channels": 3,
+  "classes": 3,
+  "class_names": ["background", "wall", "column"],
+  "normalization": {
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225]
+  }
+}
