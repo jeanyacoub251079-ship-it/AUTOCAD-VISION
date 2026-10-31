@@ -35,3 +35,4 @@
 | 26 | B-44 Charpente bois | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
 | 27 | B-45 Structure métallique | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
 | 28 | B-46 Maçonnerie | P1 | 2026-10-31 | PARAMÉTRIQUE (Bloc A) + SANS OBJET (Bloc B) | — | Livrable (vérification suspendue) |
+| 29 | B-47 Escaliers | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
