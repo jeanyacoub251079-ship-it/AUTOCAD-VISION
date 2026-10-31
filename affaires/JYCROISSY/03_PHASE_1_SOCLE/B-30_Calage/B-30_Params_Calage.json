@@ -1,0 +1,442 @@
+{
+  "brique": "B-30",
+  "phase": "1 — Socle géométrique",
+  "date": "2026-10-30",
+  "mode": "COMPLET",
+  "source": {
+    "fichier": "Copy of 208_FLORA_Plans_DCE_IndC.dxf",
+    "taille_bytes": 4399016,
+    "sha256": "45f41e3113a909cef201ec4bb466d95cd82307ed6cd3fa9e016b69e53b39dcf1",
+    "acad_version": "AC1032",
+    "acad_release": "R2018",
+    "insunits": 5,
+    "unite_declaree": "cm",
+    "extmin_cm": [
+      240.82,
+      -1930.6
+    ],
+    "extmax_cm": [
+      18395.3,
+      8321.26
+    ],
+    "entites_modelspace": 1582,
+    "calques_utilises": 22,
+    "blocs_nommés": 46
+  },
+  "rse": {
+    "nom": "RSU — Repère Structurel Unique",
+    "origine_src_cm": [
+      266.0012041860209,
+      147.4685388051148
+    ],
+    "unite": "m",
+    "rotation_deg": 0.0
+  },
+  "transformation": {
+    "scale": 0.01,
+    "scale_justification": "1 cm source = 0.01 m RSU (unités SI)",
+    "rotation_deg": 0.0,
+    "translation_src_cm": [
+      -266.0012041860209,
+      -147.4685388051148
+    ],
+    "translation_rsu_m": [
+      -2.660012041860209,
+      -1.4746853880511481
+    ]
+  },
+  "points_calage": [
+    {
+      "id": "C1",
+      "role": "coin sud-ouest du site (fond de calage)",
+      "src_cm": [
+        266.0012041860209,
+        147.4685388051148
+      ],
+      "rsu_m": [
+        0.0,
+        0.0
+      ],
+      "rsu_check_m": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "C2",
+      "role": "coin sud-est du site",
+      "src_cm": [
+        18394.73746472658,
+        147.4685388051148
+      ],
+      "rsu_m": [
+        181.2874,
+        0.0
+      ],
+      "rsu_check_m": [
+        181.2874,
+        0.0
+      ]
+    },
+    {
+      "id": "C3",
+      "role": "coin nord-ouest du site",
+      "src_cm": [
+        266.0012041860209,
+        7401.513779417335
+      ],
+      "rsu_m": [
+        0.0,
+        72.5405
+      ],
+      "rsu_check_m": [
+        0.0,
+        72.5405
+      ]
+    }
+  ],
+  "points_temoins": [
+    {
+      "src_cm": [
+        266.0012,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        -0.0,
+        35.0
+      ],
+      "rsu_m": [
+        -0.0,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        266.0012,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        -0.0,
+        37.5405
+      ],
+      "rsu_m": [
+        -0.0,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        5266.0012,
+        147.4685
+      ],
+      "rsu_pred_m": [
+        50.0,
+        -0.0
+      ],
+      "rsu_m": [
+        50.0,
+        -0.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        5266.0012,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        50.0,
+        35.0
+      ],
+      "rsu_m": [
+        50.0,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        5266.0012,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        50.0,
+        37.5405
+      ],
+      "rsu_m": [
+        50.0,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        5266.0012,
+        7401.5138
+      ],
+      "rsu_pred_m": [
+        50.0,
+        72.5405
+      ],
+      "rsu_m": [
+        50.0,
+        72.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        6830.3693,
+        147.4685
+      ],
+      "rsu_pred_m": [
+        65.6437,
+        -0.0
+      ],
+      "rsu_m": [
+        65.6437,
+        -0.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        6830.3693,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        65.6437,
+        35.0
+      ],
+      "rsu_m": [
+        65.6437,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        6830.3693,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        65.6437,
+        37.5405
+      ],
+      "rsu_m": [
+        65.6437,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        6830.3693,
+        7401.5138
+      ],
+      "rsu_pred_m": [
+        65.6437,
+        72.5405
+      ],
+      "rsu_m": [
+        65.6437,
+        72.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        11830.3693,
+        147.4685
+      ],
+      "rsu_pred_m": [
+        115.6437,
+        -0.0
+      ],
+      "rsu_m": [
+        115.6437,
+        -0.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        11830.3693,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        115.6437,
+        35.0
+      ],
+      "rsu_m": [
+        115.6437,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        11830.3693,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        115.6437,
+        37.5405
+      ],
+      "rsu_m": [
+        115.6437,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        11830.3693,
+        7401.5138
+      ],
+      "rsu_pred_m": [
+        115.6437,
+        72.5405
+      ],
+      "rsu_m": [
+        115.6437,
+        72.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        13394.7375,
+        147.4685
+      ],
+      "rsu_pred_m": [
+        131.2874,
+        -0.0
+      ],
+      "rsu_m": [
+        131.2874,
+        -0.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        13394.7375,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        131.2874,
+        35.0
+      ],
+      "rsu_m": [
+        131.2874,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        13394.7375,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        131.2874,
+        37.5405
+      ],
+      "rsu_m": [
+        131.2874,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        13394.7375,
+        7401.5138
+      ],
+      "rsu_pred_m": [
+        131.2874,
+        72.5405
+      ],
+      "rsu_m": [
+        131.2874,
+        72.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        18394.7375,
+        3647.4685
+      ],
+      "rsu_pred_m": [
+        181.2874,
+        35.0
+      ],
+      "rsu_m": [
+        181.2874,
+        35.0
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        18394.7375,
+        3901.5138
+      ],
+      "rsu_pred_m": [
+        181.2874,
+        37.5405
+      ],
+      "rsu_m": [
+        181.2874,
+        37.5405
+      ],
+      "residual_m": 0.0
+    },
+    {
+      "src_cm": [
+        18394.7375,
+        7401.5138
+      ],
+      "rsu_pred_m": [
+        181.2874,
+        72.5405
+      ],
+      "rsu_m": [
+        181.2874,
+        72.5405
+      ],
+      "residual_m": 0.0
+    }
+  ],
+  "residu": {
+    "max_m": 0.0,
+    "seuil_GEO-12_m": 0.01,
+    "acceptable": true
+  },
+  "orthogonalité": {
+    "max_deviation_deg": 0.0
+  },
+  "preuve": {
+    "png": "B-30_Preuve_Calage.png",
+    "pdf": "B-30_Preuve_Calage.pdf"
+  },
+  "dxf_recalé": {
+    "nom": "B-30_FLORA_RSU_calé_v1.dxf",
+    "indice": "V1",
+    "insunits": 6,
+    "sha256": "679390bbeb05ac989e532ff0d64ea969b6d099aa85ee7065d14ac4a7d636f004",
+    "taille_bytes": 3371528,
+    "extmin_rsu": [
+      -0.2518,
+      -20.7807
+    ],
+    "extmax_rsu": [
+      181.293,
+      81.738
+    ]
+  }
+}
