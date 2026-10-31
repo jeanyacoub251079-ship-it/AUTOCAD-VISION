@@ -22,3 +22,4 @@
 | 13 | B-10 Audit critique du CCTP | I1 | 2026-10-31 | COMPLET | — | Livrable |
 | 14 | B-11 Audit du diagnostic structure | I1 | 2026-10-31 | COMPLET | — | Livrable |
 | 15 | B-12 Audit géotechnique | I1 | 2026-10-31 | PARTIEL-DÉCLARÉ | — | Livrable (G2 complet non reçu — R-01) |
+| 16 | B-20 Conception GO | P1 | 2026-10-31 | INTERNE-GO | — | Livrable (plans de principe + note) |
