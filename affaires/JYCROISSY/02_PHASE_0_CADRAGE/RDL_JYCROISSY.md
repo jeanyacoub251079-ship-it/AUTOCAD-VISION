@@ -21,3 +21,4 @@
 | 12 | B-15 Synthèse des risques | I1 | 2026-10-31 | PARTIEL-DÉCLARÉ | — | Livrable (réserve : B-10/B-11/B-12 non exécutés) |
 | 13 | B-10 Audit critique du CCTP | I1 | 2026-10-31 | COMPLET | — | Livrable |
 | 14 | B-11 Audit du diagnostic structure | I1 | 2026-10-31 | COMPLET | — | Livrable |
+| 15 | B-12 Audit géotechnique | I1 | 2026-10-31 | PARTIEL-DÉCLARÉ | — | Livrable (G2 complet non reçu — R-01) |
