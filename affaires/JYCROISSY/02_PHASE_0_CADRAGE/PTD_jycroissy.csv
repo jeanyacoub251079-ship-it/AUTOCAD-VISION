@@ -1,0 +1,35 @@
+﻿Tableau,Brique,Libellé,Colonne2,Colonne3,Colonne4,Colonne5
+Suspendue,B-13,Détection et qualification des porteurs,GEO-13 (matrice de recalage multi-sources vers le RSU),Production interne B-30 / B-31 (INTERNE-GO),BET d'exécution (MOE),Avant phase 2
+Suspendue,B-20,Conception des ouvrages,"DEC-05 (hypothèses notifiées H-xx), GEO-13, NIV-07 (épaisseurs ASB / Fini)",Production interne B-22 (DEC-05) et B-30 (GEO-13) ; NIV-07 ASB en attente (dallage « selon étude BA »),BET d'exécution (MOE),Phase 3
+Suspendue,B-34,Carnet des réservations et trémies tous corps d'état,"DEC-05 (H-xx), GEO-13",Production interne B-22 et B-30,BET d'exécution (MOE),Phase 5
+Suspendue,B-60,Plans d'exécution,"DEC-05 (H-xx), NIV-07 (épaisseurs ASB / Fini)",Production interne B-22 ; NIV-07 ASB en attente,BET d'exécution (MOE),Phase 5
+Suspendue,B-64,Notice de synthèse,"DEC-02, DEC-03, DEC-05",Production interne (DEC-02/DEC-03 déjà produits par B-03 ; DEC-05 par B-22),BET d'exécution (MOE),Phase 5
+Suspendue,B-70,Auto-contrôle déclaré de synthèse,"DEC-01, DEC-02, DEC-03, DEC-05","Production interne B-70 (DEC-01), B-03 (DEC-02/03), B-22 (DEC-05)",BET d'exécution (MOE),Phase 6
+Suspendue,B-72,Journal de clôture,"DEC-02, DEC-03, DEC-04, DOC-08","Production interne B-72 (DOC-08, DEC-04) ; B-03 (DEC-02/03)",BET d'exécution (MOE),Phase 6
+Exécutable,B-10,Audit critique du CCTP,COMPLET,DOC-04 FOURNIE ; DEC-02 produit par B-03 (D-14),,
+Exécutable,B-11,Audit du diagnostic structure,COMPLET,DOC-05 FOURNIE ; s'appuie sur P2/P4/P5,,
+Exécutable,B-12,Audit des pièces géotechniques,PARTIEL-DÉCLARÉ,"Paramètres D-06 (qELS ≤ 0,30 MPa, qELU ≤ 0,49 MPa, ancrage 50 cm) ; G2 complet non reçu (réserve R-01)",,
+Exécutable,B-14,Clarification du périmètre,INTERNE-GO,Périmètre à trancher produit par nos soins,,
+Exécutable,B-15,Fiche de synthèse,COMPLET,DEC-03 produit par B-03 ; risques identifiés en phase 0,,
+Exécutable,B-21,Note de calcul des charges,COMPLET,CHG-01…08 FOURNIE ou Décision (D-03),,
+Exécutable,B-22,Note d'hypothèses de conception,INTERNE-GO,Produit DEC-05 (hypothèses notifiées H-xx),,
+Exécutable,B-23,Vérification des éléments existants,INTERNE-GO,Produit EXI-05 (contrainte admissible transmise à l'existant),,
+Exécutable,B-24,Vérification des éléments existants non,COMPLET,DOC-05 FOURNIE ; PA-01 (D-06) encadre les inconnues physiques,,
+Exécutable,B-25,"Stabilité globale, contreventement, joints",COMPLET,CHG-07 FOURNIE ; STR-01 PARTIELLE,,
+Exécutable,B-30,Calage des sources,INTERNE-GO,"Produit GEO-07, GEO-08, GEO-12 (transformation, points de calage, seuils)",,
+Exécutable,B-31,Recalage / superposition des niveaux,INTERNE-GO,Produit GEO-13 ; dépend de B-30 (GEO-07/08) et B-32 (GEO-11),,
+Exécutable,B-32,Exploitation vectorielle / nettoyage,INTERNE-GO,"Produit GEO-10, GEO-11 (seuils d'épaisseur, superposition)",,
+Exécutable,B-33,Vérification croisée,COMPLET,GEO-14 PARTIELLE ; DOC-02,,
+Exécutable,B-40,Fondations superficielles,PARTIEL-DÉCLARÉ,SOL-01/02/03 décision D-06 ; B-40 non bloquante (D-12) ; PA-01 contrôle fouille,,
+Exécutable,B-42,Verticaux BA,COMPLET,MAT-01/04 FOURNIE ; CHG-02 Décision (D-03),,
+Exécutable,B-45,Structure métallique,COMPLET,MAT-05 FOURNIE ; CHG-06 FOURNIE,,
+Exécutable,B-46,Maçonnerie : vérification,INTERNE-GO,Produit EXI-05 par calcul interne,,
+Exécutable,B-47,Escaliers,COMPLET,NIV-03 FOURNIE ; CHG-08 PARTIELLE,,
+Exécutable,B-49,Linteaux et seuils,COMPLET,MAT-09 FOURNIE ; EXI-01 PARTIELLE,,
+Exécutable,B-50,Assemblages et ancrages,COMPLET,MAT-04/09 FOURNIE ; EXI-01/03 PARTIELLE,,
+Exécutable,B-62,Nomenclature / quantités,COMPLET,MAT-xx FOURNIE,,
+Exécutable,B-71,Indicage et supersession documentaire,INTERNE-GO,Produit DEC-04 (documents supersédés),,
+Paramétrique,B-43,Planchers et dallages,"NIV-06 (épaisseurs plancher), NIV-07 (épaisseurs ASB / complexe)",Dallage neuf « selon étude BA » (P1 p34-36) — symbole d'épaisseur,"Ne produit PAS : valeur d'épaisseur retenue, DXF exécutable, plan à diffuser",
+Paramétrique,B-44,Charpente bois,"MAT-06 (classe bois C18/C24 — hypothèse du diagnostic), MAT-08 (classe de service)",Bois C18/C24 en hypothèse (P2 p10-17) — symbole,"Ne produit PAS : valeur de classe de bois validée, note exécutable sans réserve",
+Sans objet,B-41,Fondations profondes,D-11,,,
+Sans objet,B-48,Prédalles et planchers préfabriqués,D-09,,,

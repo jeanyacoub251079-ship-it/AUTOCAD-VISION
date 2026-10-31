@@ -2,6 +2,9 @@
 data/
 !data/.gitkeep
 
+# Copies brutes des pièces Google Drive (affaires ; sources non versionnées)
+google_drive/
+
 # Python
 __pycache__/
 *.py[cod]
