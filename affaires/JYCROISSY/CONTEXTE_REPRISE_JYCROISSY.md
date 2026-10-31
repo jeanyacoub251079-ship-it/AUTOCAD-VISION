@@ -1,7 +1,8 @@
 # CONTEXTE DE REPRISE — JYCROISSY / AUTOCAD-VISION
 **Document aide-mémoire — à consulter en priorité au début de chaque session**
 Date de création : 2026-10-31
-Dernière mise à jour : session de dépôt Drive (commit `a8d0eb2`)
+Dernière mise à jour : session de reprise — ajout de la procédure de récupération
+(clone frais / dossier `affaires/` tronqué → `git checkout HEAD -- affaires/`)
 
 ---
 
@@ -105,7 +106,37 @@ python3 -m venv /home/user/.venv && pip install ezdxf==1.4.5 matplotlib pypdf pd
 
 ---
 
-## 6. PROCHAINES ÉTAPES (à valider par le user au reprendre)
+## 6. PROCÉDURE DE RÉCUPÉRATION — CLONE FRAIS / DOSSIER `affaires/` TRONCÉ
+
+**Symptôme** (vérifié en session de reprise 2026-10-31) :
+- `git log` montre un HEAD bas (`973f2ab`) alors que le distant porte tous les commits.
+- `affaires/` est visible dans le listing parent mais inaccessible :
+  `ls -ld affaires` → « No such file or directory », `stat affaires` → `Blocks: 0`.
+
+**Cause** : workspace réinitialisé à un clone frais ; la directory `affaires/` est une
+entrée tronquée (0 bloc) qui bloque le checkout normal.
+
+**Procédure de récupération** (le travail est préservé sur GitHub + Drive — on ne
+rétablit que le working tree local) :
+
+```bash
+cd /home/user/AUTOCAD-VISION
+# 1. Mettre à jour le distant
+git fetch origin arena/cc8aea0e-autocad-vision
+# 2. Repositionner la branche locale sur le commit distant (tout le travail y est)
+git reset --hard origin/arena/cc8aea0e-autocad-vision
+# 3. Nettoyer l'entrée tronquée, puis re-checkout le dossier depuis HEAD
+rm -rf affaires
+git checkout HEAD -- affaires/
+# 4. Vérifier
+git log --oneline -3          # doit montrer e9a7bf1 en tête
+git status --short            # doit être vide (propre)
+find affaires -type f | wc -l # doit être > 0 (101 attendu)
+```
+
+---
+
+## 7. PROCHAINES ÉTAPES (à valider par le user au reprendre)
 
 Les Phases 0 à 4 sont terminées. **Rien n'est en attente technique** :
 - B-50 reste suspendu jusqu'à réception de **OUT-01** et **DOC-09**.
@@ -118,13 +149,13 @@ Les Phases 0 à 4 sont terminées. **Rien n'est en attente technique** :
 
 ---
 
-## 7. PROMPT DE REPRISE (à fournir au user)
+## 8. PROMPT DE REPRISE (à fournir au user)
 
 Voir section « PROMPT DE REPRISE » à copier-coller au début de la prochaine session.
 
 ---
 
-## 8. HISTORIQUE DES COMMITS RÉCENTS (branch `arena/cc8aea0e-autocad-vision`)
+## 9. HISTORIQUE DES COMMITS RÉCENTS (branch `arena/cc8aea0e-autocad-vision`)
 
 ```
 a8d0eb2  docs(JYCROISSY): journal du dépôt des livrables Phase 0 à 4 sur Google Drive
