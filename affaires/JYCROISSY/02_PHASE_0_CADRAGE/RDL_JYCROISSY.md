@@ -31,3 +31,4 @@
 | 22 | B-40 Fondations superficielles | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
 | 23 | B-41 Fondations profondes | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
 | 24 | B-42 Verticaux BA | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
+| 25 | B-43 Planchers et dallages | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
