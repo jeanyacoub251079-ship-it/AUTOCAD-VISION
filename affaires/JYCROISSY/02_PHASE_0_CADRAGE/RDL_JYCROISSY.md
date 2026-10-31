@@ -25,3 +25,4 @@
 | 16 | B-20 Conception GO | P1 | 2026-10-31 | INTERNE-GO | — | Livrable (plans de principe + note) |
 | 17 | B-25 Stabilité globale | P1 | 2026-10-31 | INTERNE-GO | — | Livrable (note de stabilité + schéma) |
 | 18 | B-21 DDC préliminaire | P1 | 2026-10-31 | COMPLET | — | Livrable (DDC préliminaire) |
+| 19 | B-22 Note d'hypothèses | P1 | 2026-10-31 | COMPLET | — | Livrable (note d'hypothèses) |
