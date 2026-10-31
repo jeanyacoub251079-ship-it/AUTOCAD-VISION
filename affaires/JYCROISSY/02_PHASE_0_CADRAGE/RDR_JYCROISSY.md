@@ -63,6 +63,12 @@
 | D-40 | 31/10/2026 | B-48 Prédalles (SANS OBJET) | Aucune prédalle ni plancher préfabriqué dans le périmètre. Planchers en dalle BA (RDC, R+1 — B-20, B-43). | BET d'exécution (MOE) | B-48 alimente B-50, B-60. |
 | D-41 | 31/10/2026 | B-49 Linteaux et seuils (SANS OBJET) | Aucun linteau ni seuil dans le périmètre. Structure en béton armé + métallique (B-20). | BET d'exécution (MOE) | B-49 alimente B-50, B-60. |
 | D-42 | 31/10/2026 | B-50 Assemblages et ancrages (PARAMÉTRIQUE documentaire) | 7 assemblages/ancrages inventoriés. Efforts transmis en symbole (briques amont en PARAMÉTRIQUE). DOC-09 manquant. Formules littérales — aucune valeur retenue. Contrôle croisé non produit. Calcul suspendu. | BET d'exécution (MOE) | B-50 alimente B-60, B-70. |
+| D-43 | 31/10/2026 | Béton XC2 25 MPa — classe de béton (MAT-01). Résout H-03. | Fournie par le user 2026-10-31. | User | B-40, B-42, B-43, B-46 |
+| D-44 | 31/10/2026 | Fer à béton 500 MPa (fyk armatures — MAT-04) | Fournie par le user 2026-10-31. | User | B-42, B-43, B-46, B-50 |
+| D-45 | 31/10/2026 | Acier de charpente 275 MPa (MAT-05 / H-03 métal) | Fournie par le user 2026-10-31. | User | B-45 |
+| D-46 | 31/10/2026 | Enrobage : 5 cm fondations, 3 cm superstructure | Fourni par le user 2026-10-31. | User | B-40, B-42, B-43, B-46, B-50 |
+| D-47 | 31/10/2026 | Ancrage fondations : arase inférieure à -0,80 m du NFE (niveau fini extérieur) | Fourni par le user 2026-10-31. | User | B-40, B-50 |
+| D-48 | 31/10/2026 | Coupe feu : 30 minutes | Fournie par le user 2026-10-31. | User | B-40 à B-50 (protection au feu) |
 | **PHASE 4 — CLOSURE** | | B-40 à B-50 livrés et commités. | | Phase 4 complète — 11 briques livrées. |
 
 **Auteurs.** `CR` = compte rendu officiel du 20/10/2026 (architecte Truelle + client MOA). `BE` = BET d'exécution (utilisateur). Aucune décision MOA/MOE n'a été prise à sa place : les décisions MOA en attente sont des réserves R-xx.
