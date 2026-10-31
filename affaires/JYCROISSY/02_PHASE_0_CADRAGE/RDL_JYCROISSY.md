@@ -27,3 +27,4 @@
 | 18 | B-21 DDC préliminaire | P1 | 2026-10-31 | COMPLET | — | Livrable (DDC préliminaire) |
 | 19 | B-22 Note d'hypothèses | P1 | 2026-10-31 | COMPLET | — | Livrable (note d'hypothèses) |
 | 20 | B-23 Exploitation du diagnostic | P1 | 2026-10-31 | COMPLET | — | Livrable (exploitation du diagnostic) |
+| 21 | B-24 Vérification existants non sondés | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (vérification suspendue) |
