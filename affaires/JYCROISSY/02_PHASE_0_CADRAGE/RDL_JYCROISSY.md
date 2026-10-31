@@ -33,3 +33,4 @@
 | 24 | B-42 Verticaux BA | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
 | 25 | B-43 Planchers et dallages | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
 | 26 | B-44 Charpente bois | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
+| 27 | B-45 Structure métallique | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
