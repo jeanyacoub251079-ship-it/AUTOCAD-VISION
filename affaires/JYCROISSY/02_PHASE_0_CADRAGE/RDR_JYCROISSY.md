@@ -60,6 +60,7 @@
 | D-37 | 31/10/2026 | B-45 Structure métallique (PARAMÉTRIQUE documentaire) | 2 profilés chargés (Pt1, Pt2 — poutres métalliques neuves). Nuance d'acier manquante (H-03 à confirmer — R-08). Section poutres h≈500 mm (H-02 à confirmer). DDC execution établie (distincte de B-21). Formules littérales — aucune valeur retenue. Efforts aux assemblages transmis à B-50 (symbole). Plans non produits (OUT-01 absent). Calcul suspendu. | BET d'exécution (MOE) | B-45 alimente B-46, B-50, B-60. |
 | D-38 | 31/10/2026 | B-46 Maçonnerie (Bloc A PARAMÉTRIQUE + Bloc B SANS OBJET) | Bloc A : 3 zones vérifiées (mur Ouest, mur Est, semelle filante SF1). Résistance de la maçonnerie existante manquante (B-24 — PARAMÉTRIQUE). Contrainte transmise N_Ed = 1276 kN (D-01). Formules littérales — aucune valeur retenue. Bloc B : SANS OBJET (pas de maçonnerie neuve). Vérification suspendue. | BET d'exécution (MOE) | B-46 alimente B-47, B-49, B-50, B-60. |
 | D-39 | 31/10/2026 | B-47 Escaliers (SANS OBJET) | Aucun escalier dans le périmètre. Accès par ascenseur (noyau P1 — B-20). | BET d'exécution (MOE) | B-47 alimente B-50, B-60. |
+| D-40 | 31/10/2026 | B-48 Prédalles (SANS OBJET) | Aucune prédalle ni plancher préfabriqué dans le périmètre. Planchers en dalle BA (RDC, R+1 — B-20, B-43). | BET d'exécution (MOE) | B-48 alimente B-50, B-60. |
 
 **Auteurs.** `CR` = compte rendu officiel du 20/10/2026 (architecte Truelle + client MOA). `BE` = BET d'exécution (utilisateur). Aucune décision MOA/MOE n'a été prise à sa place : les décisions MOA en attente sont des réserves R-xx.
 
