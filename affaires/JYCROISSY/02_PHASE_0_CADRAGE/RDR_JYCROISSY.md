@@ -53,6 +53,7 @@
 | D-31 | 31/10/2026 | B-24 Vérification existants non sondés (PARAMÉTRIQUE) | 3 éléments non sondés (murs porteurs Ouest et Est, semelle filante SF1). 3 données manquantes (section, résistance, épaisseur). 3 vérifications littérales (compression maçonnerie). 9 valeurs testées (sensibilité NON CONTRACTUEL). 0 élément favorable (σ >> f_d). 9 essais/sondages nécessaires (NF EN 1996). Aucune valeur retenue — toutes en symbole. Vérification SUSPENDUE. | BET d'exécution (MOE) | B-24 alimente B-44, B-45, B-46, B-04, T-04. |
 | **PHASE 3 — CLOSURE** | | B-20, B-25, B-21, B-22, B-23, B-24 livrés et commités. | | Phase 3 complète — 6 briques livrées. |
 | D-32 | 31/10/2026 | B-40 Fondations superficielles (PARAMÉTRIQUE documentaire) | Sol connu (D-06 — qELS≤0,30 MPa). Classe de béton manquante (H-03 à confirmer — R-08). DDC execution établie (distincte de B-21). 4 semelles (SI1, SI2, SI3, SF1). Formules littérales — aucune valeur retenue. Plans non produits (OUT-01 absent). Calcul suspendu. | BET d'exécution (MOE) | B-40 alimente B-41, B-42, B-50, B-60. |
+| D-33 | 31/10/2026 | B-41 Fondations profondes (SANS OBJET) | Fondations superficielles (semelles isolées SI1-SI3, semelle filante SF1). Aucune fondation profonde dans le périmètre. | BET d'exécution (MOE) | B-41 alimente B-50, B-60. |
 
 **Auteurs.** `CR` = compte rendu officiel du 20/10/2026 (architecte Truelle + client MOA). `BE` = BET d'exécution (utilisateur). Aucune décision MOA/MOE n'a été prise à sa place : les décisions MOA en attente sont des réserves R-xx.
 
