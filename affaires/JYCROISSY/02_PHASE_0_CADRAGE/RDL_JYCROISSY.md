@@ -19,3 +19,4 @@
 | 10 | B-33 Vérification croisée Phase 1 | I1 | 2026-10-31 | COMPLET | VALIDÉ — 2026-10-31 | Livrable |
 | 11 | B-14 Périmètre de lot | I1 | 2026-10-31 | PARTIEL-DÉCLARÉ | — | Livrable (réserve : B-10/B-11 non exécutés) |
 | 12 | B-15 Synthèse des risques | I1 | 2026-10-31 | PARTIEL-DÉCLARÉ | — | Livrable (réserve : B-10/B-11/B-12 non exécutés) |
+| 13 | B-10 Audit critique du CCTP | I1 | 2026-10-31 | COMPLET | — | Livrable |
