@@ -38,3 +38,4 @@
 | 29 | B-47 Escaliers | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
 | 30 | B-48 Prédalles | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
 | 31 | B-49 Linteaux et seuils | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
+| 32 | B-50 Assemblages et ancrages | P1 | 2026-10-31 | PARAMÉTRIQUE | — | Livrable (calcul suspendu — formules littérales) |
