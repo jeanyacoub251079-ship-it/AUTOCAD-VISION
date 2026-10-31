@@ -37,3 +37,4 @@
 | 28 | B-46 Maçonnerie | P1 | 2026-10-31 | PARAMÉTRIQUE (Bloc A) + SANS OBJET (Bloc B) | — | Livrable (vérification suspendue) |
 | 29 | B-47 Escaliers | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
 | 30 | B-48 Prédalles | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
+| 31 | B-49 Linteaux et seuils | P1 | 2026-10-31 | SANS OBJET | — | Ligne de justification |
