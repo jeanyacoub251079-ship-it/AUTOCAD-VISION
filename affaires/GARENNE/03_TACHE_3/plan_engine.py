@@ -119,6 +119,80 @@ class Scene:
                   layer, "left" if xt >= xa else "right")
 
 
+    # -- symboles normalisés BET ------------------------------------------
+    def arrow(self, x, y, ang, size=1.6, layer=None):
+        """Flèche pleine, pointe en (x, y), orientée selon `ang` (degrés)."""
+        layer = layer or CALQUE_AXES
+        a = math.radians(ang)
+        L, w = size, size * 0.26
+        pts = [(x, y),
+               (x - L * math.cos(a) + w * math.sin(a),
+                y - L * math.sin(a) - w * math.cos(a)),
+               (x - L * math.cos(a) - w * math.sin(a),
+                y - L * math.sin(a) + w * math.cos(a))]
+        self.items.append(("arrow", pts, layer))
+
+    def hatch_poly(self, pts, layer="STR_FERRAILLAGE", angle=45.0,
+                   spacing=0.8):
+        """Hachures bornées à un polygone quelconque."""
+        self.items.append(("hatchpoly", list(pts), layer, angle, spacing))
+
+    def hatch_rect(self, x, y, w, h, layer="STR_EXISTANT", angle=45.0,
+                   spacing=0.8):
+        self.hatch_poly([(x, y), (x + w, y), (x + w, y + h), (x, y + h)],
+                        layer, angle, spacing)
+
+    def dia(self, cx, cy, d, layer="STR_COTATIONS_TEXTES", lw=0.22):
+        """Symbole de diamètre : cercle barré."""
+        r = d / 2.0
+        self.circle(cx, cy, r, layer, lw)
+        self.line(cx - r * 0.707, cy - r * 0.707,
+                  cx + r * 0.707, cy + r * 0.707, layer, lw)
+
+    def bar(self, pts, label=None, layer="STR_FERRAILLAGE", lw=0.35,
+            fs=2.1, hook=None):
+        """Barre d'armature : polyligne + étiquette optionnelle.
+        `hook` = ('start'|'end', angle) ajoute un crochet à 90°."""
+        self.poly(pts, layer, lw, closed=False)
+        if hook:
+            ext, ang = hook
+            if ext == "start":
+                (x0, y0), (x1, y1) = pts[0], pts[1]
+            else:
+                (x0, y0), (x1, y1) = pts[-1], pts[-2]
+            a = math.radians(ang)
+            L = 8.0
+            self.line(x1 - L * math.cos(a), y1 - L * math.sin(a), x1, y1,
+                      layer, lw)
+        if label:
+            self.text(label, pts[0][0], pts[0][1] + 0.7, fs, layer)
+
+
+# Dimensions des profilés (cm) : h, b, tw, tf
+PROFILES = {
+    "IPE 160": (16.0, 8.2, 0.50, 0.74),
+    "IPE 180": (18.0, 9.1, 0.53, 0.80),
+    "IPE 200": (20.0, 10.0, 0.56, 0.85),
+    "IPE 270": (27.0, 13.5, 0.66, 1.02),
+    "IPE 300": (30.0, 15.0, 0.71, 1.07),
+    "UPN 200": (20.0, 7.5, 0.85, 1.15),
+}
+
+
+def section_pts(profil, x, y, form="I"):
+    """Contour d'un profilé, posé en (x, y) = coin inférieur gauche."""
+    h, b, tw, tf = PROFILES[profil]
+    if form == "U":
+        return [(x, y), (x + b, y), (x + b, y + tf), (x + tw, y + tf),
+                (x + tw, y + h - tf), (x + b, y + h - tf), (x + b, y + h),
+                (x, y + h)]
+    return [(x, y), (x + b, y), (x + b, y + tf),
+            (x + b / 2 + tw / 2, y + tf),
+            (x + b / 2 + tw / 2, y + h - tf),
+            (x + b, y + h - tf), (x + b, y + h), (x, y + h),
+            (x, y + h - tf), (x + b / 2 - tw / 2, y + h - tf),
+            (x + b / 2 - tw / 2, y + tf), (x, y + tf)]
+
 def _fmt_cm(v):
     """Formate une cote en cm ; au-delà de 100 cm, conversion en mètres."""
     v = round(v, 1)
@@ -183,6 +257,13 @@ class DxfBackend:
                 _, (cx, cy), r, a1, a2, layer, lw = it
                 msp.add_arc((cx, cy), r, a1, a2,
                             dxfattribs=self._attribs(layer, lw))
+            elif kind == "arrow":
+                _, pts, layer = it
+                msp.add_solid([pts[0], pts[1], pts[2], pts[2]],
+                              dxfattribs={"layer": layer})
+            elif kind == "hatchpoly":
+                _, pts, layer, angle, sp = it
+                self._hatch(pts, layer, "ANSI31", angle, sp)
             elif kind == "text":
                 _, s, (x, y), size, layer, align, angle, bold = it
                 mt = msp.add_mtext(
@@ -264,6 +345,8 @@ class PdfBackend:
         self.k = 10.0 / scale                    # mm papier par cm modèle
         self.x0, self.y0 = origin                # origine du repère modèle
         self.title = title
+        self.title_txt = ""
+        self.title_sub = ""
         self.cartouche = cartouche
         self.canvas_mod = canvas
         import io
@@ -303,7 +386,23 @@ class PdfBackend:
                 xs += [it[1][0] - it[2], it[1][0] + it[2]]
                 ys += [it[1][1] - it[2], it[1][1] + it[2]]
             elif k == "text":
-                xs.append(it[2][0]); ys.append(it[2][1])
+                s_, (tx, ty), fs_, al_ = it[1], it[2], it[3], it[5]
+                n = max(len(x) for x in s_.split("\n"))
+                tw = n * fs_ * 0.52
+                if al_ == "center":
+                    xs += [tx - tw / 2, tx + tw / 2]
+                elif al_ == "right":
+                    xs += [tx - tw, tx]
+                else:
+                    xs += [tx, tx + tw]
+                nl = s_.count("\n") + 1
+                ys += [ty - fs_ * 1.15 * (nl - 1) - fs_, ty]
+            elif k == "arrow":
+                for (a, b) in it[1]:
+                    xs.append(a); ys.append(b)
+            elif k == "hatchpoly":
+                for (a, b) in it[1]:
+                    xs.append(a); ys.append(b)
             elif k in ("dim_h",):
                 xs += [it[1], it[2]]; ys.append(it[3])
             elif k in ("dim_v",):
@@ -377,6 +476,19 @@ class PdfBackend:
                 rx = r * self.k
                 self._c.arc(self.X(cx) - rx, self.Y(cy) - rx,
                             self.X(cx) + rx, self.Y(cy) + rx, a1, a2 - a1)
+            elif kind == "arrow":
+                _, pts, layer = it
+                self._c.setFillColor(self._colors.get(layer,
+                                                      self.Color(0, 0, 0)))
+                p = self._c.beginPath()
+                p.moveTo(self.X(pts[0][0]), self.Y(pts[0][1]))
+                for (px, py) in pts[1:]:
+                    p.lineTo(self.X(px), self.Y(py))
+                p.close()
+                self._c.drawPath(p, stroke=0, fill=1)
+            elif kind == "hatchpoly":
+                _, pts, layer, angle, sp = it
+                self._hatch_path(pts, layer, angle, sp)
             elif kind == "text":
                 _, s, (x, y), size, layer, align, angle, bold = it
                 self._set(layer)
@@ -397,6 +509,37 @@ class PdfBackend:
                     for i, ln in enumerate(lines):
                         self._c.drawString(self.X(x), self.Y(y)
                                            - i * size * 1.15, ln)
+
+    def _hatch_path(self, pts, layer, angle, sp):
+        """Hachures parallèles bornées à un polygone (clipping PDF)."""
+        c = self._c
+        xs = [p[0] for p in pts]
+        ys = [p[1] for p in pts]
+        self._set(layer)
+        th = math.radians(angle)
+        dx, dy = math.cos(th), math.sin(th)
+        nx, ny = -dy, dx
+        proj = [p[0] * nx + p[1] * ny for p in pts]
+        lo, hi = min(proj), max(proj)
+        span = max(xs) - min(xs) + max(ys) - min(ys) + 20
+        c.saveState()
+        p = c.beginPath()
+        p.moveTo(self.X(pts[0][0]), self.Y(pts[0][1]))
+        for (px, py) in pts[1:]:
+            p.lineTo(self.X(px), self.Y(py))
+        p.close()
+        c.clipPath(p, stroke=0, fill=0)
+        c.setLineWidth(0.13)
+        cx0 = sum(xs) / len(xs)
+        cy0 = sum(ys) / len(ys)
+        s = lo
+        while s < hi:
+            bx, by = cx0 + nx * (s - (cx0 * nx + cy0 * ny)), \
+                cy0 + ny * (s - (cx0 * nx + cy0 * ny))
+            c.line(self.X(bx - dx * span), self.Y(by - dy * span),
+                   self.X(bx + dx * span), self.Y(by + dy * span))
+            s += sp
+        c.restoreState()
 
     def _hatch_rect(self, x, y, w, h, layer, angle, sp):
         """Hachures parallèles bornées au rectangle (clipping par calcul)."""
@@ -438,6 +581,15 @@ class PdfBackend:
         self._frame()
         return self._c
 
+    def add_page(self, cartouche=None):
+        """Nouvelle planche dans le même document (après showPage)."""
+        if cartouche:
+            self.cartouche = cartouche
+        self._c.showPage()
+        self._c.scale(2.8346, 2.8346)
+        self._frame()
+        return self._c
+
     def _frame(self):
         c = self._c
         c.setStrokeColor(self.Color(0, 0, 0))
@@ -463,7 +615,10 @@ class PdfBackend:
         c.drawString(x + 2.5, y + 24 + 6.5, info.get("affaire", ""))
         c.drawString(x + 2.5, y + 24 + 2.0, info.get("adresse", ""))
         c.setFont("Helvetica-Bold", 3.6)
-        c.drawString(x + 2.5, y + 12 + 4.2, info.get("titre", ""))
+        tt = info.get("titre", "")
+        while c.stringWidth(tt, "Helvetica-Bold", 3.6) > 88 and len(tt) > 8:
+            tt = tt[:-1]
+        c.drawString(x + 2.5, y + 12 + 4.2, tt)
         c.setFont("Helvetica", 2.3)
         sous = info.get("sous_titre", "")
         if len(sous) > 74:
@@ -484,18 +639,36 @@ class PdfBackend:
         c.drawString(x + 97.5, y + h - 6.0, info.get("repere", ""))
         c.setFont("Helvetica", 2.6)
         c.drawString(x + 97.5, y + 34 + 3.0, info.get("phase", ""))
-        c.drawString(x + 97.5, y + 24 + 6.5, f"Échelle : 1/{int(ECHELLE)}")
+        c.drawString(x + 97.5, y + 24 + 6.5,
+                     info.get("echelle", f"Échelle : 1/{int(ECHELLE)}"))
         c.drawString(x + 97.5, y + 24 + 2.0, info.get("format", "A3 paysage"))
         c.drawString(x + 97.5, y + 12 + 4.0, info.get("indice", ""))
         c.drawString(x + 97.5, y + 3.0, info.get("date", ""))
 
     def titre(self, txt, sous=""):
+        self.title_txt, self.title_sub = txt, sous
         c = self._c
         c.setFont("Helvetica-Bold", 4.6)
         c.drawString(16, A3_H - 22, txt)
         if sous:
             c.setFont("Helvetica-Oblique", 2.9)
             c.drawString(16, A3_H - 27.5, sous)
+
+    def vtitle(self, x, y, txt, size=2.9):
+        """Titre de cadre, aligné à gauche en (x, y)."""
+        c = self._c
+        c.setFillColor(self.Color(0, 0, 0))
+        c.setFont("Helvetica-Bold", size)
+        c.drawString(x, y, txt)
+
+    def frame(self, x, y, w, h, titre=None):
+        """Cadre de détail + titre au-dessus."""
+        c = self._c
+        c.setStrokeColor(self.Color(0.35, 0.35, 0.35))
+        c.setLineWidth(0.3)
+        c.rect(x, y, w, h)
+        if titre:
+            self.vtitle(x, y + h + 3.2, titre)
 
     def legende(self, x, y, items):
         """items = [(layer, libellé, type_trait)] — type_trait: line/hatch."""

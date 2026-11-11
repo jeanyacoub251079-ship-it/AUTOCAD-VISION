@@ -164,8 +164,8 @@ affaires/GARENNE/
                 make_schemas.py, make_figures.py, DOC-01*, DOC-02*, figures/
   02_TACHE_2/   calculs.py (moteur EC0→EC7), make_doc03.py, make_figures.py,
                 calculs_resultats.json, DOC-03*, figures/
-  03_TACHE_3/   plan_engine.py (géométrie -> DXF + PDF), make_pl01/02/03.py,
-                plans/PL-01..PL-03 .dxf et .pdf
+  03_TACHE_3/   plan_engine.py (géométrie -> DXF + PDF), detail_lib.py,
+                make_pl01..05.py, plans/PL-01..PL-05 .dxf et .pdf
 ```
 
 ### Arbitrages du maître d'ouvrage (11/11/2026)
@@ -202,6 +202,11 @@ Sondages restant à lever avant exécution : **H-08, H-09, H-10, H-14, H-15**.
 * **PL-02** — coffrage de l'extension : voile mitoyen, poteau à 2,00 m,
   poutre-acrotère 30 × 67, puits et longrines (1/50).
 * **PL-03** — coupe A-A sur la terrasse (1/50) + détail d'appui 1/20.
+* **PL-04** — ferraillage de la poutre-acrotère (coupes 1/10, schéma des
+  étriers), du poteau, de la dalle + nomenclature des aciers (2 planches).
+* **PL-05** — assemblages acier/BA : appuis de profilés sur jambages et
+  sommiers, encastrement en meulière, appui glissant de la poutre-acrotère,
+  ancrage de la dalle, clavetage du voile (2 planches).
 
 A3 paysage, cartouche BET, calques `STR_*`. Un seul moteur (`plan_engine.py`)
 produit le .dxf **et** le .pdf depuis la même géométrie.
@@ -217,4 +222,6 @@ produit le .dxf **et** le .pdf depuis la même géométrie.
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl01.py
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl02.py
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl03.py
+./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl04.py
+./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl05.py
 ```
