@@ -152,7 +152,7 @@ et modification des combles Mansart. Livrables du BET dans `affaires/GARENNE/`.
 | 1 | Reconnaissance DXF + hypothèses | `DOC-01` (note d'hypothèses), `DOC-02` (méthodologie & phasage) | ✅ livrée |
 | 2 | Calculs + métrés | `DOC-03` (note de calculs, 13 p.) + `calculs.py` | ✅ livrée |
 | 3 | Plans généraux 1/50 | `PL-01`, `PL-02`, `PL-03` (.dxf + .pdf) | ✅ livrée |
-| 4 | Détails 1/20 & 1/10 | `PL-04`, `PL-05` | ⏸ après GO |
+| 4 | Détails 1/20 & 1/10 | `PL-04`, `PL-05` (.dxf + .pdf) | ✅ livrée |
 
 ### Organisation
 
