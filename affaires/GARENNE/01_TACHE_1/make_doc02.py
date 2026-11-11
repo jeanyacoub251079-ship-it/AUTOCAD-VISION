@@ -90,7 +90,8 @@ T_PHASAGE = {
     "rows": [
         ["**0**", "Constat d'état, relevé contradictoire des cotes et sondages préalables (H-01, H-08, H-09, H-10, "
                   "H-14, H-15, H-16)", "3 j",
-         "**GO BET obligatoire** avant toute démolition. Levée de toutes les hypothèses H-01 à H-24.",
+         "**GO BET obligatoire** avant toute démolition. Levée des hypothèses restantes (H-08, H-09, H-10, "
+         "H-14, H-15).",
          "Entreprise + BET + MOE"],
         ["**1**", "Installation de chantier, étais de reprise sous planchers haut R+1 et haut RDC, purge des "
                   "cloisons non porteuses", "4 j",
@@ -107,7 +108,8 @@ T_PHASAGE = {
          "Entreprise + BET"],
         ["**4**", "Coulage du **voile BA mitoyen** et du **poteau BA 25 × 25** noyé dans la verrière",
          "5 j",
-         "Contrôle d'implantation du poteau par rapport à l'axe de la poutre retroussée (± 5 mm).",
+         "Contrôle d'implantation du poteau : axe à **2,00 m ± 5 mm** du nu de façade, sous l'axe de la "
+         "poutre-acrotère.",
          "Entreprise + BET + MOE"],
         ["**5**", "Exécution des **jambages et poteaux BA du RDC** (D1, D2, D3, D4, D5, D6) par passes alternées",
          "10 j",
@@ -122,9 +124,10 @@ T_PHASAGE = {
                   "platines", "6 j",
          "Contrôle du matage (contact ≥ 90 %), du serrage des boulons HR et des jeux de dilatation.",
          "Entreprise + BET"],
-        ["**8**", "Coulage de la **poutre retroussée BA** et de la **dalle de toiture-terrasse**",
+        ["**8**", "Coulage de la **poutre-acrotère BA** et de la **dalle de toiture-terrasse**",
          "6 j",
-         "Contrôle du ferraillage, de l'enrobage et de la liaison mécanique avec le mur de façade existant.",
+         "Contrôle du ferraillage, de l'enrobage, de la **contre-flèche de coffrage de 20 mm** et de la "
+         "liaison mécanique avec le mur de façade existant.",
          "Entreprise + BET"],
         ["**9**", "Décoffrage, réception des ouvrages, reprise des finitions et **levé topographique final**",
          "3 j",
@@ -158,12 +161,14 @@ T_ETAI = {
 }
 
 T_PUITS = {
-    "header": ["Caractéristique", "Puits 1 — angle mitoyen est", "Puits 2 — poteau BA de la verrière"],
+    "header": ["Caractéristique", "Puits 1 — angle mitoyen est", "Puits 2 — poteau BA sous la poutre-acrotère"],
     "widths": [30, 35, 35],
     "rows": [
         ["Implantation", "Angle nord-est de l'extension, au droit du voile mitoyen",
-         "Sous le poteau BA 25 × 25, à 1,19 m du nu de la façade existante"],
-        ["Dimensions en plan", "1,20 × 1,00 m (hors tout)", "1,00 × 1,00 m (hors tout)"],
+         "Sous le poteau BA 25 × 25, à **2,00 m du nu de la façade existante** — position "
+         "**contractuelle** depuis l'arbitrage E-01 du 11/11/2026"],
+        ["Dimensions en plan", "Ø 2,20 m (puits circulaire, calcul DOC-03 §4.2)",
+         "Ø 2,05 m (puits circulaire, calcul DOC-03 §4.2)"],
         ["Profondeur", "De 41,46 à **39,02 NGF** (2,44 m)", "De 41,46 à **39,02 NGF** (2,44 m)"],
         ["Nature du remplissage", "Gros béton C16/20 coulé en pleine fouille, par passes de 0,50 m",
          "Gros béton C16/20 coulé en pleine fouille, par passes de 0,50 m"],
@@ -212,9 +217,12 @@ T_TRAPPE = {
     "header": ["Niveau", "Position relevée (DXF)", "Entraxe solives supposé", "Décision"],
     "widths": [16, 30, 22, 32],
     "rows": [
-        ["Combles", "Trappe dessinée à x ≈ 46491 (plan P08b Combles)", "45 cm", "Repositionnement dans la zone de tolérance"],
-        ["R+1", "Trappe dessinée à x ≈ 46491 (plan P08b R+1)", "45 cm", "Repositionnement dans la zone de tolérance"],
-        ["RDC", "Trappe dessinée à x ≈ 48491 (plan P08b RDC)", "45 cm", "Repositionnement dans la zone de tolérance"],
+        ["Combles", "Trappe repérée à x ≈ 46491 (plan P08b Combles), ouverture 30 × 31 cm", "45 cm",
+         "Position **entourée d'un nuage** sur les plans ; ajustement dans la zone de tolérance"],
+        ["R+1", "Trappe repérée à x ≈ 42890 (plan P08b R+1), ouverture 30 × 31 cm", "45 cm",
+         "Position **entourée d'un nuage** sur les plans ; ajustement dans la zone de tolérance"],
+        ["RDC", "Trappe repérée à x ≈ 48491 (plan P08b RDC), ouverture 30 × 31 cm", "45 cm",
+         "Position **entourée d'un nuage** sur les plans ; ajustement dans la zone de tolérance"],
     ],
     "caption": "Tableau 6 — Positions de la trappe à linge relevées sur les plans et décision d'implantation.",
 }
@@ -380,7 +388,8 @@ BLOCKS = [
     ]),
     ("h3", "4.1.1 Longrine de répartition BA sous D1"),
     ("p", "La longrine a pour fonction de **répartir les charges concentrées** apportées par les poteaux BA sur "
-          "la fondation filante existante, dont la largeur est inconnue à ce stade (hypothèse H-01 : 0,50 m). "
+          "la fondation filante existante en **meulière continue** (hypothèse H-01 levée le 11/11/2026), de "
+          "largeur retenue 0,50 m. "
           "Elle est dimensionnée pour que la contrainte de contact au sol reste inférieure à "
           "**q<sub>els</sub> = 0,10 MPa** et à **q<sub>elu</sub> = 0,15 MPa**."),
     ("table", {
@@ -486,15 +495,17 @@ BLOCKS = [
     ("p", "L'extension occupe une emprise de **8,03 × 3,20 m** en façade avant. Elle est constituée :"),
     ("bullets", [
         "d'un **voile BA côté mitoyen** (est), solidaire du mur existant par clavetage ;",
-        "d'un **poteau BA 25 × 25 cm** noyé dans la façade latérale de la verrière (ouest) ;",
-        "d'une **poutre retroussée BA** franchissant les 8,03 m, formant acrotère à NGF 44,75 ;",
+        "d'un **poteau BA 25 × 25 cm** implanté à **2,00 m du nu de la façade existante**, sous la poutre ;",
+        "d'une **poutre-acrotère BA** de 30 × 67 cm franchissant les 8,03 m, dont l'arase supérieure "
+        "constitue l'acrotère à NGF 44,75 ;",
         "d'une **dalle BA de toiture-terrasse** (ép. 20 cm) ancrée dans le mur de façade existant au-dessus de "
-        "D2 et D4 et appuyée sur la poutre retroussée ;",
+        "D2 et D4, franchissant 2,00 m jusqu'à la poutre puis se poursuivant en porte-à-faux de 1,20 m "
+        "jusqu'à la verrière ;",
         "d'une **verrière** (hors mission) rapportée sur la structure.",
     ]),
     ("figure", os.path.join(FIG, "fig07_extension_plan.png"),
-     "Figure 2 — Plan de principe de l'extension : implantation du voile mitoyen, du poteau BA de la verrière et "
-     "de la poutre retroussée.", 156),
+     "Figure 2 — Plan de principe de l'extension : implantation du voile mitoyen, du poteau BA "
+     "à 2,00 m du nu de façade et de la poutre-acrotère.", 156),
     ("h2", "5.2 Méthodologie des puits de fondation"),
     ("p", "Les deux puits sont **impérativement descendus jusqu'au même niveau d'assise que les fondations "
           "existantes du sous-sol (NGF 39,02)** afin de ne générer aucune poussée différentielle sur les murs de "
@@ -515,24 +526,36 @@ BLOCKS = [
         "rapidement la butée sur les murs de cave.",
     ]),
     ("table", T_PUITS),
-    ("h2", "5.3 Voile BA mitoyen et poteau BA de la verrière"),
+    ("h2", "5.3 Voile BA mitoyen et poteau BA sous la poutre"),
     ("p", "Le **voile mitoyen** (ép. 20 cm) est coulé contre le mur existant, après piquage de la surface et "
           "clavetage par des armatures HA10 tous les 0,40 m, scellées chimiquement dans la maçonnerie sur 0,25 m. "
-          "Il assure à la fois la reprise des charges verticales de la poutre retroussée et la stabilité "
+          "Il assure à la fois la reprise des charges verticales de la poutre-acrotère et la stabilité "
           "transversale de l'extension."),
-    ("p", "Le **poteau BA 25 × 25 cm** est coulé sur la semelle du puits n° 2 et reçoit, en tête, la platine "
-          "d'appui de la poutre retroussée. Il est **noyé dans la façade latérale de la verrière** : un "
+    ("p", "Le **poteau BA 25 × 25 cm** est coulé sur la semelle du puits n° 1 et reçoit, en tête, la platine "
+          "d'appui de la poutre-acrotère. Il est **implanté à 2,00 m du nu de la façade existante**, position "
+          "arrêtée le 11/11/2026, et se trouve **noyé dans la façade latérale de la verrière** : un "
           "**rupteur de pont thermique** (plaque de mousse polyuréthane ou de polystyrène extrudé de 40 mm) est "
           "interposé entre le poteau et la menuiserie sur toute la hauteur, afin d'éviter tout pont thermique "
           "conforme à la RE 2020."),
-    ("h2", "5.4 Poutre retroussée et dalle de toiture-terrasse"),
-    ("p", "La **poutre retroussée** est une poutre BA monolithique de 8,03 m de portée, formant acrotère de la "
-          "terrasse à NGF 44,75. Elle est solidaire de la dalle de terrasse, ce qui constitue un ensemble "
-          "monolithique en L, favorable à la rigidité d'ensemble et à l'étanchéité. Elle s'appuie :"),
+    ("h2", "5.4 Poutre-acrotère retroussée et dalle de toiture-terrasse"),
+    ("p", "La **poutre-acrotère retroussée** est une poutre BA monolithique de section **30 × 67 cm**, calée "
+          "entre la sous-face du plancher haut RDC (NGF 44,08) et l'**arase supérieure de l'acrotère "
+          "(NGF 44,75)**. Elle **fait office d'acrotère** de la terrasse et constitue, avec la dalle, un "
+          "ensemble monolithique en L favorable à la rigidité d'ensemble et à l'étanchéité."),
+    ("note", "**Géométrie confirmée par le maître d'ouvrage le 11 novembre 2026.** La poutre s'appuie sur le "
+             "**voile BA du mur mitoyen** et sur le **poteau BA 25 × 25**, déplacé à **2,00 m du nu de la "
+             "façade** pour venir exactement sous la poutre. Le poteau est donc l'**appui d'extrémité** côté "
+             "façade : la poutre reste une **travée unique de 8,03 m**, isostatique. Sa flèche à long terme "
+             "ressort à 17,6 mm (L/457) ; elle respecte le critère L/250 et une **contre-flèche de coffrage de "
+             "20 mm** est prescrite pour tenir le critère L/500 vis-à-vis de la verrière (DOC-03 §3.4)."),
     ("bullets", [
-        "d'un côté sur le **voile BA mitoyen** par un appui encastré partiel (armatures en attente) ;",
-        "de l'autre sur le **poteau BA 25 × 25** de la verrière, par un appui simple avec appareil d'appui "
-        "glissant (platine + feutre téflon) afin de permettre la libre rotation et la dilatation thermique.",
+        "d'un côté, sur le **voile BA mitoyen**, par un appui encastré partiel (armatures en attente) ;",
+        "de l'autre, sur le **poteau BA 25 × 25** situé à 2,00 m du nu de façade, par un appui simple "
+        "(platine + appareil d'appui) ;",
+        "la **dalle de terrasse** est, quant à elle, appuyée sur le **mur de façade conservé** par un appareil "
+        "d'appui glissant (platine + feutre téflon) afin de permettre la libre rotation et la dilatation "
+        "thermique ; elle franchit 2,00 m entre la façade et la poutre puis se poursuit en **porte-à-faux de "
+        "1,20 m** jusqu'à la verrière.",
     ]),
     ("p", "Ces dispositions sont détaillées dans la note de calculs (DOC-03, chapitre 1) et sur les plans "
           "PL-02 (coffrage) et PL-04 (ferraillage)."),
@@ -555,6 +578,10 @@ BLOCKS = [
           "poutrelle** (zéro chevêtre). Cela suppose de connaître précisément l'entraxe réel des solives, qui "
           "n'est pas documenté sur les plans."),
     ("h2", "6.2 Zone de tolérance d'implantation"),
+    ("p", "**Arbitrage du 11 novembre 2026.** La position de la trappe est estimée à partir des plans de projet, "
+          "puis **entourée d'un nuage de révision** sur les plans d'exécution (PL-01 à PL-03) : le nuage "
+          "matérialise le caractère provisoire de l'implantation et l'obligation de relevé d'entraxe avant "
+          "tracé définitif. Il ne s'agit pas d'une réserve de conception mais d'une **consigne d'exécution**."),
     ("p", "Les plans d'exécution définiront non pas une position figée, mais une **zone de tolérance** à "
           "l'intérieur de laquelle la trappe peut être décalée sans conséquence structurelle. Cette zone est "
           "définie comme suit :"),
@@ -639,7 +666,7 @@ BLOCKS = [
     ("note", "**Points d'arrêt bloquants (PA).** PA-1 : réception du sol de fondation des puits. "
              "PA-2 : contrôle du ferraillage de la longrine sous D1. PA-3 : PV de résistance du béton à 28 j "
              "avant toute démolition. PA-4 : contrôle du matage et du boulonnage des profilés. PA-5 : contrôle du "
-             "ferraillage de la poutre retroussée. PA-6 : essai de mise en eau de la terrasse. Chaque point "
+             "ferraillage de la poutre-acrotère. PA-6 : essai de mise en eau de la terrasse. Chaque point "
              "d'arrêt fait l'objet d'une fiche signée et ne peut être levé que par le BET."),
 
     ("h1", "10. Analyse des risques d'exécution"),
@@ -653,9 +680,11 @@ BLOCKS = [
             ["BET ↔ Architecte (AARKA)", "Position du poteau BA de la verrière (écart E-01)",
              "Arbitrage écrit avant la Tâche 3 ; si la position change, révision de la portée de la poutre."],
             ["BET ↔ Charpentier", "Descentes de charges de la charpente (H-06)",
-             "Note du charpentier à fournir avant la Tâche 2 ; à défaut, hypothèse forfaitaire de 250 kg/m²."],
+             "**Accepté le 11/11/2026** : hypothèse forfaitaire de 250 kg/m² retenue ; note à fournir pour "
+             "actualisation."],
             ["BET ↔ Verriériste", "Charges d'appui de la verrière (H-18)",
-             "Fiche technique et plan de charge à fournir avant la Tâche 2."],
+             "**Accepté le 11/11/2026** : charges forfaitaires retenues ; fiche technique à fournir pour "
+             "actualisation."],
             ["BET ↔ Géotechnicien", "Étude G2 et réception du sol de fondation",
              "Campagne de sondages en phase 0 ; PV de réception en phase 2."],
             ["BET ↔ Entreprise", "Modes opératoires, phasage, points d'arrêt",
@@ -681,18 +710,20 @@ BLOCKS = [
         "la **descente des deux puits de l'extension à l'arase NGF 39,02**, sans générer de poussée sur les murs "
         "de cave existants.",
     ]),
-    ("p", "**Le démarrage des travaux est subordonné à la levée des hypothèses H-01, H-08, H-09, H-10, H-14, "
-          "H-15 et H-16** par les sondages décrits dans le registre de la note DOC-01 (chapitre 8)."),
+    ("p", "**Le démarrage des travaux est subordonné à la levée des hypothèses H-08, H-09, H-10, H-14 et "
+          "H-15** par les sondages décrits dans le registre de la note DOC-01. Les hypothèses **H-01, H-06, "
+          "H-16 et H-18** ont été levées par les arbitrages du maître d'ouvrage du 11 novembre 2026 "
+          "(DOC-01, chapitre 11)."),
     ("h2", "12.1 Livrables de la Tâche 1 et conditions de passage à la Tâche 2"),
     ("p", "La Tâche 1 est close par la remise des deux notes suivantes, établies en **ISO A4 portrait** et "
           "livrées systématiquement dans les deux formats **.docx** et **.pdf** : **DOC-01** (note d'hypothèses "
           "générales et registre des hypothèses complémentaires) et **DOC-02** (présente note méthodologique "
           "d'exécution et de phasage)."),
     ("bullets", [
-        "**Conditions de passage à la Tâche 2** : validation des hypothèses de charges, de matériaux et de sol ; "
-        "arbitrage sur la position du poteau BA de la verrière (écart E-01) ; réception des fiches techniques du "
-        "charpentier et du verriériste (H-06 et H-18) ; programmation des sondages H-01, H-08, H-09, H-10, H-14, "
-        "H-15 et H-16.",
+        "**Conditions de passage à la Tâche 2** : **satisfaites** — les arbitrages du 11 novembre 2026 ont levé "
+        "l'écart E-01 (poteau repositionné sous la poutre) et les hypothèses H-01, H-06, H-16 et H-18. Restent à "
+        "programmer les sondages H-08, H-09, H-10, H-14 et H-15, non bloquants pour la Tâche 2 mais nécessaires "
+        "avant exécution.",
         "**Documents à produire en Tâche 2** : DOC-03 (note de calculs structurelle détaillée et avant-métré), "
         "en .docx et .pdf.",
     ]),

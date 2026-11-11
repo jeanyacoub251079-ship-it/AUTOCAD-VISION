@@ -81,8 +81,15 @@ def _split_bold(text: str):
 
 
 def plain(text: str) -> str:
-    """Retire les balises <sub>/<sup> (non supportees par les deux moteurs)."""
-    return re.sub(r"</?(sub|sup)>", "", text)
+    """Remplace les balises <sub>/<sup> par une notation lineaire lisible.
+
+    Les deux moteurs de rendu (python-docx et reportlab) ne gerent pas les
+    exposants typographiques : `<sub>ELU</sub>` deviendrait sinon `ELU`, colle
+    au caractere precedent et illisible. On le convertit donc en `_ELU`, et
+    `<sup>x</sup>` en `^x`, notation usuelle des notes de calcul.
+    """
+    text = re.sub(r"<sub>(.*?)</sub>", r"_\1", text)
+    return re.sub(r"<sup>(.*?)</sup>", r"^\1", text)
 
 
 def _pdf_rich(text: str) -> str:
@@ -287,7 +294,7 @@ class DocxWriter:
             for i, txt in enumerate(header):
                 cells[i].text = ""
                 par = cells[i].paragraphs[0]
-                r = par.add_run(str(txt))
+                r = par.add_run(plain(str(txt)))
                 r.bold = True
                 r.font.size = Pt(fsize)
                 r.font.color.rgb = RGBColor.from_string("FFFFFF")
@@ -553,10 +560,22 @@ class PdfWriter:
                              colors.HexColor("#" + GRIS)))
         t = Table(data, colWidths=cw, repeatRows=1 if header else 0)
         t.setStyle(TableStyle(cmds))
-        self.story.append(t)
+        # La legende est solidaire du tableau : on evite qu'elle se retrouve
+        # seule en tete de page suivante quand le tableau se termine en bas
+        # de page.
+        cap = None
         if spec.get("caption"):
-            self.story.append(Paragraph(_pdf_rich(spec["caption"]), self.st["cap"]))
+            cap = Paragraph(_pdf_rich(spec["caption"]), self.st["cap"])
+        if cap is not None:
+            keep = [t, cap]
+            # si le tableau est court, on garde le tout ensemble
+            if len(data) <= 14:
+                self.story.append(KeepTogether(keep))
+            else:
+                self.story.append(t)
+                self.story.append(cap)
         else:
+            self.story.append(t)
             self.story.append(Spacer(1, 5))
 
     def cover(self, title_lines, subtitle, info_rows, ref_bloc):

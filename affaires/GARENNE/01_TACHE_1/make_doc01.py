@@ -233,12 +233,14 @@ T_REGISTRE = {
     "header": ["N°", "Sujet", "Hypothèse retenue par le BET", "Justification / conséquence", "Validation sur site"],
     "widths": [6, 18, 34, 28, 14],
     "rows": [
-        ["H-01", "Épaisseur et largeur de la fondation filante existante sous D1",
-         "Semelle filante continue en meulière hourdée, largeur **0,50 m**, hauteur 0,40 m, arase inférieure NGF 39,02 ; "
-         "béton de propreté absent.",
-         "Aucune coupe ne montre la fondation sous D1 (zone non excavée, Coupe 01). La longrine de répartition BA sera "
-         "calculée pour reprendre la totalité des charges sur une bande de 0,50 m minimum.",
-         "**Sondage obligatoire** : fouille en pied de mur sur 1,00 m de long, 2 fosses (entrée et bureau)."],
+        ["H-01", "Nature et largeur de la fondation filante existante sous D1",
+         "Semelle filante **continue en meulière hourdée**, largeur 0,50 m, hauteur 0,40 m, arase inférieure "
+         "NGF 39,02 ; béton de propreté absent.",
+         "**Hypothèse LEVÉE par le maître d'ouvrage le 11/11/2026 : fondation de type meulière continue.** "
+         "Aucune coupe ne montre la fondation sous D1 (zone non excavée, Coupe 01). La longrine de répartition BA "
+         "est calculée pour reprendre la totalité des charges sur une bande de 0,50 m minimum, sans élargissement.",
+         "**Dit du maître d'ouvrage** — contrôle visuel en pied de mur lors de l'ouverture des fouilles, sans "
+         "caractère bloquant."],
         ["H-02", "Continuité de la fondation sous D1 au droit des poteaux BA",
          "Fondation filante **continue** sous toute la longueur du mur D1 (pas de discontinuité ni de regard).",
          "Condition de validité du schéma de longrine de répartition ; en cas de discontinuité, reprise par semelle "
@@ -258,7 +260,8 @@ T_REGISTRE = {
          "Plancher bois de 20 cm, G₀ = 300 kg/m², solives 18 × 20 cm à entraxe 45 cm, portée 3,55 à 3,65 m.",
          "Valeur imposée G₀ = 300 kg/m². Conditionne le dimensionnement des profilés D2, D3, D4, D5.",
          "Sondage en sous-face (RDC) après dépose des faux-plafonds."],
-        ["H-06", "Descente de charges de la charpente bois des combles",
+        ["H-06", "Descente de charges de la charpente bois des combles "
+                 "(**validée par le maître d'ouvrage le 11/11/2026**)",
          "Charpente à fermettes / pannes sur murs gouttereaux et refends ; charge totale 250 kg/m² en projection, "
          "dont 110 kg/m² permanente et 140 kg/m² climatique.",
          "La charpente est hors mission mais ses charges sont reprises intégralement dans les descentes de charges "
@@ -286,12 +289,13 @@ T_REGISTRE = {
          "non vide ou instable interdirait le scellement.",
          "**Sondage obligatoire** : dépose du chapeau et passage caméra, plus essai de charge d'ancrage."],
         ["H-11", "Position du poteau BA de la verrière",
-         "Poteau **25 × 25 cm** implanté dans la façade latérale ouest de la verrière, à **2,01 m du nu extérieur de "
-         "la verrière**, soit 1,19 m du nu de la façade existante (mesure DXF : y = −10624).",
-         "Le cahier des charges mentionne « 2,00 m en avant de la façade existante » ; le mesurage sur DXF donne "
-         "1,19 m depuis la façade existante et 2,01 m depuis le nu de la verrière. L'écart est signalé (voir § 9) ; "
-         "la position DXF est retenue car elle est cohérente avec les cotes 320 / 86 / 129 du plan P08b.",
-         "**À arbitrer avec l'architecte** avant Tâche 3 (impact sur la portée de la poutre retroussée)."],
+         "Poteau **25 × 25 cm** implanté à **2,00 m du nu de la façade existante**, sous la poutre-acrotère "
+         "(décision du maître d'ouvrage du 11/11/2026).",
+         "Le cahier des charges indique « 2,00 m en avant de la façade existante » ; le DXF plaçait l'axe à "
+         "1,19 m du nu de façade, soit 2,01 m du nu de la verrière — la coïncidence des deux lectures avait "
+         "conduit à retenir la position DXF. L'arbitrage E-01 fixe définitivement la position à 2,00 m.",
+         "**Position arrêtée le 11/11/2026** — reprise dans `niveaux_retenus.py` "
+         "(`POS_POTEAU_FAÇADE = 2,00 m`), source unique pour les notes et les plans."],
         ["H-12", "Nature et portance du mur mitoyen côté voisin",
          "Mur mitoyen en meulière de 35 cm, en bon état, capable de reprendre les charges de la poutre retroussée "
          "au moyen d'un voile BA solidaire claveté.",
@@ -312,16 +316,20 @@ T_REGISTRE = {
          "Un réseau non repéré impose un dévoiement ou un fourreau, avec impact sur le planning.",
          "**DT-DICT obligatoire** + sondages manuels avant terrassement."],
         ["H-16", "Entraxe des solives pour l'implantation de la trappe à linge",
-         "Entraxe des solives de **45 cm** (solin 40 cm) sur les trois niveaux (Combles, R+1, RDC).",
-         "L'ouverture de 45 × 40 cm doit tenir entre deux solives : un entraxe de 45 cm avec solives de 8 cm laisse "
-         "une lumière libre de 37 cm, insuffisante ; l'ouverture sera donc réduite à **40 × 36 cm** ou décalée.",
-         "**Sondage obligatoire** : relevé de l'entraxe réel à chaque niveau avant tracé d'exécution."],
+         "La trappe est **repérée sur les plans de projet** (P08b) aux trois niveaux : Combles x ≈ 46491, "
+         "R+1 x ≈ 42890, RDC x ≈ 48491, avec une ouverture de 30 × 31 cm. Entraxe des solives estimé à **45 cm** "
+         "(solin 40 cm).",
+         "**Arbitrage du maître d'ouvrage du 11/11/2026** : la position est estimée à partir des plans, puis "
+         "**entourée d'un nuage de révision sur les plans d'exécution** pour signifier qu'elle reste à confirmer. "
+         "Aucune solive ne doit être coupée : l'ouverture reste calée entre deux solives.",
+         "**Relevé d'entraxe obligatoire** avant tracé d'exécution ; report au nuage sur PL-01 à PL-03."],
         ["H-17", "Continuité du plancher haut du RDC au droit de l'extension",
          "Le plancher haut du RDC existant est **conservé** et prolongé par la dalle BA de terrasse, avec joint de "
          "désolidarisation et appui simple sur le mur de façade conservé.",
          "Évite de transmettre les déformations de l'extension aux planchers anciens.",
          "Sans objet (choix de conception validé en réunion)."],
-        ["H-18", "Caractéristiques de la verrière (hors mission)",
+        ["H-18", "Caractéristiques de la verrière (hors mission) "
+                 "(**validée par le maître d'ouvrage le 11/11/2026**)",
          "Poids propre de la verrière et de son ossature aluminium : **0,60 kN/m²** en couverture, "
          "0,45 kN/m² en façade ; charges transmises ponctuellement aux appuis BA.",
          "La verrière est hors mission mais ses charges d'appui sont intégrées à la descente de charges de la "
@@ -369,7 +377,10 @@ T_ECARTS = {
         ["E-01", "Position du poteau BA de la verrière",
          "Le cahier des charges indique « 2,00 m en avant de la façade existante ». Le DXF place l'axe du poteau "
          "à 1,19 m du nu de la façade existante (2,01 m du nu de la verrière).",
-         "Position DXF retenue (hypothèse H-11) ; arbitrage architecte demandé avant Tâche 3."],
+         "**ÉCART LEVÉ le 11/11/2026** — Le maître d'ouvrage a confirmé que le poteau est **déplacé à 2,00 m du "
+         "nu de façade, sous la poutre**, dont il devient l'appui d'extrémité. La poutre-acrotère reste donc une "
+         "**travée unique de 8,03 m** entre le poteau et le voile mitoyen (voir DOC-03 §3.4). **Cette position "
+         "est contractuelle.**"],
         ["E-02", "Largeur de l'extension",
          "Trois valeurs coexistent : 803 cm (façade), 826 cm (emprise intérieure) et 822 cm.",
          "Valeur de calcul retenue : **8,03 m** (cote de façade, la plus défavorable pour la poutre retroussée)."],
@@ -434,7 +445,7 @@ BLOCKS = [
             ["P09a / P09b", "Coupe 01 — État actuel / Projet (passant par D1)", "1/50",
              "Absence de sous-sol sous D1, fondation filante, hauteurs 262"],
             ["P10a / P10b", "Coupe 02 — État actuel / Projet (Salon, extension, D2)", "1/50",
-             "Poutre retroussée, poteau BA, acrotère 44,75, gouttière 44,18"],
+             "Poutre-acrotère, poteau BA à 2,00 m, arase 44,75, gouttière 44,18"],
             ["P11a / P11b", "Coupe 03 — État actuel / Projet (Salle à manger, extension, D3 à D6)", "1/50",
              "Croisement D3/D5, « POTEAU BÉTON », descentes de charges vers le sous-sol"],
             ["DXF", "DCE_58 RUE DE L'AIGLE_LA GARENNE COLOMBES MODIF 05112026-export.dxf", "—",
@@ -482,8 +493,8 @@ BLOCKS = [
     ("table", T_OUV),
     ("figure", os.path.join(FIG, "fig07_extension_plan.png"),
      "Figure 3 — Extension en façade avant : plan de principe coté (cotes en cm relevées au DXF). "
-     "La poutre retroussée franchit les 8,03 m entre le voile mitoyen BA et le poteau BA de 25 cm noyé "
-     "dans la verrière.", 152),
+     "La poutre-acrotère franchit les 8,03 m entre le voile mitoyen BA et le poteau BA de 25 cm, "
+     "repositionné à 2,00 m du nu de façade.", 152),
     ("figure", os.path.join(FIG, "fig05_reperage_rdc.png"),
      "Figure 1 — Plan du RDC, état actuel : repérage des six reprises en sous-œuvre D1 à D6 et des portées "
      "libres mesurées. Fond de plan extrait du DXF AARKA ; report des repères par le BET.", 120),
@@ -504,8 +515,8 @@ BLOCKS = [
         "fondation de reprise sont nécessaires de part et d'autre de cette porte.",
         "**Poteau BA noyé dans la verrière.** Sur la planche P08b, l'élément apparaît graphiquement comme un montant "
         "de menuiserie ; la coupe P11b le désigne explicitement comme « POTEAU BÉTON ». Il s'agit d'un poteau "
-        "structurel de 25 × 25 cm, situé à 2,01 m du nu extérieur de la verrière, qui constitue l'appui avant de "
-        "la poutre retroussée.",
+        "structurel de 25 × 25 cm, situé à **2,00 m du nu de la façade existante** (position arrêtée le "
+        "11/11/2026), qui constitue l'appui d'extrémité de la poutre-acrotère.",
         "**Trappe à linge traversante.** Elle doit être positionnée entre deux solives existantes sur les trois "
         "niveaux (Combles → R+1 → RDC), sans aucun chevêtre. Cela suppose une tolérance d'implantation et un "
         "sondage préalable de l'entraxe réel des solives.",
@@ -559,13 +570,16 @@ BLOCKS = [
     ("table", T_ECARTS),
     ("h2", "9.1 Conséquences sur les tâches suivantes"),
     ("bullets", [
-        "**Écart E-01 (position du poteau BA)** : la Tâche 2 (note de calcul) est menée avec la position issue du "
-        "DXF. Un arbitrage différent modifierait la portée de la poutre retroussée (2,01 m au lieu de 1,19 m de "
-        "porte-à-faux) sans remettre en cause le schéma statique ; le dimensionnement serait révisé par avenant.",
+        "**Écart E-01 (position du poteau BA)** : **levé le 11/11/2026** (voir chapitre 11) — le poteau est "
+        "déplacé à **2,00 m du nu de façade**, sous la poutre-acrotère dont il devient l'appui d'extrémité. "
+        "La note de calcul de la Tâche 2 est menée avec cette position.",
         "**Écart E-03 (trappe à linge)** : la Tâche 3 (plans généraux) intégrera une zone de tolérance "
-        "d'implantation et non une position figée.",
-        "**Hypothèses H-01, H-08, H-09, H-10, H-14, H-15** : conditionnent directement les Tâches 2 et 4. Les "
-        "sondages correspondants doivent être réalisés **avant** le démarrage de la Tâche 4 (plans de détails).",
+        "d'implantation et non une position figée, matérialisée par un nuage de révision.",
+        "**Hypothèse H-01** : **levée le 11/11/2026** — fondation de type meulière continue. Le schéma de "
+        "longrine de répartition est validé sans élargissement.",
+        "**Hypothèses H-08, H-09, H-10, H-14, H-15** : ne conditionnent plus l'établissement de la Tâche 2 "
+        "(les valeurs prudentes retenues sont suffisantes) mais restent nécessaires **avant** le démarrage de "
+        "la Tâche 4 (plans de détails).",
     ]),
 
     ("h1", "10. Limites de prestation et réserves"),
@@ -583,15 +597,63 @@ BLOCKS = [
         "calcul de la Tâche 2 seront révisées en cas de valeurs d'essais inférieures.",
     ]),
 
-    ("h1", "11. Conclusion et validation"),
+    ("pagebreak",),
+    ("h1", "11. Arbitrages du maître d'ouvrage du 11 novembre 2026"),
+    ("p", "À l'issue de la remise de la Tâche 1, le maître d'ouvrage a rendu quatre arbitrages sur les "
+          "hypothèses et écarts qui conditionnaient la poursuite de la mission. Ils sont repris ci-dessous et "
+          "**se substituent aux hypothèses initialement retenues par le BET** ; le registre du chapitre 8 et le "
+          "tableau des écarts du chapitre 9 ont été mis à jour en conséquence."),
+    ("table", {
+        "caption": "Tableau — Arbitrages rendus par le maître d'ouvrage et incidences sur les études.",
+        "header": ["Réf.", "Objet de l'arbitrage", "Décision du maître d'ouvrage",
+                   "Incidences sur les études"],
+        "widths": [10, 26, 34, 38],
+        "rows": [
+            ["**E-01**", "Position du poteau BA de la verrière",
+             "**Le poteau sera déplacé à environ 2,00 m de la façade, pour être sous la poutre.**",
+             "Le poteau devient l'**appui d'extrémité** de la poutre, côté façade : la poutre-acrotère reste une "
+             "**travée unique de 8,03 m** entre le poteau et le voile mitoyen. La portée étant inchangée, la "
+             "flèche reste de l'ordre de L/460 ; elle est reprise par une **contre-flèche de coffrage de 20 mm** "
+             "(DOC-03 §3.4). La position à 2,00 m du nu de façade est contractuelle."],
+            ["**H-06**", "Descente de charges de la charpente bois",
+             "**Accordé** — l'hypothèse forfaitaire du BET est acceptée.",
+             "Les charges de charpente restent celles de la note DOC-01 (250 kg/m² répartis G/Q). Aucune reprise "
+             "de calcul n'est nécessaire ; les valeurs seront actualisées sur réception de la note du charpentier."],
+            ["**H-18**", "Caractéristiques de la verrière (hors mission)",
+             "**Accordé** — l'hypothèse forfaitaire du BET est acceptée.",
+             "Les charges d'appui de la verrière (0,60 kN/m² en couverture, 0,45 kN/m² en façade) sont intégrées "
+             "telles quelles à la descente de charges de la poutre et du poteau."],
+            ["**H-16**", "Position de la trappe à linge",
+             "**Estimer la position à partir des plans, puis entourer la trappe d'un nuage sur les plans "
+             "d'exécution.**",
+             "La trappe est repérée aux trois niveaux (Combles x ≈ 46491, R+1 x ≈ 42890, RDC x ≈ 48491) avec une "
+             "ouverture de 30 × 31 cm. Sur PL-01 à PL-03, la trappe sera **entourée d'un nuage de révision** "
+             "signalant que la position reste à confirmer par relevé d'entraxe. Aucune solive n'est coupée."],
+            ["**H-01**", "Nature de la fondation existante sous D1",
+             "**Meulière continue.**",
+             "La fondation filante est réputée continue sur toute la longueur du mur. Le schéma de longrine de "
+             "répartition est validé sans élargissement ; le contrôle en pied de mur devient un simple contrôle "
+             "visuel non bloquant (DOC-03 §4.3 et §4.5)."],
+        ],
+    }),
+    ("note", "**Conséquence sur le déroulé de la mission.** Les arbitrages étant rendus, la **Tâche 2** "
+             "(note de calculs et avant-métré) a été engagée sur cette base. Les hypothèses qui restent à lever "
+             "par sondage sont : H-08 (résistance de la maçonnerie), H-09 et H-10 (constitution des planchers), "
+             "H-14 et H-15 (réseaux enterrés). **Aucune d'entre elles n'est bloquante** pour la note de "
+             "calculs ; elles le deviendront pour l'exécution, en particulier H-08 dont dépend la contrainte "
+             "admissible sous les semelles filantes existantes (DOC-03 §4.3)."),
+
+    ("h1", "12. Conclusion et validation"),
     ("p", "La géométrie de l'affaire est désormais **entièrement tracée et vérifiée** : les six reprises en "
           "sous-œuvre D1 à D6, l'emprise de l'extension et les niveaux altimétriques sont connus avec une "
           "précision centimétrique. Les hypothèses de charges, de matériaux et de sol sont fixées. Le registre "
-          "des 24 hypothèses complémentaires (tableau 9) constitue la feuille de route des sondages à réaliser "
+          "des 24 hypothèses complémentaires constitue la feuille de route des sondages à réaliser "
           "avant exécution."),
-    ("p", "**La Tâche 1 est terminée.** Les hypothèses ci-dessus sont soumises à la validation du maître d'ouvrage "
-          "et du maître d'œuvre. Toute observation devra être formulée avant le lancement de la Tâche 2 "
-          "(note de calculs et avant-métré), dont les résultats en dépendent directement."),
+    ("p", "Les **arbitrages du 11 novembre 2026** (chapitre 11) ont levé les points bloquants : le poteau de la "
+          "verrière est déplacé à **2,00 m du nu de façade, sous la poutre-acrotère** dont il devient l'appui "
+          "d'extrémité, les charges de charpente et de verrière sont acceptées, la trappe est positionnée au "
+          "nuage de révision et la fondation sous D1 est confirmée en meulière continue. **La Tâche 2 a été "
+          "établie sur cette base** ; la note de calculs DOC-03 en tire toutes les conséquences."),
     ("note", "**Documents du dossier d'exécution** — Tâche 1 : DOC-01 (présent document, note d'hypothèses) et "
              "DOC-02 (note méthodologique d'exécution et de phasage). Tâche 2 : DOC-03 (note de calculs et "
              "avant-métré). Tâche 3 : PL-01 à PL-03 (plans généraux au 1/50). Tâche 4 : PL-04 et PL-05 "

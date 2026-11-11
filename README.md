@@ -140,3 +140,65 @@ pas de PSMT/computation sismique modale, un seul matériau (BA), pas de
 signature électronique ni d'hébergement multi-utilisateurs. Les valeurs
 normatives codées sont indicatives et éditables dans `structai/calc/codes.py`
 — la responsabilité du dimensionnement reste à l'ingénieur.
+
+## Affaire GARENNE — 58 rue de l'Aigle, 92250 La Garenne-Colombes
+
+Réhabilitation lourde d'une maison en meulière : reprises en sous-œuvre
+RDC D1 à D6, extension en façade avant (salon d'été + terrasse accessible)
+et modification des combles Mansart. Livrables du BET dans `affaires/GARENNE/`.
+
+| Tâche | Contenu | Livrables | État |
+|---|---|---|---|
+| 1 | Reconnaissance DXF + hypothèses | `DOC-01` (note d'hypothèses), `DOC-02` (méthodologie & phasage) | ✅ livrée |
+| 2 | Calculs + métrés | `DOC-03` (note de calculs, 13 p.) + `calculs.py` | ✅ livrée |
+| 3 | Plans généraux 1/50 | `PL-01`, `PL-02`, `PL-03` (.dxf + .pdf) | ⏸ après GO |
+| 4 | Détails 1/20 & 1/10 | `PL-04`, `PL-05` | ⏸ après GO |
+
+### Organisation
+
+```
+affaires/GARENNE/
+  00_SOURCES/   niveaux_retenus.py (source unique des NGF et de la position
+                du poteau), geometrie_dxf.json, planches AARKA (Drive)
+  01_TACHE_1/   common_doc.py (moteur DOCX/PDF), make_doc01.py, make_doc02.py,
+                make_schemas.py, make_figures.py, DOC-01*, DOC-02*, figures/
+  02_TACHE_2/   calculs.py (moteur EC0→EC7), make_doc03.py, make_figures.py,
+                calculs_resultats.json, DOC-03*, figures/
+```
+
+### Arbitrages du maître d'ouvrage (11/11/2026)
+
+* **E-01** — le poteau BA 25 × 25 de la verrière est **déplacé à 2,00 m du nu
+  de la façade, sous la poutre** ; il en devient l'appui d'extrémité.
+* **H-06 / H-18** — forfait charpente 250 kg/m² et charges de verrière
+  acceptés tels quels.
+* **H-16** — trappe à linge estimée depuis les plans, à entourer d'un
+  **nuage de révision** sur les plans d'exécution.
+* **H-01** — fondation sous D1 en **meulière continue**, conservée.
+
+Sondages restant à lever avant exécution : **H-08, H-09, H-10, H-14, H-15**.
+
+### Résultats clés de la Tâche 2
+
+* Reprises D1–D6 : IPE 160 à IPE 300 en **S355**, taux de flexion 0,554 à
+  0,880, flèches ≤ 0,05 mm.
+* **Poutre-acrotère BA 30 × 67 cm**, arase NGF 44,75, travée unique de
+  8,03 m entre le voile mitoyen et le poteau à 2,00 m ; M<sub>ELU</sub> =
+  262,6 kN·m, **4 HA 20** + étriers HA 8 e = 175 mm ; flèche à long terme
+  17,55 mm (L/458) → **contre-flèche de coffrage de 20 mm**.
+* Voile mitoyen 20 cm : K<sub>0</sub> = 0,50, M = 29,23 kN·m/ml,
+  **4 HA 12** par face, V<sub>Ed</sub> ≤ V<sub>Rd,c</sub>.
+* Puits Ø 2,05 / 2,20 m à −2,40 m : σ<sub>ELS</sub> = 0,100 / 0,099 MPa
+  (marge 1 à 2 % sur le seuil de 0,10 MPa — point sensible).
+* Avant-métré : 19,79 m³ de béton armé, 2,37 t d'aciers HA, 0,45 t de
+  profilés, 17,04 m³ de terrassement, 48 étais.
+
+### Régénérer les livrables
+
+```bash
+./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/calculs.py    # résultats
+./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/make_figures.py
+./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/make_doc03.py
+./venv_auto/bin/python affaires/GARENNE/01_TACHE_1/make_doc01.py
+./venv_auto/bin/python affaires/GARENNE/01_TACHE_1/make_doc02.py
+```

@@ -286,7 +286,8 @@ def fig_extension():
             "Poutre retroussée BA  —  portée 8,03 m  —  acrotère NGF 44,75",
             ha="center", fontsize=8, color="#C00000", fontweight="bold")
 
-    # --- axes
+    # --- axes (les axes 01 a 03 encadrent la facade ; le poteau est un
+    # element interieur, cote depuis le nu de facade et non depuis un axe)
     for i, x in enumerate([0, 387, L]):
         ax.plot([x, x], [60, 40], color="#7f7f7f", lw=0.7, ls="-.")
         ax.plot([x, x], [-P - 60, -P - 40], color="#7f7f7f", lw=0.7, ls="-.")
@@ -320,6 +321,11 @@ def fig_extension():
     dim_h(0, L, 112, "803")
     dim_v(0, -Y_POT, -46, "119")
     dim_v(-Y_POT, -P, -46, "201")
+    # cote horizontale de l'axe du poteau depuis le nu de la facade (axe 01)
+    ax.annotate("", xy=(0, -Y_POT - 78), xytext=(0, -Y_POT - 78),
+                arrowprops=dict(arrowstyle="-", color="none"))
+    ax.plot([0, 0], [-Y_POT - 62, -Y_POT - 34], color="#7f7f7f", lw=0.7, ls=":")
+    ax.plot([0, 0], [-Y_POT - 62, -Y_POT - 34], color="#7f7f7f", lw=0.7, ls=":")
     dim_v(0, -P, L + EP_MIT + 150, "320")
 
     # --- reperes des baies
