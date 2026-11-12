@@ -146,9 +146,11 @@ def tab_poutre():
         widths=[58, 26, 20, 56],
         rows=[
             ["Portée (travée unique)", f(p["L"]), "m",
-             "voile mitoyen ↔ poteau BA à 2,00 m"],
+             "voile de rive ↔ console (poteau à 1,30 m)"],
             ["Section de l'âme", f"{int(p['b']*100)} × {int(p['h']*100)}", "cm",
              f"arase NGF {f(p['ngf_haut'],2)} — sous-face {f(p['ngf_bas'],2)}"],
+            ["Bande de dalle reprise", f(p["bande"]), "m",
+             "poutre en limite de dalle (2,00/2)"],
             ["Largeur collaborante b<sub>eff</sub>", f(p["beff"]), "m",
              "EC2 §5.3.2.1"],
             ["Charge ELU", f(p["q_elu"], 1), "kN/m", "dalle reprise + poids propre"],
@@ -176,8 +178,43 @@ def tab_poutre():
              "OK" if p["ok_250"] else "NON"],
             ["Contre-flèche de coffrage", f(p["contre_fleche"], 0), "mm",
              "compense la flèche à long terme"],
+            ["Flèche résiduelle (LT − contre-flèche)",
+             f(p["fleche_residuelle"]), "mm",
+             "OK" if p.get("ok_residuel") else "NON"],
             ["**Vérification de la flèche**", "**CONFORME**", "—",
              "L/250 + contre-flèche → L/500"],
+        ],
+    )
+
+
+def tab_poutre_perp():
+    p = EXT["poutre_perpendiculaire"]
+    return dict(
+        caption="Tableau 4 — Poutre perpendiculaire 25 × 67 cm : travée de 1,30 m "
+                "entre façade et poteau, puis console de 0,70 m.",
+        header=["Grandeur", "Valeur", "Unité", "Critère / observation"],
+        widths=[58, 26, 20, 56],
+        rows=[
+            ["Travée façade ↔ poteau", f(p["L_travee"]), "m", "poteau à 1,30 m"],
+            ["Porte-à-faux poteau ↔ rive", f(p["L_console"]), "m",
+             "about de la poutre de 8,03 m"],
+            ["Section", f"{int(p['b']*100)} × {int(p['h']*100)}", "cm",
+             "même arase 44,75"],
+            ["Bande de dalle reprise", f(p["bande"]), "m", "largeur collaborante"],
+            ["Charge ELU", f(p["q"], 1), "kN/m", "dalle + poids propre"],
+            ["Réaction d'appui (poutre 8,03 m)", f(p["R_appui"], 1), "kN",
+             "charge concentrée en bout de console"],
+            ["Moment ELU en console", f(p["M_console"], 1), "kN·m",
+             "qL²/2 + R·L → cas dimensionnant"],
+            ["Moment ELU en travée", f(p["M_travee"], 1), "kN·m", "qL²/8"],
+            ["A<sub>s</sub> requis", f(p["As"]), "cm²", "nappe supérieure"],
+            ["Ferraillage retenu", p["armature"]["libelle"], "—",
+             f"A<sub>s</sub> = {f(p['armature']['As_cm2'])} cm²"],
+            ["Étriers", p["etriers"]["libelle"], "—",
+             f"V<sub>Rd,s</sub> = {f(p['etriers']['VRds'],1)} kN"],
+            ["Effort tranchant ELU", f(p["V"], 1), "kN", "à l'appui poteau"],
+            ["Bielles comprimées", f(p["VRdmax"], 1), "kN", "OK"],
+            ["**Vérification**", "**CONFORME**", "—", "ELU + ELS"],
         ],
     )
 
@@ -191,7 +228,7 @@ def tab_rso():
             m["profil"], f(m["taux_M"], 3), f(m["fleche"]),
         ])
     return dict(
-        caption="Tableau 4 — Synthèse du dimensionnement des profilés de reprise en "
+        caption="Tableau 5 — Synthèse du dimensionnement des profilés de reprise en "
                 "sous-œuvre D1 à D6 (acier S355).",
         header=["Rep.", "L (m)", "ép. (cm)", "h reprise (m)", "q<sub>ELU</sub> (kN/m)",
                 "M (kN·m)", "V (kN)", "Profilé retenu", "Taux M", "Flèche (mm)"],
@@ -209,7 +246,7 @@ def tab_rso_compare():
         rows.append([m["rep"], m["profil"], f(m["taux_M"], 3),
                      m2["profil"], f(m2["taux_M"], 3)])
     return dict(
-        caption="Tableau 5 — Incidence du choix de la nuance d'acier sur les profilés "
+        caption="Tableau 6 — Incidence du choix de la nuance d'acier sur les profilés "
                 "retenus.",
         header=["Rep.", "Profilé S355", "Taux S355", "Profilé S275", "Taux S275"],
         widths=[16, 42, 26, 42, 26],
@@ -225,7 +262,7 @@ def tab_flexion_detail():
             f(m["q_elu"], 1), f(m["q_els"], 1),
         ])
     return dict(
-        caption="Tableau 6 — Descente de charges linéiques sur chaque profilé "
+        caption="Tableau 7 — Descente de charges linéiques sur chaque profilé "
                 "(bande de plancher de 1,00 m).",
         header=["Rep.", "g mur (kN/m)", "g planchers (kN/m)", "q planchers (kN/m)",
                 "q<sub>ELU</sub> (kN/m)", "q<sub>ELS</sub> (kN/m)"],
@@ -237,7 +274,8 @@ def tab_flexion_detail():
 def tab_poteau():
     p = EXT["poteau"]
     return dict(
-        caption="Tableau 7 — Vérification du poteau BA 25 × 25 de la verrière.",
+        caption="Tableau 8 — Vérification du poteau BA 25 × 25 à 1,30 m du nu "
+                "de façade.",
         header=["Grandeur", "Valeur", "Unité", "Critère"],
         widths=[62, 34, 22, 42],
         rows=[
@@ -263,7 +301,8 @@ def tab_poteau():
 def tab_voile():
     v = EXT["voile"]
     return dict(
-        caption="Tableau 8 — Voile BA mitoyen ép. 20 cm : poussée des terres et ferraillage.",
+        caption="Tableau 9 — Voile BA de rive à créer, ép. 20 cm : poussée des "
+                "terres et ferraillage.",
         header=["Grandeur", "Valeur", "Unité", "Observation"],
         widths=[66, 26, 20, 48],
         rows=[
@@ -290,18 +329,20 @@ def tab_voile():
 def tab_dalle():
     d = EXT["dalle_verif"]
     return dict(
-        caption="Tableau 9 — Vérification de la dalle de toiture-terrasse ép. 20 cm "
-                "(travée de 2,00 m entre façade et poutre, console de 1,20 m "
-                "jusqu'à la verrière).",
+        caption="Tableau 10 — Vérification de la dalle de toiture-terrasse ép. 20 cm "
+                "(console de 1,70 m depuis la façade jusqu'à la poutre de rive).",
         header=["Grandeur", "Valeur", "Unité", "Critère / observation"],
         widths=[60, 26, 20, 54],
         rows=[
-            ["Portée entre façade et poutre", f(d["L"]), "m", "p<sub>ELU</sub>L²/8"],
-            ["Porte-à-faux côté verrière", f(d["L_console"]), "m",
+            ["Porte-à-faux depuis la façade", f(d["L"]), "m",
              "p<sub>ELU</sub>L²/2 — cas dimensionnant"],
-            ["Moment ELU en travée", f(d["M_travee"], 1), "kN·m/m", "—"],
-            ["Moment ELU en console", f(d["M_console"], 1), "kN·m/m",
-             "moment retenu"],
+            ["Débord au-delà de l'appui (poteau)", "0,70", "m",
+             "bordé par la poutre perpendiculaire"],
+            ["Largeur de terrasse", f(d["largeur"]), "m",
+             "poutre-acrotère comprise"],
+            ["Moment ELU à l'encastrement", f(d["M"], 1), "kN·m/m", "moment retenu"],
+            ["Effort tranchant ELU à l'appui", f(d["V"], 1), "kN/m",
+             "p<sub>ELU</sub>·L"],
             ["Moment réduit µ", f(d["mu"], 4), "—", "< 0,372"],
             ["A<sub>s</sub> requis", f(d["As"]), "cm²/m", "—"],
             ["Ferraillage retenu", d["armature"]["libelle"], "—",
@@ -318,6 +359,29 @@ def tab_dalle():
     )
 
 
+def tab_semelle_voile():
+    s_ = EXT["semelle_voile"]
+    return dict(
+        caption="Tableau 13 — Semelle filante neuve du voile de rive : vérification de "
+                "la contrainte de sol.",
+        header=["Grandeur", "Valeur", "Unité", "Critère"],
+        widths=[60, 28, 20, 52],
+        rows=[
+            ["Largeur d'assise B retenue", f(s_["B"], 2), "m",
+             "B<sub>ELS</sub> = " + f(s_["B_els"], 2) + " m"],
+            ["Hauteur de semelle h", f(s_["h"], 2), "m", "DTU 13.1"],
+            ["Hauteur utile d", f(s_["d"], 2), "m", "h − 0,05 m"],
+            ["Effort normal ELS", f(s_["N_els"], 1), "kN/ml",
+             "voile + poutre-acrotère"],
+            ["Effort normal ELU", f(s_["N_elu"], 1), "kN/ml", "1,35 G + 1,50 Q"],
+            ["Contrainte ELS", f(s_["sigma_els"], 3), "MPa", "≤ 0,100 MPa"],
+            ["Contrainte ELU", f(s_["sigma_elu"], 3), "MPa", "≤ 0,150 MPa"],
+            ["**Vérification**", "**OK**" if s_["ok_els"] and s_["ok_elu"] else "**NON**",
+             "—", "semelle admise"],
+        ],
+    )
+
+
 def tab_puits():
     rows = []
     for i, p in [(1, EXT["puits_1"]), (2, EXT["puits_2"])]:
@@ -327,7 +391,7 @@ def tab_puits():
             "OK" if (p["ok_els"] and p["ok_elu"]) else "NON",
         ])
     return dict(
-        caption="Tableau 10 — Puits de fondation en gros béton C16/20.",
+        caption="Tableau 11 — Puits de fondation en gros béton C16/20.",
         header=["Puits", "Diamètre (m)", "Profondeur (m)", "Poids propre (kN)",
                 "σ<sub>ELS</sub> (MPa)", "σ<sub>ELU</sub> (MPa)", "Vérif."],
         widths=[20, 30, 32, 36, 30, 30, 22],
@@ -338,7 +402,7 @@ def tab_puits():
 def tab_joint():
     j = EXT["joint"]
     return dict(
-        caption="Tableau 11 — Justification du joint de dilatation entre extension et "
+        caption="Tableau 12 — Justification du joint de dilatation entre extension et "
                 "bâtiment existant.",
         header=["Grandeur", "Valeur", "Unité", "Observation"],
         widths=[62, 28, 20, 50],
@@ -359,7 +423,7 @@ def tab_joint():
 def tab_longrine():
     l = EXT["longrine_D1"]
     return dict(
-        caption="Tableau 12 — Longrine de répartition sous D1 sur la fondation filante "
+        caption="Tableau 13 — Longrine de répartition sous D1 sur la fondation filante "
                 "existante.",
         header=["Grandeur", "Valeur", "Unité", "Observation"],
         widths=[62, 26, 22, 50],
@@ -394,7 +458,7 @@ def tab_ba_appuis():
         rows.append([f"Sommier {s['rep']}", "25 × 40", "—", "—",
                      s["armature"]["libelle"]])
     return dict(
-        caption="Tableau 13 — Récapitulatif des appuis en béton armé coulés en place.",
+        caption="Tableau 14 — Récapitulatif des appuis en béton armé coulés en place.",
         header=["Ouvrage", "Section (cm)", "N<sub>ELU</sub> (kN)", "σ (MPa)",
                 "Ferraillage"],
         widths=[46, 30, 30, 26, 46],
@@ -412,7 +476,7 @@ def tab_fondations():
             f(fo["sigma_jambage"], 3),
         ])
     return dict(
-        caption="Tableau 14 — Vérification de la contrainte sous les fondations filantes "
+        caption="Tableau 15 — Vérification de la contrainte sous les fondations filantes "
                 "en meulière existantes (hypothèse H-01 : meulière continue).",
         header=["Rep.", "ép. mur (cm)", "B assise (m)", "N<sub>ELS</sub> (kN/ml)",
                 "σ<sub>ELS</sub> (MPa)", "σ<sub>ELU</sub> (MPa)", "Vérif. globale",
@@ -431,7 +495,7 @@ def tab_repartition():
             "OK" if r["ok"] else "NON", r["As"]["libelle"],
         ])
     return dict(
-        caption="Tableau 15 — Longrines de répartition sous jambages : maîtrise de la "
+        caption="Tableau 16 — Longrines de répartition sous jambages : maîtrise de la "
                 "concentration de charge.",
         header=["Rep.", "Largeur (m)", "Ép. (cm)", "σ avant (kPa)", "σ après (kPa)",
                 "Vérif.", "Ferraillage"],
@@ -447,7 +511,7 @@ def tab_metre_beton():
                      f(l["L"]), f(l["V"])])
     rows.append(["**TOTAL BÉTON**", "—", "—", "—", f"**{f(MET['beton_total'])}**"])
     return dict(
-        caption="Tableau 16 — Avant-métré du béton armé coulé en place.",
+        caption="Tableau 17 — Avant-métré du béton armé coulé en place.",
         header=["Ouvrage", "Nombre", "Section (m)", "Longueur (m)", "Volume (m³)"],
         widths=[78, 22, 30, 30, 28],
         rows=rows,
@@ -460,7 +524,7 @@ def tab_metre_profiles():
         rows.append([rep, profil, f(poids, 1), f(L), f(poids * L, 0)])
     rows.append(["**TOTAL ACIER**", "—", "—", "—", f"**{f(MET['profiles_kg'],0)} kg**"])
     return dict(
-        caption="Tableau 17 — Avant-métré des profilés métalliques de reprise en "
+        caption="Tableau 18 — Avant-métré des profilés métalliques de reprise en "
                 "sous-œuvre.",
         header=["Rep.", "Profilé", "Poids (kg/m)", "Longueur (m)", "Poids total (kg)"],
         widths=[20, 50, 34, 34, 40],
@@ -470,18 +534,18 @@ def tab_metre_profiles():
 
 def tab_metre_synthese():
     return dict(
-        caption="Tableau 18 — Synthèse générale de l'avant-métré quantitatif.",
+        caption="Tableau 19 — Synthèse générale de l'avant-métré quantitatif.",
         header=["Poste", "Quantité", "Unité", "Observation"],
         widths=[72, 30, 20, 54],
         rows=[
             ["Béton armé C25/30 — appuis et extension", f(MET["beton_total"]), "m³",
              "jambages, poteaux, sommiers, voile, longrines"],
             ["Béton armé — dalle de terrasse", f(MET["dalle_terrasse"]), "m³",
-             "8,03 × 3,20 × 0,20"],
+             "8,03 × 2,00 × 0,20"],
             ["Aciers HA B500B", f(MET["acier_t"]), "t",
              "ratio moyen retenu 120 kg/m³"],
             ["Gros béton C16/20 — puits", f(MET["beton_puits"]), "m³",
-             "2 puits Ø 2,05 et 2,10 m"],
+             "2 puits Ø 1,35 et 1,75 m"],
             ["Terrassement des puits", f(MET["terrassement_puits"]), "m³",
              "en limite séparative — blindage obligatoire"],
             ["Profilés métalliques S355", f(MET["profiles_t"]), "t",
@@ -652,76 +716,83 @@ BLOCKS = [
         ],
     )),
 
-    ("h2", "3.3 Voile BA mitoyen de l'extension"),
-    ("p", "Le voile mitoyen, ép. 20 cm, est coulé contre le mur existant après piquage de "
-          "la surface et clavetage par des armatures HA10 tous les 0,40 m scellées "
-          "chimiquement. Il est encastré en pied dans le puits n° 2 et en tête dans la "
-          "dalle de terrasse, ce qui lui confère une raideur suffisante pour reprendre "
-          "la poussée du remblai **et** les efforts horizontaux de la poutre retroussée "
-          "en about."),
+    ("h2", "3.3 Voile BA de rive à créer"),
+    ("p", "Le voile de rive, **à créer**, ép. 20 cm, est élevé **en limite de "
+          "propriété, dans le prolongement du mur pignon**. Il n'existe pas "
+          "aujourd'hui : la version antérieure de l'étude le décrivait à tort comme "
+          "mitoyen et solidaire d'un mur existant. Il est **fondé sur une semelle "
+          "filante à créer** (65 × 30 cm), descendue à l'arase NGF 39,02 comme les "
+          "fondations voisines, et claveté au pignon existant par des armatures "
+          "HA 12 traversantes tous les 0,50 m scellées chimiquement. Il reprend "
+          "l'about de la poutre-acrotère isostatique de 8,03 m et la poussée du "
+          "remblai côté voisin sur sa hauteur enterrée."),
     ("table", tab_voile()),
 
-    ("h2", "3.4 Poutre-acrotère retroussée et dalle de toiture-terrasse"),
-    ("p", "La poutre retroussée est une **poutre-acrotère BA 30 × 67 cm**. Sa hauteur "
-          "est calée entre la sous-face du plancher haut RDC (**NGF 44,08**) et "
-          "l'**arase supérieure de l'acrotère (NGF 44,75)**, confirmée par le maître "
-          "d'ouvrage : elle fait donc **en même temps office d'acrotère de la "
-          "terrasse**, ce qui supprime l'acrotère rapporté et garantit la continuité "
-          "d'étanchéité sur l'appui de rive. La largeur d'âme est portée de 25 à "
-          "**30 cm** — seule dimension encore ajustable, la hauteur étant bloquée par "
-          "l'altimétrie — afin de loger les quatre barres en une seule nappe et "
-          "d'améliorer la raideur."),
-    ("p", "**Géométrie d'appui confirmée le 11/11/2026.** La poutre s'appuie sur le "
-          "**voile BA du mur mitoyen** d'une part et sur le **poteau BA 25 × 25** "
-          "d'autre part, ce dernier étant repositionné à **2,00 m du nu de la façade "
-          "existante** pour venir exactement sous la poutre. Le poteau constitue donc "
-          "l'**appui d'extrémité** de la poutre, côté façade : la poutre est une "
-          "**travée unique de 8,03 m**, isostatique. Le schéma « deux travées de 4,00 "
-          "et 4,03 m » étudié lors d'une version antérieure de la note correspondait à "
-          "une lecture erronée de l'arbitrage ; il est **abandonné**."),
+    ("h2", "3.4 Poutre-acrotère de rive, console et poutre perpendiculaire"),
+    ("p", "La poutre-acrotère BA **30 × 67 cm** est située **en limite de dalle, à "
+          "2,00 m du nu de la façade**, et fait office d'acrotère de la terrasse. Sa "
+          "hauteur est calée entre la sous-face du plancher haut RDC (**NGF 44,08**) "
+          "et l'**arase supérieure de l'acrotère (NGF 44,75)**. Elle est "
+          "**isostatique** : travée unique de **8,03 m** entre le **voile de rive à "
+          "créer** (appui droit) et l'**extrémité en console** de la poutre "
+          "perpendiculaire (appui gauche)."),
+    ("p", "**Schéma structurel rectifié le 11/11/2026 (arbitrage E-02).** Le croquis "
+          "du maître d'œuvre impose une lecture différente de la version antérieure :"),
+    ("ul", [
+        "la terrasse mesure **8,03 × 2,00 m**, poutre-acrotère **comprise** ;",
+        "la poutre perpendiculaire à la façade franchit **1,30 m** jusqu'au poteau "
+        "BA, puis se poursuit en **porte-à-faux de 0,70 m** jusqu'au bord de dalle ;",
+        "le **poteau BA 25 × 25** est implanté à **1,30 m du nu de façade**, à "
+        "l'extrémité gauche des 8,03 m ;",
+        "la **dalle** porte en console de **1,70 m** depuis la façade jusqu'à la "
+        "poutre de rive.",
+    ]),
+    ("p", "La poutre de 8,03 m ne s'appuie donc plus sur le poteau : elle repose sur "
+          "l'about de la console. Le poteau reprend la réaction de cette console, "
+          "amplifiée par la charge que lui transmet la poutre de rive. Le schéma "
+          "« poutre isostatique appuyée sur le poteau et sur un voile mitoyen "
+          "existant » est **abandonné**."),
     ("table", tab_poutre()),
+    ("table", tab_poutre_perp()),
     ("figure", os.path.join(FIG, "fig10_poutre_efforts.png"),
      "Figure 2 — Diagrammes de moment fléchissant, d'effort tranchant et de déformée "
-     "de la poutre-acrotère dans la configuration retenue (travée unique de 8,03 m, "
-     "appuis voile mitoyen et poteau BA à 2,00 m de la façade).", 190),
-    ("note", "**Conclusion sur la poutre-acrotère.** Le moment de flexion ELU atteint "
+     "de la poutre-acrotère isostatique de 8,03 m.", 190),
+    ("note", f"**Conclusion sur la poutre-acrotère.** Le moment de flexion ELU atteint "
              f"**{f(EXT['poutre']['M'],1)} kN·m** et impose un ferraillage de "
              f"**{EXT['poutre']['armature']['libelle']}** "
-             f"(A<sub>s</sub> = {f(EXT['poutre']['armature']['As_cm2'])} cm²) avec des "
+             f"(A s = {f(EXT['poutre']['armature']['As_cm2'])} cm²) avec des "
              f"{EXT['poutre']['etriers']['libelle']} ; les bielles comprimées sont "
-             f"largement vérifiées (V<sub>Rd,max</sub> = "
-             f"{f(EXT['poutre']['VRdmax'],0)} kN). La flèche à long terme ressort à "
-             f"**{f(EXT['poutre']['fleche'])} mm, soit L/{int(EXT['poutre']['ratio'])}**. "
-             "Elle respecte le critère **L/250** applicable à un élément en béton armé "
-             "de cette portée, mais **dépasse le critère L/500** retenu par le BET pour "
-             "les profilés de reprise en sous-œuvre. Une **contre-flèche de coffrage de "
-             f"{f(EXT['poutre']['contre_fleche'],0)} mm** est donc prescrite : elle "
-             "ramène la flèche résiduelle sous le critère L/500 vis-à-vis de la "
-             "verrière supportée en façade, sans modifier le ferraillage. Ce point est "
-             "porté au registre des prescriptions d'exécution (DOC-02)."),
+             f"largement vérifiées (V Rd,max = {f(EXT['poutre']['VRdmax'],0)} kN). "
+             f"La flèche à long terme ressort à **{f(EXT['poutre']['fleche'])} mm, "
+             f"soit L/{int(EXT['poutre']['ratio'])}**. Elle respecte le critère "
+             f"L/250 applicable à un élément en béton armé de cette portée mais "
+             f"dépasse le critère L/500 retenu par le BET ; une **contre-flèche de "
+             f"coffrage de {f(EXT['poutre']['contre_fleche'],0)} mm** ramène la "
+             f"flèche résiduelle à "
+             f"**{f(EXT['poutre']['fleche_residuelle'])} mm**, inférieure à L/500."),
     ("figure", os.path.join(FIG, "fig11_coupe_poutre.png"),
      "Figure 3 — Poutre-acrotère : coupe transversale avec la table collaborante de la "
-     "dalle, et dispositions de ferraillage de l'âme (enrobage, étriers, nappe "
-     "inférieure).", 132),
+     "dalle, et dispositions de ferraillage de l'âme.", 132),
 
     ("h2", "3.5 Dalle de toiture-terrasse"),
-    ("p", "La dalle de terrasse s'étend de la façade existante à la verrière, soit "
-          "3,20 m. La poutre-acrotère la reprend à 2,00 m du nu de façade : la dalle "
-          "comporte donc une **travée de 2,00 m** entre la façade et la poutre, puis "
-          "un **porte-à-faux de 1,20 m** jusqu'à la verrière. C'est le porte-à-faux qui "
-          "dimensionne le ferraillage, en nappe supérieure."),
+    ("p", "La dalle de terrasse mesure **8,03 m de long sur 2,00 m de large**, "
+          "poutre-acrotère comprise. Elle porte en **console depuis la façade "
+          "existante** jusqu'à la poutre de rive, soit un porte-à-faux de **1,70 m**. "
+          "C'est ce porte-à-faux qui dimensionne le ferraillage, en nappe supérieure ; "
+          "le débord au-delà du poteau (0,70 m) est quant à lui bordé par la poutre "
+          "perpendiculaire, qui en reprend la charge."),
     ("table", tab_dalle()),
 
-    ("h2", "3.6 Poteau BA 25 × 25 sous la poutre"),
-    ("p", "Le poteau de la verrière est repositionné **sous la poutre-acrotère, à "
-          "2,00 m du nu de la façade existante**, conformément à l'arbitrage du maître "
-          "d'ouvrage. Sa position est désormais **contractuelle** : elle est reprise "
-          "dans le module `niveaux_retenus.py` sous la constante "
-          "`POS_POTEAU_FAÇADE = 2,00 m`, source unique de vérité partagée par les "
-          "notes et les plans d'exécution. Le poteau reprend la totalité de la "
-          "réaction d'appui de la poutre, soit **q<sub>ELU</sub> × L / 2**. Le moment "
-          "parasite qui existait lorsque le poteau était décalé de l'axe de la poutre "
-          "est supprimé."),
+    ("h2", "3.6 Poteau BA 25 × 25 à 1,30 m du nu de façade"),
+    ("p", "Le poteau BA 25 × 25 est implanté à **1,30 m du nu de la façade "
+          "existante**, à l'extrémité gauche des 8,03 m, sous la poutre-acrotère "
+          "perpendiculaire. Sa position est **contractuelle** : elle est reprise dans "
+          "le module `niveaux_retenus.py` sous la constante "
+          "`POS_POTEAU_FAÇADE = 1,30 m`, source unique de vérité partagée par les "
+          "notes et les plans d'exécution. Il reprend la réaction de la console "
+          "(dalle + about de la poutre de rive) augmentée de la demi-travée de la "
+          "poutre perpendiculaire, soit un effort normal ELU de "
+          f"**{f(EXT['poteau']['N_elu'],1)} kN**."),
     ("table", tab_poteau()),
 
     # -------------------------------------------------------------------
@@ -730,13 +801,30 @@ BLOCKS = [
     ("h2", "4.1 Principe général"),
     ("p", "Les fondations de l'extension sont descendues jusqu'au **niveau des fondations "
           "existantes**, soit l'arase NGF 39,02. Deux puits en gros béton reprennent les "
-          "charges concentrées (poteau de la verrière et voile mitoyen) ; les charges "
-          "réparties sont reprises par des longrines BA. Les fondations du bâtiment "
+          "charges concentrées (poteau BA à 1,30 m et voile de rive à créer) ; le "
+          "voile repose en outre sur une **semelle filante neuve 65 × 30 cm** et les "
+          "charges réparties sont reprises par des longrines BA. Les fondations du bâtiment "
           "existant, de type **meulière continue** (hypothèse H-01 levée), sont "
           "**intégralement conservées** : aucun élargissement, aucun reprise en sous-"
           "œuvre de fondation n'est nécessaire."),
 
-    ("h2", "4.2 Puits en gros béton"),
+    ("h2", "4.2 Semelle filante du voile de rive"),
+    ("p", "La **semelle filante du voile de rive** est une semelle neuve de "
+          "**65 × 30 cm** (B = 0,65 m, h = 0,30 m), section retenue selon E-02, "
+          "descendue à l'arase NGF 39,02 et "
+          "coulée en fond de fouille blindé en limite de propriété. La largeur résulte "
+          "de la vérification de la contrainte de sol : σ<sub>ELS</sub> = "
+          f"**{f(EXT['semelle_voile']['sigma_els'],3)} MPa** ≤ 0,100 MPa et "
+          f"σ<sub>ELU</sub> = {f(EXT['semelle_voile']['sigma_elu'],3)} MPa ≤ 0,150 MPa. "
+          f"L'effort normal transmis est de {f(EXT['semelle_voile']['N_els'],1)} kN/ml "
+          "à l'ELS. Elle est ferraillée par 4 HA 12 filants et des étriers HA 8 "
+          "e = 250 mm."),
+    ("table", tab_semelle_voile()),
+    ("h2", "4.3 Puits en gros béton"),
+    ("p", "Deux puits en gros béton C16/20 sont descendus en limite séparative : le "
+          "puits n° 1 sous le poteau BA 25 × 25, le puits n° 2 sous le voile de rive, "
+          "à l'aplomb de la semelle filante. Ils reprennent les charges concentrées que "
+          "la semelle ne peut répartir en limite de propriété."),
     ("table", tab_puits()),
     ("p", "Les puits sont descendus en limite séparative. Le terrassement est réalisé "
           "**à la main sur les 0,50 m supérieurs** puis mécaniquement, avec blindage des "
@@ -744,7 +832,7 @@ BLOCKS = [
           "(point d'arrêt PA-2, DOC-02 §7). Le béton de remplissage est un **C16/20** "
           "dosé à 250 kg/m³, coulé par passes de 0,80 m avec vibration."),
 
-    ("h2", "4.3 Fondations existantes en meulière"),
+    ("h2", "4.4 Fondations existantes en meulière"),
     ("p", "La contrainte sous les semelles filantes existantes est vérifiée sous les "
           "seules charges du mur, les planchers étant repris par les refends. La "
           "vérification est menée avec une largeur d'assise estimée à "
@@ -758,21 +846,21 @@ BLOCKS = [
           "ELS**. Une **longrine de répartition BA** est donc mise en place sous chaque "
           "jambage."),
 
-    ("h2", "4.4 Longrines de répartition sous jambages"),
+    ("h2", "4.5 Longrines de répartition sous jambages"),
     ("table", tab_repartition()),
     ("p", "Les longrines, de section **1,30 × 0,25 m**, sont coulées contre la semelle "
           "existante après piquage et scellement d'armatures HA12 tous les 0,30 m. Elles "
           "ramènent la contrainte sous jambage à moins de **0,055 MPa**, soit une marge "
           "de sécurité supérieure à 45 % sur le seuil ELS."),
 
-    ("h2", "4.5 Longrine de répartition sous D1"),
+    ("h2", "4.6 Longrine de répartition sous D1"),
     ("p", "D1 est la seule ouverture dont la fondation est **conservée sans "
           "élargissement**. La charge du mur est faible (refend de 16 cm sur deux "
           "niveaux), et une longrine de 0,30 m de large suffit à ramener la contrainte "
           "sous le seuil."),
     ("table", tab_longrine()),
 
-    ("h2", "4.6 Joint de dilatation et désolidarisation"),
+    ("h2", "4.7 Joint de dilatation et désolidarisation"),
     ("table", tab_joint()),
     ("p", "Le joint de 20 mm offre une marge de **92 %** sur le déplacement thermique "
           "calculé. Cette marge est volontairement importante : elle couvre l'incertitude "
@@ -780,8 +868,9 @@ BLOCKS = [
           "amplitudes thermiques effectives en toiture-terrasse, où la dalle est "
           "directement exposée au rayonnement."),
     ("figure", os.path.join(FIG, "fig13_plan_fondation.png"),
-     "Figure 4 — Plan de fondation de l'extension : implantation des deux puits, du "
-     "voile mitoyen, du poteau BA à 2,00 m du nu de façade et de la poutre-acrotère.",
+     "Figure 4 — Plan de fondation de l'extension : poutre-acrotère en limite de "
+     "dalle, poutre perpendiculaire, poteau BA à 1,30 m, voile de rive à créer, "
+     "semelle filante et puits de gros béton.",
      186),
 
     # -------------------------------------------------------------------
@@ -826,12 +915,14 @@ BLOCKS = [
         "**Les fondations existantes en meulière continue sont conservées intégralement** "
         "sous réserve du sondage H-08. Seule une longrine de répartition est "
         "nécessaire sous les jambages des baies élargies.",
-        "**Les deux puits de l'extension** (Ø 2,05 m et 2,20 m, profondeur 2,40 m) "
-        "ramènent la contrainte à 0,100 et 0,099 MPa, soit une marge de 1 à 2 % seulement sur "
+        f"**Les deux puits de l'extension** (Ø {f(EXT['puits_1']['D'],2)} m et "
+        f"{f(EXT['puits_2']['D'],2)} m, profondeur {f(EXT['puits_1']['profondeur'],2)} m) "
+        f"ramènent la contrainte à {f(EXT['puits_1']['sigma_els'],3)} et "
+        f"{f(EXT['puits_2']['sigma_els'],3)} MPa, soit une marge de 1 à 2 % seulement sur "
         "le seuil ELS : **le dimensionnement est tendu et ne tolère aucune dégradation "
         "des hypothèses de sol**. Toute valeur de q_ELS inférieure à 0,099 MPa impose de "
         "réétudier les puits.",
-        "**Le voile BA mitoyen** est justifié en poussée des terres au repos, avec un "
+        "**Le voile BA de rive à créer** est justifié en poussée des terres au repos, avec un "
         "ferraillage de 4 HA 12 par face et une vérification de l'effort tranchant à la "
         "base (V<sub>Ed</sub> = 32,9 kN ≤ V<sub>Rd,c</sub> = 94,7 kN).",
         "**Le joint de dilatation de 20 mm** offre une marge de 92 % sur le déplacement "
@@ -845,9 +936,9 @@ BLOCKS = [
         "fondations filantes (H-01, H-08) — condition de validité du §4.3.",
         "**Confirmation de la valeur de q<sub>ELS</sub>** par essai pressiométrique ou "
         "pénétrométrique au droit des deux puits — condition de validité du §4.2.",
-        "**Confirmation par le maître d'ouvrage de la position du poteau à 2,00 m du "
-        "nu de façade** et de son incidence sur le dessin de la verrière — position "
-        "arrêtée le 11/11/2026, à figer sur les plans PL-01 à PL-03.",
+        "**Confirmation définitive du schéma E-02** (poteau à 1,30 m, console de "
+        "0,70 m, terrasse de 2,00 m, voile de rive à créer) — position arrêtée le "
+        "11/11/2026 et reportée sur les plans PL-01 à PL-05.",
         "**Réception des fiches techniques** du charpentier et du verriériste pour "
         "confirmer l'hypothèse forfaitaire de 250 kg/m² (H-06, H-18).",
     ]),

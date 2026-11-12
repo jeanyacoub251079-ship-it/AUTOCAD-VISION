@@ -1,54 +1,38 @@
-# Tâches 3 et 4 — Plans d'exécution (PL-01 à PL-05)
+# Tâches 3 et 4 — PL-01 à PL-05
 
-Affaire GA-2026-58AIGLE — 58 rue de l'Aigle, 92250 La Garenne-Colombes
-BET Structure — Indice A — 11/11/2026
+Affaire GA-2026-58AIGLE — 58 rue de l'Aigle, La Garenne-Colombes.
+Les plans d'extension PL-02 à PL-05 suivent l'arbitrage E-02 ; PL-04/PL-05
+sont à l'indice B (révision 12/11/2026).
 
-## Livrables
-
-| Plan | Objet | Échelle | Fichiers |
+| Plan | Contenu | Échelle | Livrables |
 |---|---|---|---|
-| **PL-01** | Reprise en sous-œuvre RDC : existant conservé, démolitions D1 à D6, jambages/sommiers BA, profilés S355, trappes à linge au nuage de révision | 1/50 | `plans/PL-01_Reprise_Sous_Oeuvre_RDC.dxf` / `.pdf` |
-| **PL-02** | Plan de coffrage de l'extension : voile mitoyen, poteau BA à 2,00 m, poutre-acrotère 30 × 67, puits de gros béton, longrines, dalle | 1/50 | `plans/PL-02_Coffrage_Extension.dxf` / `.pdf` |
-| **PL-03** | Coupes et élévations : coupe A-A sur la terrasse (altimétrie NGF) + détail d'appui poutre/poteau | 1/50 et 1/20 | `plans/PL-03_Coupes_Elevations.dxf` / `.pdf` |
-| **PL-04** | Ferraillage (2 planches) : coupes A-A/B-B de la poutre, schéma des étriers, poteau, dalle, façonnage, nomenclature | 1/10 et 1/20 | `plans/PL-04_Ferraillage_Details.dxf` / `.pdf` |
-| **PL-05** | Assemblages acier/BA (2 planches) : appuis sur jambage/sommier, encastrement meulière, jonction poteau, appui glissant voile, ancrage dalle, clavetage | 1/10 | `plans/PL-05_Assemblages_Acier_BA.dxf` / `.pdf` |
+| PL-01 | RSO RDC : démolitions D1–D6, jambages/sommiers, profils S355, trappes H-16 | 1/50 | PDF + DXF |
+| PL-02 | Coffrage extension 8,03 × 2,00 m, poteau à 1,30 m, console 0,70 m, voile de rive neuf | 1/50 | PDF + DXF |
+| PL-03 | Coupes, altimétrie NGF, appui du poteau et voile sur semelle | 1/40, 1/50, 1/60 | PDF + DXF |
+| PL-04 | Ferraillage : poutre 4 HA 14, poutre perpendiculaire, dalle, poteau, puits et nomenclature | 1/10–1/40 | PDF 2 pages + DXF |
+| PL-05 | Appuis RSO ; extension E-02 : voile neuf, console, appui glissant de dalle, clavetage au pignon | 1/12–1/40 | PDF 2 pages + DXF |
 
-Format ISO A3 paysage (420 × 297 mm), cartouche BET, calques normalisés.
+## Géométrie E-02
 
-## Principe de génération
+Terrasse BA de 8,03 × 2,00 m ; poutre-acrotère de rive 30 × 67 cm,
+isostatique, 4 HA 14 + étriers HA 8 e = 300 mm. Poteau 25 × 25 cm à 1,30 m
+du nu de façade ; poutre perpendiculaire 25 × 67 cm avec console de 0,70 m.
+Le voile de rive BA ép. 20 cm est à créer, claveté au pignon existant et posé
+sur semelle filante 65 × 30 cm. Puits : Ø 1,35 m et Ø 1,75 m, profondeur de
+calcul 2,40 m, arase NGF 39,02.
 
-`plan_engine.py` décrit **une seule fois** la géométrie de chaque plan
-(primitives `line`, `rect`, `poly`, `circle`, `arc`, `text`, `dim_h`, `dim_v`,
-`leader`), puis la rend par deux back-ends :
+Sur PL-05/2, la dimension et le type de l'appareil d'appui du voile sont
+laissés à valider. L'interface de l'appui glissant de la dalle avec le joint
+vertical de 20 mm, l'étanchéité et la menuiserie doit être coordonnée avant
+exécution.
 
-* `DxfBackend` — ezdxf, DXF R2013, `$INSUNITS = 5` (centimètres) ;
-* `PdfBackend` — reportlab, feuille A3 en millimètres, échelle exacte.
+## Génération
 
-Le `.dxf` et le `.pdf` sont donc **strictement identiques** : aucune
-divergence possible entre les deux fichiers livrés.
-
-Les trois scripts `make_pl01.py`, `make_pl02.py`, `make_pl03.py` ne
-contiennent que le contenu métier (géométrie, cotes, notes).
-
-## Calques normalisés (cahier des charges)
-
-| Calque | Couleur ACI | Épaisseur | Type de ligne | Usage |
-|---|---|---|---|---|
-| `STR_EXISTANT` | 7 (blanc) | 0,18 mm | continu | existant conservé |
-| `STR_DEMOLITION` | 1 (rouge) | 0,25 mm | tirets | maçonneries démolies |
-| `STR_COFFRAGE_BA` | 6 (magenta) | 0,50 mm | continu | coffrage béton armé + hachures |
-| `STR_ACIER_PROFILS` | 6 (magenta) | 0,50 mm | continu | profilés S355 |
-| `STR_FERRAILLAGE` | 6 (magenta) | 0,40 mm | continu | armatures |
-| `STR_COTATIONS_TEXTES` | 7 (blanc) | 0,25 mm | continu | cotes, axes, textes ≥ 2,5 mm |
-
-## Sources de vérité
-
-* `../00_SOURCES/niveaux_retenus.py` — niveaux NGF et `POS_POTEAU_FAÇADE = 2,00 m` ;
-* `../00_SOURCES/rdc_plan.json` — fond de plan RDC extrait du DXF AARKA
-  (258 lignes + 97 polylignes, calques `ARK-MURS` / `ARK-CLOIS` / `ARK-VITRE`) ;
-* `../02_TACHE_2/calculs_resultats.json` — sections, ferraillages et profilés.
-
-## Régénérer
+`plan_engine.py` produit PDF et DXF à partir des mêmes scènes ; `detail_lib.py`
+contient les cotes et symboles de ferraillage. DXF R2013 en centimètres
+(`$INSUNITS = 5`), calques `STR_EXISTANT`, `STR_DEMOLITION`,
+`STR_COFFRAGE_BA`, `STR_ACIER_PROFILS`, `STR_FERRAILLAGE` et
+`STR_COTATIONS_TEXTES`.
 
 ```bash
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl01.py
@@ -58,19 +42,6 @@ contiennent que le contenu métier (géométrie, cotes, notes).
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl05.py
 ```
 
-PL-04 et PL-05 sont des **jeux de 2 planches** (un seul `.pdf` multi-pages,
-un seul `.dxf` regroupant les cadres).
-
-`detail_lib.py` contient les symboles de détail : flèches pleines, hachures
-polygonales, cotes adaptées aux grandes échelles, étriers, barres avec
-crochets, sections de barres, lignes de rupture.
-
-## Points de vigilance reportés
-
-1. **Trappes à linge (H-16)** : position estimée depuis les plans et entourée
-   d'un nuage de révision sur PL-01. Le relevé de l'entraxe réel des solives
-   reste à faire avant tracé définitif (DOC-02 §6.3).
-2. **Contre-flèche de 20 mm** de la poutre-acrotère : prescrite sur PL-02 et
-   PL-03, à contrôler à la pose des étais.
-3. **Sondages H-08, H-09, H-10, H-14, H-15** : non bloquants pour les plans,
-   nécessaires avant exécution.
+Les longueurs d'ancrage/recouvrement et dispositions d'appui notées
+« indicatives » ou « à valider » ne constituent pas des plans de façonnage
+validés pour commande.

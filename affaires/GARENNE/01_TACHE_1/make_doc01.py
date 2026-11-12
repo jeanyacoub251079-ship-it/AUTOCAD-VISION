@@ -83,13 +83,15 @@ T_GEOM = {
     "rows": [
         ["Sous-sol", "Emprise intérieure (L × l)", "8,53 × 7,30 m", "DXF — calque ARK-MURS, plan P08a S/Sol"],
         ["RDC", "Emprise intérieure (L × l)", "12,46 × 7,30 m", "DXF — plan P08a RDC"],
-        ["RDC + extension", "Profondeur totale", "7,30 + 3,20 = **10,50 m**", "P08b RDC (cote 320)"],
+        ["RDC + extension", "Profondeur totale", "7,30 + 2,00 = **9,30 m**", "Arbitrage E-02 du 11/11/2026"],
         ["Extension", "Largeur façadée", "**8,03 m**", "P08b RDC — cote 803 (chaîne 387 + 416)"],
-        ["Extension", "Profondeur / avant de façade", "**3,20 m**", "P08b RDC, P10b, P11b — cote 320"],
+        ["Extension", "Profondeur / avant de façade", "**2,00 m**", "E-02 — terrasse poutre-acrotère comprise"],
         ["Verrière", "Hauteur libre sous poutre", "**2,30 m**", "P10b, P11b — cote 230"],
         ["Extension", "Hauteur libre sous poutre retroussée", "2,62 m", "P11b — cote 262 (noyau)"],
-        ["Extension", "Surface au sol (emprise)", "8,03 × 3,20 ≈ **25,7 m²**", "Calcul BET"],
-        ["Terrasse accessible", "Surface utile (emprise)", "≈ 21,5 m²", "8,03 × (3,20 − 0,52)"],
+        ["Extension", "Surface au sol (emprise)", "8,03 × 2,00 ≈ **16,1 m²**", "Calcul BET"],
+        ["Terrasse accessible", "Surface utile (emprise)", "≈ 13,7 m²", "8,03 × (2,00 − 0,30)"],
+        ["Extension", "Position du poteau BA", "**1,30 m** du nu de façade", "E-02 — console 0,70 m"],
+        ["Extension", "Porte-à-faux de la dalle", "**1,70 m** depuis la façade", "nu intérieur de la poutre"],
         ["Trappe à linge", "Ouverture en plancher", "**45 × 40 cm**", "P08b R+1 et RDC — polyligne 42843/42888"],
     ],
     "caption": "Tableau 2 — Géométrie générale extraite du fichier DXF "
@@ -108,7 +110,7 @@ T_MURS = {
         ["Mur de refend transversal D5", "**16 cm**", "Maçonnerie de briques / cloison porteuse", "Salle à manger / Cuisine"],
         ["Murs de cave périphériques", "48 cm", "Meulière hourdée au mortier bâtard", "Sous-sol — faces enterrées"],
         ["Mur de refend de cave (PTE 73)", "**40 cm**", "Meulière hourdée", "Cave / Buanderie — sous le nœud D3/D5"],
-        ["Mur mitoyen côté voisin (extension)", "35 cm", "Meulière existante à conforter", "Limite séparative est — appui du voile BA"],
+        ["Limite de propriété est (extension)", "—", "Aucun mur existant — **voile BA à créer**", "Limite séparative est — prolongement du pignon"],
     ],
     "caption": "Tableau 3 — Épaisseurs de murs relevées ou déduites des coupes et du plan DXF. "
                "Les épaisseurs marquées en gras conditionnent directement le dimensionnement des appuis.",
@@ -222,7 +224,7 @@ T_CRIT = {
         ["Contrainte sous sommier sur maçonnerie ancienne", "σ ≤ f<sub>d</sub> = 1,2 MPa (local)", "NF EN 1996-1-1 + AN"],
         ["Contrainte de contact au sol", "σ<sub>ELS</sub> ≤ 0,10 MPa ; σ<sub>ELU</sub> ≤ 0,15 MPa", "NF EN 1997-1 / NF P 94-261"],
         ["Déversement des profilés métalliques", "Vérification au déversement ELU selon §6.3.2", "NF EN 1993-1-1 + AN"],
-        ["Résistance au feu", "**REI 30** minimum sur les éléments porteurs (habitat individuel R+1)", 
+        ["Résistance au feu", "**REI 30** minimum sur les éléments porteurs (habitat individuel R+1)",
          "Arrêté du 31 janvier 1986 modifié — hypothèse H-19"],
         ["Classe de conséquence / catégorie", "CC1 — catégorie d'usage A — classe de ductilité DCL", "NF EN 1990 + AN"],
     ],
@@ -289,19 +291,20 @@ T_REGISTRE = {
          "non vide ou instable interdirait le scellement.",
          "**Sondage obligatoire** : dépose du chapeau et passage caméra, plus essai de charge d'ancrage."],
         ["H-11", "Position du poteau BA de la verrière",
-         "Poteau **25 × 25 cm** implanté à **2,00 m du nu de la façade existante**, sous la poutre-acrotère "
-         "(décision du maître d'ouvrage du 11/11/2026).",
-         "Le cahier des charges indique « 2,00 m en avant de la façade existante » ; le DXF plaçait l'axe à "
-         "1,19 m du nu de façade, soit 2,01 m du nu de la verrière — la coïncidence des deux lectures avait "
-         "conduit à retenir la position DXF. L'arbitrage E-01 fixe définitivement la position à 2,00 m.",
+         "Poteau **25 × 25 cm** implanté à **1,30 m du nu de la façade existante**, à l'extrémité gauche des "
+         "8,03 m, sous la poutre-acrotère perpendiculaire (arbitrage E-02 du 11/11/2026).",
+         "Le DXF place l'axe à 1,19 m du nu de façade : l'écart de 11 cm est absorbé par la tolérance "
+         "d'implantation de 5 cm et par la largeur du poteau (25 cm). La terrasse mesure 2,00 m de profondeur, "
+         "poutre-acrotère comprise, ce qui laisse 0,70 m de porte-à-faux derrière le poteau.",
          "**Position arrêtée le 11/11/2026** — reprise dans `niveaux_retenus.py` "
-         "(`POS_POTEAU_FAÇADE = 2,00 m`), source unique pour les notes et les plans."],
-        ["H-12", "Nature et portance du mur mitoyen côté voisin",
-         "Mur mitoyen en meulière de 35 cm, en bon état, capable de reprendre les charges de la poutre retroussée "
-         "au moyen d'un voile BA solidaire claveté.",
-         "Aucune coupe ne documente la fondation du mur mitoyen (limite de propriété). Un désordre du mur mitoyen "
-         "imposerait un appui sur poteau en fond de parcelle.",
-         "**Constat d'état + sondage** en limite séparative, en présence du voisin (procès-verbal)."],
+         "(`POS_POTEAU_FAÇADE = 1,30 m`), source unique pour les notes et les plans."],
+        ["H-12", "Nature du mur en limite de propriété est",
+         "**Aucun mur mitoyen existant** : le voile BA de rive est **à créer**, en limite de propriété, dans le "
+         "prolongement du mur pignon, sur une **semelle filante neuve** (65 × 30 cm) descendue à NGF 39,02.",
+         "La version antérieure de la note supposait un mur mitoyen en meulière de 35 cm servant d'appui. Ce mur "
+         "n'existe pas : ni la poutre-acrotère ni le voile ne peuvent s'y appuyer.",
+         "**Hypothèse levée le 11/11/2026 (arbitrage E-02)** — reprise dans `niveaux_retenus.py` "
+         "(`L_VOILE_RIVE`, `EP_VOILE`, `NGF_FONDATION`)."],
         ["H-13", "Altitude des fondations existantes côté extension",
          "Arase inférieure des fondations existantes à **NGF 39,02** sur tout le pourtour de l'extension.",
          "Le nivellement des deux puits de l'extension doit atteindre cette arase pour éviter toute poussée "
@@ -377,13 +380,18 @@ T_ECARTS = {
         ["E-01", "Position du poteau BA de la verrière",
          "Le cahier des charges indique « 2,00 m en avant de la façade existante ». Le DXF place l'axe du poteau "
          "à 1,19 m du nu de la façade existante (2,01 m du nu de la verrière).",
-         "**ÉCART LEVÉ le 11/11/2026** — Le maître d'ouvrage a confirmé que le poteau est **déplacé à 2,00 m du "
-         "nu de façade, sous la poutre**, dont il devient l'appui d'extrémité. La poutre-acrotère reste donc une "
-         "**travée unique de 8,03 m** entre le poteau et le voile mitoyen (voir DOC-03 §3.4). **Cette position "
-         "est contractuelle.**"],
-        ["E-02", "Largeur de l'extension",
-         "Trois valeurs coexistent : 803 cm (façade), 826 cm (emprise intérieure) et 822 cm.",
-         "Valeur de calcul retenue : **8,03 m** (cote de façade, la plus défavorable pour la poutre retroussée)."],
+         "**ÉCART CADUC depuis le 11/11/2026** — l'arbitrage E-01 est **remplacé par E-02** : le poteau est "
+         "implanté à **1,30 m du nu de façade** et la poutre-acrotère de 8,03 m est **isostatique**, appuyée sur "
+         "le voile de rive à créer et sur l'about de la poutre perpendiculaire en console (DOC-03 §3.4)."],
+        ["E-02", "Schéma structurel de l'extension",
+         "Le schéma de la première version supposait un voile mitoyen **existant**, un poteau à 2,00 m sous la "
+         "poutre et une terrasse de 3,20 m. Le croquis du maître d'œuvre du 11/11/2026 montre un tout autre "
+         "dispositif : voile **à créer** en limite de propriété, poteau à 1,30 m de la façade, poutre "
+         "perpendiculaire de 1,30 m prolongée par une console de 0,70 m, terrasse de 2,00 m de profondeur.",
+         "**Schéma E-02 retenu le 11/11/2026** et appliqué à l'ensemble des notes et des plans : terrasse "
+         "8,03 × 2,00 m, poutre perpendiculaire 25 × 67, poteau BA 25 × 25 à 1,30 m, voile de rive 20 cm sur "
+         "semelle filante 65 × 30, dalle en console de 1,70 m. Le schéma antérieur est **définitivement "
+         "abandonné**. Voir `niveaux_retenus.py` (bloc « Géométrie de l'extension — rectification 11/11/2026 »)."],
         ["E-03", "Ouverture de la trappe à linge",
          "L'ouverture dessinée (45 × 40 cm) est incompatible avec un entraxe de solives de 45 cm.",
          "Réduction à 40 × 36 cm et/ou décalage latéral dans la zone de tolérance (voir DOC-02 § 6)."],
@@ -394,9 +402,10 @@ T_ECARTS = {
          "Hauteurs sous plafond relevées de 180 à 302 cm selon les points : la pente du rampant interdit une "
          "hauteur unique.",
          "Aucun impact structurel ; les surcharges sont appliquées sur la totalité de la surface (H-07)."],
-        ["E-06", "Cote 858,9 cm sur le plan P08b RDC",
-         "Une cote de 858,9 cm apparaît en plus de la cote 803 cm, sans référence d'axe explicite.",
-         "Non retenue : correspond probablement à une cote de nu à nu incluant l'épaisseur du voile mitoyen."],
+        ["E-06", "Cotes 858,9 / 826 / 822 cm sur le plan P08b RDC",
+         "Trois valeurs coexistent avec la cote de façade 803 cm, sans référence d'axe explicite.",
+         "Non retenues : la cote de calcul reste **8,03 m** (façade), les autres correspondant à des cotes de "
+         "nu à nu incluant le voile de rive à créer."],
     ],
     "caption": "Tableau 10 — Écarts et incohérences relevés entre les pièces du dossier et l'analyse du DXF.",
 }
@@ -418,8 +427,9 @@ BLOCKS = [
     ("bullets", [
         "**Reprises en sous-œuvre D1 à D6** au rez-de-chaussée : renforts horizontaux par profilés métalliques "
         "S275/S355 et renforts verticaux par poteaux, jambages et sommiers en béton armé C25/30.",
-        "**Structure en béton armé de l'extension** en façade avant : dalle de toiture-terrasse, poutre retroussée "
-        "formant acrotère, voile mitoyen, poteau BA noyé dans la verrière, puits de gros béton et longrines.",
+        "**Structure en béton armé de l'extension** en façade avant : dalle de toiture-terrasse, poutre-acrotère de rive, poutre "
+          "perpendiculaire en console, voile de rive à créer sur semelle filante, poteau BA noyé dans la "
+          "verrière, puits de gros béton et longrines.",
         "**Renforcement de la descente de charges au sous-sol** sous le nœud central D3/D5, à proximité immédiate "
         "de la porte existante PTE 73.",
         "**Définition de l'implantation de la trappe à linge** entre solives, sans chevêtre.",
@@ -441,11 +451,12 @@ BLOCKS = [
             ["P08a", "Plans repères Coupes — État actuel & Démolitions (S/Sol, RDC, R+1, Combles)", "1/100",
              "Zones de démolition D1 à D6, épaisseurs de murs, hauteurs sous plafond"],
             ["P08b", "Plans repères Coupes — Projet (S/Sol, RDC, R+1, Combles)", "1/100",
-             "Emprise de l'extension, poteau BA, trappes à linge, cotes 803 / 826 / 320"],
+             "Emprise de l'extension, poteau BA, trappes à linge, cotes 803 / 826 / 320 (cote 320 reprise "
+             "en cote de terrasse 200 par l'arbitrage E-02)"],
             ["P09a / P09b", "Coupe 01 — État actuel / Projet (passant par D1)", "1/50",
              "Absence de sous-sol sous D1, fondation filante, hauteurs 262"],
             ["P10a / P10b", "Coupe 02 — État actuel / Projet (Salon, extension, D2)", "1/50",
-             "Poutre-acrotère, poteau BA à 2,00 m, arase 44,75, gouttière 44,18"],
+             "Poutre-acrotère, poteau BA à 1,30 m, arase 44,75, gouttière 44,18"],
             ["P11a / P11b", "Coupe 03 — État actuel / Projet (Salle à manger, extension, D3 à D6)", "1/50",
              "Croisement D3/D5, « POTEAU BÉTON », descentes de charges vers le sous-sol"],
             ["DXF", "DCE_58 RUE DE L'AIGLE_LA GARENNE COLOMBES MODIF 05112026-export.dxf", "—",
@@ -493,14 +504,14 @@ BLOCKS = [
     ("table", T_OUV),
     ("figure", os.path.join(FIG, "fig07_extension_plan.png"),
      "Figure 3 — Extension en façade avant : plan de principe coté (cotes en cm relevées au DXF). "
-     "La poutre-acrotère franchit les 8,03 m entre le voile mitoyen BA et le poteau BA de 25 cm, "
-     "repositionné à 2,00 m du nu de façade.", 152),
+     "La poutre-acrotère franchit les 8,03 m entre le voile de rive à créer et l'about de la poutre "
+     "perpendiculaire ; le poteau BA de 25 cm est à 1,30 m du nu de façade.", 152),
     ("figure", os.path.join(FIG, "fig05_reperage_rdc.png"),
      "Figure 1 — Plan du RDC, état actuel : repérage des six reprises en sous-œuvre D1 à D6 et des portées "
      "libres mesurées. Fond de plan extrait du DXF AARKA ; report des repères par le BET.", 120),
     ("figure", os.path.join(FIG, "fig06_coupe_principe.png"),
      "Figure 2 — Coupe verticale de principe : altimétrie NGF de l'existant et de l'extension, position de la "
-     "poutre retroussée et du poteau BA.", 150),
+     "poutre-acrotère de rive, de la console et du poteau BA à 1,30 m.", 150),
     ("h2", "3.5 Points singuliers identifiés"),
     ("p", "L'analyse met en évidence **quatre points singuliers** qui conditionnent le dimensionnement et le "
           "phasage :"),
@@ -515,8 +526,8 @@ BLOCKS = [
         "fondation de reprise sont nécessaires de part et d'autre de cette porte.",
         "**Poteau BA noyé dans la verrière.** Sur la planche P08b, l'élément apparaît graphiquement comme un montant "
         "de menuiserie ; la coupe P11b le désigne explicitement comme « POTEAU BÉTON ». Il s'agit d'un poteau "
-        "structurel de 25 × 25 cm, situé à **2,00 m du nu de la façade existante** (position arrêtée le "
-        "11/11/2026), qui constitue l'appui d'extrémité de la poutre-acrotère.",
+        "structurel de 25 × 25 cm, situé à **1,30 m du nu de la façade existante** (arbitrage E-02 du "
+        "11/11/2026), qui reçoit la console de 0,70 m de la poutre-acrotère perpendiculaire.",
         "**Trappe à linge traversante.** Elle doit être positionnée entre deux solives existantes sur les trois "
         "niveaux (Combles → R+1 → RDC), sans aucun chevêtre. Cela suppose une tolérance d'implantation et un "
         "sondage préalable de l'entraxe réel des solives.",
@@ -570,9 +581,10 @@ BLOCKS = [
     ("table", T_ECARTS),
     ("h2", "9.1 Conséquences sur les tâches suivantes"),
     ("bullets", [
-        "**Écart E-01 (position du poteau BA)** : **levé le 11/11/2026** (voir chapitre 11) — le poteau est "
-        "déplacé à **2,00 m du nu de façade**, sous la poutre-acrotère dont il devient l'appui d'extrémité. "
-        "La note de calcul de la Tâche 2 est menée avec cette position.",
+        "**Écarts E-01 et E-02 (schéma de l'extension)** : **E-01 est caduc** ; il est remplacé par **E-02** "
+        "(11/11/2026). Le poteau est implanté à **1,30 m du nu de façade** et la poutre-acrotère de 8,03 m est "
+        "**isostatique**, appuyée sur le **voile de rive à créer** et sur l'about d'une **console de 0,70 m**. "
+        "La note de calcul de la Tâche 2 et les plans PL-01 à PL-05 sont menés avec ce schéma.",
         "**Écart E-03 (trappe à linge)** : la Tâche 3 (plans généraux) intégrera une zone de tolérance "
         "d'implantation et non une position figée, matérialisée par un nuage de révision.",
         "**Hypothèse H-01** : **levée le 11/11/2026** — fondation de type meulière continue. Le schéma de "
@@ -598,11 +610,13 @@ BLOCKS = [
     ]),
 
     ("pagebreak",),
-    ("h1", "11. Arbitrages du maître d'ouvrage du 11 novembre 2026"),
+    ("h1", "11. Arbitrages du maître d'ouvrage (11 et 12 novembre 2026)"),
     ("p", "À l'issue de la remise de la Tâche 1, le maître d'ouvrage a rendu quatre arbitrages sur les "
           "hypothèses et écarts qui conditionnaient la poursuite de la mission. Ils sont repris ci-dessous et "
           "**se substituent aux hypothèses initialement retenues par le BET** ; le registre du chapitre 8 et le "
-          "tableau des écarts du chapitre 9 ont été mis à jour en conséquence."),
+          "tableau des écarts du chapitre 9 ont été mis à jour en conséquence. Un **cinquième arbitrage**, rendu "
+          "les 11 et 12 novembre 2026, **annule et remplace** la décision E-01 : il redéfinit le schéma structurel de "
+          "l'ensemble de l'extension (référence **E-02**)."),
     ("table", {
         "caption": "Tableau — Arbitrages rendus par le maître d'ouvrage et incidences sur les études.",
         "header": ["Réf.", "Objet de l'arbitrage", "Décision du maître d'ouvrage",
@@ -610,11 +624,24 @@ BLOCKS = [
         "widths": [10, 26, 34, 38],
         "rows": [
             ["**E-01**", "Position du poteau BA de la verrière",
-             "**Le poteau sera déplacé à environ 2,00 m de la façade, pour être sous la poutre.**",
-             "Le poteau devient l'**appui d'extrémité** de la poutre, côté façade : la poutre-acrotère reste une "
-             "**travée unique de 8,03 m** entre le poteau et le voile mitoyen. La portée étant inchangée, la "
-             "flèche reste de l'ordre de L/460 ; elle est reprise par une **contre-flèche de coffrage de 20 mm** "
-             "(DOC-03 §3.4). La position à 2,00 m du nu de façade est contractuelle."],
+             "**CADUC** — décision annulée par l'arbitrage E-02.",
+             "La position à 2,00 m du nu de façade supposait que le poteau serve d'appui d'extrémité à une "
+             "poutre de 8,03 m longeant la limite de dalle. Ce schéma est **abandonné** : voir E-02."],
+            ["**E-02**", "Schéma structurel de l'extension (révision des 11 et 12/11/2026)",
+             "« **Le voile à droite n'est pas existant : il est à créer, sur une semelle filante à créer "
+             "également, en limite de propriété, dans le prolongement du mur pignon. Le poteau est à décaler à "
+             "l'extrémité gauche des 8,03 m. Ce poteau reçoit une poutre-acrotère perpendiculaire à la façade, "
+             "qui s'appuie sur le poteau et continue en console. La poutre-acrotère de 8,03 m est en limite de "
+             "dalle, à 2,00 m de la façade ; elle est isostatique et s'appuie sur le nouveau mur à droite et sur "
+             "la console à gauche.** » — Précision complémentaire : « **la terrasse fait 2,00 m de largeur "
+             "totale, poutre comprise ; le poteau est à 1,30 m de la façade ; le porte-à-faux ne fait donc que "
+             "70 cm.** »",
+             "Refonte complète de la géométrie : terrasse **8,03 × 2,00 m** (poutre comprise), poutre-acrotère "
+             "de rive **isostatique** à 2,00 m du nu de façade, **voile BA de rive à créer** (ép. 20 cm) sur "
+             "**semelle filante neuve 65 × 30 cm**, **poteau BA 25 × 25 à 1,30 m** du nu de façade portant une "
+             "**poutre perpendiculaire 25 × 67** de 1,30 m prolongée par une **console de 0,70 m**, dalle en "
+             "**porte-à-faux de 1,70 m**. Contre-flèche de coffrage de 20 mm sur la poutre de 8,03 m. Incidences "
+             "sur DOC-02, DOC-03 et PL-01 à PL-05."],
             ["**H-06**", "Descente de charges de la charpente bois",
              "**Accordé** — l'hypothèse forfaitaire du BET est acceptée.",
              "Les charges de charpente restent celles de la note DOC-01 (250 kg/m² répartis G/Q). Aucune reprise "

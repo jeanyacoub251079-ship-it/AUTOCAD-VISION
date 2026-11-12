@@ -3,17 +3,18 @@ PL-05 — DÉTAILS D'ASSEMBLAGE ACIER / BÉTON ARMÉ.
 
 Deux planches A3 paysage :
 
-  PL-05/1 — reprises en sous-œuvre (échelle 1/10)
+  PL-05/1 — reprises en sous-œuvre (échelles 1/12 et 1/14)
     A. appui d'un profilé S355 sur un jambage BA (D2 / D4 / D6) ;
     B. appui d'un profilé S355 sur un sommier BA en pied de mur conservé ;
     C. about de profilé encastré dans la maçonnerie meulière (D1) ;
     D. jonction de deux profilés sur poteau BA (D3 / D5).
 
-  PL-05/2 — extension (échelle 1/10)
-    E. appui glissant de la poutre-acrotère sur le voile mitoyen ;
-    F. appui de la poutre-acrotère sur le poteau BA 25 x 25 ;
-    G. ancrage de la dalle terrasse dans la façade existante ;
-    H. jonction voile mitoyen / mur existant (clavetage).
+  PL-05/2 — extension (E-02 rectifié)
+    E. appui de la poutre-acrotère sur le voile BA de rive neuf ;
+    F. appui de la poutre de rive sur l'about en console de la poutre
+       perpendiculaire (poteau à 1,30 m, console 0,70 m) ;
+    G. appui glissant de la dalle sur la façade existante ;
+    H. jonction du voile de rive neuf au pignon existant.
 """
 from __future__ import annotations
 
@@ -36,16 +37,17 @@ CARTOUCHE = {
     "sous_titre": "Appuis de profilés S355 sur jambages et sommiers BA",
     "repere": "PL-05/1",
     "phase": "Tâche 4 — détails d'exécution",
-    "indice": "Indice A — 11/11/2026",
-    "echelle": "Échelle : 1/10",
+    "indice": "Indice B — révision E-02 — 12/11/2026",
+    "echelle": "Échelles : 1/12 et 1/14",
     "date": "S355 — C25/30",
 }
 
 CARTOUCHE2 = dict(CARTOUCHE)
 CARTOUCHE2.update({
-    "titre": "PL-05/2 — ASSEMBLAGES EXTENSION",
-    "sous_titre": "Appuis de la poutre-acrotère et ancrages de la dalle",
+    "titre": "PL-05/2 — ASSEMBLAGES BA — EXTENSION E-02",
+    "sous_titre": "Extension E-02 rectifiée — voile neuf, console et appui glissant",
     "repere": "PL-05/2",
+    "echelle": "Échelles : 1/20, 1/30 et 1/40",
     "date": "C25/30 — B500B",
 })
 
@@ -213,147 +215,108 @@ def detail_D() -> E.Scene:
 
 
 # ---------------------------------------------------------------------------
-# E — appui glissant de la poutre-acrotère sur le voile mitoyen (1/10)
+# E — appui simple de la poutre-acrotère sur le voile de rive neuf
 # ---------------------------------------------------------------------------
 
 def detail_E() -> E.Scene:
+    """Appui simple de la poutre de rive sur le voile BA neuf et sa semelle."""
     sc = E.Scene()
+    D.beton_rect(sc, -22.5, -75.0, 65.0, 30.0, sp=1.4)
+    D.beton_rect(sc, 0.0, -45.0, 20.0, 45.0, sp=1.4)
+    sc.rect(0.0, 0.0, 20.0, 2.0, "STR_ACIER_PROFILS", 0.35,
+            hatch="ANSI31", angle=45.0, spacing=1.0)
+    D.beton_rect(sc, -5.0, 2.0, 30.0, 67.0, sp=1.4)
+    for x in (-1.0, 6.0, 14.0, 21.0):
+        D.point_barre(sc, x, 6.0, 1.4)
+    D.etrier(sc, -2.0, 5.0, 24.0, 61.0, lw=0.30, retour=4.0)
+    for x in (4.0, 16.0):
+        sc.line(x, -42.0, x, -2.0, "STR_FERRAILLAGE", 0.32)
 
-    # voile mitoyen 20 cm
-    D.beton_rect(sc, 0, -30.0, 20.0, 30.0, sp=1.4)
-    # néoprène + platine
-    sc.rect(0, 0, 20.0, 1.5, "STR_COTATIONS_TEXTES", 0.25)
-    sc.rect(0, 1.5, 20.0, 1.5, "STR_ACIER_PROFILS", 0.40)
-    # poutre-acrotère 30 x 67 (coupe, posée en appui)
-    D.beton_rect(sc, -5.0, 3.0, 30.0, 67.0, sp=1.4)
-    # 4 HA 20 + étriers
-    for x in (0.0, 20.0):
-        for y in (8.0, 10.6):
-            D.point_barre(sc, x, y, 2.0)
-    D.etrier(sc, 3.0, 6.0, 19.0, 61.0, lw=0.30, retour=4.0)
-    # attentes de chaînage dans le voile
-    for x in (7.0, 13.0):
-        sc.line(x, -12.0, x, 1.5, "STR_FERRAILLAGE", 0.32)
-    D.cote_v(sc, 0, 70.0, -18.0, "67")
-    D.cote_h(sc, 0, 20.0, -18.0, "20")
-    sc.leader("Poutre-acrotère 30 x 67\narase NGF 44,75", 32, 64, 24.0,
-              62.0, fontsize=1.95)
-    sc.leader("Appui glissant : néoprène\n20 mm + platine 200 x 200 x 15",
-              32, 24, 20.0, 1.5, fontsize=1.95)
-    sc.leader("Voile mitoyen BA 20 cm\nclaveté au mur existant", 32, -16,
-              14.0, -26.0, fontsize=1.95)
-    sc.leader("Attentes HA 12 ancrées 40 Ø", 32, -34, 13.0, -12.0,
-              fontsize=1.95)
+    D.cote_h(sc, -5.0, 25.0, 78.0, "30", fs=3.0)
+    D.cote_v(sc, 2.0, 69.0, 34.0, "67", fs=3.0)
+    D.cote_h(sc, 0.0, 20.0, -51.0, "20", fs=3.0)
+    D.cote_h(sc, -22.5, 42.5, -87.0, "65", fs=3.0)
+    D.cote_v(sc, -75.0, -45.0, 52.0, "30", fs=3.0)
+
+    sc.leader("Poutre de rive 30 x 67", 42.0, 61.0, 23.0, 52.0, fontsize=2.0)
+    sc.leader("4 HA 14; HA 8 e = 300", 42.0, 55.0, 23.0, 49.0, fontsize=1.9)
+    sc.leader("Appui articulé — à valider BET", 42.0, 15.0, 19.0, 1.0, fontsize=1.8)
+    sc.text("Voile BA neuf 20 cm", 31.0, -13.0, 2.1, align="left")
+    sc.text("4 HA 12/face", 31.0, -19.0, 2.0, align="left")
+    sc.text("HA 8 e = 250", 31.0, -25.0, 1.9, align="left")
+    sc.leader("Semelle filante 65 x 30", 49.0, -67.0, 35.0, -59.0, fontsize=1.9)
+    sc.leader("Arase NGF 39,02", 49.0, -72.0, 35.0, -59.0, fontsize=1.8)
     return sc
-
-
-# ---------------------------------------------------------------------------
-# F — appui de la poutre-acrotère sur le poteau BA (1/10)
-# ---------------------------------------------------------------------------
 
 def detail_F() -> E.Scene:
+    """Plan de principe poteau / poutre perpendiculaire / console de rive."""
     sc = E.Scene()
+    sc.rect(-12.0, -12.0, 12.0, 50.0, "STR_EXISTANT", 0.35,
+            hatch="ANSI31", angle=45.0, spacing=2.0)
+    sc.rect(0.0, 0.0, 200.0, 25.0, "STR_COFFRAGE_BA", 0.50,
+            hatch="ANSI31", angle=45.0, spacing=2.0)
+    sc.rect(117.5, 0.0, 25.0, 25.0, "STR_COFFRAGE_BA", 0.50,
+            hatch="ANSI37", angle=0.0, spacing=1.4)
+    sc.rect(170.0, -5.0, 30.0, 35.0, "STR_COFFRAGE_BA", 0.60,
+            hatch="ANSI31", angle=0.0, spacing=1.4)
 
-    # poteau 25 x 25
-    D.beton_rect(sc, 0, -32.0, 25.0, 32.0, sp=1.4)
-    # poutre 30 x 67 avec débord de 2,5 cm
-    D.beton_rect(sc, -2.5, 0.0, 30.0, 67.0, sp=1.4)
-
-    # armatures poteau
-    for x in (3.5, 21.5):
-        sc.line(x, -30.0, x, 12.0, "STR_FERRAILLAGE", 0.32)
-    for y in (-26.0, -14.0):
-        D.etrier(sc, 3.0, y, 19.0, 14.0, lw=0.22, retour=3.0)
-    # attentes dans la poutre
-    for x in (3.5, 21.5):
-        sc.line(x, 0.0, x, 40.0, "STR_FERRAILLAGE", 0.32)
-    # 4 HA 20 nappe basse
-    for x in (4.0, 18.0):
-        for y in (6.0, 8.6):
-            D.point_barre(sc, x, y, 2.0)
-    D.etrier(sc, 5.5, 4.0, 19.0, 59.0, lw=0.30, retour=4.0)
-
-    D.cote_h(sc, -2.5, 27.5, -12.0, "30")
-    D.cote_h(sc, 0, 25.0, -22.0, "25")
-    D.cote_v(sc, 0, 67.0, 32.0, "67")
-    sc.leader("Poutre-acrotère — 4 HA 20\nnappe basse + HA 8 e = 175",
-              38, 58, 27.5, 56.0, fontsize=1.95)
-    sc.leader("Attentes poteau HA 8\nancrées 40 Ø", 38, 26, 21.5, 30.0,
-              fontsize=1.95)
-    sc.leader("Poteau BA 25 x 25\n6 HA 8 + cadres e = 200", 38, -6,
-              21.5, -12.0, fontsize=1.95)
-    sc.leader("Débord de 2,5 cm", -14, 40, -2.5, 32.0, fontsize=1.9)
+    D.cote_h(sc, 0.0, 130.0, -22.0, "1,30 m", fs=3.0)
+    D.cote_h(sc, 130.0, 200.0, -22.0, "0,70 m", fs=3.0)
+    D.cote_h(sc, 0.0, 200.0, -42.0, "2,00 m", fs=3.0)
+    sc.leader("Poutre perpendiculaire 25 x 67", 35.0, 60.0, 82.0, 22.0, fontsize=1.9)
+    sc.leader("Poteau 25 x 25; axe 1,30 m", 40.0, -62.0, 130.0, 12.5, fontsize=1.9)
+    sc.leader("Rive 30 x 67 sur console", 172.0, 47.0, 185.0, 12.0, fontsize=1.8)
+    sc.text("PLAN DE PRINCIPE — cotes en cm", 100.0, 80.0, 2.1, align="center")
     return sc
-
-
-# ---------------------------------------------------------------------------
-# G — ancrage de la dalle terrasse dans la façade existante (1/10)
-# ---------------------------------------------------------------------------
 
 def detail_G() -> E.Scene:
+    """Appui glissant de la dalle sur la façade — sans ancrage dans le mur."""
     sc = E.Scene()
-
-    # façade existante (meulière)
-    sc.rect(-28.0, -30.0, 28.0, 66.0, "STR_EXISTANT", 0.40,
+    sc.rect(-28.0, -35.0, 28.0, 85.0, "STR_EXISTANT", 0.40,
             hatch="ANSI31", angle=45.0, spacing=2.2)
-    # dalle 20 cm
-    D.beton_rect(sc, 0.0, 0.0, 54.0, 20.0, sp=1.3)
-    # joint de dilatation 20 mm
-    sc.rect(0.0, 0.0, 2.0, 20.0, "STR_COTATIONS_TEXTES", 0.22)
-    # fers scellés à la résine
-    for y in (5.0, 7.5):
-        sc.line(-20.0, y, 26.0, y, "STR_FERRAILLAGE", 0.35)
-        sc.line(-20.0, y, -16.0, y + 5.0, "STR_FERRAILLAGE", 0.30)
-    for x in (-16.0, -9.0):
-        for y in (5.0, 7.5):
-            D.point_barre(sc, x, y, 1.0)
-    # nappe supérieure
-    sc.line(8.0, 15.0, 52.0, 15.0, "STR_FERRAILLAGE", 0.32)
+    sc.rect(-6.0, -2.0, 12.0, 2.0, "STR_ACIER_PROFILS", 0.35,
+            hatch="ANSI31", angle=45.0, spacing=1.0)
+    sc.rect(0.0, 0.0, 170.0, 20.0, "STR_COFFRAGE_BA", 0.50, fill=True)
+    D.beton_rect(sc, 170.0, -67.0, 30.0, 67.0, sp=1.4)
+    sc.line(6.0, 4.0, 166.0, 4.0, "STR_FERRAILLAGE", 0.35)
+    sc.line(6.0, 6.2, 166.0, 6.2, "STR_FERRAILLAGE", 0.35)
 
-    D.cote_h(sc, 0, 2.0, -8.0, "2")
-    D.cote_v(sc, 0, 20.0, -34.0, "20")
-    sc.leader("Façade existante — meulière", -24, 30, -18.0, 26.0,
-              fontsize=1.95)
-    sc.leader("Joint de dilatation 20 mm", 28, 30, 1.0, 18.0, fontsize=1.95)
-    sc.leader("4 HA 10 scellés à la résine\n(Ø 12, prof. 25 cm)",
-              30, -10, 0.0, 6.0, fontsize=1.95)
-    sc.leader("Nappe sup. 4 HA 10", 22, 40, 40.0, 15.0, fontsize=1.95)
+    D.cote_h(sc, 0.0, 170.0, 42.0, "1,70 m", fs=3.0)
+    D.cote_h(sc, 170.0, 200.0, 42.0, "30", fs=3.0)
+    D.cote_h(sc, 0.0, 200.0, 58.0, "2,00 m", fs=3.0)
+    D.cote_v(sc, 0.0, 20.0, -40.0, "20", fs=3.0, side="right")
+    D.cote_v(sc, -67.0, 0.0, 214.0, "67", fs=3.0)
+
+    sc.leader("Appui glissant + PTFE", 8.0, 77.0, 1.0, 0.0, fontsize=1.9)
+    sc.leader("Sans ancrage", 8.0, 72.0, 1.0, 0.0, fontsize=1.8)
+    sc.text("Dalle BA 20 cm", 65.0, 31.0, 2.1, align="center")
+    sc.text("4 HA 10 — sens portée", 65.0, 25.0, 2.0, align="center")
+    sc.leader("Rive 30 x 67", 176.0, -74.0, 184.0, -7.0, fontsize=1.8)
+    sc.text("Joint vertical 20 mm", 46.0, -46.0, 2.0, align="left")
+    sc.text("Interface à coordonner — DOC-02 §5.5", 46.0, -52.0, 1.8, align="left")
     return sc
 
-
-# ---------------------------------------------------------------------------
-# H — jonction voile mitoyen / mur existant (clavetage) (1/10)
-# ---------------------------------------------------------------------------
-
 def detail_H() -> E.Scene:
+    """Clavetage du voile de rive neuf au mur pignon existant."""
     sc = E.Scene()
-
-    # mur mitoyen existant (en coupe)
     sc.rect(-30.0, 0.0, 30.0, 90.0, "STR_EXISTANT", 0.40,
             hatch="ANSI31", angle=45.0, spacing=2.2)
-    # voile BA neuf
     D.beton_rect(sc, 0.0, 0.0, 20.0, 90.0, sp=1.3)
-    # clavetage : barres HA 12 en attente croisées
     for y in (14.0, 34.0, 54.0, 74.0):
         sc.line(-18.0, y, 18.0, y, "STR_FERRAILLAGE", 0.35)
         sc.line(-16.0, y, -12.0, y + 6.0, "STR_FERRAILLAGE", 0.30)
         D.point_barre(sc, -12.0, y, 1.2)
-    # armatures verticales du voile
     for x in (4.0, 16.0):
         sc.line(x, 2.0, x, 88.0, "STR_FERRAILLAGE", 0.30)
 
-    D.cote_h(sc, 0, 20.0, -8.0, "20")
-    sc.leader("Mur mitoyen existant", -24, 82, -20.0, 74.0, fontsize=1.95)
-    sc.leader("Voile BA 20 cm\n4 HA 12 + HA 8 e = 250", -24, 56, -2.0,
-              46.0, fontsize=1.95)
-    sc.leader("Clavetage : 4 HA 12\ntraversants e = 500", -24, -12, -14.0,
-              14.0, fontsize=1.95)
+    D.cote_h(sc, 0.0, 20.0, -8.0, "20", fs=2.8)
+    sc.leader("Pignon existant", -18.0, 82.0, -20.0, 74.0, fontsize=1.8)
+    sc.text("Voile BA neuf 20 cm", 10.0, 112.0, 1.9, align="center")
+    sc.text("4 HA 12 / face", 10.0, 106.0, 1.9, align="center")
+    sc.text("HA 8 e = 250", 10.0, 100.0, 1.9, align="center")
+    sc.text("HA 12 traversants", -17.0, -14.0, 1.9, align="left")
+    sc.text("e = 500; scellement sain", -17.0, -20.0, 1.8, align="left")
     return sc
-
-
-# ---------------------------------------------------------------------------
-# Mise en page
-# ---------------------------------------------------------------------------
 
 def placer(pb, sc, x, y, w, h, scale):
     pb.k = 10.0 / scale
@@ -373,23 +336,26 @@ def tableau_assembleages(pb, x, y, rows, titre):
 def page1(pb):
     scA, scB, scC, scD = detail_A(), detail_B(), detail_C(), detail_D()
 
-    pb.frame(14, 168, 96, 110)
-    placer(pb, scA, 14, 168, 96, 110, 10.0)
-    pb.vtitle(14, 281, "A — APPUI SUR JAMBAGE BA — 1/10")
+    # Abaisser les cadres pour réserver une zone de titre distincte en tête.
+    # Les scènes A–C passent au 1/12 afin que toutes les annotations restent
+    # dans leurs cadres ; le détail D reste au 1/14.
+    pb.frame(14, 152, 96, 110)
+    placer(pb, scA, 14, 152, 96, 110, 12.0)
+    pb.vtitle(14, 265, "A — APPUI SUR JAMBAGE BA — 1/12")
 
-    pb.frame(118, 168, 96, 110)
-    placer(pb, scB, 118, 168, 96, 110, 10.0)
-    pb.vtitle(118, 281, "B — SOMMIER SOUS MUR — 1/10")
+    pb.frame(118, 152, 96, 110)
+    placer(pb, scB, 118, 152, 96, 110, 12.0)
+    pb.vtitle(118, 265, "B — SOMMIER SOUS MUR — 1/12")
 
-    pb.frame(222, 168, 96, 110)
-    placer(pb, scC, 222, 168, 96, 110, 10.0)
-    pb.vtitle(222, 281, "C — ENCASTREMENT MEULIÈRE — 1/10")
+    pb.frame(222, 152, 96, 110)
+    placer(pb, scC, 222, 152, 96, 110, 12.0)
+    pb.vtitle(222, 265, "C — ENCASTREMENT MEULIÈRE — 1/12")
 
-    pb.frame(326, 168, 80, 110)
-    placer(pb, scD, 326, 168, 80, 110, 14.0)
-    pb.vtitle(326, 281, "D — JONCTION SUR POTEAU — 1/14")
+    pb.frame(326, 152, 80, 110)
+    placer(pb, scD, 326, 152, 80, 110, 14.0)
+    pb.vtitle(326, 265, "D — JONCTION SUR POTEAU — 1/14")
 
-    tableau_assembleages(pb, 14, 156, [
+    tableau_assembleages(pb, 14, 146, [
         ("A", "Profilé / jambage BA", "Platine + 4 tiges M16", "M 44 kN·m"),
         ("B", "Profilé / sommier BA", "Platine 470 x 250 x 20", "V 87 kN"),
         ("C", "Profilé / meulière", "Réservation 32 x 27", "V 47 kN"),
@@ -417,46 +383,46 @@ def page2(pb):
     scE, scF, scG, scH = detail_E(), detail_F(), detail_G(), detail_H()
 
     pb.frame(14, 143, 96, 104)
-    placer(pb, scE, 14, 143, 96, 104, 10.0)
-    pb.vtitle(14, 250, "E — APPUI GLISSANT VOILE — 1/10")
+    placer(pb, scE, 14, 143, 96, 104, 20.0)
+    pb.vtitle(14, 250, "E — APPUI SUR VOILE DE RIVE NEUF — 1/20")
 
     pb.frame(118, 143, 96, 104)
-    placer(pb, scF, 118, 143, 96, 104, 10.0)
-    pb.vtitle(118, 250, "F — APPUI SUR POTEAU BA — 1/10")
+    placer(pb, scF, 118, 143, 96, 104, 30.0)
+    pb.vtitle(118, 250, "F — APPUI SUR CONSOLE 0,70 m — 1/30")
 
     pb.frame(222, 143, 96, 104)
-    placer(pb, scG, 222, 143, 96, 104, 10.0)
-    pb.vtitle(222, 250, "G — ANCRAGE DALLE FAÇADE — 1/10")
+    placer(pb, scG, 222, 143, 96, 104, 40.0)
+    pb.vtitle(222, 250, "G — APPUI GLISSANT DALLE / FAÇADE — 1/40")
 
     pb.frame(326, 143, 80, 104)
-    placer(pb, scH, 326, 143, 80, 104, 10.0)
-    pb.vtitle(326, 250, "H — CLAVETAGE VOILE — 1/10")
+    placer(pb, scH, 326, 143, 80, 104, 20.0)
+    pb.vtitle(326, 250, "H — CLAVETAGE AU PIGNON — 1/20")
 
     tableau_assembleages(pb, 14, 136, [
-        ("E", "Poutre-acrotère / voile", "Néoprène 20 mm + platine", "V 130,8 kN"),
-        ("F", "Poutre-acrotère / poteau", "Attentes HA 8 (40 Ø)", "N 137,5 kN"),
-        ("G", "Dalle / façade", "4 HA 10 scellés résine", "M 9,1 kN·m/m"),
-        ("H", "Voile / mur mitoyen", "4 HA 12 traversants", "p 32,9 kN/m²"),
+        ("E", "Poutre 8,03 / voile neuf", "Appui simple articulé*", "V_Ed 69,9 kN"),
+        ("F", "Poutre 8,03 / console", "Poutre 25 x 67 ; 0,70 m", "R poteau 69,9 kN"),
+        ("G", "Dalle / façade", "Appui glissant, sans scellement", "4 HA 10 ; M 4,6 kN·m"),
+        ("H", "Voile neuf / pignon", "HA 12 traversants e = 500", "4 HA 12/face"),
     ], "TABLEAU DES ASSEMBLAGES — PL-05/2")
 
-    pb.note_block(14, 100, "NOTES DE MISE EN ŒUVRE", [
-        "1. Appui glissant de la poutre-acrotère : néoprène 200 x 200 x 20 mm, un par appui.",
-        "2. Le poteau BA à 2,00 m est l'appui fixe ; le voile mitoyen est l'appui glissant (libre dilatation).",
-        "3. Attentes HA 8 du poteau : longueur d'ancrage 40 Ø = 80 cm dans la poutre.",
-        "4. Scellements résine : Ø de perçage = Ø barre + 4 mm ; profondeur 25 cm ; ancrage en traction à contrôler.",
-        "5. Joint de dilatation 20 mm entre dalle terrasse et façade : fond de joint + mastic élastomère.",
-        "6. Aucune soudure sur site sur les profilés principaux sans accord écrit du BET.",
+    pb.note_block(14, 100, "NOTES DE MISE EN ŒUVRE — E-02 RECTIFIÉ", [
+        "1. Poutre-acrotère de rive 30 x 67, portée 8,03 m : 4 HA 14, étriers HA 8 e = 300.",
+        "2. Appui droit sur voile BA neuf 20 cm, semelle filante 65 x 30 à NGF 39,02.",
+        "3. À gauche, appui sur l'about de la poutre perpendiculaire 25 x 67 ; poteau à 1,30 m, console 0,70 m.",
+        "4. Poteau 25 x 25 : 6 HA 8 ; puits n° 1 Ø 1,35 m. Puits n° 2 sous voile : Ø 1,75 m.",
+        "5. Dalle BA 20 cm, portée de 1,70 m, 4 HA 10 ; appui glissant sur façade (sans ancrage).",
+        "6. Joint vertical 20 mm : coordination obligatoire entre appui glissant, étanchéité et menuiserie.",
+        "7. *Dimensions / nature de l'appareil d'appui du voile à valider avant exécution par le BET et le fournisseur.",
     ], width=330)
 
     pb.note_block(356, 100, "PHASAGE", [
         "1. Étaiement.",
-        "2. Démolition.",
-        "3. Jambages.",
-        "4. Pose profilés.",
-        "5. Clavetage.",
+        "2. Fondation / voile neuf.",
+        "3. Poutre et poteau.",
+        "4. Dalle / appuis.",
+        "5. Contrôles BET.",
         "6. Dépose étais.",
     ], width=48)
-
 
 def main():
     os.makedirs(OUT, exist_ok=True)
@@ -465,9 +431,11 @@ def main():
 
     # ---------------- DXF -------------------------------------------------
     dxf = E.DxfBackend("PL-05")
-    for i, sc in enumerate(scs):
-        ox = (i % 4) * 130.0
-        oy = 0.0 if i < 4 else -170.0
+    placements = [
+        (0.0, 0.0), (130.0, 0.0), (260.0, 0.0), (390.0, 0.0),
+        (0.0, -260.0), (180.0, -260.0), (470.0, -260.0), (770.0, -260.0),
+    ]
+    for sc, (ox, oy) in zip(scs, placements):
         t = E.Scene()
         for it in sc.items:
             t.items.append(_shift(it, ox, oy))
@@ -479,13 +447,12 @@ def main():
     pb.new_page()
     pb.titre("PL-05/1 — ASSEMBLAGES ACIER / BA — REPRISES EN SOUS-ŒUVRE",
              "Appuis de profilés S355 sur jambages et sommiers BA, "
-             "encastrement en meulière, jonction sur poteau — 1/10")
+             "encastrement en meulière, jonction sur poteau — échelles 1/12 et 1/14")
     page1(pb)
 
     pb.add_page(CARTOUCHE2)
-    pb.titre("PL-05/2 — ASSEMBLAGES ACIER / BA — EXTENSION",
-             "Appui glissant de la poutre-acrotère sur le voile, appui sur "
-             "poteau, ancrage de la dalle — 1/10")
+    pb.titre("PL-05/2 — ASSEMBLAGES BA — EXTENSION E-02 RECTIFIÉE",
+             "Appui sur voile neuf, console portée par le poteau et appui glissant de la dalle")
     page2(pb)
 
     p_pdf = os.path.join(OUT, "PL-05_Assemblages_Acier_BA.pdf")

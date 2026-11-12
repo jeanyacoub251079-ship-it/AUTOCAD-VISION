@@ -345,19 +345,26 @@ def selectionne_profiles(Med, L, Veff, catalogue, charge="repartie", marge=0.90)
 # ---------------------------------------------------------------------------
 
 def semelle_filante(N_els, N_elu, b_mur, q_els=Q_ELS, q_elu=Q_ELU, gamma_b=25.0,
-                    h_min=0.20):
+                    h_min=0.20, B_min=0.0):
     """Dimensionne une semelle filante sous un mur porteur.
 
     N en kN/ml. Retourne largeur, hauteur utile, contraintes et ratio.
+    ``h_min`` est la hauteur utile minimale ; ``B_min`` impose une largeur
+    minimale lorsque la géométrie de projet est déjà arrêtée.
     """
     B_els = N_els / (q_els * 1000.0)        # q en MPa -> kN/m² ×1000
     B_elu = N_elu / (q_elu * 1000.0)
-    B = max(B_els, B_elu, b_mur + 0.10)
-    # arrondi au multiple de 5 cm supérieur
-    B = math.ceil(B / 0.05) * 0.05
-    # hauteur : diffusion à 45° depuis le nu du mur (DTU 13.1)
+    B = max(B_els, B_elu, b_mur + 0.10, B_min)
+    # Le poids propre de la semelle dépend de sa largeur : on itère.
+    for _ in range(40):
+        B = math.ceil(B / 0.05) * 0.05
+        d = max(h_min, (B - b_mur) / 4.0)
+        h_sem = d + 0.05
+        g_sem = B * h_sem * gamma_b
+        if (N_els + g_sem) / (B * 1000.0) <= q_els:
+            break
+        B += 0.05
     d = max(h_min, (B - b_mur) / 4.0)
-    # poids propre de la semelle et du remblai
     h_sem = d + 0.05
     g_sem = B * h_sem * gamma_b
     N_tot_els = N_els + g_sem
@@ -420,6 +427,19 @@ def poussee_terres(H, gamma=GAMMA_SOL, phi=PHI_SOL, surcharge=0.0):
 # ---------------------------------------------------------------------------
 
 def chapitre_extension():
+    """Chapitre 6 — extension (terrasse accessible de 8,03 x 2,00 m).
+
+    Géométrie retenue (arbitrage E-02 du 11/11/2026, croquis MOE) :
+
+        * terrasse 8,03 m x **2,00 m**, poutre-acrotère de rive comprise ;
+        * poutre-acrotère **isostatique** de 8,03 m, en limite de dalle,
+          à 2,00 m du nu de la façade ;
+        * appui droit : **voile BA à créer** (0,20 m) sur **semelle filante
+          à créer**, en limite de propriété, prolongement du pignon ;
+        * appui gauche : extrémité **en console** d'une poutre-acrotère
+          **perpendiculaire** qui franchit 1,30 m depuis la façade, s'appuie
+          sur le **poteau BA** puis se poursuit en **porte-à-faux de 0,70 m**.
+    """
     R = {}
 
     # --- 6.1 Descente de charges de la toiture-terrasse accessible --------
@@ -436,199 +456,216 @@ def chapitre_extension():
         p_els=G + Q,
         p_els_qp=G + psi0() * Q,
     )
-
-    # --- 6.2 Poutre-acrotère retroussée ---------------------------------
-    # Géométrie confirmée par le maître d'ouvrage le 11/11/2026 :
-    #   - la poutre fait en même temps office d'acrotère de la terrasse ;
-    #   - son arase supérieure est à NGF 44,75 (NGF_ACROTERE) ;
-    #   - elle s'appuie sur le mur mitoyen (voile BA) et sur le poteau BA
-    #     25 x 25, repositionné à ~2,00 m du nu de la façade.
-    # Le poteau à 2,00 m est l'APPUI D'EXTRÉMITÉ côté façade : la poutre est
-    # une travée unique de 8,03 m, et non une poutre continue sur 3 appuis.
-    L_total = NIV.L_EXTENSION                      # 8,03 m
-    # Largeur d'âme portée de 25 à 30 cm : la hauteur est bloquée par
-    # l'arase d'acrotère (44,75) et la sous-face du plancher haut RDC
-    # (44,08), soit h = 0,67 m. Seule la largeur reste ajustable ; elle
-    # améliore la raideur et surtout l'enrobage des 4 HA 16 en une nappe.
-    b_p = 0.30
-    h_p = NIV.NGF_POUTRE_HAUT - NIV.NGF_POUTRE_BAS # 44,75 - 44,08 = 0,67 m
-    e_d = e_dalle                                  # 0,20 m : table collaborante
-    beff = min(L_total / 5.0, b_p + 4.0 * e_d)     # EC2 §5.3.2.1 : 0,85 m
-    # Poids propre de la poutre : âme seule. La table collaborante (20 cm)
-    # est déjà comptée dans la descente de charges de la dalle.
-    g_p = b_p * (h_p - e_d) * GAMMA_BA
-    # Largeur de dalle reprise par la poutre, la poutre étant à 2,00 m du nu
-    # de façade : demi-travée côté façade (2,00/2 = 1,00 m) + console côté
-    # verrière (1,20 m), soit 2,20 m de bande chargée.
-    largeur_reprise = (NIV.POS_POTEAU_FAÇADE / 2.0
-                       + (3.20 - NIV.POS_POTEAU_FAÇADE))
-
     p_elu = R["dalle"]["p_elu"]
     p_els_qp = R["dalle"]["p_els_qp"]
-    q_elu = p_elu * largeur_reprise + 1.35 * g_p
-    q_els = p_els_qp * largeur_reprise + g_p
 
-    M = q_elu * L_total ** 2 / 8.0
-    V = q_elu * L_total / 2.0
-    flex = ba_flexion(b_p, h_p, M)
-    # 4 barres au maximum par nappe : coffrage de 25 cm de large
+    # --- 6.2 Poutre-acrotère de rive, portée 8,03 m, isostatique ---------
+    # Elle est en limite de dalle : elle est chargée par la moitié de la
+    # largeur de terrasse (1,00 m) et porte sur 8,03 m entre le voile de
+    # rive (droite) et l'extrémité en console de la poutre perpendiculaire
+    # (gauche). Elle fait office d'acrotère : arase 44,75, sous-face 44,08.
+    L_total = NIV.L_EXTENSION                      # 8,03 m
+    b_p = NIV.B_POUTRE                             # 0,30 m
+    h_p = NIV.NGF_POUTRE_HAUT - NIV.NGF_POUTRE_BAS # 0,67 m
+    e_d = e_dalle
+    beff = min(L_total / 5.0, b_p + 4.0 * e_d)
+    g_p = b_p * (h_p - e_d) * GAMMA_BA             # âme seule
+    largeur_reprise = NIV.BANDE_POUTRE_8M          # 1,00 m
+    q_elu = p_elu * largeur_reprise + 1.35 * g_p
+    q_els_qp = p_els_qp * largeur_reprise + g_p
+
+    # Schéma isostatique : charge répartie sur toute la portée. Une charge
+    # concentrée Q_r en bout gauche est ajoutée pour tenir compte de la
+    # réaction de la console de la poutre perpendiculaire (voir 6.3).
+    M_rep = q_elu * L_total ** 2 / 8.0
+    V_rep = q_elu * L_total / 2.0
+
+    # --- 6.3 Poutre-acrotère perpendiculaire + console 0,70 m ------------
+    # Elle franchit 1,30 m entre la façade et le poteau, puis se poursuit en
+    # porte-à-faux de 0,70 m. Elle reçoit en bout la réaction de la poutre
+    # de 8,03 m, et elle est chargée par la bande de dalle qu'elle borde.
+    L_trav = NIV.TRAVEE_PERPENDICULAIRE            # 1,30 m
+    L_cons = NIV.PORTE_A_FAUX                      # 0,70 m
+    b_pp = 0.25                                    # largeur 25 cm
+    g_pp = b_pp * (h_p - e_d) * GAMMA_BA
+    # bande de dalle reprise : 0,20 m de chaque côté (bande d'acrotère)
+    bande_pp = 0.40
+    q_pp = p_elu * bande_pp + 1.35 * g_pp
+    # réaction de la poutre de 8,03 m (charge concentrée en bout de console)
+    R_appui = V_rep
+    M_console = q_pp * L_cons ** 2 / 2.0 + R_appui * L_cons
+    M_travee = q_pp * L_trav ** 2 / 8.0
+    M_pp = max(M_console, M_travee)
+    V_pp = q_pp * L_cons + R_appui
+    # La poutre perpendiculaire partage la même arase et la même sous-face
+    # que la poutre de 8,03 m : h = 0,67 m, b = 0,25 m.
+    h_pp = h_p
+    flex_pp = ba_flexion(b_pp, h_pp, M_pp)
+    arm_pp = choix_ferraillage(flex_pp["As_cm2"], n_min=2, n_max=6, phi_min=12)
+    etr_pp = etriers_poutre(b_pp, flex_pp["d"], V_pp)
+
+    # --- 6.4 Poutre de 8,03 m : flexion, effort tranchant, flèche ---------
+    flex = ba_flexion(b_p, h_p, M_rep)
     arm = choix_ferraillage(flex["As_cm2"], n_min=4, n_max=4, phi_min=12)
-    etr = etriers_poutre(b_p, flex["d"], V)
+    etr = etriers_poutre(b_p, flex["d"], V_rep)
     VRdmax = ba_vrdmax(b_p, flex["d"])
     fl = ba_fleche_T_ec2(L_total, b_p, h_p, e_d, beff,
-                         arm["As_cm2"], q_els, 0.0)
+                         arm["As_cm2"], q_els_qp, 0.0)
     fleche = fl["f_lt_mm"]
     lim_500 = L_total * 1000.0 / 500.0
     lim_250 = L_total * 1000.0 / 250.0
 
     R["poutre"] = dict(
         L=L_total, b=b_p, h=round(h_p, 2), e_d=e_d, beff=round(beff, 2),
-        g_p=round(g_p, 2), q_elu=round(q_elu, 1), q_els=round(q_els, 1),
-        M=round(M, 1), V=round(V, 1), mu=round(flex["mu"], 4),
+        g_p=round(g_p, 2), q_elu=round(q_elu, 1), q_els=round(q_els_qp, 1),
+        bande=largeur_reprise,
+        M=round(M_rep, 1), V=round(V_rep, 1), mu=round(flex["mu"], 4),
         z=round(flex["z"], 3), As=round(flex["As_cm2"], 2), armature=arm,
-        VRdc=round(etr_conv := etr["VRds"], 1), VRdmax=round(VRdmax, 1),
-        ok_bielle=V <= VRdmax, etriers=etr, ok_tranchant=etr["ok"],
+        VRdc=round(etr["VRds"], 1), VRdmax=round(VRdmax, 1),
+        ok_bielle=V_rep <= VRdmax, etriers=etr, ok_tranchant=etr["ok"],
         Ig=round(fl["Ig"], 5), Icr=round(fl["Icr"], 5),
-        Ie=round(fl["Ie"], 5), Mcr=round(fl["Mcr"], 1), zeta=round(fl["zeta"], 3),
+        Ie=round(fl["Ie"], 5), Mcr=round(fl["Mcr"], 1),
+        zeta=round(fl["zeta"], 3),
         fleche_inst=round(fl["f_inst_mm"], 2),
         fleche=round(fleche, 2), ratio=round(L_total * 1000.0 / fleche, 0),
         fleche_lim_500=round(lim_500, 1), fleche_lim_250=round(lim_250, 1),
         ok_500=fleche <= lim_500, ok_250=fleche <= lim_250,
-        # Contre-flèche de coffrage : compense la part de flèche à long terme
-        # et ramène la flèche résiduelle sous le critère L/500 vis-à-vis de
-        # la verrière supportée en façade.
         contre_fleche=20.0,
         fleche_residuelle=round(max(0.0, fleche - 20.0), 2),
+        ok_residuel=max(0.0, fleche - 20.0) <= lim_500,
         ngf_bas=NIV.NGF_POUTRE_BAS, ngf_haut=NIV.NGF_POUTRE_HAUT,
     )
 
-    # --- 6.3 Poteau BA 25 × 25 sous la poutre ---------------------------
-    # Le poteau reprend la totalité de la réaction d'appui de la poutre,
-    # soit q_elu * L / 2 (travée unique, deux appuis).
-    N_elu = q_elu * L_total / 2.0 + 1.35 * 0.25 * 0.25 * 3.20 * GAMMA_BA
-    N_els = q_els * L_total / 2.0 + 0.25 * 0.25 * 3.20 * GAMMA_BA
-    b_c, h_c = 0.25, 0.25          # section imposee par l'architecte
+    R["poutre_perpendiculaire"] = dict(
+        L_travee=L_trav, L_console=L_cons, b=b_pp, h=h_pp,
+        g=round(g_pp, 2), bande=bande_pp, q=round(q_pp, 1),
+        R_appui=round(R_appui, 1),
+        M_console=round(M_console, 1), M_travee=round(M_travee, 1),
+        M=round(M_pp, 1), V=round(V_pp, 1),
+        mu=round(flex_pp["mu"], 4), As=round(flex_pp["As_cm2"], 2),
+        armature=arm_pp, etriers=etr_pp,
+        VRdc=round(etr_pp["VRds"], 1),
+        VRdmax=round(ba_vrdmax(b_pp, flex_pp["d"]), 1),
+        ok_tranchant=etr_pp["ok"],
+    )
+
+    # --- 6.5 Poteau BA 25 x 25 à 1,30 m du nu de façade -----------------
+    # Il reprend la réaction de la poutre perpendiculaire au droit du poteau,
+    # soit la charge de la console (dalle + poutre 8,03 m) et la demi-travée.
+    N_elu = q_pp * L_cons + R_appui + q_pp * L_trav / 2.0
+    N_elu += 1.35 * 0.25 * 0.25 * 3.20 * GAMMA_BA
+    N_els = (q_pp * L_cons + R_appui + q_pp * L_trav / 2.0) / 1.4
+    N_els += 0.25 * 0.25 * 3.20 * GAMMA_BA
+    b_c, h_c = 0.25, 0.25
     A_c = b_c * h_c
     l0 = 3.20
-    i = b_c / math.sqrt(12.0)
-    lam = l0 / i
-    lam_lim = 20.0 * 0.7 * 1.0 * 1.0 / math.sqrt(0.85)   # simplifié AN
-    NRd_0 = A_c * FCD * 1000.0                            # kN, section seule
+    i_c = b_c / math.sqrt(12.0)
+    lam = l0 / i_c
+    lam_lim = 20.0 * 0.7 * 1.0 * 1.0 / math.sqrt(0.85)
+    NRd_0 = A_c * FCD * 1000.0
     alpha_fl = 0.75 if lam <= 40 else 0.65
     NRd = alpha_fl * NRd_0
-    As_min = max(0.10 * N_elu / (FYD * 1000.0), 0.002 * A_c) * 1e4  # cm²
-    As_max = 0.04 * A_c * 1e4
+    As_min = max(0.10 * N_elu / (FYD * 1000.0), 0.002 * A_c) * 1e4
     R["poteau"] = dict(
-        b=b_c, h=h_c, l0=l0, i=round(i, 4), lambda_=round(lam, 1),
+        b=b_c, h=h_c, l0=l0, i=round(i_c, 4), lambda_=round(lam, 1),
         lambda_lim=round(lam_lim, 1),
         N_elu=round(N_elu, 1), N_els=round(N_els, 1), NRd=round(NRd, 1),
         taux=round(N_elu / NRd, 3), ok=N_elu <= NRd,
-        As_min=round(As_min, 2), As_max=round(As_max, 2),
+        As_min=round(As_min, 2), As_max=round(0.04 * A_c * 1e4, 2),
         armature=choix_ferraillage(max(As_min, 3.0)),
+        position=NIV.POS_POTEAU_FAÇADE,
     )
 
-    # --- 6.3 Poteau BA 25 × 25 sous la poutre ---------------------------
-    # Le poteau reprend la totalité de la réaction d'appui de la poutre,
-    # soit q_elu * L / 2 (une seule travée, deux appuis).
-    N_elu = q_elu * L_total / 2.0 + 1.35 * 0.25 * 0.25 * 3.20 * GAMMA_BA
-    N_els = q_els * L_total / 2.0 + 0.25 * 0.25 * 3.20 * GAMMA_BA
-    b_c, h_c = 0.25, 0.25          # section imposee par l'architecte
-    A_c = b_c * h_c
-    # élancement
-    l0 = 3.20
-    i = b_c / math.sqrt(12.0)
-    lam = l0 / i
-    lam_lim = 20.0 * 0.7 * 1.0 * 1.0 / math.sqrt(0.85)   # simplifié AN
-    NRd_0 = A_c * FCD * 1000.0                            # kN, section seule
-    # méthode simplifiée : N_Rd = alpha × A_c × fcd
-    alpha_fl = 0.75 if lam <= 40 else 0.65
-    NRd = alpha_fl * NRd_0
-    As_min = max(0.10 * N_elu / (FYD * 1000.0), 0.002 * A_c) * 1e4  # cm²
-    As_max = 0.04 * A_c * 1e4
-    R["poteau"] = dict(
-        b=b_c, h=h_c, l0=l0, i=round(i, 4), lambda_=round(lam, 1),
-        lambda_lim=round(lam_lim, 1),
-        N_elu=round(N_elu, 1), N_els=round(N_els, 1), NRd=round(NRd, 1),
-        taux=round(N_elu / NRd, 3), ok=N_elu <= NRd,
-        As_min=round(As_min, 2), As_max=round(As_max, 2),
-        armature=choix_ferraillage(max(As_min, 3.0)),
-    )
-
-    # --- 6.4 Voile BA mitoyen ép. 20 cm ---------------------------------
-    # Le voile est encastré en pied dans le puits n° 2 et en tête dans la
-    # dalle de terrasse. Il est sollicité par la poussée du remblai côté
-    # voisin sur la hauteur enterrée (NGF 39,02 assise -> 41,46 sol fini).
-    #
-    # Vérification menée en « bande verticale encastrée en pied, articulée
-    # en tête » (schéma de Rankine), qui est le cas défavorable vis-à-vis du
-    # moment d'encastrement en pied.
+    # --- 6.6 Voile BA de rive à créer (limite de propriété) --------------
+    # Le voile est à créer, en prolongement du mur pignon, sur une semelle
+    # filante à créer. Il est encastré en pied dans la semelle et retenu en
+    # tête par la dalle. Il porte la poutre-acrotère de 8,03 m (about) et
+    # reprend la poussée du remblai côté voisin sur la hauteur enterrée.
     H_enterre = 2.44
     poussee = poussee_terres(H_enterre, surcharge=5.0)
-    M_base = poussee["M_0"]            # poussée au repos : plus défavorable
-    flex_v = ba_flexion(1.00, 0.20, M_base, d_prime=0.03)
-    As_mini = 0.0013 * 1.00 * 0.20 * 1e4          # EC2 §9.6.2, par face
+    M_base = poussee["M_0"]
+    flex_v = ba_flexion(1.00, NIV.EP_VOILE, M_base, d_prime=0.03)
+    As_mini = 0.0013 * 1.00 * NIV.EP_VOILE * 1e4
     As_retenu = max(flex_v["As_cm2"], As_mini)
-    # effort tranchant à la base
     V_base = poussee["p0_kN"]
-    tran_v = ba_effort_tranchant(1.00, 0.17, V_base)
+    tran_v = ba_effort_tranchant(1.00, NIV.EP_VOILE - 0.03, V_base)
     R["voile"] = dict(
-        ep=0.20, H=5.28, H_enterre=H_enterre,
+        ep=NIV.EP_VOILE, H=5.28, H_enterre=H_enterre,
         Ka=poussee["Ka"], K0=poussee["K0"],
         pa=round(poussee["pa_kN"], 1), p0=round(poussee["p0_kN"], 1),
         M=round(M_base, 2), mu=round(flex_v["mu"], 4),
         As_requis=round(flex_v["As_cm2"], 2), As_mini=round(As_mini, 2),
         As_retenu=round(As_retenu, 2),
         armature=choix_ferraillage(As_retenu, n_min=4, phi_min=10),
-        As_repartition=round(0.0013 * 1.00 * 0.20 * 1e4, 2),
+        As_repartition=round(0.0013 * 1.00 * NIV.EP_VOILE * 1e4, 2),
         V_base=round(V_base, 1), VRdc=round(tran_v["VRdc_kN"], 1),
         ok_tranchant=tran_v["ok"],
     )
 
-    # --- 6.5 Dalle terrasse — vérification en flexion -------------------
-    # La dalle s'étend de la façade existante (NGF 44,08) à la verrière.
-    # La poutre-acrotère la reprend à 2,00 m du nu de façade : travée de
-    # 2,00 m entre façade et poutre, puis console de 1,20 m jusqu'à la
-    # verrière (3,20 - 2,00). C'est la console qui est dimensionnante.
-    L_dalle = NIV.POS_POTEAU_FAÇADE               # 2,00 m
-    L_console = 3.20 - NIV.POS_POTEAU_FAÇADE      # 1,20 m
-    M_travee = R["dalle"]["p_elu"] * L_dalle ** 2 / 8.0
-    M_console = R["dalle"]["p_elu"] * L_console ** 2 / 2.0
+    # --- 6.7 Semelle filante à créer sous le voile de rive ---------------
+    # E-02 arrête sa section à 65 × 30 cm ; son arase est au niveau des
+    # fondations existantes (NGF 39,02). La vérification reprend la géométrie
+    # retenue (B=0,65 m, h=0,30 m) et contrôle ses contraintes de sol.
+    N_lin_els = (0.20 * 5.28 * 25.0                 # voile
+                 + NIV.BANDE_POUTRE_8M * p_els_qp   # dalle reprise
+                 + 0.30 * 8.03 * 2.60 * 25.0 / 8.03 * 1.0)  # poutre-acrotère
+    N_lin_elu = 1.35 * N_lin_els
+    R["semelle_voile"] = semelle_filante(
+        N_lin_els, N_lin_elu, b_mur=NIV.EP_VOILE,
+        h_min=0.25, B_min=0.65)
+    R["semelle_voile"]["N_els"] = round(N_lin_els, 1)
+    R["semelle_voile"]["N_elu"] = round(N_lin_elu, 1)
+
+    # --- 6.8 Dalle terrasse : travée de 1,30 m + console de 0,70 m -------
+    # La dalle porte dans le sens de la largeur (2,00 m) : elle est encastrée
+    # dans la façade à un bord et prend appui sur la poutre-acrotère à
+    # l'autre, la bande au-delà étant en porte-à-faux.
+    # La dalle est encastrée dans la façade et porte en console de 1,70 m
+    # jusqu'au nu intérieur de la poutre-acrotère de rive (largeur de terrasse
+    # 2,00 m moins la largeur de la poutre 0,30 m). Le débord ne dépasse pas
+    # le poteau : M = p·L²/2 est donc le cas dimensionnant.
+    L_dalle = NIV.CONSOLE_DALLE                     # 1,70 m
+    L_console = 0.0
+    M_travee = p_elu * L_dalle ** 2 / 8.0
+    M_console = p_elu * L_console ** 2 / 2.0
     M_dalle = max(M_travee, M_console)
     flex_d = ba_flexion(1.00, e_dalle, M_dalle, d_prime=0.03)
-    tran_d = ba_effort_tranchant(1.00, flex_d["d"],
-                                 R["dalle"]["p_elu"] * (L_dalle / 2.0 + L_console))
-    f_d = ba_fleche_poutre(L_dalle, 1.00, e_dalle, R["dalle"]["p_els_qp"], 0.0)
+    V_dalle = p_elu * L_dalle                       # effort tranchant à l'appui
+    tran_d = ba_effort_tranchant(1.00, flex_d["d"], V_dalle)
+    f_d = ba_fleche_poutre(L_dalle, 1.00, e_dalle, p_els_qp, 0.0)
     R["dalle_verif"] = dict(
         L=L_dalle, L_console=L_console, M_travee=round(M_travee, 1),
-        M_console=round(M_console, 1), M=round(M_dalle, 1), mu=round(flex_d["mu"], 4),
-        As=round(flex_d["As_cm2"], 2),
+        M_console=round(M_console, 1), M=round(M_dalle, 1),
+        mu=round(flex_d["mu"], 4), As=round(flex_d["As_cm2"], 2),
         armature=choix_ferraillage(flex_d["As_cm2"], n_min=4, phi_min=10),
         VRdc=round(tran_d["VRdc_kN"], 1), ok_tranchant=tran_d["ok"],
         fleche=round(f_d["f_lt_mm"], 2), fleche_lim=round(f_d["f_lim_mm"], 2),
-        ok_fleche=f_d["ok"],
+        ok_fleche=f_d["ok"], largeur=NIV.LARGEUR_TERRASSE,
+        V=round(V_dalle, 1),
     )
 
-    # --- 6.6 Puits de fondation ----------------------------------------
-    # Réaction du poteau + poids du voile reporté sur le puits n° 1
-    N_puits1_els = N_els + 0.20 * 3.20 * 2.40 * GAMMA_BA * 1.5   # voile reporté
+    # --- 6.9 Puits de fondation ------------------------------------------
+    N_puits1_els = N_els + 0.25 * 0.70 * 0.25 * 25.0
     N_puits1_elu = N_elu * 1.10
-    R["puits_1"] = puits_gros_beton(N_puits1_els, N_puits1_elu, profondeur=2.40)
-    # Puits n° 2 sous le voile mitoyen : charge répartie du voile
-    N_puits2_els = 0.20 * 5.30 * 3.20 * GAMMA_BA + q_els * 4.00
-    R["puits_2"] = puits_gros_beton(N_puits2_els, N_puits2_els * 1.35, profondeur=2.40)
+    R["puits_1"] = puits_gros_beton(N_puits1_els, N_puits1_elu,
+                                    profondeur=2.40)
+    # Puits sous la poutre perpendiculaire : à l'aplomb du poteau, il
+    # reprend aussi la réaction de la semelle du voile.
+    N_puits2_els = R["semelle_voile"]["N_els"] * 2.0
+    R["puits_2"] = puits_gros_beton(N_puits2_els, N_puits2_els * 1.35,
+                                    profondeur=2.40)
 
-    # --- 6.7 Joint de dilatation 20 mm ---------------------------------
-    L_bat = 8.03
-    alpha_th = 10e-6          # /°C
-    delta_T = 20.0            # °C
-    deplacement = alpha_th * delta_T * L_bat * 1000.0   # mm
+    # --- 6.10 Joint de dilatation 20 mm ----------------------------------
+    L_bat = NIV.L_EXTENSION
+    alpha_th = 10e-6
+    delta_T = 20.0
+    deplacement = alpha_th * delta_T * L_bat * 1000.0
     R["joint"] = dict(largeur=20.0, L=L_bat, dT=delta_T,
                       deplacement_mm=round(deplacement, 2),
                       ok=deplacement < 20.0 * 0.80,
                       marge_pct=round((20.0 - deplacement) / 20.0 * 100.0, 1))
 
-    # --- 6.8 Longrine de répartition sous D1 ---------------------------
-    # Charge du mur au-dessus de D1 (refend 16 cm, 2 niveaux)
+    # --- 6.11 Longrine de répartition sous D1 ---------------------------
     h_mur = 5.68
     g_mur = 0.16 * 19.6 * h_mur
     N_lin_els = g_mur + 3.0 * 1.00 + 1.5 * 1.00
@@ -829,19 +866,22 @@ def chapitre_ba():
 # 9. CHAPITRE 4 — AVANT-METRE
 # ---------------------------------------------------------------------------
 
-def chapitre_metre():
+def chapitre_metre(res=None):
     M = {}
+    R_EXT = (res or {}).get("extension", {})
     murs_ba = [
         ("Jambages D2", 2 * 2, 0.25, 0.50, 2.15),
         ("Jambages D4", 2 * 2, 0.25, 0.50, 2.15),
         ("Jambages D6", 2 * 2, 0.25, 0.45, 2.15),
         ("Poteau D3/D5", 1, 0.25, 0.40, 2.40),
-        ("Poteau verrière", 1, 0.25, 0.25, 3.20),
-        ("Voile mitoyen", 1, 0.20, 3.20, 5.28),
+        ("Poteau BA rive (1,30 m)", 1, 0.25, 0.25, 3.20),
+        ("Voile de rive à créer", 1, 0.20, 5.28, 8.03),
         ("Sommiers BA", 3, 0.25, 0.40, 0.0),
         ("Longrines de répartition (jambages)", 4, 1.30, 0.25, 4.00),
-        ("Poutre-acrotère retroussée", 1, 0.30, 0.67, 8.03),
-        ("Dalle terrasse 20 cm", 1, 8.03, 3.20, 0.20),
+        ("Poutre-acrotère de rive 8,03 m", 1, 0.30, 0.67, 8.03),
+        ("Poutre-acrotère perpendiculaire", 1, 0.25, 0.67, 2.00),
+        ("Dalle terrasse 20 cm", 1, 8.03, 2.00, 0.20),
+        ("Semelle filante sous voile de rive", 1, 0.65, 0.30, 8.03),
     ]
     total_ba = 0.0
     lignes = []
@@ -876,7 +916,10 @@ def chapitre_metre():
     M["beton_puits"] = round(math.pi / 4 * (D1 ** 2 + D2 ** 2) * prof, 2)
 
     # dalle de terrasse
-    M["dalle_terrasse"] = round(8.03 * 3.20 * 0.20, 2)
+    M["dalle_terrasse"] = round(8.03 * 2.00 * 0.20, 2)
+    # semelle filante du voile de rive (gros œuvre enterré)
+    M["semelle_voile"] = round(R_EXT["semelle_voile"]["B"]
+                               * R_EXT["semelle_voile"]["h"] * NIV.L_EXTENSION, 2)
 
     # étaiement
     M["etais"] = 48
@@ -888,14 +931,15 @@ def chapitre_metre():
 # ---------------------------------------------------------------------------
 
 def run():
+    ext = chapitre_extension()
     res = dict(
         hypothese=dict(fcd=round(FCD, 2), fyd=round(FYD, 1), fctd=round(FCTD, 2),
                        q_els=Q_ELS, q_elu=Q_ELU, gamma_ba=GAMMA_BA),
-        extension=chapitre_extension(),
+        extension=ext,
         rso_S355=chapitre_rso("S355"),
         rso_S275=chapitre_rso("S275"),
         ba=chapitre_ba(),
-        metre=chapitre_metre(),
+        metre=chapitre_metre(dict(extension=ext)),
     )
     return res
 

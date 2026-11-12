@@ -106,10 +106,11 @@ T_PHASAGE = {
          "6 j",
          "Contrôle des ferraillages et des enrobages avant coulage ; PV de réception des bétons.",
          "Entreprise + BET"],
-        ["**4**", "Coulage du **voile BA mitoyen** et du **poteau BA 25 × 25** noyé dans la verrière",
+        ["**4**", "Coulage du **voile BA de rive à créer** (sur semelle filante 65 × 30) et du **poteau BA "
+                  "25 × 25** noyé dans la verrière",
          "5 j",
-         "Contrôle d'implantation du poteau : axe à **2,00 m ± 5 mm** du nu de façade, sous l'axe de la "
-         "poutre-acrotère.",
+         "Contrôle d'implantation du poteau : axe à **1,30 m ± 5 mm** du nu de façade, et du voile : nu "
+         "extérieur **en limite de propriété** (relevé contradictoire avec le voisin).",
          "Entreprise + BET + MOE"],
         ["**5**", "Exécution des **jambages et poteaux BA du RDC** (D1, D2, D3, D4, D5, D6) par passes alternées",
          "10 j",
@@ -161,19 +162,20 @@ T_ETAI = {
 }
 
 T_PUITS = {
-    "header": ["Caractéristique", "Puits 1 — angle mitoyen est", "Puits 2 — poteau BA sous la poutre-acrotère"],
+    "header": ["Caractéristique", "Puits 1 — poteau BA", "Puits 2 — voile de rive"],
     "widths": [30, 35, 35],
     "rows": [
-        ["Implantation", "Angle nord-est de l'extension, au droit du voile mitoyen",
-         "Sous le poteau BA 25 × 25, à **2,00 m du nu de la façade existante** — position "
-         "**contractuelle** depuis l'arbitrage E-01 du 11/11/2026"],
-        ["Dimensions en plan", "Ø 2,20 m (puits circulaire, calcul DOC-03 §4.2)",
-         "Ø 2,05 m (puits circulaire, calcul DOC-03 §4.2)"],
+        ["Implantation", "Sous le poteau BA 25 × 25, à **1,30 m du nu de la façade existante** — position "
+         "**contractuelle** depuis l'arbitrage E-02",
+         "Angle nord-est de l'extension, sous le **voile de rive à créer**, à l'aplomb de la semelle filante "
+         "en limite de propriété"],
+        ["Dimensions en plan", "Ø 1,35 m (calcul DOC-03 §4.3)",
+         "Ø 1,75 m (calcul DOC-03 §4.3)"],
         ["Profondeur", "De 41,46 à **39,02 NGF** (2,44 m)", "De 41,46 à **39,02 NGF** (2,44 m)"],
         ["Nature du remplissage", "Gros béton C16/20 coulé en pleine fouille, par passes de 0,50 m",
          "Gros béton C16/20 coulé en pleine fouille, par passes de 0,50 m"],
-        ["Semelle de répartition", "1,60 × 1,40 m — ép. 0,30 m, ferraillée B500B (chaînage périphérique)",
-         "1,40 × 1,40 m — ép. 0,30 m, ferraillée B500B"],
+        ["Semelle de répartition", "1,80 × 1,80 m — ép. 0,30 m, ferraillée B500B (chaînage périphérique)",
+         "2,20 × 2,20 m — ép. 0,30 m, ferraillée B500B"],
         ["Longrine de liaison BA", "Section 25 × 40 cm — 4HA12 + cadres HA8 e = 20 cm",
          "Section 25 × 40 cm — 4HA12 + cadres HA8 e = 20 cm"],
         ["Précautions", "**Aucune poussée sur les murs de cave existants** : la fouille est blindée et remblayée "
@@ -251,9 +253,9 @@ T_RISQUES = {
         ["R-07", "Écart entre les cotes du DXF et la réalité du bâti", "**Élevée**",
          "Relevé contradictoire obligatoire (phase 0), cotation des plans d'exécution à partir du relevé réel, "
          "tolérance de 1 cm signalée comme non contractuelle."],
-        ["R-08", "Instabilité du mur mitoyen", "**Élevée**",
-         "Constat d'état contradictoire avec le voisin avant travaux, étaiement du mur mitoyen si nécessaire, "
-         "clavetage du voile BA limité à la zone saine."],
+        ["R-08", "Litige de limite de propriété sur le voile de rive", "**Élevée**",
+         "Relevé contradictoire de la limite avant fouille, procès-verbal avec le voisin, implantation du "
+         "voile et de sa semelle strictement en limite, clavetage au pignon limité à la zone saine."],
         ["R-09", "Découverte de réseaux non repérés", "Moyenne",
          "DT-DICT, sondages manuels à la pelle, arrêt des travaux et information immédiate du MOE."],
         ["R-10", "Défaut de résistance du béton", "Moyenne",
@@ -492,70 +494,82 @@ BLOCKS = [
     ("pagebreak",),
     ("h1", "5. Fondations et structure de l'extension"),
     ("h2", "5.1 Principe général"),
-    ("p", "L'extension occupe une emprise de **8,03 × 3,20 m** en façade avant. Elle est constituée :"),
+    ("p", "L'extension occupe une emprise de **8,03 × 2,00 m** en façade avant, poutre-acrotère comprise. "
+          "Elle est constituée :"),
     ("bullets", [
-        "d'un **voile BA côté mitoyen** (est), solidaire du mur existant par clavetage ;",
-        "d'un **poteau BA 25 × 25 cm** implanté à **2,00 m du nu de la façade existante**, sous la poutre ;",
+        "d'un **voile BA de rive à créer** (ép. 20 cm) en limite de propriété, dans le prolongement du "
+        "pignon, sur **semelle filante neuve 65 × 30 cm** ;",
+        "d'un **poteau BA 25 × 25 cm** implanté à **1,30 m du nu de la façade existante**, à l'extrémité "
+        "gauche des 8,03 m ;",
+        "d'une **poutre perpendiculaire 25 × 67 cm** de 1,30 m prolongée par une **console de 0,70 m**, qui "
+        "reçoit l'about de la poutre-acrotère de 8,03 m ;",
         "d'une **poutre-acrotère BA** de 30 × 67 cm franchissant les 8,03 m, dont l'arase supérieure "
         "constitue l'acrotère à NGF 44,75 ;",
         "d'une **dalle BA de toiture-terrasse** (ép. 20 cm) ancrée dans le mur de façade existant au-dessus de "
-        "D2 et D4, franchissant 2,00 m jusqu'à la poutre puis se poursuivant en porte-à-faux de 1,20 m "
-        "jusqu'à la verrière ;",
+        "D2 et D4, portant en **console de 1,70 m** jusqu'au nu intérieur de la poutre de rive ;",
         "d'une **verrière** (hors mission) rapportée sur la structure.",
     ]),
     ("figure", os.path.join(FIG, "fig07_extension_plan.png"),
-     "Figure 2 — Plan de principe de l'extension : implantation du voile mitoyen, du poteau BA "
-     "à 2,00 m du nu de façade et de la poutre-acrotère.", 156),
+     "Figure 2 — Plan de principe de l'extension : voile de rive à créer, poutre perpendiculaire en "
+     "console, poteau BA à 1,30 m du nu de façade et poutre-acrotère de 8,03 m.", 156),
     ("h2", "5.2 Méthodologie des puits de fondation"),
     ("p", "Les deux puits sont **impérativement descendus jusqu'au même niveau d'assise que les fondations "
           "existantes du sous-sol (NGF 39,02)** afin de ne générer aucune poussée différentielle sur les murs de "
           "cave. Le mode opératoire est le suivant :"),
     ("bullets", [
         "**Repérage et DT-DICT** préalables, sondages manuels à la pelle mécanique sur 1,20 m de profondeur.",
-        "**Terrassement par puits** de 1,20 × 1,00 m et 1,00 × 1,00 m, à la pelle mécanique de faible tonnage, "
-        "avec **blindage immédiat** des parois (caisse de blindage ou chemisage bois).",
+        "**Terrassement par puits** de 1,40 × 1,40 m (puits n° 1, Ø 1,35 m) et de 1,80 × 1,80 m (puits n° 2, "
+        "Ø 1,75 m), à la pelle mécanique de faible tonnage, avec **blindage immédiat** des parois.",
+        "**Fouille en rigole** pour la **semelle filante du voile de rive** (65 × 30 cm), terrassée et bétonnée "
+        "par tronçons alternés de 1,50 m maximum, en limite de propriété.",
         "**Interdiction absolue** de terrasser simultanément les deux puits et la longrine : les puits sont "
         "exécutés et bétonnés l'un après l'autre.",
         "**Contrôle du fond de fouille** par le BET (visite contradictoire) : vérification de la nature du sol, "
         "de l'absence d'eau et de la profondeur d'assise.",
         "**Bétonnage en pleine fouille** au gros béton C16/20, par passes de 0,50 m, avec vibration, jusqu'à "
         "0,30 m sous le niveau bas de la semelle.",
-        "**Exécution de la semelle BA** 1,60 × 1,40 m (ép. 0,30 m) ferraillée, puis des **longrines BA** "
+        "**Exécution des semelles de répartition** ferraillées en tête des puits, puis des **longrines BA** "
         "25 × 40 cm reliant les puits au mur de façade existant.",
         "**Remblaiement compacté** par couches de 0,20 m dès que le béton a atteint 7 jours, afin de rétablir "
         "rapidement la butée sur les murs de cave.",
     ]),
     ("table", T_PUITS),
-    ("h2", "5.3 Voile BA mitoyen et poteau BA sous la poutre"),
-    ("p", "Le **voile mitoyen** (ép. 20 cm) est coulé contre le mur existant, après piquage de la surface et "
-          "clavetage par des armatures HA10 tous les 0,40 m, scellées chimiquement dans la maçonnerie sur 0,25 m. "
-          "Il assure à la fois la reprise des charges verticales de la poutre-acrotère et la stabilité "
-          "transversale de l'extension."),
-    ("p", "Le **poteau BA 25 × 25 cm** est coulé sur la semelle du puits n° 1 et reçoit, en tête, la platine "
-          "d'appui de la poutre-acrotère. Il est **implanté à 2,00 m du nu de la façade existante**, position "
-          "arrêtée le 11/11/2026, et se trouve **noyé dans la façade latérale de la verrière** : un "
+    ("h2", "5.3 Voile BA de rive à créer et poteau BA sous la poutre"),
+    ("p", "Le **voile de rive** (ép. 20 cm) est **créé de toutes pièces** en limite de propriété, dans le "
+          "prolongement du mur pignon : il n'existe aucun mur mitoyen en place susceptible de servir d'appui. "
+          "Il est fondé sur une **semelle filante neuve 65 × 30 cm** descendue à NGF 39,02, claveté au pignon "
+          "par des **HA 12 traversants tous les 0,50 m** scellés chimiquement, et ferraillé par 4 HA 12 par "
+          "face + HA 8 e = 250 mm. Il reprend l'about de la poutre-acrotère isostatique et la poussée du "
+          "remblai côté voisin, et assure la stabilité transversale de l'extension."),
+    ("p", "Le **poteau BA 25 × 25 cm** est coulé sur le puits n° 1 et reçoit, en tête, la **poutre "
+          "perpendiculaire 25 × 67 cm** qui se poursuit en **console de 0,70 m** jusqu'à la limite de dalle. Il "
+          "est **implanté à 1,30 m du nu de la façade existante** (arbitrage E-02) et se trouve **noyé dans la "
+          "façade latérale de la verrière** : un "
           "**rupteur de pont thermique** (plaque de mousse polyuréthane ou de polystyrène extrudé de 40 mm) est "
           "interposé entre le poteau et la menuiserie sur toute la hauteur, afin d'éviter tout pont thermique "
           "conforme à la RE 2020."),
-    ("h2", "5.4 Poutre-acrotère retroussée et dalle de toiture-terrasse"),
+    ("h2", "5.4 Poutre-acrotère de rive, console et dalle de toiture-terrasse"),
     ("p", "La **poutre-acrotère retroussée** est une poutre BA monolithique de section **30 × 67 cm**, calée "
           "entre la sous-face du plancher haut RDC (NGF 44,08) et l'**arase supérieure de l'acrotère "
           "(NGF 44,75)**. Elle **fait office d'acrotère** de la terrasse et constitue, avec la dalle, un "
           "ensemble monolithique en L favorable à la rigidité d'ensemble et à l'étanchéité."),
-    ("note", "**Géométrie confirmée par le maître d'ouvrage le 11 novembre 2026.** La poutre s'appuie sur le "
-             "**voile BA du mur mitoyen** et sur le **poteau BA 25 × 25**, déplacé à **2,00 m du nu de la "
-             "façade** pour venir exactement sous la poutre. Le poteau est donc l'**appui d'extrémité** côté "
-             "façade : la poutre reste une **travée unique de 8,03 m**, isostatique. Sa flèche à long terme "
-             "ressort à 17,6 mm (L/457) ; elle respecte le critère L/250 et une **contre-flèche de coffrage de "
-             "20 mm** est prescrite pour tenir le critère L/500 vis-à-vis de la verrière (DOC-03 §3.4)."),
+    ("note", "**Géométrie rectifiée par le maître d'ouvrage (arbitrage E-02).** La poutre-acrotère de 8,03 m "
+             "est **isostatique** : elle s'appuie sur le **voile de rive à créer** (appui droit) et sur "
+             "l'**about de la poutre perpendiculaire en console** (appui gauche), cette dernière étant portée "
+             "par le **poteau BA 25 × 25 implanté à 1,30 m du nu de façade**. La terrasse mesure **2,00 m de "
+             "profondeur, poutre comprise**, d'où une **console de 0,70 m** au-delà du poteau et une **dalle en "
+             "porte-à-faux de 1,70 m** depuis la façade. La flèche à long terme de la poutre ressort à "
+             "22,48 mm (L/357) : une **contre-flèche de coffrage de 20 mm** est prescrite pour tenir le critère "
+             "L/500 vis-à-vis de la verrière (DOC-03 §3.4)."),
     ("bullets", [
-        "d'un côté, sur le **voile BA mitoyen**, par un appui encastré partiel (armatures en attente) ;",
-        "de l'autre, sur le **poteau BA 25 × 25** situé à 2,00 m du nu de façade, par un appui simple "
-        "(platine + appareil d'appui) ;",
+        "d'un côté, sur le **voile de rive à créer**, par un appui simple à rotule (armatures en attente et "
+        "appareil d'appui fretté) ;",
+        "de l'autre, sur l'**about de la poutre perpendiculaire 25 × 67 cm**, elle-même portée par le poteau "
+        "BA 25 × 25 à 1,30 m du nu de façade et prolongée en console de 0,70 m ;",
         "la **dalle de terrasse** est, quant à elle, appuyée sur le **mur de façade conservé** par un appareil "
         "d'appui glissant (platine + feutre téflon) afin de permettre la libre rotation et la dilatation "
-        "thermique ; elle franchit 2,00 m entre la façade et la poutre puis se poursuit en **porte-à-faux de "
-        "1,20 m** jusqu'à la verrière.",
+        "thermique ; elle porte en **console de 1,70 m** depuis la façade jusqu'au nu intérieur de la poutre "
+        "de rive.",
     ]),
     ("p", "Ces dispositions sont détaillées dans la note de calculs (DOC-03, chapitre 1) et sur les plans "
           "PL-02 (coffrage) et PL-04 (ferraillage)."),
@@ -691,8 +705,9 @@ BLOCKS = [
              "Présentation du mode opératoire avant démarrage ; fiches de contrôle à chaque PA."],
             ["BET ↔ Bureau de contrôle", "Résistance au feu (H-19) et conformité",
              "Consultation avant dépôt du dossier ; avis à intégrer dans les plans d'exécution."],
-            ["BET ↔ Voisin", "Mur mitoyen (H-12)",
-             "Constat d'état contradictoire avant travaux ; autorisation d'accès pour sondage."],
+            ["BET ↔ Voisin", "Voile de rive en limite de propriété (E-02, ex-H-12)",
+             "Relevé contradictoire de la limite avant fouille (procès-verbal) ; information sur "
+             "l'implantation du voile et de sa semelle."],
         ],
         "caption": "Tableau 14 — Interfaces et coordination.",
         "font": 7.2,

@@ -1,12 +1,11 @@
 """
 PL-03 — Coupes et élévations de l'extension.
 
-Deux cadres sur la planche A3 paysage :
-  1. coupe verticale sur la terrasse (échelle 1/50) — altimétrie NGF des
-     niveaux, plancher haut RDC 44,08, arase d'acrotère 44,75, fondations
-     39,02, niveau du terrain 41,11 ;
-  2. détail de l'appui de la poutre-acrotère sur le poteau BA 25 × 25 et sur
-     le voile mitoyen (échelle 1/20).
+Trois cadres sur la planche A3 paysage :
+  1. coupe transversale de la terrasse à l'échelle 1/50, avec altimétrie NGF ;
+  2. élévation du poteau BA et de la poutre perpendiculaire avec console,
+     à l'échelle 1/40 ;
+  3. coupe du voile de rive neuf sur semelle filante, à l'échelle 1/60.
 """
 from __future__ import annotations
 
@@ -18,20 +17,21 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(HERE, "..", "00_SOURCES"))
 
 import plan_engine as E          # noqa: E402
+import detail_lib as D           # noqa: E402
 import niveaux_retenus as N      # noqa: E402
+NIV = N
 
 OUT = os.path.join(HERE, "plans")
 
 CARTOUCHE = {
     "affaire": "Affaire GA-2026-58AIGLE — BET Structure",
     "adresse": "58 rue de l'Aigle — 92250 La Garenne-Colombes",
-    "titre": "PL-03 — COUPES ET ÉLÉVATIONS DE L'EXTENSION",
-    "sous_titre": "Coupe verticale sur la terrasse (1/50) et détail d'appui "
-                  "de la poutre-acrotère (1/20)",
+    "titre": "PL-03 — COUPES ET ÉLÉVATIONS",
+    "sous_titre": "Coupe transversale, élévation du poteau / console et coupe du voile neuf",
     "repere": "PL-03",
     "phase": "Tâche 3 — plans généraux",
     "indice": "Indice A — 11/11/2026",
-    "date": "Échelle 1/50 et 1/20",
+    "date": "Échelles : 1/40, 1/50 et 1/60",
 }
 
 # ---------------------------------------------------------------------------
@@ -40,8 +40,8 @@ CARTOUCHE = {
 
 X_FACADE = 0.0        # nu extérieur de la façade existante
 EP_FAC = 49.0
-P = 320.0             # profondeur de l'extension
-Y_POT = 200.0         # axe du poteau, depuis le nu de façade
+P = NIV.LARGEUR_TERRASSE * 100.0   # largeur de terrasse (200 cm)
+Y_POT = NIV.POS_POTEAU_FAÇADE * 100.0   # 130 cm
 B_POUTRE = 30.0
 H_POUTRE = 67.0
 
@@ -54,12 +54,16 @@ def z(ngf):
 
 
 def build_coupe() -> E.Scene:
-    """Coupe A-A perpendiculaire à la façade, à mi-portée de la poutre.
+    """Coupe A-A transversale sur la terrasse (arbitrage E-02).
 
-    x = 0  : nu extérieur de la façade existante
-    x = 200: axe du poteau BA et de la poutre-acrotère (2,00 m)
-    x = 320: verrière frontale
-    z      : altitude NGF ramenée au sol fini RDC (41,46 -> 0)
+    x = 0   : nu extérieur de la façade existante
+    x = 170 : nu intérieur de la poutre-acrotère de rive
+    x = 200 : nu extérieur (limite de dalle), axe de la poutre à 1,85 m
+    z       : altitude NGF ramenée au sol fini RDC (41,46 -> 0)
+
+    La coupe est prise à mi-longueur de la poutre de 8,03 m : elle ne coupe
+    donc ni le poteau (à 1,30 m de la façade, en rive gauche) ni le voile de
+    rive (en rive droite). Le poteau et la console sont décrits au cadre B.
     """
     sc = E.Scene()
 
@@ -69,60 +73,55 @@ def build_coupe() -> E.Scene:
     y_fond = z(N.NGF_FONDATION)
     y_ver = z(N.NGF_VERRIERE_HEAD)
     y_terr = z(N.NGF_TERRAIN)
+    x_pb = P - B_POUTRE            # 170
+    x_pt = P                       # 200
 
-    # ---- 1. Façade existante conservée (cave -> plancher haut RDC) ------
-    sc.rect(-EP_FAC, y_fond, EP_FAC, y_ph - y_fond, "STR_EXISTANT", lw=0.35)
-    for i in range(16):
-        yy = y_fond + i * 32
-        sc.line(-EP_FAC, yy, -EP_FAC + 26, yy + 32, "STR_EXISTANT", lw=0.13)
-    # plancher haut du RDC existant (44,08)
+    # ---- 1. Façade existante conservée (coupée au niveau du terrain) ----
+    y_bas = y_terr - 4
+    sc.rect(-EP_FAC, y_bas, EP_FAC, y_ph - y_bas, "STR_EXISTANT", lw=0.35)
+    for i in range(8):
+        yy = y_bas + i * 28
+        sc.line(-EP_FAC, yy, -EP_FAC + 24, yy + 28, "STR_EXISTANT", lw=0.13)
+    sc.line(-EP_FAC, y_bas - 6, -EP_FAC + EP_FAC, y_bas - 6,
+            "STR_COTATIONS_TEXTES", lw=0.18)
     sc.rect(-EP_FAC, y_ph - 22, EP_FAC, 22, "STR_EXISTANT", lw=0.25)
 
-    # ---- 2. Dalle de terrasse (20 cm) -----------------------------------
-    sc.rect(0, y_ph, P, 20, "STR_COFFRAGE_BA", lw=0.50, fill=True)
+    # ---- 2. Dalle de terrasse en console depuis la façade ----------------
+    # La dalle (20 cm) porte depuis la façade et s'encastre sur la poutre-
+    # acrotère de rive : c'est un porte-à-faux de 1,70 m.
+    sc.rect(0, y_ph, x_pb, 20, "STR_COFFRAGE_BA", lw=0.50, fill=True)
 
-    # ---- 3. Poutre-acrotère 30 x 67 --------------------------------------
-    sc.rect(Y_POT - B_POUTRE / 2, y_pb, B_POUTRE, y_pt - y_pb,
-            "STR_COFFRAGE_BA", lw=0.50, fill=True)
-    # arase d'acrotère prolongée (garde-corps de la terrasse)
-    sc.line(Y_POT - B_POUTRE / 2, y_pt, 0, y_pt, "STR_COTATIONS_TEXTES",
-            lw=0.13)
+    # ---- 3. Poutre-acrotère de rive 30 x 67 ------------------------------
+    sc.rect(x_pb, y_pb, B_POUTRE, y_pt - y_pb, "STR_COFFRAGE_BA", lw=0.50,
+            fill=True)
 
-    # ---- 4. Poteau BA 25 x 25 --------------------------------------------
-    sc.rect(Y_POT - 12.5, 0, 25, y_pb, "STR_COFFRAGE_BA", lw=0.50, fill=True)
+    # ---- 4. Garde-corps / acrotère au-dessus de la dalle ----------------
+    sc.line(0, y_pt, x_pb, y_pt, "STR_COTATIONS_TEXTES", lw=0.13)
+    sc.line(0, y_ph + 20, 0, y_pt, "STR_COTATIONS_TEXTES", lw=0.13)
 
-    # ---- 5. Puits n° 1 (sous le poteau) ----------------------------------
-    sc.rect(Y_POT - 102.5, y_fond, 205, -y_fond, "STR_COFFRAGE_BA", lw=0.50)
-    for i in range(-3, 4):
-        sc.line(Y_POT + i * 34, y_fond + 8, Y_POT + i * 34 + 46, -8,
-                "STR_COFFRAGE_BA", lw=0.13)
-    sc.text("Puits n° 1 — Ø 2,05 m — gros béton C16/20", Y_POT, y_fond - 24,
-            2.1, align="center")
+    # ---- 5. Verrière frontale (hors mission) ----------------------------
+    sc.line(x_pt, y_ph, x_pt, y_ver, "STR_COTATIONS_TEXTES", lw=0.30)
+    sc.line(x_pt - 55, y_ver, x_pt + 55, y_ver, "STR_COTATIONS_TEXTES", lw=0.18)
 
-    # ---- 6. Verrière frontale (hors mission) -----------------------------
-    sc.line(P, 0, P, y_ver, "STR_COTATIONS_TEXTES", lw=0.30)
-    sc.line(P - 60, y_ver, P + 60, y_ver, "STR_COTATIONS_TEXTES", lw=0.18)
-    sc.leader("Verrière frontale (hors mission)\nreprise sur la dalle",
-              P - 30, y_ver + 52, P, y_ver - 6, fontsize=2.1)
+    # ---- 6. Sols et terrain ----------------------------------------------
+    sc.line(-EP_FAC - 30, y_terr, x_pt + 40, y_terr, "STR_EXISTANT", lw=0.25)
+    sc.line(-EP_FAC, 0, x_pt, 0, "STR_EXISTANT", lw=0.35)
+    sc.text("Terrain NGF 41,11", x_pt + 46, y_terr + 4, 2.0, align="left")
 
-    # ---- 7. Sols et terrain ----------------------------------------------
-    sc.line(-EP_FAC - 30, y_terr, P + 40, y_terr, "STR_EXISTANT", lw=0.25)
-    sc.line(-EP_FAC, 0, P, 0, "STR_EXISTANT", lw=0.35)
-    sc.text("Terrain NGF 41,11", P + 46, y_terr + 4, 2.0, align="left")
+    # ---- 7. Annotations ---------------------------------------------------
+    sc.leader("Poutre-acrotère de rive 30 × 67\narase 44,75 — "
+              "isostatique 8,03 m", 96, y_pt + 44,
+              x_pb + B_POUTRE / 2, y_pt - 10, fontsize=1.9)
+    sc.leader("Dalle BA 20 cm en console — porte-à-faux 1,70 m", 16,
+              y_ph - 62, 85, y_ph + 14, fontsize=1.9)
+    sc.leader("Aucun poteau dans cette coupe\n(poteau en rive gauche — "
+              "cadre B)", 100, y_ph - 118, 152, y_ph - 16, fontsize=1.9)
+    sc.leader("Verrière (hors mission)", x_pt - 60, y_ver + 2,
+              x_pt, y_ver - 6, fontsize=1.9)
 
-    # ---- 8. Annotations ---------------------------------------------------
-    sc.leader("Poutre-acrotère BA 30 × 67\narase NGF 44,75",
-              Y_POT + 62, y_pt + 44, Y_POT + B_POUTRE / 2, y_pt - 10,
-              fontsize=2.15)
-    sc.leader("Poteau BA 25 × 25\naxe à 2,00 m du nu de façade",
-              Y_POT + 86, 110, Y_POT + 12.5, 150, fontsize=2.15)
-    sc.leader("Dalle BA 20 cm — travée 2,00 m\npuis porte-à-faux 1,20 m",
-              -46, y_ph + 132, -6, y_ph + 14, fontsize=2.15)
-
-    # ---- 9. Cotation des niveaux NGF -------------------------------------
-    xc = -86.0
-    for ngf, lab in ((N.NGF_FONDATION, "39,02"),
-                     (N.NGF_SOL_RDC, "41,46"),
+    # ---- 8. Cotation des niveaux NGF -------------------------------------
+    xc = -78.0
+    for ngf, lab in ((N.NGF_SOL_RDC, "41,46"),
                      (N.NGF_PH_RDC, "44,08"),
                      (N.NGF_ACROTERE, "44,75"),
                      (N.NGF_VERRIERE_HEAD, "45,90")):
@@ -131,144 +130,190 @@ def build_coupe() -> E.Scene:
                 lw=0.13)
         sc.text(lab, xc - 18, yy - 3, 2.0, align="right")
 
-    # ---- 10. Cotation horizontale ----------------------------------------
-    sc.dim_h(0, Y_POT, y_pt + 62, "2,00 m")
-    sc.dim_h(Y_POT, P, y_pt + 62, "1,20 m")
-    sc.text("Niveaux en m NGF", xc - 18, z(N.NGF_VERRIERE_HEAD) + 22, 2.0,
-            align="right")
+    # ---- 9. Cotation horizontale -----------------------------------------
+    sc.dim_h(0, x_pb, y_ph - 30, "1,70 m")
+    sc.dim_h(x_pb, x_pt, y_ph - 30, "30")
+    sc.dim_h(0, x_pt, y_pt + 90, "2,00 m")
 
     return sc
 
 
+def build_bord_gauche() -> E.Scene:
+    """Cadre B — élévation du bord gauche : poutre perpendiculaire, poteau
+    et console de 0,70 m (échelle 1/40)."""
+    sc = E.Scene()
+    y_ph = z(N.NGF_PH_RDC)
+    y_pb = z(N.NGF_POUTRE_BAS)
+    y_pt = z(N.NGF_POUTRE_HAUT)
+    y_terr = z(N.NGF_TERRAIN)
+
+    # façade en bout
+    sc.rect(-EP_FAC, y_terr, EP_FAC, y_ph - y_terr, "STR_EXISTANT", lw=0.30,
+            hatch="ANSI31", angle=45.0, spacing=3.0)
+    # poteau BA 25 x 25 à 1,30 m
+    sc.rect(Y_POT - 12.5, 0, 25, y_pb, "STR_COFFRAGE_BA", lw=0.50, fill=True)
+    # Tête du puits représentée en coupe raccourcie, avec rupture graphique.
+    # La profondeur complète (2,40 m de calcul, arase NGF 39,02) est donnée
+    # dans les notes et sur PL-02/PL-04.
+    sc.rect(Y_POT - 67.5, -60.0, 135.0, 60.0, "STR_COFFRAGE_BA", lw=0.45)
+    D.ligne_rupture(sc, Y_POT, -58.0, -38.0, amp=3.0)
+    # poutre perpendiculaire : de la façade (x=0) au nu extérieur (x=P)
+    sc.rect(0, y_pb, P, y_pt - y_pb, "STR_COFFRAGE_BA", lw=0.50, fill=True)
+    # console : hachurée différemment au-delà du poteau
+    sc.rect(Y_POT, y_pb, P - Y_POT, y_pt - y_pb, "STR_COFFRAGE_BA", lw=0.50,
+            hatch="ANSI37", angle=0.0, spacing=1.4)
+    # about de la poutre de 8,03 m (perpendiculaire au plan)
+    sc.rect(P - B_POUTRE, y_pb, B_POUTRE, y_pt - y_pb, "STR_COTATIONS_TEXTES",
+            lw=0.25)
+    # dalle
+    sc.rect(0, y_ph, P, 20, "STR_COFFRAGE_BA", lw=0.35)
+    # sols
+    sc.line(-EP_FAC, 0, P + 20, 0, "STR_EXISTANT", lw=0.30)
+    sc.line(-EP_FAC, y_terr, P + 20, y_terr, "STR_EXISTANT", lw=0.22)
+
+    sc.dim_h(0, Y_POT, y_pb - 26, "1,30 m")
+    sc.dim_h(Y_POT, P, y_pb - 26, "0,70 m")
+    sc.dim_v(0, y_pb, -14, "2,62 m")
+    sc.text("About de la poutre de rive 8,03 m", P + 18.0, y_pb + 48.0, 2.0)
+    return sc
+
+
 # ---------------------------------------------------------------------------
-# Cadre 2 — détail d'appui (1/20)
+# Cadre 3 — coupe du voile de rive sur semelle (1/60)
 # ---------------------------------------------------------------------------
 
 def build_detail() -> E.Scene:
-    """Appui de la poutre sur le poteau BA ; unités cm."""
+    """Cadre C — coupe sur le voile de rive et sa semelle filante (1/60)."""
     sc = E.Scene()
+    ep = 20.0
 
-    # poteau 25 x 25
-    sc.rect(0, 0, 25, 25, "STR_COFFRAGE_BA", lw=0.50, fill=True)
-    # poutre 30 x 67 posée sur le poteau (léger débord de 2,5 cm de chaque côté)
-    sc.rect(-2.5, 25, 30, 67, "STR_COFFRAGE_BA", lw=0.50, fill=True)
-    # dalle de part et d'autre
-    sc.line(-60, 92, -2.5, 92, "STR_COFFRAGE_BA", lw=0.50)
-    sc.line(27.5, 92, 85, 92, "STR_COFFRAGE_BA", lw=0.50)
-    sc.line(-60, 72, -2.5, 72, "STR_COFFRAGE_BA", lw=0.35)
-    sc.line(27.5, 72, 85, 72, "STR_COFFRAGE_BA", lw=0.35)
+    # voile de rive à créer (coupe, hauteur 5,28 m ramenée)
+    H = 264.0
+    D.beton_rect(sc, 0, 0, ep, H, sp=1.2)
+    # semelle filante à créer 65 x 30
+    D.beton_rect(sc, -(65 - ep) / 2, -30.0, 65.0, 30.0, sp=1.4)
+    # amorce de la dalle
+    sc.rect(-60, H, 140, 20, "STR_COFFRAGE_BA", lw=0.45, fill=True)
 
-    # platine d'appui + appareil d'appui
-    sc.rect(-2.5, 23.0, 30, 2.0, "STR_ACIER_PROFILS", lw=0.50)
-    sc.rect(-1.0, 21.0, 27, 2.0, "STR_COTATIONS_TEXTES", lw=0.25)
+    # armatures verticales du voile (4 HA 12 par face)
+    for x in (5.0, 15.0):
+        sc.line(x, 2.0, x, H - 2.0, "STR_FERRAILLAGE", 0.32)
+    # horizontales HA 8 e = 250
+    for y in range(14, int(H), 25):
+        sc.line(3.0, y, 17.0, y, "STR_FERRAILLAGE", 0.22)
+    # attentes de la semelle dans le voile (crosses)
+    for x in (5.0, 15.0):
+        sc.line(x, -2.0, x - 10.0, -12.0, "STR_FERRAILLAGE", 0.32)
+    # filants de la semelle
+    for y in (-6.0, -24.0):
+        sc.line(-30.0, y, 30.0, y, "STR_FERRAILLAGE", 0.30)
 
-    # armatures du poteau : 6 HA 8
-    for (bx, by) in ((-2.5, 1.6), (12.5, 1.0), (27.5, 1.6),
-                     (-2.5, 23.4), (12.5, 21.4), (27.5, 23.4)):
-        sc.circle(bx, by, 0.8, "STR_FERRAILLAGE", lw=0.35)
-
-    # cadre HA 8 e = 200
-    sc.line(-2.0, 1.5, 27.0, 1.5, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(27.0, 1.5, 27.0, 23.5, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(27.0, 23.5, -2.0, 23.5, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(-2.0, 23.5, -2.0, 1.5, "STR_FERRAILLAGE", lw=0.35)
-
-    # 4 HA 20 en nappe basse de la poutre
-    for i in range(4):
-        sc.circle(2.0 + i * 8.4, 30.5, 1.0, "STR_FERRAILLAGE", lw=0.40)
-    # étriers HA 8 e = 175
-    sc.line(0.5, 28.0, 27.0, 28.0, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(27.0, 28.0, 27.0, 89.5, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(27.0, 89.5, 0.5, 89.5, "STR_FERRAILLAGE", lw=0.35)
-    sc.line(0.5, 89.5, 0.5, 28.0, "STR_FERRAILLAGE", lw=0.35)
-
-    # ---- annotations ------------------------------------------------------
-    sc.leader("Poutre-acrotère BA 30 × 67\n4 HA 20 + étriers HA 8 e = 175",
-              95, 78, 27.5, 70, fontsize=2.1)
-    sc.leader("Platine d'appui 300 × 200 × 15\nmatée au mortier sans retrait",
-              95, 40, 27.5, 24, fontsize=2.1)
-    sc.leader("Poteau BA 25 × 25 — 6 HA 8\ncadres HA 8 e = 200",
-              95, 8, 25, 8, fontsize=2.1)
-    sc.leader("Dalle BA 20 cm", -68, 96, -30, 92, fontsize=2.0)
-    sc.leader("Contre-flèche de coffrage 20 mm\n(à rattraper sur l'étaiement)",
-              -68, 55, -2.5, 60, fontsize=2.0)
-
-    # cotes
-    sc.dim_h(0, 25, -14, "25")
-    sc.dim_h(-2.5, 27.5, 108, "30")
-    sc.dim_v(0, 25, -20, "25")
-    sc.dim_v(25, 92, -20, "67")
+    D.cote_h(sc, 0, ep, H + 34, "20")
+    D.cote_h(sc, -32.5, 32.5, -44.0, "65")
+    D.cote_v(sc, -30.0, 0.0, 46.0, "30")
+    sc.leader("Voile de rive BA 20 cm À CRÉER\n4 HA 12 par face + HA 8 e = 250",
+              54, H - 40, 15.0, H - 60, fontsize=2.0)
+    sc.leader("Semelle filante 65 × 30 À CRÉER\nsous le voile, arase 39,02",
+              54, -24, 30.0, -15.0, fontsize=2.0)
+    sc.leader("Attentes HA 12 avec cross\ndans la semelle", -54, -20, -8.0,
+              -8.0, fontsize=2.0)
     return sc
+
+
+def _shift(sc, ox, oy):
+    t = E.Scene()
+    for it in sc.items:
+        k = it[0]
+        if k == "line":
+            _, p1, p2, *r = it
+            t.items.append(("line", (p1[0] + ox, p1[1] + oy),
+                            (p2[0] + ox, p2[1] + oy), *r))
+        elif k == "rect":
+            _, (x, y), (w, h), *r = it
+            t.items.append(("rect", (x + ox, y + oy), (w, h), *r))
+        elif k == "poly":
+            _, pts, *r = it
+            t.items.append(("poly", [(a + ox, b + oy) for a, b in pts], *r))
+        elif k == "circle":
+            _, (cx, cy), rad, *r = it
+            t.items.append(("circle", (cx + ox, cy + oy), rad, *r))
+        elif k == "text":
+            _, txt, (x, y), *r = it
+            t.items.append(("text", txt, (x + ox, y + oy), *r))
+        elif k == "dim_h":
+            _, x1, x2, y, *r = it
+            t.items.append(("dim_h", x1 + ox, x2 + ox, y + oy, *r))
+        elif k == "dim_v":
+            _, y1, y2, x, *r = it
+            t.items.append(("dim_v", y1 + oy, y2 + oy, x + ox, *r))
+        elif k == "hatchpoly":
+            _, pts, *r = it
+            t.items.append(("hatchpoly", [(a + ox, b + oy) for a, b in pts],
+                            *r))
+        else:
+            t.items.append(it)
+    return t
+
+
+def _placer(pb, sc, x, y, w, h, scale):
+    """Centre la scène dans le cadre (x, y, w, h) à l'échelle donnée."""
+    pb.k = 10.0 / scale
+    x0, y0, x1, y1 = pb.bbox(sc)
+    cw, ch = (x1 - x0) * pb.k, (y1 - y0) * pb.k
+    pb.set_origin(x + (w - cw) / 2.0 - x0 * pb.k,
+                  y + (h - ch) / 2.0 - y0 * pb.k)
+    pb.render(sc)
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    sc1 = build_coupe()
+    sc2 = build_bord_gauche()
+    sc3 = build_detail()
 
-    # ---------- DXF : les deux cadres côte à côte -------------------------
-    sc1, sc2 = build_coupe(), build_detail()
+    # ---------- DXF -------------------------------------------------------
     dxf = E.DxfBackend("PL-03")
-    dxf.render(sc1)
-    # translation du détail pour le poser à droite de la coupe
-    sc2t = E.Scene()
-    for it in sc2.items:
-        if it[0] in ("line",):
-            _, p1, p2, layer, lw = it
-            sc2t.line(p1[0] + 620, p1[1], p2[0] + 620, p2[1], layer, lw)
-        elif it[0] in ("rect",):
-            _, (x, y), (w, h), layer, lw, fill, hatch, ang, sp = it
-            sc2t.rect(x + 620, y, w, h, layer, lw, fill, hatch, ang, sp)
-        elif it[0] == "circle":
-            _, (cx, cy), r, layer, lw, fill, hatch = it
-            sc2t.circle(cx + 620, cy, r, layer, lw, fill, hatch)
-        elif it[0] == "text":
-            _, s, (x, y), fs, layer, al, ang, b = it
-            sc2t.text(s, x + 620, y, fs, layer, al, ang, b)
-        elif it[0] == "dim_h":
-            _, x1, x2, y, lab, fs, layer, tick = it
-            sc2t.dim_h(x1 + 620, x2 + 620, y, lab, fs, layer, tick)
-        elif it[0] == "dim_v":
-            _, y1, y2, x, lab, fs, layer, tick = it
-            sc2t.dim_v(y1, y2, x + 620, lab, fs, layer, tick)
-    dxf.render(sc2t)
+    for sc, (ox, oy) in ((sc1, (0, 0)), (sc2, (0, -520)),
+                         (sc3, (420, -520))):
+        dxf.render(_shift(sc, ox, oy))
     p_dxf = dxf.save(os.path.join(OUT, "PL-03_Coupes_Elevations.dxf"))
 
-    # ---------- PDF : deux cadres, deux échelles --------------------------
+    # ---------- PDF -------------------------------------------------------
     pb = E.PdfBackend("PL-03", CARTOUCHE)
     pb.new_page()
     pb.titre("PL-03 — COUPES ET ÉLÉVATIONS DE L'EXTENSION",
-             "Coupe verticale sur la terrasse (1/50) et détail d'appui de la "
-             "poutre-acrotère (1/20)")
+             "Coupe transversale A-A, élévation du bord gauche et coupe sur "
+             "le voile de rive")
 
-    # cadre 1 : coupe 1/50 — à gauche
-    pb.place(sc1, 34.0, 92.0, scale=50.0)
-    pb.render(sc1)
-    c = pb._c
-    c.setFont("Helvetica-Bold", 2.9)
-    c.setFillColor(pb.Color(0, 0, 0))
-    c.drawString(34, 258, "COUPE VERTICALE A-A SUR LA TERRASSE — 1/50")
+    # cadre A : coupe transversale 1/50
+    pb.frame(14, 152, 190, 100)
+    _placer(pb, sc1, 14, 152, 190, 100, 50.0)
+    pb.vtitle(14, 256, "A — COUPE TRANSVERSALE A-A — 1/50")
 
-    # cadre 2 : détail 1/20 — à droite
-    pb.place(sc2, 232.0, 140.0, scale=20.0)
-    pb.render(sc2)
-    c.setFont("Helvetica-Bold", 2.9)
-    c.drawString(232, 258, "DÉTAIL D'APPUI POUTRE / POTEAU — 1/20")
+    # cadre B : bord gauche 1/40
+    pb.frame(214, 152, 190, 100)
+    _placer(pb, sc2, 214, 152, 190, 100, 40.0)
+    pb.vtitle(214, 256, "B — BORD GAUCHE : POTEAU ET CONSOLE — 1/40")
 
-    # légende et notes
-    pb.legende(232, 126, [
-        ("STR_COFFRAGE_BA", "Béton armé coulé en place", "hatch"),
-        ("STR_ACIER_PROFILS", "Platine / appareil d'appui S275", "line"),
+    # cadre C : voile de rive 1/60
+    pb.frame(14, 38, 116, 102)
+    _placer(pb, sc3, 14, 38, 116, 102, 60.0)
+    pb.vtitle(14, 144, "C — VOILE DE RIVE ET SEMELLE — 1/60")
+
+    pb.legende(146, 132, [
+        ("STR_COFFRAGE_BA", "Béton armé à créer", "hatch"),
         ("STR_FERRAILLAGE", "Armatures B500B", "line"),
-        ("STR_EXISTANT", "Maçonnerie existante conservée", "line"),
+        ("STR_EXISTANT", "Maçonnerie existante", "line"),
     ])
-    pb.note_block(24, 76, "NOTES", [
+    pb.note_block(146, 106, "NOTES", [
         "1. Niveaux en m NGF ; sol fini RDC = 41,46 (DOC-01 §5).",
-        "2. La poutre-acrotère fait office d'acrotère : arase 44,75,",
-        "   sous-face 44,08 (sous-face du plancher haut RDC).",
-        "3. Poteau BA 25 × 25 à 2,00 m du nu de façade (arbitrage E-01).",
-        "4. Contre-flèche de coffrage 20 mm sur la poutre-acrotère.",
-        "5. Appui glissant sur le voile mitoyen (armatures en attente).",
-        "6. Fondations descendues à NGF 39,02 (assise de l'existant).",
-    ], width=180)
+        "2. Poutre-acrotère isostatique 8,03 m, arase 44,75, sous-face 44,08.",
+        "3. La dalle porte en console de 1,70 m depuis la façade.",
+        "4. Poteau BA 25 × 25 à 1,30 m du nu de façade (arbitrage E-02).",
+        "5. Puits de gros béton sous poteau : Ø 1,35 m, prof. 2,40 m, arase 39,02.",
+        "6. Voile de rive À CRÉER sur semelle filante 65 × 30, arase 39,02.",
+        "7. Contre-flèche de coffrage 20 mm sur la poutre de 8,03 m.",
+    ], width=260)
 
     p_pdf = os.path.join(OUT, "PL-03_Coupes_Elevations.pdf")
     pb.save(p_pdf)

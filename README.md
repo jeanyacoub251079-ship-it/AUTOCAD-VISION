@@ -143,78 +143,46 @@ normatives codées sont indicatives et éditables dans `structai/calc/codes.py`
 
 ## Affaire GARENNE — 58 rue de l'Aigle, 92250 La Garenne-Colombes
 
-Réhabilitation lourde d'une maison en meulière : reprises en sous-œuvre
-RDC D1 à D6, extension en façade avant (salon d'été + terrasse accessible)
-et modification des combles Mansart. Livrables du BET dans `affaires/GARENNE/`.
+Dossier d'étude structurelle de la réhabilitation de la maison en meulière :
+RSO D1 à D6 et extension en façade avant. Les documents et scripts sont dans
+`affaires/GARENNE/`.
 
-| Tâche | Contenu | Livrables | État |
-|---|---|---|---|
-| 1 | Reconnaissance DXF + hypothèses | `DOC-01` (note d'hypothèses), `DOC-02` (méthodologie & phasage) | ✅ livrée |
-| 2 | Calculs + métrés | `DOC-03` (note de calculs, 13 p.) + `calculs.py` | ✅ livrée |
-| 3 | Plans généraux 1/50 | `PL-01`, `PL-02`, `PL-03` (.dxf + .pdf) | ✅ livrée |
-| 4 | Détails 1/20 & 1/10 | `PL-04`, `PL-05` (.dxf + .pdf) | ✅ livrée |
+| Tâche | Livrables | État |
+|---|---|---|
+| 1 — hypothèses et méthode | DOC-01, DOC-02 (DOCX + PDF, 13 p. chacun) | Révisés selon E-02 |
+| 2 — calculs et métrés | DOC-03 (DOCX + PDF, 13 p.), `calculs.py`, résultats JSON | Générés |
+| 3 — plans généraux | PL-01 à PL-03 (DXF + PDF A3) | Générés |
+| 4 — détails | PL-04 et PL-05 (DXF + PDF A3, 2 planches chacun) | Révisés selon E-02 |
 
-### Organisation
+### Arbitrage E-02 retenu
 
-```
-affaires/GARENNE/
-  00_SOURCES/   niveaux_retenus.py (source unique des NGF et de la position
-                du poteau), geometrie_dxf.json, planches AARKA (Drive)
-  01_TACHE_1/   common_doc.py (moteur DOCX/PDF), make_doc01.py, make_doc02.py,
-                make_schemas.py, make_figures.py, DOC-01*, DOC-02*, figures/
-  02_TACHE_2/   calculs.py (moteur EC0→EC7), make_doc03.py, make_figures.py,
-                calculs_resultats.json, DOC-03*, figures/
-  03_TACHE_3/   plan_engine.py (géométrie -> DXF + PDF), detail_lib.py,
-                make_pl01..05.py, plans/PL-01..PL-05 .dxf et .pdf
-```
+E-01 (poteau à 2,00 m, voile mitoyen existant et poutre 4 HA 20) est caduc.
+Le parti d'extension retenu est : terrasse 8,03 × 2,00 m, poteau BA 25 × 25
+à 1,30 m du nu de façade, poutre perpendiculaire 25 × 67 cm avec travée de
+1,30 m et console de 0,70 m, poutre-acrotère de rive 30 × 67 cm isostatique sur
+8,03 m, dalle BA 20 cm portée sur 1,70 m, voile de rive BA neuf de 20 cm sur
+semelle filante 65 × 30 cm. Le voile est claveté au pignon existant ; il ne
+s'agit pas d'un mur mitoyen existant.
 
-### Arbitrages du maître d'ouvrage (11/11/2026)
+Calculs de référence : poutre de rive 4 HA 14 et étriers HA 8 e = 300 mm
+(M<sub>ELU</sub> = 140,3 kN·m, V<sub>ELU</sub> = 69,9 kN, flèche LT
+22,48 mm, contre-flèche 20 mm) ; poutre perpendiculaire 2 HA 12 ; dalle
+4 HA 10 ; poteau 6 HA 8 ; voile 4 HA 12 par face et HA 8 e = 250 mm. Puits
+n° 1 Ø 1,35 m et n° 2 Ø 1,75 m, profondeur de calcul 2,40 m, arase NGF 39,02.
+Les détails d'appui du voile et l'interface appui glissant / joint vertical
+20 mm restent à coordonner et à valider par le BET avant exécution.
 
-* **E-01** — le poteau BA 25 × 25 de la verrière est **déplacé à 2,00 m du nu
-  de la façade, sous la poutre** ; il en devient l'appui d'extrémité.
-* **H-06 / H-18** — forfait charpente 250 kg/m² et charges de verrière
-  acceptés tels quels.
-* **H-16** — trappe à linge estimée depuis les plans, à entourer d'un
-  **nuage de révision** sur les plans d'exécution.
-* **H-01** — fondation sous D1 en **meulière continue**, conservée.
+### Contenu et régénération
 
-Sondages restant à lever avant exécution : **H-08, H-09, H-10, H-14, H-15**.
-
-### Résultats clés de la Tâche 2
-
-* Reprises D1–D6 : IPE 160 à IPE 300 en **S355**, taux de flexion 0,554 à
-  0,880, flèches ≤ 0,05 mm.
-* **Poutre-acrotère BA 30 × 67 cm**, arase NGF 44,75, travée unique de
-  8,03 m entre le voile mitoyen et le poteau à 2,00 m ; M<sub>ELU</sub> =
-  262,6 kN·m, **4 HA 20** + étriers HA 8 e = 175 mm ; flèche à long terme
-  17,55 mm (L/458) → **contre-flèche de coffrage de 20 mm**.
-* Voile mitoyen 20 cm : K<sub>0</sub> = 0,50, M = 29,23 kN·m/ml,
-  **4 HA 12** par face, V<sub>Ed</sub> ≤ V<sub>Rd,c</sub>.
-* Puits Ø 2,05 / 2,20 m à −2,40 m : σ<sub>ELS</sub> = 0,100 / 0,099 MPa
-  (marge 1 à 2 % sur le seuil de 0,10 MPa — point sensible).
-* Avant-métré : 19,79 m³ de béton armé, 2,37 t d'aciers HA, 0,45 t de
-  profilés, 17,04 m³ de terrassement, 48 étais.
-
-### Plans d'exécution (Tâche 3)
-
-* **PL-01** — reprise en sous-œuvre RDC : existant, démolitions D1 à D6,
-  jambages/sommiers BA, profilés S355, trappes au nuage de révision (1/50).
-* **PL-02** — coffrage de l'extension : voile mitoyen, poteau à 2,00 m,
-  poutre-acrotère 30 × 67, puits et longrines (1/50).
-* **PL-03** — coupe A-A sur la terrasse (1/50) + détail d'appui 1/20.
-* **PL-04** — ferraillage de la poutre-acrotère (coupes 1/10, schéma des
-  étriers), du poteau, de la dalle + nomenclature des aciers (2 planches).
-* **PL-05** — assemblages acier/BA : appuis de profilés sur jambages et
-  sommiers, encastrement en meulière, appui glissant de la poutre-acrotère,
-  ancrage de la dalle, clavetage du voile (2 planches).
-
-A3 paysage, cartouche BET, calques `STR_*`. Un seul moteur (`plan_engine.py`)
-produit le .dxf **et** le .pdf depuis la même géométrie.
-
-### Régénérer les livrables
+- `00_SOURCES/` : niveaux retenus et données DXF extraites.
+- `01_TACHE_1/` : DOC-01, DOC-02 et figures.
+- `02_TACHE_2/` : calculs, figures et DOC-03.
+- `03_TACHE_3/` : moteur DXF/PDF (`plan_engine.py`), plans PL-01 à PL-05,
+  bibliothèque de détails (`detail_lib.py`). Les DXF sont en centimètres
+  (`$INSUNITS = 5`) et utilisent les calques `STR_*`.
 
 ```bash
-./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/calculs.py    # résultats
+./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/calculs.py
 ./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/make_figures.py
 ./venv_auto/bin/python affaires/GARENNE/02_TACHE_2/make_doc03.py
 ./venv_auto/bin/python affaires/GARENNE/01_TACHE_1/make_doc01.py
@@ -225,3 +193,8 @@ produit le .dxf **et** le .pdf depuis la même géométrie.
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl04.py
 ./venv_auto/bin/python affaires/GARENNE/03_TACHE_3/make_pl05.py
 ```
+
+Les sources graphiques AARKA originales sont externes au dépôt et doivent être
+présentes sous `google_drive/` pour régénérer les plans dépendant du fond DXF.
+Les plans d'exécution restent soumis aux sondages et points d'arrêt listés dans
+DOC-02/DOC-03 ; leur production ne vaut pas autorisation de travaux.

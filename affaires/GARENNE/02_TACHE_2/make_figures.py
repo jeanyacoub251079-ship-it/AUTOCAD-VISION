@@ -70,9 +70,9 @@ def fig_poutre_efforts():
     ax0.invert_yaxis()
     ax0.grid(alpha=0.3, lw=0.4)
     ax0.legend(fontsize=7.5, loc="lower left", framealpha=0.95)
-    ax0.set_title("Poutre-acrotère retroussée 30 × 67 cm — travée unique de "
-                  f"{L:.2f} m entre le voile mitoyen et le poteau BA à 2,00 m "
-                  "de la façade".replace(".", ","), fontsize=9.5, color=BLEU,
+    ax0.set_title("Poutre-acrotère de rive 30 × 67 cm — travée isostatique de "
+                  f"{L:.2f} m entre le voile de rive à créer et la console "
+                  "(poteau à 1,30 m)".replace(".", ","), fontsize=9.5, color=BLEU,
                   pad=8)
 
     # ---- effort tranchant
@@ -102,8 +102,9 @@ def fig_poutre_efforts():
                  arrowprops=dict(arrowstyle="->", color=BLEU, lw=0.8))
     ax2.axhline(0, color="k", lw=0.8)
     ax2.invert_yaxis()
-    ax2.set_xlabel("Abscisse le long de la poutre (m) — 0 = voile mitoyen, "
-                   f"{L:.2f} = poteau BA".replace(".", ","), fontsize=8.5)
+    ax2.set_xlabel("Abscisse le long de la poutre (m) — 0 = voile de rive à "
+                   f"créer, {L:.2f} = about de la console".replace(".", ","),
+                   fontsize=8.5)
     ax2.set_ylabel("Flèche à long terme (mm)", fontsize=8.2)
     ax2.grid(alpha=0.3, lw=0.4)
     ax2.legend(fontsize=7.2, loc="lower left", ncol=2)
@@ -124,8 +125,8 @@ def fig_coupe_poutre():
     b, h = r["b"], r["h"]
     e_d = r["e_d"]
     beff = r["beff"]
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10.4, 5.4),
-                                  gridspec_kw=dict(width_ratios=[1.0, 1.25]))
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(9.2, 6.0),
+                                  gridspec_kw=dict(width_ratios=[1.0, 1.15]))
 
     # ---- à gauche : coupe transversale avec la table collaborante
     ax.add_patch(Rectangle((0, 0), b, h, fc="#E8EEF7", ec=BLEU, lw=1.5))
@@ -323,97 +324,105 @@ def fig_schema_rso():
 # Fig. 4 — Plan de fondation de l'extension
 # ---------------------------------------------------------------------------
 def fig_plan_fondation():
-    """Plan de fondation de l'extension.
+    """Plan de fondation de l'extension (schéma E-02 du 11/11/2026).
 
-    La poutre-acrotère court parallèlement à la façade, à 2,00 m du nu de
-    celle-ci ; elle franchit 8,03 m entre le voile mitoyen et le poteau BA.
+    Terrasse 8,03 x 2,00 m, poutre-acrotère comprise. La poutre de 8,03 m
+    court en limite de dalle, à 2,00 m du nu de façade ; elle est isostatique
+    entre le voile de rive à créer et l'about de la poutre perpendiculaire,
+    qui franchit 1,30 m depuis la façade puis se poursuit en console de
+    0,70 m sur le poteau BA 25 x 25.
     """
     r = _load()["extension"]
     L = 8.03
-    YP = 2.00                      # axe de la poutre, depuis le nu de façade
-    fig, ax = plt.subplots(figsize=(10.0, 5.8))
+    P = 2.00                       # profondeur de terrasse
+    YP = 1.70                      # nu intérieur de la poutre (axe 1,85)
+    XP = 1.30                      # axe du poteau depuis le nu de façade
+    fig, ax = plt.subplots(figsize=(10.6, 5.4))
 
     # façade existante
     ax.add_patch(Rectangle((0, 0), L, 0.49, fc="#D9D2C6", ec="#7F6B4F",
                            hatch="///", alpha=0.55, lw=1.2))
-    ax.text(L / 2, 0.24, "façade existante — meulière ép. 49 cm", ha="center",
+    ax.text(L / 2, 0.26, "façade existante — meulière ép. 49 cm", ha="center",
             va="center", fontsize=7.5, color="#5B4A33")
 
-    # extension
-    ax.add_patch(Rectangle((0, -3.20), L, 3.20, fc="#F2F7FC", ec=BLEU2,
+    # dalle de terrasse
+    ax.add_patch(Rectangle((0, -P), L, P, fc="#F2F7FC", ec=BLEU2,
                            lw=1.0, ls="--"))
-    ax.text(5.9, -2.30, "EXTENSION 8,03 × 3,20 m — terrasse accessible",
+    ax.text(5.55, -0.72, "TERRASSE 8,03 × 2,00 m — poutre comprise",
             ha="center", va="center", fontsize=7.2, color=BLEU)
 
-    # voile mitoyen
-    ax.add_patch(Rectangle((L, -3.20), 0.20, 3.20, fc="#BDD7EE", ec=BLEU2,
-                           lw=1.2))
-    ax.text(L + 0.40, -1.10, "voile BA mitoyen 20 cm", rotation=90,
-            fontsize=6.8, color=BLEU, va="center", ha="center")
+    # poutre-acrotère de rive (limite de dalle)
+    ax.add_patch(Rectangle((0, -P), L, 0.30, fc="#F8CBD6", ec=ROUGE, lw=1.4))
+    ax.text(4.35, -P + 0.15, "poutre-acrotère BA 30 × 67 — arase NGF 44,75",
+            ha="center", va="center", fontsize=7.2, color=ROUGE)
 
-    # verrière frontale
-    ax.plot([0, L], [-3.20, -3.20], color=BLEU2, lw=3.0)
-    ax.text(L / 2, -3.42, "verrière frontale (hors mission)", ha="center",
-            va="top", fontsize=7, color=BLEU2)
+    # poutre perpendiculaire (travée 1,30 + console 0,70)
+    ax.add_patch(Rectangle((0, -P), 0.25, P, fc="#FBE3EA", ec=ROUGE, lw=1.1))
+    ax.annotate("poutre perpendiculaire 25 × 67",
+                xy=(0.30, -0.95), xytext=(0.75, -0.95), fontsize=6.9,
+                color=ROUGE, va="center",
+                arrowprops=dict(arrowstyle="->", lw=0.7, color=ROUGE))
 
-    # poutre-acrotère
-    ax.plot([0.0, L], [-YP, -YP], color=ROUGE, lw=2.8)
-    ax.text(5.3, -YP + 0.24,
-            "poutre-acrotère BA 30 × 67 — arase NGF 44,75", ha="center",
-            fontsize=7.4, color=ROUGE)
-
-    # poteau BA sous la poutre, à 2,00 m du nu de façade
-    px, py = 2.00, -YP
-    ax.add_patch(Rectangle((px - 0.125, py - 0.125), 0.25, 0.25, fc=BLEU,
+    # poteau BA
+    ax.add_patch(Rectangle((0, -XP - 0.125), 0.25, 0.25, fc=BLEU,
                            ec="black", lw=0.8, zorder=7))
-    ax.annotate("poteau BA 25 × 25 — à 2,00 m du nu de façade (arbitrage E-01)",
-                xy=(px + 0.14, py - 0.10), xytext=(3.10, -3.05),
+    ax.annotate("poteau BA 25 × 25 — à 1,30 m du nu de façade (E-02)",
+                xy=(0.27, -XP), xytext=(1.55, -1.42),
                 fontsize=6.9, color=BLEU, ha="left",
                 bbox=dict(fc="white", ec="none", pad=1.0),
                 arrowprops=dict(arrowstyle="->", lw=0.8, color=BLEU))
 
+    # voile de rive à créer + semelle filante
+    ax.add_patch(Rectangle((L, -P), 0.20, P, fc="#BDD7EE", ec=BLEU2, lw=1.2))
+    ax.add_patch(Rectangle((L - 0.225, -P), 0.65, 0.30, fc="none", ec=BLEU2,
+                           lw=1.0, ls=(0, (4, 2))))
+    ax.annotate("voile de rive BA 20 cm À CRÉER\nsur semelle filante 65 × 30",
+                xy=(L + 0.20, -1.45), xytext=(L + 0.42, -2.05),
+                fontsize=6.9, color=BLEU, ha="left", va="center",
+                arrowprops=dict(arrowstyle="->", lw=0.8, color=BLEU))
+
     # puits
-    for (cx, cy, d, lab) in [(px, py, r["puits_1"]["D"], "puits n° 1"),
-                             (L - 0.55, -2.55, r["puits_2"]["D"], "puits n° 2")]:
+    for (cx, cy, d, lab) in [(0.125, -XP, r["puits_1"]["D"], "puits n° 1"),
+                             (L + 0.10, -0.55, r["puits_2"]["D"],
+                              "puits n° 2")]:
         ax.add_patch(Circle((cx, cy), d / 2, fc="none", ec="#806000", lw=1.4,
                             ls="-.", zorder=5))
-        ax.text(cx, cy + d / 2 + 0.08, lab, ha="center", va="bottom",
+        ax.text(cx, cy + d / 2 + 0.06, lab, ha="center", va="bottom",
                 fontsize=6.6, color="#806000",
                 bbox=dict(fc="white", ec="none", pad=1.0))
 
     # cotes
-    ax.annotate("", xy=(0, 0.80), xytext=(L, 0.80),
+    ax.annotate("", xy=(0, 0.78), xytext=(L, 0.78),
                 arrowprops=dict(arrowstyle="<->", lw=0.8))
-    ax.text(L / 2, 0.87, "8,03 m", ha="center", fontsize=8)
-    ax.annotate("", xy=(-0.90, 0), xytext=(-0.90, -3.20),
+    ax.text(L / 2, 0.85, "8,03 m", ha="center", fontsize=8)
+    ax.annotate("", xy=(-0.95, 0), xytext=(-0.95, -P),
                 arrowprops=dict(arrowstyle="<->", lw=0.8))
-    ax.text(-1.00, -2.55, "3,20 m", rotation=90, ha="right", va="center",
+    ax.text(-1.05, -P / 2, "2,00 m", rotation=90, ha="right", va="center",
             fontsize=8)
-    ax.annotate("", xy=(-0.40, 0), xytext=(-0.40, -YP),
+    ax.annotate("", xy=(-0.50, 0), xytext=(-0.50, -YP),
                 arrowprops=dict(arrowstyle="<->", lw=0.8))
-    ax.text(-0.50, -YP / 2, "2,00 m", rotation=90, ha="right", va="center",
-            fontsize=8)
-    ax.annotate("", xy=(px, -YP - 0.35), xytext=(0, -YP - 0.35),
-                arrowprops=dict(arrowstyle="<->", lw=0.7, color=GRIS))
-    ax.text(px / 2, -YP - 0.47, "2,00", ha="center", fontsize=6.8, color=GRIS)
-    ax.annotate("", xy=(L, -YP - 0.35), xytext=(px, -YP - 0.35),
-                arrowprops=dict(arrowstyle="<->", lw=0.7, color=GRIS))
-    ax.text((L + px) / 2, -YP - 0.47, "6,03", ha="center", fontsize=6.8,
-            color=GRIS)
+    ax.text(-0.60, -YP / 2, "1,70", rotation=90, ha="right", va="center",
+            fontsize=7.4)
+    xd = 2.30
+    for y0, y1, txt in [(0, -XP, "1,30"), (-XP, -P, "0,70")]:
+        ax.annotate("", xy=(xd, y1), xytext=(xd, y0),
+                    arrowprops=dict(arrowstyle="<->", lw=0.7, color=GRIS))
+        ax.text(xd + 0.09, (y0 + y1) / 2, txt, ha="left", va="center",
+                fontsize=7.0, color=GRIS)
 
     # joint de dilatation façade
     ax.plot([0, L], [-0.02, -0.02], color=VERT, lw=1.6, ls=(0, (3, 2)))
-    ax.annotate("joint de dilatation 20 mm", xy=(2.2, -0.02), xytext=(1.1, 0.62),
+    ax.annotate("joint de dilatation 20 mm", xy=(2.4, -0.02), xytext=(2.2, 0.62),
                 fontsize=6.6, color=VERT,
                 arrowprops=dict(arrowstyle="->", lw=0.7, color=VERT))
 
-    ax.set_xlim(-1.55, L + 1.15)
-    ax.set_ylim(-3.85, 1.10)
+    ax.set_xlim(-1.6, L + 2.55)
+    ax.set_ylim(-2.55, 1.10)
     ax.set_aspect("equal")
     ax.axis("off")
-    ax.set_title("Plan de fondation de l'extension — poutre-acrotère, poteau BA "
-                 "à 2,00 m et puits de gros béton", fontsize=9.5, color=BLEU,
-                 pad=8)
+    ax.set_title("Plan de fondation de l'extension — poutre-acrotère en limite de "
+                 "dalle, poteau BA à 1,30 m, voile de rive à créer",
+                 fontsize=9.4, color=BLEU, pad=8)
 
     fig.tight_layout()
     p = os.path.join(OUT, "fig13_plan_fondation.png")

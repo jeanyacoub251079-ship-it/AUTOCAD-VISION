@@ -46,15 +46,56 @@ NGF_POUTRE_BAS = NGF_PH_RDC          # 44,08 — sous-face, au nu du plancher ha
 NGF_POUTRE_HAUT = NGF_ACROTERE       # 44,75 — arase supérieure de la poutre-acrotère
 NGF_ACROTERE_ARASE = NGF_ACROTERE    # 44,75 — arase de référence (couverture sous révélateur)
 
-# Position de l'axe du poteau BA 25 x 25 de la verrière, mesurée depuis le nu
-# extérieur de la façade existante. Valeur contractuelle issue de l'arbitrage
-# E-01 du 11/11/2026 (poteau repositionné sous la poutre, à ~2,00 m).
-POS_POTEAU_FAÇADE = 2.00
+# ---------------------------------------------------------------------------
+# GÉOMÉTRIE DE L'EXTENSION — RECTIFICATION DU 11/11/2026 (arbitrage E-02)
+# ---------------------------------------------------------------------------
+# Le schéma structurel retenu est le suivant (croquis MOE du 11/11/2026) :
+#
+#   * la terrasse mesure 8,03 m de long sur **2,00 m de large, poutre-
+#     acrotère comprise** ;
+#   * la poutre-acrotère de 8,03 m est **en limite de dalle, à 2,00 m de la
+#     façade** ; elle est **isostatique** (travée unique) ;
+#   * elle s'appuie à droite sur un **voile BA à créer**, fondé sur une
+#     **semelle filante à créer**, en limite de propriété, dans le
+#     prolongement du mur pignon ;
+#   * elle s'appuie à gauche sur l'**extrémité en console** d'une poutre-
+#     acrotère **perpendiculaire à la façade**, qui s'appuie sur le poteau
+#     BA et se poursuit en **porte-à-faux de 0,70 m** ;
+#   * le poteau BA est implanté à **1,30 m du nu de la façade**, à
+#     l'extrémité gauche des 8,03 m.
+#
+# La version antérieure (poteau à 2,00 m sous une poutre de 8,03 m appuyée
+# sur ce seul poteau et sur le voile mitoyen) est ABANDONNÉE.
 
-# Largeur de l'extension et portées de la poutre-acrotère.
+# Largeur totale de la terrasse, poutre-acrotère comprise (m).
+LARGEUR_TERRASSE = 2.00
+
+# Position de l'axe du poteau BA, depuis le nu extérieur de la façade (m).
+POS_POTEAU_FAÇADE = 1.30
+
+# Longueur (portée) de la poutre-acrotère isostatique, le long de la façade.
 L_EXTENSION = 8.03
-TRAVEE_1 = POS_POTEAU_FAÇADE                  # 2,00 m — travée côté façade
-TRAVEE_2 = L_EXTENSION - POS_POTEAU_FAÇADE    # 6,03 m — travée vers le voile mitoyen
+
+# Porte-à-faux de la poutre perpendiculaire au-delà du poteau (m).
+PORTE_A_FAUX = LARGEUR_TERRASSE - POS_POTEAU_FAÇADE      # 0,70 m
+CONSOLE_DALLE = LARGEUR_TERRASSE - 0.30                   # 1,70 m (nu int. poutre)
+
+# Travée de la poutre perpendiculaire entre la façade et le poteau (m).
+TRAVEE_PERPENDICULAIRE = POS_POTEAU_FAÇADE               # 1,30 m
+
+# Épaisseur de la poutre-acrotère et largeur du voile de rive (m).
+B_POUTRE = 0.30
+EP_VOILE = 0.20
+
+# Axe de la poutre de 8,03 m : nu extérieur à 2,00 m, largeur 0,30 m.
+AXE_POUTRE_8M = LARGEUR_TERRASSE - B_POUTRE / 2.0        # 1,85 m
+
+# Bande de dalle reprise par la poutre de 8,03 m (la dalle porte dans le
+# sens de la largeur : une demi-largeur pour la façade, une pour la poutre).
+BANDE_POUTRE_8M = LARGEUR_TERRASSE / 2.0                 # 1,00 m
+
+# Longueur du voile de rive à créer (limite de propriété).
+L_VOILE_RIVE = L_EXTENSION
 
 # Terrain extérieur.
 NGF_TERRAIN = 41.11
